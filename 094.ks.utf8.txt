@@ -1,0 +1,462 @@
+*094| Illumination
+; *094|イルミネーション
+[fbfstoretitle eng="Illumination" jp="イルミネーション"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[backlay]
+[playbgm storage="bgm18"]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 115"]
+[eval exp="sf.ItRelease = 116"]
+[endif]
+
+
+*| Illumination
+; *|イルミネーション
+[fbfstoretitle eng="Illumination" jp="イルミネーション"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you very much.[」][lr]
+[else]
+　「有難うございました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Phew, that was great.[」][lr]
+[else]
+　「ご馳走様」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se25.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pushed open the family restaurant's door.[prcm]
+[else]
+　ガチャ、とファミレスの前室の扉を開ける。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The chicken tempura was pretty good, after all.[」][lr]
+[else]
+　「とり天、美味しかったですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] The sauce in that seafood thing wasn't as strong as I expected, so I ended up eating the whole thing like a delicious soup.[」][lr]
+[else]
+　「うん。[l]シーフードもソースが油濃くなくてスープみたいで美味しかった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Leaving the foyer of the restaurant, we stepped out onto the streets.[prcm]
+[else]
+　ファミレスの前室を抜けて通りへ出る。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[playse buf = 0 storage=se25.ogg]
+[backlay]
+[fbfscale_image storage="bg91" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Uh, it's gotten even colder.[l] You okay, Mayuko?[」][lr]
+[else]
+　「う、さっきより寒い。[l]繭子平気？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h01" visible=true left=105 top=0 rceil=170 gceil=170 bceil=170]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose I'm a bit cold, too.[l] Let's just hurry home.[」][lr]
+[else]
+　「少し寒いですね。[l]早く戻りましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「そうだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shoved my right hand into my pocket.[prcm]
+[else]
+　私はポケットに手を入れる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wanna stick your hands in here, too?[」] I pointed at it with my left.[lr]
+[else]
+　「繭子の手も入れる？」と反対の手で私のポケットを指した。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h04" visible=true left=105 top=0 rceil=170 gceil=170 bceil=170]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a pretty embarrassing position.[」] She made a troubled smile.[prcm]
+[else]
+　「かなり恥ずかしい格好ですよ」と繭子が苦笑する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All that means is that we've got to hurry.[」][lr]
+[else]
+　「それじゃあ、早く戻らないとね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We continued down the road, our heels clicking against the stone pavement.[lr]
+[else]
+　モノクロの幾何学的な模様を描く石畳を鳴らしていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A light suddenly lit up further into the shopping district.[lr]
+[else]
+　チカリ、と商店街の道の先で灯りが灯る。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It then began to spread toward us like a wave, lighting up the whole area and making me almost believe it was the middle of the day.[prcm]
+[else]
+　すると、真昼のような金色の灯りが洪水の川のように流れてきた光は一息に目の前まで迫ると、何も流しさることなく背後の道の先まで流れていった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method=universal rule="rule13" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[eval exp="sf.cg18=1"]
+[fbfscale_image storage="ev18" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's right... they were saying they would light up the shopping district.[」][lr]
+[else]
+　「そういえば、商店街は今日からライトアップがありましたね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh...[」][lr]
+[else]
+　「へえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Electronic lights were attached between the two opposing trees of the boulevard, resembling a golden roof above us.[prcm]
+[else]
+　道路を挟む二つの並木の間には電飾の光が巻かれてあり、光が流れたあとで、それは黄金の柱と金の天幕に変わっていた。
+[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's pretty.[」][lr]
+[else]
+　「綺麗だね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It certainly is.[」][lr]
+[else]
+　「そうですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It might look even more amazing from above.[」][lr]
+[else]
+　「建物の上から見ても、凄そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think you should be able to see them from the sanatorium.[」][lr]
+[else]
+　「このライトアップは療養所からも見られますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[l] Do you think Sanae and Kozue saw it?[」][lr]
+[else]
+　「そうなんだ。[l]早苗たちも見てたかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sure they were watching.[l] They'll be surprised to learn we were there.[」][lr]
+[else]
+　「きっと見てますよ。[l]そこに居たって言ったら、驚くかもしれないですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][prcm]
+[else]
+　「そうだね」[prcm]
+[endif]
+
+
+;//////
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[playse buf =0  storage=se92.ogg]
+[fadeinse buf=1 storage="se45.ogg" time=1000 loop=true]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item42_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had grown quite warm inside the car as it steadily ascended the hill.[lr]
+[else]
+　ガタガタ、と緩やかな坂道を登る車内は、付けていた暖房で程よく温まってきている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a voice and slowly opened my eyes.[prcm]
+[else]
+　声が聞こえて薄目を開けると、繭子が口を開いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you listening?[」][lr]
+[else]
+　「聞いてますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I was just resting my eyes.[」][lr]
+[else]
+　「うん、目を閉じてるだけだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I hope she likes the present.[」][lr]
+[else]
+　「気に入ってもらえるといいですね。[l]プレゼント」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「うん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I imagine you'll be quite busy tomorrow. I'll let you know once you can use the kitchen.[」][lr]
+[else]
+　「明日はいろいろと準備がありますね、厨房が使えるようになったら言いますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][prcm]
+[else]
+　「うん」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you listening?[」][lr]
+[else]
+　「聞いてますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I'll take the seaweed rice ball.[」][lr]
+[else]
+　「うん、ところでワカメオニギリに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Excuse me?[」][lr]
+[else]
+　「はい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why is it wrapped in seaweed?[」][lr]
+[else]
+　「海苔を巻くのはどうかと思う」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're sleeping, aren't you?[」][lr]
+[else]
+　「寝てるじゃないですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][prcm]
+[else]
+　「うん」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=1 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[jingle4]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="095.ks" target=*095
+
+

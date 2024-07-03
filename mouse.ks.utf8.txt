@@ -1,0 +1,205 @@
+@if exp="typeof(global.___mouse_cursor_plugin_object) == 'undefined'"
+
+[iscript]
+{
+tf.cursorFLG=1;
+}
+ 
+
+// MouseCursorPluginクラス
+
+ 
+
+class MouseCursorPlugin extends KAGPlugin
+
+{
+
+  var x0;    // 移動開始時のマウスカーソルＸ座標（ピクセル）
+
+  var y0;    // 移動開始時のマウスカーソルＹ座標（ピクセル）
+
+  var x1;    // 移動終了時のマウスカーソルＸ座標（ピクセル）
+
+  var y1;    // 移動終了時のマウスカーソルＹ座標（ピクセル）
+
+ 
+
+  var tick_start;  // 移動開始時のチックカウント
+
+  var limit;       // 移動が完了するまでの時間（ミリ秒）
+
+ 
+
+  var timer;     // タイマーオブジェクト
+
+  var window;    // kagオブジェクトへの参照
+
+ 
+
+  // 以下は定数として扱う（好みに応じて修正すること）
+
+  var interval = 20;  // タイマーイベントの発行間隔（ミリ秒）
+
+ 
+
+  // コンストラクタ
+
+  function MouseCursorPlugin(win)
+
+  {
+
+    super.KAGPlugin();  // スーパークラスのコンストラクタを呼ぶ
+
+    window = win;
+
+    timer = new Timer(_onTimer, "");
+
+    timer.interval = interval;
+
+  }
+
+ 
+
+  // デストラクタ
+
+  function finalize()
+
+  {
+
+    invalidate timer;
+
+    super.finalize();  // スーパークラスのデストラクタを呼ぶ
+
+  }
+
+ 
+
+  // タイマーイベントを処理するハンドラ
+
+  function _onTimer()
+
+  {
+
+    // タイマーイベント開始からの経過時間（ミリ秒）を求める
+
+    var elapse = System.getTickCount() - tick_start;
+
+    if (elapse > limit)
+
+      elapse = limit;
+
+    // 厳密には、System.getTickCount()がリセットされた時の考慮が必要（手抜き）
+
+ 
+
+    // 現在のマウスカーソル座標を求め、マウスカーソルを移動
+
+    var x = x0 + int((x1-x0)*elapse/limit);
+
+    var y = y0 + int((y1-y0)*elapse/limit);
+
+    window.primaryLayer.setCursorPos(x, y);
+
+
+    // 制限時間に到達したらタイマーイベントを停止
+
+    if (elapse >= limit)
+
+      timer.enabled = false;
+
+  }
+
+function setcursor_update(){
+  tf.cursorFLG = tf.cursorFLG * -1 ;
+  window.primaryLayer.setCursorPos(window.primaryLayer.cursorX + tf.cursorFLG, window.primaryLayer.cursorY);
+}
+
+
+  // マウスカーソルを移動させるメソッド
+
+  //   x … 移動先Ｘ座標（ピクセル）
+
+  //   y … 移動先Ｙ座標（ピクセル）
+
+  //   t … 移動にかける時間（ミリ秒）
+
+  // 座標値は、背景レイヤ（表画面）の左上隅を原点とするスクリーン座標で指定
+
+  function move(x, y, t=0)
+
+  {
+
+    if (timer.enabled)  // マウスカーソルが移動中なら何もしない
+
+      return;
+
+ 
+
+    // 初期パラメータを設定
+
+    // （window.primaryLayerは背景レイヤ表画面kag.fore.baseと同じ）
+
+    x0 = window.primaryLayer.cursorX;
+
+    y0 = window.primaryLayer.cursorY;
+
+    x1 = +x;
+
+    y1 = +y;
+
+    tick_start = System.getTickCount();
+
+    limit = +t;
+
+    // 本来なら引数チェックが必要だが、手抜き
+
+ 
+
+    timer.enabled = true;  // タイマーイベント開始
+
+  }
+
+}
+
+ 
+
+// プラグインオブジェクトを作成し、登録する
+
+kag.addPlugin(global.___mouse_cursor_plugin_object = new MouseCursorPlugin(kag));
+
+@endscript
+
+@endif
+
+;
+
+; move_cursorマクロ
+
+;
+
+; 属性：いずれも必須
+
+;   x … 移動先Ｘ座標（ピクセル）
+
+;   y … 移動先Ｙ座標（ピクセル）
+
+;
+
+; x, yの値は、背景レイヤ（表画面）の左上隅を原点とするスクリーン座標で指定すること
+
+;
+
+;@macro name=move_cursor
+
+;@eval exp="global.___mouse_cursor_plugin_object.move(+mp.x, +mp.y, 300)"
+
+;@endmacro
+
+@macro name=move_cursor
+
+@eval exp="global.___mouse_cursor_plugin_object.setcursor_update()"
+
+@endmacro
+
+
+@return

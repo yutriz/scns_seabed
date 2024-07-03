@@ -1,0 +1,757 @@
+*111| Hot springs
+; *111|温泉
+[fbfstoretitle eng="Hot springs" jp="温泉"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[playbgm storage="bgm51"]
+[fbfscale_image storage="bg49" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 139"]
+[eval exp="sf.ItRelease = 140"]
+[endif]
+
+*| Hot springs
+; *|温泉
+[fbfstoretitle eng="Hot springs" jp="温泉"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The hot springs had a simple dressing room.[lr]
+[else]
+　温泉には簡素な脱衣所があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were two sinks, with a hair dryer next to each.[lr]
+[else]
+　洗面台が二つあり、それぞれにひとつボタン式の古い備え付けのドライヤーが置いてあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I found a hanger and hung my coat on it, Nanae handed me a towel.[prcm]
+[else]
+　ハンガーを見つけて上着を掛けていると、[ruby text="なな"]七[ruby text="え"]重が手ぬぐいを渡してきた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can use this to wash yourself.[」][lr]
+[else]
+　「これで体を洗って」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」] I took it off her hands.[prcm]
+[else]
+　「ありがとう」と言って手ぬぐいを受け取る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can soak it in water if you want, but Auntie might get angry if you do.[」][lr]
+[else]
+　「お湯につけてもいいけど、バレたら小母さんに怒られるかも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I know how this works. It's okay.[」][lr]
+[else]
+　「分かってるから、大丈夫よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae folded her clothes and put it in the basket. She then finally took off her pendant, placing it on top of them.[lr]
+[else]
+　七重は脱いだ服を簡単に畳んで竹籠の中に入れてから、ペンダントを外してその上に置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Noticing my gaze, she said it was just a protective charm.[prcm]
+[else]
+　私の視線に気がついた七重は「お守りよ」とだけ説明した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was a simple silver cylinder attached to a chain.[lr]
+[else]
+　ペンダントの先は飾り気のない小さな銀の筒がついていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae entered the bathroom ahead of me.[lr]
+[else]
+　軽く返事をすると、七重は先に風呂へ移動した。[lr]
+[endif]
+
+[r]
+[playse buf =1  storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I also folded my clothes and put them in the basket, then followed Nanae through the door that turned out to be barely holding onto its hinges.[prcm]
+[else]
+　こちらも脱いだ服を畳んで適当な竹籠に入れると、そのあとを追うように蝶番の外れた戸を開いた。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[playse buf =0  storage=se59.ogg]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[msgon_b]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were three baths in total, all surrounded by rocks and located at different levels of elevation, reminding me of terraced paddy fields.[lr]
+[else]
+　温泉は岩を並べて敷居をした小さい湯船が三つほどあり、小さな棚田のように段々になっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped into the one in the middle, as it was closest to the entrance.[prcm]
+[else]
+　戸を出てすぐのところにある真ん中の湯に入った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[msglayer2]
+[seopt buf=2 volume=40]
+[playse buf = 2 storage=se174.ogg loop=true]
+[wait time=1000]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/ev3_b" visible=true left=0 top=0 opacity=0]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1]
+[wt]
+[fbfscale_move time=2000 path="(-250,-150,255)(-500,-300,255)" layer=1]
+[wait time=2500]
+[backlay]
+[freeimage layer=1 page=back]
+[eval exp="sf.cg03=1"]
+[fbfscale_image storage="ev3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=3]
+[wait time=500]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Phew.[」][lr]
+[else]
+　「はあ」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、七重が言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My limbs, having grown cold without me even realizing, gradually began to warm up in the hot water.[prcm]
+[else]
+　道中気づかないうちに冷えていた足先や指の先が痺れたように温まる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I didn't think there'd be any more left.[」][lr]
+[else]
+　「あら、まだ残っていたのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae scooped up a small yellow leaf between her thumb and index finger.[lr]
+[else]
+　七重が湯船に浮かんでいる黄葉の小さな葉を人差し指と親指でつまんでいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see countless tiny stars sparkle upon the transparent surface of the water.[lr]
+[else]
+　無色透明の湯船の上に、無数の小さな星がプカプカと浮かんでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The branches of the surrounding trees extended above the hot springs.[prcm]
+[else]
+　葉の枝木は温泉を隠すように被さっているところもある。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It sure warms you up.[l] If you'd prefer something hotter, you can try the bath one step higher.[l] It's closer to the source.[」][lr]
+[else]
+　「温まるわね。[l]もし、もう少し熱い湯の方がよかったら、上の段に移動するといいわ。[l]そっちのほうが源泉に近いから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm fine right here.[」][lr]
+[else]
+　「ここでいいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The hot spring at the top seemed to be a simple one as well, its waters translucent and odorless.[prcm]
+[else]
+　上の段のお湯も、無色透明で香りもない単純温泉のようだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, then.[l] In that case, come over here.[」][lr]
+[else]
+　「そう。[l]ねえ、じゃあこっちに来てよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pointed at a spot in the shadow of one of the branches, opposite of where I sat.[prcm]
+[else]
+　脱衣所と反対側の淵に促すと、枝葉の影を指した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you look to the left, you can see the library, right there by the mountain.[l] See?[」][lr]
+[else]
+　「左側の山の切れ目に、図書館が見えるわよ。[l]ほら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed her finger to see a canopy of countless trees swaying in the wind.[lr]
+[else]
+　指の指す方向には、色と種類の異なる木々の樹冠が、またそれぞれの思い思いの方向に揺れている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could make out the library dome amidst that sea of greenery.[prcm]
+[else]
+　その緑の海の向には、確かに図書館のドーム屋根が見える。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Found it?[l] You can even see the whole town from this vantage point.[」][lr]
+[else]
+　「見えた？[l] その向こうの街までよく見えるでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The pale mountains in the distance almost melted into the boundless blue of the sky. I could make out the contours of a small port town at the foot of the slope.[prcm]
+[else]
+　折り重なる小山は遠くなるほどに大気の青が濃くなり、その先には青い湊町がある。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's quite a view.[」][lr]
+[else]
+　「いい眺めね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Almost no one knows about this spot.[l] I can pretty much have it all for myself.[」][lr]
+[else]
+　「穴場なの。[l]こんなところまでお湯に浸かりに来る人はいないし、いつでも貸切なのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The hot springs here are also of the rare, carbonated kind.[l] Apparently, they loosen your blood vessels and help with high blood pressure, heart disease, and other circulatory problems.[l] Look, you can even see the bubbles near your skin.[」][lr]
+[else]
+　「ちなみにここのお湯はちょっと珍しい炭酸泉なの。[l]効能は炭酸ガスによる血管拡張作用で、高血圧、心疾患、末梢循環不全なんかね。[l]ほら、肌に気泡がつくでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae stroked her arm, causing the little bubbles around it to burst.[prcm]
+[else]
+　七重が腕の産毛をなでるとプクプク、と細かい泡が上がった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You really do know everything about this area.[」][lr]
+[else]
+　「何でも知ってるのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, of course I do.[l] I've lived here my whole life.[」][lr]
+[else]
+　「小さい頃から住んでるもの。[l]当たり前よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're like the witch of the forest.[」][lr]
+[else]
+　「森の魔女みたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hee hee hee. Ah, I might be a witch, but I'm no old crone. I'm as old as I look.[」][prcm]
+[else]
+　七重は「イッヒッヒ」と笑ってから「ちなみに魔女といっても老婆ではないわよ。年齢は見た目のままよ」と補足した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So... you're a wicked witch, then?[」][lr]
+[else]
+　「じゃあ悪い魔女？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I'm a good witch, like Samantha.[」][lr]
+[else]
+　「いい魔女よ。[l]サマンサみたいな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you sure you're not older than you look?[」][lr]
+[else]
+　「やっぱり結構な歳じゃないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hahaha.[」][prcm]
+[else]
+　ははは、と七重が笑う。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There weren't any kids my age around here, so my mom and Auntie took me out for picnics a lot. We went gathering wild vegetables, too.[」][lr]
+[else]
+　「この辺に同い年の子供っていなかったから、母や小母さんとよく山菜採りやピクニックに連れていってもらっていたの。[l]
+母は山菜採りが日課みたいな人だったし、小母さんは写真が好きで動物や野鳥に詳しいのよ。[l]
+そんな二人に連れられて遊んでいたら自然と身についたのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Like Hisui.[」][lr]
+[else]
+　「[ruby text="かわ"]翡[ruby text="せみ"]翠みたいに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep.[l] You'd be just as knowledgeable about plants and birds if you lived here.[」][lr]
+[else]
+　「そんなとこ。[l]貴方もここで暮らしていたら、すぐに山菜や鳥なんかに詳しくなるわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder about that.[」][prcm]
+[else]
+　「そうかしら」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your surroundings naturally seep into you before you know it.[l] At times, I honestly feel like we're all just products of our environment.[l] Like mirrors that reflect only parts of the world around them.[」][lr]
+[else]
+　「身の回りの事は自然と身につくものよ。[l]やっぱり自分ってものは周りの環境でそうなっているだけのもののような気がするの。[l]
+それは鏡みたいなもので、身の回りにある人やものを映しているだけのような気がするわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae paused, seemingly searching for the right words.[prcm]
+[else]
+　七重は次の言葉を選ぶようにふむふむ、と間を置いて続けた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The only things that differ between said mirrors are their size, shape, and the direction they're facing.[」][lr]
+[else]
+　「ただ人によって向きとか形とか大きさが違ってたりするの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about colors? Or the condition of the glass, like stains and cracks?[」][lr]
+[else]
+　「あと、色が付いてたり、曇っていたり、欠けていたりするわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah. That, too.[l] And so, you're only a warped reflection of your surroundings and the people around you.[」][lr]
+[else]
+　「そう。[l]そういうのが、身近な人や周りの風景をうつしたり、写されたりしているのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe that's true.[l] I wonder what the shape of your mirror is.[」][lr]
+[else]
+　「そうかもしれない。[l]それだと七重のはどんな形なのかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sure it's shaped like this mountain, or the forest, or my mansion.[l] As I've said, I pretty much grew up living and breathing this place.[」][prcm]
+[else]
+　「私のはきっと、この山とか森、あとお屋敷の形をしているわね。[l]さっきも言ったけど、ずっとここで見て聞いて感じてきたんだもの」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I feel like I can see the forest and the mansion much better when I'm with you.[」][lr]
+[else]
+　「貴方といると、この森や屋敷のことがよく見えてくるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[l] What do you think your mirror is shaped like?[」][lr]
+[else]
+　「ありがとう。[l]ねえ、貴方のはどんなだと思う？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mine...?[」][lr]
+[else]
+　「私のは」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess it's hard to figure out something like that about yourself,[」] Nanae added as I fell silent.[prcm]
+[else]
+　「こういうのって自分ではわかりにくわよね」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　言葉を伸ばすように少し間を置くと、七重がその間を割って入る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A small red star danced through the air and landed on Nanae's head.[lr]
+[else]
+　ゆらゆら、と小さな紅の星が舞って、七重の頭の上に落ちる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Noticing my gaze, she placed a hand on her head and picked up a leaf.[prcm]
+[else]
+　それを見ていると、視線に気がついた七重が頭の上に手を乗せて、木の葉をつまみとった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I didn't notice at all.[」][lr]
+[else]
+　「気付かなかったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She let out a hearty laugh.[prcm]
+[else]
+　ははは、と七重が笑った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Like you've said, I didn't live a particularly introspective life.[l] But if there's one thing I've always my had eyes on, it's my childhood friend.[」][lr]
+[else]
+　「あなたの言う通り、あまり自分で考えて生きてきたわけじゃないのよ。[l]でもずっと見てきたものなら、それは私の幼馴染ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh? That sounds romantic.[」][lr]
+[else]
+　「へえ、そういうのすごく素敵だわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder. I think I've already told you, but that person is no longer here.[」][lr]
+[else]
+　「そうかしら、あなたにも話したけど、その人はもう居ないのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure how to put it, but I'm still jealous in a sense.[l] I wish I could have met your friend.[」][lr]
+[else]
+　「何て言っていいかわからないけど、それでもやっぱり羨ましく思う。[l]あなたの幼馴染に会ってみたかったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Another leaf landed on Nanae's head.[prcm]
+[else]
+　ゆらゆら、とまた七重の頭に葉が落ちた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You know, I just realized something.[」][lr]
+[else]
+　「トンネルで思い出したけれど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What?[」][lr]
+[else]
+　「なあに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why didn't you bring a flashlight to that tunnel?[」][lr]
+[else]
+　「どうして、懐中電灯を持ってこなかったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I thought it'd be more fun that way.[」][lr]
+[else]
+　「そんなの面白いからに決まってるじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Heh.[l] Should have known.[」][prcm]
+[else]
+　「ふうん。[l]いい性格じゃない」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=2 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=2 volume=100]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="112.ks" target=*112
+
+

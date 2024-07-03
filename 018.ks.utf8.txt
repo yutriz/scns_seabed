@@ -1,0 +1,326 @@
+*018| Hard Candy
+; *018|落雁
+[fbfstoretitle eng="Hard Candy" jp="落雁"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+
+[playbgm storage="bgm03"]
+
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 20"]
+[eval exp="sf.ItRelease = 21"]
+[endif]
+
+
+*| Hard Candy
+; *|落雁
+[fbfstoretitle eng="Hard Candy" jp="落雁"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I entered the brightly-lit morning office, I found Takako, Fumi, and Inukai already at their desks.[lr]
+[else]
+　朝日の眩しい事務所に入ると、先に事務所に上がった
+[ruby text="たか"]貴[ruby text="こ"]呼と[ruby text="ふみ"]文と
+[ruby text="いぬ"]犬[ruby text="かい"]飼がそれぞれの席に付いていた。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear constant cracking sounds coming from Takako's direction as she was energetically chewing on a pink-colored candy.[prcm]
+[else]
+　貴呼がカキ、と音を鳴らして桃色の菓子を頬張る。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p01_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What on earth are you eating so early in the morning?[」][lr]
+[else]
+　「朝から何を食べてるんですかね？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi opened with that question as she passed behind her.[lr]
+[else]
+　と、後ろを通る時に文が呟いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That was the same candy the owner of this building had given to Takako, the one I left in the office kitchen. [prcm]
+[else]
+　貴呼が手に持っているのは、先日この貸ビルのオーナーが貴呼にとくれたもので、給湯室の棚に置いていたものだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see you just can't get enough of those hard candies.[」][lr]
+[else]
+　「また落雁食べてるわね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p01_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hard candies?[」][lr]
+[else]
+　「らくがん？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A lump of sugar with a fancy shape, basically.[l] Takako is pretty much addicted to the things, so the owner of this building brings her all sorts of rare ones.[」][lr]
+[else]
+　「よくお仏壇にお備えされている、菊とか鯛の形をしたお砂糖の塊よ。[l]
+貴呼の好物だから、ここのオーナーが自宅から取ってきてたまにくれるのよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/i_img/f01_p01_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Those don't even look like they should be edible.[」][lr]
+[else]
+　「あれって、食べられるんですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai considered Takako with narrowed eyes.[prcm]
+[else]
+　と、犬飼が目を細めて貴呼の方を見ながら言った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h01" visible=true left=280 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You want some, Fumi?[」][lr]
+[else]
+　「文も食べる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「要りません」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Haha, sorry for hoarding all these beauties for myself.[」][lr]
+[else]
+　「いや悪いね。[l]こんな美味しいものを独り占めしてしまって」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako popped a sakura petal shaped candy with bean jam in her mouth.[prcm]
+[else]
+　貴呼は桜の形の小さな餡子入りの落雁を口に入れる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are those actually tasty?[」][lr]
+[else]
+　「それ美味しいんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They have just the right amount of sweetness and feel great to bite into. [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h14" visible=true left=280 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]After Sachi took away my cookies last night, all I could think about was eating these as soon as I came back to the office.[」][lr]
+[else]
+　「この程よい甘さと歯ごたえがいいのよ。[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f02_p04_h14" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+昨日の夜、サチに夜食のクッキーを取り上げられたときから、事務所に来てこれを食べることしか考えてなかった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't come crying to me when you start putting on weight.[」][lr]
+[else]
+　「あんた、もう太っても知らないからね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h10" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No worries on that front. I work out.[」][lr]
+[else]
+　「大丈夫、その分運動するから」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you even know how much you have to run to burn that lump of sugar?[」][lr]
+[else]
+　「砂糖の塊ならそれ一個で、どれだけ走らないといけないか分かってるんですかね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi made a sinister smile.[prcm]
+[else]
+　そう言って、文がニヤリと笑う。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, I would like to begin our morning meeting.[」][lr]
+[else]
+　「とりあえず、朝のショートミーティングするわよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/f_img/f01_p03_h10" visible=true left=-120 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f02_p01_h02" visible=true left=105 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=330 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The three replied in unison.[prcm]
+[else]
+　と、三人は同句異音の返事をした。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=3000]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="019.ks" target=*019
+
+

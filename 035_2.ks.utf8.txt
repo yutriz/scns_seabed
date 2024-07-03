@@ -1,0 +1,586 @@
+*035_2| Discrepancy
+; *035_2|不和
+[fbfstoretitle eng="Discrepancy" jp="不和"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle6"]
+
+[if exp="f.CpStartFlg == 1"]
+[fadeinse buf=1 storage=se89 time=1000 loop=true]
+[playse buf = 4 storage=se86_2.ogg loop=true]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+
+[msglayer2]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg68" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 46"]
+[eval exp="sf.ItRelease = 47"]
+[endif]
+
+
+*| Discrepancy
+; *|不和
+[fbfstoretitle eng="Discrepancy" jp="不和"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You look tired.[」][lr]
+[else]
+　「お疲れのようですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For a moment, I almost thought I was back in Narasaki's clinic, but it was just Fumi addressing me as I absentmindedly gazed at the drifting clouds.[lr]
+[else]
+　ぼんやり雲の動きを見ていると、[ruby text="ふみ"]文の台詞がいつかの[ruby text="なら"]楢[ruby text="さき"]崎と被って聞こえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In my mind's eye, I imagined the two standing next to each other, and chuckled at the thought of how different they were.[prcm]
+[else]
+　似つかないふたりの面影を重ねて、フッ、と可笑しくなる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did I say something funny?[」][lr]
+[else]
+　「何かおかしなこと言いました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've heard someone else say the same thing, that's all.[」][lr]
+[else]
+　「最近誰かにも同じようなことを言われたのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Smiling, Fumi responded with "Well, it's New Year's."[lr]
+[else]
+　それを聞いた文はにこやかになって、「まあ、年末ですからね」と言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She seemed to have cheered up after hearing me chuckle, but we still couldn't find a common topic to discuss.[lr]
+[else]
+　こちらが笑ってから文は機嫌が良くなったが、すぐに話題は見つからなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The raindrops trickling down the windshield — following the exact same route each time — would all be swept away by the wiper.[prcm]
+[else]
+　同じところに流れてくるフロントガラスの水滴は、いつも同じ長さになってからワイパーで拭われた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I imagine we won't have to stay this late again anytime soon. At least as far as this year's concerned.[」][lr]
+[else]
+　「今年はもうこんなに残業することはないでしょうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank god for that.[」][lr]
+[else]
+　「ホントに良かったです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「そうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You definitely pushed yourself too hard this year.[」][lr]
+[else]
+　「佐知子さんも疲れていたんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What makes you say that?[」][prcm]
+[else]
+　「どうして？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I saw you spacing out and talking to yourself a lot lately.[l] I was getting a bit worried, to be honest.[」][lr]
+[else]
+　「この頃、気がついたらぼうっとしていたり、独り言を言っていたりしていたから。[l]少し心配していたんです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was talking to myself?[」][lr]
+[else]
+　「私が独り言を言っていたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi nodded.[prcm]
+[else]
+　私が聞くと、文は頷いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, you rarely actually spoke, but you seemed deep in thought all the time.[」][lr]
+[else]
+　「口に出すことは滅多にないですけれど。[l]でもいつも何か考え込んでいるような」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tensed up, worried that she might have noticed my condition.[lr]
+[else]
+　私は幻覚のことについて文が何か気がついているのかと思い少し緊張した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But Fumi added "I think you were talking about work or something. Happens to everyone."[prcm]
+[else]
+　しかし文は「きっと仕事のことだとは思うんですが」と続けた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a bit shocking.[l] I thought I was being careful not to let my exhaustion show.[」][lr]
+[else]
+　「少しショックね。[l]疲れていても態度には出さないように気をつけてたんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi smiled, her eyes still fixed on the road.[prcm]
+[else]
+　文は前を見ながら微笑んだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're usually pretty difficult to read, so it'd actually make it easier for me if you were more open.[l] I don't even remember the last time you took a vacation. Made me wonder if you actually take any time to rest.[」][lr]
+[else]
+　「普段はわかりにくいので、むしろ出してもらったほうがこちらもフォローしやすいですよ。[l]
+佐知子さんはあまり有給休暇とかも使わないし、いつ休んでるんだか心配ですよ。[l]
+もっと私や犬飼にどんどん仕事押し付けてもらって構わないですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Though if you do that, Inukai will have less work than me. Just saying.[」][r]
+she added.[prcm]
+[else]
+　文はそう言ったあとで「でも主に犬飼の方にお願いします」と付け加えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] But I took a very long vacation a while back.[」][lr]
+[else]
+　「そうね。[l]でも、有休なら以前まとめて取ったわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi paused for a second, then went on with a "Well, that was quiiite a while back, wasn't it?"[prcm]
+[else]
+　文は少し考えてから「それはまたずいぶん前の話ですね」と言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if I took too many days off.[」][lr]
+[else]
+　「ちょっとまとめて取りすぎたかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried to guide the conversation toward the subject I was most curious about. Fumi shook her head in response.[prcm]
+[else]
+　ふと、気になってその話題を留めると、文はウウン、と少し唸るような仕草をして言う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think you needed them back then.[」][lr]
+[else]
+　「でも、あのときは休暇も必要だったと思います」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」] I pressed further, noticing Fumi was hesitating.[prcm]
+[else]
+　「そうかしら？」と何かを言い渋る文にすかさず問うてみた。[prcm]
+[endif]
+
+
+
+
+
+
+[clickskip enabled=false]
+[stopse buf=1]
+[stopse buf=2]
+[stopse buf=3]
+[stopse buf=4]
+[stopse buf=5]
+[r][r][r][r][r][r]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um.[wait time=500].[wait time=500].[wait time=500] it was around the time Ms. Takako passed away.[」][wait time=1500][fadeinse buf=1 storage=se89 time=3000 loop=true volume=70][fadeinse buf=4 storage=se86_2 time=3000 loop=true][wait time=1600][prcm]
+[else]
+　「その・[wait time=500]・[wait time=500]・[wait time=500]貴呼さんが亡くなった時期でしたし」[wait time=1500]
+[fadeinse buf=1 storage=se89 time=3000 loop=true volume=70]
+[fadeinse buf=4 storage=se86_2 time=3000 loop=true]
+[wait time=1600][prcm]
+[endif]
+
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi's voice lowered to a whisper.[lr]
+[else]
+　文は声を抑えて言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When Takako... passed away?[」][prcm]
+[else]
+　「亡くなった時期？」と頭で反芻した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't normally show emotions, but back then, everyone could tell you were trying to suppress more than what was healthy. We couldn't do anything...[l] I was so worried.[」][lr]
+[else]
+　「あのときは、普段そういった態度を見せないのにずっと塞いでいるみたいで、でも私にはどうしようも出来なくて…。[l]
+ずっと心配していたんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry. I didn't mean to put you through that.[」][lr]
+[else]
+　「ごめんなさい、心配かけたわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I did everything I could not to show my bewilderment as Fumi shook her head.[prcm]
+[else]
+　やっとの思いで動揺を隠すと、文は「いいえ」と言って首を振った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But you returned to normal when you came back from that vacation.[l] You even took care of all the accumulated paperwork at twice the pace.[」][lr]
+[else]
+　「それでも、休み明けからはまた普段通りに見えました。[l]休暇中に溜まっていた書類もあっという間に片付けてしまう仕事ぶりを見て、驚いていたんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I couldn't spend the rest of my life moping around and crying.[」][prcm]
+[else]
+　「いつまでも、落ち込んではいられないものね」[prcm]
+[endif]
+
+
+[seopt buf=0 volume=80]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking out the window, I spotted the closest convenience store to my house.[lr]
+[else]
+　窓の外に、自宅から最寄りのコンビニが見えた。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=90]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt as though a snake had been wriggling inside my head.[lr]
+[else]
+　頭の中で蛇が這い回るような感触がしていた。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=100]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could tell it was most likely my blood flow, but I was feeling so sick I decided not to think too deeply about anything.[prcm]
+[else]
+　それは、血の流れだろうと想像は付いたが、その頃にはものすごく気分が悪くなり、それ以上あまり考えないように努めた。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[fadeoutse buf=1 time=3000]
+[wait time=10]
+[fadeoutse buf=4 time=3000]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[seopt buf=4 volume=100]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks for the lift.[」][lr]
+[else]
+　「送ってくれてありがとう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No problem. See you tomorrow.[」][lr]
+[else]
+　「いえ、それではまた明日」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, see you tomorrow.[」][lr]
+[else]
+　「ええ、また明日」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened the car's door and rushed to the entrance of my apartment complex in the heavy downpour.[lr]
+[else]
+　それから、助手席のドアを開けて、雨の中をマンションの玄関まで小走りに走った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the sound of a car engine whirring to life behind me.[lr]
+[else]
+　後ろで、エンジンのかかる音がしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Glancing backwards, I saw Fumi waving me goodbye as she stepped on the gas.[prcm]
+[else]
+　玄関で振り返ると、文は小さく手を振って車を出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once her car had disappeared into the darkness, I boarded the elevator.[lr]
+[else]
+　車を見送り、エレベーターに乗る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pressed my palm against my head. It hurt like hell.[lr]
+[else]
+　ひどく痛む頭を手で押さえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I reached my floor, I took the key holder out of my pouch as I walked down the corridor, then opened my door.[lr]
+[else]
+　自宅の階につくと、ポーチからキーホルダーを取り出しながら廊下を歩いて、自宅のドアを開けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped inside and locked the door behind me. Upon entering the bedroom, I threw myself onto the bed, not caring about my still-wet clothes.[lr]
+[else]
+　後ろ手に鍵を閉め、少し濡れた服のまま寝室に入り、ベッドに倒れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wasn't planning to get up anymore.[prcm]
+[else]
+　今日はもうこのまま眠るつもりだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I haphazardly pulled the sheet over myself and closed my eyes.[lr]
+[else]
+　布団を手繰り寄せ、適当に上に被せると、目を閉じた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I repeated the words one more time in my head.[prcm]
+[else]
+　それからもう一度頭の中で繰り返した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako's dead.[」][prcm]
+[else]
+　「貴呼は亡くなっていた」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the sound of the clock somewhere deep within the darkness.[prcm]
+[else]
+　黒い視界の中では遠く、時計の音が聞こえていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[seopt buf=1 volume=100]
+[wait time=1000]
+
+[jingle6]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="036.ks" target=*036
+
+

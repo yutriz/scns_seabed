@@ -1,0 +1,347 @@
+*075| Kozue's Entrance
+; *075|梢の訪問
+[fbfstoretitle eng="Kozue's Entrance" jp="梢の訪問"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm10"]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+[wait time=1000]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="item07" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 91"]
+[eval exp="sf.ItRelease = 92"]
+[endif]
+
+
+[stopse buf=2]
+*| Kozue's Entrance
+; *|梢の訪問
+[fbfstoretitle eng="Kozue's Entrance" jp="梢の訪問"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As our game neared its end, Narasaki began singing a song from an old movie — Daisy Bell.[lr]
+[else]
+　局面も中盤に差し掛かった頃、[ruby text="なら"]楢[ruby text="さき"]崎がデイジーベル、デイジーベル、と昔の映画の唄を歌い始めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tilted my book and gave her a hard look.[lr]
+[else]
+　私は読んでいた本の位置をずらし、彼女の様子を覗いてみた。[lr]
+[endif]
+
+[r][cm]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg05_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you giving up?[」][lr]
+[else]
+　「あきらめてリザインする？」[lr]
+[endif]
+
+[r]
+
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not even close.[」][lr]
+[else]
+　「なんの、それには及ばないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The pieces kept moving on the board with short clangs.[lr]
+[else]
+　カチカチ、と影の短くなった駒が動いていく。[lr]
+[endif]
+
+[r]
+
+[fadeoutbgm time=2000]
+[playse buf = 0  storage=se68.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Suddenly, an irritating knock on the door threw my mind into a jumble.[prcm]
+[else]
+　続いてコンコンコン、と苛立たしげなノックが響いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's open.[」][lr]
+[else]
+　「空いているよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki responded.[lr]
+[else]
+　楢崎が応える。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked my wristwatch, but there still was some time until noon.[prcm]
+[else]
+　袖を捲って腕時計を確認すると、お昼という時間でもなかった。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se54.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The door slowly opened, revealing a doll-like girl.[p][wb][r][cm]
+[else]
+　ガチャリ、と扉が開いて、お人形のような女の子が部屋に入ってくる。[p]
+[wb]
+[r][cm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[playbgm storage="bgm13"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h11" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wb]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She wore a gray blouse and a long, blue skirt.[lr]
+[else]
+　その女の子は紺色のブラウスと丈の長いスカートを着ていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its hem lingered maybe only ten or so centimeters above the ground.[lr]
+[else]
+　スカートの裾は地面より[ruby text="こぶし"]拳一つくらい高いところで綺麗に揃っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the same girl I met at the library.[prcm]
+[else]
+　図書館に通っていた女の子だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl didn't move any further from the door, and instead looked around with suspicious eyes.[lr]
+[else]
+　女の子は扉の前に立ったまま、訝しげに部屋の中を見ている。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h09" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She looked at me, then at Narasaki, then at the chessboard between us.[prcm]
+[else]
+　こちらと楢崎とテーブル上のチェス盤を見る。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h10" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you remember your promise?[」] asked the girl as she looked at the[r]
+notebook in her hands. Narasaki answered that she did.[prcm]
+[else]
+　「約束したでしょう？」と女の子がこちらの手に持っている本を見ながら言うと「覚えているよ」と楢崎が答えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's something I have to ask the person who stays here.[l] You told me I'll be able to speak with her.[」][lr]
+[else]
+　「ここの人に聞きたいことがあるの。[l]会わせてくれる約束よね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki leaned closer to my ear.[lr]
+[else]
+　楢崎がこちらの耳元に顔を寄せる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl looked at us with knitted brows.[prcm]
+[else]
+　女の子は私と楢崎のやりとりを眉をひそめて見ている。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We were planning to meet with Ms. Nanae's aunt in the afternoon, right?[l] I'd like this girl to come with us if possible.[」][lr]
+[else]
+　「この屋敷の小母さんと会う約束をしていただろう？[l] この子にもお目通りさせてあげられないかね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h11" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=800]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h09" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl's eyes were transfixed on the silver bookmark on my desk, but she looked away as soon as she realized I followed her gaze, and instead glared back at me.[prcm]
+[else]
+　卓上に置かれた銀のしおりを見て目を細めていた女の子は、こちらに気がついて一度目を逸らしたが、すぐに見返してくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't mind.[」][lr]
+[else]
+　「私は構わないわよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks,[」] said Narasaki in a small voice.[prcm]
+[else]
+　「ありがとう」と楢崎が小さい声で言った。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="076.ks" target=*076
+
+

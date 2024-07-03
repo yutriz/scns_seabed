@@ -1,0 +1,437 @@
+*054_3| A Sealing Hand
+; *054_3|塞ぐ手
+[fbfstoretitle eng="A Sealing Hand" jp="塞ぐ手"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[seopt buf=0 volume=60]
+[fadeinse buf=0 storage=se80.ogg loop=true time=3500]
+[wf buf=0]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 69"]
+[eval exp="sf.ItRelease = 70"]
+[endif]
+
+
+*| A Sealing Hand
+; *|塞ぐ手
+[fbfstoretitle eng="A Sealing Hand" jp="塞ぐ手"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You had another fit?[」][prcm]
+[else]
+　「発作ですか？」[prcm]
+[endif]
+
+
+[quake hmax=0 vmax=30 time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko's voice rolled out like thunder.[lr]
+[else]
+　[ruby text="まゆ"]繭[ruby text="こ"]子の声が轟音となって聞こえる。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h08" visible=true left=105 top=0 rceil=40 gceil=40 bceil=40]
+[fbfscale_image storage="bg44_5" page=back layer=base rfloor=0 gfloor=0 bfloor=0 rceil=40 gceil=40 bceil=40]
+[trans method=universal rule="rule7" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I opened my eyes, I saw her rising from her futon and coming over to me.[lr]
+[else]
+　目を開くと、布団から起き上がりこちらへ歩いてくる繭子が見えた。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule7" vague=50 time=800]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes again [quake hmax=0 vmax=10 time=200]and responded by furrowing my eyebrows.[prcm]
+[else]
+　再び目を閉じると[quake hmax=0 vmax=10 time=200]眉をしかめて反応する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the rustling of clothes — [quake hmax=0 vmax=30 time=200]Mayuko probably crouched down in front of me.[lr]
+[else]
+　ジャリ、[quake hmax=0 vmax=30 time=200]と衣擦れの物音がして、繭子はこちらの前に屈んだ様子だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Something touched my ears.[prcm]
+[else]
+　それから耳に何かが当たる感触がした。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg10=1"]
+[fbfscale_image storage="ev10" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+[seopt buf=0 volume=55]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt as though there was an intense, raging gust of wind trying to escape my ear canals now that this warm sensation had blocked it.[lr]
+[else]
+　両耳に当てられた暖かい感触のものと、鼓膜のあいだにある空間は巨大な洞を抜ける風のような音を立てた。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=50]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the sound of pulsing blood, but it wasn't mine.[lr]
+[else]
+　その中にはドクンドクン、と規則正しい脈を打つ音が混ざっていた。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=45]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I began to focus on that sound alone, the others gradually faded out.[prcm]
+[else]
+　その手の音に集中すると、他の音は聞こえ難くなった。[prcm]
+[endif]
+
+
+[seopt buf=0 volume=40]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko was covering my ears with both of her hands.[lr]
+[else]
+　繭子がこちらの耳を手で塞いでいるのがわかった。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=35]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The somewhat nostalgic sound of pulsing blood drowned out all other noises.[prcm]
+[else]
+　どこか懐かしいその脈の音は、少しずつ耳障りな音たちを遠ざけていく。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I didn't mean to wake you... I'm sorry.[」][lr]
+[else]
+　「ごめん。[l]起こしちゃった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried saying that, but with my sense of hearing going completely haywire, I wasn't sure whether my voice actually came out or not.[prcm]
+[else]
+　と、言ったつもりだったが、耳鳴りのせいで自身の声量が適切かどうか分からなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　大きすぎたか、それとも小さすぎて聞き取れないのか、分からない。[lr]
+[r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko remained silent, keeping her warm hands on my ears.[lr]
+[else]
+　繭子はそれに応えずに、こちらの耳を塞ぐようにジッ、と手を当てていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That warmth slowly traveled to my frozen cheeks.[prcm]
+[else]
+　ゆっくりと、繭子の手から温もりが伝わって頬を温めた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt the storm drawing farther away; the noise at my eardrums was gradually subsiding with every passing second.[lr]
+[else]
+　嵐が過ぎていくように、鼓動の音も徐々に小さくなる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As my heart rate began to drop, I finally began calming down.[prcm]
+[else]
+　それにつれて少しずつ心が落ち着いていく。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[fadeoutse buf=0 time=3000]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=3000]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h04" visible=true left=105 top=0 rceil=150 gceil=150 bceil=150]
+[fbfscale_image storage="bg44_6" page=back layer=base rfloor=0 gfloor=0 bfloor=0]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The violent sounds drilling through my brain had finally died down.[lr]
+[else]
+　耳から頭の中へ嵐のように流れる暴力的な刺激がなくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I touched Mayuko's hand, signaling that she could let go.[prcm]
+[else]
+　そっと腕を触ると、繭子は腕を離した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you okay?[」][lr]
+[else]
+　「大丈夫ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I'm okay now.[」][lr]
+[else]
+　「もう大丈夫」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko tilted her head to look at my face in the moonlight.[prcm]
+[else]
+　繭子は首を傾けると月明かりでこちらの顔を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The area around your eyes seems reddish.[l] Did you have a scary dream?[」][lr]
+[else]
+　「目が赤いですね。[l]発作の前に怖い夢でも見ました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes, trying to recall what had happened right before that fit.[prcm]
+[else]
+　目を閉じると、微かに発作の前の記憶が残っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I did have a dream, but... it wasn't scary.[l] If anything, it made me feel warm and nice.[」][lr]
+[else]
+　「何か夢を見ていたけど。[l]怖い夢ではなかった。[l]それよりもっと温かい、いい夢だった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't recall exactly what the dream was about, though.[lr]
+[else]
+　しかし、内容は思い出せなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And I didn't feel like trying too hard, either — especially after that nightmarish ear ringing fit I'd just had.[prcm]
+[else]
+　耳鳴りのせいで、思い出す気にもなれなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Will you be able to go back to sleep now?[」][lr]
+[else]
+　「もう一度眠れそうですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a few moments to make sure everything around me sounded okay, then slowly nodded.[lr]
+[else]
+　耳で空気の音を聞き、大丈夫であることを再び確認してからゆっくりと頷いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the other hand, with my mind finally clear, I couldn't help but wince at what all this implied.[prcm]
+[else]
+　しかし、このあとのことを考える余裕ができるとそれはそれで[ruby text="へき"]辟[ruby text="えき"]易した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's make sure to check your diary tomorrow and see if you haven't forgotten something again, okay?[」][prcm]
+[else]
+　「明日は日記に目を通して、何かを忘れていないか確かめましょうね」と繭子が思っていたことを言った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[jingle4]
+
+
+
+;TIPS選択フラグ
+[if exp="f.ItRelease_tips1 <= 2"]
+[rclick enabled=false]
+[history output=false enabled=false]
+
+[eval exp="f.ItRelease_tips1 = 4"]
+[eval exp="sf.ItRelease_tips1 = f.ItRelease_tips1"]
+[msgon_b]
+
+[r][r][r][r]
+[playse buf = 2 storage=se28.ogg]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+TIPS I. Narasaki Clinic[r]
+Consultation room has been unlocked.[r]
+Bedroom has been unlocked.[prcm]
+[else]
+TIPSⅠ.楢崎診療所[r]
+「診察室」が解放されました。[r]
+「寝室」が解放されました。[prcm]
+[endif]
+
+
+[msgoff]
+[wait time=1500]
+
+[history output=true enabled=true]
+[endif]
+
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="055.ks" target=*055
+
+

@@ -1,0 +1,242 @@
+*155_2| The sanatorium's corridor
+; *155_2|療養所の廊下
+[fbfstoretitle eng="The sanatorium's corridor" jp="療養所の廊下"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg41_3_l" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 199"]
+[eval exp="sf.ItRelease = 200"]
+[endif]
+
+
+*| The sanatorium's corridor
+; *|療養所の廊下
+[fbfstoretitle eng="The sanatorium's corridor" jp="療養所の廊下"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The night duty room is a Japanese style room, so we can sit on the floor. There's also tea and snacks.[」][lr]
+[else]
+　「宿直室は座敷だから座って話せるし、お茶もお菓子もあるから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako's twin tails fluttered in the air with each of her steps.[prcm]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼の括った髪の毛が、歩くたびに頭の後ろで揺れていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You seem to be doing all right.[」][lr]
+[else]
+　「なんていうか元気そうだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I am.[l] I mean, it's not the kind of illness that affects my physical health, is it?[l] I just wish it didn't mess with my head so I could remember you, at least.[」][lr]
+[else]
+　「元気も元気だよ。[l]私のは体調に触るような病気じゃないから。[l]これで貴方のことも思い出せればもっと良かったんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't worry about it.[l] It's been a long time.[」][lr]
+[else]
+　「気にしなくていい。[l]とても昔の事だからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you say so.[」][prcm]
+[else]
+　「そう」と貴呼は言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How many patients are in this sanatorium?[」][lr]
+[else]
+　「ところで、この療養所にはどれくらいの患者がいるんだい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Only four people live here, including me.[」][lr]
+[else]
+　「この療養所だけだと私を含めて四人かな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's fewer than I thought.[」][lr]
+[else]
+　「思ったより少ないな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, isn't that a good thing?[」][lr]
+[else]
+　「だからって募集するわけにはいかないでしょう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose it is.[」][lr]
+[else]
+　「そうだな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you come here by car?[」] Takako changed the subject.[prcm]
+[else]
+　貴呼は歩きながら別の質問をする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　「[ruby text="なら"]楢[ruby text="さき"]崎さんは車で来たの？」[lr]
+[r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] It wasn't easy to drive up that mountain road.[」][lr]
+[else]
+　「ああ。[l]ここは随分山奥だね。[l]車で来るのに苦労したよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right?[l] People don't usually come so far out into the mountains.[」][lr]
+[else]
+　「そうでしょう？[l] 普通はこんなところまで来る人いないもの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't get bored here?[」][lr]
+[else]
+　「退屈したりしないのかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's true that I don't get many chances to go outside, but it's not as bad as it sounds.[l] There might be few people here, but there's a lot to do.[l] Mayuko makes sure to find an odd job for me every day.[」][prcm]
+[else]
+　「確かにあまり外には出してもらえないけど、それ程退屈じゃないよ。[l]人が少ないから療養所はやる事が沢山あるからね。[l]毎日繭子が仕事を持ってくるんだよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is she strict with you?[」][lr]
+[else]
+　「繭子って人は厳しいのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not at all.[l] She even said half of her was made of pure kindness, actually.[」][lr]
+[else]
+　「そんなことはないけどね。[l]本人も繭子の半分は優しさで出来てるって言ってたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sounds like headache medicine.[」][lr]
+[else]
+　「頭痛薬みたいな人だね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]She said she found out through a blood test.[」][lr]
+[else]
+　「血液検査で調べたんだって」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Science sure seems to have advanced in recent times.[」][prcm]
+[else]
+　「最近のはそんな事まで分かるんだな」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako chuckled as I said that.[prcm]
+[else]
+　そう言って笑うと、貴呼も笑った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="156.ks" target=*156
+
+

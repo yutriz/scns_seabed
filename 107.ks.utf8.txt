@@ -1,0 +1,336 @@
+*107| Sandbox tunnel
+; *107|砂場トンネル
+[fbfstoretitle eng="Sandbox tunnel" jp="砂場トンネル"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm26"]
+[backlay]
+[fbfscale_image storage="bg86" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 133"]
+[eval exp="sf.ItRelease = 134"]
+[endif]
+
+*| Sandbox tunnel
+; *|砂場トンネル
+[fbfstoretitle eng="Sandbox tunnel" jp="砂場トンネル"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sand in the sandbox was powder-like, as though it was delivered here straight from the beach. I could spot pink and white pieces of shells mixed into it.[lr]
+[else]
+　砂場の砂はどこかの海辺の砂のようにサラサラとしてきめ細かく、キラキラと光るガラスの粒や、小さな桃色や白色の貝の欠片が混ざりこんでいた。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p01_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako overturned her water-filled bucket.[lr]
+[else]
+　その砂の上に、[ruby text="たか"]貴[ruby text="こ"]呼が水を汲んできたバケツを返す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the sand absorbed water and changed color, she scooped up a handful and put it on top of her mountain.[lr]
+[else]
+　水が染み込んで色が変わったところから、砂を手ですくって積み上げた山の上に足した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It reached all the way up to her belly button.[prcm]
+[else]
+　貴呼のおへその高さまで土を積む。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This should be good enough. Let's make a tunnel next.[l] Start digging from that side.[」][lr]
+[else]
+　「このくらいでいいや、次はトンネルを作ろう。[l]じゃあそっちから掘ってね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako started digging without waiting for my reply.[lr]
+[else]
+　頷く前から、掘り始める貴呼。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sand was still wet and showed no signs of crumbling away, even when I dug a hole in it.[lr]
+[else]
+　土はまだ湿っていて、手のひらいっぱいの土を掻いても、山が崩れる気配はなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued digging until my hand passed through it and touched something soft.[prcm]
+[else]
+　掘り続けると、やがてぼこっとした土の抜ける手応え、そして反対側であるこちらの指にあたる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p02_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Haha.[」][lr]
+[else]
+　「むにむにする」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako tried to catch my hand, so I pulled it away.[prcm]
+[else]
+　貴呼が指を動かして、こっちの指を取ろうとするので、手を引っ込める。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p02_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We have to connect it properly so it can pass through.[」][lr]
+[else]
+　「あとは通れるようにちゃんと繋げよう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What can pass through?[」][lr]
+[else]
+　「何を？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We made both our holes wider and strengthened their walls with more wet sand.[prcm]
+[else]
+　両側から穴を広げて、ぺたぺたと側面を固める。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're gonna make a water channel pass through this.[l] I'll go bring the water hose once we make a place for a waterfall here.[」][lr]
+[else]
+　「この穴を通る水路をつくるんだ。[l]滝になる段差も作って、あとでホースで水をながそう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're going to be angry again if we use the hose without permission.[」][lr]
+[else]
+　「ホースの水を使ったら、また怒られるわよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p02_h23" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Relax, I'll make sure they don't find out.[」][lr]
+[else]
+　「大丈夫、バレないようにやるから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We continued working in silence.[prcm]
+[else]
+　そして黙々と作業を続ける。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's quite a mountain there.[l] And I see you've even made a tunnel.[」][lr]
+[else]
+　「あら、大きな小山だね。[l]トンネルもあるのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, Ms. Nurse.[」][lr]
+[else]
+　「あ、先生」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The kindergarten nurse came to check on us.[lr]
+[else]
+　いつのまにか幼稚園の先生が来て私達を見ていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She wore an apron with pink tulips embroidered on it.[prcm]
+[else]
+　先生は赤いチューリップの刺繍がしてある前掛けをしていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you making?[」][lr]
+[else]
+　「今は何を作っているの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p02_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right now, a waterway.[」][lr]
+[else]
+　「今は水路を建設中」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, but you can't fill the sandbox with water.[」][lr]
+[else]
+　「そうなの。[l]でも、砂場に水を流したらダメよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p02_h23" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Relax, I'll make sure they don't find out.[」][lr]
+[else]
+　「大丈夫、バレないようにやるから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako continued working in silence.[prcm]
+[else]
+　そして黙々と作業を続ける貴呼。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um...[」] said the nurse.[prcm]
+[else]
+　「やれやれ」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、先生が言った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="107_2.ks" target=*107_2
+
+

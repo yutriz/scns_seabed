@@ -1,0 +1,47 @@
+
+*fbf_macro
+
+@macro name="lr"
+[l][r]
+@endmacro
+
+@macro name="dl"
+[l][font size=36 face="kalam36.tft"][mappfont storage="kalam36.tft"]
+@endmacro
+
+@macro name="dlr"
+[l][r][font size=36 face="kalam36.tft"][mappfont storage="kalam36.tft"]
+@endmacro
+
+@macro name="setdiaryfont"
+[font size=36 face="kalam36.tft"][mappfont storage="kalam36.tft"]
+@endmacro
+
+@macro name="prcm"
+[p][r][cm]
+@endmacro
+
+@macro name="「"
+"[indent]
+@endmacro
+
+@macro name="」"
+@eval exp="kag.FBFisEndQuote = true;"
+"[endindent]
+@eval exp="kag.FBFisEndQuote = false;"
+@endmacro
+
+@macro name="asterisk"
+[ch text="*"]
+@endmacro
+
+@macro name="「"
+"[indent]
+@endmacro
+
+@macro name="fbfstoretitle"
+@eval exp="f.engPageName=mp.eng"
+@eval exp="f.jpPageName=mp.jp"
+@endmacro
+
+@return

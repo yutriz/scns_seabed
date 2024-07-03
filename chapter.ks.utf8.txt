@@ -1,0 +1,3151 @@
+*chapter
+
+[playbgm storage="bgm34"]
+[call storage="mouse.ks"]
+[wait time=200]
+[clickskip enabled=false]
+; 現在の状態をメモリ上の栞に保存しておきます
+; メッセージ履歴の出力・表示を無効にします
+[history output=false enabled=false]
+[call target=*chapterlist]
+;@jump storage="chapterlist.ks" target=*chapterlist
+
+[iscript]
+
+{
+  // 変数初期化
+  tf.firstScenIndex = 1;  // 選択章の一番若いシーンの配列添字を格納する変数
+
+  // 選択章の最終シーンの配列添字を格納する変数
+  // 序章の最終シーンはシーン50。解放シーンが50に到達していない場合は解放フラグをそのまま配列添字とする
+  if(f.ItRelease < 50){
+    tf.endScenIndex = f.ItRelease;
+  }else{
+    tf.endScenIndex = 50;
+  }
+  
+  tf.scenIndex = tf.firstScenIndex;  // 表示中文字列が格納されている配列添字を格納する変数（シーン）
+  
+  tf.endSyoIndex = f.CpRelease;      // 解放済みの章の内、最新の章の配列添字を格納する変数
+  tf.syoIndex = 1;                   // 表示中文字列が格納されている配列添字を格納する変数（章）
+  // チャプターがどこまで開放されているかを管理する変数
+  //f.CpRelease
+  //f.ItRelease
+  // 章選択戻り▲ON FLG  0:false, 1:true
+  tf.syoSelect1 = 0;
+  // 章選択送り▲ON FLG  0:false, 1:true
+  tf.syoSelect2 = 0;
+  // シーン選択戻り▲ON FLG  0:false, 1:true
+  tf.scenSelect1 = 0;
+  // シーン選択送り▲ON FLG  0:false, 1:true
+  tf.scenSelect2 = 0;
+  
+  tf.jumpName = "";
+  
+  //ボタン表示フラグ 0:非アクティブ 1:アクティブ 2:グレーアウト
+  tf.syoSelectLeft = 1;
+  tf.syoSelectRight = 0;
+  tf.scenSelectLeft = 1;
+  tf.scenSelectRight = 0;
+
+}
+
+[endscript]
+
+
+[iscript]
+function syoSelect1_onenter()
+ {
+    cursor_str_update();
+    if(tf.syoSelectLeft != 2){
+     kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+     tf.syoSelectLeft = 1;
+    }
+    change_display();
+ }
+
+function syoSelect1_onleave()
+ {
+    cursor_str_update();
+    if(tf.syoSelectLeft != 2){
+     tf.syoSelectLeft = 0;
+    }
+    change_display();
+ }
+
+function syoSelect2_onenter()
+ {
+    cursor_str_update();
+    if(tf.syoSelectRight != 2){
+     kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+     tf.syoSelectRight = 1;
+    }
+    change_display();
+ }
+
+function syoSelect2_onleave()
+ {
+    cursor_str_update();
+    if(tf.syoSelectRight != 2){
+     tf.syoSelectRight = 0;
+    }
+    change_display();
+ }
+
+function scenSelect1_onenter()
+ {
+    cursor_str_update();
+    if(tf.scenSelectLeft != 2){
+     kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+     tf.scenSelectLeft = 1;
+    }
+    change_display();
+ }
+
+function scenSelect1_onleave()
+ {
+    cursor_str_update();
+    if(tf.scenSelectLeft != 2){
+     tf.scenSelectLeft = 0;
+    }
+    change_display();
+ }
+
+function scenSelect2_onenter()
+ {
+    cursor_str_update();
+    if(tf.scenSelectRight != 2){
+     kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+     tf.scenSelectRight = 1;
+    }
+    change_display();
+ }
+
+function scenSelect2_onleave()
+ {
+    cursor_str_update();
+    if(tf.scenSelectRight != 2){
+     tf.scenSelectRight = 0;
+    }
+    change_display();
+ 
+ }
+
+
+function change_display()
+{
+  //ボタン表示フラグ 0:非アクティブ 1:アクティブ 2:グレーアウト
+  
+  // 章選択左カーソル更新処理=====================================
+  
+  // 0は非アクティブのパターン 
+  if(tf.syoSelectLeft == 0)
+  {
+    kag.fore.layers[1].visible = false;
+    kag.fore.layers[2].visible = true;
+    kag.fore.layers[3].visible = false;
+    kag.back.layers[1].visible = false;
+    kag.back.layers[2].visible = true;
+    kag.back.layers[3].visible = false;
+  }
+  // 1はアクティブのパターン
+  else if(tf.syoSelectLeft == 1)
+  {
+    kag.fore.layers[1].visible = true;
+    kag.fore.layers[2].visible = false;
+    kag.fore.layers[3].visible = false;
+    kag.back.layers[1].visible = true;
+    kag.back.layers[2].visible = false;
+    kag.back.layers[3].visible = false;
+  }
+  // 2はグレーアウト（選択不可）のパターン
+  else if(tf.syoSelectLeft == 2)
+  {
+    kag.fore.layers[1].visible = false;
+    kag.fore.layers[2].visible = false;
+    kag.fore.layers[3].visible = true;
+    kag.back.layers[1].visible = false;
+    kag.back.layers[2].visible = false;
+    kag.back.layers[3].visible = true;
+  }
+  
+  // 章選択右カーソル更新処理=====================================
+  
+  // 0は非アクティブのパターン 
+  if(tf.syoSelectRight == 0)
+  {
+      kag.fore.layers[4].visible = false;
+      kag.fore.layers[5].visible = true;
+      kag.fore.layers[6].visible = false;
+      kag.back.layers[4].visible = false;
+      kag.back.layers[5].visible = true;
+      kag.back.layers[6].visible = false;
+  }
+  // 1はアクティブのパターン
+  else if(tf.syoSelectRight == 1)
+  {
+      kag.fore.layers[4].visible = true;
+      kag.fore.layers[5].visible = false;
+      kag.fore.layers[6].visible = false;
+      kag.back.layers[4].visible = true;
+      kag.back.layers[5].visible = false;
+      kag.back.layers[6].visible = false;
+  }
+  // 2はグレーアウト（選択不可）のパターン
+  else if(tf.syoSelectRight == 2)
+  {
+      kag.fore.layers[4].visible = false;
+      kag.fore.layers[5].visible = false;
+      kag.fore.layers[6].visible = true;
+      kag.back.layers[4].visible = false;
+      kag.back.layers[5].visible = false;
+      kag.back.layers[6].visible = true;
+  }
+  // シーン選択左カーソル更新処理=====================================
+  
+  // 0は非アクティブのパターン 
+  if(tf.scenSelectLeft == 0)
+  {
+      kag.fore.layers[7].visible = false;
+      kag.fore.layers[8].visible = true;
+      kag.fore.layers[9].visible = false;
+      kag.back.layers[7].visible = false;
+      kag.back.layers[8].visible = true;
+      kag.back.layers[9].visible = false;
+  }
+  // 1はアクティブのパターン
+  else if(tf.scenSelectLeft == 1)
+  {
+      kag.fore.layers[7].visible = true;
+      kag.fore.layers[8].visible = false;
+      kag.fore.layers[9].visible = false;
+      kag.back.layers[7].visible = true;
+      kag.back.layers[8].visible = false;
+      kag.back.layers[9].visible = false;
+  }
+  // 2はグレーアウト（選択不可）のパターン
+  else if(tf.scenSelectLeft == 2)
+  {
+      kag.fore.layers[7].visible = false;
+      kag.fore.layers[8].visible = false;
+      kag.fore.layers[9].visible = true;
+      kag.back.layers[7].visible = false;
+      kag.back.layers[8].visible = false;
+      kag.back.layers[9].visible = true;
+  }
+  
+  // シーン選択右カーソル更新処理=====================================
+  
+  // 0は非アクティブのパターン 
+  if(tf.scenSelectRight == 0)
+  {
+      kag.fore.layers[10].visible = false;
+      kag.fore.layers[11].visible = true;
+      kag.fore.layers[12].visible = false;
+      kag.back.layers[10].visible = false;
+      kag.back.layers[11].visible = true;
+      kag.back.layers[12].visible = false;
+  }
+  // 1はアクティブのパターン
+  else if(tf.scenSelectRight == 1)
+  {
+      kag.fore.layers[10].visible = true;
+      kag.fore.layers[11].visible = false;
+      kag.fore.layers[12].visible = false;
+      kag.back.layers[10].visible = true;
+      kag.back.layers[11].visible = false;
+      kag.back.layers[12].visible = false;
+  }
+  // 2はグレーアウト（選択不可）のパターン
+  else if(tf.scenSelectRight == 2)
+  {
+      kag.fore.layers[10].visible = false;
+      kag.fore.layers[11].visible = false;
+      kag.fore.layers[12].visible = true;
+      kag.back.layers[10].visible = false;
+      kag.back.layers[11].visible = false;
+      kag.back.layers[12].visible = true;
+  }
+}
+
+function cursor_str_update()
+{
+
+  // 0は非アクティブのパターン 
+  // 1はアクティブのパターン
+  // 2はグレーアウト（選択不可）のパターン
+  // 章選択左カーソルステータス更新処理=====================================
+  if(tf.syoIndex == 1)
+  {
+   tf.syoSelectLeft = 2;
+  }else{
+   tf.syoSelectLeft = 0;
+  }
+  // 章選択右カーソルステータス更新処理=====================================
+  if(tf.syoIndex >= tf.endSyoIndex)
+  {
+   tf.syoSelectRight = 2;
+  }else{
+   tf.syoSelectRight = 0;
+  }
+  // シーン選択左カーソルステータス更新処理=====================================
+  if(tf.scenIndex <= tf.firstScenIndex)
+  {
+   tf.scenSelectLeft = 2;
+  }else{
+   tf.scenSelectLeft = 0;
+  }
+  // シーン選択右カーソルステータス更新処理=====================================
+  if(tf.scenIndex >= tf.endScenIndex)
+  {
+   tf.scenSelectRight = 2;
+  }else{
+   tf.scenSelectRight = 0;
+  }
+}
+
+function close_onenter_chapter()
+ {
+    kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[14].visible = false;
+    kag.fore.layers[13].visible = true;
+ }
+
+function close_onleave_chapter()
+ {
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[13].visible = false;
+    kag.fore.layers[14].visible = true;
+ }
+
+function d_select_onenter()
+ {
+    kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[16].visible = false;
+    kag.fore.layers[15].visible = true;
+ }
+
+function d_select_onleave()
+ {
+    kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[15].visible = false;
+    kag.fore.layers[16].visible = true;
+ }
+
+
+// 引数に渡された章のシーンに該当するシーン配列の添字を取得する。
+function first_index_get(syoIndex){
+
+//  1:序章   1～50
+//  2:第一章 51～70
+//  3:第二章 71～99
+//  4:第三章 100～123
+//  5:第四章 124～148
+//  6:第五章 149～164
+//  7:第六章 165～184
+//  8:第七章 185～194
+//  9:第八章 195～205
+// 10:第九章 206～210
+// 11:第十章 211～214
+// 12:終章   215～218
+
+  switch (syoIndex) {
+    
+    case 1:
+      tf.firstScenIndex = 1;
+      if(f.ItRelease < 50){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 50;
+      }
+      break;
+    
+    case 2:
+      tf.firstScenIndex = 51;
+      if(f.ItRelease < 70){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 70;
+      }
+      break;
+    
+    case 3:
+      tf.firstScenIndex = 71;
+      if(f.ItRelease < 99){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 99;
+      }
+
+      break;
+    
+    case 4:
+      tf.firstScenIndex = 100;
+      if(f.ItRelease < 123){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 123;
+      }
+
+      break;
+    
+    case 5:
+      tf.firstScenIndex = 124;
+      if(f.ItRelease < 148){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 148;
+      }
+
+      break;
+    
+    case 6:
+      tf.firstScenIndex = 149;
+      if(f.ItRelease < 164){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 164;
+      }
+
+      break;
+    
+    case 7:
+      tf.firstScenIndex = 165;
+      if(f.ItRelease < 184){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 184;
+      }
+
+      break;
+    
+    case 8:
+      tf.firstScenIndex = 185;
+      if(f.ItRelease < 194){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 194;
+      }
+
+      break;
+    
+    case 9:
+      tf.firstScenIndex = 195;
+      if(f.ItRelease < 205){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 205;
+      }
+      break;
+    
+    case 10:
+      tf.firstScenIndex = 206;
+      if(f.ItRelease < 211){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 211;
+      }
+
+      break;
+    
+    case 11:
+      tf.firstScenIndex = 212;
+      if(f.ItRelease < 215){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 215;
+      }
+      break;
+    
+    case 12:
+      tf.firstScenIndex = 216;
+      if(f.ItRelease < 219){
+        tf.endScenIndex = f.ItRelease;
+      }else{
+        tf.endScenIndex = 219;
+      }
+      break;
+    
+    default:
+  }
+}
+
+function jump_name_get(scenIndex){
+ 
+ tf.jumpName = f.jumplist[scenIndex];
+}
+
+// 章選択の文字列更新
+function update_syoinfo(syoIndex){
+ 
+ kag.back.messages[kag.numMessageLayers - 2].clear();  //章文字列の初期化
+ kag.back.messages[kag.numMessageLayers - 2].processCh(f.chapterlist[syoIndex]);  //章文字列の更新
+ 
+}
+
+// シーン選択の文字列更新
+function update_sceninfo(scenIndex){
+ 
+ kag.back.messages[kag.numMessageLayers - 1].clear();  //シーン文字列の初期化
+ kag.back.messages[kag.numMessageLayers - 1].processCh(f.itemlist[scenIndex]);  //シーン文字列の更新
+}
+
+//function update_cursor(){
+// if(tf.cursorFlg == 0){
+//   window.primaryLayer.setCursorPos(window.primaryLayer.cursorX + 1, window.primaryLayer.cursorY);
+//   tf.cursorFlg = 1;
+// }else{
+//   window.primaryLayer.setCursorPos(window.primaryLayer.cursorX - 1, window.primaryLayer.cursorY);
+//   tf.cursorFlg = 0;
+// }
+//}
+
+[endscript]
+
+[eval exp="f.CpStartFlg = 1"]
+
+; 背景レイヤにコンフィグ画面の画像（クリッカブルマップ）を読み込みます
+[fbfscale_image layer=base storage="chapter_bg" page=back]
+; レイヤを必要な数（前景レイヤ×１７，メッセージレイヤは２つ追加）確保します
+[laycount layers=17 messages="&kag.numMessageLayers + 2"]
+
+; 前景レイヤに画像を読み込みます
+; #0: コンフィグメニュー画像
+
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=0 storage="bgimage\chapterimage\chapter_menu" page=back visible=true left=0 top=0 opacity=255]
+[else]
+	[fbfscale_image layer=0 storage="bgimage\chapterimage\chapter_menu_JP" page=back visible=true left=0 top=0 opacity=255]
+[endif]
+; #1: 章選択戻り選択
+[fbfscale_image layer=1 storage="bgimage\chapterimage\select1_t" page=back visible=false left=123 top=208 opacity=255]
+; #2: 章選択戻り非選択
+[fbfscale_image layer=2 storage="bgimage\chapterimage\select1_f" page=back visible=true left=123 top=208 opacity=255]
+; #3: 章選択戻りOFF
+[fbfscale_image layer=3 storage="bgimage\chapterimage\select1_off" page=back visible=false left=123 top=208 opacity=255]
+; #4: 章選択送り選択
+[fbfscale_image layer=4 storage="bgimage\chapterimage\select2_t" page=back visible=false left=624 top=208 opacity=255]
+; #5: 章選択送り非選択
+[fbfscale_image layer=5 storage="bgimage\chapterimage\select2_f" page=back visible=true left=624 top=208 opacity=255]
+; #6: 章選択送りOFF
+[fbfscale_image layer=6 storage="bgimage\chapterimage\select2_off" page=back visible=false left= 624 top=208 opacity=255]
+; #7: シーン選択戻り選択
+[fbfscale_image layer=7 storage="bgimage\chapterimage\select1_t" page=back visible=false left=123 top=350 opacity=255]
+; #8: シーン選択戻り非選択
+[fbfscale_image layer=8 storage="bgimage\chapterimage\select1_f" page=back visible=true left=123 top=350 opacity=255]
+; #9: シーン選択戻りOFF
+[fbfscale_image layer=9 storage="bgimage\chapterimage\select1_off" page=back visible=false left=123 top=350 opacity=255]
+; #10: シーン選択送り選択
+[fbfscale_image layer=10 storage="bgimage\chapterimage\select2_t" page=back visible=false left=624 top=350 opacity=255]
+; #11: シーン選択送り非選択
+[fbfscale_image layer=11 storage="bgimage\chapterimage\select2_f" page=back visible=true left=624 top=350 opacity=255]
+; #12: シーン選択送りOFF
+[fbfscale_image layer=12 storage="bgimage\chapterimage\select2_off" page=back visible=false left=624 top=350 opacity=255]
+; #13: CLOSE選択
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=13 storage="bgimage\chapterimage\close_t" page=back visible=false left=617 top=83 opacity=255]
+[else]
+	[fbfscale_image layer=13 storage="bgimage\chapterimage\close_t_JP" page=back visible=false left=617 top=83 opacity=255]
+[endif]
+; #14: CLOSE非選択
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=14 storage="bgimage\chapterimage\close_f" page=back visible=true left=617 top=83 opacity=255]
+[else]
+	[fbfscale_image layer=14 storage="bgimage\chapterimage\close_f_JP" page=back visible=true left=617 top=83 opacity=255]
+[endif]
+; #15: 決定選択
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=15 storage="bgimage\chapterimage\d_select_t" page=back visible=false left=357 top=454 opacity=255]
+[else]
+	[fbfscale_image layer=15 storage="bgimage\chapterimage\d_select_t_JP" page=back visible=false left=357 top=454 opacity=255]
+[endif]
+; #16: 決定非選択
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=16 storage="bgimage\chapterimage\d_select_f" page=back visible=true left=357 top=454 opacity=255]
+[else]
+	[fbfscale_image layer=16 storage="bgimage\chapterimage\d_select_f_JP" page=back visible=true left=357 top=454 opacity=255]
+[endif]
+
+; 章選択のメッセージレイヤの設定をします
+[current layer="&'message' + (kag.numMessageLayers - 2)"]
+[fbfscale_position left=192 top=218 width=420 height=31 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+
+; シーン選択のメッセージレイヤの設定をします
+[current layer="&'message' + (kag.numMessageLayers - 1)"]
+[fbfscale_position left=192 top=361 width=420 height=31 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+
+;画面初期化処理
+[call target=*syo_update]
+[call target=*scen_update2]
+[trans method = crossfade time=200]
+[wt]
+[clickskip enabled=true]
+
+[s]
+
+
+*syo_left
+[mapdisable layer=base]
+;初期表示は序章になっている。
+[if exp="tf.syoIndex > 1"]
+;選択位置変数syoIndexに1をマイナスし、それを添字にして章配列から表示文字列を取り出す。
+[eval exp="tf.syoIndex = tf.syoIndex - 1"]
+;取り出した文字列を表示する。
+[call target=*syo_update]
+;表示が序章になった場合は▲をOFFにする
+;[call target=*syo_left_update]
+;マイナスした際に送り▲がOFFになっている場合はONにする。
+;[call target=*syo_right_update]
+;章の切り替えに伴ってシーンの切り替えも連動して動く
+;シーン切り替えに表示してある内容の切り替え。選択している章の一番添字が若いシーンにする。
+[call target=*scen_update1]
+[call target=*scen_update2]
+;画面更新後にonenterを起動するための関数
+[endif]
+[fbfscale_image layer=base storage="chapter_bg" page=fore]
+[fbfscale_image layer=base storage="chapter_bg" page=back]
+[s]
+
+*syo_right
+[mapdisable layer=base]
+;初期表示は序章になっている。
+[if exp="tf.syoIndex < tf.endSyoIndex"]
+;選択位置変数に1加算し、それを添字にして章配列から表示文字列を取り出す。
+[eval exp="tf.syoIndex = tf.syoIndex + 1"]
+;取り出した文字列を表示する。
+[call target=*syo_update]
+;表示が解放されている最新のものになっている場合は送り▲をOFFにする
+;[call target=*syo_right_update]
+;加算した際に戻り▲がOFFになっている場合はONにする。
+;[call target=*syo_left_update]
+;章の切り替えに伴ってシーンの切り替えも連動して動く
+;シーン切り替えに表示してある内容の切り替え。選択している章の一番添字が若いシーンにする。
+[call target=*scen_update1]
+[call target=*scen_update2]
+;画面更新後にonenterを起動するための関数
+[endif]
+[fbfscale_image layer=base storage="chapter_bg" page=fore]
+[fbfscale_image layer=base storage="chapter_bg" page=back]
+[s]
+
+*syo_update
+;章切り替えによる選択表示のアップデート
+[eval exp="update_syoinfo(tf.syoIndex)"]
+[return]
+
+
+*syo_left_update
+[eval exp="syo_left_update_main()"]
+[return]
+
+*syo_right_update
+[eval exp="syo_right_update_main()"]
+[return]
+
+
+*scen_left
+[mapdisable layer=base]
+;初期表示は一番添字が若いシーンになっている。
+;選択位置変数に1をマイナスし、それを添字にして章配列から表示文字列を取り出す。
+[if exp="tf.scenIndex > tf.firstScenIndex"]
+[eval exp="tf.scenIndex = tf.scenIndex - 1"]
+;表示が序章になった場合は▲をOFFにする
+;取り出した文字列を表示する。
+[call target=*scen_update2]
+;画面更新後にonenterを起動するための関数
+[endif]
+[fbfscale_image layer=base storage="chapter_bg" page=fore]
+[fbfscale_image layer=base storage="chapter_bg" page=back]
+[s]
+
+
+*scen_right
+[mapdisable layer=base]
+;初期表示は一番添字が若いシーンになっている。
+[if exp="tf.scenIndex < tf.endScenIndex"]
+;選択位置変数に1加算し、それを添字にして章配列から表示文字列を取り出す。
+[eval exp="tf.scenIndex = tf.scenIndex + 1"]
+;取り出した文字列を表示する。
+[call target=*scen_update2]
+;画面更新後にonenterを起動するための関数
+[endif]
+[fbfscale_image layer=base storage="chapter_bg" page=fore]
+[fbfscale_image layer=base storage="chapter_bg" page=back]
+[s]
+
+
+*scen_update1
+;章切り替えによるシーン選択表示のアップデート
+;選択した章のシーンで一番若い添字を取得
+[eval exp="first_index_get(tf.syoIndex)"]
+[eval exp="tf.scenIndex = tf.firstScenIndex"]
+[return]
+
+*scen_update2
+;シーン切り替えによる選択表示のアップデート
+[clickskip enabled=false]
+[eval exp="update_sceninfo(tf.scenIndex)"]
+;各カーソルの状態ステータス更新
+[eval exp="cursor_str_update()"]
+[eval exp="change_display()"]
+[trans method = crossfade time=150]
+[wt]
+[move_cursor]
+[return]
+
+
+*d_select
+[mapdisable layer=base]
+[clickskip enabled=false]
+;選択しているシーンの添字に対応したジャンプ先をジャンプリストから取得
+[eval exp="jump_name_get(tf.scenIndex)"]
+[eval exp="tf.jumpks = &tf.jumpName + '.ks'"]
+[eval exp="tf.jumptarget = '*' + &tf.jumpName"]
+[backlay]
+[playse buf = 5 storage=se137.ogg]
+[cm]
+[freeimage layer=0 page=back][freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back]
+[freeimage layer=4 page=back][freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back]
+[freeimage layer=8 page=back][freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back]
+[freeimage layer=12 page=back][freeimage layer=13 page=back][freeimage layer=14 page=back][freeimage layer=15 page=back]
+[freeimage layer=16 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[fadeoutbgm time=1500]
+[ct]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[history output=true enabled=true]
+
+;★20151011
+[current layer=message0 page=fore]
+;[msglayer]
+;[backlay]
+;[position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+;[position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=70 visible=true opacity=0]
+;[trans method = crossfade time=1]
+;[wt]
+;[backlay]
+;[layopt page = back layer = message0 visible= false]
+;[layopt page = back layer = message visible= false]
+;[trans method = crossfade time=1]
+;[wt]
+;
+;[laycount layers=20 messages="&kag.numMessageLayers"]
+
+;★20151011
+
+; FBF: Enable ctrl-skip.
+[ctrlskip enabled="true" quickflg="true"]
+
+@jump storage="&tf.jumpks" target="&tf.jumptarget"
+[return]
+
+*close
+[mapdisable layer=base]
+[clickskip enabled=false]
+[backlay]
+[cm]
+[freeimage layer=0 page=back][freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back]
+[freeimage layer=4 page=back][freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back]
+[freeimage layer=8 page=back][freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back]
+[freeimage layer=12 page=back][freeimage layer=13 page=back][freeimage layer=14 page=back][freeimage layer=15 page=back]
+[freeimage layer=16 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[fadeoutbgm time=1500]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[history output=true enabled=true]
+
+;★20151011
+[current layer=message0 page=fore]
+;[msglayer]
+;[backlay]
+;[position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+;[position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=70 visible=true opacity=0]
+;[trans method = crossfade time=1]
+;[wt]
+;[backlay]
+;[layopt page = back layer = message0 visible= false]
+;[layopt page = back layer = message visible= false]
+;[trans method = crossfade time=1]
+;[wt]
+;
+;[laycount layers=20 messages="&kag.numMessageLayers"]
+
+;★20151011
+
+@jump storage="first.ks" target=*start
+
+
+
+*chapterlist
+[if exp="f.chapterlist === void || kag.FBFGetLanguage() != f.chapterlistlang"]
+[eval exp="f.chapterlist = []"]
+
+; FBF: Store language variable.
+[eval exp="f.chapterlistlang = kag.FBFGetLanguage()"]
+
+[iscript]
+ {
+     // 章選択のリストを設定します。添字はsf.CpRelease
+    
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[1] = "Prologue: Clover Design Office";
+}
+else
+{
+    f.chapterlist[1] = "序章：クローバーデザイン事務所";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[2] = "Chapter 1: The Hospital in the Forest";
+}
+else
+{
+    f.chapterlist[2] = "第一章：森の中の病院";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[3] = "Chapter 2: The Hilltop Mansion";
+}
+else
+{
+    f.chapterlist[3] = "第二章：丘の上の洋館";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[4] = "Chapter 3: Promise";
+}
+else
+{
+    f.chapterlist[4] = "第三章：約束";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[5] = "Chapter 4: Connected";
+}
+else
+{
+    f.chapterlist[5] = "第四章：繋がる合わさる";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[6] = "Chapter 5: A Cat in an Aquarium";
+}
+else
+{
+    f.chapterlist[6] = "第五章：水槽の猫";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[7] = "Chapter 6: A Train Heading Far Away";
+}
+else
+{
+    f.chapterlist[7] = "第六章：遠くに向かう電車";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[8] = "Chapter 7: Labyrinth";
+}
+else
+{
+    f.chapterlist[8] = "第七章：辿った迷い路";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[9] = "Chapter 8: The Sea and the Old Anchored Ship";
+}
+else
+{
+    f.chapterlist[9] = "第八章：港の海と碇の下りた古い船";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[10] = "Chapter 9: Return";
+}
+else
+{
+    f.chapterlist[10] = "第九章：帰路";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[11] = "Chapter 10: Distant Sound";
+}
+else
+{
+    f.chapterlist[11] = "第十章：遠くから聞こえる音";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.chapterlist[12] = "Last Chapter: Four-leaf Clover";
+}
+else
+{
+    f.chapterlist[12] = "終章：四つ葉のクローバー";
+}
+
+ }
+[endscript]
+[endif]
+
+[if exp="f.itemlist === void || kag.FBFGetLanguage() != f.itemlistlang"]
+
+[eval exp="f.itemlist = []"]
+
+; FBF: Store language variable.
+[eval exp="f.itemlistlang = kag.FBFGetLanguage()"]
+
+[iscript]
+ {
+    // 項選択のリストを設定します。添字管理はsf.ItRelease
+    //序章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[1] = "Goldfish scooping";
+}
+else
+{
+    f.itemlist[1] = "金魚掬い";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[2] = "On such a beautiful day";
+}
+else
+{
+    f.itemlist[2] = "こんないい天気の日に";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[3] = "A town surrounded by mountains";
+}
+else
+{
+    f.itemlist[3] = "ぐるりと囲む山のある町";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[4] = "Airport";
+}
+else
+{
+    f.itemlist[4] = "空港";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[5] = "The first day of the trip";
+}
+else
+{
+    f.itemlist[5] = "旅行初日";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[6] = "Southern island";
+}
+else
+{
+    f.itemlist[6] = "南の島";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[7] = "Sachiko all alone";
+}
+else
+{
+    f.itemlist[7] = "ひとりの佐知子";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[8] = "An old friend";
+}
+else
+{
+    f.itemlist[8] = "古い友人";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[9] = "The first appointment";
+}
+else
+{
+    f.itemlist[9] = "はじまりの相談";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[10] = "A morning at the office (fuel)";
+}
+else
+{
+    f.itemlist[10] = "事務所の朝（燃料）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[11] = "Red umbrella";
+}
+else
+{
+    f.itemlist[11] = "事務所の昼（赤い傘）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[12] = "Late summer evening";
+}
+else
+{
+    f.itemlist[12] = "事務所の夕（晩夏初秋）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[13] = "A night at the office (memories)";
+}
+else
+{
+    f.itemlist[13] = "事務所の夜（思い出話）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[14] = "A light hallucination";
+}
+else
+{
+    f.itemlist[14] = "軽めの幻覚";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[15] = "Packing";
+}
+else
+{
+    f.itemlist[15] = "荷造り";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[16] = "Dinner together";
+}
+else
+{
+    f.itemlist[16] = "ふたりの夕食";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[17] = "Review and the afternoon bell";
+}
+else
+{
+    f.itemlist[17] = "レビューとお昼の鐘";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[18] = "A conversation at the café";
+}
+else
+{
+    f.itemlist[18] = "カフェでの話";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[19] = "Early afternoon after rain";
+}
+else
+{
+    f.itemlist[19] = "雨上がりの昼下がり";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[20] = "Home alone";
+}
+else
+{
+    f.itemlist[20] = "ひとりで帰宅";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[21] = "Hard candy";
+}
+else
+{
+    f.itemlist[21] = "落雁";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[22] = "Morning at the office (short meeting)";
+}
+else
+{
+    f.itemlist[22] = "事務所の朝（ショートミーティング）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[23] = "Kamaboko board and day business trip";
+}
+else
+{
+    f.itemlist[23] = "事務所の昼（かまぼこ板と日帰り出張）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[24] = "Logo design and a lizard";
+}
+else
+{
+    f.itemlist[24] = "事務所の昼下がり（ロゴデザインとヤモリ）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[25] = "Evening at the office (Konpeito)";
+}
+else
+{
+    f.itemlist[25] = "事務所の夕方前（金平糖）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[26] = "Evening at the office (nostalgia over presents)";
+}
+else
+{
+    f.itemlist[26] = "事務所の夕方（お土産ノスタルジック）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[27] = "Night at the office (menu decision program)";
+}
+else
+{
+    f.itemlist[27] = "事務所の夜（献立決定プログラム）";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[28] = "A forgotten item";
+}
+else
+{
+    f.itemlist[28] = "忘れ物";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[29] = "Talent";
+}
+else
+{
+    f.itemlist[29] = "才能";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[30] = "Clover";
+}
+else
+{
+    f.itemlist[30] = "クローバー";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[31] = "The clinic, here and there";
+}
+else
+{
+    f.itemlist[31] = "診療所、あちら側とこちら側";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[32] = "Library";
+}
+else
+{
+    f.itemlist[32] = "図書館";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[33] = "The real office";
+}
+else
+{
+    f.itemlist[33] = "本当の事務所";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[34] = "Clinic, year-end plans";
+}
+else
+{
+    f.itemlist[34] = "診療所、年末の予定";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[35] = "The possibility of a cure";
+}
+else
+{
+    f.itemlist[35] = "治る可能性";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[36] = "The city of stones";
+}
+else
+{
+    f.itemlist[36] = "石で出来た町";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[37] = "Siesta";
+}
+else
+{
+    f.itemlist[37] = "シエスタ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[38] = "Campo de' Fiori";
+}
+else
+{
+    f.itemlist[38] = "カンプスフローラ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[39] = "Return";
+}
+else
+{
+    f.itemlist[39] = "帰路";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[40] = "Waking up from hypnosis";
+}
+else
+{
+    f.itemlist[40] = "催眠から覚めて";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[41] = "Drugstore";
+}
+else
+{
+    f.itemlist[41] = "薬局";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[42] = "The perspective of the third party";
+}
+else
+{
+    f.itemlist[42] = "第三者目線";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[43] = "Librarian";
+}
+else
+{
+    f.itemlist[43] = "司書";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[44] = "News";
+}
+else
+{
+    f.itemlist[44] = "ニュース";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[45] = "Before the vacation";
+}
+else
+{
+    f.itemlist[45] = "休暇前";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[46] = "Before the vacation 2";
+}
+else
+{
+    f.itemlist[46] = "休暇前2";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[47] = "Discrepancy";
+}
+else
+{
+    f.itemlist[47] = "不和";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[48] = "The philosopher";
+}
+else
+{
+    f.itemlist[48] = "哲学者";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[49] = "Auditory hallucinations and Takako";
+}
+else
+{
+    f.itemlist[49] = "きつねつきの幻聴と貴呼";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[50] = "Periodic medical examination";
+}
+else
+{
+    f.itemlist[50] = "定期診察";
+}
+
+    
+    // 第一章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[51] = "Radio exercise";
+}
+else
+{
+    f.itemlist[51] = "ラジオ体操";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[52] = "Changing light bulbs";
+}
+else
+{
+    f.itemlist[52] = "電灯交換";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[53] = "An old trip";
+}
+else
+{
+    f.itemlist[53] = "過去の旅行の話";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[54] = "A port town straight out of a movie";
+}
+else
+{
+    f.itemlist[54] = "映画でよく観る港町";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[55] = "Someone dear";
+}
+else
+{
+    f.itemlist[55] = "大切な人";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[56] = "Tea with Mayuko in the night duty room";
+}
+else
+{
+    f.itemlist[56] = "繭子と宿直室でお茶会";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[57] = "Cleaning";
+}
+else
+{
+    f.itemlist[57] = "掃除";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[58] = "A musical present";
+}
+else
+{
+    f.itemlist[58] = "音楽のプレゼント";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[59] = "Sanae as a fish";
+}
+else
+{
+    f.itemlist[59] = "魚の早苗";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[60] = "Rain";
+}
+else
+{
+    f.itemlist[60] = "雨";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[61] = "Bath";
+}
+else
+{
+    f.itemlist[61] = "風呂";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[62] = "Bath with Mayuko";
+}
+else
+{
+    f.itemlist[62] = "繭子とお風呂";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[63] = "Bath and salt";
+}
+else
+{
+    f.itemlist[63] = "お風呂と塩";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[64] = "In the changing room";
+}
+else
+{
+    f.itemlist[64] = "脱衣所にて";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[65] = "A butterfly larva and white porcelain";
+}
+else
+{
+    f.itemlist[65] = "蝶の幼虫と白磁";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[66] = "A nurse who doesn't look after herself";
+}
+else
+{
+    f.itemlist[66] = "看護婦の不養生";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[67] = "Nob Hill";
+}
+else
+{
+    f.itemlist[67] = "ノブヒル";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[68] = "Takako and Mayuko";
+}
+else
+{
+    f.itemlist[68] = "貴呼と繭子";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[69] = "Half past twelve";
+}
+else
+{
+    f.itemlist[69] = "十二時半";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[70] = "A sealing hand";
+}
+else
+{
+    f.itemlist[70] = "塞ぐ手";
+}
+
+    
+    // 第二章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[71] = "An old car at a desolate station";
+}
+else
+{
+    f.itemlist[71] = "寂れた駅舎と古い車";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[72] = "The wall clock of the inn";
+}
+else
+{
+    f.itemlist[72] = "洋館の柱時計";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[73] = "The room";
+}
+else
+{
+    f.itemlist[73] = "部屋";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[74] = "Dinner with Nanae";
+}
+else
+{
+    f.itemlist[74] = "七重との夕食";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[75] = "Pale morning";
+}
+else
+{
+    f.itemlist[75] = "青白い朝";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[76] = "The silent courtyard";
+}
+else
+{
+    f.itemlist[76] = "静かな中庭";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[77] = "An old pole, Nanae, and children";
+}
+else
+{
+    f.itemlist[77] = "古い支柱と七重と子供達";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[78] = "Work in the morning";
+}
+else
+{
+    f.itemlist[78] = "朝のお仕事";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[79] = "Breakfast in the Café";
+}
+else
+{
+    f.itemlist[79] = "カフェの朝食と原風景";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[80] = "The library";
+}
+else
+{
+    f.itemlist[80] = "図書館";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[81] = "A walk";
+}
+else
+{
+    f.itemlist[81] = "散策";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[82] = "Dinner";
+}
+else
+{
+    f.itemlist[82] = "夕食";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[83] = "In front of the door";
+}
+else
+{
+    f.itemlist[83] = "扉の前";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[84] = "Question";
+}
+else
+{
+    f.itemlist[84] = "質問";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[85] = "Nursery rhyme";
+}
+else
+{
+    f.itemlist[85] = "童謡";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[86] = "Coffee break";
+}
+else
+{
+    f.itemlist[86] = "コーヒーブレイク";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[87] = "An old photograph";
+}
+else
+{
+    f.itemlist[87] = "古い写真";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[88] = "Chess";
+}
+else
+{
+    f.itemlist[88] = "チェス";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[89] = "Condition";
+}
+else
+{
+    f.itemlist[89] = "容態";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[90] = "A silver bookmark";
+}
+else
+{
+    f.itemlist[90] = "銀色のしおり";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[91] = "A conversation with Narasaki";
+}
+else
+{
+    f.itemlist[91] = "楢崎と会話";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[92] = "Kozue's entrance";
+}
+else
+{
+    f.itemlist[92] = "梢の訪問";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[93] = "Nanae, to the fields";
+}
+else
+{
+    f.itemlist[93] = "七重、畑仕事へ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[94] = "Polvoron";
+}
+else
+{
+    f.itemlist[94] = "ポルボロン";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[95] = "Old stories about the mansion";
+}
+else
+{
+    f.itemlist[95] = "お屋敷の昔話";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[96] = "Evening";
+}
+else
+{
+    f.itemlist[96] = "夕暮れ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[97] = "With the princess";
+}
+else
+{
+    f.itemlist[97] = "お姫様と";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[98] = "Delicious things";
+}
+else
+{
+    f.itemlist[98] = "おいしいもの";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[99] = "The trio of old";
+}
+else
+{
+    f.itemlist[99] = "いつかの三人";
+}
+
+    
+    // 第三章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[100] = "Nameless disease";
+}
+else
+{
+    f.itemlist[100] = "名前のない病気";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[101] = "A room illuminated by the morning light";
+}
+else
+{
+    f.itemlist[101] = "朝日差す部屋";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[102] = "Kozue";
+}
+else
+{
+    f.itemlist[102] = "梢";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[103] = "On the roof";
+}
+else
+{
+    f.itemlist[103] = "屋上より";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[104] = "A scary story of the sanatorium";
+}
+else
+{
+    f.itemlist[104] = "療養所の怖い話";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[105] = "The dark room";
+}
+else
+{
+    f.itemlist[105] = "暗い部屋";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[106] = "The change of seasons";
+}
+else
+{
+    f.itemlist[106] = "季節の変わり目";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[107] = "Golden Gate Bridge";
+}
+else
+{
+    f.itemlist[107] = "金門橋";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[108] = "The hospital cafeteria";
+}
+else
+{
+    f.itemlist[108] = "病院食堂";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[109] = "October 6, 1979";
+}
+else
+{
+    f.itemlist[109] = "1979年10月06日";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[110] = "The invisible hole";
+}
+else
+{
+    f.itemlist[110] = "見えない穴";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[111] = "A trip outside";
+}
+else
+{
+    f.itemlist[111] = "外出";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[112] = "General store";
+}
+else
+{
+    f.itemlist[112] = "食品量販店";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[113] = "Choosing presents";
+}
+else
+{
+    f.itemlist[113] = "プレゼント選び";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[114] = "Gallery";
+}
+else
+{
+    f.itemlist[114] = "画廊";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[115] = "Family restaurant";
+}
+else
+{
+    f.itemlist[115] = "ファミレス";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[116] = "Illumination";
+}
+else
+{
+    f.itemlist[116] = "イルミネーション";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[117] = "Cooking";
+}
+else
+{
+    f.itemlist[117] = "料理";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[118] = "Candles and the bathroom window";
+}
+else
+{
+    f.itemlist[118] = "キャンドルとお風呂の窓";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[119] = "Curry and stew";
+}
+else
+{
+    f.itemlist[119] = "カレーとシチュー";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[120] = "Christmas party";
+}
+else
+{
+    f.itemlist[120] = "クリスマスパーティ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[121] = "The inner yard lights up";
+}
+else
+{
+    f.itemlist[121] = "中庭のライトアップ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[122] = "November 07, 1981";
+}
+else
+{
+    f.itemlist[122] = "1981年11月07日";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[123] = "The missing piece";
+}
+else
+{
+    f.itemlist[123] = "足りないピース";
+}
+
+    
+    // 第四章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[124] = "Playing doctor";
+}
+else
+{
+    f.itemlist[124] = "お医者さんごっこ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[125] = "Passing each other by in the library";
+}
+else
+{
+    f.itemlist[125] = "図書館のすれちがい";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[126] = "Playing house";
+}
+else
+{
+    f.itemlist[126] = "おままごと";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[127] = "Punishment";
+}
+else
+{
+    f.itemlist[127] = "制裁";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[128] = "A sketch of a clover in the backyard";
+}
+else
+{
+    f.itemlist[128] = "裏庭クローバースケッチ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[129] = "Lily's story";
+}
+else
+{
+    f.itemlist[129] = "小母さんの話";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[130] = "Sachiko napping";
+}
+else
+{
+    f.itemlist[130] = "居眠り佐知子";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[131] = "Kozue comes over";
+}
+else
+{
+    f.itemlist[131] = "遊びに来た梢";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[132] = "New furniture";
+}
+else
+{
+    f.itemlist[132] = "新しい家具";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[133] = "A dream of a butterfly";
+}
+else
+{
+    f.itemlist[133] = "胡蝶の夢";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[134] = "Sandbox tunnel";
+}
+else
+{
+    f.itemlist[134] = "砂場トンネル";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[135] = "Lily's routine";
+}
+else
+{
+    f.itemlist[135] = "小母さんの日課";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[136] = "Children's games";
+}
+else
+{
+    f.itemlist[136] = "子供らしい遊び";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[137] = "A thing Narasaki left behind";
+}
+else
+{
+    f.itemlist[137] = "楢崎の忘れ物";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[138] = "Japan National Railway Tunnel";
+}
+else
+{
+    f.itemlist[138] = "旧国鉄のトンネル";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[139] = "The sky in the southern hemisphere";
+}
+else
+{
+    f.itemlist[139] = "南半球の夜空";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[140] = "Hot springs";
+}
+else
+{
+    f.itemlist[140] = "温泉";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[141] = "The way back";
+}
+else
+{
+    f.itemlist[141] = "帰り道";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[142] = "Drinking bout";
+}
+else
+{
+    f.itemlist[142] = "酒盛り";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[143] = "Tempura";
+}
+else
+{
+    f.itemlist[143] = "天ぷら";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[144] = "Black eyes";
+}
+else
+{
+    f.itemlist[144] = "黒い目";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[145] = "Cicada";
+}
+else
+{
+    f.itemlist[145] = "蝉";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[146] = "Star mantle";
+}
+else
+{
+    f.itemlist[146] = "ほしの帳";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[147] = "The road to the truth";
+}
+else
+{
+    f.itemlist[147] = "真宵の道";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[148] = "Mirror";
+}
+else
+{
+    f.itemlist[148] = "姿見の鏡";
+}
+
+    
+    // 第五章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[149] = "Tree";
+}
+else
+{
+    f.itemlist[149] = "ツリー";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[150] = "The not-so-scary dream";
+}
+else
+{
+    f.itemlist[150] = "怖くない夢";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[151] = "Vista point";
+}
+else
+{
+    f.itemlist[151] = "ヴィスタポイント";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[152] = "Butterfly";
+}
+else
+{
+    f.itemlist[152] = "蝶々";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[153] = "September 22, 1975";
+}
+else
+{
+    f.itemlist[153] = "1975年09月22日";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[154] = "To become a fish";
+}
+else
+{
+    f.itemlist[154] = "魚になる";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[155] = "The morning of that day";
+}
+else
+{
+    f.itemlist[155] = "あの日の朝";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[156] = "Mayuko";
+}
+else
+{
+    f.itemlist[156] = "繭子";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[157] = "Electrician";
+}
+else
+{
+    f.itemlist[157] = "電気屋";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[158] = "Glass stone";
+}
+else
+{
+    f.itemlist[158] = "ガラス石";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[159] = "Something Kozue lost";
+}
+else
+{
+    f.itemlist[159] = "梢のなくしもの";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[160] = "In the darkness";
+}
+else
+{
+    f.itemlist[160] = "暗闇にいるもの";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[161] = "Waiting for nothing";
+}
+else
+{
+    f.itemlist[161] = "待ち惚け";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[162] = "Dinner and rumors";
+}
+else
+{
+    f.itemlist[162] = "夕食と噂";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[163] = "To Sachiko";
+}
+else
+{
+    f.itemlist[163] = "佐知子のところへ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[164] = "September 23, 1975";
+}
+else
+{
+    f.itemlist[164] = "1975年09月23日";
+}
+
+    
+    // 第六章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[165] = "Dream";
+}
+else
+{
+    f.itemlist[165] = "夢";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[166] = "The cave";
+}
+else
+{
+    f.itemlist[166] = "洞窟";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[167] = "Clear lake";
+}
+else
+{
+    f.itemlist[167] = "透き通った湖";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[168] = "Dive";
+}
+else
+{
+    f.itemlist[168] = "潜水";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[169] = "Something important";
+}
+else
+{
+    f.itemlist[169] = "大事なもの";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[170] = "Before waking up";
+}
+else
+{
+    f.itemlist[170] = "覚める前に";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[171] = "True identity";
+}
+else
+{
+    f.itemlist[171] = "正体見たり";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[172] = "Twilight";
+}
+else
+{
+    f.itemlist[172] = "黄昏時";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[173] = "Mementos";
+}
+else
+{
+    f.itemlist[173] = "形見分け";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[174] = "Wilted grass";
+}
+else
+{
+    f.itemlist[174] = "枯れ尾花";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[175] = "Warning";
+}
+else
+{
+    f.itemlist[175] = "忠告";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[176] = "Morning sun";
+}
+else
+{
+    f.itemlist[176] = "朝日";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[177] = "Breakfast and a favorite meal";
+}
+else
+{
+    f.itemlist[177] = "朝食と好物";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[178] = "Incinerator";
+}
+else
+{
+    f.itemlist[178] = "焼却炉";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[179] = "Rest";
+}
+else
+{
+    f.itemlist[179] = "休息";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[180] = "A good morning";
+}
+else
+{
+    f.itemlist[180] = "良い目覚め";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[181] = "Muddy water";
+}
+else
+{
+    f.itemlist[181] = "濁った水";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[182] = "Narasaki's absence";
+}
+else
+{
+    f.itemlist[182] = "楢崎の不在";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[183] = "Train";
+}
+else
+{
+    f.itemlist[183] = "電車";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[184] = "The station";
+}
+else
+{
+    f.itemlist[184] = "駅";
+}
+
+    
+    // 第七章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[185] = "The final entry";
+}
+else
+{
+    f.itemlist[185] = "最後の日記";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[186] = "November 3, 1975";
+}
+else
+{
+    f.itemlist[186] = "1975年11月03日";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[187] = "Why did I forget";
+}
+else
+{
+    f.itemlist[187] = "何故忘れていたのか";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[188] = "Man-eating anteater";
+}
+else
+{
+    f.itemlist[188] = "人食いアリクイ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[189] = "Work and bath";
+}
+else
+{
+    f.itemlist[189] = "労働と風呂";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[190] = "Dream labyrinth";
+}
+else
+{
+    f.itemlist[190] = "夢の迷い路";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[191] = "Washing her back";
+}
+else
+{
+    f.itemlist[191] = "背中流し";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[192] = "Sanae's ghost";
+}
+else
+{
+    f.itemlist[192] = "早苗の幽霊";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[193] = "Mayuko";
+}
+else
+{
+    f.itemlist[193] = "繭子";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[194] = "The picture the two drew";
+}
+else
+{
+    f.itemlist[194] = "二人で描いた絵";
+}
+
+    
+    // 第八章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[195] = "A cheap hotel and café";
+}
+else
+{
+    f.itemlist[195] = "安ホテルと喫茶店";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[196] = "Morning at the cheap hotel";
+}
+else
+{
+    f.itemlist[196] = "安ホテルと朝";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[197] = "Before the finishing touches";
+}
+else
+{
+    f.itemlist[197] = "仕上げを前に";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[198] = "Kunugihara Sanatorium";
+}
+else
+{
+    f.itemlist[198] = "クヌギハラ療養所";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[199] = "Sea glass";
+}
+else
+{
+    f.itemlist[199] = "海辺のガラス石";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[200] = "The sanatorium's corridor";
+}
+else
+{
+    f.itemlist[200] = "療養所の廊下";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[201] = "Takako";
+}
+else
+{
+    f.itemlist[201] = "貴呼";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[202] = "Narasaki's clinic";
+}
+else
+{
+    f.itemlist[202] = "楢崎診療所";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[203] = "Disposal";
+}
+else
+{
+    f.itemlist[203] = "処分";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[204] = "A new miniature garden";
+}
+else
+{
+    f.itemlist[204] = "新しい箱庭";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[205] = "The remnants of memories";
+}
+else
+{
+    f.itemlist[205] = "あと少し覚えていて";
+}
+
+    
+    // 第九章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[206] = "A quiet sight";
+}
+else
+{
+    f.itemlist[206] = "静かな眺め";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[207] = "Lake";
+}
+else
+{
+    f.itemlist[207] = "湖";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[208] = "Phone";
+}
+else
+{
+    f.itemlist[208] = "電話";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[209] = "A friend you cannot see";
+}
+else
+{
+    f.itemlist[209] = "見えない相手";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[210] = "Station";
+}
+else
+{
+    f.itemlist[210] = "駅";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[211] = "Train";
+}
+else
+{
+    f.itemlist[211] = "電車";
+}
+
+    
+    // 第十章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[212] = "Cure";
+}
+else
+{
+    f.itemlist[212] = "治す方法";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[213] = "Dark town";
+}
+else
+{
+    f.itemlist[213] = "暗い街";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[214] = "On the bed";
+}
+else
+{
+    f.itemlist[214] = "ベッドのうえ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[215] = "A call";
+}
+else
+{
+    f.itemlist[215] = "コール";
+}
+
+    
+    // 終章
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[216] = "The last phone call";
+}
+else
+{
+    f.itemlist[216] = "最後の電話";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[217] = "Clover Offices";
+}
+else
+{
+    f.itemlist[217] = "クローバー事務所";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[218] = "Doll";
+}
+else
+{
+    f.itemlist[218] = "ぬいぐるみ";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist[219] = "A new journey";
+}
+else
+{
+    f.itemlist[219] = "旅立ち";
+}
+
+ }
+[endscript]
+[endif]
+
+[if exp="f.jumplist === void"]
+[eval exp="f.jumplist = []"]
+[iscript]
+ {
+    // シーンジャンプ先へのリンクリストを設定します。添字管理はsf.ItRelease
+    f.jumplist[1]   = "m01";
+    f.jumplist[2]   = "001";
+    f.jumplist[3]   = "002";
+    f.jumplist[4]   = "003";
+    f.jumplist[5]   = "003_2";
+    f.jumplist[6]   = "004";
+    f.jumplist[7]   = "004_2";
+    f.jumplist[8]   = "005";
+    f.jumplist[9]   = "006";
+    f.jumplist[10]  = "007";
+    f.jumplist[11]  = "008";
+    f.jumplist[12]  = "009";
+    f.jumplist[13]  = "010";
+    f.jumplist[14]  = "011";
+    f.jumplist[15]  = "012";
+    f.jumplist[16]  = "013";
+    f.jumplist[17]  = "014";
+    f.jumplist[18]  = "015";
+    f.jumplist[19]  = "016";
+    f.jumplist[20]  = "017";
+    f.jumplist[21]  = "018";
+    f.jumplist[22]  = "019";
+    f.jumplist[23]  = "020";
+    f.jumplist[24]  = "021";
+    f.jumplist[25]  = "022";
+    f.jumplist[26]  = "023";
+    f.jumplist[27]  = "024";
+    f.jumplist[28]  = "025";
+    f.jumplist[29]  = "025_2";
+    f.jumplist[30]  = "026";
+    f.jumplist[31]  = "027";
+    f.jumplist[32]  = "027_2";
+    f.jumplist[33]  = "027_3";
+    f.jumplist[34]  = "028";
+    f.jumplist[35]  = "028_2";
+    f.jumplist[36]  = "029";
+    f.jumplist[37]  = "030";
+    f.jumplist[38]  = "031";
+    f.jumplist[39]  = "031_2";
+    f.jumplist[40]  = "031_3";
+    f.jumplist[41]  = "032";
+    f.jumplist[42]  = "033";
+    f.jumplist[43]  = "033_2";
+    f.jumplist[44]  = "033_3";
+    f.jumplist[45]  = "034";
+    f.jumplist[46]  = "035";
+    f.jumplist[47]  = "035_2";
+    f.jumplist[48]  = "036";
+    f.jumplist[49]  = "037";
+    f.jumplist[50]  = "038";
+    f.jumplist[51]  = "039";
+    f.jumplist[52]  = "040";
+    f.jumplist[53]  = "041";
+    f.jumplist[54]  = "042";
+    f.jumplist[55]  = "043";
+    f.jumplist[56]  = "044";
+    f.jumplist[57]  = "044_2";
+    f.jumplist[58]  = "045";
+    f.jumplist[59]  = "045_2";
+    f.jumplist[60]  = "046";
+    f.jumplist[61]  = "047";
+    f.jumplist[62]  = "048";
+    f.jumplist[63]  = "049";
+    f.jumplist[64]  = "050";
+    f.jumplist[65]  = "051";
+    f.jumplist[66]  = "052";
+    f.jumplist[67]  = "053";
+    f.jumplist[68]  = "054";
+    f.jumplist[69]  = "054_2";
+    f.jumplist[70]  = "054_3";
+    f.jumplist[71]  = "055";
+    f.jumplist[72]  = "056";
+    f.jumplist[73]  = "057";
+    f.jumplist[74]  = "058";
+    f.jumplist[75]  = "059";
+    f.jumplist[76]  = "060";
+    f.jumplist[77]  = "061";
+    f.jumplist[78]  = "062";
+    f.jumplist[79]  = "063";
+    f.jumplist[80]  = "064";
+    f.jumplist[81]  = "065";
+    f.jumplist[82]  = "066";
+    f.jumplist[83]  = "067";
+    f.jumplist[84]  = "068";
+    f.jumplist[85]  = "069";
+    f.jumplist[86]  = "070";
+    f.jumplist[87]  = "071";
+    f.jumplist[88]  = "072";
+    f.jumplist[89]  = "072_2";
+    f.jumplist[90]  = "073";
+    f.jumplist[91]  = "074";
+    f.jumplist[92]  = "075";
+    f.jumplist[93]  = "076";
+    f.jumplist[94]  = "077";
+    f.jumplist[95]  = "078";
+    f.jumplist[96]  = "079";
+    f.jumplist[97]  = "080";
+    f.jumplist[98]  = "081";
+    f.jumplist[99]  = "082";
+    f.jumplist[100] = "082_2";
+    f.jumplist[101] = "082_3";
+    f.jumplist[102] = "083";
+    f.jumplist[103] = "084";
+    f.jumplist[104] = "085";
+    f.jumplist[105] = "085_2";
+    f.jumplist[106] = "086";
+    f.jumplist[107] = "087";
+    f.jumplist[108] = "088";
+    f.jumplist[109] = "088_2";
+    f.jumplist[110] = "088_3";
+    f.jumplist[111] = "089";
+    f.jumplist[112] = "090";
+    f.jumplist[113] = "091";
+    f.jumplist[114] = "092";
+    f.jumplist[115] = "093";
+    f.jumplist[116] = "094";
+    f.jumplist[117] = "095";
+    f.jumplist[118] = "096";
+    f.jumplist[119] = "097";
+    f.jumplist[120] = "098";
+    f.jumplist[121] = "099";
+    f.jumplist[122] = "099_2";
+    f.jumplist[123] = "099_3";
+    f.jumplist[124] = "100";
+    f.jumplist[125] = "101";
+    f.jumplist[126] = "102";
+    f.jumplist[127] = "103";
+    f.jumplist[128] = "104";
+    f.jumplist[129] = "104_2";
+    f.jumplist[130] = "105";
+    f.jumplist[131] = "106";
+    f.jumplist[132] = "106_2";
+    f.jumplist[133] = "106_3";
+    f.jumplist[134] = "107";
+    f.jumplist[135] = "107_2";
+    f.jumplist[136] = "108";
+    f.jumplist[137] = "108_2";
+    f.jumplist[138] = "109";
+    f.jumplist[139] = "110";
+    f.jumplist[140] = "111";
+    f.jumplist[141] = "112";
+    f.jumplist[142] = "113";
+    f.jumplist[143] = "114";
+    f.jumplist[144] = "115";
+    f.jumplist[145] = "116";
+    f.jumplist[146] = "117";
+    f.jumplist[147] = "118";
+    f.jumplist[148] = "119";
+    f.jumplist[149] = "120";
+    f.jumplist[150] = "120_2";
+    f.jumplist[151] = "121";
+    f.jumplist[152] = "122";
+    f.jumplist[153] = "122_2";
+    f.jumplist[154] = "122_3";
+    f.jumplist[155] = "123";
+    f.jumplist[156] = "124";
+    f.jumplist[157] = "125";
+    f.jumplist[158] = "126";
+    f.jumplist[159] = "127";
+    f.jumplist[160] = "128";
+    f.jumplist[161] = "129";
+    f.jumplist[162] = "130";
+    f.jumplist[163] = "130_2";
+    f.jumplist[164] = "130_3";
+    f.jumplist[165] = "131";
+    f.jumplist[166] = "132";
+    f.jumplist[167] = "133";
+    f.jumplist[168] = "134";
+    f.jumplist[169] = "135";
+    f.jumplist[170] = "136";
+    f.jumplist[171] = "137";
+    f.jumplist[172] = "137_2";
+    f.jumplist[173] = "137_3";
+    f.jumplist[174] = "138";
+    f.jumplist[175] = "138_2";
+    f.jumplist[176] = "139";
+    f.jumplist[177] = "140";
+    f.jumplist[178] = "141";
+    f.jumplist[179] = "141_2";
+    f.jumplist[180] = "141_3";
+    f.jumplist[181] = "142";
+    f.jumplist[182] = "143";
+    f.jumplist[183] = "144";
+    f.jumplist[184] = "145";
+    f.jumplist[185] = "145_1";
+    f.jumplist[186] = "145_2";
+    f.jumplist[187] = "145_3";
+    f.jumplist[188] = "146";
+    f.jumplist[189] = "147";
+    f.jumplist[190] = "148";
+    f.jumplist[191] = "149";
+    f.jumplist[192] = "150";
+    f.jumplist[193] = "151";
+    f.jumplist[194] = "151_2";
+    f.jumplist[195] = "152";
+    f.jumplist[196] = "153";
+    f.jumplist[197] = "153_2";
+    f.jumplist[198] = "154";
+    f.jumplist[199] = "155";
+    f.jumplist[200] = "155_2";
+    f.jumplist[201] = "156";
+    f.jumplist[202] = "156_2";
+    f.jumplist[203] = "156_3";
+    f.jumplist[204] = "156_4";
+    f.jumplist[205] = "156_5";
+    f.jumplist[206] = "156_6";
+    f.jumplist[207] = "156_7";
+    f.jumplist[208] = "157";
+    f.jumplist[209] = "157_2";
+    f.jumplist[210] = "158";
+    f.jumplist[211] = "159";
+    f.jumplist[212] = "159_2";
+    f.jumplist[213] = "159_3";
+    f.jumplist[214] = "159_4";
+    f.jumplist[215] = "159_5";
+    f.jumplist[216] = "160";
+    f.jumplist[217] = "161";
+    f.jumplist[218] = "162";
+    f.jumplist[219] = "163";
+ }
+[endscript]
+[endif]
+@return
+
+
+[return]
+
+

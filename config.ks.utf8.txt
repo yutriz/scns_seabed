@@ -1,0 +1,289 @@
+*config
+
+; 右クリックでコンフィグ画面を閉じられるように右クリックの設定を変更します
+[rclick jump=true storage="config.ks" target=*close enabled=true]
+; 現在の状態をメモリ上の栞に保存しておきます
+[tempsave place=3]
+[iscript]
+ {
+     var i;
+     var elm = %["visible" => false];
+     // 全ての前景レイヤを非表示にします
+    for(i=0;i<kag.numCharacterLayers;i++)
+         kag.fore.layers[i].setOptions(elm);
+     // 全てのメッセージレイヤを非表示にします
+    for(i=0;i<kag.numMessageLayers;i++)
+         kag.fore.messages[i].setOptions(elm);
+ }
+[endscript]
+
+[iscript]
+function onAutoModeButtonClick()
+ {
+      kag.onAutoModeMenuItemClick();  // オートモードを開始します
+ }
+
+function close_onenter_config()
+ {
+    kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[16].visible = false;
+    kag.fore.layers[17].visible = true;
+ }
+
+function close_onleave_config()
+ {
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[17].visible = false;
+    kag.fore.layers[16].visible = true;
+ }
+[endscript]
+
+; 背景レイヤにコンフィグ画面の画像（クリッカブルマップ）を読み込みます
+[fbfscale_image layer=base storage="config_bg" page=fore]
+; レイヤを必要な数（前景レイヤ×１８，メッセージレイヤは１つ追加）確保します
+[laycount layers=19 messages="&kag.numMessageLayers + 1"]
+
+; 前景レイヤに画像を読み込みます
+; #0: コンフィグメニュー画像
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=0 storage="bgimage\configimage\config_menu" page=fore visible=true left=0 top=0 opacity=255]
+[else]
+	[fbfscale_image layer=0 storage="bgimage\configimage\config_menu_jp" page=fore visible=true left=0 top=0 opacity=255]
+[endif]
+; #1: ウィンドウモード（ウィンドウ／フルスクリーン）に表示するチェック画像
+[fbfscale_image layer=1 storage="bgimage\configimage\checked" page=fore visible=true left=339 top=134 opacity=255] 
+; #2: 「アンチエイリアス」に表示するチェック画像
+[fbfscale_image layer=2 storage="bgimage\configimage\checked" page=fore visible=false left=508 top=374 opacity=255]
+; #3: メッセージ表示速度用インジケータ背景画像
+[fbfscale_image layer=3 storage="bgimage\configimage\indicator_b" page=fore visible=true top=207 opacity=255]
+; #4: 「ページ末まで一度に表示」に表示するチェック画像
+[fbfscale_image layer=4 storage="bgimage\configimage\checked" page=fore visible=false left=339 top=198 opacity=255]
+; #5: オートモード速度用インジケータ背景画像
+[fbfscale_image layer=5 storage="bgimage\configimage\indicator_b" page=fore visible=true top=289 opacity=255]
+; #6: BGM 音量用インジケータ背景画像
+[fbfscale_image layer=6 storage="bgimage\configimage\indicator_b" page=fore visible=true top=440 opacity=255]
+; #7: SE 音量用インジケータ背景画像
+[fbfscale_image layer=7 storage="bgimage\configimage\indicator_b" page=fore visible=true top=520 opacity=255]
+; #8: メッセージスピードバー画像
+[fbfscale_image layer=8 storage="bgimage\configimage\config_bar" page=fore visible=true left=364 top=207 opacity=255]
+; #9: オートスピードバー画像
+[fbfscale_image layer=9 storage="bgimage\configimage\config_bar" page=fore visible=true left=364 top=289 opacity=255]
+; #10: BGMバー画像
+[fbfscale_image layer=10 storage="bgimage\configimage\config_bar" page=fore visible=true left=364 top=440 opacity=255]
+; #11: SEバー画像
+[fbfscale_image layer=11 storage="bgimage\configimage\config_bar" page=fore visible=true left=364 top=520 opacity=255]
+; #12: メッセージ表示速度用インジケータ画像
+[fbfscale_image layer=12 storage="bgimage\configimage\indicator" page=fore visible=true top=207 opacity=255]
+; #13: オートモード速度用インジケータ画像
+[fbfscale_image layer=13 storage="bgimage\configimage\indicator" page=fore visible=true top=289 opacity=255]
+; #14: BGM 音量用インジケータ画像
+[fbfscale_image layer=14 storage="bgimage\configimage\indicator" page=fore visible=true top=440 opacity=255]
+; #15: SE 音量用インジケータ画像
+[fbfscale_image layer=15 storage="bgimage\configimage\indicator" page=fore visible=true top=520 opacity=255]
+; #16: CLOSE非選択フィールド
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=16 storage="bgimage\configimage\close_f" page=fore visible=true left=646 top=40 opacity=255]
+[else]
+	[fbfscale_image layer=16 storage="bgimage\configimage\close_f_JP" page=fore visible=true left=646 top=40 opacity=255]
+[endif]
+; #17: CLOSE選択フィールド
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=17 storage="bgimage\configimage\close_t" page=fore visible=false left=646 top=40 opacity=255]
+[else]
+	[fbfscale_image layer=17 storage="bgimage\configimage\close_t_JP" page=fore visible=false left=646 top=40 opacity=255]
+[endif]
+; #18:「オートモード」に表示するチェック画像
+[fbfscale_image layer=18 storage="bgimage\configimage\checked" page=fore visible=false left=339 top=280 opacity=255]
+
+
+; フォント名表示用のメッセージレイヤの設定をします
+[current layer=message1 page=fore]
+[fbfscale_position left=341 top=366 width=143 height=23 marginl=0 margint=0 marginr=0 marginb=0 frame="" opacity=0 visible=true]
+[deffont size=14 color=0xFFFFFF shadow=false]
+
+; メッセージ履歴の出力・表示を無効にします
+[history output=false enabled=false]
+
+; 各項目の表示を初期化します
+[call target=*update_windowmode]
+[call target=*update_pagebreak]
+
+; FBF: Disabled.
+;[call target=*update_antialias]
+
+[call target=*update_msgspeed]
+[call target=*update_autospeed]
+[call target=*update_bgmvolume]
+[call target=*update_sevolume]
+
+; FBF: Language.
+[call target=*update_language]
+
+; FBF: Disabled.
+;[call target=*update_font]
+
+[call target=*update_automode]
+
+; ユーザの操作を待ちます
+[s]
+
+*window
+; ウィンドウモードの「ウィンドウ」をクリックした時に実行されるスクリプト
+[eval exp="kag.onWindowedMenuItemClick()"]
+[call target=*update_windowmode]
+[s]
+
+*fullscreen
+; ウィンドウモードの「フルスクリーン」をクリックした時に実行されるスクリプト
+[eval exp="kag.onFullScreenMenuItemClick()"]
+[call target=*update_windowmode]
+[s]
+
+
+*automode
+[eval exp="kag.onAutoModeMenuItemClick()"]
+[call target=*update_automode]
+[s]
+
+*pagebreak
+[eval exp="kag.onChNonStopToPageBreakItemClick()"]
+[call target=*update_pagebreak]
+[s]
+
+*update_windowmode
+; ウィンドウモードのチェックボックスの表示を更新します
+[fbfscale_layopt layer=1 page=fore left="&kag.fullScreened ? 534 : 339"]
+[return]
+
+*update_pagebreak
+[fbfscale_layopt layer=4 page=fore visible="&kag.chNonStopToPageBreak"]
+[return]
+
+*update_automode
+[fbfscale_layopt layer=18 page=fore visible="&kag.autoMode"]
+[return]
+
+*msgspeed
+[eval exp="kag.userChSpeed = 100 - (kag.fore.base.cursorX - kag.FBFScale(385)) * 100 \ kag.FBFScale(274)"]
+[call target=*update_msgspeed]
+[s]
+
+*autospeed
+[eval exp="kag.autoModePageWait = 4000 - (kag.fore.base.cursorX - kag.FBFScale(385)) * 3900 \ kag.FBFScale(274)"]
+[eval exp="kag.autoModeLineWait = 2000 - (kag.fore.base.cursorX - kag.FBFScale(385)) * 1950 \ kag.FBFScale(274)"]
+[call target=*update_autospeed]
+[s]
+
+; FBF: Set English language.
+*setlanguage_english
+[eval exp="kag.onEnglishLanguageMenuClick()"]
+[call target=*update_language]
+[s]
+
+; FBF: Set Japanese language.
+*setlanguage_japanese
+[eval exp="kag.onJapaneseLanguageMenuClick()"]
+[call target=*update_language]
+[s]
+
+*font
+[eval exp="tf.previous_font_face = kag.chDefaultFace"]
+[eval exp="kag.onChChangeFontMenuItem()"]
+[if exp="kag.chDefaultFace == ''"]
+[eval exp="kag.chDefaultFace = tf.previous_font_face"]
+[eval exp="kag.setMessageLayerUserFont()"]
+[endif]
+
+; FBF: Disabled.
+[call target=*update_font]
+[s]
+
+*antialias
+[eval exp="kag.onChAntialiasMenuItemClick()"]
+;[eval exp="onAutoModeButtonClick()"]
+
+; FBF: Disabled.
+[call target=*update_antialias]
+[s]
+
+*bgmvolume
+[bgmopt gvolume="&(kag.fore.base.cursorX - kag.FBFScale(385)) * 100 \ kag.FBFScale(274)"]
+[call target=*update_bgmvolume]
+[s]
+
+*sevolume
+[iscript]
+ {
+     var elm = %["gvolume" => (kag.fore.base.cursorX - kag.FBFScale(385)) * 100 \ kag.FBFScale(274)];
+     for(var i=0;i<kag.numSEBuffers;i++)
+         kag.se[i].setOptions(elm);
+ }
+[endscript]
+[call target=*update_sevolume]
+[s]
+
+*update_language
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=0 storage="bgimage\configimage\config_menu" page=fore visible=true left=0 top=0 opacity=255]
+	[fbfscale_layopt layer=2 page=fore visible="true" left=341]
+[else]
+	[fbfscale_image layer=0 storage="bgimage\configimage\config_menu_jp" page=fore visible=true left=0 top=0 opacity=255]
+	[fbfscale_layopt layer=2 page=fore visible="true" left=508]
+[endif]
+[return]
+
+*update_font
+[er]
+[style align=center autoreturn=false]
+[nowait]
+[emb exp="kag.chDefaultFace"]
+[endnowait]
+[return]
+
+*update_antialias
+[fbfscale_layopt layer=2 page=fore visible="&kag.chDefaultAntialiased"]
+[return]
+
+*update_msgspeed
+[fbfscale_layopt layer=3 page=fore left="&643 - kag.userChSpeed * 274 \ 100"]
+[fbfscale_layopt layer=12 page=fore left="&643 - kag.userChSpeed * 274 \ 100"]
+[return]
+
+*update_autospeed
+[fbfscale_layopt layer=5 page=fore left="&370 + (4000 - kag.autoModePageWait) * 274 \ 3900"]
+[fbfscale_layopt layer=13 page=fore left="&370 + (4000 - kag.autoModePageWait) * 274 \ 3900"]
+[return]
+
+*update_bgmvolume
+[fbfscale_layopt layer=6 page=fore left="&370 + kag.bgm.buf1.volume2 * 274 \ 100000"]
+[fbfscale_layopt layer=14 page=fore left="&370 + kag.bgm.buf1.volume2 * 274 \ 100000"]
+[return]
+
+*update_sevolume
+[fbfscale_layopt layer=7 page=fore left="&370 + kag.se[0].volume2 * 274 \ 100000"]
+[fbfscale_layopt layer=15 page=fore left="&370 + kag.se[0].volume2 * 274 \ 100000"]
+[return] 
+
+*close
+; コンフィグ画面を閉じます（「Back」をクリックした時／コンフィグ画面表示中に右クリックした時に実行されるスクリプト）
+; コンフィグ画面表示前の状態を復元します（但し BGM は復元しません（現在の BGM の再生を継続します））
+[er]
+
+[if exp="f.configFromTitle == 1"]
+ [eval exp="f.configFromTitle=0"]
+ [tempload bgm=false se=false place=3]
+ [delay speed=user cond="kag.chUserMode"]
+@jump storage="first.ks" target=*fromload
+[endif]
+[tempload bgm=false se=false place=3]
+
+; メッセージ履歴の出力・表示を有効にします
+[history output=true enabled=true]
+; 右クリックで再びコンフィグ画面を表示できるようにします
+;[rclick call=true storage="rclick.ks" target=*rclick enabled=true]
+; メッセージ表示速度の設定を反映します
+[delay speed=user cond="kag.chUserMode"]
+@jump storage=rclick.ks target="*sub2"
+[return]
+

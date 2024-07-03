@@ -1,0 +1,376 @@
+*005| An old friend
+; *005|古い友人
+[fbfstoretitle eng="An old friend" jp="古い友人"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+[clickskip enabled=false]
+[fadeinse buf=0 storage="se31" time=2000]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[msgon_b]
+
+[wait time=3000]
+[playse buf = 1 storage=se32.ogg]
+[fadeoutse buf=0 time=3000]
+[wf buf=0]
+[wait time=500]
+[seopt buf=0 volume=100]
+[seopt buf=1 volume=100]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 7"]
+[eval exp="sf.ItRelease = 8"]
+[endif]
+
+
+*| An old friend
+; *|古い友人
+[fbfstoretitle eng="An old friend" jp="古い友人"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned the handle to stop the rain. Several drops of water trailed down my body and fell onto the bathroom floor.[lr]
+[else]
+蛇口を捻るとノズルから降っていた雨が止んで、体から滴った水が浴室の床をダダダ、と叩いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The faint afternoon glow filtered in through the small bathroom window and met the steam inside, blanketing the room in a pale, blue light.[lr]
+[else]
+昼間の浴室は小窓から漏れる少ない明かりが湯気に反射して、薄青い空気に包まれていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A rubber duck was floating in the half-filled bathtub I'd forgotten to unplug.[lr][r]
+[else]
+栓を抜き忘れた浴槽に、棚から落ちたアヒルの玩具が姿勢よく浮かんでいる。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After gazing at it for a few moments through half-shut eyes, I lifted a towel off the rack and left the bathroom while scrubbing my skin with the thing. Once I felt dry enough for comfort, I put on the underwear I'd left on the drier.[prcm]
+[else]
+薄目でその姿を見たあと、掛けていたバスタオルで体を拭きながら浴室を出て、乾燥機の上に置いてあった下着を着た。[prcm]
+[endif]
+
+
+;足をぶつける音
+[stopse buf=0]
+[playse buf = 1 storage=se08.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ouch...[」][lr]
+[else]
+「痛っ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I hit my shin against a box in the corridor while drying my hair.[lr][r]
+[else]
+タオルで髪を拭きながら歩いていると、廊下に置いてあったダンボールの角に脛をぶつけてしまう。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised my hurt leg and proceeded to hop the rest of the way on one foot, kicking a roll of packing tape out of the way in the process.[lr][r]
+[else]
+ぶつけた方の足を上げて、片足跳びをした方の足がガムテームの芯を蹴った。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Out of the multiple boxes in the corridor, the one I collided with had yet to be fastened.[lr]
+[else]
+ダンボールは廊下にいくつかあり、脛を打ったものはまだガムテームで閉じられていないままだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako's sunflower-themed shirt stared back at me from inside.[prcm]
+[else]
+開いた口の間から、貴呼が着ていた向日葵柄のシャツが見えた。[prcm]
+[endif]
+
+
+
+[msglayer2]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg04_1.jpg" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+
+
+;冷蔵庫を開ける音
+[playse buf = 1 storage=se33.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened the door at the end of the corridor, and upon entering the living room, turned left to the kitchen and peeked into the fridge.[lr][r]
+[else]
+廊下の突き当りの扉を開けて、リビングに出ると左にあるキッチンの冷蔵庫を開ける。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After grabbing a bottle of barley tea from inside, I closed the fridge's door.[lr][r]
+[else]
+ボトルに詰め替えた麦茶を取り冷蔵庫を閉める。[lr]
+[endif]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a glass cup from the cupboard, filled it up with tea, and gulped its contents down in a single breath.[prcm]
+[else]
+食器棚から取り出した透明なガラスのコップに注いで一息で飲み干した。[prcm]
+[endif]
+
+[playse buf = 1 storage=se35.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After refilling my cup and returning the bottle to the fridge, I continued to the living room with glass in hand, where I picked up the remote from the table and flicked on the TV.[lr]
+[else]
+もう一杯冷えた麦茶をコップに注ぐと、ボトルを戻してコップを持ったままリビングへと移動してテーブルの上にあったリモコンでテレビをつけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled out the makeup box and the hair dryer from the cabinet and made myself comfortable on the sofa.[lr][r]
+[else]
+リビングの戸棚から化粧品の入った小箱とドライヤーを取ってソファに座る。[lr]
+[endif]
+
+[playse buf = 1 storage=se36.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I began drying my hair, catching only short bits and pieces of what the news anchor on TV was saying.[lr]
+[else]
+耳に入ってくる切れ切れの経済ニュースを聞きながら、髪を乾かした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Finishing that, I changed into a pair of jeans and a colorful tunic before finally leaving the house.[p][fadeoutse buf=1 time=600][r][cm]
+[else]
+それから、部屋のクローゼットから七分丈のデニムパンツと軽く柄の入ったロングチュニクを選んで手早く着替えを済ませて家を出た。[p]
+[fadeoutse buf=1 time=600]
+[r][cm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+
+[stopse buf=1]
+[seopt buf=1 volume=100]
+[fadeinse buf = 2 storage=se38.ogg time=1500 loop = true]
+[wf buf=2]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That will be three hundred yen.[」][lr]
+[else]
+「日用雑貨一点で、三百二円になります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the coins I had prepared as I waited in line into the tray.[prcm]
+[else]
+並んでいるあいだに財布から出しておいた小銭を受け取り皿に乗せる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you very much.[」][lr]
+[else]
+「丁度ですね。[l]有難うございました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The clerk took care of the basket while I picked up the paper bag.[prcm]
+[else]
+ビニール袋を取ると、店員が籠を直した。[prcm]
+[endif]
+
+
+[fadeoutse buf=2 time=1500]
+
+[msglayer2]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg58_1.jpg" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+
+[fadeinse buf = 3 storage=se37.ogg time=1500 loop = true]
+[wf buf=3]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I left the general store and continued down the sidewalk. It was now illuminated by a slightly stronger light compared to the morning.[lr][r]
+[else]
+雑貨屋を出て、来る時よりも日差しの強くなった歩道を歩いた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the traffic signal between the police station and the department store lit up in green, a mass of people who had been waiting for it jerked forward like a wave. As I tried to overtake a man in front of me, our shoulders bumped.[lr][r]
+[else]
+警察署とデパートの高いビルがある交差点の信号が青になると、待っていた人が歩き出して追い越そうとした若い男の肩が触れた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed like the amount of people doubled here during afternoons.[lr]
+[else]
+昼頃になり人通りも多くなっているようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued crossing the street, looking down at the shoes of the people ahead of me as my paper bag bumped into someone to my side.[lr]
+[else]
+前を歩く人の靴の辺を見ながら歩くとカサリ、と持っていたビニール袋が隣の人に触れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped and placed my paper bag into my handbag.[prcm]
+[else]
+立ち止まり、雑貨の入ったビニール袋を手提げかばんに入れる。[prcm]
+[endif]
+
+
+
+[fadese buf=3 time=500 volume=70]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+
+[r][r][r][r][r][r][r]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[wait time=1000][「]You'll get hit by a car if you keep spacing out in the middle of the street, [wait time=1000]Sachi.[」][wait time=1000][prcm]
+[else]
+      [wait time=1000]「ぼんやりしてると危ないよ、[wait time=1000]サチ」[wait time=1000][prcm]
+[endif]
+
+
+[msglayer2]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg58_1.jpg" page=back layer=base]
+[trans method = crossfade time=100]
+[fadese buf=3 time=500 volume=100]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised my face in response to clearly hearing my name.[lr][r]
+[else]
+ハッキリと名前を呼ばれて、顔をあげる。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, the person to whom that voice belonged was nowhere to be seen.[lr]
+[else]
+しかし、その口調と声をしている見知った顔は見当たらなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned to a narrow alley between two large buildings, leaving the street behind me. As I continued on, I glanced at my wristwatch.[lr]
+[else]
+車道に面した歩道から、事務ビルのあいだにある小道に入る。歩きながら腕時計を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Seeing the time, I decided to hasten my pace.[prcm]
+[else]
+それから、ほんの少しだけ歩を早めた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[fadeoutse buf=3 time=1500]
+[wait time=3000]
+[stopse buf=2]
+[seopt buf=2 volume=100]
+[stopse buf=3]
+[seopt buf=3 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="006.ks" target=*006
+
+
+

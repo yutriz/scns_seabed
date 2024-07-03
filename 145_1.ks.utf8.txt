@@ -1,0 +1,131 @@
+*145_1| The final entry
+; *145_1|最後の日記
+[fbfstoretitle eng="The final entry" jp="最後の日記"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+
+;章題表示
+[msgoff]
+[wait time=3000]
+[backlay]
+[fbfunlockachievement number="7"]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence7_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence7_1_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+[wait time=1000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence7_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence7_2_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=4000]
+
+
+[msglayer]
+[backlay]
+[playse buf = 1 storage=se57.ogg]
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;章選択フラグ
+[if exp="sf.CpRelease <= 7"]
+[eval exp="sf.CpRelease = 8"]
+[endif]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 184"]
+[eval exp="sf.ItRelease = 185"]
+[endif]
+
+*| The final entry
+; *|最後の日記
+[fbfstoretitle eng="The final entry" jp="最後の日記"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a date at the top of the page I opened up the diary to.[lr]
+[else]
+　開いたページの冒頭には次の日記の日付があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before reading the entry, I flipped a few pages forward.[lr]
+[else]
+　その日記を読む前にページを捲ってみた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The text ended after two pages.[lr]
+[else]
+　二ページ先から文字は無い。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All I could see were the empty ruled lines, no matter how far I went.[prcm]
+[else]
+　開いたところは白い紙に罫線が引かれてあるだけだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned to the page with the date.[lr]
+[else]
+　ページを戻って、今から読もうとしていた日付に戻る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were no other dates on the following two pages, which made this the final entry.[prcm]
+[else]
+　何も書かれていないページから、その日付までの間には別の日付はなかった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　これが最後の日付だった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="145_2.ks" target=*145_2
+
+

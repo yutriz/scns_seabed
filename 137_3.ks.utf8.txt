@@ -1,0 +1,673 @@
+*137_3| Mementos
+; *137_3|形見分け
+[fbfstoretitle eng="Mementos" jp="形見分け"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playse buf = 0 storage=se166.ogg]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[wait time=800]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 172"]
+[eval exp="sf.ItRelease = 173"]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko took a box off the top shelf of the closet, checked what was inside, then returned it to the same place.[lr]
+[else]
+　[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子がクローゼットの上の棚から小箱を取り出し、中を確認して元の場所に戻した。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were two more boxes in the closet.[lr]
+[else]
+　クローゼットの棚には他にふたつのダンボールが置かれていた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They had "Takako's" written on them in big letters.[prcm]
+[else]
+　ダンボールには大きな文字で「[ruby text="たか"]貴[ruby text="こ"]呼私物」と書かれている。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko pulled the biggest box into the room and looked at the many other boxes she had collected.[lr]
+[else]
+　佐知子は手前の大きなダンボール箱を引き出すと、押入れやクローゼットから取り出したダンボールや収納箱がいくつも並んだ部屋を見回す。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were already two transparent containers in front of the closet.[prcm]
+[else]
+　クローゼットの前にもすでに透明の収納箱がふたつ置かれていた。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She moved one of them with her leg and placed the box beside it.[lr]
+[else]
+　佐知子は足元の収納箱を横にずらして、持っていたダンボールを空いたスペースに下ろす。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inside the box, there were carving knives, a flute, a knitting set, and all sorts of other trinkets that Takako probably used back in school.[lr]
+[else]
+　「貴呼私物」と書かれたダンボールの中には彫刻刀、アルトリコーダー、裁縫セットなど学校で使うような古いものが入っていた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko took them out of the box one by one, separating each item into two categories: important things and trash.[prcm]
+[else]
+　佐知子はひとつひとつの品を取り出して、必要なものと不要なものとを別々の収納箱に入れて整理していった。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She crushed the paper bag that was mixed with the other articles and put it into the trash container. There was a radio cassette player underneath it.[lr]
+[else]
+　佐知子は無造作に置かれていたボロボロの手提げ袋を畳み不用品の収納箱に入れると、その下にあるラジオカセットを取り出した。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She plugged it into the electrical socket and flipped its switch.[lr]
+[else]
+　コードを接続して電源プラグを近くのコンセントに挿してスイッチを入れる。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A familiar melody filled the cold, gloomy room through the static.[lr]
+[else]
+　ノイズ混じりの懐かしい曲が薄暗くて肌寒い部屋の中に流れる。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko turned around and looked at the bed.[prcm]
+[else]
+　佐知子は振り返りベッドの方を見た。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A doll she'd left on the edge had fallen down to the floor.[lr]
+[else]
+　ベッドの縁に置かれていた人形はいつの間にか床に落ちていた。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[eval exp="sf.cg54=1"]
+[fbfscale_image storage="ev54" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko reached out and picked it up.[lr]
+[else]
+　佐知子は手を伸ばして落ちた人形を拾い上げる。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its lips had frozen into a perpetual, almost confrontational smile.[lr]
+[else]
+　そのクタクタになった人形の口元は微笑んでいて「やれやれ」と言った表情をしていた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its somewhat sardonic expression as it looked over the room made the doll appear almost like it was eager to ask a question or two.[prcm]
+[else]
+　どこか惚けたその表情は部屋を返すような騒ぎの事情を聞きたいようにも見える。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This, too, brings back memories, but I was looking for something else,[」] said Sachiko as she turned the cassette player off.[lr]
+[else]
+　「これも懐かしいけれど、探していたのはこの曲じゃないのよ」と佐知子は呟いて、停止スイッチを押した。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The melody stopped and the cold, gloomy room once again fell into silence.[lr]
+[else]
+　曲が止まり、暗く肌寒い部屋に静寂が戻る。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko took out a blue, rectangle-shaped can from another box.[lr]
+[else]
+　その中で佐知子はラジオカセットが入っていたダンボールとは別のダンボールから、青色の菓子か玩具だかの四角い缶を取り出した。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were several radio cassettes inside.[prcm]
+[else]
+　中には、たくさんのカセットテープが入っている。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Back in middle school, Takako recorded her own radio show onto a cassette.[l] I wonder which one it was. I believe it should have a yellow tape.[」][lr]
+[else]
+　「中学の頃に貴呼がラジオ番組を真似して録音したことがあったの。[l]どれだったかしら、確か黄色いカセットテープに重ね撮りしてたんだけど」[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko took out a yellow cassette tape from the can and pushed it into the player.[lr]
+[else]
+　佐知子が半透明の黄色いカセットテープを缶から取り出して、ラジオカセットにセットする。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The cassette holder sounded a rusty yet vigorous click.[lr]
+[else]
+　どこかが錆びているのか、やや勢いよくしまったホルダーがガチャンと音を立てた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko put her finger on the play button, hesitated for a few moments, then pressed it.[prcm]
+[else]
+　佐知子は再生ボタンの上で一度指を止め、そしてボタンを押した。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An old pop song began playing from the player.[lr]
+[else]
+　テープの回る音のあとで古いポップスのサビが流れる。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the song ended, Takako's voice suddenly rang out through the static.[prcm]
+[else]
+　サビのあと唐突に曲が終わりノイズ混じりの貴呼の声が聞こえた。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She said it was the first song she'd ever bought.[lr]
+[else]
+　貴呼はこの曲が初めて自分で買った曲だと言った。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then she said this was her first recording and congratulated herself.[prcm]
+[else]
+　それから、このテープがラジオの第一回目だと言って一人で祝っていた。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her show was basically her talking about her day and introducing music she liked.[lr]
+[else]
+　ラジオ番組自体は貴呼がその日の出来事を話してから音楽を紹介するだけの番組だった。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were no guest corners or letter reading sessions, of course.[prcm]
+[else]
+　ハガキを読んだりだとか、ゲストと会話するなどのコーナーはもちろんない。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I tried listening to a radio show at night, and it was much more fun than I'd expected.[l] When I told Takako about it, she brought this tape to school the next day.[」][lr]
+[else]
+　「中学の時だけど、夜につけたラジオ番組が意外と面白かったの。それを貴呼にも教えたら、それならばと後日貴呼が学校に持ってきたテープがそのオリジナル番組だったの」と佐知子は言う。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]She said it was really weird to hear her own voice come through the recorder.[l] And that she now wanted to learn how to sing or something.[」] Sachiko smiled.[lr]
+[else]
+　「貴呼は初めて録音した自身の声を聞いてショックだったとか。[l]歌を歌えるようになりたいとか言っていたわ」と言って佐知子は笑った。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then continued to talk about the history of the old cassette player.[lr]
+[else]
+　そしてラジオカセットのことについて話をした。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It used to be in Takako's house, and the two listened to the radio and the cassettes they bought.[prcm]
+[else]
+　その古いラジオカセットは貴呼の家にあったもので、ふたりでラジオや買ってきたカセットテープを聴くのに使っていたと言った。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko paused and listened to the song Takako had introduced.[lr]
+[else]
+　佐知子は動きを止めて貴呼の紹介した曲を黙って聞いた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then began talking again.[lr]
+[else]
+　再び貴呼の声が聞こえる。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She shared her personal information with an almost gleeful expression.[prcm]
+[else]
+　それはとても楽しそうな調子で、ごくごく個人的な話をしている。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko continued listening to the tape with the doll in her lap.[lr]
+[else]
+　佐知子は人形を膝の上に置いたまま、自作のラジオ番組を聞いた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before I realized it, she had closed her eyes.[lr]
+[else]
+　いつの間にか佐知子は目を閉じていた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't tell if she was sleeping or just absorbed in the music.[prcm]
+[else]
+　身じろぎもしないので寝ているのか、聞き入っているのか分からなかった。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The tape suddenly stopped in the middle of Takako's speech.[lr]
+[else]
+　貴呼がしゃべっている途中で、片面三十分のテープは唐突に音を立てて停止した。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko opened her eyes and took the tape out. She flipped it around, put it back into the holder and pressed the play button.[prcm]
+[else]
+　佐知子は目を開けると、カセットテープを取り出し逆にしてホルダーに入れ、再生ボタンを押した。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Now that I think about it, we dropped by Takako's old house some time after getting our first jobs, but this cassette player was no longer there by that time.[l] It's not like we would've listened to it, anyway, but...[」][lr]
+[else]
+　「そういえば仕事を始めてからしばらくして貴呼の実家に戻ったことがあったけれど、あの時にはもうラジオカセットは置いてなかったわね。[l]もしあったとしても、また二人で音楽を聴いたりはしないだろうけれど」[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She faced the doll, but her eyes were gazing somewhere far away.[lr]
+[else]
+　人形の方を向いていたが、その目はそれよりも近くか遠くを見ているようでもあった。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She seemed to have been wondering why they weren't listening to music.[prcm]
+[else]
+　佐知子はどうして二人が音楽を聴いたりしないのか考えている様子だった。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If I could go back in time, I'd love to show her some better songs.[」][lr]
+[else]
+　「あの時に戻れたら、もっといい曲を教えてあげたいわね」[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...[」][prcm]
+[else]
+　「…」[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko stood up and picked up the cassette player with one hand while holding the doll in the other. She then walked over to the bed.[lr]
+[else]
+　佐知子はゆらりと立ち上がると、再生したままのラジオカセットと膝の上の人形を持ってベットの方に移動した。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She sat down on its edge, placing the player on the side table and the doll by her pillow.[lr]
+[else]
+　ラジオカセットをサイドテーブルに、人形を枕のそばに置いてから、ベッドに腰掛けた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko turned around and saw Takako on the bed.[lr]
+[else]
+　佐知子は上体を捻って、ベッドの上で横になっている貴呼を見た。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She extended her hand and touched her.[prcm]
+[else]
+　それから、手を伸ばしてその体に触れた。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll play my favorite song next.[」][lr]
+[else]
+　「次は今一番気に入っている曲です」[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A very old western song came to life through the speakers.[prcm]
+[else]
+　とても古い時代の洋楽が流れ始めた。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I looked up the meaning of the lyrics.[」][prcm]
+[else]
+　「私は今回この歌詞の意味を少しだけ調べました」[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Everything has a meaning.[lr]
+[else]
+　-すべての事柄には意味がある。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even if I don't have them now, time will bring me the answers.[prcm]
+[else]
+　-今分からないことも、季節が変われば分かる時もある。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is my favorite song.[l] I don't know why, but I really like it.[l] I hope I'll eventually come to understand why![」][lr]
+[else]
+　「私はこの曲が今一番気に入っています。[l]どうしてかは分からないけど、なんとなく好きです。[l]でも、その理由もその内わかるかもしれないと思います」[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What an idiot,[」] Sachiko murmured.[lr]
+[else]
+　「馬鹿ね」と小さく佐知子が言った。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nonetheless, she made a smile.[lr]
+[else]
+　それを言う佐知子は微笑んでいた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Perhaps she recalled a time when they listened to that song together.[prcm]
+[else]
+　佐知子はそれを聴いていた日のことが昨日のことのように思えたのかも知れなかった。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako said it'd be the last song for the day, then began playing.[lr]
+[else]
+　貴呼は最後の曲だと言って、その曲を初めから流した。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the song came to an end and the tape stopped, the room fell completely silent.[prcm]
+[else]
+　曲が終わってテープが終わると、部屋の中に動くものはなかった。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=50]
+[playse buf = 0 storage=se62.ogg]
+[wait time=1500]
+[seopt buf=0 volume=70]
+[playse buf = 0 storage=se62.ogg]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[backlay]
+[fbfscale_image storage="bg61_b" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko realized that her doorbell was ringing.[lr]
+[else]
+　佐知子が遠くで聞こえる呼び鈴に気がついた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She didn't know whether she had fallen asleep or was simply too deep in thought, but by the time she glanced at the clock, it was already midnight.[lr]
+[else]
+　いつの間にか寝ていたのか、それとも意識があったのか分からないが、時計は深夜を回っていた。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se62.ogg]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Still, the doorbell was definitely ringing.[prcm]
+[else]
+　耳を澄ませなくても、確かな呼び鈴が聞こえる。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko noticed light coming from one of the rooms.[lr]
+[else]
+　佐知子は部屋の明かりを見た。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She went to bed before sunset, so there was no way she'd turned on any of the lights.[lr]
+[else]
+　陽の落ちる前からこの部屋にいたので、家の中はどこにも明かりがついていない。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She glanced at the doll by the pillow and embraced it.[lr]
+[else]
+　佐知子は枕元に置いていた人形を見つめてから、それを腕に抱いた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She listened to the sound in her bitterly cold bed.[prcm]
+[else]
+　とても冷たいベッドの中で佐知子の音が聞こえた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se62.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sound of the doorbell seemed to have grown distant.[lr]
+[else]
+　呼び鈴の音はとても遠くから聞こえているようになった。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What am I supposed to do?[」] I could've sworn she said something.[lr]
+[else]
+　「どうすればいいの」と佐知子が言った気がした。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, both her words and the doorbell became barely audible to me.[prcm]
+[else]
+　呼び鈴も佐知子の音も遠く小さくなっていった。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt as though everything I observed was happening somewhere far away, in another world.[prcm]
+[else]
+　全部がどこか遠く、別の世界で起きている事象のように思えた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[seopt buf=0 volume=100]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="138.ks" target=*138

@@ -1,0 +1,426 @@
+*168| Room 008
+; *168|008号室
+[fbfstoretitle eng="Room 008" jp="008号室"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle3"]
+
+[clickskip enabled=false]
+[playbgm storage="bgm59"]
+[wait time=1500]
+[backlay]
+[fbfscale_image storage="bg161_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+*| Room 008
+; *|008号室
+[fbfstoretitle eng="Room 008" jp="008号室"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Pale light filled the early morning corridor, its stale, humid air tickling my nose.[lr]
+[else]
+　早朝の廊下は淡い光が満ちて、少し湿気った空気が鼻をつく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shook my still somewhat drowsy head, and continued with my daily routine — inspecting the room equipment.[lr]
+[else]
+　私はまだ少しだけ眠たい頭を振り、日課である部屋の備品確認に向かう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Today was Room 008's turn.[prcm]
+[else]
+　この日確認する予定の部屋は008号室だった。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se77.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Not breaking my stride, I pulled out a bunch of keys from my pocket, and began looking for the one marked with the number 008.[lr]
+[else]
+　廊下の床を踵で鳴らしながら、手に持った鍵束の中から008の番号がついた鍵を探す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There must've been about fifty keys on that bunch, and with a notebook under my armpit, it took quite a while until I found the key I was looking for.[lr]
+[else]
+　鍵束の鍵が多い上に、小脇にノートを挟んでいるので腕を動かしにくく、目的の鍵を見つけるのに少し時間がかかる。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se41.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That said, I still managed to have it ready by the time I reached the door with the number 008.[prcm]
+[else]
+　それでも、なんとか到着する前に見つけ出した鍵を使って008号室の扉を開ける。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[playse buf = 3 storage=se54.ogg]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg129_2" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I opened it, the room on the other side sucked much of the fresh air inside, almost like it was breathing.[lr]
+[else]
+　扉を開くと部屋は息をするように廊下の空気を吸い込んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I quickly entered and went on with my business, making sure that all the furniture and equipment in this murky, dust-riddled room was still in the right place.[prcm]
+[else]
+　私はスタスタと部屋に入ると、すぐに作業に取り掛かる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　薄暗く、細かいホコリが宙を舞う部屋の中を歩いて回り、物品をひとつひとつ確認する。[lr]
+[r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The table and the sofa were covered with white sheets, making them look like ghosts.[lr]
+[else]
+　備え付けられたテーブルとソファはお化けのように白い布を被っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A cardboard box rested next to the sofa.[prcm]
+[else]
+　そのソファの奥にはダンボールが積まれている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had been over ten years since this place turned into a storage room.[lr]
+[else]
+　この部屋は物置になってかれこれ十年以上経過している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had actually been half a year since I last came here.[prcm]
+[else]
+　様子を見に来るのも実に半年ぶりだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After glancing over the furniture, I moved on to the shelves by the wall.[lr]
+[else]
+　大きな家具に一通り目を通し終わると、次に壁際の棚を確認する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+One of the shelves was filled with dishware, while the other boasted a whole collection of thick, hardcover books.[lr]
+[else]
+　棚は食器の入った棚と本棚とがあり、本棚にはハードカバーの分厚い本がズラリと並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the dishware shelf, there were a bunch of white plates stacked upon each other, alongside a few cups and saucers further down.[lr]
+[else]
+　食器棚には白い丸皿が大きさごとに積まれ、カップとソーサーが並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted a case wrapped in a piece of cloth with checkered design — in it, there were forks, spoons, and knives.[prcm]
+[else]
+　チェック柄の布のかかったケースにはフォーク、スプーン、ナイフが入っている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My gaze halted on one particular dish in the back of the shelf that stood out from the rest.[lr]
+[else]
+　ふと、私は棚の奥にある少し毛色の違う陶器に目を留めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The previous owner of the room made it in elementary school, back when she was a member of a pottery club.[lr]
+[else]
+　それはこの部屋の持ち主である女の子が、小学校の陶器クラブで作ったものだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was about palm-sized and shaped like a tulip, colored in reddish brown — like rusted iron.[lr]
+[else]
+　大きさは手のひらサイズで、器の形はチューリップのようになっており、色は鉄錆のような赤茶だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She received some help from the club's supervisor — a professional potter — but aside from the color, she was relatively satisfied with how it turned out.[prcm]
+[else]
+　この陶器を作る際、着色と窯入れはクラブ顧問の知人である陶器職人の手が入ったが、彼女は色が少し気に入らなかったこと以外は、仕上がりに概ね満足していた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I considered the dishes one more time, feeling as though I had missed something.[lr]
+[else]
+　私はそこまでを思い出したとき、頭に引っ掛かりのようなものを覚えて、もう一度よくその陶器を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She made three dishes in total over the time she spent at the pottery club during her sixth year of elementary school.[lr]
+[else]
+　彼女は陶器クラブに小学六年の一年間所属している間に三つの陶器を作っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+One she presented to her grandfather, but the other two she kept on this shelf. However, the green dish that was supposed to be next to the reddish brown one wasn't there.[prcm]
+[else]
+　ひとつは祖父にプレゼントして、残りのふたつはこの棚に置いていたはずだったが、一緒に飾っていたもうひとつの深緑の器がその棚のどこにも見当たらない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my notebook.[lr]
+[else]
+　私はノートを取り出す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had everything about this room marked down in detail.[lr]
+[else]
+　ノートにはこの部屋の物品が細かく記述してある。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned the page to find that there was indeed supposed to be a green cup here.[lr]
+[else]
+　ページを捲り、確かに深緑の陶器のコップがあったことを確認する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were no notes of it being removed.[lr]
+[else]
+　備考欄には持ち出した旨の記載もない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed as though it had simply disappeared by itself.[prcm]
+[else]
+　その新緑の陶器は間違いなく消失していた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se61.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I crossed it out and wrote down today's date slightly above it.[prcm]
+[else]
+　私はその名前の上にヨコ線を引いて日付を記すと息をついた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Since I found one article missing, I decided to check every single item inside.[lr]
+[else]
+　消えたものがあるとなると、全ての物品を確認することにしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was nowhere near as easy as it initially sounded.[prcm]
+[else]
+　物品ノートひとつひとつの物品を確認するのは中々骨が折れる作業だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After I finished, I found out that two books were also missing from the shelf.[lr]
+[else]
+　物品ノートを洗いざらい確認してみると、本棚からも二冊の本が無くなっていることがわかった。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se61.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I crossed them out, too, and wrote today's date above them.[prcm]
+[else]
+　二冊の本にもヨコ線を引き日付をつけた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 1 storage=se53.ogg]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=1000]
+[playse buf = 2 storage=se41.ogg]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With that done, I left the murky room and locked the door behind me.[prcm]
+[else]
+　確認作業が終わると薄暗い部屋を出て再び扉に鍵を閉めた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the clock to realize the whole ordeal took me over an hour.[lr]
+[else]
+　時計を見ると一時間ほど経過していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Returning the keys to the night duty room, I continued with my other duties.[prcm]
+[else]
+　私はノートと鍵を宿直室に戻してから、次の仕事に取り掛かった。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle3]
+@jump storage="tips.ks" target=*tips
+
+

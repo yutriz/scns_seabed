@@ -1,0 +1,383 @@
+*123| The morning of that day
+; *123|あの日の朝
+[fbfstoretitle eng="The morning of that day" jp="あの日の朝"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+
+[msglayer]
+
+[playbgm storage="bgm06"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 154"]
+[eval exp="sf.ItRelease = 155"]
+[endif]
+
+
+*| The morning of that day
+; *|あの日の朝
+[fbfstoretitle eng="The morning of that day" jp="あの日の朝"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wake up.[」][lr]
+[else]
+　「起きなさい」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[playse buf=0  storage=se75.ogg]
+[backlay]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method=universal rule="rule13" vague=500 time=600]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My bedsheets got pulled away by some mysterious force.[lr]
+[else]
+　ベットのシーツをバサ、と持ち上げられる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The warm morning sun burned my eyes.[prcm]
+[else]
+　暖かな日差しが瞼の裏を赤くした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just five more minutes...[」][lr]
+[else]
+　「眠い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your coffee will get cold.[」][lr]
+[else]
+　「コーヒーが冷めるわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The hand I extended toward the source of the voice fell limp onto the bed.[prcm]
+[else]
+　声のする方に持ち上げようとした腕がぱたり、と布団の上に落ちる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't fight gravity.[」][lr]
+[else]
+　「重力に逆らえない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Thinking that made me feel even weaker.[prcm]
+[else]
+　そう思うと、一層気怠さが増した気がする。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My body is getting heavier and heavier.[l] At this rate, I'll start to sink into the mattress and create a black hole, sucking in everything around me, light included.[」][lr]
+[else]
+　「だんだん体が重くなるみたい。[l]私は布団に沈み、やがて周りのものを吸い込み、光も吸い込むブラックホールになる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's amazing. Why not pitch it to the physics conference?[l] Anyway, quit goofing around and get up already.[l] We're leaving as soon as you get dressed.[」][lr]
+[else]
+　「凄いわね、学会で発表したら？[l] 馬鹿なこと言ってないで、起きなさい。[l] 着替えたら出るわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I dun wanna...[」][lr]
+[else]
+　「ううん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached out and pulled the first thing I grabbed to myself.[lr]
+[else]
+　腕を伸ばすと、手に触れたものを掴んで引き寄せる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko fell on top of me.[prcm]
+[else]
+　とさ、と身体の上に[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子の重みが加わる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg58=1"]
+[fbfscale_image storage="ev58" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Opening my eyelids, I saw her black eyes staring back at me.[lr]
+[else]
+　目を開けると、黒い瞳がこちらを見ている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised my neck slightly and kissed her lips.[lr]
+[else]
+　首を少し起こして、軽くキスをした。[lr]
+[endif]
+
+[r]
+
+[playse buf = 1 storage=se08.ogg]
+[quake time=200 hmax=0 vmax=30]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was once again blinded by light as she pulled her head — and thus, her curtain of dark hair — away from me. A moment later, she hurled her handbag at my face.[prcm]
+[else]
+　彼女が上体を起こすと、黒髪のカーテンが開きまた明るくなったが、すぐに彼女が手にもったカバンが額に落ちてきた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They say this helps people with low blood pressure.[」][lr]
+[else]
+　「こうすると低血圧が治るらしい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then get out of bed already.[」][lr]
+[else]
+　「なら早く起きて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][prcm]
+[else]
+　「はい」[prcm]
+[endif]
+
+
+
+;/////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg61" page=back layer=base]
+[trans method = crossfade time=100]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As Sachiko climbed out of bed and got changed, I handed her the bag resting on my knees.[prcm]
+[else]
+　佐知子がベッドを降りて着替えを済ませると、私は膝の横にあった鞄を彼女に渡した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your fried eggs are on the table.[」][lr]
+[else]
+　「卵焼き、ラップしてあるから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I love you, Sachiko.[」][lr]
+[else]
+　「佐知子、愛してる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah. Great.[」][lr]
+[else]
+　「はいはい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko left the room.[lr]
+[else]
+　佐知子が部屋を出る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I jumped out of bed and stepped out onto the corridor.[prcm]
+[else]
+　私もさっさとベッドを降りて玄関へ向かった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=600]
+[wt]
+[wait time=1000]
+[backlay]
+[eval exp="sf.cg01=1"]
+[fbfscale_image storage="ev1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=600]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hold this for me.[」] Sachiko handed me her bag again.[lr]
+[else]
+　「持って」と再び鞄を渡される。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then bent her knees and leaned down, letting the slit of her skirt reveal her thighs.[lr]
+[else]
+　佐知子が膝を交互に少しだけ曲げて屈むと、スカートのスリットが腿の上で広がる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her long eyebrows painted beautiful half-arcs on her lowered face.[lr]
+[else]
+　俯いた顔に長いまつげが綺麗な半弧を描く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her long, flowing hair slipped down her shoulders, prompting Sachiko to try and pin it down next to her ear.[prcm]
+[else]
+　さらさらと黒髪が肩から落ちると、手をやり耳元で抑えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][lr]
+[else]
+　「ありがとう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She raised her face and smiled at me as she finished putting on her shoes.[lr]
+[else]
+　靴を履き終わると、顔を上げて軽く微笑む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My vision began to clear up, dispelling my prior drowsiness. I woke up with such keen senses that I felt I could hear the very blood pumping through my veins.[prcm]
+[else]
+　ぼんやりしていた視界はすっかりひらけて、今はとくとく、と心臓から湧き出る血の音が聞こえるくらいはっきりと目が覚めていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="124.ks" target=*124
+

@@ -1,0 +1,405 @@
+*081| Delicious things
+; *081|おいしいもの
+[fbfstoretitle eng="Delicious things" jp="おいしいもの"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm39"]
+[backlay]
+[fbfscale_image storage="bg56_3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=1000]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 97"]
+[eval exp="sf.ItRelease = 98"]
+[endif]
+
+
+*| Delicious things
+; *|おいしいもの
+[fbfstoretitle eng="Delicious things" jp="おいしいもの"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was walking through the inner yard, watching the orange-tinted light of dusk illuminate the second floor windows, when I spotted Nanae approaching with a cartwheel of vegetables.[lr]
+[else]
+　オレンジ色になった二階のガラスを眺めながら歩いていると、ガラガラと野菜をたくさん乗せたカートを押してくる[ruby text="なな"]七[ruby text="え"]重と出会う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She looked like a beggar from some old fable, her forehead covered in sweat and mud, her face frozen in a broad smile.[prcm]
+[else]
+　七重の姿は昔話に出てくるお婆さんのように、額にうっすらと土化粧と汗を浮かべて、満足そうに微笑んでいた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f06_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[」][lr]
+[else]
+　「あら」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f06_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She waved my way after spotting me, just like she did this morning.[prcm]
+[else]
+　こちらに気がつくと、今朝のようにひらひらと手を振った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Looks like it was a bountiful harvest.[」][lr]
+[else]
+　「豊作だったみたいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're having lots of fresh vegetables for dinner tonight.[l] Oh, right. Did you manage to meet my auntie?[」][lr]
+[else]
+　「今日は産地直送の美味しいものフェアね。[l]そういえば、小母さんとは会えた？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised the basket in front of her.[prcm]
+[else]
+　提げていた片手のかごを持ち上げる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see you got yourself some polvorons.[l] I saw her making them this morning.[l] Those things are to die for.[」][lr]
+[else]
+　「ポルボロンね。[l]小母さんが今朝作っていたわ。[l]私それ大好物なの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Care for some?[」][lr]
+[else]
+　「食べる？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f06_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You sure?[」][lr]
+[else]
+　「いいの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f06_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae came closer, pulling her hands out of muddy cotton gloves.[prcm]
+[else]
+　近くへ寄ると、七重は土の付いた軍手から手を引き抜いた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f06_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[」][lr]
+[else]
+　「あら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was still some dirt on her hands — it must've seeped through the gloves.[prcm]
+[else]
+　見ると、軍手の下の手にも土が残っている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here you go.[」][lr]
+[else]
+　「ほら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up one of the polvorons and dangled it in front of Nanae's mouth. She took a bite.[prcm]
+[else]
+　籠にかかった花柄のキッチンペーパーの下から、ひとかけらを取って七重の口の前に差し出すと、七重は菓子の端を口で取っていった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f06_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's good.[l] I love how it melts in your mouth,[」] she said while wiping her forehead.[prcm]
+[else]
+　「おいしい。[l]この食感がいいのよね」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　おでこを拭いながら言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, is Lily not a full-blooded Japanese?[」][lr]
+[else]
+　「ねえ、リリィさんってハーフなの？」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f06_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f06_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae paused for a few moments, then burst into laughter.[prcm]
+[else]
+　七重は少し止まって、それから吹き出してからははは、と笑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see she still introduces herself as that.[」][lr]
+[else]
+　「小母さんったら、まだあの名前で名乗ってるのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that not her real name?[」][lr]
+[else]
+　「本名じゃないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave her an incredulous look.[prcm]
+[else]
+　と、訝しげな顔で聞いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]She's one hundred percent Japanese.[l] It's just that, uh... apparently, she thought her real name didn't suit the mood of this place, so she changed it up a bit.[」][lr]
+[else]
+　「根っからこの国の人よ、生まれも育ちもここだもの。[l]なんかね、本名がちょっとここの雰囲気に合わないとかなんとかで、それらしい通り名みたいなのを自身で考えたんだそうよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Her real name's Yurika.[」][lr]
+[else]
+　「本名は[ruby text="ゆ"]百[ruby text="り"]合[ruby text="か"]香よ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a beautiful name.[」][lr]
+[else]
+　「いい名前じゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I agree.[l] Lily was apparently the name of a character in a movie she liked as a child, but I can't comment much on that since I never saw it.[」][lr]
+[else]
+　「私もそう思うわ。[l]リリィは、当時小母さんが好きだった映画か何かから取ったみたい。[l]でもね、当時にその映画を見てないと、良さがイマイチ分かんないわよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae's gaze was transfixed on the basket, so I gave her another polvoron.[prcm]
+[else]
+　籠を見ていた七重に、もうひとつ菓子を分ける。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f06_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, I've got to back and start preparing for dinner.[」][lr]
+[else]
+　「さて、私は戻って夕食の支度をしてくるわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be looking forward to it.[」][lr]
+[else]
+　「今日の夕食、楽しみにしてるわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, you totally should.[」][prcm]
+[else]
+　「ええ、期待していていいわ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="082.ks" target=*082
+
+

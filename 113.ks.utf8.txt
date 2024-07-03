@@ -1,0 +1,344 @@
+*113| Drinking bout
+; *113|酒盛り
+[fbfstoretitle eng="Drinking bout" jp="酒盛り"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm39"]
+[backlay]
+[fbfscale_image storage="bg93_3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 141"]
+[eval exp="sf.ItRelease = 142"]
+[endif]
+
+*| Drinking bout
+; *|酒盛り
+[fbfstoretitle eng="Drinking bout" jp="酒盛り"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Auntie always complains when I use oil in the main kitchen.[l] Let's do this in the annex.[」][lr]
+[else]
+　「私が厨房で油物をすると、小母さんがうるさいの。[l]離れの方で調理しましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The annex was connected to the east wing with a roofed corridor.[lr]
+[else]
+　東棟の向こうの離れは、屋根つきの渡り廊下で繋がっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+While the main east wing was built out of plaster and bricks, the annex was more like a traditional Japanese building.[lr]
+[else]
+　本館の[ruby text="しっ"]漆[ruby text="くい"]喰とレンガに対して、離れは和風な木材建築だった。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se41.ogg]
+[ws buf=1]
+[playse buf = 0 storage=se130.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae unlocked the door and slid the partition window open.[lr]
+[else]
+　ガチャ、と[ruby text="なな"]七[ruby text="え"]重が鍵を開けるとガタガタ、と磨ガラスの引き戸を開ける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The relatively wide entrance was circular in shape. The ground base in front of the door was made of stone and had some wooden flooring above it.[prcm]
+[else]
+　広めの玄関は円弧に一段低い部分が石畳で、一段低い部分は板張りになっている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can leave your shoes there.[」][lr]
+[else]
+　「靴はそのへんに置いといていいから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae swiftly slid out of her shoes, using only her heels as the basket occupied her hands. She then stepped inside.[lr]
+[else]
+　七重は籠を持ったまま、踵だけでさっさと靴を脱ぐと、そのまま中へと入っていった。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se12.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took my shoes off and followed Nanae as the wooden floor creaked under my steps.[lr]
+[else]
+　靴を揃えて脱いでから、七重の後に歩くと、ぎしぎしと張板の音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The corridor was too narrow to walk side by side, but it took only a few steps to reach the stairs.[lr]
+[else]
+　細い廊下は二人で並んで歩けないほどで、入って直ぐの隣には急な階段があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up, but it was too dark to see anything.[prcm]
+[else]
+　上を見ても、暗くて先は見えなかった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, yeah. Auntie gave me a bottle of some pretty good alcohol as a present the other day.[l] Can you handle sake?[」][lr]
+[else]
+　「そういえば、小母さんに貰ったいいお酒があったと思うわ。[l]日本酒は大丈夫？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg93_2" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae slid open the partition door on the opposite end of the stairs.[prcm]
+[else]
+　七重が階段とは反対側にある障子の戸をスルスルと開ける。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Go ahead.[」][lr]
+[else]
+　「どうぞ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=1000 path="(250,0,0)" layer=0]
+[wm]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h01" visible=false left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I entered the room. Nanae followed closely behind me, but quickly disappeared behind another half-partition.[prcm]
+[else]
+　先に部屋に入ると、後から入った七重はそのまま奥の戸の向こうへと行った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have a seat and relax.[」][lr]
+[else]
+　「適当に[ruby text="くつろ"]寛いでいて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The room was about 15 square meters in terms of size, and its window gave a view of a bamboo forest and some red wildflowers that could've been peonies.[lr]
+[else]
+　八畳ほどの部屋は奥側に窓があり、外には竹林と牡丹のような赤い花が見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Aside from a dining table and a wardrobe, I also spotted three lights under the shell-like lamp shade.[prcm]
+[else]
+　部屋の中は卓袱台と木目の箪笥とがあり、天井には貝柄シェードの中に三つの消灯した灯りがあった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of room is this?[」][lr]
+[else]
+　「ここはどんな部屋なの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up the two futons I noticed in the corner of the room, placed them on both ends of the table, and sat down on one.[lr]
+[else]
+　部屋の隅に置かれた座布団を取ると、卓袱台の近くに二つ置いた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　ひとつの上に座る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The thick fabric was well-dried and didn't hurt my legs at all.[prcm]
+[else]
+　厚めの生地はよく干されていて、足は痛まなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is the maid's room, but these days, I'm the only one that occasionally uses it.[」][lr]
+[else]
+　「中居部屋よ。[l]今は、たまに私が使うくらいだけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard her voice from beyond the partition.[lr]
+[else]
+　と、戸の向こうから声がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Through the somewhat darkened partition, I could partially see a kitchen.[prcm]
+[else]
+　少し暗めの戸からは、炊事場が覗いている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, could you turn on the heater for me?[」][lr]
+[else]
+　「あ、そこのストーブ。[l]スイッチを入れておいてくれる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae addressed me from the kitchen while massaging her tired legs.[lr]
+[else]
+　歩き疲れた足を伸ばして、足首を動かしていると七重が炊事場から言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached out to the heater standing next to me and flipped its switch.[lr]
+[else]
+　丁度隣りからこちらを向いていたストーブに手を伸ばして、スライド式の摘みを上に上げる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The thing made a cracking sound before its bright, orange flame lit up behind the metal grate.[prcm]
+[else]
+　ストーブはジジジと唸ると、銀の金網の向こうで、二本の電熱線をオレンジ色にジワリと光らせ始める。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I turned it on.[」][lr]
+[else]
+　「つけたわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][prcm]
+[else]
+　「ありがとう」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="114.ks" target=*114
+

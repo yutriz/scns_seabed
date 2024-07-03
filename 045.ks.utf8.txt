@@ -1,0 +1,823 @@
+*045| The Present of Music
+; *045|音楽のプレゼント
+[fbfstoretitle eng="The Present of Music" jp="音楽のプレゼント"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm21"]
+[backlay]
+[fbfscale_image storage="bg43_1_r" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 57"]
+[eval exp="sf.ItRelease = 58"]
+[endif]
+
+*| The Present of Music
+; *|音楽のプレゼント
+[fbfstoretitle eng="The Present of Music" jp="音楽のプレゼント"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sanae.[l] I brought something cool for you.[」][lr]
+[else]
+　「[ruby text="さ"]早[ruby text="なえ"]苗。[l]いいものを持って来たよ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I entered Sanae's room and placed the wooden box atop the cabinet near the corner.[lr]
+[else]
+　早苗の病室に入るとどっこいしょ、と抱えてきた木箱を入口から向かって正面、部屋の隅にある本棚の上に置いた。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg43_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the waist-high, glass-windowed cabinet had nothing else on top of it, the box felt almost like it was meant to be placed there.[prcm]
+[else]
+　ガラス窓の付いた腰ほどの高さの本棚の上には元々何も置かれておらず、抱えてきた木箱を乗せると初めからそこにあったようにピタリと収まった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev9_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's that?[」][lr]
+[else]
+　「それ、なんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hm?[l] A record player.[」][lr]
+[else]
+　「うん？[l] レコードプレイヤー」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae was a bit overwhelmed at first, but once she heard my words, the corners of her lips curled up in anticipation.[prcm]
+[else]
+　突然のことに早苗はオタオタとしていたが、レコードプレイヤーと聞いて口の端は期待気味に上がって少し嬉しそうだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The front of the black, wooden box had a drawer with a glass cover, as well as two square-shaped holes above it.[lr]
+[else]
+　黒い木箱は正面に硝子窓付きの引き出しと、その上に四角い穴が2つ付いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The holes were plugged with what looked like coarse cloth.[lr]
+[else]
+　穴の奥は目の粗い布のようなもので栓をされていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I unplugged and fixed them with a metal fitting. Then, sticking my hand behind the box, I found a cable and pulled it closer to myself.[lr]
+[else]
+　その蓋を開けて、金具のつっかえ棒で固定すると、次に木箱の裏に手を入れて束ねられていた線をひっぱりだした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With cable in hand, I moved to my usual seat and bent over.[lr]
+[else]
+　線を持ったまま、いつもの指定席まで移動して、身をかがめる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved the cane chair out of the way with my free hand.[prcm]
+[else]
+　それから、線を持つ手と反対のもう片方の手でゴロッ、と藤椅子を動かした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, I think it should be around here.[」][lr]
+[else]
+　「んっと、確かこの辺りに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And just as I expected...[lr]
+[else]
+　予想通り。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was an electrical socket behind the cane chair. I plugged the cable I still carried in my right hand into it.[prcm]
+[else]
+　藤椅子の裏にあった電気コンセントに箱から引っ張った線のプラグを接続する。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you sure I can have it?[l] It looks expensive.[」][lr]
+[else]
+　「いいんですか？[l] そんな高価そうなものを貰ってしまって」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up from under the shadow of the chair, brushing dust off my hands.[prcm]
+[else]
+　藤椅子の影から身を起こしながら、手に付いた埃を払う。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I found it abandoned in the storeroom.[l] I already have permission from Mayuko, and besides, I'm going to be listening to this as well, so you don't need to think too much about it.[」][lr]
+[else]
+　「掃除のとき物置で見つけたんだよ。[l]繭子に許可は貰ったし、それに私もここで聴くんだから気にしなくていいんじゃないかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up the brown paper bag I left by the cabinet earlier.[lr]
+[else]
+　一緒に持ってきて、本棚の隣に置いておいた茶色の紙袋を持つ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened up its glass doors and began lining up the records I pulled out from the paper bag.[prcm]
+[else]
+　レコードプレイヤーを置いた本棚のガラス戸を開いて、空いているスペースに紙袋から取り出したレコードを並べる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I found the records alongside it.[l] And there are some extras I found in the library later. I'll leave everything in your room, okay?[」][lr]
+[else]
+　「レコードも一緒にあったんだ。[l]あとで図書館で見つけたのも混じってるけど、まとめてここに置いておくね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae adjusted the glasses on her nose and gave the records a long, hard look from the distance.[prcm]
+[else]
+　早苗が眼鏡の位置を直して、覗き込んでいる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well then, let's see if this thing still works. Is there anything you want to listen to, Sanae?[」][lr]
+[else]
+　「さて、試しに何を聴こうかな、早苗は何が聴きたい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I inspected the records with my fingers as I finished lining them up.[prcm]
+[else]
+　一通り並べ終わると、指でぱたぱたとなぞる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know much about music, so I'm okay with whatever you pick, Takako.[」][lr]
+[else]
+　「私は、音楽はあまり詳しくは無いですから、貴呼さんが選んでくれたものでいいです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay then.[l] In that case, let's...[」][lr]
+[else]
+　「お任せだね。[l]それじゃあ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I scanned through the records and picked out the one with the picture of an old blue Peugeot on it.[lr]
+[else]
+　パラパラ、と束ねたレコードをめくり、古い型式の青いプジョーがラベルのを一枚抜き取りった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took the record out of its case and placed it on the rotating turntable.[lr]
+[else]
+　厚紙のラベルからレコードを取り出して、クルクル回るターンテーブルに置くいた。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[fadeoutbgm time=1000]
+[wb]
+[playse buf = 0 storage=se113.ogg]
+[ws buf=0]
+[playse buf = 0 storage=se114.ogg loop=true]
+[playbgm storage="bgm16"]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I then raised the tonearm with my finger and slowly put it on the spinning record. After a brief noise, clear sound filled the room.[prcm]
+[else]
+　それからトーンアームを指で持ち上げて、針をレコードの上に落とすとキィ、と一瞬鳴った後から、鮮明な音の亜麻色の髪の乙女がながれる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev9_5" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a nice song.[」][lr]
+[else]
+　「綺麗な音」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Seems to be working just fine.[」][lr]
+[else]
+　「ちゃんと聴けるみたいだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up the Peugeot record case.[prcm]
+[else]
+　置いていたプジョーのラベルを持つ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't think this is the right case, though.[l] I wish Mayuko was more careful with these.[」][lr]
+[else]
+　「これはきっと違うラベルだね。[l]繭子、適当に片付けてるな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae let out a small snicker as I began investigating the other cases.[prcm]
+[else]
+　パタパタ、とラベルを揺らしていると、早苗が小さい声で笑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It might not have been her.[l] I haven't seen Mayuko use a record player before, so it's entirely possible it was some other person.[」][lr]
+[else]
+　「わかりませんよ。[l]繭子さんがレコードを使ってるところは見たことありませんし、以前ここにいた他の方かも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][prcm]
+[else]
+　「ふむ」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev9_1" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There were more people here before you came.[」][lr]
+[else]
+　「貴呼さんが来る以前は、ここにもそれなりに人がいたんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mayuko said the same thing.[l] When you two put it like that, it sounds almost like it's my fault everyone left.[」][lr]
+[else]
+　「繭子もそう言っていたよ。[l]しかし何度も言われると、私のせいみたいに聞こえてくるね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not at all.[l] Everyone is free to come and go as they please.[」][lr]
+[else]
+　「そんなことはありませんよ。[l]来るのも去るのも、それぞれの事情ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]As they please, huh.[」][prcm]
+[else]
+　「来るのも去るのも自由」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I suppose that's not entirely true.[l] This sanatorium is open for people with special memory disorders, but it's not like it offers any kind of treatment.[l] There's no clear treatment for what we have, in any case.[l] This is just a place for people who would find it problematic to survive on the outside because of their symptoms.[l] As such, once that reason is no longer applicable, everyone leaves.[l] That's all there is to it.[」][lr]
+[else]
+　「自由かというと、それはわかりませんけど。[l]
+そうですねえ、この療養所は特殊な記憶障害の症状を専門にしていますが。[l]
+とはいっても、治療のために何かするわけではありませんから。[l]
+そもそも、あの症状には治療法はありませんし。[l]
+ただ、症状のせいで外での生活が困難になった人が集まってくるだけですよ。[l]
+だから、理由がなくなったら出ていくだけです。[l]
+それだけのことですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]For people who would find it problematic to survive on the outside...[」][lr]
+[else]
+　「外での生活が困難になった人が集まってくるだけ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] The specific details of our conditions don't really matter beyond that.[」][lr]
+[else]
+　「そう。[l]だから、各々のここにいる理由は他の患者さんとは関係ないですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She added an extra "at all" for emphasis.[prcm]
+[else]
+　「全く何も」と早苗は付け加えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about the whole 'reason no longer being applicable' part? What happened here, exactly?[」][lr]
+[else]
+　「理由がなくなったっていうのは、どういう場合があるの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[eval exp="sf.cg09_4=1"]
+[fbfscale_image storage="ev9_4" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]For example, there was a person who couldn't do his job because of his fits. However, he eventually found a new occupation where he would work from home, which eliminated his reason for staying here.[」][lr]
+[else]
+　「例えば、発作のせいで仕事が難しくなった人もいましたけど。[l]なんとか在宅の仕事を見つけてここを出て行った方もいますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] You won't cause anyone problems if the fit happens at home with no one else around.[l] And you should be okay as long as you have your diary and memos.[l] You can make do without being locked up in this place.[」][lr]
+[else]
+　「なるほど。[l]在宅なら発作が起きても迷惑はかからないか。[l]物忘れの方も日記やメモである程度カバーできるしね。[l]
+それは、ここじゃなくても出来るか」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's right.[l] There were some people who discovered the frequency of their fits, and after some planning, managed to return to their normal lives.[」][lr]
+[else]
+　「そうですね。[l]発作の頻度が少なくなったり周期がわかったりして普通の生活にもどる人もいますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Now that I think about it, I haven't seen any of yours.[l] When was the last time you had one?[」][prcm]
+[else]
+　「そういえば、早苗が発作を起こしているところは見たことないけど。[l]最後はどれくらい前なの？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized I might have pried too deep, letting out an awkward "Ah..." but there was no change in Sanae's expression. She simply asked if I was okay.[lr]
+[else]
+　「あ」とつぶやくと早苗が「どうしました？」と聞いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't need to tell me if you don't want to.[」][prcm]
+[else]
+　私はすぐに「そういうことは言いたくなければ言わなくてもいいけど」と付け加える。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev9_3" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't really mind.[l] Though in my case, it's been such a long time I don't think I remember anymore.[」][lr]
+[else]
+　「別に気にしませんよ。[l]と言っても、私も随分前のことで忘れてしまいましたが」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[」][lr]
+[else]
+　「なんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought she was having trouble when I wasn't looking, but it seemed like that wasn't the case.[prcm]
+[else]
+　見てないところで発作があったのかとも思われたが、そういうこともなかったと早苗は言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But then, how long are you still planning to be here?[」][lr]
+[else]
+　「でもそれじゃあ、早苗はいつまでここにいるの？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev9_4" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae considered the room's ceiling.[prcm]
+[else]
+　ううん、と早苗は部屋のどこか上の方を見ていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good question. I suppose I don't have a significant reason to remain here.[l] It's just that I've been here for so long that going outside sounds like too much of a hassle at this point.[l] There was a reason I originally came, but after spending enough time here, I overcame it... After getting so used to this place, I could no longer find a good enough reason for leaving.[」][prcm]
+[else]
+　「確かに、別にもうここに居る大した理由なんてないんですよ。[l]
+ただ、長くここに居すぎて出て行くのが億劫になってしまったんです。[l]
+ここに来たときには理由があったのですが、こちらで過ごすうちにその理由も無くなって、今度はこちらが過ごしやすくなると逆に外に出る理由がわからなくなってしまったんです」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、早苗は言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're only here because it's more convenient this way?[」][lr]
+[else]
+　「ただ、ここが過ごしやすかったから、ここにいるだけ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「そうですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, she fell completely silent.[prcm]
+[else]
+　それきり黙っていた早苗の代わりに、話にひとまずの区切りを付ける。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... well, I suppose this is a pretty relaxing place to be.[」][prcm]
+[else]
+　「ふうん、確かにここには他で見られるような煩わしさはないよね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was little noise here.[lr]
+[else]
+　確かに、他で見られるような煩わしさはない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With no people around.[prcm]
+[else]
+　人が少なくて。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev9_3" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why are you here, Takako?[」][lr]
+[else]
+　「貴呼さんは、どうしてここに居るんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae addressed me just as I was about to change the subject.[prcm]
+[else]
+　と、早苗が閉じかけたドアのノブを掴むようなタイミングで質問を返した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's because of that damn ringing in my ears.[l] I don't think it's anything serious, but everyone around me got needlessly worked up, and before I knew it, I was here.[l] That's all.[」][lr]
+[else]
+　「あの耳鳴りの発作のせいだよ。[l]私はホントになんでもないと思っているけどね。[l]周りが心配だってちょっと騒いでさ。[l]それで気がついたらここに入れられてたのよ。[l]それだけ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] Are you feeling better now?[」][lr]
+[else]
+　「そうだったんですか。[l]それはもう良くなったんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] It wasn't that bad to begin with.[」][lr]
+[else]
+　「まあね。[l]もともと大したことじゃなかったんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae made a complicated expression of relief mixing with slight disappointment.[prcm]
+[else]
+　そう言うと、早苗はほっとしたようなそれとも困ったような、微妙な表情をした。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev9_6" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So you're planning to leave soon, Takako?[」][lr]
+[else]
+　「それじゃあ貴呼さんは、もうここを出て行かれるんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nah.[l] I've got no concrete plans yet.[」][lr]
+[else]
+　「ううん。[l]まだその予定はついてないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mayuko doesn't want to let her precious workforce go.[」][lr]
+[else]
+　「繭子が貴重な労働力を手放したくないのかもね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae made a complicated face again, almost as though she didn't know what to say.[prcm]
+[else]
+　と、早苗は困ったようなそれともほっとしたような、これもまたなんとも言い難い表情をした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A slightly unfitting background music was playing behind her.[lr]
+[else]
+　その何とも言えない絵のような早苗の後ろで、ちょっと場違いでゆるやかなBGMが流れている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It made me feel somewhat gloomy; it was difficult to describe, much like her expression from before.[prcm]
+[else]
+　それが、こちらの気持ちも同じように何とも言えないものにさせた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=0 time =3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="045_2.ks" target=*045_2

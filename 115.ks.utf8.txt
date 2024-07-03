@@ -1,0 +1,296 @@
+*115| Black eyes
+; *115|黒い目
+[fbfstoretitle eng="Black eyes" jp="黒い目"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm14"]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg93_2" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wait time=800]
+[wt]
+[msgon]
+[endif]
+
+
+[if exp="f.CpStartFlg == 0"]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wait time=800]
+[wt]
+[msgon]
+[endif]
+
+[eval exp="f.CpStartFlg = 0"]
+[clickskip enabled = true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 143"]
+[eval exp="sf.ItRelease = 144"]
+[endif]
+
+
+*| Black eyes
+; *|黒い目
+[fbfstoretitle eng="Black eyes" jp="黒い目"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I noticed Nanae staring at me.[prcm]
+[else]
+　気づくと七重はじっ、とこちらを見ていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I thought your hair was black as the darkness in that tunnel, but your eyes seem to be just like that, too.[l] Mine are not as dark.[l] I really like black eyes, you know... and black hair.[」][lr]
+[else]
+　「佐知子さんって、トンネルの暗闇みたいに見事な髪だとは思っていたけれど、瞳もずっと黒い色なのね。[l]私のは少し薄いのよ。[l]ねえ私、黒い目って好きよ。[l]黒い髪も」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's no shortage of that in Japan.[」][lr]
+[else]
+　「日本に居れば、いくらでも見られるわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae placed her crossed arms on the table, leaning against it. Her face drew closer to mine as a result.[prcm]
+[else]
+　七重は組んだ腕をちゃぶ台の上に乗せると、体重を載せて少しこちらに上体を寄せるようにする。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When I go overseas, I see lots and lots of different eyes: light blue, emerald, ruby... I think they're all nice and I even feel jealous at times, but colorful things all depend on the mood, don't you think?[l] Like, blue eyes can look somewhat creepy when they sparkle in the sun. Stuff like that.[l] [clickskip enabled = false][msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05_b" visible=true left=105 top=0][fbfscale_image storage="bg93_2_b" page=back layer=base][trans method = crossfade time=200][wt][backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05" visible=true left=105 top=0][fbfscale_image storage="bg93_2" page=back layer=base][trans method = crossfade time=500][wt][msgon][clickskip enabled = true]So in the end, I feel that black is actually the best color.[l] It doesn't stand out, but it's stable and you don't need to worry about scaring people with it.[」][lr]
+[else]
+　「海外に旅行に行くと、ライトブルー、[l]エメラルド、[l]ルビーみたいな目を見て、とてもきれいだと思って憧れたりもするけれど、それって気分によるのよね。[l]
+たまにあの光る青い目が不気味に見えることもあるの。[l]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05_b" visible=true left=105 top=0]
+[image storage="bg93_2_b" page=back layer=base]
+[trans method = crossfade time=200]
+[wt]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05" visible=true left=105 top=0]
+[image storage="bg93_2" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+外国の鮮やかな色々にはあれこれ思うけれど、やっぱり黒がいいと思う。[l]
+地味な色ほど、初めからあれこれと思い悩まなくて済むような気がするわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05_b" visible=true left=105 top=0]
+[fbfscale_image storage="bg93_2_b" page=back layer=base]
+[trans method = crossfade time=200]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05" visible=true left=105 top=0]
+[fbfscale_image storage="bg93_2" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried concentrating my gaze at Nanae's eyes, but realized I couldn't.[prcm]
+[else]
+　七重の目を見ようと絞る焦点が、なかなか定まらない。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Like, imagine you're feeling down. Then someone with colorful eyes like that stares at you... Wouldn't you feel a little anxious?[」][lr]
+[else]
+　「例えば、気が滅入っているときにあの目で見られると不安になったりとかね、ねえそんなのって分かる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure.[」][lr]
+[else]
+　「よく分からない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if it's because my eyes are not dark enough.[」][lr]
+[else]
+　「そう、やっぱり私の目の色が薄いからかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae straightened her posture and filled up another glass with drink.[lr]
+[else]
+　いつの間にか、七重は上体を戻して、またグラスを傾けている。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05" visible=true left=105 top=0 rceil=120 gceil=120 bceil=120]
+[fbfscale_image storage="bg93_2" page=back layer=base rceil=120 gceil=120 bceil=120]
+[trans method = crossfade time=100]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h05" visible=true left=105 top=0]
+[fbfscale_image storage="bg93_2" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like the lights were blinking in the room.[lr]
+[else]
+　と、部屋の明かりが点滅したように感じる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Or was it just me blinking in slow motion?[prcm]
+[else]
+　いつの間にか、瞬きの速度が遅くなっていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it okay if I close my eyes for a little?[」][lr]
+[else]
+　「ちょっと楽にしてもいいかしら」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure.[l] Um, are you sleepy?[l] Want to return to your room?[」][lr]
+[else]
+　「ええ。[l]眠いの？[l] 部屋に戻る？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm fine.[l] I just want to close my eyes for a bit.[」][lr]
+[else]
+　「いいの。[l]少しだけ眼を閉じるだけで十分なの」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule3" vague=50 time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled = true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I leaned against the bed behind my back and rested my head against it.[lr]
+[else]
+　そして、後にあったベッドの縁に背をあてて頭をあずける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its cool, wooden texture felt as though it was whisking away my consciousness. Soon enough, I couldn't feel anything.[prcm]
+[else]
+　少しだけひやりとした木の感触から、すっと意識が抜かれるように、すぐに体の感触が消えた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="116.ks" target=*116
+

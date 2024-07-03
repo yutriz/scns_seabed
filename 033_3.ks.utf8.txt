@@ -1,0 +1,335 @@
+*033_3| News
+; *033_3|ニュース
+[fbfstoretitle eng="News" jp="ニュース"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[playse buf = 0 storage=se161.ogg]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 43"]
+[eval exp="sf.ItRelease = 44"]
+[endif]
+
+
+*| News
+; *|ニュース
+[fbfstoretitle eng="News" jp="ニュース"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the toothbrush back into its cup, washing out the last remnants of toothpaste from my mouth with some ice cold tap water.[prcm]
+[else]
+　カラコロン、と洗った歯ブラシをコップに戻す。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　歯にしみるように冷たい冬の水道水でうがいを済ませた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg04_2_t" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I returned to the living room, the morning news was on.[lr]
+[else]
+　リビングに戻ると、つけておいたテレビが朝のニュースを伝えている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I looked outside through the veranda, I saw large, gray clouds blanketing the sky.[lr]
+[else]
+　ベランダから見える空は、薄く広く灰色の雲がかかっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I snagged a glass from the kitchen cupboard, filled it up with water, then used it to water the plants I kept outside.[lr]
+[else]
+　台所からコップに水を汲んで、ベランダの観葉植物に水をやった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As it had been a while since it rained, the dry soil absorbed the water right away.[prcm]
+[else]
+　晴れが続きカラカラに乾いていた土はよく水を吸った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The search for the two missing Japanese citizens is still ongoing.[」][lr]
+[else]
+　『――であり、行方不明の邦人ふたりは、現在も捜索が続いています』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Turning my attention to the TV, I noticed the news reporting on a boat accident that happened somewhere in the southern islands.[lr]
+[else]
+　キーワードが耳に残り、テレビを見ると、南国の島でのボート転覆事故についての報道していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The announcer began describing the event in detail.[prcm]
+[else]
+　休暇中の事故とのことで、当時の状況をアナウンサーが読み上げている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up the remote control from the table and changed the channel.[lr]
+[else]
+　テーブルに置いてあったリモコンで、チャンネルを変える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After finding a channel with the weather forecast, I upped the volume.[lr]
+[else]
+　ちょうどこの地方の天気予報をやっている局をみつけると、少しだけ音量を上げた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Cloudy with a chance of rain, or so they said.[prcm]
+[else]
+　今日は一日中曇りでところにより一時雨、と言った。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pressed my train pass against the ticket gate and — once the machine successfully recognized it — descended the stairs to the train platform.[lr]
+[else]
+　改札に定期を通し、通勤電車のホームに降りた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Only a few people were there this early in the morning.[lr]
+[else]
+　まだ時間の早いホームの人影はまばらだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It would be a while until the place began to really fill up with people, to the point they'd have to delay trains. That, by the way, was quite the common occurrence on Mondays.[prcm]
+[else]
+　人が混みだしたり、週明けによくある遅延が発生したりするのは、まだもう少しあとの話である。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My train arrived as I was absentmindedly gazing at the unchanging signboard.[lr]
+[else]
+　駅の変わらない看板を眺めていると、時間通りの電車が来た。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fadeinse buf=1 storage="se46.ogg" time=1500 loop=true]
+[fbfscale_image storage="bg126" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[wf]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I claimed an empty seat near the edge of the car.[prcm]
+[else]
+　車内に入ると空いている端の席に座る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With nothing else to do, I decided to look through the advertisements inside the train car.[lr]
+[else]
+　電車が発車して、手持ち無沙汰になると今度は車内の広告を眺めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+One ad posted on the wall advertised coffee, while the other gave the details of some sort of anti-diarrhea medicine. Both were the same as last week.[prcm]
+[else]
+　壁にはコーヒーと下痢止めの広告があるが、これは先週から変わっていない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Next up were the posters hanging from the ceiling.[lr]
+[else]
+　次に天井から下がる広告を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted one of the weekly magazines going on about recent news on politics as well as celebrity life.[lr]
+[else]
+　週刊誌の広告は、政治や芸能関係の新しいニュースの見出しが書いてある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The two missing Japanese citizens I'd heard about on the news were mentioned, too.[prcm]
+[else]
+　小さい文字で、今朝見た邦人行方不明の見出しもあった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I hate Mondays.[」][lr]
+[else]
+　「月曜日って気が重いですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Same here.[」][lr]
+[else]
+　「まあね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Two young men in suits sitting a bit farther away from me were having a conversation.[prcm]
+[else]
+　そんな風に、扉をはさんで向こう側の若いサラリーマン風のふたりが話し始めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I spent all weekend having some much-needed fun.[l] And I still have a bunch of unfinished work left over from Friday.[l] Feels like it's going to be ages until my next day off.[」][prcm]
+[else]
+　「休日遊んで疲れてるし。[l]先週末やり残した仕事とかあるし。[l]次の週末までまだまだ遠いですし」[prcm]
+[endif]
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutse buf=1 time=1500]
+[wf buf=1]
+[playse buf = 2 storage=se108.ogg]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The train slowly came to a halt, stopping at the station closest to my office.[prcm]
+[else]
+　ウウゥン、と電車が揺れて駅に止まる。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　あまり意味がなさそうな証明が終わったところで、電車が疲れたような声を上げ、事務所の最寄駅についた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[seopt buf=1 volume=100]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="034.ks" target=*034
+
+

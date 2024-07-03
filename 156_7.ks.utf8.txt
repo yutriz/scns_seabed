@@ -1,0 +1,521 @@
+*156_7| Lake
+; *156_7|湖
+[fbfstoretitle eng="Lake" jp="湖"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm58"]
+[backlay]
+[fbfscale_image storage="bg84_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 206"]
+[eval exp="sf.ItRelease = 207"]
+[endif]
+
+
+*| Lake
+; *|湖
+[fbfstoretitle eng="Lake" jp="湖"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed the path that Kozue showed me. After only a few dozen meters, I could make out a body of water through the tree branches.[lr]
+[else]
+　梢に教えてもらった道を行くと、すぐに木の幹のあいだに湖が見えてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The lake stretched much wider than I had thought, its surface still as a mirror.[prcm]
+[else]
+　思ったよりも大きな湖で、湖面は鏡のように静かだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down on a half-withered tree I found lying on the small, sandy beach.[lr]
+[else]
+　砂浜になっている浅瀬のところで、横になっている乾いた朽ち木を見つけて腰を下ろした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It turned out to be sturdier than it looked. It didn't seem like I had to worry about it crashing down under my weight.[prcm]
+[else]
+　朽ち木は思ったより丈夫で割れる心配はなさそうだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shifted my gaze back to the lake, observing the black, humus-covered slope come in contact with the water, as well as another fallen tree with its roots sticking out next to it.[lr]
+[else]
+　再び湖を見ると、水に侵食された黒い腐葉土の斜面や、根っこを剥き出しに倒れている樹木が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It didn't seem like the lake had received any artificial treatment. The area I'd been sitting at was the closest I could get to the water without the risk of falling in.[prcm]
+[else]
+　湖には人の手が入ってない様子で、今座っている場所より他には水辺に近づける浅瀬は無かった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The water was so clear I could see the sand at the lake's bottom.[lr]
+[else]
+　水は透き通り浅瀬は砂地が先の方まで見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At some areas, it seemed like the surrounding vegetation had also invaded the lake itself, covering parts of its bottom in green.[lr]
+[else]
+　さらにその奥からは水深が上がるのか、せり出した森の木々の緑を底に映している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Watching the lake reminded me of that one time Takako invited me to go fishing.[prcm]
+[else]
+　湖を観察していると、ずっと前に貴呼が釣りに行こうと言い出したことを思い出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We were still in middle school. Takako, me, and two of her good friends at the time left our houses on our bicycles.[lr]
+[else]
+　それは中学生の頃で、その日の早朝、私と貴呼と貴呼の仲の良い友人二人と自転車で出発した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our destination was the lake that Takako's family used to visit by car all the time. She was the only one who knew the location.[lr]
+[else]
+　目的地は貴呼が家族の人と車で行ったことのある湖で、その場所は貴呼しか知らなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako said it only took twenty minutes by car, but being two mountains and one river away, the place wasn't exactly easy to reach for a bunch of children.[lr]
+[else]
+　貴呼は車で二十分ほどと言ったが、その目的地の湖は山を二つと川を一つ越えた先にあり、子供が自転車で行くにはかなり厳しい道のりだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In truth, Takako's two friends gave up after seeing the slope leading over the first mountain.[prcm]
+[else]
+　実際、私と貴呼以外の二人は一つめの山の坂道を見上げたときにあっさり降参して帰ってしまった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I would have left myself, but I knew Takako would not give up and try to press on — with or without us.[lr]
+[else]
+　もちろん私も帰りたかったが、貴呼はムキになっていて放っておけば一人で行きそうな勢いだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It would have been bad if she got lost, so I followed her while making sure to remember the way.[lr]
+[else]
+　迷子になられても困るので、私は既に迷いながら進む貴呼のあとを道を覚えながらついていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Memorizing the unusual roofs of the houses around the mountains, I was thinking that I'd have Takako turn back around noon, even if by force.[lr]
+[else]
+　ぼんやりと、目印になりそうな山合の村の変わった色の屋根を眺めながら、昼過ぎても到着しないようなら帰らせようと決めていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, by noon, we had already reached the lake.[prcm]
+[else]
+　しかし、私達はそのお昼頃にその湖に到着する事ができた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was overjoyed by having reached the place from her memories.[lr]
+[else]
+　貴呼は思い出の場所に到着できたことを感動して騒いだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That told me how little of the way she actually remembered.[prcm]
+[else]
+　貴呼が喜べば喜ぶほど、私はどれだけ曖昧な記憶だったかを察した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked at the lake currently in front of my eyes.[lr]
+[else]
+　私は今の湖を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The lake we found with Takako didn't have a wooden pier or a proper path leading to it. It was as wild as the forest around it.[lr]
+[else]
+　貴呼と来た湖もこんな風に桟橋もボートも散歩道も無い、ただあるだけの湖だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It also had a big tree leaning right over the water.[lr]
+[else]
+　向こう岸で太い幹が湖に突き出している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako had the bright idea to do her fishing from atop that very tree.[lr]
+[else]
+　貴呼はあの上で持ってきた釣竿を振った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Meanwhile, I laid down a sheet on the sandy beach by the lake, just like this one, and ate a jam sandwich while observing her.[prcm]
+[else]
+　私はやはりこんな砂地の上にシートを広げて、途中の売店で買ってきたジャムパンを食べていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was a pleasant, silent place.[lr]
+[else]
+　静かでとても気持ちが良かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We spent about two hours at that lake.[lr]
+[else]
+　私達は二時間ほどその湖にいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I read a book I'd brought while Takako attempted to fish.[lr]
+[else]
+　私は持ってきた本を読み、貴呼はただ釣竿を振って疑似餌を泳がせていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Big fish would sometimes jump above the water, causing ripples to spread along the lake's surface.[lr]
+[else]
+　大きな魚が遠くで跳ねて、波紋を作っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Though we didn't catch anything in the end, Takako was satisfied by the experience.[prcm]
+[else]
+　結局魚は釣れなかったが、それでも貴呼は満足した様子だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't remember the way back all that well, but by the time we got back, it was already dark outside. Needless to say, my parents were furious.[lr]
+[else]
+　帰り道のことはあまり覚えていないが、帰ったときには日が落ちきっていて親に怒られたことは覚えている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When we left the lake, Takako suggested we come back another day.[lr]
+[else]
+　湖を出発するとき、貴呼はまたここに来ようと言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I did give her a half-hearted reply of sorts, but I wasn't really planning on ever coming back.[lr]
+[else]
+　私は適当に返事をしたがまた湖に来るつもりは無かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As such, that was the first and last time we went to that lake.[prcm]
+[else]
+　だからその湖に行ったのはそれきりになった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt a bit sad, so I took a deep breath and slowly exhaled.[lr]
+[else]
+　私は少し悲しい気分になり、深く息を吸って吐いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That was but another little episode from my past.[prcm]
+[else]
+　そんなこともあった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The chilly air filled my lungs, soothing my aching heart.[lr]
+[else]
+　冷えた空気が肺をやんわりと冷やして、胸の痛みが少し和らぐ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Now that I thought about it, that might have been the farthest trip I had ever taken on a bicycle.[lr]
+[else]
+　思えばあれほど遠くまで自転車を漕いだ事はなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And I'd forgotten all about it until now.[prcm]
+[else]
+　私はそんなことも忘れていたのだった。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried remembering my childhood.[lr]
+[else]
+　私は幼いの頃のことを思い浮かべてみた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fishing, hot springs, amusement parks, zoos, aquariums... Takako forced me to accompany her to a whole variety of places.[lr]
+[else]
+　釣りもそうだが、温泉、遊園地、動物園、水族館など、貴呼には色々なところに連れ回された。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I remembered the lake from my past, it felt like it began overlapping with the one I was staring at now.[lr]
+[else]
+　また湖でのことを思い出していると、見ている湖の景色が記憶と重なってきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before I knew it, I couldn't tell which detail was supposed to belong to which scenery.[lr]
+[else]
+　すると現実と実際の記憶、または記憶が[ruby text="かい"]改[ruby text="ざん"]竄された景色と区別がつかなくなりそうになった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I quickly snapped out of that state, realizing I'd been breathing heavily.[prcm]
+[else]
+　気がつくと、心臓と息が少しだけ早くなっていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It probably would have been wise to stay away from those memories until I calmed down, but they started swirling around me like a ship that had lost its rudder.[lr]
+[else]
+　私はひとまず回想をやめて、気持ちが落ち着くのを待ってみた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　それでも、思い出は巨大な船のように惰性で回り続ける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I soon gave up on resisting, and instead decided to take an objective look at them.[prcm]
+[else]
+　こうなると私は思考を止めるのをやめて、客観的に考えてみることにしていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+First, I asked myself whether this lake was part of the real world.[lr]
+[else]
+　まず「一体この湖は現実なんだろうか」と尋ねる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All lakes look the same, anyway,[」] I answered myself.[lr]
+[else]
+　「湖なんていうのはどこもこんなものさ」と返事をする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That was probably more or less true.[prcm]
+[else]
+　確かに、湖なんていうのはどこもこんなものかもしれない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When you start thinking about it too much, the resemblance becomes all the more striking.[」][lr]
+[else]
+　「キミがそう思うから余計にそう見えるんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Or perhaps my memories were actually being overwritten by this scenery.[prcm]
+[else]
+　それとも、記憶がこの景色と同じに変わってしまったのかもしれない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You've never been here before.[」][lr]
+[else]
+　「ここは始めてくる場所だよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In any case, this wasn't that lake, and I had no way of returning to the past.[prcm]
+[else]
+　どちらにしても戻ることはできないし、ここはあのときの湖ではないのだ。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+
+@jump storage="157.ks" target=*157
+
+
+

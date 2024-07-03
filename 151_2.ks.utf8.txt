@@ -1,0 +1,1249 @@
+*151_2| The picture the two drew
+; *151_2|二人で描いた絵
+[fbfstoretitle eng="The picture the two drew" jp="二人で描いた絵"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[playbgm storage="bgm10"]
+[backlay]
+[fbfscale_image storage="bg134" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 193"]
+[eval exp="sf.ItRelease = 194"]
+[endif]
+
+
+*| The picture the two drew
+; *|二人で描いた絵
+[fbfstoretitle eng="The picture the two drew" jp="二人で描いた絵"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just look at it, Sachi.[l] Don't you think it's great?[」][lr]
+[else]
+　「どおサチ。[l]いい雰囲気じゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked back over my shoulder while ascending the stairs.[prcm]
+[else]
+　階段を上がりながら後ろに声をかけた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a small garden surrounded by four walls outside the window.[lr]
+[else]
+　踊り場の窓からは四方を壁で囲まれた小さな庭が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had some flowerbeds and a square hole in the middle that looked like a well.[lr]
+[else]
+　下には四角い井戸のような穴と、花の鉢植えがいくつか置いてあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How do you even enter that?[」] Sachiko asked.[lr]
+[else]
+　「あの庭、どこから入れるのかしら？」と[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子が聞いたので
+「こっち側の壁に入口があるんでしょう？」と返事した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I can see doors on that wall.[」][lr]
+[else]
+　廊下を歩いているとき佐知子は「静かなのはいいわね」と言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It looks quite tranquil. I like it.[」][prcm]
+[else]
+　私たちが探している物件にとっては、それも大事な要素だった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f02_p01_h01" visible=true left=325 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How many of the rooms are occupied?[」][lr]
+[else]
+　「他の部屋はどれくらい入っているの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Most of them are, I think.[l] There's a handicrafts shop on the first floor, a tax accountant's office below us, and a law firm up above.[」][lr]
+[else]
+　「そこそこ入っているみたいよ。[l]私が見ただけでも一階には手芸屋さんが、この上の階と下の階には税理士事務所と法律事務所が入っていたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We reached our destination.[lr]
+[else]
+　話をしていると、見つけて来た物件の前に到着する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened the door and let Sachiko go inside.[lr]
+[else]
+　扉を開けて先に佐知子を部屋に入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed her and closed the door behind me.[prcm]
+[else]
+　佐知子のあとから部屋に入り扉を閉める。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you think?[」][lr]
+[else]
+　「どう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko carefully surveyed the room.[prcm]
+[else]
+　佐知子はまだ何もないその部屋をゆっくりと見回した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f02_p01_h03" visible=true left=325 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We can put the employee desks here, and you can have a private desk there by the window, since you're the boss and everything.[」][lr]
+[else]
+　「ここにデスクを置いて、サチは社長だからあの奥の窓に机を置くのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko walked to the window and looked outside.[prcm]
+[else]
+　佐知子は奥の窓まで歩いていき、そこから外を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's too bright here.[l] Too much reflection to read papers.[」][lr]
+[else]
+　「日あたりが良すぎるわね。[l]白い紙が発光しそう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And it feels kind of hot.[l] Good thing it's not facing south, at least,[」] she added.[prcm]
+[else]
+　そう言って窓を開けると「それにちょっと暑いんじゃない、南向きじゃないのが救いね」と付け加えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can put up blinds or something.[」][lr]
+[else]
+　「ブラインドを付ければいいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at the left side of the room.[prcm]
+[else]
+　そう言って部屋の左にある入口を指差した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's a kitchen over there, so we could have coffee whenever we wanted.[l] And this other room would be perfect for meeting clients.[」][lr]
+[else]
+　「こっちに炊事場があるから、いつでもコーヒーが淹れられるよ。[l]その隣の部屋は、応接間に丁度いいスペースなんだ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f02_p02_h01" visible=true left=325 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko turned away from the window and peeked inside the kitchen, then continued to the meeting room.[prcm]
+[else]
+　佐知子は窓から振り返ると炊事場を覗き込み、それから応接間にする予定の部屋に入っていった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I see you can enter this room from the corridor, too.[」][lr]
+[else]
+　「この部屋には廊下からの入口もある」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's a small entrance by the staircase leading here.[」][lr]
+[else]
+　「階段横の小さな通路に繋がってるのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] I saw another door at the end of the corridor. What was that?[」][lr]
+[else]
+　「そう。[l]さっきの廊下の一番奥にも部屋があったけど、あれは？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just a storage room, I think.[」][lr]
+[else]
+　「物置に使えるみたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's close to the station and has a parking lot.[l] With the shopping street close by, we can even eat out for lunch.[l] Oh yeah, and I found a café I think you'd like.[l] What do you think?[l] I'd say this is the best one out of all the ones we've checked today.[」][lr]
+[else]
+　「駅も近いし駐車場もある。[l]近くに商店街もあるから食事もいろいろと楽しめそうだよ。[l]
+そうそうサチの好きそうな喫茶店も見つけたよ。[l]どうかな？[l] 今日回ってきた中では一番いいと思うんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How much is it?[」][lr]
+[else]
+　「いくらなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's pretty cheap.[」][lr]
+[else]
+　「結構安いよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a thick stack of documents out of my bag and handed Sachiko one page from it.[prcm]
+[else]
+　持ってきていた鞄から物件資料のファイルを取り出す、そこから一枚の紙を取って佐知子に渡した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f02_p01_h03" visible=true left=325 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you think?[」][lr]
+[else]
+　「ねえ、よくない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you sure there hasn't been a murder in this building or something like that?[」][lr]
+[else]
+　「これって何かワケアリじゃないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's just old![l] Well, I imagine all sorts of things must've have happened here over the years, but... does that really matter to us?[」][prcm]
+[else]
+　「古い建物だからね。[l]築年数以外にも何かあってもおかしくはないね。[l]まあ気にしないけどね」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko continued silently pacing back and forth between the empty rooms.[lr]
+[else]
+　佐知子は黙って各部屋をゆっくり時間をかけて回った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She tried knocking on some of the walls, listening to the resulting echo.[lr]
+[else]
+　途中で壁を軽く叩いてみたり耳をすませたりした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After checking the storage room, we looked around to see what kind of establishments occupied the other floors.[lr]
+[else]
+　隣の物置部屋まで点検を済ませると、他のフロアも回ってテナントを確認した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was in the middle of a weekday, though, so everyone was busy working inside.[prcm]
+[else]
+　平日なので、テナントが入っている部屋には人が居て仕事をしていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you want to learn more about the others, I have a file here.[」][lr]
+[else]
+　「他のテナントのことを知りたかったら、紙資料もあるよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f02_p01_h01" visible=true left=325 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think we can check your papers in that café you mentioned.[」][lr]
+[else]
+　「とりあえず、その喫茶店に行きましょうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a good idea![」][lr]
+[else]
+　「いいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We went to the café.[prcm]
+[else]
+　一通り見終わったあとで喫茶店に移動した。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 1000]
+[backlay]
+[fbfscale_image storage="bg03" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once there, we looked over the rest of the papers we had.[lr]
+[else]
+　喫茶店では二人でその他の物件資料に目を通した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko paid the most attention to the building's design — both exterior and interior — as well as its expenses.[lr]
+[else]
+　佐知子は建物のデザインや内装、それと費用について拘った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was more swayed by the ease of transport and the nearby stores.[lr]
+[else]
+　こちらは交通の便や周りにある店などについて拘った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We looked over a couple of other places after that, but didn't find anything better.[lr]
+[else]
+　喫茶店を出たあとで、目星をつけたいくつかの物件を回ったが始めの物件よりいいところはなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It wasn't perfect, but it met all our primary requirements.[prcm]
+[else]
+　その物件は完璧ではないが、二人の気にしている要件を程よく満たしていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 1000]
+[backlay]
+[fbfscale_image storage="bg04_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was dark by the time we returned home.[lr]
+[else]
+　二人でマンションに戻ったとき、日は完全に落ちていて夜になっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We had dinner downtown on our way back, so I went to take a bath right away.[lr]
+[else]
+　夕食は帰りがけに外食して済ませていたので、すぐに風呂に入った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I returned, I spotted Sachiko having a conversation on the phone in the living room.[lr]
+[else]
+　風呂から上がると佐知子はリビングで電話をしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down on the sofa and picked up the remote control. However, I saw Sachiko shaking her head from the corner of my eye.[lr]
+[else]
+　ソファに座ってテレビのリモコンをとった時に、佐知子が首を振るのが見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the remote control back and instead picked up the travel pamphlet from the table.[prcm]
+[else]
+　リモコンを置いてテーブルの上に置いてある旅行のパンフレットを開く。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Eventually, Sachiko finished her phone call and came over to me.[prcm]
+[else]
+　しばらくして電話を終えた佐知子がやってくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She looked down at me, sitting in the middle of the two-seater sofa.[lr]
+[else]
+　佐知子は二人がけのソファの真ん中に座っている私を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned her look and patted my knees.[lr]
+[else]
+　こちらは佐知子を見上げて膝の上をポンポンと叩いて見せる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her eyes narrowed.[prcm]
+[else]
+　佐知子は怪訝な顔をしてみせた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Feast your eyes upon the Ultra Deluxe Takako Sofa.[」][lr]
+[else]
+　「高級貴呼ソファ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko finally gave up and sat down in between my legs.[prcm]
+[else]
+　そう言うと佐知子は諦めてそこに座った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time = 500]
+[backlay]
+[eval exp="sf.cg65=1"]
+[fbfscale_image storage="ev65" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time = 1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What was that phone call about?[」][lr]
+[else]
+　「何の電話だった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was the head of the sales department from our old place.[l] He called to tell me about our retirement bonus.[」][lr]
+[else]
+　「前の会社の営業部長よ。[l]退職金のこととかね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Will it include paid vacation time?[」][lr]
+[else]
+　「ねえ、有休分はお金で貰えるかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It won't.[」][lr]
+[else]
+　「貰えないわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Darn.[l] And I worked so hard, too.[」][lr]
+[else]
+　「それは残念。[l]結構頑張って働いたのにね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks to that, we won't be running out of money anytime soon.[」][prcm]
+[else]
+　「そのおかげで当面の費用には困らないわよ」と佐知子は言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But we've got taxes next year, right?[l] I wonder if it's gonna be okay.[」][lr]
+[else]
+　「でも、来年は税金とかあるでしょう？[l] 厳しいよねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've already calculated that. It's gonna be okay.[」][lr]
+[else]
+　「それは分けてあるからいいのよ」と佐知子は言い。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, if you had worked a little harder, we'd have more leeway, though.[」][prcm]
+[else]
+　それから「まあ、貴方がもう少し働いてくれれば、もっと余裕はあったけどね」と付け加えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey now. Any more in that engineering department would've killed me.[」][lr]
+[else]
+　「無理とは言わないけれど、うちの技術部は相当だったのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But the blame lies with sales and not engineering, right?[l] Their manager accepted projects with no regard for the already packed schedules of the staff.[」][lr]
+[else]
+　「忙しかった原因は技術部というよりも、営業部じゃないの？[l] あそこの部長はどんなに忙しい時にも仕事を取っていたでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sucked, too, but the worst part was how our manager decided we didn't need weekends anymore, and made insane overtime a part the daily routine on top of all that.[」][lr]
+[else]
+　「それもだけど、部長が勤怠を書き換えて連日出勤と規定超残業を可能にしちゃったのが拍車をかけたのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But you got paid, didn't you?[l] It allowed us to advance with our plan ahead of schedule.[」][prcm]
+[else]
+　「でも次月繰越よね。[l]いいじゃない、お陰で計画も早まったわ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was just like she said.[lr]
+[else]
+　佐知子の言うとおりだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our goals were to go independent and travel around the world.[lr]
+[else]
+　自立することと好きな旅行をすること。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And we managed to achieve both a few years earlier than expected.[lr]
+[else]
+　その両方の目標は当初の計画より数年も早く達成することができた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With the future looking bright, our past hurdles felt like a pleasant memory.[lr]
+[else]
+　これからのことを考えると、これまでのこともいい思い出だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I added more strength into my embrace and hugged Sachiko tighter from behind.[prcm]
+[else]
+　佐知子を抱く腕にも少し力が入った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you decided where you want to go yet?[」][lr]
+[else]
+　「佐知子はもうどこに行きたいか決めたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」] Sachiko considered the pamphlet we got from the tourism agency.[prcm]
+[else]
+　佐知子は「ふうん」と息を漏らし、旅行代理店から貰ってきたパンフレットを眺めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I thought about it, but I feel that your suggestion about going to the sea somewhere far in the south sounds like the best option so far.[l] It's summer over there right now, isn't it?[l] I wanted to experience that at least once.[」][lr]
+[else]
+　「色々と考えてみたけど、貴方の言うとおり南国の海っていうのも悪くないわね。[l]向こう側の季節は夏なのよね。[l]そういうのも一度経験してみたいし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right?[l] And speaking of new experiences, you can't fire guns or go skydiving in here, so there's that, too![」][lr]
+[else]
+　「そうでしょう。[l]色々経験してみたいなら、射撃とかスカイダイビングっていうのもこっちじゃできない遊びだよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I leafed through the pamphlet from behind.[lr]
+[else]
+　後ろからパンフレットのページを捲って見せる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm. That doesn't sound too bad.[」][lr]
+[else]
+　それを見た佐知子は「ふうん。それもいいわね」と言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We spent some time talking about travel, imagining skies and seas that we'd never be able to see from our native land.[prcm]
+[else]
+　それから二人で旅行の話をした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　そこでしか見えない星や海の色のことなどを想像して話した。[lr]
+[r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko turned on the TV after we finished.[lr]
+[else]
+　そのうち旅行の話題を終えると佐知子がテレビを付けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She flipped through a few channels until we were on the evening news.[lr]
+[else]
+　テレビは佐知子がチャンネルを変えて夜のニュース番組を映した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The announcer was talking about the economy or something.[prcm]
+[else]
+　キャスターは経済の話をしていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Looks like our economy's doing well.[」][lr]
+[else]
+　「景気が良いみたいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] That definitely sounds like it.[」][lr]
+[else]
+　「うん。[l]悪くないみたいだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Some businessmen were being interviewed on the screen right now.[lr]
+[else]
+　ニュース番組はVTRに移って下町工場の社長や青年実業家のインタビューを映した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of office do you want to run?[」] Sachiko asked.[lr]
+[else]
+　「貴方はどんな事務所にしたいの？」と佐知子が聞いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A place where we can all talk about the future![」][lr]
+[else]
+　「皆が未来の話ができるところ」と答えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That doesn't sound too bad,[」] Sachiko said after a brief pause.[prcm]
+[else]
+　佐知子は少し考えてから「なかなか良いわね」と言った。[prcm]
+[endif]
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg44_10" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=1500]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized it was a dream as soon as I opened my eyes.[lr]
+[else]
+　目が覚めるとすぐにそれが夢だったことに気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the clock in the dimly lit room.[lr]
+[else]
+　薄暗い部屋の時計を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was six o'clock in the morning.[prcm]
+[else]
+　午前六時だった。[prcm]
+[endif]
+
+
+[playbgm storage="bgm25"]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko was sleeping next to me in silence.[lr]
+[else]
+　隣で[ruby text="まゆ"]繭[ruby text="こ"]子は小さな寝息を立てている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was thinking with my eyes closed before falling asleep, so I wasn't sure how long I'd been out for... I still felt kind of sleepy.[lr]
+[else]
+　睡眠前は目を閉じたまま考え事をしていたので、寝入った時間は分からなかったがまだ少し眠気がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was too early to wake up.[lr]
+[else]
+　起きるのはまだ早かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes again.[prcm]
+[else]
+　再び目を閉じる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The contents of my dream naturally flashed through my mind's eye again.[lr]
+[else]
+　そして、自然と夢の内容を反芻した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized what I had lost after finishing reading that diary.[prcm]
+[else]
+　手帳の日記を読み終えて、私は私が失ったものに気がついた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The past me never worried about things like this.[lr]
+[else]
+　例えば、以前の私はこんなに何かを悩んだりはしなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was able to deal with everything a lot better than I could now.[lr]
+[else]
+　もっと何でも平気でできた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I knew that Sachiko had my back even if I screwed up.[lr]
+[else]
+　たとえ間違ったとしても後ろから佐知子が支えてくれるか、叩き直してくれるからだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It never felt like that big of a deal for me to leave my hometown, and it didn't bother me to give up on my job. Similarly, I didn't worry too much about the feasibility of us establishing our new office.[lr]
+[else]
+　都会に出るときも、会社を辞めるときも、事務所を建てるときも、なんでもなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I just drew what I wanted to and Sachiko would color it for me.[lr]
+[else]
+　私はやりたいことを絵に描いて、佐知子はそれに色を塗る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was all so easy.[prcm]
+[else]
+　それくらい簡単な作業だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A lot of things become easy when you share them with someone you trust.[prcm]
+[else]
+　共に生きる相手がいると大抵のことはなんでもないのだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought about Mayuko, who was now on the other side of my eyelids.[lr]
+[else]
+　いま瞼の向こう側にいる繭子のことを考えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had no words to express just how much happier my life would have been if Sachiko hadn't vanished from it.[lr]
+[else]
+　もしまだ私が佐知子を失っていないとしたら、どんなに幸せだろうか。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+If only Mayuko was Sachiko...[lr]
+[else]
+　もし繭子が佐知子だとしたら。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But I loved Mayuko for who she was, too.[lr]
+[else]
+　しかし、私は繭子は繭子として好きだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+If I was her, I wouldn't want someone to love me because I looked like someone else.[lr]
+[else]
+　もしも、私が繭子なら誰かに似ているからという理由で好きになって欲しくはない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was either Mayuko or Sachiko lying beside me, and there was no in-between.[prcm]
+[else]
+　そこにいるのは繭子か佐知子であり、その中間はない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I considered if I had any tools to confirm it.[lr]
+[else]
+　確かめる手がかりを考えてみる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't find anything, no matter how many times I read through the notebook.[lr]
+[else]
+　手帳は何度も読み返したが新しい発見は無かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All I had was that image of Sachiko in the dark cave.[lr]
+[else]
+　残る手がかりは、以前佐知子を見たあの暗い部屋の中にある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like that place held all the answers.[prcm]
+[else]
+　そんな気がする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had to go to that room one more time.[lr]
+[else]
+　もう一度あの部屋に入る必要がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Just the thought of it made my blood run cold.[lr]
+[else]
+　想像するとぞっとする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And I had no guarantees I'd be able to make it back this time.[prcm]
+[else]
+　しかも次に戻れる保証もない。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle4]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="152.ks" target=*152
+
+
+

@@ -1,0 +1,524 @@
+*033| The Perspective of the Third Party
+; *033|第三者目線
+[fbfstoretitle eng="The Perspective of the Third Party" jp="第三者目線"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle6"]
+[call storage="MyMacro.ks" target="*Textfade"]
+
+[msglayer2]
+
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 41"]
+[eval exp="sf.ItRelease = 42"]
+[endif]
+
+
+[textfade enabled=true]
+
+*| The Perspective of the Third Party
+; *|第三者目線
+[fbfstoretitle eng="The Perspective of the Third Party" jp="第三者目線"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I caught a taxi as I left the drugstore and told the driver the address of my office.[lr]
+[else]
+　薬局を出たところでタクシーを拾い、運転手に事務所の場所を説明した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It didn't even take ten minutes to reach my destination.[prcm]
+[else]
+　それから、数十分も経たずに事務所のあるビルの前に到着する。[prcm]
+[endif]
+
+
+[msglayer2]
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg58_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can I have the receipt, please?[」][lr]
+[else]
+　「領収書をください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After fiddling around with the taximeter, the driver printed out the receipt.[lr]
+[else]
+　会計を済ませる前に言うと、運転手が料金メーターの機械を操作してジジジ、とレシートを出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took it from his gloved hand, and after paying the fare, stepped out of the car.[prcm]
+[else]
+　運転手の白い手袋を嵌めた手から領収書を受け取り、会計を済ませタクシーを降りる。[prcm]
+[endif]
+
+
+
+;//////
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[playbgm storage="bgm02"]
+[wait time=500]
+[playse buf = 0  storage=se25.ogg]
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm back. Sorry for taking so long.[」][lr]
+[else]
+　「ただいま、遅くなって御免なさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened the office doors to see Inukai working at his desk.[prcm]
+[else]
+　ガチャリ、と事務所の扉を開けて見ると、[ruby text="いぬ"]犬[ruby text="かい"]飼と[ruby text="ふみ"]文が事務机について作業をしていた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[」][lr]
+[else]
+　「お疲れ様です」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai gave me a glance.[prcm]
+[else]
+　犬飼はこちらを見て言った。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How's the revision going?[」][lr]
+[else]
+　「修正の方はどう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No issues so far.[」][lr]
+[else]
+　「こっちは問題ないです」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h01" visible=true left=105 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h05" visible=true left=-190 top=0 opacity=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[fbfscale_move time=1000 path="(400,0,0)" layer=1]
+[fbfscale_move time=1000 path="(105,0,255)" layer=2]
+[wait time=1200]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h06" visible=false left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=1]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at Fumi sitting next to him.[prcm]
+[else]
+　そう言ってから、横目で文の方を見た。[prcm]
+[endif]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[eval exp="sf.cg44_4=1"]
+[fbfscale_image storage="ev44_4" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She seemed to be really into her work, almost leaning over the desk with her fingers practically on fire as she typed.[lr]
+[else]
+　文は、事務机に齧り付くような姿勢で、懸命に手を動かして作業をしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her mouth also kept moving ever so slightly, almost like that of a hungry fish. [lr]
+[else]
+　事務机と水平になるくらいの横顔は、口がパクパク、と動いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I listened to what she was mumbling to herself.[prcm]
+[else]
+　耳を澄ませるとブツブツ、と文の独り言が聞こえてきた。[prcm]
+[endif]
+
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h03" visible=true left=105 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if it'd be better if I aligned the text to the right here.[l] 
+[else]
+　「フォントはもう少し右寄りの方が良いんじゃない？[l] 
+[endif]
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg44_2=1"]
+[fbfscale_image storage="ev44_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But the colors of the background and the letters overlap there, making them too hard to read.[l] 
+[else]
+でも、そこは文字と背景の色が似ていて読みにくいと思うの。[l]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev44_4" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I suppose I could lower the saturation of the background.[」][prcm]
+[else]
+それなら、後ろは彩度を落としてもいいんじゃないかしら」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's like she's in a trance.[」][lr]
+[else]
+　「トランス状態に入ったようですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai adjusted his glasses.[prcm]
+[else]
+　犬飼はカチリ、と眼鏡のブリッジを押し上げた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Who do you think she's talking to?[」][lr]
+[else]
+　「一体何と話しているの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's not the first time this happens.[l] Considering the way she talks at times like this, I believe she's discussing matters with those sheep sitting on her desk.[」][lr]
+[else]
+　「隣で仕事をしていて、今まで何度かありました。[l]この状態になった文先輩の言動を見るに、おそらく机の上に置いてある羊のぬいぐるみと相談しながら作業をしているのでは無いでしょうか？」[lr]
+[endif]
+
+[r]
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h03" visible=true left=105 top=0 opacity=255]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai directed his emotionless gaze at Fumi.[prcm]
+[else]
+　犬飼が無表情な目を文に向けていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]With... the sheep?[」][lr]
+[else]
+　「羊と？」[lr]
+[endif]
+
+[r]
+;[msgoff]
+;[backlay]
+;[freeimage layer=1 page=back]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+[msgoff]
+[backlay]
+[eval exp="sf.cg44_3=1"]
+[fbfscale_image storage="ev44_3" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at her desk, realizing that all the sheep — from the one on the shelf wearing a tuxedo, to all the normal ones around her monitor — were aligned in a way that made it seem like they were observing her work.[prcm]
+[else]
+　文の事務机を見ると、本立の上にいるタキシードを着た羊、コンピュータに背をもたれている短い足の普通の白い羊、モニタの周りにいる白い玉のような羊たちは皆、文の作業を眺めているようだった。[prcm]
+[endif]
+
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=105 top=0]
+;[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h08" visible=true left=-500 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+;[fbfscale_move time=4000 path="(-250,0,255)" layer=2]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I believe she goes over the entire process one more time, summarizing the important points by making presentations to them.[l] Then, to avoid too much subjectivity influencing her work, she asks the sheep for opinions, improving her designs according to their feedback.[」][lr]
+[else]
+　「まず、羊たちに向けてプロモーションをすることにより、自身の作製工程を反復しつつ要点を整理します。[l]さらに、羊たちの意見を取り入れることで主観的な意見を排除し、多角的にデザインの善し悪しを判断しているのではないでしょうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「なるほど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Fumi is prone to making careless mistakes, but she's about 30% more effective in that trance-like state of hers.[」][lr]
+[else]
+　「文先輩はよく単純なミスをするのですが、トランス状態でのレビュー指摘数は通常の約三割減となります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see...[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h03" visible=true left=105 top=0]
+;[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h08" visible=true left=-250 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[wait time=200]
+;[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This has been one complicated project, so I can't exactly blame her for becoming like this.[」][prcm]
+[else]
+　「複雑な仕様の案件ですから、文先輩がおかしくなるのも仕方がないですよ」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev44_4" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi's hands suddenly froze in place as her eyes darted to Inukai. Her posture remained completely unchanged.[prcm]
+[else]
+　文は手を一瞬ピタリと止めると、姿勢はそのままに視線だけを犬飼に向けた。[prcm]
+[endif]
+
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h07" visible=true left=-250 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[wait time=500]
+;[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Inukai. I need to discuss something after I'm done with this.[」][lr]
+[else]
+　「犬飼、これ終わったらあとで話がある」[lr]
+[endif]
+
+[r]
+;[clickskip enabled=false]
+;[fbfscale_move time=1500 path="(-500,-20,255)" layer=2]
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, she returned her eyes to the monitor and resumed work.[prcm]
+[else]
+　文はボソリと一言呟くと、再び作業に戻った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then again, it's pretty incredible she's able to do that much in such a short time span.[」][lr]
+[else]
+　「しかし。[l]この仕事量をこなしているのはさすがと言えるでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With those words, Inukai picked up his teacup and cleared its contents with a single gulp.[prcm]
+[else]
+　犬飼はそう言うと机に置いていた湯飲みを一気に[ruby text="あお"]呷った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle6]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="033_2.ks" target=*033_2
+
+

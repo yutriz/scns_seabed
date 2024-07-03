@@ -1,0 +1,332 @@
+*145_2| November 03, 1975
+; *145_2|1975年11月03日
+[fbfstoretitle eng="November 03, 1975" jp="1975年11月03日"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgOn_t"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgLayer_T"]
+
+[msglayer_t]
+[playbgm storage="bgm17"]
+[wait time=1500]
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_t]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 185"]
+[eval exp="sf.ItRelease = 186"]
+[endif]
+
+
+[playse buf = 1 storage=se57.ogg]
+*| November 03, 1975
+; *|1975年11月03日
+[fbfstoretitle eng="November 03, 1975" jp="1975年11月03日"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+November 3, 1975[lr]
+[else]
+　[hch text="1975" expand=true]年[hch text="11"]月[hch text="3"]日[lr]
+[endif]
+
+[r]
+;★金魚と緑亀は合わせなくて良いのか？
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We were playing in the park behind Takako's apartment when she found the carcass of a turtle.[lr][r]
+[else]
+　貴呼の住むアパートの裏にある公園で遊んでいると、貴呼が亀の死骸を見つけた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She said it was a turtle that used to be hers.[lr][r]
+[else]
+貴呼はそれを見て、飼っていた亀だと言った。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She got it during one of the town fairs and kept it in a big styrofoam box.[lr][r]
+[else]
+そのミドリガメはいつかの縁日で買ったもので、大きな発泡スチロールの箱に飼っていたものだといった。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I did recall there being a box like that on her balcony.[dl] It stood lightly tilted to the side to create different areas, one with water, another with sand.[dl] The area with water was covered in green moss, and I occasionally spotted a goldfish swimming there, too.[dl] Apparently, the turtle used to live there as well, but kept escaping the box all the time... Although, it always returned to it in the end.[lr][r]
+[else]
+確かに彼女の家のベランダには大きな発泡スチロールの箱がある。[l]
+それはいつも傾むけてあり、水の貼った部分と砂地の部分を作っていた。[l]
+水の張った部分は緑のコケで完全に透明度を失っており、時折赤い金魚の泳ぐ姿が見えた。[l]
+亀はそこの住人で、時折そこから抜け出しては行方不明になり、しかしその度幾日かの後にはスチロールの近くに帰ってくるそうで、数ヶ月いなくなることもあったらしい。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, it had been six months since its last disappearance, and Takako seemed to have forgotten all about it until now.[prcm]
+[else]
+今回、その亀は半年ほど行方をくらましていたらしく、貴呼もずっと忘れていた様子だった。[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We dug a hole under the slide and buried the withered carcass in it, using an ice cream stick as a grave marker.[dl] As we had no name to write on the stick, we simply went with "Green Turtle."[lr][r]
+[else]
+　滑り台のしたに穴を掘り、干からびた亀の死骸を埋めて、アイスの棒を差した。[l]
+アイスの棒には、書くような名前はなかったので、ミドリ亀とだけ書いた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The discovery of the carcass left Takako heartbroken for a while, but she managed to cheer up eventually, and we played hide and seek together.[prcm]
+[else]
+そのあと、しばらく貴呼はショックを受けていたようだったが、またしばらくすると機嫌を直してかくれんぼを始めた。[prcm]
+[endif]
+
+
+;＊
+
+
+[msgoff]
+[msglayer]
+[msgon]
+
+; FBF: End of vertical section.
+[eval exp="f.fbfisverticaltext = false"]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Talk about nostalgic.[」][lr]
+[else]
+　「懐かしいな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Voicing the feelings I'd always felt when reading this thing, I continued to the last page.[lr]
+[else]
+　と、この本を読み始めて何度も思っていたことを一人、口にする。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　それから、その本の最後の方のページを捲る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Only the two of us could have known what happened that day.[lr]
+[else]
+　その日のことを知っているのは、二人だけだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As such, only Sachiko, or someone Sachiko had entrusted with this information, could have written this diary.[prcm]
+[else]
+　こちらが書いた覚えがないのでこれを書いたのは佐知子か、佐知子からこの話を聞いた誰かしかいなかった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[msglayer_t]
+[msgon_t]
+;＊
+[playse buf = 1 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was very good at hide and seek, so I could never find her.[dl] And whenever I gave up and started talking about going home, she would always sneak up behind me for a quick scare.[lr][r]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼はかくれんぼが上手で、いつも最後まで見つからなかった。[l]
+そして、こちらが諦めて帰ろうとする頃に最後まで見つからないように近づいてきて驚かせるのが好きなようだった。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm leaving.[」][lr][r]
+[else]
+「もう帰るわ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I said that in the middle of the park in a loud voice, but nothing happened.[lr][r]
+[else]
+公園の真ん中で大きな声で言ってみた。[l]
+反応はなかった。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even after checking the tall grass where I expected her to be hiding, I couldn't see any trace of her.[dl] I glanced up at the orange sky, genuinely considering just leaving, but decided to look for her for a bit longer.[lr][r]
+[else]
+潜んでいそうな茂みを見ても、貴呼の姿は見当たらなかった。[l]
+夕焼けの空を見ながら本当に帰ろうと考えたが思いとどまって、もう少しだけ探すことにした。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I climbed all of the stairways of our apartment building.[dl] I checked all the booths in the public toilet of the park.[dl] I looked for her in the empty warehouse on the other side of the street.[dl] Most of the areas were locked, but I found a few doors that were open, so I had a peek.[dl] It was dark and smelled like dust inside.[dl] The entrance of the seventh warehouse container was open, too.[lr][r]
+[else]
+　アパートの三つある階段をすべて上がりきり、踊り場を探した。[l]
+公園のトイレの個室を探した。[l]
+それから、アパートの横にある住居者用の倉庫を探した。[l]
+殆どの場合、鍵がかかって開けられないようになっていたが、いくつかの倉庫は鍵が開いていて中を確認することができた。[l]
+中は暗く、砂と埃の匂いがした。[l]
+向こうから七番目の倉庫も空いていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was hiding in there.[prcm]
+[else]
+そこに貴呼は隠れていた。[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That was the same area where Takako fell when we were playing tag on the roof of the warehouse.[dl] I had the landlord who worked at the nearby[r]okonomiyaki restaurant unlock the door and let Takako out.[dl] It wasn't used for anything, so we did get scolded, but otherwise got off relatively easy.[lr][r]
+[else]
+　その倉庫は、以前倉庫のトタン屋根の上を鬼ごっこをして走った際に貴呼が踏み抜いて中に落ちた経緯がある。[l]
+その際、近くでお好み焼き屋を経営している大家に言って開けてもらった場所だった。[l]
+七番目の倉庫は元々使われていなかった倉庫だったため、そのときは大家の小母さんに怒られただけで済んだ。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was crouching in the corner of the room, with the orange light falling from the hole in the ceiling illuminating her vague silhouette.[lr][r]
+[else]
+　貴呼は倉庫の端にうずくまり、その姿はトタン屋根の穴から漏れる夕焼けの光でぼんやりと照らされていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Found you. Let's go home.[」][lr][r]
+[else]
+「見つけた。帰るわよ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Yet she still remained crouched. When I walked closer, I found her moaning and talking to herself.[dl] As I touched her shoulder, she let out a loud scream.[dl] The timbre of her voice was so odd I initially couldn't even make out her words, but then realized she was asking me not to make a sound.[lr][r]
+[else]
+それでもまだ蹲っている貴呼に近づいてみると、貴呼は小さな声で呻るようにブツブツ、と何かを言っていた。[l]
+肩に手を置こうとすると、貴呼は大きな声で叫んだ。[l]
+呂律がうまく回らなかったらしく「音を立てないで」と言っているのが後からわかった。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I figured I'd ask her if she wanted me to call her parents, but changed my mind.[dl] I stooped down in front of her, careful not to make a sound.[dl] Takako was sitting on the ground, hugging her knees.[dl] Her eyes were narrowly open, but had been fixed on nothing.[dl] Her mouth trembled as she kept mumbling[r]something.[prcm]
+[else]
+「誰か呼ぶ？」と声にしようとしてやめた。[l]
+音を立てないように、貴呼の前に身をかがめる。[l]
+貴呼は体育座りの姿勢で身を縮めていた。[l]
+目は薄く開いてどこか下を見ている。[l]
+口は細かく震えて何かブツブツ、と音を発していた。[prcm]
+[endif]
+
+[playse buf = 1 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached out and covered her ears.[dl] I could feel her face flushing through my palms.[dl] As we sat like that for a while, her shaking began to gradually subside.[lr]
+[else]
+そっと、手を伸ばして貴呼の耳を塞いだ。[l]
+顔が熱くなっているのが手のひらから伝わる。[l]
+そのままジッ、としていると貴呼の震えは次第に収まっていった。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+              ＊
+[r][r]
+She breathed heavily for a while, but that, too, eventually stopped.[dl] My hands were growing numb, but when I slightly moved them, she abruptly spoke up.[lr][r]
+[else]
+              ＊
+[r][r]
+*|1975年11月03日
+　しばらく貴呼は荒い呼吸を続けていたが、それも聞こえなくなってくる。[l]
+貴呼の耳に当てていた手が疲れてきて、少しだけ動かすと貴呼が何かを言った。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you say something?[」] I asked her in a low voice.[lr][r]
+[else]
+「なにか言った？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+と、小さな声で聞いた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She didn't scream this time, and seemed relatively calm.[lr][r]
+[else]
+今度は貴呼は怒鳴らず、大分落ち着いてきた様子だった。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You want me to call someone?[」][lr]
+[else]
+「誰か呼ぶ？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't go anywhere.[dl] I can still hear it,[」] she said in her normal voice.[dlr]
+"Can you stay until it passes?"[lr]
+[else]
+「行かないで。[l]まだ少し聞こえる」と貴呼が普通の声で言った。[l]
+それから「治るまで傍に居てくれる？」と聞いてきた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure,[」] I answered.[prcm]
+[else]
+「わかった」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+と、答えた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+
+; FBF: End of vertical section.
+[eval exp="f.fbfisverticaltext = false"]
+
+@jump storage="145_3.ks" target=*145_3
+
+

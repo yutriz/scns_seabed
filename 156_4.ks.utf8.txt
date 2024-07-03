@@ -1,0 +1,669 @@
+*156_4| A new miniature garden
+; *156_4|新しい箱庭
+[fbfstoretitle eng="A new miniature garden" jp="新しい箱庭"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm53"]
+[backlay]
+[fbfscale_image storage="bg41_6_y" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 203"]
+[eval exp="sf.ItRelease = 204"]
+[endif]
+
+
+*| A new miniature garden
+; *|新しい箱庭
+[fbfstoretitle eng="A new miniature garden" jp="新しい箱庭"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spent some time investigating the sanatorium after splitting from Takako.[lr]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼と別れた後、療養所内を散策した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The nurse told me not to loiter around too much, so I decided not to go upstairs from the room I'd been shown to.[lr]
+[else]
+　あまりウロウロしてはいけないと注意していた看護婦と鉢合わせるといろいろと説明しなければならなくなるので、案内された部屋の階より上には行かなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At a closer look, the interior of this place slightly differed from the Fujisaka mansion's.[lr]
+[else]
+　よく見ると籘坂の屋敷とは内装が少し異なっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Both had a big camphor tree in the middle of the inner yard, though.[lr]
+[else]
+　中庭には同じく大きな[ruby text="たぶ"]椨の木があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see a roof in the distance through the branches.[prcm]
+[else]
+　その向こうには図書館の屋根が見える。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I left the building through the backdoor in the lobby and continued down the usual stone path to the library.[lr]
+[else]
+　私はロビーの勝手口から中庭に出ると、いつもの石畳を歩いて図書館へと向かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, the door was locked.[lr]
+[else]
+　しかし、図書館の扉は閉じられていて鍵がかかっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And I'd already handed my keys to Takako.[lr]
+[else]
+　貴呼に鍵を渡してしまったことを思い出すが、それは仕方のないことだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Well, it wasn't like either Kozue or Lily would be here, at any rate.[prcm]
+[else]
+　どちらにしてもここには[ruby text="こずえ"]梢も小母さんもいるはずがない。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg45_4" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found the nurse working at the flowerbeds as I returned to the inner yard.[lr]
+[else]
+　中庭に戻ると看護婦が中庭の花壇で土いじりをしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It probably would've been awkward if she spotted me as I tried to inconspicuously pass by her, so I figured I might as well initiate a conversation myself.[lr]
+[else]
+　後ろ姿を見られるのも面倒だったので、こちらから近づいて声をかける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh?[」] she turned to me.[prcm]
+[else]
+　「あら」とこちらに振り向く。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[eval exp="sf.cg55_b_1=1"]
+[fbfscale_image storage="ev55_b_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you met with Takako?[」][lr]
+[else]
+　「貴呼さんには会えました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's good.[l] What are you doing here?[」][lr]
+[else]
+　「それは良かった。[l]それはそうと、こんなところで何を？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I expected she'd ask that.[lr]
+[else]
+　看護婦は予想していた通りに質問をしてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I saw a roof in the distance from the second floor and got curious.[」][prcm]
+[else]
+　「二階から屋根が見えたもので」と誤魔化すのはやめて正直に言う。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg55_b_5=1"]
+[fbfscale_image storage="ev55_b_5" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, the library.[l] It's closed right now.[」][lr]
+[else]
+　「ああ、図書館ですね。[l]でも、今日は開けてないんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's open during weekends and on holidays. You are more than welcome to drop by later if you want to see it from the inside.[」][lr]
+[else]
+　「休日祝日は開けているので、よかったらまた来てください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If I get the chance.[」][prcm]
+[else]
+　「機会があれば」[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The nurse Takako had called Mayuko made a gentle smile.[lr]
+[else]
+　[ruby text="まゆ"]繭[ruby text="こ"]子、と貴呼が何度も呼んでいたその看護婦はにこやかに笑う。[lr]
+[endif]
+
+[r]
+
+;＊
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her breasts were larger than the original's, but among all the people I'd met here, she undoubtedly resembled Sachiko the most.[lr]
+[else]
+　胸は本物より随分大きいが、こちら側で出会った人物の中では一番[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子に似ていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Though her social anxiety made Sachiko show little emotion on her face, she was actually a very gentle person at heart.[lr]
+[else]
+　佐知子は周りを気にして気を張っていることが多く表情が硬い。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　しかし、本質的には優しい性格である。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Those who understood that would have a hard time telling those two apart.[prcm]
+[else]
+　それが分かっている人から見れば、佐知子もこの繭子のように見えるのかもしれない。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev55_b_1" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is something the matter?[」] Mayuko asked.[prcm]
+[else]
+　「どうかしました？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、繭子が聞いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I just thought those flowers were pretty colorful for the season.[」][lr]
+[else]
+　「その花壇の花。[l]この季節にしては、鮮やかな花だと思って」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Those are called primroses.[l] They're winter flowers.[」][lr]
+[else]
+　「プリムラっていうんですよ。[l]冬の観葉植物なんです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've never heard that name before.[l] Is growing flowers a hobby of yours?[」][lr]
+[else]
+　「初めて聞く名前だな。[l]園芸は趣味で？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev55_b_5" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[l] The people at the flower shop recommended these after I told them I was looking for something colorful and easy to grow.[l] I mean, it's kind of sad to see empty flowerbeds in winter, wouldn't you agree?[」][lr]
+[else]
+　「趣味というわけではないんですよ。[l]この花は花屋で育てやすくて明るい花を教えてもらっただけで。[l]
+ただ、花壇があるのに花もないのは寂しいじゃないですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You have a point there.[」][prcm]
+[else]
+　「確かに」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg55_b_3=1"]
+[fbfscale_image storage="ev55_b_3" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako helped me plant these.[」][lr]
+[else]
+　「そうそう。[l]この花壇の植え込みは貴呼さんとしたんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko pointed at the flowerbeds that Takako likely helped her with.[prcm]
+[else]
+　この辺りを、といった具合に繭子は花壇の一部を差した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] What are your plans for the summer, though?[」][lr]
+[else]
+　「へえ。[l]夏になったら、また別の花を？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll plant other flowers.[l] I was considering morning glories this time around.[」][lr]
+[else]
+　「はい。[l]今度は、朝顔でも育てようかと」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's a nostalgic name.[l] I used to grow them back in school.[」][lr]
+[else]
+　「懐かしいね。[l]昔、学校で育てていたな」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[eval exp="sf.cg55_b_4=1"]
+[fbfscale_image storage="ev55_b_4" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko smiled.[prcm]
+[else]
+　そう言うと、繭子が軽く笑う。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako said something like that, too.[l] They always remind a person of school.[」][lr]
+[else]
+　「貴呼さんも、同じようなことを話してました。[l]朝顔って、そういうイメージなんですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][prcm]
+[else]
+　「確かに」と同意する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Speaking of which, Takako told me a lot about you, too,[」] I said, changing the subject.[lr]
+[else]
+　「そういえば、貴呼さんも貴方のことを色々と話していた」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev55_b_5" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nothing too strange, though, I hope?[」][lr]
+[else]
+　「何か変なことを言っていませんでした？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, nothing bad.[l] She was simply telling me about her friends here.[」][lr]
+[else]
+　「いや、そんなことは言っていなかったかな。[l]ここの人達と仲良くしてると言っていた」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev55_b_3" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm glad to hear that.[」][prcm]
+[else]
+　「それなら良かった」[prcm]
+[endif]
+
+
+
+;＊
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg45_4" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The nurse made an exaggerated sigh and stood up while brushing some of the sweat off her forehead.[lr]
+[else]
+　看護婦は安心したとでもいうように冗談交じりに息をつき、汗と土を拭うと立ち上がった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a bit of small talk, I realized that the sky had begun growing orange in color.[prcm]
+[else]
+　少しの間世間話をしていると空の色がいよいよ紅くなり始めた。[prcm]
+[endif]
+
+
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right. I promised to make a call around this time.[」][lr]
+[else]
+　「そういえば、この時間に電話をする約束なんだ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p04_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A call?[」][lr]
+[else]
+　「電話？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry, but could you let me use the phone in the lobby?[」][lr]
+[else]
+　「すまないが、ロビーにある公衆電話を借りてもいいかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can use the one in the office.[l] The phone we have in the lobby needs coins to operate.[」][lr]
+[else]
+　「電話でしたら執務室のを貸しましょうか。[l]ロビーのはコインが必要なんです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's okay.[l] It won't take long, anyway.[」][lr]
+[else]
+　「いや大丈夫ですよ。[l]そんなに長い話にはならないから」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p04_h03" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then feel free to use whichever phone you like.[」][prcm]
+[else]
+　「それならどうぞ」と繭子が言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[l] I'll go make that call now.[」][lr]
+[else]
+　「ありがとう。[l]それじゃあ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay. [l]Take care.[」][lr]
+[else]
+　「はい。[l]それでは」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I started toward the door leading back into the building.[lr]
+[else]
+　繭子と別れて中庭にある勝手口へ向かう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before entering, I stole a final glance at Mayuko and saw her waving me goodbye.[prcm]
+[else]
+　振り返ると、繭子はスコップを持った手とは反対の手で、手を振っていた。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="156_5.ks" target=*156_5
+
+

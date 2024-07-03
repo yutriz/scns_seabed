@@ -1,0 +1,541 @@
+*099_3| The missing piece
+; *099_3|足りないピース
+[fbfstoretitle eng="The missing piece" jp="足りないピース"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+
+[msglayer]
+[playbgm storage="bgm37"]
+[backlay]
+[fbfscale_image storage="bg44_10" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 122"]
+[eval exp="sf.ItRelease = 123"]
+[endif]
+
+
+*| The missing piece
+; *|足りないピース
+[fbfstoretitle eng="The missing piece" jp="足りないピース"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko laid down the futons as we finished talking about the aquarium.[lr]
+[else]
+　水族館の話が終わった後、[ruby text="まゆ"]繭[ruby text="こ"]子は布団を敷いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She asked me where I wanted to sleep, and I said here.[lr]
+[else]
+　繭子がどこで寝るか聞いたので、ここで寝たいといった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I climbed into the futon and closed my eyes.[prcm]
+[else]
+　布団に入り、目を瞑る。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule3" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt tired and wanted to fall asleep as soon as possible.[lr]
+[else]
+　体は疲れていて、すぐにでも眠りたかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I emptied my head, the corridor with the oarfish popped into my mind.[lr]
+[else]
+　頭を空にしていると、竜宮の使いのホルマリン漬けのある廊下が頭の中に現れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was walking through it, holding hands with Sachiko.[lr]
+[else]
+　私は[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子と手をつないで歩いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I realized it couldn't have been real, I woke up.[prcm]
+[else]
+　それは現実ではないと思うと目が覚めた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[msglayer]
+[fbfscale_image storage="bg44_10" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the clock and with the help of the moonlight, made out the display — only ten minutes had passed since I went to bed.[lr]
+[else]
+　目を開けて月明かりで時計を見ると、目を閉じる前に見た時間からまだ十分も進んでいなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My hand, however, was still pretending to hold Sachiko's.[lr]
+[else]
+　しかし、手の形は佐知子の手を握ったままだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It made me wonder if it was a dream or a delusion. In the end, I figured there wasn't much of a difference between the two.[prcm]
+[else]
+　今のは夢か妄想かと考えようとしたが、どちらでも変わりはないと思った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+More importantly, I suddenly felt cold.[lr]
+[else]
+　それよりも、急に淋しい気分になった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And it only got worse as I kept reading more of the diary.[lr]
+[else]
+　日記を読み始めてから、その気持ちは徐々に大きくなっていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The more I remembered my time with Sachiko, the more I felt the void where her presence used to be.[lr]
+[else]
+　過去の佐知子との思い出が蘇る程に、佐知子の不在がもたらす心の隙間が際立った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I truly felt like a hole had opened in me.[lr]
+[else]
+　本当に体に穴を空けたかのようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+If I listened in, I could hear the sound of the wind blowing through it.[prcm]
+[else]
+　耳をすませば、空気の通る音が聞こえてきそうな気がする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That hole had been there all along.[lr]
+[else]
+　それは、初めから空いていた穴だ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered someone telling me that.[prcm]
+[else]
+　「そこに穴があいてますよ」と指摘されて、そういえばそうだったと思い出したのだった。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at Mayuko and saw her sleeping on her back, completely undisturbed.[lr]
+[else]
+　繭子の方を見ると、仰向けに綺麗な姿勢で眠っている横顔が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her profile looked beautiful in the moonlight.[prcm]
+[else]
+　とても綺麗な横顔だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She reminded me of Sachiko a little.[lr]
+[else]
+　繭子はどこか佐知子に似ている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Wanting to take a closer look, I climbed out of my futon and drew closer to her.[lr]
+[else]
+　もっと近くで見ようと布団を出て繭子に近づいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Their eyes were about the only thing differentiating them.[prcm]
+[else]
+　佐知子と違うのは目元くらいだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko always looked like she was sleepy, which made the shape of her eyes appear somewhat narrower than Mayuko's.[lr]
+[else]
+　佐知子はいつも瞼が重そうで、ぽやんとした目元が繭子のそれよりも少し細く見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Still, I wondered how they'd compare when they both fully opened their eyes.[lr]
+[else]
+　しかし、目をきちんと開いたときはどうだろうか。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like they might look the same.[prcm]
+[else]
+　繭子の大きな黒い瞳と重なる気がする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is something wrong?[」][lr]
+[else]
+　「どうかしました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko addressed me with her eyes closed.[prcm]
+[else]
+　目を閉じたまま、繭子が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't sleep because of the cold.[l] Can I get in?[」][lr]
+[else]
+　「寒くて眠れない。[l]そっちに入ってもいい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko half-opened one of her eyes, then closed it again. She told me it was okay.[prcm]
+[else]
+　繭子は片方の目を薄く開けた後で再び目を閉じると、眠たそうに「私の布団を巻き込まないでくださいね」と言った。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se75.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Grabbing my pillow, I slid into her futon.[lr]
+[else]
+　枕を持って繭子の布団に入る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko turned her back to me.[lr]
+[else]
+　繭子は身動ぎすると向こうをむいてしまった。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I hesitated for a second, then wrapped my arms around her.[lr]
+[else]
+　少し迷ってから繭子の体に腕を回した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I stuck my hand below her, Mayuko raised her body a little.[lr]
+[else]
+　下から手を入れるとき、繭子は少し体を浮かせた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the beating of my heart as I pressed my breasts against her back.[prcm]
+[else]
+　体を密着させると、繭子の背中に押し当てた胸の鼓動が感じられた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko was either very light or slept in a good position, because my hand didn't hurt at all, despite being pinned under her weight.[lr]
+[else]
+　繭子が軽いからか姿勢が良いからなのかは分からないが、思ったよりも腕は痛くなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I connected our two pillows into one, then made my head comfortable in the middle and closed my eyes.[prcm]
+[else]
+　繭子の枕とこちらの枕を繋げると、その間くらいに頭を載せて、楽な姿勢で目を閉じた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+During my light fidgeting, my hand brushed against Mayuko's bra.[lr]
+[else]
+　身じろぎすると、ブラ越しに繭子の下乳に腕が当たった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A mischievous idea popped into my mind, but I hurriedly discarded it.[lr]
+[else]
+　ちょっとした悪戯が頭に浮かぶが、それはすぐに押さえ込む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was already causing her enough trouble with my weird condition, so I didn't want to make the whole situation even more awkward.[prcm]
+[else]
+　ただでさえ妙な病気で困っているのに、これ以上ややこしい状況になりたくはなかった。[prcm]
+[endif]
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule3" vague=50 time=1500]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I fell asleep, I dreamt of having sex with Mayuko.[lr]
+[else]
+　眠りにつくと、繭子を抱く夢を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I squeezed her breasts with one hand while sticking my other between her thighs.[lr]
+[else]
+　回した腕で繭子の胸を触り、股の間を触った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I toyed with her nipples, listening to her moan.[lr]
+[else]
+　シャツの下に手を這わせて硬くなった乳首を弄ると、繭子が息を漏らした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I guided her hand to my crotch, she slowly started massaging it.[lr]
+[else]
+　繭子の手を取ってこちらの股間に導くと、ゆっくりとその手が動いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Elated, I turned her over and began vigorously going at her from the front.[prcm]
+[else]
+　その動きに嬉しくなると体位を変えて正面から激しく繭子を抱いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko hid her face with her hands, trying to avoid eye contact.[lr]
+[else]
+　繭子は腕で顔を隠したり、背けたりした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her face kept turning into Sachiko's from time to time.[prcm]
+[else]
+　その度に、その顔は佐知子になったり、繭子になったりした。[prcm]
+[endif]
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[msglayer]
+[fbfscale_image storage="bg44_14" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I still felt everything when I woke up in the morning.[lr]
+[else]
+　朝、気がついたとき、まだ夢の内容がリアルな感触で残っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before I opened my eyes, I checked my clothes with my left hand.[lr]
+[else]
+　まだ開けきらない目のまま、手を動かして衣服が乱れていないことを確認した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heaved a sigh of relief.[lr]
+[else]
+　それから、ほっとして息をついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My head hurt a bit. It must've been from the anxiety and my low blood pressure.[prcm]
+[else]
+　血圧が低いまま緊張したため、少し頭が痛んだ。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle4]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="100.ks" target=*100
+
+

@@ -1,0 +1,362 @@
+*034| Before the Vacation
+; *034|休暇前
+[fbfstoretitle eng="Before the Vacation" jp="休暇前"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle6"]
+[msglayer2]
+
+[fadeinse buf=0 storage=se02.ogg time=1500 loop=true]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 44"]
+[eval exp="sf.ItRelease = 45"]
+[endif]
+
+
+*| Before the Vacation
+; *|休暇前
+[fbfstoretitle eng="Before the Vacation" jp="休暇前"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even the neon lights beyond the window were starting to go out.[lr]
+[else]
+　窓から見える外の景色は、ネオンの光すら減り始めている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had been a while since I heard the last car go by.[prcm]
+[else]
+　通りを走る自動車の音は少し前から途絶えていた。[prcm]
+[endif]
+
+
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg02_7" page=back layer=base]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule10" vague=50 time=1000]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Any plans for your vacation?[」][lr]
+[else]
+　「休暇はどうされるんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi addressed me as I was typing out a report.[prcm]
+[else]
+　キーボードで報告書の文面を叩いていると、[ruby text="ふみ"]文が声をかけてくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not much.[」][lr]
+[else]
+　「特に予定は無いわね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be going back to my parents' house.[」][lr]
+[else]
+　「僕は実家に戻ります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai joined the conversation.[prcm]
+[else]
+　と、[ruby text="いぬ"]犬[ruby text="かい"]飼が言った。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wasn't asking you.[」][lr]
+[else]
+　「犬飼には聞いてないわよ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi spoke up in a cheeky tone as her fingers continued tapping away at the keyboard.[prcm]
+[else]
+　カシャカシャ、とキーボードを叩きながらしたりとした顔で文が言った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai let out a faint snort and returned to his own work.[prcm]
+[else]
+　フン、と犬飼は軽く鼻を鳴らして仕事に戻る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was planning to take a trip to the hot springs this year. Would you like to go together?[」][lr]
+[else]
+　「どこか温泉旅行でも行こうと思ってるんですけど、一緒に行きませんか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...A trip to the hot springs?[」][lr]
+[else]
+　「…温泉ね」[lr]
+[endif]
+
+[r]
+
+
+[msgoff]
+[backlay]
+[stopse]
+[playse buf = 2 storage=se26.ogg]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I transferred the finished report's data to the printer.[lr]
+[else]
+　と、言って仕上げた報告書データを印刷機に送る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Most of the documents from the mountain of papers on my desk were now fully checked, revised, and logged.[prcm]
+[else]
+　机の上に山のように積み上げられていた書類のほとんどは、目を通され、訂正され、記入されて、今はしかるべきところに収まっている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think we'll be able to start our vacation early if we continue at this pace.[」][lr]
+[else]
+　「この調子だと、少し早目に休暇にしても良さそうね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h06" visible=true left=280 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule10" vague=50 time=1000]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you sure it's okay?[」][lr]
+[else]
+　「ホントに良いんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai was seemingly startled by Fumi's question.[prcm]
+[else]
+　文は聞いて、犬飼はぴくりと反応した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, we've already cleared all our main goals for the end of the year.[l] The rest depends on how soon you can finish the individual tasks you still have left.[」][lr]
+[else]
+　「とりあえず年末までの仕事には目処がついたから。[l]あとは各自の手持ち作業次第だけど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h07" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h07" visible=true left=280 top=0]
+[trans method=universal rule="rule10" vague=50 time=1000]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Awesome.[」][lr]
+[else]
+　「やったあ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi briskly returned to work with a broad smile on her face.[lr]
+[else]
+　と、素直に喜んだ文は、機嫌を良くして作業を再開した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai, too, began to type at a seemingly faster pace.[prcm]
+[else]
+　その向こうの犬飼も、心なしか手の動きが早くなった気がする。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule10" vague=50 time=1000]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't forget to submit the necessary documentation if you decide to make any changes to the date of your vacation.[」][lr]
+[else]
+　「休暇予定に変更があったら、変更届を出しておいてね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a quick "'Course" and an "Understood" in response.[prcm]
+[else]
+　「はあい」「わかりました」と返事が返る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I glanced at the monitor displaying everyone's vacation details, I suddenly realized that the document had an "Attendance Record" tab. [lr]
+[else]
+　ふと、気が付くとふたりの休暇予定を表示したパソコンの画面の余白に、勤怠表データを記録したファイル名が映る。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se69.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I clicked on it.[lr]
+[else]
+　カチ、とそちらの窓枠をクリックして勤怠表データの一覧を表示させる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Finding the entry for Mizuno Sachiko, I scrolled down to the records dating back to around a year ago.[lr]
+[else]
+　[ruby text="みず"]水[ruby text="の"]野[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子の勤怠表データを表示し、データをスクロールさせて一年前の勤務実績を表示する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The last trip I remembered taking seemed to be the one where I combined three holidays and two unpaid work days to be able to leave for a whole week.[prcm]
+[else]
+　覚えていた最後の旅行の日の勤務実績は、三日連休に有給を加えて一週間ほどの休暇実績となっていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[fadeoutse buf=0 time=3000]
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+[seopt buf=0 volume=100]
+[jingle6]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="035.ks" target=*035
+
+

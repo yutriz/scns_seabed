@@ -1,0 +1,408 @@
+*057| The Room
+; *057|部屋
+[fbfstoretitle eng="The Room" jp="部屋"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm39"]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+[msglayer2]
+
+[backlay]
+[fbfscale_image storage="bg53_3" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 72"]
+[eval exp="sf.ItRelease = 73"]
+[endif]
+
+
+
+*| The Room
+; *|部屋
+[fbfstoretitle eng="The Room" jp="部屋"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We ascended the semicircular stairs and took a right turn on the second floor corridor.[lr]
+[else]
+　ロビーからぐるりと半円の階段を上り、横切る廊下を右に進む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The floors creaked under my steps.[lr]
+[else]
+　板張りの廊下は歩くと、板が軋んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Windows lined the wall on my right.[lr]
+[else]
+　右手側には障子型の硝子窓がずらりと並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking out one of them, I could see the inner yard and its stone-paved path through a crown of leaves.[lr]
+[else]
+　窓からは、照葉の葉が茂る枝が遮る下に石畳通路のある中庭が見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+To my right, I noticed several doors, all of which bore the same designs as the ones at the entrance.[prcm]
+[else]
+　左手側には、玄関のそれと似たデザインの木製の扉が並んでいた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg53_9.jpg" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We turned the corner at the L-shaped corridor when Nanae finally stopped.[prcm]
+[else]
+　L字になっている廊下の角まで進むと、七重がそこにある扉の前で止まる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is your room.[」][lr]
+[else]
+　「お部屋はここよ」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 0 storage=se41.ogg]
+[ws buf=0]
+[playse buf = 0 storage=se54.ogg]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg05_3.jpg" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She turned the key in the lock, opening the door.[prcm]
+[else]
+　ガチャ、と鍵を開けてキィ、と内開きの戸を開けた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After entering the room, she left my bag by the side of the bed.[lr]
+[else]
+　七重がベッドの隣にキャリーケースを置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I walked to the other end of the room and glanced outside through a large window; its elegant lace curtains swayed in the light breeze.[lr]
+[else]
+　私は部屋の奥まで進むとゆらゆらとレースのカーテンが揺れる大きな窓から外を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It gave me a view of both the port town and the sea.[prcm]
+[else]
+　山の斜面と港街と海が見下ろせた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll leave your key here.[」][lr]
+[else]
+　「鍵はここに置いておくわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae placed the key — attached to a rectangular, amber-colored, and semi-transparent key holder — on the nightstand next to the bed.[prcm]
+[else]
+　ベッドの隣の小さな四角棚の上にコトリ、と透明琥珀色で四角柱型のキーホルダーが付いた鍵を置いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, I'll get back to work now. You're free to go anywhere you want inside the inn.[l] We also periodically check the windows, bathrooms and so on, but as you can see, most of our equipment is pretty old, so don't hesitate to inform us if you find that lights don't work somewhere.[」] [lr]
+[else]
+　「私は仕事に戻るけど、洋館内は基本的に好きに歩いて構わないわ。[l]あと、窓の立付けとか、電球が切れていたりだとか、掃除に点検はきちんとしているのだけど、なにぶん古いものが多いでしょう。[l]
+不便なところがあれば申し付けてね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I will. Thank you.[」][prcm]
+[else]
+　「ええ、ありがとう」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h04" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, I'd love to talk to you some more, so what would you say to having dinner together tonight?[」][lr]
+[else]
+　「ねえ、お話もしたいし良かったら夕食一緒にしない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And when will that be?[」][lr]
+[else]
+　「何時ぐらいになるかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How about in an hour or so?[」][lr]
+[else]
+　「一時間後はどう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sounds good to me.[」][lr]
+[else]
+　「わかったわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h07" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Cool.[l] I'll come pick you up in an hour, then.[」][lr]
+[else]
+　「良かった。[l]それじゃあ、一時間後に迎えに来るわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae moved to the door and left the room after making a curt bow.[prcm]
+[else]
+　七重はすっと部屋の扉の前まで移動すると、小さくお辞儀をして部屋を出た。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After glancing out the window one more time, I sat down on the bed.[lr]
+[else]
+　再び窓の外の稜線を見たあと、窓を離れてベッドに腰を下ろす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had a vine-like canopy that seemed to be carved out of wood.[prcm]
+[else]
+　ベッドには、木を捻りと蔓が絡まる細工の施された支柱の天蓋があった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took off my shoes and stretched my legs.[lr]
+[else]
+　「ん」と靴を脱いで足を伸ばす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After I was done with that, I joined my fingers and stretched my arms next.[prcm]
+[else]
+　その後で、指を組んで腕も伸ばした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+You had to step down from the sill to reach the floor, which was at a slightly lower level than the door itself.[lr]
+[else]
+　こじんまりした部屋は扉側と窓側との間にステップダウンがある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The interior furniture was of an old, western design.[lr]
+[else]
+　家具は古いデザインの洋風で揃えられている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The green one-seater Victorian sofa had an Acanthus leaf design carved into its leg.[lr]
+[else]
+　正面の抹茶色の貼り布地を飾り鋲で打ち付けた一人掛けのビクトリアンソファは、脚にアカンサスの葉の彫刻がしてある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The color of the sofa's mahogany armrests had faded over time and looked almost black at certain spots.[lr]
+[else]
+　曲線の肘掛はマホガニー材の赤みが風化していて、黒みが強くなっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That said, its springs seemed to be in perfect condition, and with the tall backrest, the whole thing was a pleasure to sit on.[prcm]
+[else]
+　背もたれは高めで、スプリングがしっかりしているならばゆったりと凭れることができそうだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted a small chest on the cabinet that had the carving of a lion on its side.[lr]
+[else]
+　凛々しい獅子の顔が縁に掘られた大き目のキャビネットの上には小さなチェスト。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An ivy plant was positioned on top of it, covering its upper half with vines.[prcm]
+[else]
+　その上には、チェストをなかば隠すくらいにハート型の葉を蔦にたくさん茂らせた観葉植物があった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="058.ks" target=*058
+
+

@@ -1,0 +1,534 @@
+*150| Sanae's ghost
+; *150|早苗の幽霊
+[fbfstoretitle eng="Sanae's ghost" jp="早苗の幽霊"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+
+;★このイベント絵。メガネはずすべきでは
+[msglayer]
+[fadeinbgm storage="bgm36" time=3000]
+[wait time=3000]
+[backlay]
+[eval exp="sf.cg35_2=1"]
+[fbfscale_image storage="ev35_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 191"]
+[eval exp="sf.ItRelease = 192"]
+[endif]
+
+*| Sanae's ghost
+; *|早苗の幽霊
+[fbfstoretitle eng="Sanae's ghost" jp="早苗の幽霊"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think it's time.[」][lr]
+[else]
+　「そろそろいいかなっと」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae sat up in bed and took the thermometer out of her mouth.[prcm]
+[else]
+　と、ベットで身を起こした[ruby text="さ"]早[ruby text="なえ"]苗が咥えている体温計を取る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You still seem to have a high fever.[」][lr]
+[else]
+　「まだ結構熱があるね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae, her cheeks flushed, regarded me with an empty gaze.[prcm]
+[else]
+　頬を赤くした早苗が、ぼんやりとこちらを見ている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I want to read a book.[」][lr]
+[else]
+　「本が読みたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No way.[l] You need to get some sleep.[」][lr]
+[else]
+　「駄目だよ。[l]それより今は寝ていなくちゃね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae gave me an indignant look through her half-open eyes.[prcm]
+[else]
+　早苗の目が半分閉じて、恨めしそうにこちらを見ている。[prcm]
+[endif]
+
+
+
+;//////
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You really like books, don't you?[l] Why is that?[」][lr]
+[else]
+　「早苗は本が好きだね。[l]どうしてそんなに本が好きなんだろう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You mean, what I like about books?[」][lr]
+[else]
+　早苗は少し考えて「本の魅力ですか？」とこちらに聞いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I nodded.[prcm]
+[else]
+　私は頷いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like a lot of things... I don't know if I can sum it up.[」][lr]
+[else]
+　「たくさんあって一概には」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, what's good about the current book you're reading, then?[」][lr]
+[else]
+　「例えば、今読んでる本はどんなところがいいの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's an old book.[」][lr]
+[else]
+　「あれは割と古い本なんです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's old. Okay.[」][prcm]
+[else]
+　「古い本」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Which means it's full of things I don't know, like descriptions of lands I'd never seen before.[l] But I enjoy that kind of lack of knowledge, as my imagination always fills in the blanks.[」][prcm]
+[else]
+　「だから、わからないところもあるんですよ。[l]音楽や知らない土地の風景とか。[l]でも、そういう空白が私は好きです。[l]
+そこには私が想像する余地があるから」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　早苗はゆっくりとそう言った。[prcm]
+[endif]
+
+
+;＊
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_7" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If I die, burn me with the books on this shelf.[」][lr]
+[else]
+　「私が死んだら、その本棚の本を一緒に燃やしてください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There are still some I haven't read yet,[」] she added.[prcm]
+[else]
+　いくつか読んでない本がある、と早苗が言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can do that if you want, but you won't be able to read them if I burn them.[」][lr]
+[else]
+　「早苗がそれで気が済むならそうしてあげる。[l]でも燃やしたら、読めないんじゃないの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_4" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think I could read books after my death?[」][lr]
+[else]
+　「死んでも本は読めると思いますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've no idea what happens after death.[」][lr]
+[else]
+　「死んだあとのことなんて、わかんないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't believe in heaven and hell, right?[」][prcm]
+[else]
+　「天国とか地獄とか、そういうのは信じてないんですね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I might not look it, but I'm actually scientifically minded.[l] I don't believe you'll be able to continue constructing thoughts after your brain dies.[l] It's fun to think about the afterlife, but none of the potential ideas make much sense from where I stand.[」][lr]
+[else]
+　「こう見えても私は、理数系だからね。[l]頭が死んじゃったら、何も考えられないと思う。[l]
+だから、そういうのはあまり信じてないかもしれない。[l]あれば、面白いとは思うけれど」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se111.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put the thermometer away and soaked the towel I'd prepared in a bowl of ice water.[prcm]
+[else]
+　体温計を片付けて、ベッドの傍らに用意したボウルの氷水にタオルをつける。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I always start thinking about these things when I don't feel well.[」][lr]
+[else]
+　「体が弱ると、そんなことばかり考えちゃうよね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_12" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My health isn't exactly in tip-top shape,[」] she added.[lr]
+[else]
+　小さな声で「私は、体が弱いので」と早苗が言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Aren't you scared, Takako?[」][prcm]
+[else]
+　それから「[ruby text="たか"]貴[ruby text="こ"]呼さんは怖くないですか？」と聞いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[l] As I said, it'd be fun if there was an afterlife, but if it all works like I expect it to work, you won't even be able to feel fear, so what does it matter?[」][lr]
+[else]
+　「あんまりかな。[l]さっきも言ったように、あの世みたいなものがあれば面白いと思うし。[l]
+予想通り何もなければ、怖いとか分からないだろうからね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_7" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm pretty sure some people would find the idea of not existing scary in itself.[l] What's the point of doing your best in life if you're gonna disappear, anyway?[l] Have you never thought of it like that?[」][lr]
+[else]
+　「天国とかを信じてる人の中には、その何も無いのが怖いという人もいるのではないでしょうか。[l]
+例えば、いつか消えてしまうから頑張る意味がないとか。[l]そういう風に考えたりはしないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, you leave all sorts of things behind, I mean.[l] Besides, the fact I might disappear one day doesn't change the fact that I exist here and now.[」][lr]
+[else]
+　「とは言っても、残るものはたくさんあるよ。[l]それに、いつか消えてしまっても今が無くなるわけではないからね」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se111.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took the towel out of the bowl and wrung it so as not to splash the water all over the room.[prcm]
+[else]
+　ボウルからタオルを取り出し、水が飛び散らないように絞る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]One time, when we were gazing at the stars together, Sachiko said that their light was hundreds and hundreds of years old.[l] In other words, hundreds of years will pass before we're seen from over there.[l] Nothing that ever existed can disappear completely.[」][lr]
+[else]
+　「ずっと前に、星を見ながら佐知子が言ったんだ。[l]あの星の光は、百年も前のものだって。[l]
+だから、今の私たちはあと百年後に、あの星から見ることができる。[l]一度、存在したものは消えることがないんだって」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[eval exp="sf.cg35_3=1"]
+[fbfscale_image storage="ev35_3" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] And I agree.[」][lr]
+[else]
+　「なるほど。[l]それは、私もそう思います」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You should sleep.[l] I'm sure you'll be fine by tomorrow.[」][lr]
+[else]
+　「眠るといいよ。[l]これだけ熱が出てたら、明日の朝には治ってるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What time is it?[」][lr]
+[else]
+　「今何時ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's around nine, I think.[」][prcm]
+[else]
+　「九時ぐらいだと思う」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, there's also the idea that you might become a ghost.[」][lr]
+[else]
+　「そういえば、幽霊になるという考え方もありますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That just might be the most fun option.[」][prcm]
+[else]
+　「それは一番面白そうだね」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_9" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If I turn into one tonight, I'll come to your room to relax.[」][lr]
+[else]
+　「もし今夜死んだら化けて出て、貴呼さんのところに遊びに行きますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't forget to make some kind of signal so I know it's you.[」][lr]
+[else]
+　「そのときはちゃんと分かるように合図してね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]In that case...[l] I'll pick up coins like that ghost in town.[」][lr]
+[else]
+　「それじゃあ。[l]あの街の幽霊みたいに、コインを持ち上げます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[l] I'll make sure to leave some on the table.[」][prcm]
+[else]
+　「わかった。[l]コインを置いておくよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Guess I can rest easy, then.[l] Goodnight.[」][lr]
+[else]
+　「それなら、安心ですね。[l]おやすみなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, goodnight.[」][prcm]
+[else]
+　「ああ、おやすみ」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[playse buf = 0 storage=se112.wav]
+[backlay]
+[fbfscale_image storage="bg43_6" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put the cold towel on Sanae's head as she finally lay down.[lr]
+[else]
+　早苗を横にならせると、良く冷えたおしぼりを額に置いてやる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae let out a relieved breath and slowly closed her eyes.[prcm]
+[else]
+　早苗は安堵するように小さく息をつくと、ゆっくりと目を閉じた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="151.ks" target=*151
+
+

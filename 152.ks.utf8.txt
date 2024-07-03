@@ -1,0 +1,1494 @@
+*152| A cheap hotel and café
+; *152|安ホテルと喫茶店
+[fbfstoretitle eng="A cheap hotel and café" jp="安ホテルと喫茶店"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+
+
+[playbgm storage="bgm54"]
+
+;章題表示
+[msgoff]
+[wait time=3000]
+[backlay]
+[fbfunlockachievement number="8"]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence8_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence8_1_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+[wait time=1000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence8_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence8_2_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=4000]
+
+
+[backlay]
+[fbfscale_image storage="bg82_4_b" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;章選択フラグ
+[if exp="sf.CpRelease <= 8"]
+[eval exp="sf.CpRelease = 9"]
+[endif]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 194"]
+[eval exp="sf.ItRelease = 195"]
+[endif]
+
+
+*| A cheap hotel and café
+; *|安ホテルと喫茶店
+[fbfstoretitle eng="A cheap hotel and café" jp="安ホテルと喫茶店"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found a gravel roundabout outside the station.[lr]
+[else]
+　駅を出たところには砂利を敷いただけのロータリーがある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At its corner, there was a parking lot with a three-door car parked under a big tree with broad leaves.[lr]
+[else]
+　その隅の駐車場の大きな広葉樹の木の下に、スリードアの車が一台停まっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the car I used before coming here.[lr]
+[else]
+　それは私がここに来る以前に使っていた車だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The moss green car's form reminded me of a Civic from the sixties or seventies, but its front was more curved than it should have been.[lr]
+[else]
+　色はモスグリーン、形は六～七十年代のシビックに似ているが、顔の部分のディテールがやや曲線的になっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was an old thing I didn't even know the exact brand of, and could be hell to control at times, but I appreciated it as a car that was mine and mine alone.[prcm]
+[else]
+　車種もよくわからないボロ車な上に癖が多くて扱いにくかったが、そこが私専用のようでとても気に入っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After circling around the car to the driver's seat, I took the key from my jacket's pocket and unlocked the door so I could get inside.[lr]
+[else]
+　私は運転席側へと回り込み、上着のポケットから取り出したキーでドアを開けて乗り込んだ。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se91.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After confirming the position of the seat, I turned the ignition key.[prcm]
+[else]
+　そして、シートの位置を確認してエンジンキーを回した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Feeling the vibration of the engine, I turned the wooden handle and stepped on the gas, proceeding to drive out of the rotary.[lr]
+[else]
+　エンジンがかかる振動があると、木目のハンドルをきりながら、アクセルを踏んでロータリーを出た。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule16" vague=50 time=800]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg60_2" page=back layer=base]
+[trans method=universal rule="rule16" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sunlight from the blue sky fell directly on my face as I changed directions.[lr]
+[else]
+　向きが変わりフロントガラスから青空の日差しが入る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I grabbed a pair of sunglasses from the passenger compartment and put them on.[lr]
+[else]
+　助手席のダッシュボードからサングラスを取り出してかけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I changed gears, then flipped the radio switch a few times as I reached a wooded mountain path.[lr]
+[else]
+　樹冠の屋根の下を走る山道に出ると、ギアを切り替えて、ラジオの摘みを回す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I still couldn't hear anything through the rattling of the car, so I turned up the volume.[prcm]
+[else]
+　ガタガタ、と揺れる音ばかりが聞こえてくるので、ボリュームを上げた。[prcm]
+[endif]
+
+
+
+;///////
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule16" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued down the road along the sea after reaching the town at the foot of the mountain.[lr]
+[else]
+　山道を降りて街に出ると、そのまま海の方へと車を走らせた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The scenery slowly changed from suburbs with impressive western mansions to more urban restaurants and cafés as I drove closer to the center of the town.[lr]
+[else]
+　坂道の多い郊外にある立派な洋風の建物が並ぶ住宅街から、高架下に並ぶ食堂、飲食街を抜けて商店街のある中心区へと景色が流れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Finding a hotel sign, I parked the car at a nearby parking lot.[lr]
+[else]
+　ホテルの看板を見つけると、近くにあった駐車場に車を停めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I knocked on the booth by the parking lot and handed the keys to a middle-aged man watching a game of soccer inside.[prcm]
+[else]
+　駐車場の前のボックスをノックして、そこに詰めて携帯テレビで野球中継を観ていた中年の男に鍵を渡した。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted a park with a locomotive exhibit in the center as I left the parking lot. A bunch of children were playing on its roof.[lr]
+[else]
+　駐車場を出ると目の前にある公園には、任期を終えた機関車が展示されており、その屋根の上で子供が遊んでいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the hotel's sign one more time, then continued down to the shopping district through the park's southern exit.[prcm]
+[else]
+　公園からホテルの看板の辺を確認して、公園の南角にある入口から商店街へと入った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+[backlay]
+;★夜の商店街を撮影
+[fbfscale_image storage="bg108" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I passed by a loud pachinko parlor that reeked of tobacco smoke, and turned the corner by a clothes store to find three cheap hotels lined up next to each other.[lr]
+[else]
+　商店街の入口にありがちなパチンコ屋の騒音とタバコの臭いを過ぎて、左の商店を眺めながら三つ目のアーチの角にある和服店を曲がったところに、安いホテルが三軒並んであった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+From the signs in front of them, it seemed like they all cost about the same.[lr]
+[else]
+　手前から順番に看板を見ると、どれもほとんど変わらない値段だった。[lr]
+[endif]
+
+[r]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+;★安宿のカウンター
+;[backlay]
+;[fbfscale_image storage="bg00" page=back layer=base]
+;[trans method=universal rule="rule10" vague=50 time=800]
+;[wt]
+;[wait time = 500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I chose the one in the middle, seeing how it advertised its offering of hot springs, and passed through the automatic glass doors to reach the counter.[lr]
+[else]
+　二番目にあった温泉のあるホテルを選ぶと、「藤ノ荘」と銘のあるガラスの自動ドアを抜けて、フロントカウンターにつく。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se149.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Moments after pushing the bell on the counter, a young man in a suit emerged from the door on the other side.[prcm]
+[else]
+　呼び鈴を鳴らすと、直ぐにスーツを着た若い男が奥から出てくると挨拶をした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Welcome.[」][lr]
+[else]
+　「いらっしゃいませ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello. I'd like to book a room for two nights.[」][lr]
+[else]
+　「一人、二泊三日で部屋を借りたいんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The man fiddled with a machine behind the counter.[lr]
+[else]
+　若い男が、カウンター向こうの端末を操作する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were two empty piercing holes in his right ear.[prcm]
+[else]
+　右耳にピアス穴の跡が二つあった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We have available rooms on the second and fourth floors. Is there a particular floor you would prefer?[」][lr]
+[else]
+　「二階の角部屋と四階の部屋が空いています。ご希望はございますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Either would be fine.[」][lr]
+[else]
+　「どっちでも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Understood.[」][lr]
+[else]
+　「畏まりました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, wait. Do you have a room facing the mountains?[」][lr]
+[else]
+　「ちょっと待って、山側の部屋はあるかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The man shifted his gaze to the machine again.[prcm]
+[else]
+　若い男が再び端末に目を落とした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes. On the fourth floor.[」][lr]
+[else]
+　「四階に一室ございます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll take that one, then.[」][lr]
+[else]
+　「じゃあそこに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Understood.[」][lr]
+[else]
+　「畏まりました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Would you prefer eastern or western food for dinner?[」][lr]
+[else]
+　「ご夕食は、和食と洋食どちらになさいますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the clock on the wall and saw that it was around seven o'clock.[prcm]
+[else]
+　カウンターの奥にかけてある時計を見ると、午後七時を指していた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll eat out tonight.[」][prcm]
+[else]
+　「今夜は外で食べるよ」[prcm]
+[endif]
+
+
+;//////
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg108" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took my wallet out and left all of my bags in the room before going to the shopping district.[lr]
+[else]
+　財布だけ取り出すと手荷物を部屋に置いて、身軽になった足で商店街に戻った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued down a road covered by a huge, arched roof. Through some of its glass panels, I could see the gray sky looming above.[lr]
+[else]
+　天井のアーチは高く、ところどころにガラスがはめ込まれており、どんよりとした灰色の空が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The store in front of me had its shutters down. There was a picture painted on it.[lr]
+[else]
+　手前の店はシャッターが閉まっており、シャッターにはイラストが描かれている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A child in a straw hat, holding an insect net, was running around in a green field.[lr]
+[else]
+　丸い野原を麦わら帽子の子供が虫編みを持って走っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a yellow car behind him.[prcm]
+[else]
+　子供の隣には黄色い車があった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were all sorts of establishments around every corner, but most of them had notices posted on their entrance that stated they were closed for the holidays.[lr]
+[else]
+　支柱ごとに店がふたつ程の軒が並んでいたが、多くの店が定休日や閉店の張り紙を出していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued down the road, all the while inspecting the many closed shutters, and reached the end of the shopping district after only a few minutes of walking.[prcm]
+[else]
+　シャッターのイラストを眺めながら歩くと、数分で商店街の終わりまで歩いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a breakwater a bit further from where the arched roof ended.[lr]
+[else]
+　商店街の入口のアーチの向こうに、防波堤が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The breeze coming from the other side brought the scent of the sea to my nostrils.[prcm]
+[else]
+　べたつく潮風にのって、潮の香りがした。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[playse buf = 2 storage=se25.ogg]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+[backlay]
+[playse buf = 1 storage=se29.ogg]
+[fbfscale_image storage="bg106" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked around and entered a café at the edge of shopping district.[lr]
+[else]
+　周りを見回して、商店街の端にある喫茶店に入った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A lone old man with his white hair combed back from the forehead stood in the empty establishment.[lr]
+[else]
+　客はいない店内のカウンターに、白髪というよりは銀に近い髪をオールバックにした小柄の老人がいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He wore a well-ironed white shirt and a black apron.[prcm]
+[else]
+　老人は皺のない白いカッターに黒いエプロンをつけていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What will you be ordering?[」] the old man asked.[lr]
+[else]
+　「何にします？」と老人が聞いてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+While I was hesitating, he picked up a menu and handed it to me.[lr]
+[else]
+　私が決め兼ねていると、老人が少し離れたところにあるメニューを取って寄越した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can choose from Original, American, Espresso, Viennese, and Ice.[」][prcm]
+[else]
+　喫茶メニューはオリジナル、アメリカン、エスプレッソ、ウィンナー、アイスとあり、特に豆の種類については記載されていない。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, do you call Ice 'Rekko' in these parts?[」][lr]
+[else]
+　「ねえマスター。[l]こっちだとアイスのことをレーコーっていうの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The younger generation no longer does.[」][lr]
+[else]
+　「若いもんは言わないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうなんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Would you like to order Ice?[」][lr]
+[else]
+　「アイスにするのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]One Original, please.[」][prcm]
+[else]
+　「オリジナルひとつ」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I once saw a waiter making coffee from an instant pack when I ordered Ice at a café.[lr]
+[else]
+　以前どこかの喫茶店でアイスを頼んだとき、市販の紙パック珈琲から注がれていたのをカウンター席で目撃したことがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That was the last time I ever ordered it.[prcm]
+[else]
+　それで殆どの場合、私はアイスを選ばなくなった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This establishment might have kept proper blends for Ice orders, but there was no way of telling without asking them.[lr]
+[else]
+　この店ではちゃんとアイス用に淹れたものを用意しているのかもしれないが、聞いてみないとわからない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could've inquired about the difference between preparing Ice and Original blends, but that would've made it awkward if I decided to order something else.[lr]
+[else]
+　例えば、アイス珈琲とオリジナルで珈琲の入れ方は違うのだろうかなどと質問しても良かったが、聞いた上で別のものを頼むのも気が引ける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Most of my acquaintances might've considered me a person who voiced whatever was on her mind without reservation, but I actually took deliberate care to think things through before speaking up.[lr]
+[else]
+　私はあけすけに物を言うように思われがちであるが、これでも結構気を使っているのだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]One Original. Understood,[」] the old man mumbled,[r]
+almost as if he was talking to himself.[prcm]
+[else]
+　「オリジナルひとつね」と老人は他に誰もいないカウンターで、誰ともなく呟くように言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you have any newspapers here?[」][lr]
+[else]
+　「新聞ある？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We do.[l] It's behind that pot.[」][lr]
+[else]
+　「あるよ。[l]そこの鉢の後ろだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He pointed at the potted plant on the side of the counter.[lr]
+[else]
+　と、カウンター横の鉢植えを指さした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I circled around it to find a well-hidden newspaper stand.[lr]
+[else]
+　回り込むと、席からは隠れるような位置に新聞置きの二段棚があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had several newspapers of various dates, with the newest one being on top.[lr]
+[else]
+　いくつか置いてある新聞の日付はバラバラで、重なっている新聞は下に行くほど古い日付になっていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I randomly picked one up and returned to the counter.[prcm]
+[else]
+　重なっている中から適当にひとつを取り出すと、カウンターの席に戻る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The bubbly sound of coffee being siphoned reached my ears as I opened the newspaper.[lr]
+[else]
+　新聞を開くとコポコポ、とサイフォンコーヒーの沸き立つ音が聞こえてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the column located in the corner of the page.[lr]
+[else]
+　一面の隅にあるコラムニストの一言記事を読む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was a piece complaining about what some politician said or did.[lr]
+[else]
+　政治家のある発言について日和見だと、台所用品に例えて批判する記事が書かれていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I flipped over to the economics section and read the article with a large picture attached.[lr]
+[else]
+　それから、経済面を開いて大きな写真付きの記事を読む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I skimmed through a few more pages, and...[prcm]
+[else]
+　あとの記事は適当に流し見した。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 1 storage=se30.ogg]
+[fbfscale_image storage="bg107" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here you are. The blend you have ordered.[」][lr]
+[else]
+　「はい、ブレンドお待ちどう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][lr]
+[else]
+　「どうも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pushed the newspaper aside to let the old man place my cup of coffee on the counter.[lr]
+[else]
+　私が新聞をどけると、老人のマスターが袖を持ってカウンター越しにコーヒーを置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up the cup with one hand, took a sip, and placed it back on the saucer.[prcm]
+[else]
+　片手でカップを取ると一口、口に含んでからソーサーに戻した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A plastic sheet covered the counter. There was a black and white picture of a steamboat on the other side of it.[lr]
+[else]
+　カウンターにはビニールシートが敷かれていて、白黒の蒸気船の写真が挟んである。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I also spotted a model of Titanic further beyond the counter.[lr]
+[else]
+　カウンターの向かいにはタイタニック号の模型が飾ってあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I rolled up the newspaper.[prcm]
+[else]
+　新聞のページをひとつ捲る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is the port nearby?[」][lr]
+[else]
+　「マスター、この辺りって船着場は近くかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's right outside the shopping district.[」][lr]
+[else]
+　「そこから商店街を出たら見えるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] Thanks.[」][prcm]
+[else]
+　「そうかい。[l]有難う」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you one of them tourists?[」][lr]
+[else]
+　「あんた旅行者か何かかね？」[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, something like that, I guess.[」][lr]
+[else]
+　「まあそんなもんかな」と答えたが老人は何も言わなかった。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I came here to visit my friend,[」] I added.[prcm]
+[else]
+　「古い友人を訪ねてきたんだ」と付け加えてみても、老人は黙ったままだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Last I heard, a big ship could be heading this way soon.[」][lr]
+[else]
+　「もうすぐここいらに寄港する船があるらしいんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can see countless ships in the port.[」][lr]
+[else]
+　「船なら港に行けばいくらでもあるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm talking about a really huge thing. Like this model you've got there.[」][lr]
+[else]
+　「そこの模型みたいな大型旅客船」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at the Titanic behind the counter.[lr]
+[else]
+　私はカウンターの向こうの模型を指さした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The old man closed one of his eyes.[prcm]
+[else]
+　そっちを見るときに老人のマスターは片目を閉じた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You want to see a ship like that?[」][lr]
+[else]
+　「船を見たいのか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, sure.[」][lr]
+[else]
+　「まあ、そんなところ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]An unusual wish, coming from a young girl like you.[」][lr]
+[else]
+　「若いのに珍しいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][prcm]
+[else]
+　「そう？」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We've got planes these days.[l] Only my old geezer friends ever talk about ships anymore.[」][lr]
+[else]
+　「今は飛行機があるからね。[l]私の古い友人にはいくらか船好きもいるけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, it's not like I'm an actual ship enthusiast or anything, either.[」][lr]
+[else]
+　「私は別に詳しいわけじゃないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The old man stepped out of the counter and picked up a thin hardcover book from the rack I where I got that newspaper earlier.[lr]
+[else]
+　老人のマスターはカウンターを出ると新聞を取った棚からハードカバーの薄い本を取ってきた。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He placed it on the counter and opened it up on a color picture depicting a ship.[prcm]
+[else]
+　本をカウンターに置いて開くと、船のカラー写真があった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There are as many types of ships as there are birds.[」][lr]
+[else]
+　「船にも鳥みたいに色々な種類がある」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The book had different ship models on each page, with articles on their history.[lr]
+[else]
+　本の各ページには暦のイラストの上に、その時期にあった船の写真を載せていた。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A long boat with countless paddles sticking out of its walls like legs of a caterpillar. Then a ship with a thick mast and a huge sail casting a shadow on its deck.[lr]
+[else]
+　百足のように沢山の櫂を生やした長船、大きなマストに帆を張った船。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A ship with a chimney on top, wisps of smoke rising from it toward the sky. The old man's wrinkled hands turned one page after the other.[prcm]
+[else]
+　轟々と煙を吐く煙突を持った大船、と老人の皺のある手がゆっくりとページを捲っていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ships have evolved with time, much like everything else, always striving for the most effective way to travel over water.[l] Paddling eventually evolved into sails and wind power, which, in turn, paved the way for steam engines and eventually propellers.[」][lr]
+[else]
+　「船は水上を行くための推進機関を発達させて、形を変えたり大きなやつが登場していったんだ。[l]櫂で水を掻いて進む手漕ぎ船。[l]帆で風を受けて進む帆船。[l]蒸気で水車を回す蒸気船。[l]同じ蒸気機関でもプロペラスクリューを回す船もある」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The model over there is a steamship, right?[」][lr]
+[else]
+　「あの模型の船はこの蒸気船になるのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] You don't see them much anymore.[」][lr]
+[else]
+　「そうなる。[l]蒸気機関は古いから、最近は見ないけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][prcm]
+[else]
+　「へえ、そうなの？」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Most of the passenger ships have diesel engines these days.[l] Steamships went out of fashion over half a century ago.[l] This five-story floating hotel cruise is a diesel ship, for example.[」][lr]
+[else]
+　「旅客船の主流はジーゼルの機関船だよ。[l]あんな蒸気船の実用旅客船があったのは半世紀くらい昔の話さ。[l]この五階建てのでかいのがジーゼル機関の豪華客船だよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He pointed at one of the pictures in the book.[prcm]
+[else]
+　と、一隻の旅客船を指さした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It looks like a whole city floating on the water.[l] We might not have castles in the skies just yet, but I guess we do have some on water.[」][lr]
+[else]
+　「街のようだね。[l]空飛ぶ城じゃなくて、これは泳ぐ都市みたいだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Crossing the ocean on water became unpractical with the development of the jet engine and the oil crisis following the war.[l] Most of the passenger ships these days are cruises where being on a ship is the main attraction rather than reaching your destination.[l] They have restaurants, bars, even movie theaters on board.[」][lr]
+[else]
+　「大戦後にはジェット機が発展したのと、オイルショックがあったことで、輸送機関としての客船は衰退していったのさ。[l]現代の旅客船っていうのは、実用旅客というよりは船での移動自体を楽しむクルーズ船が主流だよ。[l]レストランやプールやバー、映画館みたいな設備が揃っている」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I saw one of those on TV.[」][lr]
+[else]
+　「そういうのは、テレビで観たことがあるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This one, with the chimney sticking out, is a steamship.[」][prcm]
+[else]
+　「こっちの煙突が突き出ているのが蒸気船だよ」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Like Titanic?[」][lr]
+[else]
+　「これはタイタニック号？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's the most famous steamship, I suppose.[l] It comes from the period right before the war, the very pinnacle of steamship history.[l] Back in those days, they still made them with the intent to cross the ocean.[」][lr]
+[else]
+　「有名な蒸気機関の豪華客船と言えばまあそうなるわな。[l]戦前は、まだ蒸気船が輸送機関として活躍していた時代だ。[l]外洋航路を行く豪華客船も、この頃にはまだたくさん造られていたんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is this one with wheels also a steamship?[」][lr]
+[else]
+　「この風車付きの船も蒸気船なのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at the picture of a ship with huge, funny-looking wheels.[prcm]
+[else]
+　側面に推進機関用の大きな風車を付けた船の写真を指した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This one's called a paddle steamer, one of the earlier steamships.[l] Perry's flagship, which came to Japan during the Perry Expedition, was just like it.[l] There are also some paddle steamers that have their turbines in the back, like this one.[」][lr]
+[else]
+　「これは外輪船といって、初期の蒸気船になる。[l]ペリー黒船艦隊の旗艦フリゲートもこの形だよ。[l]あとはこんな風に、船尾に風車をつけた外輪船もある」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He flipped the page.[prcm]
+[else]
+　と、ページをめくって船尾風車の外輪船の写真を出した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So ships with sails went out of fashion even before those?[」][lr]
+[else]
+　「帆船はそれよりも以前かい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They served as the primary means of transport until the nineteenth century, when steamships were invented in Europe.[」][lr]
+[else]
+　「帆船みたいなのは、1800年中頃の北大西洋航路に蒸気船が登場する以前の船になるね」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He went a few pages back.[prcm]
+[else]
+　ページをペラペラと捲っていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]As you can see, they utilize wind to propel themselves forward.[l] They've been in use throughout the entirety of the Age of Exploration, and have evolved in many ways in their own right.[l] If you look carefully, you can notice that the positions and shapes of the sails are different depending on the period and sometimes even the country in question.[」][lr]
+[else]
+　「見た目通り、風をうけて推進力にする船なんだ。[l]大航海時代の一五世紀～十八世紀には、インド航路などの開拓のために、いろいろな改良が加えられている。[l]こんな風に、時代や国ごとに、帆の位置や形が違っている」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He showed me a page with lots of ship pictures on a world map.[prcm]
+[else]
+　世界地図の上に、その国ごとの帆船の写真が載った見開きのページを見せた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is this the Santa Maria?[」][lr]
+[else]
+　「これはサンタマリア号？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You could say that, in a way. It's a sailboat with three masts, which is the same model as the Santa Maria that Columbus used to cross the Atlantic Ocean.[」][lr]
+[else]
+　「まあ似たようなものだね。[l]甲板と三本のマストを備えた帆船はキャラック船と言って、コロンブスが初めて大西洋横断をしたサンタマリア号もキャラック船の一種になる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave the steamship model behind the counter another look.[prcm]
+[else]
+　もう一度、模型の蒸気船を眺めた。[prcm]
+[endif]
+
+
+;//////
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg106" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After finishing my light meal, I took out some change from the pocket of my jacket that I hanged on the backrest of the chair.[lr]
+[else]
+　軽食を済ませて、椅子にかけていた上着のポケットから小銭を出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you.[」][lr]
+[else]
+　「ご馳走様」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was my pleasure.[l] Are you going to the port now?[」][lr]
+[else]
+　「毎度。[l]船着場には行くのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know. I guess I'll think about it after I see how cold it is outside,[」] I answered while sliding my hands into the sleeves of my jacket.[prcm]
+[else]
+　「どうしようかな、出てから考えるよ」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　上着の袖に腕を通しながら、返事をした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hm.[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks for all the information, by the way. I had fun.[」][lr]
+[else]
+　「色々と教えてくれて有難う」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I should be the one thanking you. I don't get many opportunities to talk to young women in this place at my age.[l] Don't hesitate to pay our establishment another visit, if you feel like it.[」][lr]
+[else]
+　「こちらこそ、久々に若い女性と話ができたよ。[l]機会があれば、また寄って欲しいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll think about it.[」][lr]
+[else]
+　「考えておくよ」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 1 storage=se25.ogg]
+[fbfscale_image storage="bg108" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time = 500]
+[playse buf = 2 storage=se29.ogg]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With that, I left the place and stepped out into the poorly lit shopping district. There were even more closed shutters now compared to when I entered the café.[lr]
+[else]
+　そう言って商店街に出ると、申し訳程度にある街灯しかない薄暗い商店街には、先程よりもシャッターのイラストが増えていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought about visiting the port, but then changed my mind and went straight to the hotel instead.[prcm]
+[else]
+　商店街の外へ出ようとしてから、引き返して安ホテルへと戻った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="153.ks" target=*153
+
+

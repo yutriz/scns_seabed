@@ -1,0 +1,464 @@
+*initialize
+; 右クリックでセーブ画面を閉じられるように右クリックの設定を変更します
+[rclick jump=true storage="save.ks" target=*close enabled=true]
+; 現在の状態をメモリ上の栞に保存しておきます
+[tempsave place=1]
+; メッセージ履歴の出力・表示を無効にします
+[history output=false enabled=false]
+[iscript]
+for (var i=0; i < kag.back.layers.count; i++)
+ {
+    kag.back.layers[i].fillRect(0, 0, kag.scWidth, kag.scWidth, 0x00FFFFFF);
+    kag.back.layers[i].visible=false;
+ }
+[endscript]
+[iscript]
+ {
+     // システムボタンを使っていて、メッセージレイヤが表示されている時は onMessageHiddenStateChanged を呼び出します
+    if(typeof global.exsystembutton_object != "undefined" && kag.fore.messages[0].visible)
+         exsystembutton_object.onMessageHiddenStateChanged(true);
+     var i;
+     var elm = %["visible" => false];
+     // 全ての前景レイヤを非表示にします
+    for(i=0;i<kag.numCharacterLayers;i++)
+         kag.fore.layers[i].setOptions(elm);
+     // 全てのメッセージレイヤを非表示にします
+    for(i=0;i<kag.numMessageLayers;i++)
+         kag.fore.messages[i].setOptions(elm);
+     // セーブデータの情報が無い場合は新しく作成します
+    if(typeof sf.saveinfo == "undefined")
+     {
+         sf.saveinfo = new Dictionary();
+         sf.saveinfo.page = 1; // 現在選択されているページ
+         sf.saveinfo.latest = void; // 最新のセーブデータ（セーブデータが無い場合は void）
+    }
+     // 一時変数を作成します
+    tf.saveload = new Dictionary();
+ }
+[endscript]
+; 最初にセーブ画面を表示する時は以下のメソッドを定義します
+[if exp="typeof global.update_saveinfo == 'undefined'"]
+[iscript]
+// セーブデータ情報の表示を更新するメソッドを定義します
+function update_saveinfo(thumbnail)
+ {
+    // レイヤに表示されている内容をクリアします
+    
+    // 日付情報クリア
+    kag.back.messages[kag.numMessageLayers - 11 + thumbnail].clear();
+    // ノード名称情報クリア
+    kag.back.messages[kag.numMessageLayers - 11 + thumbnail + 5].clear();
+    
+     // 更新するセーブデータの番号を n に代入します
+    var n = thumbnail;
+    var saveDate = kag.getBookMarkDate(n);  // セーブデータの日付を取得して saveDate に代入します
+    
+    if(saveDate != "")
+     {
+         // セーブデータがある場合
+        var d = new Date(saveDate);  // セーブデータの日付を持つ Date クラスのオブジェクトを生成します
+        var num_day = d.getDay();  // 曜日を取得します
+        var str_day;
+        
+        if(num_day == 0)
+          str_day = "SUN";
+        else if(num_day == 1)
+          str_day = "MON";
+        else if(num_day == 2)
+          str_day = "TUE";
+        else if(num_day == 3)
+          str_day = "WED";
+        else if(num_day == 4)
+          str_day = "THU";
+        else if(num_day == 5)
+          str_day = "FRI";
+        else
+          str_day = "SAT";
+        
+        var info = [];
+         // info[1] : SCENARIO の項目に表示する情報 → セーブデータの見出し
+        info[1] = kag.getBookMarkPageName(n);
+         // info[2] : TIME の項目に表示する情報 → セーブデータの作成日時
+        info[2] = d.getYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate() + " (" + str_day + ") " + '%02d'.sprintf(d.getHours()) + ":" + '%02d'.sprintf(d.getMinutes());
+         // 表示する情報をレイヤに書き込みます
+        kag.back.messages[kag.numMessageLayers - 11 + thumbnail].processCh(info[2]);
+		
+		// FBF: Change font.
+		kag.back.messages[kag.numMessageLayers - 11 + thumbnail + 5].setFont(%['size' => 32, 'shadow' => false]);
+		kag.back.messages[kag.numMessageLayers - 11 + thumbnail + 5].font.mapPrerenderedFont("ptserif32.tft");
+		
+        kag.back.messages[kag.numMessageLayers - 11 + thumbnail + 5].processCh(info[1]);
+     }
+ }
+
+function update_thumbnail(savedataNo){
+    
+     // 更新するセーブデータの番号を n に代入します
+    var n = savedataNo;
+    var saveDate = kag.getBookMarkDate(n);  // セーブデータの日付を取得して saveDate に代入します
+    
+    if(saveDate != "")
+     {
+        // セーブデータがある場合
+        
+        // 引数指定番対象前景レイヤへの参照を変数 layer0 に代入します
+        var layer0 = kag.back.layers[n + 9];
+        // 引数指定番対象前景レイヤへ画像をロードします
+        layer0.setPos(kag.FBFScale(97), kag.FBFScale(102) + n * kag.FBFScale(99));
+        layer0.loadImages(%['storage' => kag.getBookMarkFileNameAtNum(n)]);
+        // 親レイヤを 引数指定番対象前景レイヤとして一時レイヤを作ります
+        var tempLayer = new Layer(kag, layer0);
+        // 一時レイヤに 0 番の前景レイヤの画像をコピーします
+        tempLayer.assignImages(layer0);
+        // 拡大後の幅(newWidth)と高さ(newHeight)を計算します
+        var newWidth = kag.FBFScale(100);
+        var newHeight = kag.FBFScale(74);
+        // 0 番の前景レイヤの幅と高さを拡大後の幅と高さに合わせます
+        layer0.setImageSize(newWidth, newHeight);
+        layer0.setSizeToImageSize();
+        layer0.stretchCopy( 0, 0, newWidth, newHeight, tempLayer, 0, 0, tempLayer.imageWidth, tempLayer.imageHeight, stLinear);
+        // 一時レイヤの削除
+        invalidate tempLayer;
+        layer0.visible = true;
+     }
+
+     if(saveDate == "")
+      {
+        kag.back.layers[n + 9].visible = false;
+      }
+}
+
+// サムネイルの上にマウスカーソルが乗った時に呼び出されるメソッドを定義します
+function info_onenter(onNo)
+ {
+     if(onNo==1)
+       kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]);
+     else if(onNo==2)
+       kag.se[6].play(%["storage" => "se123.ogg", "loop" => false]);
+     else if(onNo==3)
+       kag.se[7].play(%["storage" => "se123.ogg", "loop" => false]);
+     else if(onNo==4)
+       kag.se[8].play(%["storage" => "se123.ogg", "loop" => false]);
+     else
+       kag.se[9].play(%["storage" => "se123.ogg", "loop" => false]);
+
+     kag.fore.layers[onNo].visible = false;
+     // ロールオーバー用画像をサムネイルの所に表示します
+     kag.fore.layers[6].setPos(kag.FBFScale(84), kag.FBFScale(88) + (onNo - 1) * kag.FBFScale(99));
+     kag.fore.layers[6].visible = true;
+ }
+
+// サムネイルの外にマウスカーソルが出て行った時に呼び出されるメソッドを定義します
+function info_onleave(leaveNo)
+ {
+    // ロールオーバー用画像を非表示にします
+    kag.fore.layers[6].visible = false;
+    kag.fore.layers[leaveNo].visible = true;
+ }
+
+function load_onenter()
+ {
+    kag.se[9].play(%["storage" => "se123.ogg", "loop" => false]); 
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[15].visible = false;
+    kag.fore.layers[16].visible = true;
+ }
+
+function load_onleave()
+ {
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[16].visible = false;
+    kag.fore.layers[15].visible = true;
+ }
+
+function close_onenter()
+ {
+    kag.se[8].play(%["storage" => "se123.ogg", "loop" => false]); 
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[15].visible = false;
+    kag.fore.layers[17].visible = true;
+ }
+
+function close_onleave()
+ {
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[17].visible = false;
+    kag.fore.layers[15].visible = true;
+ }
+[endscript]
+[endif]
+
+; レイヤを必要な数（前景レイヤ×１８，メッセージレイヤは１１枚追加）確保します
+[laycount layers=18 messages="&kag.numMessageLayers + 11"]
+
+[clickskip enabled=false]
+[position page=back layer=message1 visible=false]
+
+*initialize_from_load
+[eval exp="f.CpStartFlg = 0"]
+[clickskip enabled=false]
+; 背景レイヤに画像（クリッカブルマップ）を読み込みます
+[fbfscale_image layer=base storage="bgimage\savemenu" page=back]
+; 前景レイヤの設定をします
+
+; # ダミー
+[fbfscale_image layer=0 storage="bgimage\saveimage\saveline_f" page=back visible=false left=84 top=88 opacity=255]
+; #1: SAVE1非選択フィールド
+[fbfscale_image layer=1 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=88 opacity=255]
+; #2: SAVE2非選択フィールド
+[fbfscale_image layer=2 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=187 opacity=255]
+; #3: SAVE3非選択フィールド
+[fbfscale_image layer=3 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=286 opacity=255]
+; #4: SAVE4非選択フィールド
+[fbfscale_image layer=4 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=385 opacity=255]
+; #5: SAVE5非選択フィールド
+[fbfscale_image layer=5 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=484 opacity=255]
+
+
+; #: セーブデータ選択画像
+[fbfscale_image layer=6 storage="bgimage\saveimage\saveline_t" page=back visible=false]
+
+; #: セーブ画面表題用
+[fbfscale_image layer=7 storage="bgimage\saveimage\save_gamen" page=back visible=true left=0 top=0]
+
+
+; #1: SAVE1サムネ
+[fbfscale_layopt layer=9 page=back visible=false left=97 top=102 opacity=255]
+; #2: SAVE2サムネ
+[fbfscale_layopt layer=10 page=back visible=false left=97 top=201 opacity=255]
+; #3: SAVE3サムネ
+[fbfscale_layopt layer=11 page=back visible=false left=97 top=300 opacity=255]
+; #4: SAVE4サムネ
+[fbfscale_layopt layer=12 page=back visible=false left=97 top=399 opacity=255]
+; #5: SAVE5サムネ
+[fbfscale_layopt layer=13 page=back visible=false left=97 top=498 opacity=255]
+
+; #: 最新のセーブデータを表す画像(NEW!)
+[fbfscale_image layer=14 storage="bgimage\saveimage\save_new" page=back visible=false opacity=255]
+
+; #: モード変更ロード未選択クローズ未選択
+[fbfscale_image layer=15 storage="bgimage\saveimage\load_f_close_f" page=back visible=true left=530 top=30 opacity=255]
+; #: モード変更ロード選択クローズ未選択
+[fbfscale_image layer=16 storage="bgimage\saveimage\load_t_close_f" page=back visible=false left=530 top=30 opacity=255]
+; #: モード変更ロード未選択クローズ選択
+[fbfscale_image layer=17 storage="bgimage\saveimage\load_f_close_t" page=back visible=false left=530 top=30 opacity=255]
+
+; セーブデータ１の日時詳細表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 11)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=388 top=107 width=300 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+; セーブデータ２の日時詳細表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 10)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=388 top=206 width=300 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+; セーブデータ３の日時詳細表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 9)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=388 top=305 width=300 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+; セーブデータ４の日時詳細表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 8)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=388 top=404 width=300 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+; セーブデータ５の日時詳細表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 7)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=388 top=503 width=300 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+
+; セーブデータ１の見出し表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 6)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=310 top=144 width=400 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+; セーブデータ２の見出し表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 5)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=310 top=243 width=400 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+; セーブデータ３の見出し表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 4)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=310 top=342 width=400 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+; セーブデータ４の見出し表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 3)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=310 top=441 width=400 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+; セーブデータ５の見出し表示用メッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 2)"]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+[fbfscale_position left=310 top=540 width=400 height=30 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+
+; ダミーメッセージレイヤ
+[current layer="&'message' + (kag.numMessageLayers - 1)"]
+
+
+; すべての表示を初期化します
+;[call target=*update_all]
+; すべてのデータを表示する
+[eval exp="update_saveinfo(0)"]
+[eval exp="update_thumbnail(0)"]
+[eval exp="update_saveinfo(1)"]
+[eval exp="update_thumbnail(1)"]
+[eval exp="update_saveinfo(2)"]
+[eval exp="update_thumbnail(2)"]
+[eval exp="update_saveinfo(3)"]
+[eval exp="update_thumbnail(3)"]
+[eval exp="update_saveinfo(4)"]
+[eval exp="update_thumbnail(4)"]
+[call target=*update_new]
+
+[trans method = crossfade time=500]
+[wt]
+[clickskip enabled=true]
+; ユーザの操作を待ちます
+[s] 
+
+
+*saveclick
+; 既にセーブデータがある場合は上書き確認します
+; セーブデータが存在しないかまたは上書き確認ダイアログボックスで「はい」が選択された場合はセーブします
+[clickskip enabled=false]
+
+; If the save slot is unused, don't ask.
+[if exp="kag.getBookMarkDate(tf.saveload.thumbnail-1) == ''"]
+	[jump target=*fbfsavegame_yes2]
+	
+; Display Yes / No prompt for save overwrite.
+[else]
+
+	; Set message.
+	[if exp="kag.FBFPrepareLanguage() == 0"]
+		[eval exp="tf.saveMsg = 'Overwrite save in slot ' + tf.saveload.thumbnail + '?'"]
+	[else]
+		[eval exp="tf.saveMsg = '栞 ' + tf.saveload.thumbnail + ' をはさみますか？'"]
+	[endif]
+	
+	[eval exp="kag.FBFOnYesNoPromptStart()"]
+	[rclick target="*fbfsavegame_no" storage="save.ks" jump=true enabled=true]
+	[fbf_yesnowindow message="&tf.saveMsg" targetyes="*fbfsavegame_yes" targetno="*fbfsavegame_no"]
+	
+[endif]
+	
+[s] 
+
+; FBF: Save game? Yes.
+*fbfsavegame_yes
+
+[fbf_yesnowindow_clear]
+
+; Restore right click and current layer.
+[eval exp="kag.FBFOnYesNoPromptEnd();"]
+
+*fbfsavegame_yes2
+
+; FBF: Prevent clicking other slots because clicking another save during the fade effect causes undesired behavior.
+[mapdisable layer=base]
+[clickskip enabled=false]
+
+; このセーブデータの番号を sf.saveinfo.latest（最新のセーブデータの番号を記録しておく変数）にセットします
+[eval exp="sf.saveinfo.latest = tf.saveload.thumbnail-1"]
+
+; FBF: Set save name.
+[if exp="kag.FBFGetLanguage() == 0"]
+	[eval exp="kag.FBFSetPageName(&f.engPageName)"]
+[else]
+	[eval exp="kag.FBFSetPageName(&f.jpPageName)"]
+[endif]
+
+; データをセーブします
+[save place="&sf.saveinfo.latest"]
+
+; サムネイルの表示を更新します
+[eval exp="update_thumbnail(sf.saveinfo.latest)"]
+; 最新セーブデータ指示画像を更新します
+[call target=*update_new]
+; 画面下部のセーブデータ情報の表示を更新します
+ [eval exp="update_saveinfo(sf.saveinfo.latest)"]
+[trans method = crossfade time=500]
+[wt]
+
+; Commented out... what is there to end?
+;[endif]
+
+[backlay]
+; # ダミー
+[fbfscale_image layer=0 storage="bgimage\saveimage\saveline_f" page=back visible=false left=84 top=88 opacity=255]
+; #1: SAVE1非選択フィールド
+[fbfscale_image layer=1 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=88 opacity=255]
+; #2: SAVE2非選択フィールド
+[fbfscale_image layer=2 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=187 opacity=255]
+; #3: SAVE3非選択フィールド
+[fbfscale_image layer=3 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=286 opacity=255]
+; #4: SAVE4非選択フィールド
+[fbfscale_image layer=4 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=385 opacity=255]
+; #5: SAVE5非選択フィールド
+[fbfscale_image layer=5 storage="bgimage\saveimage\saveline_f" page=back visible=true left=84 top=484 opacity=255]
+[trans method = crossfade time=1]
+[wt]
+
+; FBF: Increased wait from 100 -> 400 because it was possible to crash the game with save -> close.
+[wait time=400]
+
+[image layer=base storage="bgimage\savemenu" page=fore]
+[image layer=base storage="bgimage\savemenu" page=base]
+[clickskip enabled=true]
+
+[s]
+
+; FBF: Save game? No.
+*fbfsavegame_no
+[fbf_yesnowindow_clear]
+
+; Restore right click and current layer.
+[eval exp="kag.FBFOnYesNoPromptEnd();"]
+
+; Call leave script on save slot to refresh its background.
+[iscript]
+	info_onleave(tf.saveload.thumbnail);
+[endscript]
+
+[s]
+
+*update_new
+[if exp="sf.saveinfo.latest !== void"]
+; 現在のページ内に最新のセーブデータがあればそのデータのサムネイルの所に New を表示します
+[fbfscale_layopt layer=14 page=back visible=true left=33 top="&120 + (sf.saveinfo.latest) % 5 * 99"]
+[else]
+; 現在のページ内に最新のセーブデータが無ければレイヤを非表示にします
+[layopt layer=14 page=back visible=false]
+[endif]
+[return]
+
+;Newの座標メモ
+;x33 y127 ;x33 y226 ;x33 y325 ;x33 y424 ;x33 y523
+
+*load
+[mapdisable layer=base]
+[jump storage="load.ks" target=*initialize_from_save]
+
+*close
+[if exp="f.loadFromTitle == 1"]
+[tempload bgm=false se=false place=1]
+@jump storage="first.ks" target=*fromload
+[endif]
+; セーブ画面表示前の状態を復元します(但し BGM は復元しません)
+; メッセージ履歴の出力・表示を有効にします
+[tempload bgm=false se=false place=1]
+; スナップショットをアンロックします
+;[unlocksnapshot]
+; rclick.ksでの右クリック設定に戻します
+;@rclick jump=true storage="rclick.ks" target="*ret" enabled=true
+;[iscript]
+;// システムボタンを使っていて、コンフィグ画面を表示する前にメッセージレイヤが表示されていた時は onMessageHiddenStateChanged を呼び出します
+;if(typeof global.exsystembutton_object != "undefined" && kag.fore.messages[0].visible)
+;     exsystembutton_object.onMessageHiddenStateChanged(false);
+;[endscript]
+
+@jump storage=rclick.ks target="*sub2"
+

@@ -1,0 +1,680 @@
+*169_3| Bedroom
+; *169_3|寝室
+[fbfstoretitle eng="Bedroom" jp="寝室"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle3"]
+
+[wait time=1500]
+[seopt buf=3 volume=30]
+[fadeinse buf = 3 storage=se185.ogg loop=true time=1500]
+[wf buf=3]
+[playbgm storage="bgm62"]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg129_4" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=3000]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+
+*| Bedroom
+; *|寝室
+[fbfstoretitle eng="Bedroom" jp="寝室"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+No matter where I looked, Sachiko was nowhere to be found.[lr]
+[else]
+　その部屋のどこを見ても[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子はいなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I considered the possibility of having mistaken the rooms, but after taking a better look, the sheets on the bed were obviously wrinkled.[prcm]
+[else]
+　部屋を間違えたのかとも思ったが、ベッドのシーツには皺が寄っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried coming up with the most likely possibilities for Sachiko not being here.[lr]
+[else]
+　私は佐知子がどこに行ったのか考えてみた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It wasn't exactly the time to go outside, but perhaps she couldn't sleep and wanted to take a walk in the night.[lr]
+[else]
+　今はとても外出するような時間ではないが、寝付けずに外を歩いている可能性はある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I also had the feeling it wouldn't be something so simple.[prcm]
+[else]
+　しかし、そんな簡単な話ではないような気がした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned my attention to the room.[prcm]
+[else]
+　私は頭の中から、この部屋に意識を戻す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was much colder in there than out in the corridor.[lr]
+[else]
+　室温が外の廊下に比べて異常に下がっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But its window was closed.[lr]
+[else]
+　部屋の窓はきっちりと閉まっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't quite understand how that could have happened.[lr]
+[else]
+　私は何が原因でそうなったのか全くわからなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I felt the room held the answers to her disappearance.[lr]
+[else]
+　それと同時に佐知子が消えたのもこの異変が関わっているような気がしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As such, I decided to investigate it.[prcm]
+[else]
+　私は考えながら部屋の中を調べた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The room seemed even darker than usual.[lr]
+[else]
+　よく見ると部屋はいつもより暗いような気がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could barely make out the contours of the plants in the corner.[lr]
+[else]
+　部屋の隅にある観葉植物を見ると、若干その輪郭がぼやけて見えている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was possible that my eyes were just tired, or there was something else I didn't think of, but... I had a bad feeling about this.[lr]
+[else]
+　部屋の中の明かりが弱まっているのか単に目が疲れているのか、原因はよくわからないがあまり良い予感はしなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I raised my face after checking the other side of the bed, I finally realized there was something left on top of it.[prcm]
+[else]
+　ベッドの裏を確認してから顔を上げたとき、私はようやくベッドの上にあるものに気がついた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the book that Sachiko used to read all the time after coming here.[lr]
+[else]
+　それは、佐知子がここに来てからよく読んでいた本だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked it up to realize it was not a book, but rather a notebook with a leather cover.[lr]
+[else]
+　手に取ってみると、それは本ではなくて薄手の革の手帳だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was nothing written on either the cover or the back.[lr]
+[else]
+　表にも裏にも何も書かれていない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked its weight with one hand.[prcm]
+[else]
+　片手で持って重さを確かめる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a quick glance around the room, I returned my attention to the notebook.[lr]
+[else]
+　もう一度部屋を見回してから手帳を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt hesitant to read her personal notes, but I had no other leads.[lr]
+[else]
+　佐知子の手帳を勝手に開くのは気が引けたが、私はどうにもこの手帳が気になり始めていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Besides, Sachiko had never left it like this before.[lr]
+[else]
+　佐知子が手帳をこんな風に置いて行った事はなかったし、そもそも他に手がかりになりそうなものはなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made up my mind and opened it.[prcm]
+[else]
+　私は意を決してその手帳を開くことにした。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[playse buf = 1 storage=se57.ogg]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item01_2" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were no separate sections to indicate schedules — instead, it was just a regular notebook with ruled lines.[lr]
+[else]
+　手帳にはスケジュールの枠線などはなく、ルーズリーフのように罫線が入っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+One neatly-handwritten line followed the other, making up sentence after sentence.[prcm]
+[else]
+　そこに割と綺麗な文字の手書きの文章があった。[prcm]
+[endif]
+
+
+;＊
+[playse buf = 1 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I failed to buy the extra cheap cuttlefish for a hundred yen, so I bought two sea breams for two hundred yen instead.[」][lr]
+[else]
+　――スーパーで安売りの剣先イカ百円は買えなかったが、鯛のアラがふたつ二百円で売っていたので買った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I paid a hundred yen for my daikon, but then found one at the grocery that only cost eighty.[」][lr]
+[else]
+　――大根は一本で百円だったが、あとで寄った八百屋で八十円のものがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's probably best to buy your fruit and vegetables at places like that.[」][prcm]
+[else]
+　――やはり野菜は八百屋のものを見たほうがいい。[prcm]
+[endif]
+
+;＊
+
+[playse buf = 1 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I went on a drive to the mountains with Sachiko.[」][lr]
+[else]
+　――佐知子と山にドライブに行った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]On our way back, Sachiko spotted a pussy willow.[」][lr]
+[else]
+　――帰りに、佐知子がネコヤナギを見つけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When I plucked one of its branches for ourselves, she worriedly asked if it was okay.[」][lr]
+[else]
+　――私がひとつ枝を取ると、佐知子は勝手に取って大丈夫かと心配した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But when we got home, she decorated our entrance with it.[」][prcm]
+[else]
+　――でも、佐知子は家に着くと玄関にそれを飾った。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko's name came up, so I assumed this note was most likely written by Takako.[lr]
+[else]
+　佐知子の名前が出てきて、おそらくこの文章は[ruby text="たか"]貴[ruby text="こ"]呼が書いたものであると推測出来た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At first, the notes seemed to mostly be about cooking, but as they went on, I realized she was noting down every single detail with little to no consistency.[lr]
+[else]
+　初めは料理用のメモかと思われたが、どうやら取り留めのない日記のようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The date on the first page was from a year ago, and the notes continued jumping ahead days — sometimes even weeks — until they suddenly ceased, leaving most of the notebook blank.[lr]
+[else]
+　手帳の最初の日付は一年前くらいだったが、その日付は飛び飛びで進み、手帳の殆どはまだ白いままだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the later pages to confirm if it was really blank, then flipped through the entire thing again, trying not to get too caught up in the details.[prcm]
+[else]
+　私は後半が空白のままであることを確認したあと一度手帳を閉じ、今度は頭から詳細には読まずにパラパラとページを捲る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a point where the writing suddenly changed.[lr]
+[else]
+　書体が明らかに変わっている部分がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed like some of these were written by Sachiko.[prcm]
+[else]
+　貴呼が書いた日もあれば、佐知子が書いた日もあるようだった。[prcm]
+[endif]
+
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=200]
+[wt]
+[wait time=2500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The room suddenly grew completely dark. Turning around, I noticed that the door had closed behind me.[lr]
+[else]
+　ふと部屋が暗くなり、振り返ると音もせず扉が閉まっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Thinking that Sachiko might have returned, I closed the notebook.[lr]
+[else]
+　私は一瞬、佐知子が部屋に戻ったのかと思って手帳を閉じた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But it wasn't anything anywhere near as nice.[lr]
+[else]
+　しかし、状況はそんなに優しいものではなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As my eyes slowly grew used to the dark, I couldn't believe what I was seeing.[lr]
+[else]
+　目が徐々に慣れてくると、私は私の目を疑った。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[fadese buf=3 time=3000 volume=60]
+[backlay]
+[fbfscale_image storage="bg05_8" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The foliage plants by the door had disappeared, the bookshelf changed into a wardrobe, and there was now a new closet by the wall.[lr]
+[else]
+　入り口近くにあった観葉植物はなくなり、本棚は箪笥に変わり、あるはずのないクローゼットがある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before I knew it, I was standing in a completely unfamiliar room.[lr]
+[else]
+　いつの間にか知らない部屋に立っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt a bitter chill rise up my spine as I confirmed that the notebook in my hands hadn't changed.[prcm]
+[else]
+　持っていた手帳だけは変わっていないことを確認したとき、強烈な寒気を背後に感じた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around to see an unfamiliar bed with curtains.[lr]
+[else]
+　振り返ると見覚えのないカーテン付きのベッドがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled one of the curtains aside and looked at the bed.[lr]
+[else]
+　半分開きかけたままのカーテンに手を伸ばしてベッドを覗いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was sleeping on her back, with Sachiko nestled against her.[lr]
+[else]
+　そこには仰向けの貴呼と、寄り添うように眠る佐知子の姿があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+What was going on?[prcm]
+[else]
+　一体何が起きているのだろう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Trying to keep up with this unexpected situation, I gave my surroundings another scrutinizing look.[lr]
+[else]
+　想定外のことを理解するために頭を回し、目の前にあるものをもう一度よく確認する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I started with Takako's face.[lr]
+[else]
+　貴呼の顔をもう一度よく確かめた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My intuition told me this Takako wasn't exactly alive.[prcm]
+[else]
+　これもまた直感的に私はここにいる貴呼は生きてはいないものだと感じた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I realized I had missed something.[lr]
+[else]
+　私はひとつの見落としに気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The date on the first page of the notebook was last year.[lr]
+[else]
+　手に持っている手帳に記された日付は一年前から始まっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In other words, this notebook might contain a description of Takako's death.[lr]
+[else]
+　つまり、どこかに貴呼が亡くなった時のことも書いている可能性があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered why I failed to realize that as soon as I saw the date, but then again, weirder things had been happening around me tonight.[lr]
+[else]
+　どうしてそれを真っ先に気がつかなかったのかと考えたが、先程から不自然なことが続けて起きている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't blame my head for not being able to keep up.[prcm]
+[else]
+　私の頭がついてきていなくても仕方のないことだった。[prcm]
+[endif]
+
+
+[seopt buf=1 volume=70]
+[playse buf = 1 storage=se112.wav]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I was organizing my thoughts, Sachiko slightly moved.[lr]
+[else]
+　頭の中を整理していると、貴呼の隣で佐知子が身じろいだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her eyelids slowly opened.[lr]
+[else]
+　佐知子の瞼がやけに遅い動きで開いていく。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=4000]
+[fadeoutse buf=3 time=3000]
+[seopt buf=1 volume=100]
+[backlay]
+[fbfscale_image storage="bg129_5" page=back layer=base]
+[trans method=universal rule="rule7" vague=50 time=5000]
+[wt]
+[wait time=1000]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[seopt buf=3 volume=100]
+[clickskip enabled=true]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like time itself had stopped. Before long, however, I found myself transported back...[lr]
+[else]
+　まるで、時間が止まりかけているような錯覚のあと、不意に私は元の部屋に帰っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...to the familiar confines of Room 208.[prcm]
+[else]
+　その部屋は、窓の形もベッドも見慣れた208号室のものだった。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[seopt buf=1 volume=100]
+[seopt buf=2 volume=100]
+[seopt buf=3 volume=100]
+[jingle3]
+@jump storage="tips.ks" target=*tips
+
+

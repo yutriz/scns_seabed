@@ -1,0 +1,337 @@
+*079| Evening
+; *079|夕暮れ
+[fbfstoretitle eng="Evening" jp="夕暮れ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm41"]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+[msglayer2]
+[playse buf = 1 storage=se24_5.ogg loop=true]
+[backlay]
+[fbfscale_image storage="bg57" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 95"]
+[eval exp="sf.ItRelease = 96"]
+[endif]
+
+
+*| Evening
+; *|夕暮れ
+[fbfstoretitle eng="Evening" jp="夕暮れ"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the grandfather clock chime for the nth time.[prcm]
+[else]
+　何度目かの振り子時計の音がしている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I should be going.[」][lr]
+[else]
+　「それでは、私もそろそろ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p01_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I didn't realize it's gotten so late.[l] Um, give me just a second.[」][lr]
+[else]
+　「あら、もうこんな時間なのね。[l]そうだわ、少し待っていてね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily promptly vanished into the kitchen and returned with a basket full of pastries neatly lined on a piece of kitchen paper sporting a flower design.[prcm]
+[else]
+　小母さんは一度台所へ姿を消すと、花柄のキッチンペーパーを敷いた小さな編み籠に残った菓子を載せて戻ってきた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutse buf=1 time=500]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wf buf=1]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Take this with you.[」][lr]
+[else]
+　「これを持って行って」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you very much.[l] I'll make sure to use them as a midnight snack.[」][lr]
+[else]
+　「有難うございます。[l]お夜食にいただきます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can hand the basket to Nana when she comes to your room.[」][lr]
+[else]
+　「ええ。[l]籠は七ちゃんが部屋に来たときにでも渡してくれればいいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you.[l] Both the tea and your pastries were delicious.[」][lr]
+[else]
+　「ありがとうございました。[l]お茶もお菓子も美味しかったです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's been so long since I had the chance to chat with a fresh face.[l] I'd be happy to talk some other time, so don't be shy.[」][lr]
+[else]
+　「こちらも、久しぶりにたくさんお話ができて楽しかったわ。[l]またいつでも、声をかけてくださいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave her a small bow and headed toward the exit.[prcm]
+[else]
+　軽く会釈をして出口へと向く。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ms. Sachiko.[」][lr]
+[else]
+　「[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子さん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes?[」][prcm]
+[else]
+　「はい？」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think Nanae likes you very much.[l] She's been working at this inn since she was a child, and with her hobbies being antiques and working in the fields, she never had any friends her age.[l] Would you mind becoming her first?[」][lr]
+[else]
+　「七重は、あなたのことがとても好きみたい。[l]あの子はずっとこの屋敷で働いていたし、趣味の骨董や土いじりも若い人には理解されにくくて、ずっと同年代の友達がいなかったの。[l]よかったら仲良くしてあげてくださいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm also having fun spending time with her.[」][lr]
+[else]
+　「こちらも楽しいですよ。[l]七重さんとお話をするのは」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p03_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see. I suppose that was an empty concern on my part.[」][lr]
+[else]
+　「そう。[l]老婆心だったみたいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily gave me the warmest smile I'd seen from her today.[prcm]
+[else]
+　小母さんはその会話中で一番よく見る表情である笑顔で笑った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, that's right.[」][lr]
+[else]
+　「ああ、そうだわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She stopped me again.[prcm]
+[else]
+　と、小母さんは再び呼び止めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I forgot about it earlier, but I know the architect who was responsible for remodeling this place.[l] I think Kozue might be interested in meeting him, too.[l] Could you tell her for me when you see her around?[」][lr]
+[else]
+　「さっきは忘れていたんだけど、この屋敷の管理や改装やらを世話してくれている建築屋さんの知り合いがあるのよね。[l]
+丁度、離れの屋根の工事について話もあったし、[ruby text="こずえ"]梢ちゃんさえ良ければ、見学させてあげられるかもしれないの。[l]
+もし、梢ちゃんに会ったら伝えておいてもらえるかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course.[」][lr]
+[else]
+　「分かりました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well then, see you.[」][lr]
+[else]
+　「それじゃあ、またね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made another bow as Lily waved me goodbye.[prcm]
+[else]
+　もう一度会釈をすると、小母さんは軽く手を振っていた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p01_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry for holding you up so many times. I'm done now, I promise.[」][prcm]
+[else]
+　「ごめんなさいね、何度も呼び止めて。[l]大丈夫よ、もう何もないわ」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、小母さんが言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Goodbye.[」][lr]
+[else]
+　「さようなら」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="080.ks" target=*080
+
+

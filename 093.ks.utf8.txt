@@ -1,0 +1,631 @@
+*093| Family restaurant
+; *093|ファミレス
+[fbfstoretitle eng="Family restaurant" jp="ファミレス"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+[playbgm storage="bgm20"]
+[fbfscale_image storage="bg91" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 114"]
+[eval exp="sf.ItRelease = 115"]
+[endif]
+
+
+
+*| Family restaurant
+; *|ファミレス
+[fbfstoretitle eng="Family restaurant" jp="ファミレス"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sudden change in temperature as I stepped outside sent a shiver down my back.[prcm]
+[else]
+　外に出ると、温度差で身震いする。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Phew, it's cold out here.[l] You okay, Mayuko?[」][lr]
+[else]
+　「寒いな。[l][ruby text="まゆ"]繭[ruby text="こ"]子平気？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h02" visible=true left=105 top=0 rceil=170 gceil=170 bceil=170]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I can still handle it, but we should probably start thinking about heading back.[」][lr]
+[else]
+　「まだ大丈夫です。[l]でもそろそろ戻りましょうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko pointed at the mountain our sanatorium was on.[prcm]
+[else]
+　繭子は自分の肩越しに療養所のある山の上を指さした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「そうだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we made our way back on a road that had grown even more deserted after dark, I smelled some food somewhere in the vicinity.[lr]
+[else]
+　昼下がりと違って、さらに人気の無くなった来た道を歩いていくと、どこかの夕食の匂いがしてくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was about time for late-night restaurants to open.[prcm]
+[else]
+　商店も夜開店の飲食店の明かりが目立ち始めた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Uh, can we go there for a bit?[」][lr]
+[else]
+　「あのファミレスに寄っていかない？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h13" visible=true left=105 top=0 rceil=170 gceil=170 bceil=170]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you okay with a simple family restaurant?[」][lr]
+[else]
+　「ファミレスでいいんですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We've already spent lots of money today.[」][lr]
+[else]
+　「お金使いすぎちゃったからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose you're right.[」][prcm]
+[else]
+　「そうですね」[prcm]
+[endif]
+
+
+
+;///////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg96" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spread out the menu on the table so Mayuko could see it as well.[prcm]
+[else]
+　テーブルの奥側に立ててあるメニューを繭子にも見えるようにテーブルの上に開いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess I'd like a standard meal.[l] Oh, they have tempura chicken.[」][lr]
+[else]
+　「定食がいいな。[l]あ、とり天がある」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, that's a little unusual for a family restaurant.[」][lr]
+[else]
+　「ふうん、ファミレスで鳥の天ぷらなんて珍しいですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It wasn't that rare where I come from.[l] Though I never ate it much when I was little.[」][lr]
+[else]
+　「うちの田舎だと、わりと普通だよ。[l]小さい頃はあまり食べなかったけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why?[」][prcm]
+[else]
+　「どうしてです？」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I liked deep fried chicken more than tempura because it had a stronger taste.[l] But as I grew up, I started to appreciate the more mature taste of soy sauce that comes with tempura chicken.[l] I guess that's what happens when you become an adult.[」][lr]
+[else]
+　「鳥なら天ぷらより、味の濃い唐揚げの方が好きだったから。[l]
+でも大きくなってからはさっぱりポン酢の醤油とかでいただけるとり天も良いなって思うようになったんだよね。[l]
+やっぱり大人の味覚になったのかな」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your tongue is still that of a child if you can't eat green peppers, eggplant, and other vinegared dishes, though.[」][lr]
+[else]
+　「ピーマン、[l]茄子、[l]酢の物が苦手なら、まだまだ十分子供舌で通りますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, I don't mind stuffed pepper.[l] My body can't take vinegar, though.[」][lr]
+[else]
+　「ピーマンの肉詰めは好きだよ。[l]酢の物は体が受け付けないだけ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that so.[」][prcm]
+[else]
+　「そうですか」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you decide on what you want?[」][lr]
+[else]
+　「メニュー決まった？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][prcm]
+[else]
+　「はい」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Excuse me, we'd like to order.[」][lr]
+[else]
+　「すみません。[l]注文お願いします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako, there's a bell right there on the table.[」][lr]
+[else]
+　「貴呼さん、呼び鈴ありますけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko reached out toward it.[prcm]
+[else]
+　繭子がメニューの立ててあった台の前にある呼び鈴に手を伸ばしていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My way is faster.[」][lr]
+[else]
+　「こっちの方が早いよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A waitress carrying water to another table spotted us.[prcm]
+[else]
+　ひとつ向こうのテーブルにお冷を運んだウェイトレスがこちらに気がついた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]See?[」][prcm]
+[else]
+　「ほらね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What will you be ordering?[」][lr]
+[else]
+　「ご注文をどうぞ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A standard meal of chicken tempura, please.[l] What about you, Mayuko?[」][lr]
+[else]
+　「とり天定食ひとつ。[l]繭子は？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Seafood pasta, please.[」][prcm]
+[else]
+　「シーフードパスタを」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A standard meal of chicken tempura and seafood pasta.[l] Drinks?[」][lr]
+[else]
+　「とり天定食と、シーフードパスタですね。[l]お飲み物は？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Two cups of hot coffee. You're fine with that, right?[」][lr]
+[else]
+　「ホットコーヒーふたつ。[l]で、良いよね？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Understood.[」][lr]
+[else]
+　「かしこまりました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The waitress jotted down our orders on her memo, then stuffed it behind the strap on her apron as she continued to the counter.[lr]
+[else]
+　サッ、と伝票にメモをすると、下敷きごとエプロンの帯に挟んでカウンターへ行ってしまった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the picture of seafood pasta they had in the menu — it came with Manila clams, shrimps, and all sorts of other marine critters.[prcm]
+[else]
+　メニューのシーフードパスタを見る、貝殻つきのアサリと、海老などがのっていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess, uh, swapping meals is not something adults do, is it?[」][lr]
+[else]
+　「大人になると、食べ物を少し交換したりだとか気軽にできなくなってくるよね」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h22" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wouldn't mind a chicken tempura, either. Been a while since I've had any.[」][lr]
+[else]
+　「久々にとり天も良いかなって思っていたので、別に構わないですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, so you also had it back in your hometown. You familiar with yaseuma?[」][lr]
+[else]
+　「繭子のところにも、とり天あったんだね。[l]やせうまって知ってる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a sweet made from dango, isn't it?[l] With soy flour topping and all that.[」][lr]
+[else]
+　「団子を伸ばしたお菓子ですよね。[l]きな粉をまぶした」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] I haven't had that in ages.[」][prcm]
+[else]
+　「そう。[l]あれももうずいぶんと食べてないな」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Didn't you get those a lot as snacks back in the kindergarten?[」][lr]
+[else]
+　「幼稚園のときにおやつで良く出てきませんでした？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] I remember this one time, I was in such a hurry I ended up inhaling the flour. I almost choked.[」][lr]
+[else]
+　「出てた。[l]いそいで食べてきな粉を吸い込んでよくむせてたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Would you like me to make them sometime?[」][lr]
+[else]
+　「今度作りましょうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That'd be great![」][prcm]
+[else]
+　「いいね」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]By the way, what are you doing there?[」] Mayuko asked as I was peeking down into my paper bag.[prcm]
+[else]
+　「ところで、何をしているんですか？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　紙袋の中を見ていると、繭子が聞いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just making sure we haven't forgotten anything.[」][lr]
+[else]
+　「買い忘れの確認」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So... have we?[」][lr]
+[else]
+　「なにかありました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I went through the contents of the bag.[prcm]
+[else]
+　紙袋の中で、買ったものをパタパタと反対側に倒していく。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I don't think so.[」][lr]
+[else]
+　「大丈夫みたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up at the nearby window, seeing the interior of the restaurant reflected in its glass.[lr]
+[else]
+　顔を上げて窓を見ると、ファミレスの店内が映っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An old folk rock song — the same one I heard at the store earlier today — began playing on the radio.[prcm]
+[else]
+　店内には昼間の食品量販店で流れていた古いフォークロック音楽が流れている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm hungry.[l] I wonder how much longer it will take.[」][lr]
+[else]
+　「お腹すいちゃった。[l]早く来ないかな」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's going to be here in a moment, don't worry.[」][prcm]
+[else]
+　「すぐにきますよ」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="094.ks" target=*094
+

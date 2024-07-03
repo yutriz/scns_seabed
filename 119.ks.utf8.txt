@@ -1,0 +1,343 @@
+*119| Mirror
+; *119|姿見の鏡
+[fbfstoretitle eng="Mirror" jp="姿見の鏡"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+[call storage="MyMacro.ks" target="*Jingle7"]
+
+[msglayer3]
+[playbgm storage="bgm54"]
+[backlay]
+[playse buf = 1 storage=se131.ogg]
+[wait time=1000]
+[fbfscale_image storage="bg95_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 147"]
+[eval exp="sf.ItRelease = 148"]
+[endif]
+
+
+*| Mirror
+; *|姿見の鏡
+[fbfstoretitle eng="Mirror" jp="姿見の鏡"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I walked through the forest in the evening glow.[lr]
+[else]
+　夕方の日に焼ける森を歩いていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Hearing a rustle, I turned around to see a dove looking for food among the withered leaves.[lr]
+[else]
+　カサリ、と音がした方を見る、目を凝らすと腐葉土の枯葉の中でキジバトが餌を探して歩いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sounds of noon birds had waned, and day slowly turned into night.[prcm]
+[else]
+　昼の鳥の音は殆ど聞こえなくなり、夜の部に変わりつつあった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sachiko, if you can hear me... please, answer.[」][lr]
+[else]
+　「[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子、聞こえたら返事をしてくれ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I strained my ears, but heard nothing.[prcm]
+[else]
+　耳を澄ませても返事はなかった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I guess that's that.[」][lr]
+[else]
+　「やれやれ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw something sparkle in the woods beyond the dove.[lr]
+[else]
+　キジバトが横切る林の向こうにキラキラ、と光が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Continuing in that direction, I found a clear lake with the evening mountain reflected on its surface.[lr]
+[else]
+　そちらに林を抜けると、夕日の山を映した湖があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its light waves glimmered gently.[prcm]
+[else]
+　さざ波がキラキラ、と光っていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg84" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I drew closer to the water, spotting a bunch of white clovers.[lr]
+[else]
+　林を抜けて水際に来る、木陰にシロツメクサが群生している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked over them for a while, but couldn't find any four-leafed ones.[lr]
+[else]
+　さらりと眺めたが、四つ葉のクローバーは見つからなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Suddenly, I heard a splash of water.[lr]
+[else]
+　ポチャン、と水面から音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The size of the ripples on the surface weren't enough to determine whether the sound was caused by a water bird or a fish.[prcm]
+[else]
+　水鳥か魚かであるか、波紋の大きさから判断は出来なかった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg74" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+By the time I looked up, I realized that the sky had taken on a deep, blue hue, giving home to countless stars.[lr]
+[else]
+　空を見上げると、いつの間にか紺色の夜の空に変わり、星が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried looking for the Big Dipper and Cassiopeia, but found the Southern Cross instead.[prcm]
+[else]
+　ぼんやりとした星の中から、柄杓やカシオペアは見つからなかったが、代わりに南十字星があった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What?[」][lr]
+[else]
+　「南十字？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I rubbed my eyes and looked at the night sky again.[lr]
+[else]
+　目頭を抑えて、もう一度夜空を見てもそれは見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I... gave up on that and looked to the lake instead.[lr]
+[else]
+　星を見るのをやめて、湖面を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I let out a gasp.[prcm]
+[else]
+　はっ、と声が漏れた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg97" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The lake had disappeared, with a shoal taking its place.[lr]
+[else]
+　そこに湖面はなく、水平線まで浅瀬が広がっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The mirror-like surface of the lake was no more. Instead, I saw countless puddles in the sand extending beyond the horizon.[lr]
+[else]
+　足元にあった大きな鏡のようだった湖面の水は、まだらの水たまりのようになり、遠く水平線の向こうに続いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All of them reflected the night sky.[prcm]
+[else]
+　水たまりの一つ一つが、それぞれの夜の星を映していた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked at one of the puddles.[lr]
+[else]
+　足元にある水たまりを見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My eyes met Sachiko's as she looked down on me from an inverted position.[prcm]
+[else]
+　こちらと足の裏を合わせて逆さまの格好の、佐知子がこちらを見下ろしていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle7]
+
+;TIPS選択フラグ
+[if exp="f.ItRelease_tips1 <= 6"]
+[rclick enabled=false]
+[history output=false enabled=false]
+[eval exp="f.ItRelease_tips1 = 8"]
+[eval exp="sf.ItRelease_tips1 = f.ItRelease_tips1"]
+[msgon_b]
+
+[r][r][r][r][r]
+[playse buf = 2 storage=se28.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+TIPS I. Narasaki's Clinic[r]
+"Furnace" has been unlocked.[r]
+"Night Duty Room" has been unlocked.[prcm]
+[else]
+TIPSⅠ.楢崎診療所[r]
+「燃焼室」が解放されました。[r]
+「宿直室」が解放されました。[prcm]
+[endif]
+
+
+[msgoff]
+[wait time=1500]
+[history output=true enabled=true]
+[endif]
+
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="120.ks" target=*120
+
+

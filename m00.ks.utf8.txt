@@ -1,0 +1,50 @@
+*m00|NNNNN
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[clickskip enabled=false]
+[msglayer]
+[fadeinse buf=1 storage="se116.ogg" time=1500 loop=true]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+
+
+[backlay]
+[image layer=1 page=back storage="fgimage/other_img/ev39_4_b" visible=true left=0 top=-425]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=2500]
+[move time=3000 path="(-700,0,255)" layer=1]
+[wait time=2500]
+[wm]
+[wait time=1000]
+[backlay]
+[image layer=1 page=back storage="fgimage/other_img/ev39_1_b" visible=true left=-700 top=0]
+[trans method = crossfade time=800]
+[wt]
+[wait time=3000]
+[move time=3000 path="(0,-425,255)" layer=1]
+[wait time=2500]
+[wm]
+[wait time=2000]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fadeoutse buf=1 time=3000]
+[fadeoutbgm time=3000]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wf buf=1]
+[wait time=3000]
+[seopt buf=1 volume=100]
+@jump storage="001.ks" target=*001
+
+

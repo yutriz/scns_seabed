@@ -1,0 +1,769 @@
+*166| A holiday at the sanatorium
+; *166|療養所の休日
+[fbfstoretitle eng="A holiday at the sanatorium" jp="療養所の休日"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle3"]
+
+[msglayer]
+[playse buf = 0 storage=se10.ogg loop=true]
+[wait time=3000]
+[playbgm storage="bgm56"]
+[fadese buf=0 volume=50 time=4000]
+[backlay]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=3000]
+[backlay]
+[eval exp="sf.cg68=1"]
+[fbfscale_image layer=0 page=back storage="fgimage/other_img/ev68_b" visible=true left=0 top=-160 opacity=255]
+[fbfscale_image storage="ev68_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[fbfscale_move time=7000 path="(-117,-160,255)(-234,-160,255)(-351,-160,255)(-467,-160,255)(-584,-160,255)(-700,-160,255)(-817,-160,255)(-933,-160,0)" layer=0]
+;[fbfscale_move time=30000 path="(-933,-150,255)" layer=0]
+;[fbfscale_move time=500 path="(-933,-150,0)" layer=0]
+;[wm]
+[clickskip enabled=true]
+
+[rclick enabled=false]
+
+
+*| A holiday at the sanatorium
+; *|療養所の休日
+[fbfstoretitle eng="A holiday at the sanatorium" jp="療養所の休日"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I switched the tongs to my left hand and brushed the sweat off my forehead with my right.[lr]
+[else]
+　トングを左手に持ち替え額に浮いた汗を右腕で拭いて、パタパタと手を振った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The vast, blue sea extended under the blue sky as far as the eye could see.[lr]
+[else]
+　青い空と青い海。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could feel the fierce sunlight and the heat of the reddening charcoal against my skin.[prcm]
+[else]
+　強い日差しとバーベキュー用コンロの中で赤くなった炭が体を焼いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it working?[」][lr]
+[else]
+　「火はつきましたか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko took a peek inside the grill.[lr]
+[else]
+　[ruby text="まゆ"]繭[ruby text="こ"]子が隣からコンロの中を覗き込んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The charcoal's finally starting to glow,[」][r]
+I said as I continued to fan the thing.[prcm]
+[else]
+　「今ようやく赤くなってきたところ」と団扇で扇ぎながら答える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you want to try cooking something?[」][lr]
+[else]
+　「何か焼いてみます？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko picked up one of the boiled corns we brought with us.[prcm]
+[else]
+　繭子は今朝茹でたトウモロコシを持って言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think we need more charcoal.[l] The last time I tried this, it went out right away.[」][lr]
+[else]
+　「もう少しだけ炭を足してみる。[l]さっきはすぐに消えちゃったからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] Is it really the charcoal to blame, though?[l] Sanae's grill is working just fine.[」][lr]
+[else]
+　「ふうん。[l]炭が悪いんでしょうか？[l] [ruby text="さ"]早[ruby text="なえ"]苗さんのところは、よく燃えてますけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae decided to be our chef for the day, and started cooking rice at a canteen a bit further away.[prcm]
+[else]
+　早苗はご飯係りを引き受けて、後ろで飯盒炊飯をしていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh? Seriously?[」][lr]
+[else]
+　「え、ホントに？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around, my eyes meeting Sanae's.[prcm]
+[else]
+　振り返ると、飯盒を持った早苗と目が合う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is something wrong?[」][lr]
+[else]
+　「どうかしました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're using the same charcoal as me, right?[」][lr]
+[else]
+　「早苗の使ってる炭って、同じ炭だよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think so.[l] I took it from there.[」][lr]
+[else]
+　「だと思いますけど。[l]あの炭ですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pointed at the charcoal bag by the cooler box.[prcm]
+[else]
+　早苗が見た先にはクーラーボックスの隣にある炭の入った箱がある。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That really is the same one...[l] Then maybe the top got moist or something.[」][lr]
+[else]
+　「同じのだね。[l]上の方は湿気ていたのかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Narasaki did the charcoal part for me, so maybe she knows how it works.[」][lr]
+[else]
+　「私は[ruby text="なら"]楢[ruby text="さき"]崎さんに火をつけてもらったので、楢崎さんなら何かコツを知ってるのかも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I returned to our bags to get some fresh charcoal and fire starter, Narasaki and Kozue passed by me. The former was pulling the hand of the latter.[lr]
+[else]
+　着火剤と新しい炭を取りに行くと、[ruby text="こずえ"]梢が楢崎の手を引いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where are you taking me?[」][prcm]
+[else]
+　「どこかに行くの？」と聞くと梢は「まだ、時間がかかりそうだから泳いでくる」と言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Seems like it's going to take more time, so let's go for a quick swim in the meantime.[」][lr]
+[else]
+　見ると梢に頼んでいたテーブルや椅子の準備は終わっている様子だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced over my shoulder and saw that the table we asked Kozue to handle had already been neatly set. The cups on the table even had our names on them.[prcm]
+[else]
+　コップにもキチンと名前が書いてあった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Uh, you can go if you want, but it'd be nice if you could prepare the kebabs while I try to figure out how to get the fire started.[」][lr]
+[else]
+　「それも良いけど、良かったら串の準備をしない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took out a skewer from the cooling box and showed it to them.[prcm]
+[else]
+　私はクーラーボックスから鉄の串を取り出して見せた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The meat and vegetables are with Mayuko.[」][lr]
+[else]
+　「繭子のところに下ごしらえした野菜とお肉があるから、焼きやすいようにこれに刺しておいてくれない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... okay, fine,[」] said Kozue, taking the skewer from me.[lr]
+[else]
+　梢は「ふむ」と息をつくと「分かったわ」と言った。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+それから串を持って繭子のところへと行った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I asked Narasaki to help me with the grill.[lr]
+[else]
+　そして私は手の空いた楢崎に炭に火を起こすのを手伝ってくれるよう頼んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When Narasaki rearranged the charcoal, it lit up in seconds.[prcm]
+[else]
+　楢崎が少しだけ炭の並びを変えると、やがて炭は程よく白くなった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see. So it's better to stack them vertically.[」][lr]
+[else]
+　「なるほど、炭は立てた方がいいんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Heat always rises up, so it's best to arrange the charcoal in a way it makes it easiest for it to travel.[l] If you do it well enough, you don't even need to fan it.[」][lr]
+[else]
+　「熱が上に流れるから、下から上に空気が流れるよう炭を組めば扇がなくてもいいらしいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're pretty knowledgeable about this stuff.[」][lr]
+[else]
+　「詳しいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I read about it in some book.[」][prcm]
+[else]
+　「何かの本に書いてあった」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I lined up the charcoal so I could better control the flame, then put a wire gauze on the grill and tried grilling one piece of meat.[lr]
+[else]
+　熱を持った炭を強火と弱火の加減ができるようにコンロに並べる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear it sizzle.[lr]
+[else]
+　その上に金網を載せて、試しにカルビを焼いてみると肉の焼ける音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ohh![」] I let out an excited shout.[lr]
+[else]
+　「おー」と私が言うと、楢崎は「もう焼けるみたいだね」と言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at Mayuko and Kozue preparing the kebabs.[prcm]
+[else]
+　私は食材の下ごしらえをしている繭子と梢の方を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The grill's ready![」][lr]
+[else]
+　「火の準備が出来たよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko nodded. She and Kozue then brought over the skewers.[lr]
+[else]
+　繭子は返事をすると、梢と一緒に食材を持ってきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae approached us as well, eager to watch.[prcm]
+[else]
+　こちらの様子に気がついた早苗も見物にやって来た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, let's start cooking, then.[l] Hey, wait a second![」][lr]
+[else]
+　「さてと、それでは焼き始めますか。[l]って、ちょっと待ちなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+While I was contemplating how best to order the skewers on the grill to get them evenly roasted, Kozue began grilling her kebab by herself.[prcm]
+[else]
+　火の通りやすさを考えているところ、早速準備してきた串を網の上で焼き始めた梢に言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you want?[」][lr]
+[else]
+　「なによ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just so you know, there's an unwritten rule in these parts that seniors get the first bite while the youngsters wait for their turn, so...[l] Hey, are you even listening to me?[」][lr]
+[else]
+　「焼く順番というのはその地域や年齢層なんかで異なるポリシーがあってだね。[l]って、全然聞いてないよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue put another kebab on the grill while I was talking.[prcm]
+[else]
+　梢は話が終わる前に新たな串を並べた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I prepared one for everyone.[l] This one's Mayuko's, and those are Narasaki's and Sanae's. This one is yours.[」][lr]
+[else]
+　「みんなの分を用意したわ。[l]これが繭子ので楢崎のと早苗のと、これが貴方の分よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+By the time she finished, five kebabs had already been placed on the grill.[lr]
+[else]
+　言い終わる頃に梢は大きな串を五つ並べ終えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They all had bite-sized pieces of sweet pepper, shiitake mushrooms, onions, chicken, and paprika skewered on them.[lr]
+[else]
+　梢の作ってきた串は、ピーマン、椎茸、玉ねぎ、鶏肉、パプリカと色とりどりの食材が一口サイズに連なっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They all seemed to follow the same order, looking pretty colorful and nice.[prcm]
+[else]
+　どの串も同じ順番に並び、見た目も華やかだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Now we're talking,[」] Narasaki exclaimed.[lr]
+[else]
+　「こうすると一段とそれらしいね。[l]焼肉屋と違って見える」と楢崎が言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue's kebabs, still on the wire gauze, looked and sounded amazing.[prcm]
+[else]
+　梢の作った串が金網の上で美味しそうな音と匂いをさせている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Am I imagining this, or is there almost no meat on my kebab compared to the others?[」][lr]
+[else]
+　「私の串だけお肉少なくない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I put the same amount on all of them.[」][lr]
+[else]
+　「どれも同じよ」と梢が半目でこちらを見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you season them?[」][lr]
+[else]
+　「味付けはしてあるの？」と私が聞くと「塩コショウをふってますよ」と繭子が答えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, with salt and pepper,[」] said Mayuko.[prcm]
+[else]
+　それを聞いてタレをつけるか考えていると程よく串が焼きあがってきた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki asked what everyone wanted to drink, then moved to the table and filled all ours cups before bringing them back to us.[lr]
+[else]
+　楢崎は皆の飲み物の注文を取ると、テーブルから皆のコップを取り飲み物を持ってきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After confirming it was cooked just right, I picked up my kebab.[lr]
+[else]
+　しっかりと火が通ってることを確認してから串を配る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave everyone an eye signal and raised a toast.[prcm]
+[else]
+　それから「いい？」とみんなに目配せすると、一斉に乾杯をした。[prcm]
+[endif]
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I bought these kebabs purely on a whim during a shopping trip, but it turned out to be a good decision.[lr]
+[else]
+　串焼きの串は買い出しの時に面白そうだと思って持ってきたのだったが、これは中々の正解だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They tasted really good.[lr]
+[else]
+　見た目も楽しいし、何より美味しかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After finishing my first one, I started putting one ingredient after another on my skewer pretty much randomly, eating as much as I could.[lr]
+[else]
+　始めの串焼きを食べ終わると、あとは思い思いに串に刺して食べた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The cheese fondue Mayuko made was also delicious.[prcm]
+[else]
+　それから、繭子がおもむろに作ったチーズフォンデュも美味しかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Out of nowhere, she placed some camembert cheese on an aluminum foil and melted it above the grill.[lr]
+[else]
+　繭子はいつの間にか買ってきたカマンベールチーズを銀紙で作った器に入れると、それを金網の上で溶かしてそのチーズフォンデュを作った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I figured it was safe to call my first barbecue party in a long while a resounding success.[prcm]
+[else]
+　久しぶりのバーベキューは中々に盛り上がることができた。[prcm]
+[endif]
+
+
+;（CG絵）
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The meat's done.[」][lr]
+[else]
+　「お肉焼けたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd long since lost count of how many plates I sent to the others. When I was about to offer Mayuko another plate, she refused, claiming she'd already eaten more than enough.[lr]
+[else]
+　もう何度目になるのか、私が焼いた肉の乗った皿を繭子に渡そうとすると繭子は「私はもう十分ですよ」と言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The plate in Sanae's hand still looked almost completely packed with food.[prcm]
+[else]
+　早苗もまだ皿にお肉を載せていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue refused to eat anything else after filling herself with cheese fondue, and was already on her way to the beach with Narasaki for another swim.[lr]
+[else]
+　梢もチーズフォンデュを食べたあとに箸を置いていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　今はまた楢崎を誘って海に行こうとしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She must've taken a liking to being pulled around on her floating ring.[lr]
+[else]
+　浮き輪を押して泳いでもらうのが気に入ったようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I played with her, too, but ended up pulling her too far from the shore, and we got swept away by a huge wave. Getting back to shore was quite the adventure.[lr]
+[else]
+　私も押してあげたのだが、沖まで行き過ぎてしまったとき、思ったよりも波が高くなり戻るのが大変になる事態になってしまった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, she never let me near her floating ring ever again.[prcm]
+[else]
+　その後からは、梢に警戒されてしまうようになった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I guess I'll just eat all the rest on my own, then.[」][lr]
+[else]
+　「仕方ない。[l]あとは私が食べてしまうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved the onions and chicken to my own plate.[wm canskip=true][prcm]
+[else]
+　金網に乗っている玉ねぎと鶏肉を自分の皿に入れた。
+[wm canskip=true]
+[prcm]
+[endif]
+
+[clickskip enabled=false]
+[msgoff]
+[wait time=1500]
+
+;＊
+[backlay]
+[fadeoutbgm time=3000]
+[fadeoutse buf=0 time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[seopt buf=0 volume=100]
+[wait time=3000]
+[jingle3]
+
+;TIPS選択フラグ
+[if exp="f.ItRelease_tips4 <= 1"]
+[rclick enabled=false]
+[history output=false enabled=false]
+[eval exp="f.ItRelease_tips4 = 2"]
+[eval exp="sf.ItRelease_tips4 = f.ItRelease_tips4"]
+
+[wait time=1500]
+
+[msgon_b]
+
+[r][r][r][r][r]
+[playse buf = 2 storage=se28.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+TIPS IV "Inverse Sea"[r]
+"The sea where the sun sets in the east"[prcm]
+[else]
+TIPS.Ⅳ「裏返る海」[r]
+「東に日が沈む海」が解放されました。[prcm]
+[endif]
+
+
+[msgoff]
+
+[wait time=1500]
+[history output=true enabled=true]
+[endif]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="tips.ks" target=*tips
+
+

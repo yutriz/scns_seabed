@@ -1,0 +1,735 @@
+*158| Station
+; *158|駅
+[fbfstoretitle eng="Station" jp="駅"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm10"]
+[backlay]
+[fbfscale_image storage="bg05_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 209"]
+[eval exp="sf.ItRelease = 210"]
+[endif]
+
+*| Station
+; *|駅
+[fbfstoretitle eng="Station" jp="駅"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my eyes to see the already familiar canopy above the bed.[lr]
+[else]
+　目が覚めると、いつものベッドの天蓋が見えた。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I promptly sat up and slid out from under the sheets as I always did.[lr]
+[else]
+　いつものようにスルリ、とベッドから降りる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I got changed and headed off to have breakfast.[lr]
+[else]
+　それから、着替えをして朝食へ向かう。[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+;★カフェテラスの背景は写真の部分の修正を忘れずに。ITEMも。
+[fbfscale_image storage="bg54" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I reached the cafeteria, I found Nanae with my breakfast at the usual table.[prcm]
+[else]
+　カフェに降りると、[ruby text="なな"]七[ruby text="え"]重がいつもの席に朝食を用意していた。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I greeted her and we began eating together.[lr]
+[else]
+　軽く挨拶して、二人で席について、一緒に朝食を食べる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The meal consisted of bread rolls, scrambled eggs, spaghetti, spinach salad, sausages, and a handful of cherry tomatoes.[prcm]
+[else]
+　バスケットにロールパン、白い皿にはふわふわのスクランブルエッグとスパゲティ、ほうれん草のおひたしと、ソーセージとプチトマトが少しずつ乗っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This looks even more extravagant than usual.[」][lr]
+[else]
+　「いつもより、贅沢じゃない？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's your last breakfast here, so I felt like putting in a bit of extra effort.[l] You can leave some if it's too much.[」][lr]
+[else]
+　「最後の朝食だから、少し頑張ったの。[l]多かったら残してね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rolled bread had soft ham and crispy cheese inside.[lr]
+[else]
+　ロールパンにはチーズとハムが練りこまれており、ハムは柔らかく、チーズの表面はカリカリに焼けていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After finishing the bread, I scooped up a mouthful of spaghetti with my fork.[prcm]
+[else]
+　パンを頬張ったあとで、スパゲティをフォークに巻いて食べた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is pretty nostalgic.[」][lr]
+[else]
+　「これ、懐かしいわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered having something similar back in school, though it wasn't this good.[prcm]
+[else]
+　水気のないミートソーススパゲティは、少し薄めだが給食で食べたことのある味だった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right? I liked them so much I ended up looking up the recipe.[」][lr]
+[else]
+　「いいでしょそれ、好きだったから調べて作ったの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Those noodles look kind of unusual.[l] Do they even sell those in a supermarket?[」][lr]
+[else]
+　「この麺って普通の乾麺じゃないわよね。[l]売ってるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're called soft noodles.[l] You can get them directly from the manufacturers if you order a large amount.[」][lr]
+[else]
+　「ソフト麺って言うの。[l]まとめ買いなら、業者からできるわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Apparently they're specially made for school lunches.[l] They don't get as mushy as the normal ones and are supposedly better for digestion.[」][lr]
+[else]
+　「学校給食用に作られたものらしいわよ。[l]作り方が変わってて、他の麺と違って伸びがなくて消化が良いそうよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] I remember how easily they'd tear just from a gentle touch of your chopsticks.[」][lr]
+[else]
+　「そうね。[l]学校でも、箸で持ち上げるだけで切れてたわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Exactly![」] Nanae nodded.[prcm]
+[else]
+　「そうそう」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、七重が頷く。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I realized this after looking it up, but apparently, Japanese school lunches after the war mostly used bread imported from America.[l] The noodle industry eventually caught wind of it and decided to increase the variety of food available in schools, developing these noodles as a result. They're especially rich in the B1 and B2 vitamins that children desperately needed back in those days.[l] It all started in Tokyo before gradually spreading all across the country.[」][lr]
+[else]
+　「作り方を調べてて知ったんだけどね。[l]
+戦後の学校給食では、米国からの供給で主食はパンばかりだったみたいなの。[l]
+製麺業界が学校給食の主食を増やすために、学校給食用小麦粉品質規格規程に基づいて強力粉にビタミンB1やビタミンB2を栄養素として添加して強化したものがこのソフト麺なんだそうよ。[l]
+初めは東京都で採用されて、それから各地に広まったから、場所によっては知らないところもあるみたいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I would never have guessed that these spaghetti had such a rich history.[」][prcm]
+[else]
+　「このスパゲティにそんな事情があったのね」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We spent the rest of our lunch discussing the kinds of food we used to eat at school.[lr]
+[else]
+　それから、朝食の間は七重と昔の給食の話をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Apparently, Nanae was a big fan of mackerel miso soup.[lr]
+[else]
+　その中で七重は給食で好きだったメニューは、鯖味噌だと言う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I mentioned I liked to make sushi rolls, she taught me a few tricks to make the process easier and the results neater.[prcm]
+[else]
+　私はのり巻き寿司を作るのが好きだと言って、綺麗にのりを巻く方法を教えた。[prcm]
+[endif]
+
+
+;＊
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spent the afternoon in the mansion, like I always did.[prcm]
+[else]
+　昼過ぎまでいつも通りに洋館で過ごした。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg52_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After packing my bags, I made it down to the lobby. Nanae promised she'd meet me with her car, but I arrived a bit earlier than the agreed-upon time.[prcm]
+[else]
+　午後に荷物をまとめると、七重が車を出してくれる約束の時間よりも少し早めにロビーに降りる。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/other_img/bg52_1" visible=true left=-700 top=-340]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed my bags under the counter and lingered in the lobby for a while.[lr]
+[else]
+　荷物をカウンターの下に置いて少し待つことにする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was thinking about sitting down on the stool when the black phone entered my vision.[lr]
+[else]
+　スツールを腰を掛けようかと見ていると、黒電話が目に入る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It didn't seem like it would be ringing again anytime soon.[prcm]
+[else]
+　黒電話はシンとしたロビーの一部で、ベルがなりそうな気配はなかった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h03" visible=true left=105 top=0]
+[fbfscale_image storage="bg52_1" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is something wrong?[l] Did my phone offend you in some way?[」][lr]
+[else]
+　「どうしたの？[l] そんな難しい顔をして」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae appeared in the doorway behind the counter.[lr]
+[else]
+　カウンター側の通路から出てきた七重が声をかけてくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Checking the clock, I realized it was about time for my departure.[prcm]
+[else]
+　時計を見ると、約束の時間になっている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No. It's nothing.[」][lr]
+[else]
+　「何でもないわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] Well... let's be on our way, I guess.[」][lr]
+[else]
+　「そう。[l]…じゃあ行こうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right.[」][prcm]
+[else]
+　「ええ」[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+;★音の演出要チェック
+[playse buf = 0 storage=se91.ogg]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=4000]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg60_5" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+[quake hmax=0 vmax=10 time=200]
+[wait time=100]
+[quake hmax=0 vmax=10 time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How did you like it here?[」] Nanae asked as we rattled down the same road I ascended on my first day here.[prcm]
+[else]
+　「どうだった？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、来た時と同じガタガタとする道を車で走りながら、七重が聞く。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I had a great time. It's been so long since I've felt so relaxed.[l] I'm almost looking forward to going back to work the day after tomorrow.[」][lr]
+[else]
+　「良かったわ、よく休めた気がする。[l]これなら、明後日からの仕事も頑張れそうだわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Glad to hear it.[」][lr]
+[else]
+　「それは良かった」[lr]
+[endif]
+
+[r]
+[quake hmax=0 vmax=10 time=200]
+[wait time=100]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The car rattled as it passed over a big hole on the road, making Nanae grow silent.[lr]
+[else]
+　ガタン、と大きく車が揺れて七重は一度言葉を切る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I caught a glimpse of the sea beyond the trees around us.[prcm]
+[else]
+　七重のいる運転席の向こうの木々が開いて、海が見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Feel free to drop by for another visit if you're ever in the mood.[」][lr]
+[else]
+　「是非また、いつでも遊びに来てね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, definitely.[」][prcm]
+[else]
+　「ええ」[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+;★夕方じゃなく、朝の差分
+[fbfscale_image storage="bg82_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae told me she still had some unfinished work to attend to as we parted ways at the station. After waiting a minute or so for me to go inside, she drove away.[lr]
+[else]
+　駅までつき車を降りると、運転席にいる七重は仕事が残っているからと言った。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　こちらが駅舎に入るのを見送ると、そのまま洋館へと戻っていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found a small shop inside the station.[prcm]
+[else]
+　荷物を引いて、駅舎に入ると小さな売店があった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+;★夕方じゃなく、朝の差分
+[fbfscale_image storage="bg82_3" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder what kind of shop this is.[」][lr]
+[else]
+　「こんな店、あったかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I briefly inspected its lineup.[lr]
+[else]
+　と、足を止めて商品棚を覗いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had some snacks, newspapers, and a souvenir corner.[lr]
+[else]
+　ちょっとした菓子やパン、雑誌などが並び、その隣にお土産物のコーナーがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Key holders, wood carvings, and glass sculptures lined a long shelf.[prcm]
+[else]
+　長めの棚の上に、キーホルダーや木の彫り物、ガラス細工などが並んでいる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found a familiar writing utensil among the lineup: clips with cute bears on them.[lr]
+[else]
+　その中に、見たことのある文房具を見つける。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　それは、かわいらしい熊の人形がついたクリップだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I had too few to put them to any real use, so I considered buying a bit more here.[lr]
+[else]
+　丁度、使うには少し数が少ないと思っていたところで、ここでいくつか買い足しておこうかと迷ってしまう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But as I wondered if it was really necessary, I grew worried about the time.[prcm]
+[else]
+　買い足すならいくつ必要か、そんなことを考えていると、ふと時間が気になった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the clock inside the station and realized it was about time for my train.[lr]
+[else]
+　駅舎の中にある時計を見ると、電車の時間が迫っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In the end, I bought two packs of clippings, thinking I might as well give the extra ones to to my workmates as presents.[lr]
+[else]
+　とりあえず熊のクリップは事務員の分として、二箱分を買うことにした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I bought a few more things I thought they might like.[prcm]
+[else]
+　さらに適当に事務所用のお土産をいくつか買って売店を出た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I bought the ticket at the booth Nanae told me about, and as soon as I stepped onto the platform, the train arrived.[prcm]
+[else]
+　七重に教えられたとおり、間違わずに駅員に言って切符を買い、ホームに出るとすぐに電車の音が聞こえた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="159.ks" target=*159
+
+

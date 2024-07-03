@@ -1,0 +1,106 @@
+*170| Flower petal
+; *170|花弁
+[fbfstoretitle eng="Flower petal" jp="花弁"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle3"]
+
+[clickskip enabled=false]
+[backlay]
+[fbfscale_image storage="item39" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+
+*| Flower petal
+; *|花弁
+[fbfstoretitle eng="Flower petal" jp="花弁"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I washed my face in the sink.[lr]
+[else]
+　洗面台で顔を洗う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its cold touch bit into my skin, helping me wake up.[prcm]
+[else]
+　今朝の特に冷たい水が肌を刺して目を覚ませた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A single flower petal circled in the whirpool created by the drain.[lr]
+[else]
+　水を流すと洗面台に落ちた花びらが水に浮かんで回る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I scooped it out.[prcm]
+[else]
+　その一片を摘まみ上げた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked at the mirror to realize there was an empty vase in front of it.[lr]
+[else]
+　鏡を見ると顔の前に空の瓶が置いてある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the flower petal by it and wiped my face with the nearby towel.[lr]
+[else]
+　私はその隣に花びらを置いてから濡れた顔をタオルで拭いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I brushed my hair, changed into a fresh set of clothes, and left the room.[prcm]
+[else]
+　髪を整えてから服を着替えて部屋を出た。[prcm]
+[endif]
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle3]
+@jump storage="tips.ks" target=*tips
+
+

@@ -1,0 +1,109 @@
+*156_5| The remnants of memories
+; *156_5|あと少し覚えていて
+[fbfstoretitle eng="The remnants of memories" jp="あと少し覚えていて"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+[call storage="MyMacro.ks" target="*Jingle10"]
+
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg50_3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 204"]
+[eval exp="sf.ItRelease = 205"]
+[endif]
+
+
+*| The remnants of memories
+; *|あと少し覚えていて
+[fbfstoretitle eng="The remnants of memories" jp="あと少し覚えていて"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the clock as I returned to the lobby.[lr]
+[else]
+　ロビーに戻ると、柱時計で時間を確認した。[lr]
+[endif]
+
+[r]
+[playse buf = 0  storage=se139.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was six o' clock.[lr]
+[else]
+　時計は午後六時頃を指していた。[lr]
+[endif]
+
+[r]
+[playse buf = 0  storage=se148.ogg]
+[ws buf=0]
+[playse buf = 0  storage=se141.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up the receiver and fished out a few coins from my pocket.[lr]
+[else]
+　電話の受話器を取るとポケットから硬貨を数枚取り出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed them by the phone, leaving only one in my hand.[lr]
+[else]
+　手のひらに一枚だけ残して、電話機の隣に重ねた硬貨を置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put it into the slit on the phone and rotated the dial.[prcm]
+[else]
+　手に残っているコインを電話機の投入口に入れてダイヤルを回す。[prcm]
+[endif]
+
+
+[playse buf = 0  storage=se142.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Pressing the receiver against my ear, I listened to the beeping sound, waiting for Sachiko to pick up.[prcm]
+[else]
+　耳に受話器を当てるとコール音が聞こえた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　それから、佐知子が受話器を取るのを待った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[jingle10]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="156_6.ks" target=*156_6
+
+

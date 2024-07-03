@@ -1,0 +1,665 @@
+*078| Old stories about the mansion
+; *078|お屋敷の昔話
+[fbfstoretitle eng="Old stories about the mansion" jp="お屋敷の昔話"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm41"]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+
+[msglayer2]
+
+[backlay]
+[fbfscale_image storage="bg57" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[wait time=800]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 94"]
+[eval exp="sf.ItRelease = 95"]
+[endif]
+
+*| Old stories about the mansion
+; *|お屋敷の昔話
+[fbfstoretitle eng="Old stories about the mansion" jp="お屋敷の昔話"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Later that afternoon, the conversation shifted completely to Kozue and Lily when they began discussing the mansion.[lr]
+[else]
+　昼下がり、梢は屋敷の話を聞くために小母さんを占領していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily brought out an old schematic and spread it out across the table.[lr]
+[else]
+　小母さんは梢のために古い屋敷の図面を持って来てテーブルに広げた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue kept pointing at the various parts that piqued her curiosity.[prcm]
+[else]
+　梢は気になったところを小さな指で指した。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h02" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p01_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why is this well in such an inconvenient location?[」][lr]
+[else]
+　「この井戸はどうして、こんなに使い勝手の悪いところにあるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There used to be a rear exit in the western wing.[l] However, it got blocked as we expanded the cafeteria.[l] No one was using the well by that time, though.[」][lr]
+[else]
+　「以前は西棟の裏に勝手口があったのよ。[l]カフェラウンジを増築工事したときに入口が塞がれてしまったのね。[l]でも、その頃にはもう井戸は使われてなかったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Next, she pointed at the roof.[prcm]
+[else]
+　次に、屋根の上へと指を滑らせた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where does this chimney connect to?[」][lr]
+[else]
+　「この煙突は、どこに繋がっているの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p02_h12" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You notice the most interesting of things.[l] It's connected to the stove of this room.[l] You saw the spiral staircase in the lobby, right?[l] That will lead you to the roof.[l] The chimney was originally used for baths.[」][lr]
+[else]
+　「あら面白いところに気がつくのねえ。[l]それは、今この部屋の窯に繋がっているの。[l]ロビーの奥には螺旋階段があるでしょう？[l] 実はその中を通って屋根に出るの。[l]元々はお風呂窯の煙突だったのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p03_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her hand paused for a second before traveling to a polvoron on a white porcelain plate resting on the table. She picked it up and put it into her tiny mouth.[prcm]
+[else]
+　そこで一区切りした小さな手は、テーブルの白磁の皿に乗ったポルボロンをひとかけ取ると、これも小さな口に運んだ。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Polvorons looked like rectangular cookies at a glance, but their texture was similar to an Okinawan Chinsuko. They also carried the scent of cinnamon.[lr]
+[else]
+　ポルボロンという名前の洋菓子は長方形のクッキーのような見た目で、食感は沖縄のちんすこうに似ているが、口にするとシナモンのいい香りがした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They would almost literally melt in the mouth.[lr]
+[else]
+　生地は柔らかく口の中ですぐに崩れるとサクサクと細かくなる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Well, save for the hard almonds that would crack between your teeth.[lr]
+[else]
+　中の硬いアーモンドナッツはカリカリと子気味のいい音をたてる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The cinnamon and the almonds created a very balanced mixture of scents and flavors. Honestly, I had never eaten anything like this before.[lr]
+[else]
+　シナモンの香りとアーモンドナッツの風味のバランスがよく、食べたことのない味だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily told us that polvorons originated from Andalusia in Spain.[prcm]
+[else]
+　ポルボロンを吟味していると、小母さんがアンダルシア地方の祝菓子であると教えてくれた。[prcm]
+[endif]
+
+
+
+[playse buf = 0 storage=se30.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue licked the snow powder off her fingers and after taking a sip of her black tea, placed the cup on its saucer with a light clang.[lr]
+[else]
+　[ruby text="こずえ"]梢は指についたスノウパウダーをぺろ、と舐めるとカップの紅茶の残りを飲みきり、カチリとソーサに置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then glanced at the clock on the wall.[prcm]
+[else]
+　それから、部屋の奥にある時計を見た。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h04" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p03_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you. This was very educational.[」][prcm]
+[else]
+　「ありがとう、とても参考になったわ」と梢が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You are welcome.[」][lr]
+[else]
+　「どういたしまして」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it okay if I come talk to you again?[」][lr]
+[else]
+　「また、お話を聞きに来てもいい？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p03_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Feel free to visit whenever you like.[l] My doors are always open to such cute guests.[」][lr]
+[else]
+　「いつでもどうぞ。[l]こんな可愛らしいお客様ならいつでも歓迎よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue answered Lily's words with a blank stare.[prcm]
+[else]
+　その小母さんの言葉に、梢は表情を変えず無反応で返した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You'd be even cuter if you smiled a bit more.[」][lr]
+[else]
+　「あともう少し笑顔が増えればもっと可愛いわよ」と小母さんは遠慮なく言った。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p01_h07" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p01_h09" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue paused for a few seconds, seemingly analyzing the idea, then stuffed all her things in her bag and left the room.[prcm]
+[else]
+　梢はそれについて考えを巡らせるように動きを止めるが、すぐに机の上の持ち物を手提げにしまい部屋を出ていった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can come by anytime.[」][lr]
+[else]
+　「また、いつでも遊びに来てね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue, without turning back, climbed the stairs and disappeared from sight.[prcm]
+[else]
+　小母さんの声に梢は振り向かないまま階段の上へと去ってしまう。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h09" visible=true left=280 top=30]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll go see the princess off.[」][lr]
+[else]
+　「お姫様を見送りしてくるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki rose to her feet.[lr]
+[else]
+　と、[ruby text="なら"]楢[ruby text="さき"]崎が立ち上がった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily and I saw the two off.[prcm]
+[else]
+　小母さんと二人で、楢崎と梢が行くのを見送る。[prcm]
+[endif]
+
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if she's planning to be an architect or a designer in the future.[l] It's pretty inspiring to see someone so young start from such an early age.[」][lr]
+[else]
+　「将来は建築家かデザイナーかしら？[l] 凄いわね、あんなに小さいのに頑張ってて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I agree.[」][lr]
+[else]
+　「そうですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]She's quick on the uptake, and is clearly motivated... If only she acted a bit friendlier, she'd be a favorite among teachers.[」][lr]
+[else]
+　「なかなか飲み込みがよくて賢いし、目的もやる気もある。[l]もう少し可愛げがあれば、先生なんかにも気に入られそうなんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily paused there.[prcm]
+[else]
+　そこで小母さんは言葉を止めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed as though she was just about to reveal the reason behind Kozue's behavior.[lr]
+[else]
+　なんとなく、梢の性格の理由について言おうとしたように思えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Like Narasaki said before, everyone had their own individual circumstances.[prcm]
+[else]
+　前に楢崎が言ったように、誰にでも事情はあるのだと思う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe she likes you, but isn't good at showing it.[」][lr]
+[else]
+　「案外、もう気に入られていたりして」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I feel like you could have given her some even better advice, though.[」][lr]
+[else]
+　「梢ちゃんには貴方の方がいいアドバイスを出来たんじゃないかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily kept her fingers on her teacup's handle without actually lifting up the cup itself.[prcm]
+[else]
+　小母さんはテーブルの上でティーカップの柄を摘んだまま、指をすべらせながら言った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nana told me you were running a design office in the city.[」][lr]
+[else]
+　「七ちゃんから聞いたわ、都内でデザイン事務所をやってるんですってね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I am.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of job is it, exactly?[」][lr]
+[else]
+　「デザインってどういう風な仕事なの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I got that question a lot.[lr]
+[else]
+　と、小母さんがよく耳にする質問を投げかけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We meet our clients' demands, whatever they may be.[」][prcm]
+[else]
+　「仕事があれば色々とやります」とだけ答える。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you make advertisements for magazines and TV stations?[」][lr]
+[else]
+　「雑誌やテレビの広告とかもしているの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If the project calls for it.[」][prcm]
+[else]
+　「依頼があれば」と言うと小母さんは「そう」と明るい声で言った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I believe it's an expanding business.[l] Radios, newspapers, television... Almost everyone uses them these days.[l] Your workload must be increasing by the day, or am I wrong?[」][lr]
+[else]
+　「あれはまだまだ伸び代があると思うのよね。[l]ラジオとか、新聞とか、テレビなんかも今は誰でも使うものでしょう。[l]仕事も増えていると思うんだけど、どうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're right that we get more offers nowadays.[l] However, most of the big companies already have their established ties with old advertising agencies, so a relatively new place like ours tends to only get local, small-scale projects.[」][prcm]
+[else]
+　「確かに仕事は増えてるみたいですね。[l]でも大きな仕事の殆どは老舗の広告代理店が広告主と契約してるので、うちに来る仕事はその下請けかローカルなんですよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, so it's an old business, actually.[」][lr]
+[else]
+　「もう出来上がってしまってるのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Advertising has been around for over a hundred years.[」][lr]
+[else]
+　「広告業自体は百年前からありますからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「なるほど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you interested in advertising?[」][lr]
+[else]
+　「広告に興味があるんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily waved her hand in front of her face.[prcm]
+[else]
+　そう聞くと、小母さんは顔の前で手を振った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f01_p03_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, no, the topic simply came up when I chatted with someone in the town the other day.[l] Living up here in the mountains in the middle of nowhere leaves me with plenty of time to think and ponder, you see.[」][lr]
+[else]
+　「いえね。[l]たまたまこの間、港町の人とそういう話をしてたの。[l]
+こんな山奥に住んでると思うこともあるのよ、わかるでしょう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「なるほど」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily smiled and I couldn't help smiling in return.[prcm]
+[else]
+　そう言って小母さんが小さく笑うのに釣られて、笑みがこぼれた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[wait time=500]
+[seopt buf=1 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="079.ks" target=*079
+
+

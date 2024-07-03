@@ -1,0 +1,428 @@
+*130_3| September 24, 1975
+; *130_3|1975年09月24日
+[fbfstoretitle eng="September 24, 1975" jp="1975年09月24日"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgOn_t"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgLayer_T"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg85_4" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 163"]
+[eval exp="sf.ItRelease = 164"]
+[endif]
+
+
+*| September 24, 1975
+; *|1975年09月24日
+[fbfstoretitle eng="September 24, 1975" jp="1975年09月24日"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I lay down on my futon and closed my eyes, but realized I wasn't sleepy.[lr]
+[else]
+　その夜は布団に入って目を閉じていたが、なかなか眠りが訪れなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was something bothering me.[lr]
+[else]
+　どうも頭の中がすっきりとしていなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered how I saw Sachiko in Kozue's room.[lr]
+[else]
+　梢の部屋でみた、佐知子のことを考えていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wanted to meet her again, but I didn't know what to do to achieve that.[prcm]
+[else]
+　佐知子に会いたい気持ちはあるが、どうしていいのか分からなかった。[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned on the desk lamp and picked up the notebook.[lr]
+[else]
+　デスクランプをつけて手帳を開いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were only a few pages left now.[prcm]
+[else]
+　ページは既に残りわずかとなっていたが、相変わらず日記は淡々とその日その日のことが書かれていた。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msglayer_t]
+[playbgm storage="bgm17"]
+[wait time=1000]
+[backlay]
+
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon_t]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+September 24, 1975[lr]
+[else]
+　[hch text="1975" expand=true]年[hch text="9"]月[hch text="24"]日[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rays of the sun filtered in through the marmalade-colored western window of the kindergarten, elongating the shadows of the three of us inside.[l] 
+[else]
+　マーマレード色した幼稚園の西向きの窓から長い日が差し込んで、一緒に遊ぶ三人の影を伸ばしている。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All the other children had already had their parents come pick them up.[dl] Meanwhile, we were still playing doctor.[dl][clickskip enabled=false][msgoff][msglayer_t][backlay][eval exp="sf.cg14_1=1"][fbfscale_image layer=3 page=back storage="ev14_1" visible=true left=0 top=0 opacity=140][trans method = crossfade time=1000][wt][wait time=500][msgon_t][clickskip enabled=true][setdiaryfont]Takako was the doctor, Narasaki was the patient, and I just held a book that was supposed to be a medical record and stared at them.[dl] Takako was[r]investigating the condition of Narasaki's belly.[lr]
+[else]
+家族の迎えがチラホラと現れては他の園児たちが帰っていき、その部屋に残ったのはその三人くらいだった。[l]
+三人はお医者さんごっこをして遊んでいた。[l]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer_t]
+[backlay]
+[eval exp="sf.cg14_1=1"]
+[image layer=3 page=back storage="ev14_1" visible=true left=0 top=0 opacity=140]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon_t]
+[clickskip enabled=true]
+
+貴呼は医者の役、楢崎は患者の役、こちらはカルテに見立てた絵本を持って二人を見ていた。[l]
+今は聴診器を持った貴呼が患者役のお腹を見て診察をしようとしている。[lr]
+[endif]
+
+[r]
+
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does a stethoscope have a right and a wrong side?[」][lr]
+[else]
+「聴診器って裏表はあるのかな？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako turned to me.[lr][r]
+[else]
+こちらに振り返った医者の貴呼が尋ねる。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're holding it correctly.[」][lr]
+[else]
+「それで合ってる」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see... I see..[」][lr][r]
+[else]
+「ふむふむ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She took the stethoscope off and put it on the table.[dl] There was a whole lineup of toy medical tools on it, all to be used as part of the game.[dl] Takako looked over them for a second, and after a brief moment of hesitation...[prcm]
+[else]
+耳から聴診器をはずして机に置く。[l]聴診器はちょこんとお腹に当てただけだった。[l]
+机の上には幼稚園の部屋中から集めてきたお医者さんごっこ用の玩具が並べられている。[l]
+貴呼はそれらを眺めながら、その上で手を迷わせている。[prcm]
+[endif]
+
+
+
+[playse buf = 1 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is this?[」][lr][r]
+[else]
+「これはなに？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She picked up a spatula used to hold down the tongue.[lr][r]
+[else]
+舌を抑えるヘラ上の器具をもった貴呼がもう一度振り返る。[lr]
+[endif]
+
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, the nurse is looking.[」][lr][r]
+[else]
+「あ、先生が見てる」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around and saw the nurse looking our way. She picked up a plush bunny we left on the floor earlier and put it back into its box.[lr][r]
+[else]
+後ろを振り向くとチューリップ組みの先生が抱えたおもちゃ箱にウサギのぬいぐるみを入れながらこちらを見ている。[l]
+後ろの硝子戸が逆光になって顔はよく見えない。[lr]
+[endif]
+
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was she looking at us?[」][lr]
+[else]
+「先生見てた？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] You seem to be a very untrustworthy doctor.[」][lr]
+[else]
+「見てたよ。[l]随分頼りないお医者さんだねえ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I fear for your future patients if you ever actually become one.[」][lr]
+[else]
+「こんなお医者さんがいたら、怖いわ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ugh.[」][lr]
+[else]
+「があん」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+と、貴呼は擬音で言った。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think Narasaki's better at it than you, Takako.[」][lr]
+[else]
+「こういうのは楢崎ちゃんのほうが得意なんじゃない？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, we can switch if you want.[」][lr][r]
+[else]
+「ああ、それじゃあ楢崎と交代ね」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put down the book that was supposed to be the medical record, and took the stethoscope from Takako's hands.[dl] Then I lifted up Narasaki and placed her on my knees.[lr][r]
+[else]
+こちらはカルテの絵本を置いて貴呼が取った聴診器を受け取る。[l]
+聴診器は首に引っ掛けて椅子にかけ直す。[l]
+それから、患者役をしていた楢崎の手を取ると立ち上がらせて膝の上に載せる。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So? Where does it hurt?[」] I voiced a question in a mature tone.[prcm]
+[else]
+「今日はどこの具合が悪いのかな？」[l]
+と、口調を変えていった。[prcm]
+[endif]
+
+
+
+[playse buf = 1 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I ate a poisoned apple.[」][lr]
+[else]
+「毒リンゴ食べた」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just like in the story we read today...[」][lr]
+[else]
+「それは、今日読んでた絵本の話ね」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[dl] In that case, please show me your stomach.[」][lr]
+[else]
+「ふむ。はい、じゃあお腹を出して」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr][r]
+[else]
+「はあい」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako pulled up her shirt, exposing her naked belly.[dl] I used Narasaki's hand to guide the stethoscope to it.[lr][r]
+[else]
+シャツをめくって、すっきりとしたお腹を出す患者。[l]
+こちらは医者役になった楢崎の手に聴診器を持たせて、そのまま手を取って患者の腹部に当てた。[lr]
+[endif]
+
+
+
+[playse buf = 1 storage=se57.ogg]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right. Turn around now.[」][lr]
+[else]
+「はい、後ろをむいて」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako did as ordered, pantomiming a spinning chair.[lr]
+[else]
+くるりと回転椅子を回すふりをして、後ろを向く貴呼。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[dl] There doesn't seem to be anything wrong with your lungs.[dl] Okay, let's have a look at your throat now.[」][lr]
+[else]
+「ふむ。肺の音は綺麗だね、次は喉を見ようか」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako spun her invisible chair again and opened her mouth.[lr]
+[else]
+くるりと再び前を向く貴呼が大きく口を開ける。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Open wide... Yeah, just like that.[」][lr][r]
+[else]
+「口を大きく開けて、そう」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pressed the spatula into Narasaki's hand and used it to push Takako's tongue out of the way.[lr][r]
+[else]
+今度はヘラ上の器具、舌圧子を医者役になった楢崎の手に持たせて貴呼の舌を抑えるフリをさせた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're good at opening your mouth. I can see all the way to your tonsils.[」][lr]
+[else]
+「喉のひらき方、上手いね扁桃腺がよく見える」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The nwuse tword mewh the saim thwing.[」][lr]
+[else]
+「ふぉういんのへんへいにもほへられた」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have no idea what you're saying, though.[」][prcm]
+[else]
+「何を言っているかわからないけど」[prcm]
+[endif]
+
+
+
+;＊
+
+[clickskip enabled=false]
+[msglayer]
+[fadeoutbgm time=1500]
+[wait time=500]
+[backlay]
+[freeimage layer=3 page=back]
+[fbfscale_image storage="bg85_4" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[playse buf = 1 storage=se50.ogg]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+
+; FBF: End of vertical section.
+[eval exp="f.fbfisverticaltext = false"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Beginning to feel sleepy, I closed the book.[lr]
+[else]
+眠くなり文字がぼやけてきて本を閉じる。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se112.wav]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the notebook by the pillow and collapsed onto the bed on my back.[prcm]
+[else]
+本を枕の隣に置きゴロンと仰向けになるとそのまま目を閉じた。[prcm]
+[endif]
+
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That day, I had a dream of my past.[lr]
+[else]
+その日は昔の夢を見た。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A dream of a hot summer day.[prcm]
+[else]
+小さい頃の暑い夏の日の夢だ。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle4]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="131.ks" target=*131
+
+
+
+

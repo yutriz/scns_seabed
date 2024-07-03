@@ -1,0 +1,1027 @@
+*072_2| Condition
+; *072_2|容態
+[fbfstoretitle eng="Condition" jp="容態"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm10"]
+[eval exp="f.CpStartFlg = 0"]
+[msglayer2]
+[endif]
+
+
+[backlay]
+[fbfscale_image storage="bg05_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 88"]
+[eval exp="sf.ItRelease = 89"]
+[endif]
+
+
+*| Condition
+; *|容態
+[fbfstoretitle eng="Condition" jp="容態"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized that Narasaki was gazing out the window, so we spent a short while watching the little bird together.[lr]
+[else]
+　気が付くと[ruby text="なら"]楢[ruby text="さき"]崎も窓の方を見ており、私達はしばらく小鳥を眺めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its round, almost ball-like frame made it obvious that the bird had not been lacking in nutrition as of late. It kept fluttering its wings with much vigor.[lr]
+[else]
+　よく肥えて真ん丸の小鳥は尾羽を縦にパタパタ、と振っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It would let out a chirp or two once in a while.[prcm]
+[else]
+　そして時折鳴いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h02" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Would you say its chirping or just crying?[」][lr]
+[else]
+　「ピーピーかな、ヒーヒーの方が近い？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd say somewhere in-between.[」][lr]
+[else]
+　「たぶんその間くらいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki tried imitating the bird's voice.[lr]
+[else]
+　楢崎が鳴き声を真似している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spent a few moments comparing her attempt to the actual bird.[prcm]
+[else]
+　それと鳥の音を聴き比べてから答えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]By the way, how many days did you take off again?[」][lr]
+[else]
+　「そういえば、休みは何日くらいある？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]About ten.[l] I'm planning to spend a week or so here.[」][lr]
+[else]
+　「十日間は休めるわね。[l]ここには一週間くらいは居るつもりよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about you?[」][lr]
+[else]
+　「貴方はいつまでここにいるの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h05" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's about the same.[」][lr]
+[else]
+　「私も同じくらいだったかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki pulled out a schedule notebook from the pocket of the coat dangling on a nearby chair, and took a few seconds looking it over before answering me.[prcm]
+[else]
+　楢崎は近くの椅子に掛けておいた上着から手帳を取り出すと、それを確認しながら答えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see you brought that with you.[」][lr]
+[else]
+　「その手帳も持ってきていたのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, this thing?[」][lr]
+[else]
+　「これかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki gestured toward me with notebook in hand.[prcm]
+[else]
+　楢崎が開いたスケジュール手帳を少し掲げてみせたので、私は少し首を振った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, the one that's peeking out from your pocket.[」][lr]
+[else]
+　「そっちのポケットから出ている方」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at another notebook in her coat.[lr]
+[else]
+　そう言って上着のポケットから少しだけ出ている手帳を指差した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the same one she used to jot down things during my examinations.[prcm]
+[else]
+　それは診察時に楢崎がこちらの話をメモしていた手帳だった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h13" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh... I thought it might come in handy.[」][lr]
+[else]
+　「これのことか。[l]何かの役に立つと思ってね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was my turn to make a move.[lr]
+[else]
+　ゲームはこちらの手番だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But instead of touching my piece, I asked Narasaki what I couldn't yesterday.[prcm]
+[else]
+　手を止めて、昨夜聞きそびれていたことを楢崎に訪ねることにした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We have time today, so why don't you tell me about what's been bothering you about my condition?[」][lr]
+[else]
+　「今日は時間もあるし、あなたの気になっていたことを聞いてもいいわよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」] Narasaki shrugged her shoulders.[prcm]
+[else]
+　「ああ」と言って楢崎は肩をすくめた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's nothing overly serious, really.[l] I was just thinking about your symptoms a little.[」][lr]
+[else]
+　「別に大したことじゃないんだ。[l]あのときは、少しキミの症状について考えていたんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thinking?[l] What do you mean?[」][prcm]
+[else]
+　「考えてた？[l] どういうことを」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Remember how I said they weren't interfering with your life?[」][lr]
+[else]
+　「その症状に生活の障害がないと言ったのは覚えているだろう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] I'm hallucinating without letting anyone else know.[」][lr]
+[else]
+　「ええ。[l]私は誰にも気づかれずに幻覚を見ている。[l]そういう風に言っていたわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's right.[l] I was just thinking about exactly what kind of hallucinations you were seeing.[l] The Takako you see in your mind participates in conversations with the people in your office and does her job without fail, right?[l] And it all felt natural to the extent you didn't realize there was something off... I just got curious about how it must look to you.[l] It seems almost like another reality exists within you.[」][lr]
+[else]
+　「そう。[l]そのキミの見ている幻覚はどういうものなのかなと思ってね。[l]
+キミの見えている[ruby text="たか"]貴[ruby text="こ"]呼は他の事務員たちと自然な会話をして、きちんとした仕事をしているんだろう。[l]
+それはキミが疑いを持たないほどだって言われるとね、一体どんなふうに見えるものかと興味が湧いたのさ。[l]
+まるで、キミの中にはもう一つ現実があるみたいじゃないか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki paused to catch her breath after that long speech.[prcm]
+[else]
+　そこまでを言うと、楢崎はひと呼吸おいた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure how to answer that.[」][lr]
+[else]
+　「どんなふうにと言われてもね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I've no idea exactly what you're seeing, but I think we've had this discussion before.[l] I'm more interested in how you process the conversations between Takako and your other colleagues.[l] Understanding that might help shed more light on your exact position.[」][lr]
+[else]
+　「まあ、キミに見えてるものは私には分からんし、それは前にも言ったとおりなんだがね。[l]
+それよりも気になるのは、貴呼の姿や事務員との会話を頭の中でどのように[ruby text="こしら"]拵えているのかという事だよ。[l]
+それを考えるとき、今のキミの置かれている状況はもう少し簡単に捉えることができる気がしたんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My position?[」][lr]
+[else]
+　「私の置かれている状況？」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h09" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, for example...[」][lr]
+[else]
+　「そう、例えばね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki placed her schedule notebook on the chessboard and began drawing some sort of graph.[prcm]
+[else]
+　そう言うと楢崎はスケジュール手帳をチェス盤の隣に置いて、妙な図を書き始めた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[playse buf=1 storage=se57.ogg]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wait time=300]
+[playse buf=2 storage=se61.ogg]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="item34_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="item34_1_JP" page=back layer=base]
+[endif]
+[trans method=universal rule="rule9" vague=50 time=600]
+[wt]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="item34_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="item34_2_JP" page=back layer=base]
+[endif]
+[trans method=universal rule="rule9" vague=50 time=600]
+[wt]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="item34_3" page=back layer=base]
+[else]
+	[fbfscale_image storage="item34_3_JP" page=back layer=base]
+[endif]
+[trans method=universal rule="rule19" vague=50 time=600]
+[wt]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="item34_4" page=back layer=base]
+[else]
+	[fbfscale_image storage="item34_4_JP" page=back layer=base]
+[endif]
+[trans method=universal rule="rule19" vague=50 time=600]
+[wt]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="item34_5" page=back layer=base]
+[else]
+	[fbfscale_image storage="item34_5_JP" page=back layer=base]
+[endif]
+[trans method=universal rule="rule9" vague=50 time=600]
+[wt]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="item34_6" page=back layer=base]
+[else]
+	[fbfscale_image storage="item34_6_JP" page=back layer=base]
+[endif]
+[trans method=universal rule="rule9" vague=50 time=600]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+[r][r][r][r][r][r][r][r][r][r][r][r][r][r][prcm]
+
+
+[msgoff]
+[msglayer2]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pointed at the circle around the words "not real" and said that it existed only inside my head.[prcm]
+[else]
+　そして書き終わったペンで大きく丸で囲んだ（非現実）を指して「こちらが頭の中」、[l]それから（現実）を指して「こちらが外」と言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's the world where you thought Takako was still around.[l] And reality is the world where you have remembered that she's not.[」][lr]
+[else]
+　「非現実はキミが貴呼がいると信じていた世界だ。[l]現実はキミが貴呼がいないことを思い出した世界だ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」] I made a slight nod as I looked at the graph.[lr]
+[else]
+　「ふうん」とその図を覗き込んで頷く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki's pen pointed at the "not real" bit again.[prcm]
+[else]
+　楢崎のペンはふたたび非現実を指した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You lived in this one for at least two years.[l] And in order to avoid contradictions, you've changed the dates of your trip, as well as that of Takako's disappearance.[」][lr]
+[else]
+　「キミは少なくとも二年の間、こちらを見続けていた。[l]
+この非現実を見続けるために、旅行の日付と貴呼の失踪について記憶操作をしていたんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mhm.[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And your current position is probably somewhere around here.[」][lr]
+[else]
+　「そして今キミの置かれている状況をこの図で示すと、この辺りになる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki pointed at the tunnel-like sign between the two bubbles.[lr]
+[else]
+　楢崎は（非現実）と（現実）のあいだのトンネルのようなところをペンで指した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The side closer to reality, to be precise.[prcm]
+[else]
+　正確には（現実）とトンネルの境目の部分だ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You've fixed your memories and are on your way to return here.[l] But you haven't done so completely. Not yet.[l] You still keep seeing little snippets of your surreal world when something triggers it.[」][lr]
+[else]
+　「キミは記憶操作を修復し、こちら側へ戻りかけている。[l]
+しかしまだ完全に戻りきってはいない。[l]ふとした弾みで非現実も見えてしまう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's how I interpret your condition, at least.[」][prcm]
+[else]
+　それから楢崎は「私はキミの状況についてそう診ている」と言った。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg05_2" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And those triggers are things that remind me of Takako, correct?[」][lr]
+[else]
+　「その弾みというのは、貴呼との思い出の品や風景にあたるのね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h03" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I would say so.[l] The best way to get over this is to spend enough time in an alien land until you're completely back in reality.[」][lr]
+[else]
+　「そういうこと。[l]完全に現実に戻ってくるまでは、知らない土地で安静にしていればいい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized I could no longer hear the chirping of the little bird.[lr]
+[else]
+　気がつくと小鳥の鳴き声が聞こえなくなっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the window; the bird had already flown away.[lr]
+[else]
+　窓を見ると、やはり小鳥は飛び立ったあとだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki was watching the empty window, too.[prcm]
+[else]
+　楢崎も小鳥の居なくなった窓を見ていた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]By the way, did you plan anything specific for this trip?[」][lr]
+[else]
+　「ところで、こっちでは何か予定を組んでいるのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[」][lr]
+[else]
+　「いいえ、特にはないわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good.[l] With no plans, you can relax without thinking too much.[l] Of course, you can always use your brain when you feel like it.[l] Watching from a distance can help you notice new things in your life.[」][prcm]
+[else]
+　「それはいい。[l]予定が無いということは、余計なことは考えないでゆっくりと休むことができる。[l]
+それに、好きに時間も頭も使える。[l]いつもの生活から距離を置けば、遠くから見ることで何か気がつくことだってあるかもしれない」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At this time of the day, I would usually be in my office, working.[lr]
+[else]
+　お昼過ぎは普段なら事務所で仕事をしている時間だ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I blinked and considered the chess pieces on the table.[lr]
+[else]
+　瞬きをして、机の上のチェス盤と駒を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But now I was playing a game with Narasaki in a place I'd never been before.[lr]
+[else]
+　今は知らない場所で楢崎とゲームをしながら話をしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was certainly right. I felt more relaxed here compared to when I'd visit her at the clinic during work.[prcm]
+[else]
+　言われてみると、確かに診療所で話をしているときよりもずっとリラックスできている気がした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had a pretty rigid schedule near the end of the year.[lr]
+[else]
+　よく考えると、年末は怒涛の忙しさだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We received tons of orders last year, so the office was basically on fire during those final days.[lr]
+[else]
+　仕事の受注が多かったために、年末の事務所は火事場のような忙しさだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Now that I thought about it, I might have taken on too many jobs because I calculated Takako as being part of the work force.[lr]
+[else]
+　それは今考えると、貴呼を勘定にいれていた為かもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered if I'd unknowingly done something bad to my two colleagues.[prcm]
+[else]
+　事務所のふたりには悪いことをしたかもしれなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On top of it, since I realized I was seeing things that couldn't have been real, I ended up skipping work and going to Narasaki's clinic instead.[lr]
+[else]
+　また、幻覚を見るようになったため、仕事の合間を縫っては楢崎に連絡を取り、診療所で診察を受けるようになった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was only then that I started realizing I'd actually been hallucinating for years.[lr]
+[else]
+　実際にはこの幻覚は数年前からのもので、このときは今まで見ていたものが幻覚だと気づき始めていただけだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That said, I managed to both finish all my duties by the end of the year, and fix up some of my broken memories at Narasaki's clinic.[lr]
+[else]
+　年末休暇に入る前までには、事務所の仕事を一区切りさせることができ、診療所では楢崎と間違った記憶を修正した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In my mind's eye, it felt like it all happened in seconds.[prcm]
+[else]
+　それらの出来事は思い起こすと一瞬だった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h10" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[fbfscale_move time=400 path="(105,10,255)" layer=0]
+[wm]
+[wait time=200]
+[fbfscale_move time=400 path="(105,0,255)" layer=0]
+[wm]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stifled a sigh, to which Narasaki reacted with a small nod.[lr]
+[else]
+　ため息をこらえると、向かいの楢崎が少し頷いたように見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Honestly, it was pretty incredible how I kept that charade up for over two years without anyone putting me into a hospital.[lr]
+[else]
+　ここまでは、我ながらうまく立ち回れた気はする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With that mystery cleared up, I shifted my thoughts to what I was supposed to do now.[prcm]
+[else]
+　そして、私はこれからのことについて考えを向けた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So you're saying the symptoms will eventually go away on their own?[」][lr]
+[else]
+　「あなたの考えでは、このままゆっくりしていれば症状はなくなっていく見立てなのね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's what I believe, at any rate.[」][lr]
+[else]
+　「おそらくね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And you also believe I had a specific reason and some sort of goal in mind for conjuring up an alternate reality in my head? Is that correct?[」][lr]
+[else]
+　「それから、貴方はその非現実が生まれた理由や目的というのもあると考えているんでしょう」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h03" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, that about sums it up, yes.[」] The corners of Narasaki's lips curled up.[prcm]
+[else]
+　楢崎はにやりと口の端を曲げ「まあ、そういうことさ」と満足そうに言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see your mind's back to being in full throttle.[」][lr]
+[else]
+　「ちゃんと頭が回り始めているね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you.[」][lr]
+[else]
+　「ありがとう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That said, you should leave the complicated stuff to me and instead focus on relaxing.[l] Treating you is my job.[l] And if I find something new, I'll inform you right away.[l] Are you okay with that?[」][lr]
+[else]
+　「だけど難しい事は私に任せてキミはゆっくりしているといい。[l]今はそれが仕事だよ。[l]
+私は何か分かれば、それはキチンとキミに伝える。[l]それでいいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][prcm]
+[else]
+　「ええ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, I'll avoid speaking about this unless something new comes up.[l] Meanwhile, you should concentrate on enjoying your vacation.[」][lr]
+[else]
+　「これから私も、よほどのことがない限りこの話題は控えるよ。[l]
+キミもよほどのことがない限り、休暇を楽しむことに務めるように」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]As you say, Doctor.[」][lr]
+[else]
+　「わかったわ先生」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h04" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki chuckled.[prcm]
+[else]
+　ははっ、と楢崎が笑う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's the first time you called me that.[」][lr]
+[else]
+　「初めて先生って呼んだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you like it... Doctor?[」][prcm]
+[else]
+　「いいでしょう先生」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h15" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki crossed her legs again and said it wasn't too bad.[prcm]
+[else]
+　楢崎は足を組み直して「悪くない」と言った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item07" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, we resumed our game and continued playing until we got bored.[lr]
+[else]
+　それからチェスゲームを再開して、それなりの時間が経つとどちらからともなくゲームを終わらせた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Saying she wanted to look around the area, Narasaki got up and left my room.[prcm]
+[else]
+　そして楢崎は、「少しこのあたりを見て回るよ」と言って部屋を出ていった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="073.ks" target=*073
+
+

@@ -1,0 +1,1806 @@
+;★システム変数がいま、いくつか1になっているので直しておくこと
+;システム変数の変更には以下の式を使うこと
+;[eval exp="sf.cg01=1"]
+
+*cg
+
+@laycount layers=27
+
+[playbgm storage="bgm54"]
+[eval exp="f.CpStartFlg = 1"]
+
+*page_change
+[call storage="MyMacro.ks" target="*Cgselect_layers_del"]
+[call storage="cg_script.ks"]
+
+[backlay]
+[fbfscale_image storage="cgselect" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="cgselect" visible=false left=0 top=0 opacity=255]
+[fbfscale_image layer=1 page=back storage="cgselect" visible=false left=0 top=0 opacity=255]
+[fbfscale_image layer=2 page=back storage="&f.cg_sm_name01" visible=true left=72 top=73 opacity=255]
+[pimage layer=2 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg01==0"]
+[fbfscale_image layer=2 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg01==2"]
+[fbfscale_image layer=3 page=back storage="&f.cg_sm_name02" visible=true left=245 top=73 opacity=255]
+[pimage layer=3 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg02==0"]
+[fbfscale_image layer=3 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg02==2"]
+[fbfscale_image layer=4 page=back storage="&f.cg_sm_name03" visible=true left=419 top=73 opacity=255]
+[pimage layer=4 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg03==0"]
+[fbfscale_image layer=4 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg03==2"]
+[fbfscale_image layer=5 page=back storage="&f.cg_sm_name04" visible=true left=592 top=73 opacity=255]
+[pimage layer=5 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg04==0"]
+[fbfscale_image layer=5 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg04==2"]
+[fbfscale_image layer=6 page=back storage="&f.cg_sm_name05" visible=true left=72 top=193 opacity=255]
+[pimage layer=6 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg05==0"]
+[fbfscale_image layer=6 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg05==2"]
+[fbfscale_image layer=7 page=back storage="&f.cg_sm_name06" visible=true left=245 top=193 opacity=255]
+[pimage layer=7 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg06==0"]
+[fbfscale_image layer=7 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg06==2"]
+[fbfscale_image layer=8 page=back storage="&f.cg_sm_name07" visible=true left=419 top=193 opacity=255]
+[pimage layer=8 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg07==0"]
+[fbfscale_image layer=8 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg07==2"]
+[fbfscale_image layer=9 page=back storage="&f.cg_sm_name08" visible=true left=592 top=193 opacity=255]
+[pimage layer=9 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg08==0"]
+[fbfscale_image layer=9 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg08==2"]
+[fbfscale_image layer=10 page=back storage="&f.cg_sm_name09" visible=true left=72 top=314 opacity=255]
+[pimage layer=10 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg09==0"]
+[fbfscale_image layer=10 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg09==2"]
+[fbfscale_image layer=11 page=back storage="&f.cg_sm_name10" visible=true left=245 top=314 opacity=255]
+[pimage layer=11 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg10==0"]
+[fbfscale_image layer=11 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg10==2"]
+[fbfscale_image layer=12 page=back storage="&f.cg_sm_name11" visible=true left=419 top=314 opacity=255]
+[pimage layer=12 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg11==0"]
+[fbfscale_image layer=12 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg11==2"]
+[fbfscale_image layer=13 page=back storage="&f.cg_sm_name12" visible=true left=592 top=314 opacity=255]
+[pimage layer=13 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg12==0"]
+[fbfscale_image layer=13 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg12==2"]
+[fbfscale_image layer=14 page=back storage="&f.cg_sm_name13" visible=true left=72 top=434 opacity=255]
+[pimage layer=14 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg13==0"]
+[fbfscale_image layer=14 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg13==2"]
+[fbfscale_image layer=15 page=back storage="&f.cg_sm_name14" visible=true left=245 top=434 opacity=255]
+[pimage layer=15 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg14==0"]
+[fbfscale_image layer=15 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg14==2"]
+[fbfscale_image layer=16 page=back storage="&f.cg_sm_name15" visible=true left=419 top=434 opacity=255]
+[pimage layer=16 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg15==0"]
+[fbfscale_image layer=16 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg15==2"]
+[fbfscale_image layer=17 page=back storage="&f.cg_sm_name16" visible=true left=592 top=434 opacity=255]
+[pimage layer=17 storage="bgimage/cgselect/noimage" page=back cond="f.cg_flg16==0"]
+[fbfscale_image layer=17 storage="bgimage/cgselect/ev00_sm" page=back cond="f.cg_flg16==2"]
+[fbfscale_image layer=18 page=back storage="bgimage/cgselect/back2" visible=true left=275 top=554 opacity=255]
+[fbfscale_image layer=19 page=back storage="bgimage/cgselect/back" visible=true left=275 top=554 opacity=255]
+[fbfscale_image layer=20 page=back storage="bgimage/cgselect/exit2" visible=true left=369 top=554 opacity=255]
+[fbfscale_image layer=21 page=back storage="bgimage/cgselect/exit" visible=true left=369 top=554 opacity=255]
+[fbfscale_image layer=22 page=back storage="bgimage/cgselect/next2" visible=true left=433 top=554 opacity=255]
+[fbfscale_image layer=23 page=back storage="bgimage/cgselect/next" visible=true left=433 top=554 opacity=255]
+[fbfscale_image layer=24 page=back storage="bgimage/cgselect/waku.png" visible=false left=0 top=0 opacity=255]
+[fbfscale_image layer=25 page=back storage="bgimage/cgselect/cgtitle" visible=true left=40 top=0 opacity=255]
+[if exp="f.cg_page == 1"]
+[fbfscale_image layer=26 page=back storage="bgimage/cgselect/page1" visible=true left=630 top=0 opacity=255]
+[endif]
+[if exp="f.cg_page == 2"]
+[fbfscale_image layer=26 page=back storage="bgimage/cgselect/page2" visible=true left=630 top=0 opacity=255]
+[endif]
+[if exp="f.cg_page == 3"]
+[fbfscale_image layer=26 page=back storage="bgimage/cgselect/page3" visible=true left=630 top=0 opacity=255]
+[endif]
+[if exp="f.cg_page == 4"]
+[fbfscale_image layer=26 page=back storage="bgimage/cgselect/page4" visible=true left=630 top=0 opacity=255]
+[endif]
+[if exp="f.cg_page == 5"]
+[fbfscale_image layer=26 page=back storage="bgimage/cgselect/page5" visible=true left=630 top=0 opacity=255]
+[endif]
+[if exp="f.cg_page == 6"]
+[fbfscale_image layer=26 page=back storage="bgimage/cgselect/page6" visible=true left=630 top=0 opacity=255]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+
+
+*cg_top
+@s
+
+*cg1
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg2
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg3
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg4
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg5
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev5" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg6
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev6" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg7
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev7" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg8
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev8" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg9
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev9_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg09_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev9_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg09_6 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev9_6" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg09_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev9_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg09_5 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev9_5" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg09_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev9_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+
+@jump target=*page_change
+
+*cg10
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev10" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg11
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev11" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg12
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev12" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg13
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev13" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg14
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev14_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg14_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev14_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+
+@jump target=*page_change
+
+
+*cg15
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="fgimage/s_img/ev15_b" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[fbfscale_move time=2000 path="(0,-500,255)" layer=1]
+[wm]
+[waitclick]
+@jump target=*page_change
+
+*cg16
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev16" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg17
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev17_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg17_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev17_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg17_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev17_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg17_5 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev17_5" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg17_6 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev17_6" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg18
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev18" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg19
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev19" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg20
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev20" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg21
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev21_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg21_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev21_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg21_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev21_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg23
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev23" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg24
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev24_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg24_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev24_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+
+*cg25
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev25_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg25_7 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev25_7" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg25_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev25_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg25_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev25_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg25_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev25_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg26
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev26" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg27
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev27" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg28
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev28_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg29
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev29" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg30
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev30_9" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg31
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev31" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg32
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev32_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg32_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev32_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+
+*cg33
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev33_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg33_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev33_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+
+@jump target=*page_change
+
+*cg34
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev34_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg34_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev34_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg34_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev34_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg35
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev35_10" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg35_11 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev35_11" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg35_9 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev35_9" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg35_12 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev35_12" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg35_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev35_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg35_7 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev35_7" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg35_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev35_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg35_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev35_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+
+*cg36
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev36" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg37
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev37" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg38
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev38_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg38_6 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev38_6" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg38_7 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev38_7" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg38_8 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev38_8" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg38_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev38_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg38_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev38_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg38_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev38_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg39
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev39_n_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg39_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev39_n_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+
+@jump target=*page_change
+
+*cg40
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev40" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg41
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev41" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg42
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev42_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg42_7 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev42_7" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg42_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev42_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg42_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev42_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg42_6 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev42_6" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg42_8 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev42_8" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg42_9 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev42_9" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg42_10 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev42_10" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+
+@jump target=*page_change
+
+
+*cg43
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev43_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg43_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev43_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg43_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev43_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+
+@jump target=*page_change
+
+*cg44
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev44_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg44_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev44_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg44_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev44_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+
+*cg45
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/ev46_1" visible=true left=0 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/ev45_1" visible=true left=267 top=0]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_1" visible=true left=533 top=0]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_3" visible=true left=533 top=0]
+[trans method=universal rule="rule10" vague=10 time=500]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_4" visible=true left=533 top=0]
+[trans method=universal rule="rule10" vague=10 time=500]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_2" visible=true left=533 top=0]
+[trans method=universal rule="rule10" vague=10 time=500]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/ev45_2" visible=true left=267 top=0]
+[trans method=universal rule="rule10" vague=10 time=500]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/ev46_2" visible=true left=0 top=0]
+[trans method=universal rule="rule10" vague=10 time=500]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg48
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev48_8" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg48_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev48_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg48_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev48_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg48_7 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev48_7" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg48_10 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev48_10" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg48_5 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev48_5" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+
+*cg49
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev49_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg50
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev50" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg51
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev51_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg51_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev51_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg52
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev52" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg53
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev53_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg53_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg53_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg53_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg53_5 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_5" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg53_6 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_6" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg53_7 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_7" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg53_8 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_8" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg53_9 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_9" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg53_10 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_10" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg53_11 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev53_11" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg54
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev54" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg55
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev55_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg55_5 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev55_5" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg55_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev55_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg55_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev55_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg55_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev55_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg55_b_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev55_b_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg55_b_5 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev55_b_5" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg55_b_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev55_b_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg55_b_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev55_b_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+
+*cg56
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev56_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg56_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev56_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg56_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev56_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+
+*cg58
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev58" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg59
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev59" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg60
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev60" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg62
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev62" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg63
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev63_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg63_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev63_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+
+
+*cg64
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev64" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg65
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev65" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg66
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev66_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg66_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev66_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+
+*cg67
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev67" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg68
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=0 page=back storage="fgimage/other_img/ev68_n" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[fbfscale_move time=3000 path="(-240,0,255)" layer=0]
+[wm]
+[waitclick]
+@jump target=*page_change
+
+*cg69
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/other_img/ev69" visible=true left=-800 top=0 opacity=255]
+[fbfscale_image layer=1 page=back storage="fgimage/other_img/ev69_t" visible=true left=0 top=0 opacity=255]
+[fbfscale_image layer=2 page=back storage="fgimage/other_img/ev69_s" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=500]
+[fbfscale_move time=5000 path="(-30,0,255)" layer=0]
+[fbfscale_move time=2000 path="(-600,0,255)" layer=1]
+[fbfscale_move time=5000 path="(-640,0,255)" layer=2]
+[wm]
+[wm]
+[wm]
+[fbfscale_move time=500 path="(0,0,255)" layer=0]
+[fbfscale_move time=500 path="(-700,0,255)" layer=2]
+[wm]
+[wm]
+[wait time=1500]
+[waitclick]
+@jump target=*page_change
+
+
+*cg70
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev70" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg72
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev72" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg73
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev73_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg73_1 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev73_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg73_6 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev73_6" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg73_5 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev73_5" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg73_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev73_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg73_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev73_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg74
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev74_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg74_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev74_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg74_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev74_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg75
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev75" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg76
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev76_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg76_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev76_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg76_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev76_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg76_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev76_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+
+@jump target=*page_change
+
+*cg77
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev77_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg77_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev77_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg77_3 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev77_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+[if exp="sf.cg77_4 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev77_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+
+@jump target=*page_change
+
+
+*cg80
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev80" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg81
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev81" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg82
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev82" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg83
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev83_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev83" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg84
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev84_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev84_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg85
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev85" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg86
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev86" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg87
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev87" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg88
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev88_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev88_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev88_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev88_4" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg89
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev89" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+*cg90
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev90" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+;*cg91
+;[fbfscale_image storage="cgselect_b" page=fore layer=base]
+;[cgselect_layers_del]
+;[fbfscale_image layer=1 page=back storage="ev91" visible=true left=0 top=0 opacity=255]
+;[trans method = crossfade time=1000]
+;[wt]
+;[waitclick]
+;[backlay]
+;[fbfscale_image layer=1 page=back storage="ev91_2" visible=true left=0 top=0 opacity=255]
+;[trans method = crossfade time=500]
+;[wt]
+;[waitclick]
+;@jump target=*page_change
+
+*cg91
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev91" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg92
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev92" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev92_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg93
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev93_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[fbfscale_move time=8000 path="(0,-500,255)" layer=1]
+[wm]
+[waitclick]
+@jump target=*page_change
+
+
+*cg94
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev94" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+*cg95
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev95_1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[if exp="sf.cg95_2 == 1"]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev95_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+[endif]
+@jump target=*page_change
+
+*cg96
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev96_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[fbfscale_move time=2000 path="(0,-358,255)" layer=1]
+[wm]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev96_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+
+@jump target=*page_change
+
+*cg97
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev97_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[fbfscale_move time=2000 path="(0,-443,255)" layer=1]
+[wm]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev97_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+
+@jump target=*page_change
+
+
+*cg98
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev98_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[fbfscale_move time=2000 path="(0,-379,255)" layer=1]
+[wm]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev98_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+
+@jump target=*page_change
+
+
+*cg99
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev99_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[fbfscale_move time=2000 path="(0,-379,255)" layer=1]
+[wm]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev99_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+
+@jump target=*page_change
+
+
+*cg101
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev101_2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+[fbfscale_move time=2000 path="(0,-379,255)" layer=1]
+[wm]
+[waitclick]
+[backlay]
+[fbfscale_image layer=1 page=back storage="ev101_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=500]
+[wt]
+[waitclick]
+
+@jump target=*page_change
+
+
+
+*cg100
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[cgselect_layers_del]
+[fbfscale_image layer=1 page=back storage="ev100" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1000]
+[wt]
+[waitclick]
+@jump target=*page_change
+
+
+;*cgNN
+;[fbfscale_image storage="cgselect_b" page=fore layer=base]
+;[cgselect_layers_del]
+;[fbfscale_image layer=1 page=back storage="evNN" visible=true left=0 top=0 opacity=255]
+;[trans method = crossfade time=1000]
+;[wt]
+;[waitclick]
+;[if exp="sf.cg == 1"]
+;[backlay]
+;[fbfscale_image layer=1 page=back storage="evNN" visible=true left=0 top=0 opacity=255]
+;[trans method = crossfade time=500]
+;[wt]
+;[waitclick]
+;[endif]
+;@jump target=*page_change
+
+
+*back
+[mapdisable layer=base]
+[if exp="f.cg_page==1"]
+  [eval exp="f.cg_page = 6"]
+[else]
+  [eval exp="f.cg_page = f.cg_page - 1"]
+[endif]
+@jump target=*page_change
+
+
+*next
+[mapdisable layer=base]
+[if exp="f.cg_page==6"]
+  [eval exp="f.cg_page = 1"]
+[else]
+  [eval exp="f.cg_page = f.cg_page + 1"]
+[endif]
+@jump target=*page_change
+
+*exit
+[mapdisable layer=base]
+[fbfscale_image storage="cgselect_b" page=fore layer=base]
+[backlay]
+[freeimage layer=0 page=back][freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back]
+[freeimage layer=4 page=back][freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back]
+[freeimage layer=8 page=back][freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back]
+[freeimage layer=12 page=back][freeimage layer=13 page=back][freeimage layer=14 page=back][freeimage layer=15 page=back]
+[freeimage layer=16 page=back][freeimage layer=17 page=back][freeimage layer=18 page=back][freeimage layer=19 page=back]
+[freeimage layer=20 page=back][freeimage layer=21 page=back][freeimage layer=22 page=back][freeimage layer=23 page=back]
+[freeimage layer=24 page=back][freeimage layer=25 page=back][freeimage layer=26 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[fadeoutbgm time=1500]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[eval exp="f.cg_page=1"]
+@jump storage="first.ks" target=*start

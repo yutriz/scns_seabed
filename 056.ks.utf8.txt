@@ -1,0 +1,517 @@
+*056| The Wall Clock of the Inn
+; *056|洋館の柱時計
+[fbfstoretitle eng="The Wall Clock of the Inn" jp="洋館の柱時計"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm39"]
+[backlay]
+[fbfscale_image storage="bg51_5" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=1000]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 71"]
+[eval exp="sf.ItRelease = 72"]
+[endif]
+
+
+*| The Wall Clock of the Inn
+; *|洋館の柱時計
+[fbfstoretitle eng="The Wall Clock of the Inn" jp="洋館の柱時計"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We passed by a hedge fence with several yellow flowers growing on it before finally reaching the actual inn.[lr]
+[else]
+　小さな黄色い花をたくさん付けた木犀の垣根を抜けて宿の敷地に入ると、フロントガラスを通した正面に洋館が見えた。[lr]
+[endif]
+
+[r]
+[playse buf = 0  storage=se76_2.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The actual building was colored in dull brown, and looked like it could melt into the snow-laden winter forest behind it at any moment.[lr]
+[else]
+　白く褪せた冬の森に溶け込むようにして佇んでいる洋館は、[r]地味目の赤茶色で統一されている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Windows with wooden frames lined the flat brick wall — most of them were covered in ivory curtains from the other side.[lr]
+[else]
+　平坦な石壁には木枠の格子窓がいくつも嵌め込まれていて、大半はアイボリーのカーテンで閉ざされていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The tires made low, crackling sounds as they drove over the gravel driveway.[lr]
+[else]
+　タイヤが砂利石を踏み、ガリガリと音がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The car jerked a few times as Nanae slowed down to align the vehicle to the parking spot. After a few more adjustments, we finally came to a complete halt.[p][ws buf=0][r][cm]
+[else]
+　ノロノロと走り続けていた車はガクンと一度揺れて駐車場に収まると、それからカタタタタと震えてから停止する。[p]
+[ws buf=0]
+[r][cm]
+[endif]
+
+
+[playse buf = 1  storage=se87.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're here.[」][lr]
+[else]
+　「着いたわよ」[lr]
+[endif]
+
+[r]
+[playse buf = 2  storage=se88.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped out of the car, feeling slightly wobbly after all that shaking, but the invigorating scent of flowers pulled me back to reality. I followed Nanae along the gravel road, which was covered almost completely in golden flower petals.[lr]
+[else]
+　車を降りると、車揺れの余韻と黄金色の甘い香りを感じながら、小さな金色の落ち花の散る砂利道を、七重のあとに続いて歩く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Impressed by how her sash didn't seem to come undone after all that shaking, I glanced over her shoulder to inspect the inn.[prcm]
+[else]
+　畦道の揺れの中、先に歩く七重の着物の帯が乱れていないことに感心した後、七重の肩越しに夕日に焼ける洋館をみる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+One side of the building was rounded and rose toward the sky like a tower, its lattice windows only adding to that image.[lr]
+[else]
+　建物の脇は円中の塔のような造で、中段にある大きな格子窓も塔の曲線に沿っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It also had a pointy roof that reminded me of a witch's hat. From it extended a triangular roof with a few windows that covered the middle of the building.[lr]
+[else]
+　塔の上部は魔女の帽子みたいな赤茶のうろこ屋根になっており、そこから三角屋根が飛び出して窓が付いていた。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rest of the roof was flat with a white fence for its parapet.[lr]
+[else]
+　脇の塔の屋根の他、洋館の殆どの屋根は陸屋根になっていて、パラペットの縁には鈍色の柵が打ち立てられている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Tall trees behind the building extended above its roof, their colored leaves rustling in the wind.[prcm]
+[else]
+　正面の屋根の柵の向こうには、褪せた緑色が揺れる照葉樹の樹冠がみえた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The semicircular side of the building went out of view as I ascended the fan-shaped stone stairs at the entrance.[lr]
+[else]
+　正面玄関の前にある扇型の切石の段差を登ると、半円型の庇の影に入った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The double doors had three rectangles carved at their bottom, and a window at the top. [lr]
+[else]
+　観音開きの扉は、下半分が繰型の四角い窪みが三つ。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　上半分には格子型の小窓がふたつ付いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Above the windows, there was a rectangular patch of stained glass.[prcm]
+[else]
+　窓の上には長方形のカラフルなステンドグラスがはめ込まれていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huff.[」][lr]
+[else]
+　「よっと」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se41.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae picked up my bag with one hand while turning the metal handle with the other.[lr]
+[else]
+　七重はキャリーケースを左手に持ち変えて、空いたほうの手で金属の取っ手を掴んで回した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pushed the door half-open with her shoulder, then turned back toward me.[prcm]
+[else]
+　片側のドアを押し開き中側で窓が閉まらないように押さえると、振り返りこちらを促した。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Welcome, dear guest.[」][prcm]
+[else]
+　「どうぞいらっしゃいませ」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 0 storage=se66.ogg]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule8" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg52_3.jpg" page=back layer=base]
+[trans method=universal rule="rule8" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wait here for a bit.[」][lr]
+[else]
+　「少しここで待っていて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae swiftly disappeared into the room beyond the lobby desk.[prcm]
+[else]
+　ロビーのカウンターの前でそう告げると、七重はカウンターの奥にある部屋へと行ってしまった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The room fell into complete silence with her gone.[lr]
+[else]
+　一人残されたロビーは静かでキィン、と無音の音がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sun had almost completely set, yet the lights in the lobby were still off.[lr]
+[else]
+　日は落ちかけていたが、壁つきの貝のシェード付きの灯りは付いてはいない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The only thing to illuminate the floor was a rectangular patch of colorful light that filtered in through the stained glass.[prcm]
+[else]
+　入り口の扉の上部にあるステンドグラスの小窓から落ちた、カラフルな四角い光がロビーの床を照らしている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For a while, I kept staring absentmindedly at the lobby desk.[lr]
+[else]
+　ぼんやりと、七重の去ったカウンターを眺める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its blackwood surface was surprisingly cold to the touch.[lr]
+[else]
+　黒い木のカウンターに手を触れるとひやりとする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Behind the desk, I could see a fancy-looking cabinet with arched, cat-like legs.[prcm]
+[else]
+　カウンターの内側には猫脚の大きな飾り棚がある。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Up on the shelves, I also spotted some old, foreign-looking postcards, an artificial flower, and some early Christmas decorations, among other things.[lr]
+[else]
+　古い外国の葉書やブリキの造花、少し気の早いサンタクロースの置物と、他にも古い品が雑多に置かれている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A transparent vase rested on the lobby desk with a camellia branch placed in it. Next to it was a silver mechanical register decorated with vines.[prcm]
+[else]
+　黒い木製のカウンターの上には、大輪の椿の枝が一本生けてある四角い透明の小瓶と、銀の蔓の装飾の機械式レジスターがあった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h17" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sorry to have kept you waiting.[」][lr]
+[else]
+　「ごめんね。待たせてしまって」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae appeared in the doorway holding a green journal.[prcm]
+[else]
+　奥の扉から、七重が抹茶色のカバーの帖を持って現れる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h11" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hm?[l] Oh, it's working just fine, don't worry.[」][lr]
+[else]
+　「ん？[l] ああ、ちゃんと動くのよそれ」[lr]
+[endif]
+
+[r]
+;★レジスターの音
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Realizing I was looking at the register, she pushed one of its buttons, causing the lower half to open up with a lively ka-ching.[lr]
+[else]
+　私の視線の先のレジスターに気がつくと、レジスターのどこかのボタンを押す。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　ガシャン、と下部の抽斗が開いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were a few bills and some coins inside.[prcm]
+[else]
+　中に数枚のお札と小銭がある。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We don't really use it much, though.[」][lr]
+[else]
+　「余り使わないけんだけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae closed it with another ka-ching.[lr]
+[else]
+　ガチン、と七重がレジスターの引き出しを閉めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then placed the journal on the lobby desk.[prcm]
+[else]
+　次にトン、と抹茶色のカバーの宿帳をカウンターに置いて開いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f04_p03_h09" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I want you to sign your name here.[l] Yes, here.[wait time=600] Then here.[wait time=600] And here.[」][lr]
+[else]
+　「名前を書いて欲しいの。[l]記入欄はここと、[wait time=600]ここと、[wait time=600]ここ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After pointing out three places on the paper with her fountain pen, Nanae popped its cap off and handed it to me.[lr]
+[else]
+　七重は記入箇所を万年筆の頭でコツコツコツ、と指した。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se61.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I signed my name three times.[prcm]
+[else]
+　七重からキャップを外した万年筆を受け取ると、指定された箇所にサインをする。[prcm]
+[endif]
+
+
+
+[playse buf = 1 storage=se24_5.ogg loop=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]ding-dong*[lr]
+[else]
+　ボォーン、ボォーン。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The grandfather clock that towered near the far wall of the lobby had just struck the hour.[lr]
+[else]
+　ロビーの奥側の壁にある振り子時計が鐘を鳴らす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The clock's hands signaled that it was five o'clock.[prcm]
+[else]
+　黒色針は五時頃を示していた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll show you to your room.[」][lr]
+[else]
+　「案内するわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae stashed the journal under the desk, then circled around it.[lr]
+[else]
+　サインをした宿帳を仕舞うと、カウンターから出てきた七重が大きな鐘の音の間に言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was about to nod when the camellia branch trembled in the vase, almost as if to answer in my stead.[prcm]
+[else]
+　私の代わりに返事をするように、カウンター上の椿の枝が微かに揺れていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=1 time=800]
+[stopse buf=2]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[seopt buf=1 volume=100]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="057.ks" target=*057
+
+

@@ -1,0 +1,308 @@
+*114| Tempura
+; *114|天ぷら
+[fbfstoretitle eng="Tempura" jp="天ぷら"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm14"]
+[backlay]
+[fbfscale_image storage="bg93_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 142"]
+[eval exp="sf.ItRelease = 143"]
+[endif]
+
+*| Tempura
+; *|天ぷら
+[fbfstoretitle eng="Tempura" jp="天ぷら"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, wait.[」][lr]
+[else]
+　「ああ、そうだったわ」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae stood up and disappeared into the kitchen again.[prcm]
+[else]
+　と、[ruby text="なな"]七[ruby text="え"]重は立ち上がるとまた炊事場の方へと行ってしまう。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[backlay]
+[fbfscale_image storage="item14" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Two plates of freshly made tempura, along with two bowls of miso soup rested on the table.[lr]
+[else]
+　卓袱台の上には七重の作った天ぷらとお味噌汁があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The wild mountain vegetable leaves Nanae used for the dish were crispy at the edges, but green in the middle.[lr]
+[else]
+　天ぷらは山菜の葉の片側にきつね色の衣があり、表は瑞々しい葉の緑色をしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The whole dish seemed to have just the right amount of crispiness.[lr]
+[else]
+　薄い衣は油がきちんと切れており、さくりと音がしそうな程きちんと揚がっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Meanwhile, the miso soup contained the rest of the vegetables we gathered.[lr]
+[else]
+　合わせ味噌のお味噌汁は、数種の山菜があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Apart from the shepherd's purse, the shiitake mushrooms, and the carrots, I could taste the leaves and stems of a few other plants.[prcm]
+[else]
+　食べてから判別できたナズナ、シイタケ、ニンジンの他にもいくつかの葉や茎があったが、どれもアクがきちんと抜かれていた。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg93_2" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sorry for making you wait.[」][lr]
+[else]
+　「お待たせ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae appeared from the kitchen holding a bottle.[prcm]
+[else]
+　と、七重が台所からお酒を持って戻ってくる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h09" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, seems like I made a bit less than I thought.[」][lr]
+[else]
+　「もう殆ど食べてしまったけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's enough for me.[l] But if you want to make more, I'll help.[」][lr]
+[else]
+　「私は十分だけど。[l]調理するなら、手伝うわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nah, we still have dinner ahead of us, so I'll use the rest of the vegetables for that.[l] [playse buf = 0 storage=se128.ogg][msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h03" visible=true left=105 top=0][ws buf=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]Here you go.[」][lr]
+[else]
+　「夕飯もあることだし、残った山菜はそっちで調理するよ。[l]
+[playse buf = 0 storage=se128.ogg]
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h03" visible=true left=105 top=0]
+[ws buf=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+
+はい、どうぞ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She filled the transparent glass with sake and handed it to me.[lr]
+[else]
+　透明の円グラスにお酒をついでこちらによこした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After staring at it for a few moments, I tilted the glass against my mouth.[lr]
+[else]
+　受け取って少し眺めてから、グラスを傾けて透明の液体を口に入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A cool sensation extended across my throat.[prcm]
+[else]
+　ひんやりとした感触が喉を流れた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's like water.[」][lr]
+[else]
+　「水みたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Tasty and easy to drink, right?[l] It's my favorite brand from Yamagata.[」][lr]
+[else]
+　「飲みやすくて美味しいでしょう。[l]私が好きな山形のお酒なのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae took a sip from her own glass after taking a bite of shiitake tempura.[lr]
+[else]
+　七重は、シイタケの天ぷらを食べてから、自分のグラスを傾けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Meanwhile, I gulped down the remained of my drink.[prcm]
+[else]
+　こちらも、こくりこくり、とその飲みやすい水のような酒を減らしていく。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Want some more?[」][lr]
+[else]
+　「もういらない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae raised the bottle when she saw me empty my glass.[lr]
+[else]
+　減りかけたグラスを見た七重が、瓶の酒を持ち上げた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a second or two of hesitation, I held out my glass in front of her.[lr]
+[else]
+　少し迷ってから、持っていたグラスを差し出す。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=800]
+[playse buf = 0 storage=se128.ogg]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I watched it get slowly filled up again.[lr]
+[else]
+　トクトク、とグラスが満たされた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took another gulp and let out a breath.[lr]
+[else]
+　もう一口飲んで、静かに息をついた。[lr]
+[endif]
+
+[r][cm]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="115.ks" target=*115

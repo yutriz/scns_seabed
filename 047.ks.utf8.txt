@@ -1,0 +1,220 @@
+*047| Bath
+; *047|風呂
+[fbfstoretitle eng="Bath" jp="風呂"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playse buf = 2 storage=se116.ogg loop=true]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg46_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[playse buf = 3 storage=se115.ogg]
+[ws buf=3]
+[wait time=500]
+[playbgm storage="bgm24"]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 60"]
+[eval exp="sf.ItRelease = 61"]
+[endif]
+
+
+*| Bath
+; *|風呂
+[fbfstoretitle eng="Bath" jp="風呂"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The mosaic-styled floor of the bath that Mayuko had just cleaned sparkled in the light. On the other end of the room, I could see a bunch of yellow plastic bowls neatly arranged in the shape of a mountain.[lr]
+[else]
+　繭子が掃除した後の浴場は、モザイクタイルの床がピカピカに磨かれていて、奥には黄色いプラスチック桶が綺麗に山詰みになっていた。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[playse buf = 0 storage=se32.ogg]
+[wait time=500]
+[fadeinse buf=1 storage=se31.ogg time=1500]
+[wf buf=1]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down in front of the shower and turned its handle. The moment I did, the lonely bathroom hall was filled by the sound of running water.[prcm]
+[else]
+　ボンヤリと丸い灯りが照らすシャワー台の前に座って蛇口を回すと、誰も居ない浴場にキュ、と音が反響してからシャワーの蓮口から暖かい湯が流れた。[prcm]
+[endif]
+
+[clickskip enabled=false]
+[fadeoutse buf=1 time=1500]
+[wf buf=1]
+[seopt buf=1 volume=100]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After spraying the hot water all over myself, I took extra care to wash off the dirt that got on my hands and under my fingernails. Once I was done with that, I continued to the bathtub.[lr]
+[else]
+　シャワーで軽く体を洗い、手についた花壇の土は念入りに擦って落としてから湯船に入った。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se111.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had underwater stairs on both ends to make it easier to descend.[lr]
+[else]
+　枡を埋め込んだような風呂は両側から入れるように湯の中に段差があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The first step reached up to my knees. I stepped on it, sending a wave across the tub.[lr]
+[else]
+　一段目は膝くらいまでの深さがあり、そこへ足を付けると四角い鏡のように静かな湯船に波が立った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Countless ripples disturbed the previously calm surface of the water.[prcm]
+[else]
+　湯船にはたくさんのポンカンの大きな玉が浮かんであり、波に乗って揺れた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ow-ow-ow...[」][lr]
+[else]
+　「あちち」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had jumped in up to my shoulders right away, sending some of the steaming water from the black bathtub splashing across the mosaic-styled tiles surrounding it.[lr]
+[else]
+　そのまま一気に湯船に入り肩まで浸かると、勢い良く黒い木枠からお湯が溢れ出してモザイクタイルの床を流れていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I caught my basket before it could be swept away, then placed it on the edge of the bath. After that, I lay down on my back to rest my head against the same edge.[prcm]
+[else]
+　おっと、と流されそうになった桶を掴み、縁にカコンと置くと、ゴロンと仰向けになり頭も縁に乗せた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The bath here sure is great.[」][lr]
+[else]
+　「いいお湯だなぁ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heaved a relaxed breath.[prcm]
+[else]
+　と、息を吐く。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An upside-down showerhead and the black, wooden ceiling filled my vision.[lr]
+[else]
+　視界には、逆さまになったシャワーノズルと黒い木板の天井が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The lights below the showerhead were on, perhaps due to the cloudy weather.[lr]
+[else]
+　外が暗いためか、昼間なのにシャワーノズルの下にある明かりが点いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I gave it a closer look, I managed to make out orange filaments inside the otherwise white tube.[prcm]
+[else]
+　よく見ると、乳白色の筒に入った電灯には滲む光の中にオレンジ色のフィラメントが見える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Steam drifted lazily across the bathroom.[lr]
+[else]
+　風呂の湯気が湯面を漂っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It looked soft and strikingly white compared to its murky surroundings.[lr]
+[else]
+　薄暗い浴場の空間は使ったシャワーの湯気でフワフワ、と白い。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My gaze wandered up the wooden wall — almost pitch black after many years of use — and settled on the windows above. The bottom ones seemed to have been made of wavy glass.[lr]
+[else]
+　長年の使用で黒く変色している板壁の上のほうに取り付けられた上げ下げ窓は、下が波硝子になっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the beat of the rain against them.[prcm]
+[else]
+　窓硝子の外からはサアア、と雨の降る音と、ぱしっぱしっと雨粒が硝子を叩いている音が聴こえた。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="048.ks" target=*048
+
+

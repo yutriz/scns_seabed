@@ -1,0 +1,576 @@
+*048| Bath with Mayuko
+; *048|繭子とお風呂
+[fbfstoretitle eng="Bath with Mayuko" jp="繭子とお風呂"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+
+[if exp="f.CpStartFlg == 1"]
+[playse buf = 2 storage=se116.ogg loop=true]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+[msglayer]
+[wait time=1000]
+[playse buf = 0 storage=se59.ogg]
+[backlay]
+[fbfscale_image storage="bg46_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 61"]
+[eval exp="sf.ItRelease = 62"]
+[endif]
+
+
+*| Bath with Mayuko
+; *|繭子とお風呂
+[fbfstoretitle eng="Bath with Mayuko" jp="繭子とお風呂"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the rattling sound of the bathroom door being slid open behind me.[lr]
+[else]
+　カラカラ、と背後にある風呂場の入口から、擦りガラスのサッシ戸が開く音が聞こえる。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="bg46_2" page=back layer=base]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h24" visible=true left=105 top=0]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Turning around, I saw Mayuko with her front hidden by a towel.[lr]
+[else]
+　振り返ると開いたサッシ戸の前に、手ぬぐいで前を隠した[ruby text="まゆ"]繭[ruby text="こ"]子が見える。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I smiled as our eyes met.[prcm]
+[else]
+　目が合うとニコリ、と微笑んだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Cheers, Mayuko.[」][lr]
+[else]
+　「お疲れ繭子」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello again.[l] How is the water?[」][lr]
+[else]
+　「お疲れ様です。[l]湯加減はどうですか？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko slowly descended the stone stairs.[lr]
+[else]
+　テッテ、と繭子が石タイルの階段を下りてくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At the foot of the stairs, there was an odd lamp that reminded me of western streetlamps. As Mayuko passed by it, the light illuminated her milky white skin.[prcm]
+[else]
+　階段の端には、どこか西洋の国の街灯のような灯りがあって白い湯気と繭子の肌をやはりボンヤリと照らした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not bad.[l] You should hurry up and come over here.[」][lr]
+[else]
+　「いい感じ。[l]繭子も早く入るといい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Reaching one of the shower mirrors, Mayuko sat down on a wooden stool.[prcm]
+[else]
+　繭子は近くのシャワー台の鏡の前にたどり着くと、社型の木椅子に座る。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h23" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have to wash off all this dirt first.[」][lr]
+[else]
+　「先に土を落としてから入りますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko picked up a basket from the neighboring stand and put it on her own. Then, lowering her towel to her knees, she reached out toward the shower handle.[prcm]
+[else]
+　隣の台から桶をとって台の上に置くと、手ぬぐいを膝に掛けてシャワーの蛇口に手を伸ばす。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, be careful, that one's gonna be pretty hot![」][lr]
+[else]
+　「そのままは熱いかも」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[playse buf = 0 storage=se32.ogg]
+[wait time=500]
+[fadeinse buf=1 storage=se31.ogg time=1500]
+[wf buf=1]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried to warn her, but she'd already turned the handle by the time I finished.[prcm]
+[else]
+　ハッとして、繭子に声をかけるが、その声と同時にキュ、と蛇口を捻る音が響いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nmgh![」][lr]
+[else]
+　「んんっ」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[playse buf = 0 storage=se32.ogg]
+[wait time=500]
+[fadeoutse buf=1 time=500]
+[wf buf=1]
+[seopt buf=1 volume=100]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She turned the water off almost immediately.[prcm]
+[else]
+　すぐにキュッと蛇口が閉まる。[prcm]
+[endif]
+
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why on earth is this so hot?[」][lr]
+[else]
+　「どうして、こんなに熱くなってるんですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sorry.[l] I used the same shower just now.[」][lr]
+[else]
+　「ごめん。[l]さっきそこのシャワー使ってたんだ」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[playse buf = 0 storage=se32.ogg]
+[wait time=500]
+[fadeinse buf=1 storage=se31.ogg time=1500]
+[wf buf=1]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko picked up the showerhead, made it face toward her basket, and turned the handle again.[lr]
+[else]
+　繭子はシャワーを台から取り外して、ノズルを桶に向けると、蛇口を捻った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then fiddled with the blue and red knobs for a while, adjusting the temperature of the water.[prcm]
+[else]
+　次に、赤と青の矢印が描かれている温度の調節ノブを捻りながら、桶に手を入れてお湯の温度を確かめた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I thought I'd be boiled alive.[」][lr]
+[else]
+　「茹で上がりそう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She narrowed her eyes as she stuck her hand into the shower's stream.[lr]
+[else]
+　ちょんと、流れる湯に手をつけては眉をひそませた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved closer to her stand, sending waves across the bathtub.[prcm]
+[else]
+　私は[ruby text="ます"]枡形の湯船の中をスイスイと波立たせながら、繭子の座るシャワー台ほうへ移動した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h24" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The hot water spilled forth onto the shiny tiles, turning into steam.[lr]
+[else]
+　シャアア、とシャワーから流れる湯が、ピカピカのタイルに跳ねて白い霧になっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After confirming the temperature with her palm, Mayuko began to wash herself.[lr]
+[else]
+　今度は長くシャワーのお湯を手のひらに当てると、腕を伝って体を流し始めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She first raised her head a little and sprayed some water on her chest, then leaned her head forward.[lr]
+[else]
+　少しだけ首を上げて胸の辺りを流すと、次に前方向にも首を擡げる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pulled her hair up with one hand, then sprayed water on her neck, letting it trickle down the length of her back.[prcm]
+[else]
+　片方の手で髪を肩口から前に流すと、首元から背中を流した。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　細い首筋の辺りでパシャパシャ、と湯が跳ねる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, want me to wash your back?[」][lr]
+[else]
+　「ねえ、背中を流してあげようか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko slightly turned my way after I addressed her, but soon changed her mind and shifted her gaze back to the mirror.[prcm]
+[else]
+　繭子は声に反応するように、少しだけこちらを向くと、また鏡に向き直る。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[playse buf = 0 storage=se32.ogg]
+[wait time=500]
+[fadeoutse buf=1 time=500]
+[wf buf=1]
+[seopt buf=1 volume=100]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I would appreciate it.[」][lr]
+[else]
+　「それではお願いします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, so I really can?[」][lr]
+[else]
+　「いいんだ」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se111.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After rising out of the bathtub — spraying water all around me — I brought a stool behind Mayuko and sat down on it.[prcm]
+[else]
+　ザバ、と湯船からあがり、ぴしゃぴしゃと水を滴らせながら、近くの台を持って繭子の後ろに座る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was joking, actually.[」][lr]
+[else]
+　「冗談で言ったのに」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can't go back on your word now.[」][lr]
+[else]
+　「今更無しなんて駄目ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko turned around slightly and handed me her towel.[lr]
+[else]
+　繭子が少しこちらを向いて手ぬぐいを差し出す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After taking the towel in one hand, I proceeded to place a piece of soap on it.[prcm]
+[else]
+　片手で受け取ると、その上に石鹸が置かれた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't get many opportunities to have my back washed here, so I've always wanted to try it at least once.[」][lr]
+[else]
+　「人に背中を流してもらえるなんてこと、そうそう無いですから。[l]一度やって欲しいと思っていたくらいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that so?[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um...[l] It's my first time, so please be gentle.[」][lr]
+[else]
+　「あの。[l]初めてなので優しくしてくださいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko made a coquettish smile.[prcm]
+[else]
+　と、繭子が[ruby text="しな"]科を作っていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Leave it to me.[」][lr]
+[else]
+　「任せなよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I smeared some of the soap on the towel and began washing her back.[lr]
+[else]
+　手ぬぐいを石鹸で泡立ててから、背中を洗う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was even whiter than I had thought... and it was moving slightly in sync with her breathing.[lr]
+[else]
+　思いのほかに白い肌が息に合わせて小さく動いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved the soapy towel from her shoulders to her waist.[prcm]
+[else]
+　ゴシゴシ、と肩から腰にかけて手を動かした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How is it?[」][lr]
+[else]
+　「どうかな？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not bad. Not bad at all.[」][lr]
+[else]
+　「なかなか、いいものですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Glad to hear it.[」][prcm]
+[else]
+　「それはよかった」[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="049.ks" target=*049
+
+

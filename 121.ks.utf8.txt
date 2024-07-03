@@ -1,0 +1,574 @@
+*121| Vista point
+; *121|ヴィスタポイント
+[fbfstoretitle eng="Vista point" jp="ヴィスタポイント"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle9"]
+
+[msglayer]
+[playbgm storage="bgm28"]
+[fadeinse buf=1 storage="se19.ogg" time=1000 loop=true]
+[backlay]
+[wait time=3000]
+[fbfscale_image storage="bg13" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 150"]
+[eval exp="sf.ItRelease = 151"]
+[endif]
+
+*| Vista point
+; *|ヴィスタポイント
+[fbfstoretitle eng="Vista point" jp="ヴィスタポイント"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped the car and stepped out onto the cape stretching into the sea.[lr]
+[else]
+　車を止めて、丘から海へ突き出す格好の岬に出る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Only a low fence, its wood mostly rotted away, separated me from the water below.[lr]
+[else]
+　岬の先には朽ちかけた木製の柵があるだけだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I came closer to look at the huge bridge partially obscured by the mist.[prcm]
+[else]
+　柵の近くに来ると、眼下にはすっかり霧の晴れた海峡に渡る大吊橋があった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see the port town beyond the dark sea.[lr]
+[else]
+　黒い海の向こう岸には斜面の港町が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The cables holding up the bridge glowed gently between the dark night sky and the boundless black sea.[lr]
+[else]
+　濃紺の夜空の下、深海のように黒い海の上に、大橋を吊るケーブルの曲線が光の粒で描かれている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Countless lights also sparkled in the direction of the city.[prcm]
+[else]
+　その向こうには、山の斜面をこぼれ落ちそうなほどたくさんの暖色の光りが散りばめられていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is bright enough to be seen from space, I bet.[」][lr]
+[else]
+　「これだけ明るいと宇宙からも見えそう」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f01_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]More than anything, that example makes me think of that TV show about squid fishing.[」][lr]
+[else]
+　「その例えだと、テレビ番組でやっていたイカ釣り漁船の方を思い出してしまうわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, do you think that bright area on the bank was where that crab sign was?[」][lr]
+[else]
+　「ねえ。[l]向こう岸のひときわ明るい部分が、蟹の看板があった波止場のあたりじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at the brightest part of the port town.[prcm]
+[else]
+　指さした岸の端はチカチカ、と賑やかそうに灯りが点って海に映っている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They have night tours, too, so it's highly possible.[」][lr]
+[else]
+　「夜のツアーもあるくらいだから、そうかも知れないわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder where the cable cars are.[」][lr]
+[else]
+　「ケーブルカーはどのあたりかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They go straight down to the waterfront, so probably around there.[」][lr]
+[else]
+　「真っ直ぐ波止場まで降りられたのだから、あの辺りじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko leaned against the fence with one hand, then pointed at the lights in the distance with the other.[lr]
+[else]
+　[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子が柵に腕を突いたまま、片方の手で光の先端を示す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She slowly trailed her finger along the slope.[prcm]
+[else]
+　そして斜面を登るように指先を動かした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A gust of cold wind swept across the cape, making me shiver.[lr]
+[else]
+　冷たい風が吹くと、身が震える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I let out a sneeze.[prcm]
+[else]
+　クスン、と鼻を鳴らしてしまう。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's pretty cold by the sea at night, isn't it?[」][lr]
+[else]
+　「夜中の潮風って寒いんだね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f01_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why didn't you bring your jacket?[」][lr]
+[else]
+　「どうして上着を持ってこなかったのよ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko took out a thermos bottle and filled its cap with some hot coffee.[lr]
+[else]
+　と、言って佐知子が持ってきた水筒を傾けて熱いコーヒーを注いでくれた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sipped it slowly so as not to get burned, feeling its bitter taste and heat warming my chest from the inside.[prcm]
+[else]
+　火傷しない様に少しずつ喉に通すと、コーヒーの苦味と熱で胸が温まった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm all warmed up now.[」][lr]
+[else]
+　「暖かい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just don't catch a cold out here.[」][lr]
+[else]
+　「風邪なんてひかないでよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I won't![l] Do you want some, Sachiko?[」][lr]
+[else]
+　「わかってるよ。[l]佐知子も飲む？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I extended the half-full cup to her.[prcm]
+[else]
+　半分ほどになったコーヒーを差し出す。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「要らないわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, then.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I finished the coffee and handed her back the thermos bottle cap.[lr]
+[else]
+　少し冷めたコーヒーを飲み干してから、コップにしていた水筒の蓋を佐知子に返す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She shook it up and down a few times to dispose of any remaining liquid, then fastened it to the bottle.[prcm]
+[else]
+　受け取った佐知子は蓋のしずくを落としてから、水筒に戻した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I should've brought my camera.[」][lr]
+[else]
+　「カメラ持ってくればよかった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it in the car?[」][lr]
+[else]
+　「車に置いてるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I left it at the hotel.[」][lr]
+[else]
+　「たぶんホテル」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Too bad.[」][lr]
+[else]
+　「残念だったわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, boy. I really wanted a picture with you.[」][lr]
+[else]
+　「ああ、佐知子と撮りたかったな」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shaped my fingers into a picture frame and directed it at Sachiko, who placed a hand on her hips and made a pose.[prcm]
+[else]
+　両手で作ったフレームに佐知子を入れると、佐知子が腰に手を当てた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Burn this into your retinas while you can.[」][lr]
+[else]
+　「目に焼き付けておくといいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Will do.[」][lr]
+[else]
+　「そうする」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did that picture come out well?[」][lr]
+[else]
+　「綺麗にとれた？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Extremely.[」][lr]
+[else]
+　「凄くね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f01_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Glad to hear that.[」][lr]
+[else]
+　「良かったじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But I need something more impactful to make sure I never forget this.[」][lr]
+[else]
+　「でももう少しインパクトが欲しいな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I leaned closer to her. She, too, turned her face to me.[prcm]
+[else]
+　んん、と顔を近づけると、佐知子もこちらを見た。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...Might as well.[」][lr]
+[else]
+　「まあ、いいわよ」[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=800]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f01_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/other_img/ev19_m" visible=true left=-500 top=-300 opacity=0]
+[trans method = crossfade time=1]
+[wt]
+[fbfscale_move time=2000 path="(-250,-150,255)(0,0,255)" layer=1]
+[wm]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[eval exp="sf.cg19=1"]
+[fbfscale_image storage="ev19" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wrapped my arm around Sachiko's waist and pressed against her.[lr]
+[else]
+　佐知子の腰に手を回すと、半歩近づいて体が触れあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her long hair brushed against my hand.[prcm]
+[else]
+　佐知子の肩から零れた髪が、さらさらと手すりの上の私の手を掃いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The scenery here is definitely something you wouldn't forget. I'm glad we came.[」][lr]
+[else]
+　「いい景色も見られたし、来てよかったわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] Makes me wonder how many of the people over there are even aware of the beauty of this town.[」][lr]
+[else]
+　「うん。[l]あっちで騒いでいる人たちは、こんなに綺麗な街に居るって分からなかったかもね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I imagine it's not many.[」][prcm]
+[else]
+　「そうね」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fadeoutse buf=1 time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[jingle9]
+
+;TIPS選択フラグ
+[if exp="f.CpRelease_tips <= 2"]
+[rclick enabled=false]
+[history output=false enabled=false]
+
+[eval exp="f.CpRelease_tips = 3"]
+[eval exp="sf.CpRelease_tips = f.CpRelease_tips"]
+[wait time=1500]
+
+[msgon_b]
+
+[r][r][r][r]
+
+[if exp="f.ItRelease_tips3 <= 0"]
+[playse buf = 2 storage=se28.ogg]
+[eval exp="f.ItRelease_tips3 = 3"]
+[eval exp="sf.ItRelease_tips3 = f.ItRelease_tips3"]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+TIPS III. Memories[r]
+"Petal" has been unlocked.[r]
+"Apricot" has been unlocked.[r]
+"Water Game" has been unlocked.[prcm]
+[else]
+TIPSⅢ.思い出[r]
+「花弁」が解放されました。[r]
+「アプリコット」が解放されました。[r]
+「ウォーターゲーム」が解放されました。[prcm]
+[endif]
+
+[endif]
+
+[msgoff]
+[wait time=1500]
+
+[history output=true enabled=true]
+[endif]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="122.ks" target=*122
+
+

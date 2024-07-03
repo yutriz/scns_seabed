@@ -1,0 +1,341 @@
+*023| Evening at the Office (Nostalgia Over Presents)
+; *023|事務所の夕方（お土産ノスタルジック）
+[fbfstoretitle eng="Evening at the Office (Nostalgia Over Presents)" jp="事務所の夕方（お土産ノスタルジック）"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm03"]
+[wait time=200]
+
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 25"]
+[eval exp="sf.ItRelease = 26"]
+[endif]
+
+
+[playse buf = 0 storage=se21.ogg]
+[wait time=200]
+*| Evening at the Office (Nostalgia Over Presents)
+; *|事務所の夕方（お土産ノスタルジック）
+[fbfstoretitle eng="Evening at the Office (Nostalgia Over Presents)" jp="事務所の夕方（お土産ノスタルジック）"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako opened the drawer and stopped moving.[prcm]
+[else]
+　ガラ、[wait time=500]とキャビネットの引き出しを開けたまま、しばらく[ruby text="たか"]貴[ruby text="こ"]呼の動きが止まっていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you doing?[」][lr]
+[else]
+　「何してるのよ？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h17" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I felt nostalgic over there for a moment.[」][lr]
+[else]
+　「なんだかノスタルジックな気がしてさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you even know what that word means?[」][lr]
+[else]
+　「その言葉の使い方合ってるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There were some leftovers from the presents I received over the holidays.[」][lr]
+[else]
+　「連休の時に貰った、お土産がまだ残っていたの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You still haven't eaten them all?[l] Or rather, have you actually not had enough yet?[」][lr]
+[else]
+　「まだ食べてなかったの？[l] と言うか、まだ食べるつもり？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako took out a few little bags from the drawer, then lined them up on the desk.[prcm]
+[else]
+　貴呼はキャビネットの引き出しの中から、まだ包みに入ったままの菓子を取り出して机の上に並べていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Steamed buns from Sachi.[l] Rice crackers from Fumi.[wait time=600] And some fried snacks from Inukai.[」][lr]
+[else]
+　「サチと買ってきた、ピエール饅頭。[l]文が買ってきた明太子煎餅に、[wait time=600]こっちは犬飼の焼き七橋」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You kept them?[」][lr]
+[else]
+　「取っておいたの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h16" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah![l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h02" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]I couldn't decide if I should eat them to keep myself awake during the morning,[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h08" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]have them for dessert after lunch,[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h04" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]or use them to get a quick energy boost in the evening.[」][lr][r]
+[else]
+　「そうなのよ。[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f02_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+朝の眠たい時間に目覚ましに食べようか、[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f02_p04_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+お昼ご飯のおやつにしようか、[l]
+
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f02_p04_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+夕方前の疲れたときに一服しようか。[lr]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I also wasn't sure if I should use them to bolster my spirits on Monday,[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]endure until Wednesday,[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h08" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]or make them the grand prize for surviving until Friday.[」][lr][r]
+[else]
+　それに、気怠い月曜日の景気づけにするのか、[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+水曜日まで頑張ってからか、[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f02_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+それとも金曜日までやり切った褒美にしようか。[lr]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Y'see, some of those are salty, while others are sweet. So I was thinking I should use the salty ones to boost my motivation when I'm already feeling good,[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h02" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]while I could use the sweet ones when I was more tired. Thing is, sweet things don't go well with certain drinks, so I had to take that into consideration as well...[」][prcm]
+[else]
+　あと、塩気のあるものと甘いものがあるから、モチベーションが高いときは塩気でさらに勢いをつけてとか、[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f02_p04_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+疲れてきたら甘いものをとったほうがいいけれど、飲み物との相性もあるわけだ」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「].[wait time = 500].[wait time = 500].[wait time = 500]Well, I bet everyone's glad you gave their presents so much thought.[」][lr]
+[else]
+　「･[wait time = 500]･[wait time = 500]･[wait time = 500]そこまで考えてもらえれば、お土産も本望でしょうよ」[lr]
+[endif]
+
+[r]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h16" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, but then as I kept thinking and reconsidering, I eventually forgot I had them until opening this drawer right now.[」][lr]
+[else]
+　「色々考えてたんだけど、引き出しを開けるまで忘れていたわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako placed her jaw on the desk, wistfully gazing at her treasures.[prcm]
+[else]
+　と、貴呼は机に顎を載せて、並べたお菓子をぼんやりと見ている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We still have some konpeito left.[」][lr]
+[else]
+　「金平糖、まだ残ってるわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were still a few sugary candies lying in the box.[prcm]
+[else]
+　金平糖の木箱には、まだいくつか金平糖が残っていた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're keeping them until after work.[」][lr]
+[else]
+　「それは定時まで取っておくの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whatever you say.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h09" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Eventually, Takako chose the steamed bun to her right. She popped it into her mouth, her face remaining completely emotionless as she chewed.[prcm]
+[else]
+　右手側にあった饅頭から包を開けて頬張ると、貴呼はなんとも無表情な顔を見せた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I guess I shouldn't have wasted that much time... I think it might've expired.[」][lr]
+[else]
+　「やっぱり先週我慢しないで食べておけばよかったかな。[l]期を逸した気分」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako picked up her teacup and took a big gulp.[prcm]
+[else]
+　と、言って貴呼は湯呑を取るとお茶を飲んだ。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=3000]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h09" visible=false left=105 top=0]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="024.ks" target=*024
+
+

@@ -1,0 +1,907 @@
+*019| Morning at the Office (Short Meeting)
+; *019|事務所の朝（ショートミーティング）
+[fbfstoretitle eng="Morning at the Office (Short Meeting)" jp="事務所の朝（ショートミーティング）"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 21"]
+[eval exp="sf.ItRelease = 22"]
+[endif]
+
+
+[playbgm storage="bgm02"]
+
+
+*| Morning at the Office (Short Meeting)
+; *|事務所の朝（ショートミーティング）
+[fbfstoretitle eng="Morning at the Office (Short Meeting)" jp="事務所の朝（ショートミーティング）"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We have more clients than usual this month. As such, I would advise you all to maintain a clean desk so that no documents get mixed up.[」][lr]
+[else]
+　「今月は来客が多いから、各自クリーンデスクを心がけるように」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai was the only one who answered me right away.[prcm]
+[else]
+　ショートミーティングの終わりに付け加えると、[ruby text="いぬ"]犬[ruby text="かい"]飼が返事をした。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sachi, do you think my desk is fine?[」][lr]
+[else]
+　「サチ、私のはそのままでいい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]To tell the truth, yours is the one I'm most worried about.[」][lr]
+[else]
+　「正直に言うと、まず貴方の机を何とかしたかったの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Countless sheets of paper covered Takako's desk in complete disarray, alongside a whole assortment of various writing utensils.[prcm]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼の事務机の上は、印刷した紙資料が向きも不揃いに散乱し、その上に筆記用具が散りばめられていた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I need them all, though.[」][lr]
+[else]
+　「全部使うんだけどな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How many designs do you want to draw at the same time?[l] Keep the papers you're not using in the folder.[」][lr]
+[else]
+　「一度に何枚の紙に描くつもりなのよ？[l] その時使わないものは仕舞っておいて」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But that's a pain.[」][lr]
+[else]
+　「やりにくい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Think about it this way.[l] If you keep your desk clean, maybe that pesky little fairy will stop stealing your receipts.[」][lr]
+[else]
+　「良いじゃないですか先輩。[l]
+机を綺麗にしていれば、領収書を持っていく妖精も居なくなると思いますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai addressed Takako from beyond his perfectly clean and well-maintained workspace as the latter began reluctantly organizing the papers littering her own.[lr]
+[else]
+　渋々と緩慢な動作で机の紙資料を手で集める貴呼に、整頓された机の前で手持ち無沙汰にしている犬飼が言った。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako gave him a resentful glare, but that only served to make her accidentally drop all the papers she was holding.[prcm]
+[else]
+　貴呼が恨めしげな目を犬飼に向けながら手を動かしているとパサリ、と紙が落ちた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are my plush toys a problem, too?[」][lr]
+[else]
+　「ぬいぐるみは駄目ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi raised a hand.[prcm]
+[else]
+　文が胸の下で小さく手を挙げた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're not really a problem, but I do think you have a bit too many.[l] Maybe try reducing their number a little.[」][lr]
+[else]
+　「駄目じゃないけど、文のは多すぎるわね。[l]少し減らせないかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Dozens upon dozens of plush toys populated Fumi's desk, surrounding her monitor like a small army.[lr]
+[else]
+　文の机の上には本立て、[l]コンピュータ、[l]モニタの周りなど、置けそうなところには一通りぬいぐるみが置いてあった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Most of them were white, round sheep.[prcm]
+[else]
+　その殆どは白いモコモコした毛と巻角のある羊のぬいぐるみだった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/i_img/f01_p01_h01" visible=true left=330 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h03" visible=true left=-120 top=0]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where do you keep getting them, anyway?[」][lr]
+[else]
+　「いつも一体どこから仕入れてるんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai picked up one of Fumi's plushies that rolled down to the floor, and placed it back to its place on her desk.[prcm]
+[else]
+　コロコロ、と転がってきた羊を、文の事務机の本立ての上に戻しながら犬飼が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I bought a few at a toy store, but most of them come from the UFO Catcher at the arcade.[」][lr]
+[else]
+　「商店街の売り物もあるけど、殆どは駅前ゲームセンターのUFOキャッチャ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h11" visible=true left=105 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p01_h07" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't you get sleepy surrounded by so many sheep?[」][lr]
+[else]
+　「羊多くて眠くなんない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako sounded a laugh.[prcm]
+[else]
+　ハハハ、と笑いながら貴呼が言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd appreciate it if you could get rid of those bottles as well, Takako.[」][lr]
+[else]
+　「貴方も、その瓶の山を片付けるのよ」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h11" visible=true left=105 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h04" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=100]
+[wt]
+[fbfscale_move time=100 path="(105,-30,255)(105,0,255)" layer=0]
+[wm]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h16" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=100]
+[wt]
+[fbfscale_move time=80 path="(115,0,255)(105,0,255)(95,0,255)(105,0,255)(115,0,255)(105,0,255)(95,0,255)(105,0,255)" layer=0]
+[wm]
+[wait time=200]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at the colorful mountain of bottles on her desk.[lr]
+[else]
+　貴呼の事務机の上に並べられている、色とりどりの空き瓶を指差す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The now-empty energy drink bottles were built into a huge — and highly unstable-looking — castle resembling something out of a western picture book.[lr]
+[else]
+　栄養ドリンクが入っていた瓶は、ファンタジー小説とタイアップしてカラフルで西洋風な造詣になっていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The packaging of their brand changed every few months, and Takako kept buying them every time that happened.[prcm]
+[else]
+　期間によって造りが異なるその瓶を、貴呼は変わるたびに買ってきて並べていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, it wasn't easy collecting them all, you know.[」][lr]
+[else]
+　「苦労して集めたんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What did you even collect those things for?[」][lr]
+[else]
+　「どうして苦労してまで集めるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't you get the urge to collect things when there are different types?[」][lr]
+[else]
+　「種類があると揃えたくなるから？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, in that case, it'd be nice if you either didn't leave them lying all over the place or yell at me when I end up throwing them away.[」][lr]
+[else]
+　「そのうち忘れて放置して、捨てたら気がついて騒がれる方の身にもなって欲しいわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I still can't believe you'd just throw them away like that...[」][lr]
+[else]
+　「勝手に捨てるのはひどいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you do with them?[」][prcm]
+[else]
+　「一体何に使うの？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako picked up a red bottle that was closest to her.[prcm]
+[else]
+　貴呼は、一番近くにあった赤い瓶を取った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Watch.[」][lr]
+[else]
+　「これをこうして」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She placed it on the window sill.[prcm]
+[else]
+　その瓶を窓にかざす。[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And now you gaze at them.[」][r]
+[r]
+[「]Inukai, can you bring the garbage bags?[」][lr]
+[else]
+　「眺める」[r]
+[r]
+*|事務所の朝（ショートミーティング）
+　「犬飼君、ゴミ袋持ってきてくれる？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/i_img/f01_p02_h08" visible=true left=330 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=100 path="(180,-30,255)(180,0,255)" layer=0]
+[wm]
+[wait time=300]
+[fbfscale_move time=100 path="(180,-30,255)(180,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa, wait![l] You can't do this to me![」][lr]
+[else]
+　「わ、駄目だって。[l]止めて、後生じゃあ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako reached out to Inukai, who was already heading toward the kitchen.[prcm]
+[else]
+　貴呼は給湯室へ向かう犬飼の方に手を伸ばした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, think of all the fun you'll have collecting them again.[」][lr]
+[else]
+　「いいじゃない。[l]懲りなかったらまた集めてくればいいわ」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=1000 path="(105,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You monster![」][lr]
+[else]
+　「ひどい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look—[」][r]
+[clickskip enabled=false][「]Remember when we went to the[wait time=500].[wait time=500].[wait time=500].[wait time=500] waste disposal facility back in elementary school?[」][lr]
+[else]
+　「あのねえ」[r]
+[r]
+[clickskip enabled=false]
+*|事務所の朝（ショートミーティング）
+　「小学生の時[wait time=500]・[wait time=500]・[wait time=500]・[wait time=500]ゴミ処理場を見学したでしょう」[lr]
+[endif]
+
+[r]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako interrupted me.[prcm]
+[else]
+　こちらが口を開きかけると、先に貴呼が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh?[」][lr]
+[else]
+　「うん？」[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=50 path="(105,30,255)" layer=0]
+[wm]
+[fbfscale_move time=400 path="(105,0,255)" layer=0]
+[wm]
+[wait time=200]
+[fbfscale_move time=50 path="(105,30,255)" layer=0]
+[wm]
+[fbfscale_move time=400 path="(105,0,255)" layer=0]
+[wm]
+[wait time=300]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako made a gesture with her palms to calm me down and slowly began...[prcm]
+[else]
+　貴呼は両手のひらを下に向けて、落ち着けというジェスチャーをしてから、ゆっくりと話し始める。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It took two hours by train and shuttle bus to reach the incinerator plant.[l] It was this really silent, backwater place up in the mountains, near some rice fields.[l] Anyway, when I saw that heap of garbage being consumed by 800 degree flames...[l] I felt sad for all those things that have to travel up that road only to be incinerated at some faraway, no-name facility.[」][lr]
+[else]
+　「焼却場に電車とシャトルバスを乗り継いで二時間かけて行ったよね。[l]
+田んぼが少しだけある田舎のさらに山奥の、とても静かな場所だったよね。[l]
+八百度の焼却施設で、集められたゴミの山が燃えているのを見たとき思ったの。[l]
+あの寂しい道を通ってこんな山奥で燃やされたら、捨てられたものの気持ちはとても寂しいんじゃないかなってね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako launched into some mind-boggling story again.[prcm]
+[else]
+　と、貴呼は頭が重くなりそうな言葉を吐いた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So I've decided to hold onto things and treasure them for as long as I can.[」][lr]
+[else]
+　「だから物は長く大事に持っていることにしているの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How are we supposed to clean up without throwing anything away?[」][prcm]
+[else]
+　「捨てないと片付かないでしょう？」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h13" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't imagine how you can live with her, Mizuno.[」][lr]
+[else]
+　「水野先輩は貴呼先輩と暮らしてて、大変ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a test of one's ability to deal with her antics.[」][lr]
+[else]
+　「まあ、工夫次第ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you mean, exactly?[」][lr]
+[else]
+　「工夫ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, let's say I buy her a new pair of shoes.[l] As she starts wearing the new ones and gets used to them, she eventually stuffs the old ones away in the back of the shoe box.[l] All I have to do then is throw them away once she forgets she ever had them.[」][lr]
+[else]
+　「例えば靴なんかでも、新しいのを買ってきてあげるの。[l]そうしてると、直に古い靴を履かなくなって靴箱の奥に仕舞われていくの。[l]それで忘れた頃に靴箱の奥の方から捨てていけば、気づかないのよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h03" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]By the way, Sachi... where did my white mules go?[」][lr]
+[else]
+　「サチ、そういえば白のミュールは何処に行ったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You never had any to begin with.[」][prcm]
+[else]
+　「初めから無いわよ」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+;黒電話
+[playse buf = 0 storage="se171.ogg"]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sudden ringing of the phone interrupted our conversation.[lr]
+[else]
+　プルル、と電話が鳴る。[lr]
+[endif]
+
+[r]
+[stopse buf=0]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned to my desk and picked it up.[prcm]
+[else]
+　窓際の事務机に戻って、受話器を取る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello, this is Clover Design.[」][lr]
+[else]
+　「はい、クローバーデザインです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After placing the receiver between my left ear and shoulder, I began looking for a pen and some paper with my now freed hands.[prcm]
+[else]
+　右手で取った受話器を持ち替えて、左耳と肩で支えてから、空いた手でメモ帳とペンを取る。[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h03" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/i_img/f01_p02_h08" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Give it back![」][lr]
+[else]
+　「返しなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako snatched one of her glass bottles from Inukai's hands, but he then just picked another one.[prcm]
+[else]
+　貴呼が犬飼の手に握られた硝子瓶を取り戻すと、犬飼が別の瓶を取った。[prcm]
+[endif]
+
+[msgoff]
+[fbfscale_move time=100 path="(-70,-30,255)(-70,0,255)" layer=0]
+[wm]
+[wait time=100]
+[fbfscale_move time=100 path="(-70,-30,255)(-70,0,255)" layer=0]
+[wm]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey!![」][lr]
+[else]
+　「こらっ」[lr]
+[endif]
+
+[r]
+
+[playse buf = 0 storage="se68.ogg"]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tapped my desk a few times.[lr]
+[else]
+　コンコン、と事務机の上をノックする。[lr]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h17" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/i_img/f01_p02_h04" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=600]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The office fell silent as the two looked at me.[prcm]
+[else]
+　それから、こちらを見た二人に目配せすると、事務所が静かになる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mr. Sasaki, thank you for calling.[」][lr]
+[else]
+　「佐々木様ですね。[l]いつもお世話になっております」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako began filling her desk drawers with the bottles.[prcm]
+[else]
+　貴呼が残った瓶を机の引き出しに片付けている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I understand.[l] Takako, [wait time=500]Mr. Sasaki wants to speak to you on line three.[」][lr]
+[else]
+　「わかりました。[l]貴呼、[wait time=500]外線三番に佐々木様からお電話よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[l] Hello. It's me.[」][lr]
+[else]
+　「はい。[l]お電話代わりました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pushed the hold button and put my receiver down, while Takako pushed the same button on her desk's phone as it began blinking.[prcm]
+[else]
+　保留ボタンを押してから受話器を置くと、向こうで貴呼が自分の事務机に置いてある電話の受話器をとって点滅している保留ボタンを押した。
+[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[l] Now's our chance to clean up this mess.[」][lr]
+[else]
+　「さて。[l]今のうちに片付けるわよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h16" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=100 path="(105,-30,255)(105,0,255)" layer=0]
+[wm]
+[fbfscale_move time=100 path="(105,-30,255)(105,0,255)" layer=0]
+[wm]
+[fbfscale_move time=100 path="(105,-30,255)(105,0,255)" layer=0]
+[wm]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, wait a sec![」][prcm]
+[else]
+　「ちょっと待って」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=3000]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="020.ks" target=*020

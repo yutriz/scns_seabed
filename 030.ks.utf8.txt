@@ -1,0 +1,2139 @@
+*030| Siesta
+; *030|シエスタ
+[fbfstoretitle eng="Siesta" jp="シエスタ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+[playbgm storage="bgm01"]
+[wait time = 3000]
+[backlay]
+[fbfscale_image storage="bg34_3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 36"]
+[eval exp="sf.ItRelease = 37"]
+[endif]
+
+*| Siesta
+; *|シエスタ
+[fbfstoretitle eng="Siesta" jp="シエスタ"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We stopped in front of a panini sandwich cart that stood on the middle of a stone bridge across the river.[lr]
+[else]
+　川を渡る石橋の上にあったパニーノというサンドイッチを売る屋台の前で立ち止まる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It resembled a giant, opened-up umbrella with gelato, soft drinks, and all sorts of snacks lined up under it.[lr]
+[else]
+　屋台はトラックの荷台を覆う帳が傘のように開いて、その下にジェラートやソフトドリンクと沢山のお菓子がズラリと並んでいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We bought some panini and drinks, and continued down the road.[prcm]
+[else]
+　そこでパニーノとソフトドリンクを買ってから、屋台をあとにする。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I still can't get used to how cheap everything is here.[」][lr]
+[else]
+　「やっぱり安い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...Takako remarked as she gobbled down her panini.[lr]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼がパニーノを頬張りながら呟く。[lr]
+[endif]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her sandwich was shaped like a cream puff with cheese, prosciutto ham, and rucola herbs. Unable to watch Takako try and fail to fit it into her mouth, the store clerk helped her crush the thing into a smaller size.[prcm]
+[else]
+　貴呼が買ったパニーノは、シュークリームのような丸い形をしたパンに、チーズとプロシュットという生ハムと、ルッコラというハーブを挟んだもので、食べにくそうにしている貴呼を見かねてお店の人が、紙の袋ごと手で押して潰してくれていた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You want a taste?[」][lr]
+[else]
+　「一口食べる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Noticing my stare, Takako offered a bite of her sandwich.[lr]
+[else]
+　食べているところを眺めていると、貴呼がこちらに差し出した。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I nodded and helped myself to a small portion.[lr]
+[else]
+　頷くと、口元まで来たそれをパクリ、と一口噛み切って食べた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The bread had just the right amount of crispiness to it, while the savory smell coming from inside it, combined with the taste of ham and cheese, resulted in a truly mouth-watering culinary experience.[prcm]
+[else]
+　パンは外側はサクリと歯ごたえがあって、中はフワフワとして香ばしく、生ハムとチーズの味も香りに負けないくらいに濃い味でキチンと仕事をしていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Kinda surprised you can get something this good at that price.[l] The restaurant we had lunch at was pretty cheap, too. I wonder if it's their economy...[」][lr]
+[else]
+　「これで、あの値段は安いよね。[l]さっきのレストランもだけど、こっちはまだ物価が安いのかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Could be.[」][lr]
+[else]
+　「そうかもしれない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I answered her as I wolfed the food down.[lr]
+[else]
+　コクリ、と飲み込んでから返事をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I took a sip of the coke we bought at the same store.[prcm]
+[else]
+　それから、屋台で一緒に買っていた瓶のコーラを飲んだ。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p01_h12" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We could save money, quit our jobs in Japan, and move here.[」][lr]
+[else]
+　「お金を貯めて仕事を辞めたら、こっちで暮らすのもいいかも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako crossed the river and entered another alleyway.[prcm]
+[else]
+　川を越えて、再び路地に入ってから貴呼が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's one plan for the far future.[」][lr]
+[else]
+　「それはまた、ずっと先の話ね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then maybe we should move here earlier and run a shop together. Like the one we've just been to.[」][lr]
+[else]
+　「それなら、さっきみたいなお店やる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You mean a cart?[」][lr]
+[else]
+　「販売車両？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They had flower carts in San Francisco, too.[」][lr]
+[else]
+　「そう。[l]サンフランシスコにもお花の販売車両があったでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, you see them a lot overseas.[」][prcm]
+[else]
+　「海外でなら、割とよく見かけるわね」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess it's cheaper than renting out an actual building.[」][lr]
+[else]
+　「やっぱり、この方が店舗を借りるよりもコストが安いのかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder what they do on days with bad weather.[l] With no air conditioning, I doubt business is booming during winter.[l] On top of that, if the wheels of the carts get damaged or something, you can't sell anything until you get them fixed.[」][lr]
+[else]
+　「天気の悪い日はどうするの？[l] 空調もないし、外が寒いとお客も減るわ。[l]それに、車両が故障でもしたら直しているあいだは商売もできないわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] I wonder how they profit.[」][lr]
+[else]
+　「そうだよね。[l]差し引きどうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's no way to know unless we have the data, but given the amount of them in this town, it can't be that bad.[l] I imagine you can insure the cart, too.[」][lr]
+[else]
+　「ちゃんと計算してみないと分からないわね。[l]実際のところ、よく見かけるってことはそれだけメリットがあるんでしょう。[l]故障くらいなら、保険もありそうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「なるほど」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you're so curious, how about asking them directly?[」][lr]
+[else]
+　「気になるなら、今聞いてみたら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at another cart shop at the road by the river.[prcm]
+[else]
+　と、歩いている川沿いの道の先に見える、販売車両を指差した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed to be dealing in women's apparel, and had all sorts of clothes hung up that blocked the view. Still, I could at least spot a female customer talking with a gray-haired, middle-aged clerk.[lr]
+[else]
+　女性用衣料品を扱っているようで、原色の映える看板を屋根にあしらった車両の前には、沢山の洋服を下げたハンガーラックを陳列しており、ハンガーラックのあいだでは、お客の女性と店員らしきベストを着た、髪が薄目の中年男性が話をしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako looked at the cart for a while before turning back to me.[prcm]
+[else]
+　少し前を歩いていた貴呼は、しばらくそのあたりを見て、再びこちらに振り返った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It would be cool to travel around the world selling your things, but I'd rather have a proper store so I can design it the way I want.[」][lr]
+[else]
+　「旅行しながら好きなところで商売できるのはいいけど、やっぱりきちんと店舗を構えて、お店の飾り付けとかしたいよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sure that bothers you more than profits.[」][lr]
+[else]
+　「結局、採算云々より、気になるのはそんなトコロなんでしょう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course.[」][lr]
+[else]
+　「もちろん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]In either case, we'd have to study the native language here.[」][lr]
+[else]
+　「どちらにしても、もっとこっちの言葉を勉強しないといけないわね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yup.[l] Let's do it together, just like we did with English.[」][prcm]
+[else]
+　「そうだよ。[l]二人でまた勉強しよう、英語の時みたいに」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if they have any movies in this language.[」][lr]
+[else]
+　「こっちの言語の映画ってあるかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sure they do.[」][prcm]
+[else]
+　「あるでしょう」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sun peeked out from between the buildings surrounding the alley, making Takako narrow her eyes.[lr]
+[else]
+　路地を挟む建物の間から、高く昇った日が差して貴呼が目を細めた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The edges of the brown-colored roofs cast many uneven shadows on the road.[prcm]
+[else]
+　建物の屋根は漆喰の淡い赤銅色で、縁から光と影を落としていた。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule12" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg34_2" page=back layer=base]
+[trans method=universal rule="rule12" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, that arch looks pretty cute.[」][lr]
+[else]
+　「あそこのアーチ。[l]かわいい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed Takako's finger to see a grated window with an angel carved in the arch above it.[lr]
+[else]
+　貴呼が指を差した方に顔を上げると、扇の窓枠に放射線状の格子があり、縁には天使の彫刻が施してあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The wall was covered in green ivy, so it gave the impression that the angel was peeking out of a forest.[prcm]
+[else]
+　窓がついている壁は緑の蔦で覆われていたので、ちょうど森から天使が顔を出したような形だった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if some ancient artisan made it.[」][lr]
+[else]
+　「あれも、昔の職人が作ったのかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I imagine that's the case.[」][lr]
+[else]
+　「そうかもしれない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's kinda cool to have so many old things remain in your town, don't you think?[l] I bet if we moved here, we could also pretend we were living in the Middle Ages.[」][lr]
+[else]
+　「街中に古いものが残ってクラシックなのがいいよね。[l]ここで暮らし始めたら中世に生きてる気分も味わえて人生一回分特をした気分になれそう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's all good and fine, but we should think about that after we finish paying off our loan for a ten-story apartment complex built with reinforced concrete.[」][lr]
+[else]
+　「いいけど、鉄筋コンクリート十階建てマンションの近代的なローンが終わってからの話よね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]These buildings look like they're made from stone. Could they be, like, two thousand years old or something?[」][lr]
+[else]
+　「ここが石造建築だから、こんなに古いものが残っているのかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako furrowed her brows.[prcm]
+[else]
+　貴呼はしばらく表情を固めたあとで、話題を巻戻して言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe.[」][lr]
+[else]
+　「そうかもしれない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It makes you think of the three little pigs, doesn't it?[」][lr]
+[else]
+　「それって、三匹の子豚みたいじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like cozy, wooden buildings.[」][lr]
+[else]
+　「木造も温かみがあって好きだわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Would you prefer to live up north, then?[l] Apparently, the northern region of this place was affected by the architecture of neighboring countries, so they've got a lot of wooden buildings there.[l] It's written in the booklet.[l] Here.[」][lr]
+[else]
+　「それじゃあ、北部の田舎に住む？ [l]あっちは隣国の建築文化の影響で、カントリーな家もあるみたい。[l]ブックレットに書いてあった。[l]ほらね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pointed at the picture of some mountain village.[prcm]
+[else]
+　と、ブックレットを開いて北部の山岳都市と、山里のような村の写真を見せた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then you can make homemade panini for me.[」][lr]
+[else]
+　「そしたらサチは自家製のプロシュットとチーズで、パニーノ作ってね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure, but you're making the ham.[」][lr]
+[else]
+　「いいけど、肉は貴方が絞めるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What? The ham is gonna be homemade, too?[」][lr]
+[else]
+　「そこからやるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako shrugged.[prcm]
+[else]
+　と、貴呼が肩をすくめた。[prcm]
+[endif]
+
+
+
+;//////
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg34_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We continued down the road, our shoes clicking against the mosaic-laden pavement.[prcm]
+[else]
+　コツコツ、と街路のモザイクと蔓のレリーフを鳴らしながら歩いていく。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's that roof, right?[」][lr]
+[else]
+　「あの屋根だよね？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Should be, but it doesn't feel like we're getting any closer.[」][lr]
+[else]
+　「きっとそうだけど、中々近づかないわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We could see the bluish roof of the Grand Cathedral towering above the other buildings in the distance.[lr]
+[else]
+　開けたところでは、建物の向こう側に青みがかった大きな大聖堂の屋根が見えた。[lr]
+[endif]
+
+[r]
+[seopt volume=80]
+[fadeinse buf=0 storage=se73.ogg time=500 loop=true]
+[wf buf=0]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Long houses with no gaps in between them littered the streets, which made it impossible to take a straight path to any one direction. It felt like we kept wandering around in circles for the last thirty minutes without ever getting closer to that roof at all.[lr]
+[else]
+　長屋で繋がった建物が多く、まっすぐ大聖堂の方に向かえず右往左往しており、その屋根の大きさは以前から変わっていないように見えた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We lost sight of the roof completely after a bunch of buildings with brown roofs blocked it from view.[lr]
+[else]
+　少し歩くと、再び褐色の建物に隠れてしまった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Siesta time must've begun, considering there were only a few people wandering the streets; the rest were probably taking a break or napping.[prcm]
+[else]
+　いつの間にかシエスタの時間帯に入った街路は、お昼寝か休憩をしているのか人が少なくなっていた。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[seopt volume=100]
+[wait time=800]
+[fadeoutse buf=0 time=3000]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I was examining a window with sturdy-looking Venetian shutters, a tourist carriage pulled by a horse passed by us.[prcm]
+[else]
+　立派な鎧戸の降りた窓を見ているとパカラパカラ、とひづめを鳴らして観光馬車が追い越していった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll go ask.[l] Wait here.[」][lr]
+[else]
+　「ちょっと聞いてくる。[l]ここで待ってて」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]	
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako darted after the carriage, disappearing into one of the small alleys.[lr]
+[else]
+　と、貴呼が馬車を追って駆けていくと、そのまま馬車を追って建物の間の路地に消えてしまった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I hurried after her, but by the time I turned the corner, neither Takako nor the carriage were anywhere in sight.[prcm]
+[else]
+　こちらも早足で行き、路地を覗いてみると、馬車も貴呼の姿も見当たらなかった。
+[prcm]
+[endif]
+
+
+
+;///////
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[wf buf=0]
+[backlay]
+[fbfscale_image storage="bg34_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I bet she got lost like a dunce.[」][lr]
+[else]
+　「あの馬鹿、迷ったわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After checking my watch and realizing it had been five minutes since Takako disappeared, I decided there was no point waiting any longer.[prcm]
+[else]
+　腕時計を見て五分経過したことを確認し、口の中でそう呟いてから路地に入った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued down the coiling stone road, using the roof of the Grand Cathedral as my landmark.[lr]
+[else]
+　コツコツ、とデコボコする石畳のグネグネと曲がる道を、遠く見える大聖堂の屋根を頼りに歩いた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I also made sure to check the booklet each time I found a significant-looking Gothic style building or fountain.[lr]
+[else]
+　時折あるゴシック様式の立派な建物や噴水の前では、ブックレットを広げて探してみた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The booklet's pages seemed to look darker than before.[lr]
+[else]
+　ブックレットは以前より眩しくなくなっていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up and saw that the sun had moved to an angle where the buildings surrounding me almost completely blocked it from sight.[lr]
+[else]
+　路地を挟む壁を見ると、いつの間にか傾いた日が光と影の分水量を押し上げて、頭の上まで影に沈んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced behind me, noticing that both the road I came from and the direction I was heading in was completely devoid of people.[prcm]
+[else]
+　後ろに歩いてきた路地を見て、前に向かう路地を見ても、誰も見当たらなくなっていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued down a road full of shops with closed shutters and darkened display windows.[lr]
+[else]
+　コツコツ、とカーテンの閉じた店の扉、[wait time=500]灯りの無いショーウィンドウ、[wait time=500]鎧戸の下ろされた窓に挟まれた路地を歩く。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p02_h02" visible=true left=105 top=0]
+[fbfscale_image storage="bg34_5" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=300]
+[wt]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h08" visible=true left=105 top=0]
+[fbfscale_image storage="bg34_5" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=700]
+[wt]
+[playse buf = 1  storage=se08.ogg]
+[stopbgm]
+[fbfscale_move time=150 path="(105,-60,255)(65,0,255)" layer=1]
+[wm]
+[fbfscale_move time=100 path="(65,-40,255)(45,0,255)" layer=1]
+[wm]
+[fbfscale_move time=50 path="(45,-20,255)(35,0,255)" layer=1]
+[wm]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Quickening my pace, I began to draw closer to another corner. However, right before I could make the turn, a person emerged from behind it and bumped into me.[prcm]
+[else]
+　意図せず早足になったままの速度で角を曲がろうとすると、不意にその角から現れた人にぶつかる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa! Scusi![」][lr]
+[else]
+　「おっと、スクージ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry.[」][lr]
+[else]
+　「御免なさい」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[fadeinbgm storage="bgm04" time=1500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h02" visible=true left=35 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=1000 path="(105,0,255)" layer=1]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hm? You're Japanese?[」][lr]
+[else]
+　「なんだ日本人？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up and saw a long-haired woman with a spirited look in her eyes.[lr]
+[else]
+　伏せた目線を戻すと、勝気そうな目をした髪の長い女性が立っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her gaze traveled from my face to the booklet in my hands.[prcm]
+[else]
+　女性はこちらの持っていたブックレットと、それから顔を見比べるように見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you lost?[」] she asked.[prcm]
+[else]
+　「もしかして道に迷ってるの？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、女性が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]These back streets are full of twisty turns and dead ends. It's kinda easy to get lost.[l] I can show you the way out, if you want.[」][lr]
+[else]
+　「この辺の裏道は、行き止まりや曲がり道が多くて分かりにくいのよ。[l]案内してあげようか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She gave me a friendly look.[prcm]
+[else]
+　と、彼女は人好きのする表情でこちらを見た。[prcm]
+[endif]
+
+
+
+;/////
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[wf buf=0]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h01" visible=true left=105 top=0]
+[fbfscale_image storage="bg34_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After I accepted her offer, she introduced herself as Fujisaka Nanae.[lr]
+[else]
+　案内を頼むことにすると、女性は[ruby text="ふじ"]籘[ruby text="さか"]坂[ruby text="なな"]七[ruby text="え"]重と名乗った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She walked a short distance ahead of me, her heels confidently clicking against the stone pavement like it was her very own backyard.[prcm]
+[else]
+　よく知った道のように少し前を歩き、デコボコした石畳の路地をサンダルでグングン、と進んでいく。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're trying to get to the Grand Cathedral, right?[」][lr]
+[else]
+　「大聖堂まで行けばいいのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]She's probably heading that way, too.[」][lr]
+[else]
+　「きっと、向こうはそこを目指していると思うの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What if you can't find her there?[」][lr]
+[else]
+　「居なかったら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll go back to the hotel.[」][lr]
+[else]
+　「ホテルに戻るわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's probably for the best, yeah.[」][prcm]
+[else]
+　「そうね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[l] You're a lifesaver.[」][lr]
+[else]
+　「有難う。[l]助かったわ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, don't sweat it.[l] Even I was getting a bit anxious walking around on my own.[」][lr]
+[else]
+　「うん、良いのよ。[l]こっちも一人で少し心細かったから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't spot much anxiety in the confident smile she gave me.[prcm]
+[else]
+　と、彼女は心配のいらなさそうな笑みを浮かべた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Most of the stores and government offices close around this time, and the place turns into a ghost town.[l] In exchange, they stay up late and get up early.[l] Being from Japan, I still don't quite get how their economy can function like that.[」][lr]
+[else]
+　「この時間帯は商店、企業、官公庁も休憩してて、ホントに静かなのよね。[l]その分、夜遅くて朝も早いんだけど。[l]でも、やっぱり諸国の習慣と違うから、経済とか大丈夫なのかなって思うわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fujisaka kept bringing up all sorts of subjects, most likely trying to find something that would help incite a conversation.[prcm]
+[else]
+　籘坂は話のきっかけを作るように、微妙に論点を変えながら喋った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose this siesta system won't stay around if it starts seriously hindering their economy, though.[」][lr]
+[else]
+　「大丈夫じゃなくなったら、そのときはシエスタ制度が廃止になるかも知れない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] And then all the Japanese will be shocked to hear that on the news.[」][lr]
+[else]
+　「そうね。[l]そうなったら、ニュースになってきっと日本人は驚くわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That it was a thing to begin with.[」][lr]
+[else]
+　「シエスタ制度について」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p02_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, exactly.[」][prcm]
+[else]
+　「そうそう」[prcm]
+[endif]
+
+
+
+;////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule12" vague=50 time=1000]
+[wt]
+[wf buf=0]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p02_h14" visible=true left=105 top=0]
+[fbfscale_image storage="bg34_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I kept answering the questions she brought up as we walked.[lr]
+[else]
+　歩いているあいだに、こちらのことをいくつか質問されて答えた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I myself tried asking a thing or two.[lr]
+[else]
+　こちらもいくつかの事柄を聞いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fujisaka came from the Kansai region and was a year older than me.[prcm]
+[else]
+　籘坂は関西地方に在住で、歳はこちらのひとつ上だった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You were in kindergarten together? That's pretty incredible.[」][lr]
+[else]
+　「幼稚園から一緒って凄いわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it?[l] Don't you have anyone like that, Ms. Fujisaka?[」][lr]
+[else]
+　「そうかしら？[l] 籘坂さんは、そういう人いないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was brought up in a mountain town in the middle of nowhere. I had a few friends like that until middle school, but they all eventually left to live in cities.[l] Can't blame them for wanting to get out.[」][lr]
+[else]
+　「山奥の田舎だったから、中学くらいまでよく一緒に遊んだ友達はいたけど。[l]皆、都会の方に出て行っちゃったのよね。[l]ホントに何もない田舎だから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fujisaka spoke as she continued to lead me ahead.[prcm]
+[else]
+　と、前を向いて歩きながら藤坂が言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you do for a living, Ms. Mizuno?[」][lr]
+[else]
+　「水野さんは、仕事はどんな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I run a design company.[l] Only founded it recently, though.[」][lr]
+[else]
+　「デザイン事務所。[l]まだ立ち上げたばかりだけど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You've got your own company? That's pretty incredible.[l] What exactly do design companies do, anyway?[」][lr]
+[else]
+　「起業家？[l] 凄いわね、デザインって何をやるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We design logos for other companies, advertisement posters, packages for all sorts of goods, and so on.[l] We deal in anything as long as it falls under designing and doesn't exceed what our capabilities allow for.[」][prcm]
+[else]
+　「会社のロゴ、[l]広告用のポスター、[l]商品のパッケージの作成みたいなこと。[l]相談次第でなんでも作るの」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you come here for a commission, too?[」][lr]
+[else]
+　「もしかして、こっちに来たのは取材か何か？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really, I just like traveling.[」][lr]
+[else]
+　「こっちは、ただ旅行が好きなだけ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you also traveling, Ms. Fujisaka?[l] You seem to be used to this area.[」][lr]
+[else]
+　「藤坂さんは旅行？[l] 歩き慣れているみたいだけど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I came here to buy furniture.[l] You know, like couches, tables, and so on.[」][lr]
+[else]
+　「ウチはね、家具を買いに来たの。[l]インテリアの調度品とかソファやテーブルなんかをね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you run a furniture store?[」][lr]
+[else]
+　「家具屋さんなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fujisaka shook her head without looking back at me.[prcm]
+[else]
+　前を向いたまま藤坂は首を振った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nah, I run an inn back home.[l] It's a western mansion that's been around since before the war, so a lot of our things are old and need to be replaced.[l] That said, we can't afford to replace everything with expensive modern furniture, so I come here once in a while looking for materials to fix some of our old stuff, plus cheaper replacements for the things that are too old to do anything about.[」][lr]
+[else]
+　「ううん、お宿屋さんしてるの。[l]これが戦前からある古い洋風のお屋敷でさ、もうボロボロで使えない家具も出てくるわけ。[l]だからって今風の新品の家具を入れるわけにも行かないじゃない。[l]それで、壊れた家具の修理材料とか、代えのものをこうして買いに来てるの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can't you buy those in Japan?[」][lr]
+[else]
+　「そういうのって売ってない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can, but it's expensive.[l] Besides, I also like traveling.[」][lr]
+[else]
+　「売ってるけど、高いから。[l]あと、旅行は私も好きよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fujisaka, who was slightly taller than me, shot a brief glance my way and continued walking forward.[prcm]
+[else]
+　僅かだがこちらより背の高い籘坂がチラリ、とこちらを見てから、また前を向いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where's this town of yours in Kansai, exactly?[」][lr]
+[else]
+　「関西の田舎ってどのあたり？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's in Hyogo.[l] Wanna come visit us sometime?[l] It's an ancient place, but you seem like the type who likes that kinda stuff.[」][lr]
+[else]
+　「兵庫よ。[l]一度来てみる？[l] 古い洋館だけど、貴方もそういうの好きそうだし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, it sounds pretty interesting.[」][lr]
+[else]
+　「良いかもしれない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fujisaka pulled out a notebook from her jeans' pocket and wrote down her address and contact information.[prcm]
+[else]
+　そう言うと、籘坂はジーンズのポケットから手帳を取り出し、挟んでいた万年筆でサラサラと連絡先を書く。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't have a business card.[l] Maybe it's about time I made one.[」][lr]
+[else]
+　「名刺はないのよ。[l]今度、作ってもらおうかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She tore out a page from her notebook and handed it to me.[prcm]
+[else]
+　ベリ、とページを破ってこちらに渡した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]In that case, I might visit you during one of my 'business trips.'[」][prcm]
+[else]
+　「それなら仕事も兼ねて伺うわ」[prcm]
+[endif]
+
+
+
+;/////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule12" vague=50 time=1000]
+[wt]
+[wf buf=0]
+[backlay]
+[fbfscale_image storage="bg35" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We continued down a street decorated with flower reliefs, and after passing through another narrow alleyway, found ourselves in front of a huge cathedral.[prcm]
+[else]
+　カツカツ、と花のレリーフの街路を進んで行き、狭い道が開けたところで突然、巨大な大聖堂が目の前に現れる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p02_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here we are.[」][lr]
+[else]
+　「着いたわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The silence that followed us through the long alleyways was instantly dispelled by the clamor of the tourists.[lr]
+[else]
+　先程まで静かだった街路から広場に入るとガヤガヤ、と観光客の話し声が聞こえてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This was by far the biggest square I'd seen today, made even more overwhelming by the Grand Cathedral looming above it.[prcm]
+[else]
+　それまで来た比べ物にならないほど大きい広場は、奥にさらに巨大な大聖堂の全貌を見ることができた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is the central park,[」] said Fujisaka.[lr]
+[else]
+　「ここが中央公園」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　と、籘坂が言った。[lr]
+[endif]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A sun clock towered in the center of the stone-paved square, with a set of tall stone pillars surrounding it in a cylindrical arrangement.[prcm]
+[else]
+　広場は中央に日時計のある石畳で、広場の縁は円状にグルリ、と見上げるほど背の高い石柱に囲まれている。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p02_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if your friend is here.[」][lr]
+[else]
+　「相方さんは居るかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced around in all directions one more time, but to no avail: Takako was nowhere in sight.[prcm]
+[else]
+　もう一度クルリ、と四方を見回して貴呼が居ないことを確認した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't see her anywhere.[」][lr]
+[else]
+　「ここには居ないみたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's check out the inside of the cathedral.[」][lr]
+[else]
+　「大聖堂の方を見てみようか」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fujisaka started toward the giant dome.[lr]
+[else]
+　と、籘坂が尖頭型の巨大なドームの方へと歩き出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+From up close, the Grand Cathedral was so overwhelming it felt almost like it could fall over and crush you.[lr]
+[else]
+　大聖堂は、近づいて見上げると倒れてきそうな迫力だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We ascended the stairs, drawing closer to the entrance supported by eight cylindrical and four rectangular columns.[lr]
+[else]
+　広場から正面の大階段を登ると、八つの円柱と、四つの角柱がある。[lr]
+[endif]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h16" visible=true left=280 top=0 opacity=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=800 path="(240,0,255)(200,0,255)(160,0,0)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I passed by them, I suddenly saw a pair of green twin tails dance in the air.[lr]
+[else]
+　そのあいだを行くと、人だかりの中に髪を二つに括った貴呼の頭が見えた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They disappeared behind the humongous gates.[prcm]
+[else]
+　柱廊玄関の大空間にある巨大な扉に入っていった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Found her.[」][lr]
+[else]
+　「居た」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Just as I was about to hurry after Takako, Fujisaka suddenly stopped.[prcm]
+[else]
+　早足で行こうとすると、籘坂が立ち止まる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess this is goodbye, then.[l] I can't go into the cathedral dressed like this.[」][lr]
+[else]
+　「ここでお別れだね。[l]この格好だと大聖堂には入れないから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She placed her palm on one of her sleeveless shoulders.[prcm]
+[else]
+　と、ノースリーブの肩に手を置いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd like to thank you somehow later.[」][lr]
+[else]
+　「あとでお礼がしたいわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're only gonna end up having to go through another adventure to find me.[l] Rather than that, I think you should just enjoy the rest of the trip with your friend.[」][lr]
+[else]
+　「それだと、また人探しになっちゃう。[l]それより、相方さんと楽しんで」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you very much. I don't know what I would've done without you.[」][lr]
+[else]
+　「ホントに、有難う」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No prob.[l] Anyway, you should probably hurry.[」][lr]
+[else]
+　「うん。[l]早く行ったほうがいいんじゃない？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thanked Fujisaka and passed through gates in pursuit of Takako.[lr]
+[else]
+　と、言った籘坂に目を伏せ礼をすると、貴呼が入っていった扉に向かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a quick glance back and saw Fujisaka waving me goodbye.[prcm]
+[else]
+　一度だけ振り返ると、籘坂はフラフラ、と手を振っていた。[prcm]
+[endif]
+
+;//////
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[wf buf=0]
+[backlay]
+[fbfscale_image storage="bg36" page=back layer=base]
+[trans method=universal rule="rule12" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+
+[playse buf = 2  storage=se18.ogg loop=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+If that temple we saw earlier followed a "simple is best" kind of philosophy, then this one seemed closer to "gorgeous is best."[prcm]
+[else]
+　少し前に見てきた神殿がシンプルイズベストなら、大聖堂はゴージャスイズベストのようだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Various colorful and fantastical pictures decorated the walls. Everything, from the pillars to even the handrails, had some sort of carving on them.[lr]
+[else]
+　内部の壁は色鮮やかで幻想的な絵画で、柱から手摺まで彫刻が埋め込まれていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The pillar of light descending from the ceiling illuminated both the statues of angels, as well as the painting of Heaven on the walls.[lr]
+[else]
+　天蓋の目窓から射したいくつもの光の柱が、天使の像や天国の壁画を照らしている。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Not letting my eyes linger on one spot for too long, I looked around for Takako, finally spotting her ascending the stairs under the huge tectorium.[lr]
+[else]
+　何処にも目を止めずに、貴呼の姿を探していると、ひときわ巨大な天蓋の下にある階段を登っていく貴呼が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed after her, making my way up the spiral staircase.[lr]
+[else]
+　グルリ、と回る螺旋階段を貴呼のあとを追って上がっていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I reached a veranda on the upper side of the tectorium, I ascended another small set of stairs leading further up.[lr]
+[else]
+　天蓋上部の回廊につくと、さらに上へと続く小さな階段を上る。[lr]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method=universal rule="rule12" vague=50 time=1000]
+[wt]
+[fadeoutse buf=2 time=1000]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After going up another dark, spiral staircase with no windows, I suddenly had to stop and narrow my eyes at the light coming from outside.[prcm]
+[else]
+　カツカツカツ、と窓の無い螺旋の暗く狭い石の階段を上りきると、外の光に目を細める。[prcm]
+[endif]
+
+
+[playse buf=1 storage=se74.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The wind blew past my ears as I reached the outside of the tectorium.[lr]
+[else]
+　天蓋の外側へ出ると耳元でビュウ、と風の音が聴こえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Opening my eyes, I was met by the vast, rust-colored cityscape stretching before me.[lr]
+[else]
+　目を開けると、ぱっ、と茶褐色の市街の一望が展開されていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked down at the central park and the various alleyways that Fujisaka and I traversed earlier.[prcm]
+[else]
+　籘坂と歩いてきた街路、中央公園も眼下に見下ろしている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sachi.[」][lr]
+[else]
+　「サチ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I looked over that breathtaking sight — all the while struggling to hold my hair in place against the fierce wind — I heard Takako's voice from nearby.[prcm]
+[else]
+　風に取られた髪を押さえながら、公園を一望したあとで辺りに視野を巡らせていると、貴呼の声がした。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="ev22_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was looking for you, Sachi.[」][lr]
+[else]
+　「探したよサチ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako, her expression colored by surprise, made her way through some people in the narrow passage and approached me.[lr]
+[else]
+　驚いた顔の貴呼が、人のあいだを割って狭い通路をテケテケ、と歩いてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before she could hug me, I squeezed her cheeks between my palms.[prcm]
+[else]
+　そのまま抱きつこうとする貴呼の顔を両手で挟んで止めた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And just where did you go?[」][lr]
+[else]
+　「人を置いて何処に行っていたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I kinda got disoriented after losing that carriage.[」][lr]
+[else]
+　「馬車を見失った頃には、もう迷子になってたんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And then?[」][lr]
+[else]
+　「それで？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="ev22_2" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I spotted this blue bird and started following it. Before I knew it, I was in the square.[」][lr]
+[else]
+　「なんか青っぽい鳥を追いかけていったら、いつの間にか広場に居た」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you, Mytyl?[l] Did the sight of an ancient town make your brain leap into a fantasy world?[」][lr]
+[else]
+　「ミチルかあんたは。[l]町並み見て頭がメルヘンになったのか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heaved a long sigh.[prcm]
+[else]
+　ハア、と大きなため息をついてしまう。[prcm]
+[endif]
+
+
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="ev22_1" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How did you know I'd be here?[」][lr]
+[else]
+　「どうしてここが分かったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, you do love high places.[」][lr]
+[else]
+　「アンタが高いところ好きだからよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We know each other so well we don't even need words![」][lr]
+[else]
+　「以心伝心だね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I flicked her on the forehead.[prcm]
+[else]
+　パチン、と指を鳴らす。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]At least have the common decency to realize when I'm calling you an idiot![」][lr]
+[else]
+　「馬鹿って言ってるの、気づきなさい馬鹿」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before long, the orange of dusk completely overtook the blue sky.[lr]
+[else]
+　気が付くと真っ青だった空は、いつの間にか黄昏色に染まりつつあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The town below us seemed to have regained its life as people slowly began to fill the formerly deserted squares and alleyways.[prcm]
+[else]
+　茶褐色がいよいよ濃さを増して見える街は、広場や通りにも人の活気が戻ってきていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All's well that ends well.[」][lr]
+[else]
+　「結果良ければすべて良しだよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako scratched her belly.[lr]
+[else]
+　と、言った貴呼の腹を[ruby text="つね"]抓る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The darkening orange of the setting sun gradually painted the brown walls and tiles a deep hue of red.[lr]
+[else]
+　瓦や壁の色が赤茶系に統一された街は、空が濃くなるほどに茜色に輝いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Although the buildings seemed to be lined up haphazardly below us, creating nothing short of a maze, all their windows were perfectly designed to be on the same height. It felt as though they were forming a giant tree with numerous branches extending across the town.[prcm]
+[else]
+　迷路のようだったゴチャゴチャとした建物は、無作為に立てられているようだったが、ここから見ると窓の高さが揃っていた。隣り合わせの建物には隙間が少ないところは、長い街路をつくり、大広場から木の根のように流れを成している。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[seopt buf=0 volume=100]
+[seopt buf=2 volume=100]
+[msgoff]
+[fadeoutbgm time=3000]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="031.ks" target=*031
+
+

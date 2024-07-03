@@ -1,0 +1,437 @@
+*099| The inner yard lights up
+; *099|中庭のライトアップ
+[fbfstoretitle eng="The inner yard lights up" jp="中庭のライトアップ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm38"]
+[backlay]
+[playse buf = 0 storage=se30.ogg]
+[fbfscale_image storage="bg90" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 120"]
+[eval exp="sf.ItRelease = 121"]
+[endif]
+
+
+*| The inner yard lights up
+; *|中庭のライトアップ
+[fbfstoretitle eng="The inner yard lights up" jp="中庭のライトアップ"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After we finished playing cards, Mayuko left to make some tea. Upon returning, she placed a cup in front of each of us.[lr]
+[else]
+　トランプゲームに決着がつくと、カードを片付けたテーブルの上に、[ruby text="まゆ"]繭[ruby text="こ"]子が四人の前に紅茶カップを並べた。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se106.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She also brought a double dessert plate with chocolate on it, as well as another small plate with some stretched dango covered in soy flour.[prcm]
+[else]
+　次に、チョコレートを載せた取ってのある二段のデザートプレートと、小皿を持ってきた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　小皿には、帯のように伸ばした団子にきな粉をまぶした菓子が入っている。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/sana_img/f02_p02_h01" visible=true left=330 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Those are so nostalgic,[」] Sanae remarked.[prcm]
+[else]
+　「懐かしいお菓子ですね」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、[ruby text="さ"]早[ruby text="なえ"]苗が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I made them myself.[」][lr]
+[else]
+　「それは私が作ったんだよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/k_img/f04_p01_h16" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are those the only Japanese sweets we're getting today?[」][lr]
+[else]
+　「これだけ和菓子なの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll happily eat your share if you don't want them.[」][lr]
+[else]
+　「いらなかったら[ruby text="こずえ"]梢の分も貰うからね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/k_img/f04_p01_h05" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not giving them away.[」][lr]
+[else]
+　「あげない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A wisp of steam billowed from the hot tea.[prcm]
+[else]
+　紅茶の湯気が上がる。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="bg74" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before we knew it, the purple of the sky had shifted into the deep and dark hue of the night.[lr]
+[else]
+　辛うじて紫色を残していた空も、いつのまにか藍色の混ざる紺色の夜の空に塗り変わっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae, who had never been too talkative to begin with, fell completely silent. She was simply swaying back and forth in her chair.[lr]
+[else]
+　元々言葉数の少ない梢は、さらに口を固くして時折ゆらゆら、と揺れていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see the silhouette of a massive tree beyond the window.[prcm]
+[else]
+　窓から見える紺の中庭には、大きな木の枝葉のシルエットが映っている。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg90" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think it's about time I turned them on.[」][lr]
+[else]
+　「つけてきましょうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, please.[」][lr]
+[else]
+　「お願い」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f02_p02_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae's gaze followed Mayuko's back as she left the room.[prcm]
+[else]
+　向かいの早苗が、部屋を出ていく繭子の背中を見ていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sanae, look outside.[l] Kozue, are you still awake?[」][lr]
+[else]
+　「早苗、窓の方を見ていて。[l]梢、起きてるかい？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f04_p02_h09" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sleeping.[」][lr]
+[else]
+　「寝てない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「うん」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 1 storage=se43.ogg]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule12" vague=50 time=800]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I switched off the lights.[prcm]
+[else]
+　返事を確認してから、部屋の明かりを消した。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Darkness enveloped the room, the faint glow of the stars its only source of light.[lr]
+[else]
+　ふ、と部屋が暗くなり、星空の光が青く部屋の中にさした。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method=universal rule="rule13" vague=500 time=300]
+[wt]
+[wait time=1500]
+[backlay]
+[eval exp="sf.cg36=1"]
+[fbfscale_image storage="ev36" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I narrowed my eyes, trying to get used to the dark. Yet before I had the time to do that, a warm light reached me from outside.[lr]
+[else]
+　暗闇に慣れない目が細まるが、瞬く間に目をかばうほどの暖色の光が窓から差し込む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Countless orbs of light drifted in the air.[lr]
+[else]
+　ストロボを焚かれたような眩しさがすぎると、無数の光の粒が空に浮かんで見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue approached the window and looked outside.[prcm]
+[else]
+　梢が窓の方に寄って、外を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that a Christmas tree?[」] Sanae asked.[prcm]
+[else]
+　「クリスマスツリー？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、早苗が言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The camphor tree has lights on it.[」][lr]
+[else]
+　「中庭の楠の木に電飾が付いてる」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se54.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the door open behind us, and Mayuko entered the room.[prcm]
+[else]
+　背後で戸の開く音がして、繭子が戻ってくる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How does it look?[」][lr]
+[else]
+　「どうですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's beautiful.[l] Though maybe we should've bought more lights.[」][lr]
+[else]
+　「綺麗に見えてる。[l]もう少し、電飾を買い足しても良かったかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That looks plenty to me.[」][lr]
+[else]
+　「十分じゃないですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The blinking lights of the camphor tree illuminated all of us: Kozue by the window, Sanae in her chair, as well as Mayuko and myself chatting by the door.[prcm]
+[else]
+　梢は窓の前で、早苗は座ったまま、繭子と私は戸の近くでしばらくポツリポツリ、と点滅するツリーの光を見ていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="099_2.ks" target=*099_2
+
+

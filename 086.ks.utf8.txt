@@ -1,0 +1,218 @@
+*086| Change of seasons
+; *086|季節の変わり目
+[fbfstoretitle eng="Change of seasons" jp="季節の変わり目"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+;BGM無し
+[fbfscale_image storage="bg43_4" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 105"]
+[eval exp="sf.ItRelease = 106"]
+[endif]
+
+*| Change of seasons
+; *|季節の変わり目
+[fbfstoretitle eng="Change of seasons" jp="季節の変わり目"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Holding the folded towel by its two ends, I gave it a hard wring.[lr]
+[else]
+　折りたたんだタオルの両端を抱え込むようにして持ってから、外側へ向かって思いっきり捻る。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se111.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The water it had absorbed dripped down into the basin below.[lr]
+[else]
+　タオルに吸い込んだ水が、洗面器の水に落ちてじゃぶじゃぶ、と大きな音を立てた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the cool, wet towel on the forehead of the feverish Sanae.[prcm]
+[else]
+　冷えたタオルを火照った[ruby text="さ"]早[ruby text="なえ"]苗のおでこに乗せてやると、ん、と小さく息が漏れた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Guess we're at the turning point of seasons. It was really cold yesterday, too.[」][lr]
+[else]
+　「季節の変わり目かな、昨日は随分と冷えたねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae blinked a few times instead of a reply.[prcm]
+[else]
+　返事のかわりに、早苗のまぶたがゆっくりと瞬きする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're still feeling out of it? Guess it's gonna be rice gruel or something along those lines for lunch, then.[l] I'll have Mayuko bring it to you.[」][lr]
+[else]
+　「まだ怠そうか、そんなんじゃ昼食はおじやか何かかな。[l][ruby text="まゆ"]繭[ruby text="こ"]子に持ってきてもらおうねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Aren't you bored?[」][lr]
+[else]
+　「退屈じゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, it's a shame we can't talk much.[l] But it still beats being cooped up in my room.[」][lr]
+[else]
+　「そうだね、おしゃべりできないのは残念かな。[l]まあ、ひとりで居るよりは看病している方がいくつか良いよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made a long yawn.[lr]
+[else]
+　そう言ってからひとつ大きく欠伸をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I opened my eyes, I saw Sanae staring right at me.[prcm]
+[else]
+　目を開けると、早苗がこちらを見ていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I couldn't sleep that well yesterday.[」][lr]
+[else]
+　「昨晩うまく眠れなくてね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You should sleep. I'm going to be fine,[」] said Sanae in a small voice.[prcm]
+[else]
+　「寝てください。私は良いので」と早苗が小さな声で言う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm good.[」][lr]
+[else]
+　「大丈夫だよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae regarded me for a few moments, then finally closed her eyes.[prcm]
+[else]
+　早苗はしばらくこちらを見ていたが、やがてゆっくりと閉じた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you want me to read you something?[」][lr]
+[else]
+　「なにか本を朗読しようか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Rather, I'd like to hear the continuation of your story.[」][lr]
+[else]
+　「話の続きが聞きたいです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Which one?[」][prcm]
+[else]
+　「どの話がいい？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The story about your trip. The one you didn't finish last time.[」][lr]
+[else]
+　「前に聞いた旅行の話」[lr]
+[endif]
+
+[r]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah.[」][prcm]
+[else]
+　「ああ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="087.ks" target=*087
+
+

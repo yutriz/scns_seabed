@@ -1,0 +1,332 @@
+*132| The cave
+; *132|洞窟
+[fbfstoretitle eng="The cave" jp="洞窟"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle10"]
+
+[msglayer2]
+[playbgm storage="bgm31"]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg11_7" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 165"]
+[eval exp="sf.ItRelease = 166"]
+[endif]
+
+
+*| The cave
+; *|洞窟
+[fbfstoretitle eng="The cave" jp="洞窟"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Feeling someone shake my shoulders, I opened my eyes.[prcm]
+[else]
+　目を開けて揺さぶられる肩を見ると、小さな手が裾を掴んで揺らしている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're here.[」][lr]
+[else]
+　「着いたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Still half asleep, I followed Takako out of the car.[lr]
+[else]
+　まだぼやけた視界のまま、[ruby text="たか"]貴[ruby text="こ"]呼に引かれてケーブルカーを降りる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was the sound of a bell, and the cable car began turning around.[prcm]
+[else]
+　鐘が鳴り、回転板が回るとケーブルカーは向きを変えて来た道を戻っていった。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule7" vague=50 time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here.[」][lr]
+[else]
+　「こっち」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako pulled me by the hand.[prcm]
+[else]
+　ケーブルカーを見送ることも無く、貴呼は手を引いて進んでいった。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg100" page=back layer=base]
+[trans method=universal rule="rule7" vague=50 time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sensation of the ground changed, and as I shook off my drowsiness, I realized we were on a mountain path surrounded by tall trees.[lr]
+[else]
+　地面の感触が変わり、やがて視界がはっきりしてくると、小さな[ruby text="し"]羊[ruby text="だ"]歯の生えた石の垣根が見えた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　腰ほどの垣根の高さの上には大きな木が茂り、緑の樹幹が山の上まで続いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With the leaves above us blocking out most of the light, I couldn't quite make out how far the trail extended.[prcm]
+[else]
+　垣根に挟まれた狭い道は樹幹の影で薄暗く、向こうまで続いている。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're almost there.[」][lr]
+[else]
+　「もうすぐ着くよ」[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="bg101" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a short while, we reached a tunnel made of bricks and stones.[lr]
+[else]
+　ぐねぐね、と枯葉の積もる道を進んだ先には、石とレンガで出来たトンネルがあった。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="bg28_1" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[playse buf = 0  storage=se135.ogg loop=true]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="bg28_5" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We continued inside, the faint light behind us waning like a candle flame.[lr]
+[else]
+　トンネルの中を進むと、背後に見えていた光はろうそくの火が消えるようにゆらりと無くなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The darker it got, the colder it felt inside, until it disappeared altogether.[prcm]
+[else]
+　首筋に感じる冷気は暗くなるほどに増して、あるところで不意に消えた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　辺りには目に入る光も無くなる。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wf buf=0]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p01_h03" visible=true left=105 top=0 rceil=90 gceil=90 bceil=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm lost.[」][lr]
+[else]
+　「迷った」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But all we did was walk in a straight line.[l] You want to go back?[」][lr]
+[else]
+　「一本道じゃない。[l]戻る？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako stopped, her hand still clutching mine.[prcm]
+[else]
+　手を引いて揚々と前を歩いていた貴呼が止まる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p02_h10" visible=true left=105 top=0 rceil=90 gceil=90 bceil=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon_b]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I picked a bunch of differents paths, but I no longer remember which ones.[」][lr]
+[else]
+　「何回か道を選んだけど、覚えてない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I didn't notice at all.[」][lr]
+[else]
+　「気付かなかったわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do we do now?[」][lr]
+[else]
+　「どうしよう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You have no idea where we are at all?[」][lr]
+[else]
+　「全然検討もつかないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's dark here.[」][lr]
+[else]
+　「暗い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it certainly is.[」][prcm]
+[else]
+　「まあそうね」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutse buf=0 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[jingle10]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="133.ks" target=*133
+
+

@@ -1,0 +1,363 @@
+*025| A Forgotten Item
+; *025|忘れ物
+[fbfstoretitle eng="A Forgotten Item" jp="忘れ物"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle6"]
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg02_7" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 27"]
+[eval exp="sf.ItRelease = 28"]
+[endif]
+
+
+*| A Forgotten Item
+; *|忘れ物
+[fbfstoretitle eng="A Forgotten Item" jp="忘れ物"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I locked the kitchen and the windows.[lr]
+[else]
+　給湯室の鍵を閉め、事務室の窓の鍵を閉める。[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 1 storage=se42.ogg]
+[fbfscale_image storage="bg02_8" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=700]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[playse buf = 1  storage=se25.ogg]The office door opened as I was pulling down the blinds.[prcm]
+[else]
+　シャ、とブラインドを落としたところで[playse buf = 1  storage=se25.ogg]ガチャリ、と事務所の扉が開かれる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[」][lr]
+[else]
+　「お疲れ様です」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around to see Inukai with a bag in his hands.[prcm]
+[else]
+　振り返ると、鞄を持った犬飼が入ってくるところだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What happened?[」][lr]
+[else]
+　「どうしたの？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I forgot my keys.[」][lr]
+[else]
+　「鍵を忘れました」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=500 path="(-70,0,255)" layer=1]
+[wm]
+[playse buf = 0 storage=se21.ogg]
+[ws buf=0]
+[wait time = 500]
+[playse buf = 1 storage=se77.ogg]
+[ws buf=1]
+[playse buf = 0 storage=se22.ogg]
+[backlay]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai opened the top drawer of his desk, took out a bundle of keys from it, then placed it in his pants' pocket.[prcm]
+[else]
+　犬飼は事務机の引き出しを開けると、そこにあった鍵の束をとってズボンのポケットに入れた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you decide on the movie you want to watch?[」][lr]
+[else]
+　「観たい映画は決まった？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A movie?[」][lr]
+[else]
+　「映画ですか？」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se41.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai locked his drawer as he replied.[prcm]
+[else]
+　と、犬飼は返事をしながら事務机の鍵を閉めた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you busy tomorrow?[」][lr]
+[else]
+　「明日の予定は？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[」][lr]
+[else]
+　「特にはありませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you leaving?[」][lr]
+[else]
+　「帰りですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai asked me a question as I was confirming the calendar.[prcm]
+[else]
+　カレンダーの日付に目をやっていると、今度は犬飼が聞いてきた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] I was just about to right now.[」][lr]
+[else]
+　「そうよ。[l]今から出るところ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's good.[l] I'm glad you made it.[」][lr]
+[else]
+　「良かった。[l]間に合って」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess.[」][lr]
+[else]
+　「そうね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you want me to turn off the lights?[」][lr]
+[else]
+　「電気消しましょうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai reached out to the lights switch near the entrance.[prcm]
+[else]
+　と、犬飼が入口にある電気のスイッチに手を伸ばした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you.[」][lr]
+[else]
+　「お願い」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 0 storage=se43.ogg]
+[fbfscale_image storage="bg02_9" page=back layer=base]
+[trans method=universal rule="rule12" vague=300 time=700]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked around the dark office but spotted no lights from any running machinery I might have missed.[lr]
+[else]
+　パチンと、入口にある電気のスイッチを切って見回すと、事務所内は真っ暗で電子機器のランプの類は点いていなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up my bag and keys before continuing toward the main door.[prcm]
+[else]
+　鞄と鍵をとって、事務所の扉まで行く。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you seen Takako outside?[」][lr]
+[else]
+　「外で、貴呼を見なかった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai furrowed his brows.[prcm]
+[else]
+　隣の犬飼が、眉をひそめる。[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h02" visible=true left=105 top=0 rceil=120 gceil=120 bceil=120]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako?[l] I'm sorry, but I'm not sure I know who that is.[」][prcm]
+[else]
+　「貴呼。[l]すみません。[l]その貴呼さんとはどちら様ですか？」[lr]
+[endif]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、犬飼が言った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle6]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="025_2.ks" target=*025_2
+
+

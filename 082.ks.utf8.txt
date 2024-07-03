@@ -1,0 +1,236 @@
+*082| The trio of old
+; *082|いつかの三人
+[fbfstoretitle eng="The trio of old" jp="いつかの三人"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle9"]
+
+[msglayer2]
+
+[playbgm storage="bgm26"]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[backlay]
+[fbfscale_image storage="bg86" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 98"]
+[eval exp="sf.ItRelease = 99"]
+[endif]
+
+
+*| The trio of old
+; *|いつかの三人
+[fbfstoretitle eng="The trio of old" jp="いつかの三人"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Bye-bye. See you tomorrow.[」][lr]
+[else]
+　「ばいばい、また明日ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The nurse leaned down and waved the boy goodbye.[prcm]
+[else]
+　保母さんが、グラウンドで腰をかがめて園児の男の子に手を振っている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Goodbye.[」][lr]
+[else]
+　「さようなら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The boy took his mother's hand, who had leaned down just like the nurse, and continued toward the gates of the kindergarten where his parents' car waited.[lr]
+[else]
+　男の子は返事をすると、保母さんと同じように腰をかがめて挨拶をした母親の手に引かれて、グラウンドの向こう正門の外の土手に止めてある車へと行った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Red dragonflies fluttered against the backdrop of the crimson sunset.[prcm]
+[else]
+　土手の方は、真っ赤な夕焼けで、赤いトンボが飛んでいる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned to my book.[lr]
+[else]
+　おままごと用のちゃぶ台の上に置いた本の続きに戻る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a bit of time, another car arrived, and there was one less child again.[prcm]
+[else]
+　しばらくして、また別の車が来て、またひとり子供が減った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p01_h02" visible=true left=-70 top=0]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you reading?[」][lr]
+[else]
+　「何を読んでいるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A child's voice caught me unawares.[lr]
+[else]
+　おままごと用のちゃぶ台の上に置いた本を見ていると、珍しく声がかかる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked from the book to see a young girl with a ponytail staring at me.[prcm]
+[else]
+　声の方を見ると、アップテールに髪を括った女の子がのぞき込んでいる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's play if you're alone,[」] she suggested before I could answer.[lr]
+[else]
+　「ひとりだったら、遊ばない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　こちらの答えも待たずに、提案をしてくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not alone.[」][lr]
+[else]
+　「ひとりじゃないよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p01_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at my red-haired friend beside me.[lr]
+[else]
+　隣にいる友人を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was looking at the ponytailed girl.[prcm]
+[else]
+　赤毛の友人は、アップテールの女の子を見ていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle9]
+
+;TIPS選択フラグ
+[if exp="f.ItRelease_tips1 <= 4"]
+[rclick enabled=false]
+[history output=false enabled=false]
+[eval exp="f.ItRelease_tips1 = 6"]
+[eval exp="sf.ItRelease_tips1 = f.ItRelease_tips1"]
+[msgon_b]
+
+[r][r][r][r][r]
+[playse buf = 2 storage=se28.ogg]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+TIPS I. Narasaki Clinic[r]
+"Bathroom" has been unlocked.[r]
+"Kitchen" has been unlocked.[prcm]
+[else]
+TIPSⅠ.楢崎診療所[r]
+「浴室」が解放されました。[r]
+「厨房」が解放されました。[prcm]
+[endif]
+
+
+[msgoff]
+[wait time=1500]
+[history output=true enabled=true]
+[endif]
+
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="082_2.ks" target=*082_2
+
+

@@ -1,0 +1,606 @@
+*064| The Library
+; *064|図書館
+[fbfstoretitle eng="The Library" jp="図書館"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+[playbgm storage="bgm13"]
+[backlay]
+[fbfscale_image storage="bg56_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 79"]
+[eval exp="sf.ItRelease = 80"]
+[endif]
+
+
+*| The Library
+; *|図書館
+[fbfstoretitle eng="The Library" jp="図書館"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt the sweet smell grow more distinguishable as I continued down the stone path.[lr]
+[else]
+　中庭の飛び石の上を進んでいくと、微かにしていた甘い香りが次第に濃くなっていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made out the hedgerow Nanae told me about right away.[lr]
+[else]
+　すぐに[ruby text="なな"]七[ruby text="え"]重の教えてくれた金木犀の垣根が見えてくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It extended further along the path up until it disappeared behind the west wing of the mansion.[lr]
+[else]
+　金木犀の垣根は、歩いてきた飛び石沿いに中庭を抜けて洋館の西棟の裏へと続いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued down the path — covered by golden petals — until I saw a round roof beyond the hedge.[lr]
+[else]
+　黄色の花が撒かれた飛び石の上を歩いていくと、やがて垣根の向こうに丸い屋根が見えてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Two large wooden doors barred the entrance to the library.[prcm]
+[else]
+　図書館の入り口には、二対の背の高い木の扉があった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[playse buf = 0 storage="se66.ogg"]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule8" vague=200 time=2000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg42_2_1" page=back layer=base]
+[trans method=universal rule="rule8" vague=200 time=2000]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I slowly pushed one of them open, making its rusty hinges creak in response.[lr]
+[else]
+　蝶番が錆びて重たくなった扉の片側を押し開く。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Dust filled my nostrils as the sunlight making its way into the room through the partially-opened door painted a rectangular patch of light on the library's floor.[prcm]
+[else]
+扉の隙間は掠れた喘息のような音をさせると、かすかな埃を吐き出し、代わりに背中からの四角い光を館内に取り入れた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The spacious, cylinder-like room had bookcases lining its walls.[lr]
+[else]
+　筒のような形の室内は天井が高く、壁には隙間なく書架が並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had a small staircase on the other end leading to an alcove with a huge window that circled around the entire building.[lr]
+[else]
+　正面に階段があり、踊り場に大きな窓がある。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　階段は円柱の中ほどをぐるりと回る足場へと繋がっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The dome-shaped ceiling had a circular window — an oculus — in the middle that let slightly more light into the otherwise relatively dim interior.[lr]
+[else]
+　ドームになる天井を支える穹窿の上には眼窓があり、薄暗い室内を差す灯りが漏れていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The door closed as I pulled my hand off it, isolating all sounds from the outside, and giving way for white noise.[prcm]
+[else]
+　背後で手を離した扉が音もなく閉まると外の音が止んで、代わりに白色雑音が聴こえてきた。[prcm]
+[endif]
+
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_1_1" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wait time=1500]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The middle-aged woman at the counter turned her gaze to me.[lr]
+[else]
+　カウンターに居る中年の女性がこちらを向いた。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/r_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/r_img/f01_p03_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=800]
+[clickskip enabled=true]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave her a small nod. She smiled back at me in response before returning to her work.[prcm]
+[else]
+　軽く会釈をすると、彼女は軽く笑みを浮かべながら会釈を返して手元の作業に戻った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[playse buf=1 storage="se18.ogg" loop=true]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_2_1" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]click click*[lr]
+[else]
+　コツコツ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The clicking of my shoes was the only sound bouncing off the round walls of the interior. For some reason, it felt somewhat slow to my ears.[lr]
+[else]
+　靴の音だけが弧を描く壁に反響して、少し遅く聴こえた。[lr]
+[endif]
+
+[r]
+[fadeoutse buf=1 time=1500]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The bookcases in the center of the hall resembled the giant stone tablets of some ancient ruin.[lr]
+[else]
+　ホールにはたくさんの書架が遺跡の石版のように、黙って並んでいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The light seeping in from the ceiling illuminated a few of them, making the grains of dust in the vicinity sparkle in silver.[prcm]
+[else]
+　天井の目窓から差す光が、いくつかの書架をぼうっと照らし、周囲を漂う塵を銀色に輝かせていた。
+[prcm]
+[endif]
+
+
+
+
+[playse buf = 2 storage="se57.ogg"]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried opening one of the books, but it was from a publisher I'd never heard of.[lr]
+[else]
+　試しに本を抜き出して開いてみたが、知らない出版社の書籍ばかりだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ultimately gave up on trying to find something interesting and instead chose to find a comfortable place where I could read the books I brought myself.[prcm]
+[else]
+　そこから本を探すことを早々に諦めると、持参した本を読む場所を探した。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[wf buf=1]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_4_1" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=600]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After passing a few more bookcases, I found a somewhat bigger space with a few desks and some chairs for reading.[lr]
+[else]
+　書架の間を覗きながら歩いていくと、少し広めのパーティションに読書用の机と椅子を見つける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Some books and a whole heap of notes rested on one of the desks.[lr]
+[else]
+　ひとつの机の上には数冊の本とノートが乗っている。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p01_h09" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Beyond the desk, I spotted a girl on a stepladder, looking at one of the shelves.[prcm]
+[else]
+　机の向こうに、脚立に乗って本を見ている女の子が見えた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_3" page=back layer=base]
+[trans method=universal rule="rule10" vague=300 time=600]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found a one-person desk next to the window; I sat down and took out some of my books. [lr]
+[else]
+　反対側の窓の近くにあったひとり掛けのテーブル席に腰を下ろすと、持参した本を取り出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After removing my silver bookmark, I began scanning the text from the right.[lr]
+[else]
+　銀細工のしおりをとりだすと、右端から文字をたどる。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage="se57.ogg"]
+[ws buf=2]
+[playse buf = 2 storage="se57.ogg"]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl I spotted earlier returned to her desk as I was turning a page.[lr]
+[else]
+　パラパラ、とページを戻していると、書架の間から女の子が戻ってきた。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[eval exp="sf.cg30_1=1"]
+[fbfscale_image storage="ev30_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She placed the small tower of books she'd been carrying on the desk, then pulled out her chair.[lr]
+[else]
+　置いてあった本の上に両手で抱えてきた本を重ねると、椅子を引いて席に着いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her long hair fluttered in the wind as she sat down.[prcm]
+[else]
+　椅子に座るとカールした長い髪がふわり、とはずんだ。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg42_4_1" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Without so much as giving me a single glance, the girl opened a large book and placed it in front of herself, hiding her entire frame from view.[prcm]
+[else]
+　女の子はこちらを一目もしないまま、大きな本をとん、と机に立てると、こちらからは顔が見えなくなった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_3" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned my attention to my own book.[lr]
+[else]
+　意識を本に戻す。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage="se57.ogg"]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had to flip a few pages back to find the line where I left off.[prcm]
+[else]
+　さらに数ページを前にめくると覚えのあるフレーズを見つけた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The fluorescent lamps on the walls illuminated the page.[lr]
+[else]
+　壁掛け灯の白熱電球がじわりと点灯する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+By the time I closed the book, the inside of the building had gotten dark, with only barely noticeable slivers of orange light coming from the ceiling window.[lr]
+[else]
+　本を閉じると室内が微かに暗くなり、天井の目窓からは微かに赤みがかかった光が漏れている。[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled=false]
+[msgoff]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_4_4" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h01" visible=true rceil=220 gceil=220 bceil=220 left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl was still at her desk, jotting something down in her notebook.[prcm]
+[else]
+　女の子は同じ姿勢でノートに何かを書きとめていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_1_4" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wait time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled up my sleeve and checked my watch.[lr]
+[else]
+　袖を引きながら、腕時計を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up, pushed the chair back into its place, and left the library.[lr]
+[else]
+　席を立って、椅子を戻すとそのまま図書館を出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The woman at the counter was nowhere to be seen anymore.[prcm]
+[else]
+　カウンターの女性はいつの間にか居なくなっていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[playse buf = 0 storage="se66.ogg"]
+
+[msgoff]
+[msglayer2]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule8" vague=200 time=2000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg56_3" page=back layer=base]
+[trans method=universal rule="rule8" vague=200 time=2000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled one of the doors open with another loud creak and had a gust of wind blow straight into my face, propelling the sedentary dust of the room into the air.[prcm]
+[else]
+　扉を引くと、再び掠れた音と空気の層のような風が外へと吹いて、漂っていた埃が流れていった。[prcm]
+[endif]
+
+
+[seopt buf=1 volume=100]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[fadeoutbgm time=3000]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="065.ks" target=*065
+

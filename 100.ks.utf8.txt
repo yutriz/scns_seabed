@@ -1,0 +1,497 @@
+*100| Playing doctor
+; *100|お医者さんごっこ
+[fbfstoretitle eng="Playing doctor" jp="お医者さんごっこ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[clickskip enabled=false]
+[msglayer2]
+[playbgm storage="bgm26"]
+
+;章題表示
+[msgoff]
+[wait time=3000]
+[backlay]
+[fbfunlockachievement number="4"]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence4_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence4_1_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+[wait time=1000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence4_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence4_2_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=4000]
+
+
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+
+
+;[msgon]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[backlay]
+[eval exp="sf.cg14_2=1"]
+[fbfscale_image layer=0 page=back storage="ev14_3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=800]
+[wt]
+[clickskip enabled=true]
+
+;[fbfscale_move time=15000 path="(-108,0,255)(-216,0,255)(-325,0,255)" layer=0]
+
+;章選択フラグ
+[if exp="sf.CpRelease <= 4"]
+[eval exp="sf.CpRelease = 5"]
+[endif]
+
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 123"]
+[eval exp="sf.ItRelease = 124"]
+[endif]
+
+
+*| Playing doctor
+; *|お医者さんごっこ
+[fbfstoretitle eng="Playing doctor" jp="お医者さんごっこ"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rays of the sun filtered in through the marmalade-colored western window of the kindergarten, elongating the shadows of the three of us inside.[lr]
+[else]
+　マーマレード色した幼稚園の西向きの窓から長い日が差し込んで、三人の影を伸ばしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I held a picture book in my hands that masqueraded as a doctor's notebook.[lr]
+[else]
+　私はカルテに見立てた絵本を持っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was pressing her stethoscope against the belly of a doll.[prcm]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼は手に持った聴診器でぬいぐるみのお腹を見て診察をしようとしている。[prcm]
+[endif]
+
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p01_h03" visible=true left=-70 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does a stethoscope have a right and a wrong side?[」] she asked me.[prcm]
+[else]
+　「聴診器って裏表はあるのかな？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　貴呼がこちらを振り返って尋ねる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're holding it correctly.[」][lr]
+[else]
+　「それで合ってる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see... I see...[」][lr]
+[else]
+　「ふむふむ」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　貴呼は聴診器をちょこん、とお腹に当てただけだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She took the stethoscope off and put it on the table.[lr]
+[else]
+　耳から聴診器をはずして机に置く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a whole lineup of toy medical tools on it, all to be used as part of the game.[lr]
+[else]
+　机の上には、幼稚園の部屋中から集めてきたお医者さんごっこ用の玩具が並べられている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako looked over them for a second, and after a brief moment of hesitation...[prcm]
+[else]
+　貴呼はそれらを眺めながら、その上で手を迷わせている。[prcm]
+[endif]
+
+
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p01_h04" visible=true left=-70 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is this?[」][lr]
+[else]
+　「これはなに？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She picked up a spatula generally used to hold down the tongue.[prcm]
+[else]
+　舌を抑えるヘラ上の器具をもった貴呼がもう一度振り返る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, the nurse is looking.[」][lr]
+[else]
+　「あ、先生が見てる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around and saw the nurse looking our way. She picked up a plush bunny we left on the floor earlier and put it back into its box.[lr]
+[else]
+　後ろを振り向くと、チューリップ組みの先生が抱えたおもちゃ箱にウサギのぬいぐるみを入れながらこちらを見ている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't make her face out in the backlight.[prcm]
+[else]
+　後ろの硝子戸が逆光になり、顔はよく見えない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was she looking at us?[」][lr]
+[else]
+　「先生見てた？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] You seem to be a very untrustworthy doctor.[」][lr]
+[else]
+　「見てたよ。[l]随分頼りないお医者さんだねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I fear for your future patients if you ever actually become one.[」][lr]
+[else]
+　「こんなお医者さんがいたら、怖いわ」[lr]
+[endif]
+
+[r]
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p02_h15" visible=true left=-70 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[fbfscale_move time=300 path="(-70,20,255)(-70,0,255)" layer=0]
+;[wm]
+;[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ugh.[」][prcm]
+[else]
+　「があん」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、貴呼は擬音で言った。[prcm]
+[endif]
+
+
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p01_h02" visible=true left=-70 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think Narasaki's better at it than you, Takako.[」][lr]
+[else]
+　「こういうのは、楢崎ちゃんのほうが得意なんじゃないかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, we can switch if you want.[」][lr]
+[else]
+　「ああ、それじゃあ貴呼と交代ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki stood up.[lr]
+[else]
+　と、それまで黙って見ていた楢崎が立ち上がる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She picked up the stethoscope, put it around her neck, and sat down in the chair.[prcm]
+[else]
+　聴診器を取ると、首に引っ掛けて椅子にかけ直す。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So? Where does it hurt?[」][lr]
+[else]
+　「今日はどこの具合が悪いのかな？」[lr]
+[endif]
+
+[r]
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p02_h18" visible=true left=-70 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I ate a poisoned apple.[」][lr]
+[else]
+　「毒リンゴ食べた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just like in the story we read today...[」][lr]
+[else]
+　「今日読んでた絵本の話ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] In that case, please show me your stomach.[」][lr]
+[else]
+　「ふむ。[l]はい、じゃあお腹を出して」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「はあい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako pulled up her shirt, exposing her naked belly.[prcm]
+[else]
+　貴呼はシャツをめくってお腹を出す。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right. Now turn around.[」][lr]
+[else]
+　「はい、後ろをむいて」[lr]
+[endif]
+
+[r]
+;[msgoff]
+;[backlay]
+;[freeimage layer=0 page=back]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako did as ordered, pantomiming a spinning chair.[prcm]
+[else]
+　くるりと回転椅子を回す振りをして、後ろを向く貴呼。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[l] There doesn't seem to be anything wrong with your lungs.[l] Okay, let's have a look at your throat now.[」][lr]
+[else]
+　「ふむ。[l]肺の音は綺麗だね。[l]つぎは、喉を見ようか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako spun her invisible chair again and opened her mouth.[prcm]
+[else]
+　再びくるりと回転椅子を回す振りで前を向いた貴呼が、大きく口を開ける。[prcm]
+[endif]
+
+
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p02_h18" visible=true left=-70 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Open wide... Yeah, just like that.[」][lr]
+[else]
+　「口を大きく開けて、そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki used the spatula to push Takako's tongue out of the way.[prcm]
+[else]
+　楢崎はヘラ状の器具、舌圧子で貴呼の舌を抑えるフリをした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're good at opening your mouth. I can see all the way to your tonsils.[」][lr]
+[else]
+　「喉のひらき方、上手いね扁桃腺がよく見える」[lr]
+[endif]
+
+[r]
+;[msgoff]
+;[fbfscale_move time=200 path="(-70,20,255)(-70,0,255)(-70,20,255)(-70,0,255)" layer=0]
+;[wm]
+;[wt]
+;[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The nwuse tword mewh the saim thwing.[」][lr]
+[else]
+　「ふぉういんのへんへいにもほへられた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have no idea what you're saying, though.[」][prcm]
+[else]
+　「何を言っているかわからないけど」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="101.ks" target=*101
+
+

@@ -1,0 +1,1463 @@
+*088_2| 6th of October, 1979
+; *088_2|1979年10月06日
+[fbfstoretitle eng="6th of October, 1979" jp="1979年10月06日"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgOn_t"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgLayer_T"]
+
+[msglayer]
+[backlay]
+;[bgmopt volume=0]
+[playbgm storage="bgm21"]
+;[fadebgm volume=50 time=1000]
+;[fbfscale_image storage="bg41_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wb]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 108"]
+[eval exp="sf.ItRelease = 109"]
+[endif]
+
+*| 6th of October, 1979
+; *|1979年10月06日
+[fbfstoretitle eng="6th of October, 1979" jp="1979年10月06日"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear a faint sound coming from Sanae's room.[lr]
+[else]
+　[ruby text="さ"]早[ruby text="なえ"]苗の部屋から微かに音楽が聞こえてくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Listening to a set of familiar words, I opened her door.[lr]
+[else]
+　聞き覚えのあるフレーズに耳を澄ませながら部屋の戸を開ける。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[playse buf = 0 storage=se54.ogg]
+;[bgmopt volume=100]
+[eval exp="sf.cg59=1"]
+[fbfscale_image storage="ev59" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae was lying on her bed, holding a book. Her face was turned toward the window.[lr]
+[else]
+　[ruby text="さ"]早[ruby text="なえ"]苗は本の上に手を置いたまま窓の方を向いて横になっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The window was slightly open, its curtains languidly fluttering in the faint wind.[lr]
+[else]
+　奥の窓が少しだけ開いて、カーテンを揺らしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The music of my childhood reverberated across the walls.[prcm]
+[else]
+　部屋の中には小さい頃に流行っていた洋楽がゆっくりと流れていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae didn't react to my entry.[lr]
+[else]
+　部屋に入っても早苗はベットに横になったままで反応がない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I drew closer, I realized that her eyes were closed and her breathing was even.[lr]
+[else]
+　ベットの近くまで行くと、早苗が目を閉じて小さな寝息を立てていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed the window, careful not to make a sound.[prcm]
+[else]
+　音をたてないようにゆっくりと窓を閉める。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg43_1" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved closer to the shelf with the record player, and checked the label of the record set down next to it.[lr]
+[else]
+　レコードの置いてある棚へ移動して、そこに置かれた回っているレコードのレーベルを見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The cover wasn't the one I was familiar with, but it was most certainly the song I hummed during that trip I told Sanae about.[prcm]
+[else]
+　覚えているイラストではなかったが、早苗に話して聞かせた旅行の時に口ずさんでいた曲だった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spent a couple of moments listening to the melody.[lr]
+[else]
+　しばらくレコードの棚の前で立ったまま曲を聴いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the song began nearing its end, I looked down at the shelf below in search of the notebook I'd forgotten in her room.[prcm]
+[else]
+　次のフレーズに移るところで下の本棚を見た。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　それから、早苗の部屋に置き忘れていた手帳を本棚から探した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae's shelves seemed to have changed slightly from the last time I saw them.[lr]
+[else]
+　屈んで覗き込んだ早苗の本棚は少し前と様子が変わっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She must have returned a lot of her books to the library, as most of the available space was now taken up by the records, with only a few lonely books left at the edges of the shelf.[lr]
+[else]
+　以前そこにたくさんあった本はまとめて図書館に返却されたのか、今は数冊が棚の端に斜めになって置かれて、代わりに借りてきたレコードが棚を専有し始めていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The leftover books seemed ancient — their covers were pretty much falling apart.[lr]
+[else]
+　残している本はどの本も古ぼけていて、ひどいものはページが折れていたり背表紙が破れかけたりしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They must have been her old favorites or something. Some were meticulously patched up with tape and adhesive.[prcm]
+[else]
+　よほど気に入っているのかもともとそうなのか、綺麗にテープや糊で直したているものもあった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Most of them seem to be related to illnesses, including the "Ugly Duckling," a book most hospitals had on their shelves.[lr]
+[else]
+　ラインナップは「みにくいアヒルの子」などの定番絵本と病棟の廊下に置いてそうな闘病記が大半を占めていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted a few thinner volumes — some newer novels — as I inspected one book after another.[lr]
+[else]
+　さらに順に見ていくと単行本サイズの軽く読めそうな小説が並び始めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And when I'd forgotten what I was looking for, I suddenly found my notebook.[prcm]
+[else]
+　そして、何を探しているのか忘れそうになっていたところで探していた手帳を見つけた。[prcm]
+[endif]
+
+
+[fadeoutbgm time=1000]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave it a thorough look.[lr]
+[else]
+　手に取り手帳を確認する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had the familiar brown leather cover.[lr]
+[else]
+　見覚えのある茶色の革製のカバーだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon closer examination, I realized the cover was no cheap knockoff one could see on most notebooks. This was likely the real deal.[prcm]
+[else]
+　改めて見ると革は安い手帳のように薄いものではなく、しおり用の紐もついておりそれなりに高級さを感じられた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down in the cane chair and opened up the notebook.[lr]
+[else]
+　藤椅子に座り手帳を開く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd already discussed it with Mayuko.[lr]
+[else]
+　手帳の件については既に[ruby text="まゆ"]繭[ruby text="こ"]子に話をしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She said it was addressed directly to me, so I was free to do whatever I wanted with it.[prcm]
+[else]
+　荷物は個人宛に届いたものなので好きにして良いという事だった。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon flipping to the first page, I saw some handwritten letters.[lr]
+[else]
+　パラリとページを開くとペンで走り書いたような字が現れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That said, they were neat and easy to read, in no way inferior to print.[lr]
+[else]
+　その割りに字が綺麗で読みやすい。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I examined the date, I realized that a few pages between the first and the cover were torn out.[lr]
+[else]
+　始めの日付のところに目をやると表紙と始めのページの間に破り取られた跡を見つけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They were removed with such precision I didn't even notice at first.[prcm]
+[else]
+　根元から綺麗に破られていたので、先日は気がつかなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I quickly flipped to the end of the notebook to check if no other pages were missing.[lr]
+[else]
+　初めから最後のページまで捲って、破れた箇所がその部分だけであることを確認する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found myself intrigued by the missing contents, but the entries were all dated, so I figured I could just start reading from wherever I wanted.[wb canskip = false][prcm]
+[else]
+　そこに何が書かれていたのか少し気になったが、以降は日付のところから始まっていたため問題なく読むことができた。[wb canskip = false]
+[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer_t]
+[backlay]
+[playbgm storage="bgm17"]
+[playse buf = 0 storage=se57.ogg]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon_t]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+October 6th, 1979[lr]
+[else]
+　[hch text="1979" expand=true]年[hch text="10"]月[hch text="6"]日[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Contrary to the forecast, the weather was beautiful today.[dl]
+[else]
+　前日の天気予報に反して、その日は快晴だった。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sky was blue, with only a few light clouds to liven up its colors.[dl] To be completely honest, I spent pretty much every sports festival like that.[dl] Even when it was the[r]festival of another school.[lr]
+[else]
+空は青く、薄い雲が端に少しだけ色を添えるくらいに僅かに漂っている。[l]
+私のこれまでの人生では、運動会の日の天気はいつでもこうだった。[l]
+それが他校の運動会であってもだった。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer_t]
+[backlay]
+[eval exp="sf.cg85=1"]
+[fbfscale_image layer=3 page=back storage="fgimage/other_img/ev85" visible=true left=0 top=0 opacity=140]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon_t]
+[clickskip enabled=true]
+
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A nearby elementary school was holding its sports festival today.[dlr]An upbeat song, the kind you usually hear during running competitions, began[r]playing, followed by a sudden gunshot.[dl] Takako was excitedly looking at it from atop a jungle gym.[dlr][r]
+[else]
+　今日は隣地区にある小学校の運動会だった。[l]
+「天国と地獄」か「クシコスポスト」みたいな、徒競走でよく使われるアップテンポな曲が始まり、続いてピストルの音が鳴った。[l]
+ジャングルジム、雲梯、滑り台がひとつになった遊具の上で、それを見ていた貴呼がはしゃいだ。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look, it's started![」] she addressed me.[lr]
+[else]
+「徒競走が始まったよ、ほら」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+と、こちらに声をかけた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can see that.[」][prcm]
+[else]
+「うん」[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Following her gaze, I saw a crowd of parents and children dashing through the field, stirring up a cloud of dust as they ran.[dl] A teacher's narration of the[r]competition could be heard through the speaker atop a tall pole decorated with flags — her loud voice was practically drowning out the music. I suddenly[r]remembered how hot it was.[dlr]
+[r]
+The wind was stronger at the top of the slide, and we were in the shadow of a large tree, but due to how sunny it had been lately, this week's temperatures exceeded the average by a wide margin.[dl] I shifted my gaze to the book I'd been holding, and tried once again to ignore the heat.[dl] I was here because I promised Takako to come if the weather was fine.[dl] Back when I made that promise, I[r]already knew about the weather forecast and had completely forgotten about my sports festival curse.[dlr][r]
+[「]The view's great from here. Let's watch it together.[」][dlr]
+[else]
+　貴呼が見ている方を見ると、父兄の人だかりと白いテントの向こうのトラックに砂埃が舞っているのが見えた。[l]
+万国旗の結ばれたポールの上のスピーカーから、大音量の曲とともに、女教師の声援と実況が流れた。[l]
+それから、忘れていた暑さを思い出した。[lr][r]
+
+*|1979年10月06日
+　滑り台の上は下よりも風が吹いており、大きな木の陰の下になっていて涼しかったが、ここ最近では無いくらいの快晴のせいで、今週の平均気温を大きく上回っていた。[l]
+手元の文庫本に目を移し、再び暑さを忘れるように努めた。[l]
+今ここに居るのは、[ruby text="たか"]貴[ruby text="こ"]呼に晴れたら行くと約束していたからだった。[l]
+約束の時には既に天気予報を知っていたので高をくくっており、運動会日のジンクスもすっかり忘れていたからだった。[lr][r]
+「よく見えるよ。こっちで一緒に見ようよ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We had a sports festival at our school last week. Is it really that entertaining to watch another school participate in one?[」][lr]
+[else]
+「先週に運動会をしたばかりなのに、他の学校の運動会を見に来て楽しい？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Watching and participating are both fun in their own way.[」][lr]
+[else]
+「見るのはやるのとはまた違う楽しさがあるよ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][prcm]
+[else]
+「そう？」[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]As a participant, I was too busy being nervous and excited to really take it all in, and before long, the whole thing was over.[dl] Being on the sidelines lets you calmly observe everything.[」][lr]
+[else]
+「やってる時は、緊張したり興奮したりしすぎて、あっという間に終わっちゃったの。[l]こうして、外野から見れば何をしていたかハッキリ分かるじゃない」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+「ふうん」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I mean, even if you were in your house, you'd hear the sounds and get curious about how it's going, no?[」][lr][r]
+[else]
+「どうせ家にいても、音が聞こえてきたりして気になるでしょう」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we continued chatting atop the slide, Takako's friend — who went to buy juice earlier — came back. It was someone Takako met in her fourth year of school when she joined the basketball club. I saw her a couple times myself.[dl] Takako shouted something down to her, then turned back to me.[dlr][r]
+"She wants all three of us to play. What do you think?"[dlr]
+[else]
+と、滑り台の上で話していると、向こうの人垣から飲み物を買ってきた貴呼の友人が現れた。[l]
+この友人二人は、貴呼が四学年から入部したバスケットボール部の仲間で、たまに貴呼と一緒に顔を合わせるくらいの面識だった。[l]
+貴呼は下に向かって大声で何か話をしてから、こちらに振り向いた。[lr][r]
+「みんなが遊ぼうって言ってる。[l]どうする？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be reading my book here.[」][lr]
+[else]
+「私はここで本を読んでる」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right, then we'll hang out around here.[」][lr][r]
+[else]
+「そう、じゃあこの辺で遊んでるよ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako slid down the slide.[prcm]
+[else]
+と、言って滑り台を降りた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[clickskip enabled=false]
+[msgoff]
+[msglayer_t]
+[backlay]
+[freeimage layer=3 page=back opacity=255]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_t]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, I spent some time reading.[dl] Once I finished the chapter I'd been on, I closed the book and brushed some sweat off my forehead.[dl] Below me, Takako, her two friends, and some boy I'd never seen before were playing kick tennis.[dl] I had no idea where they got that volleyball.[dlr][r]
+A gallop song burst forth from the speakers.[dl] It seemed like they started the ball-toss game.[dl] For a while, I gazed absentmindedly at the white and red balls dancing in the sky before realizing that I was feeling even hotter than before.[dl] The mild autumn breeze helped cool off my sweat-covered skin a little.[dlr][r]
+I looked at the scoreboard and saw that the red team had 419 points while the white team had 503.[dl] Just then, a person appeared from the window and[r]changed the red team's score to 460.[dl] On the track, they were still busy with the ball-tossing game... I have trouble understanding how the scoring in that game is supposed to work.[dl] The clock between the scores was pointing at 11:45.[prcm]
+[else]
+　それからしばらく本を読んだ。[l]
+一節を読み切ると、一度本を閉じて目尻に迫っていた額の汗を拭った。[l]
+滑り台の近くでは、貴呼が友人二人と、同学年くらいの知らない男の子と一緒に、キックテニスをしていた。[l]
+使っているバレーボールもどこから持ってきたのか知らないものだった。[lr][r]
+
+*|1979年10月06日
+　スピーカーから「ギャロップ」の曲が流れていた。[l]
+トラックの方では、玉入れが始まっており、白と赤の玉が宙を舞っていた。[l]
+ぼんやり玉を眺めると、先ほどよりじっとりと蒸し暑くなっているような感じがした。[l]
+そよそよと秋の風が吹くと、湿った肌に当たり冷たかった。[lr][r]
+
+*|1979年10月06日
+　校舎の窓に掛かっている点数表は、紅組が「４１９」で白組が「５０３」だった。[l]
+丁度、窓から人が出てきて、紅組の点数を「４６０」に変えた。[l]
+トラックはまだ玉入れの最中で、相変わらず加点の基準はよくわからなかった。[l]
+紅組と白組の得点ボードのあいだにある時計は、十一時四十五分を指していた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was almost time for lunch, and as I realized that, I smelled something good.[dl] I looked around the school grounds and spotted some of the families already helping themselves to an early treat.[dl] The gallop song ended, and the ball[r]baskets were lowered. The person on the speaker began counting each ball as they were being tossed high into the air.[dl] As I observed the white and red[r]balls painting wide arcs in the air, I felt the slide shake.[dl] A moment later, I heard some wails from below.[dl] Looking down, I spotted Takako clutching her head and writhing on the ground.[dlr][r]
+[else]
+　お昼が近くなり、気が付くとお弁当の匂いがしていた。[l]
+校庭の周辺を見ると、気の早い父兄はお重のお弁当を広げていた。[l]
+「ギャロップ」の曲が終わり、玉入れの籠が下ろされると、スピーカーのカウントとともに、籠から取り出された玉が赤白一つずつ高く放り投げられた。[l]
+その赤白の玉が描く弧を眺めているとズシン、と滑り台が揺れた。[l]
+そして、滑り台の下からうめき声が聞こえる。[l]
+立ち上がり、滑り台の下を見ると、貴呼が頭を抑えてうずくまっている。[lr]
+[endif]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pushed the book back into my pocket and descended the stairs of the slide[r]to give Takako a closer look.[dl] She was surrounded by her two friends and that boy I didn't know.[lr][r]
+[else]
+　文庫本をポケットにしまうと、滑り台を階段から降りて、貴呼の様子を見た。[l]
+貴呼の周りには友人二人と、一緒に遊んでいた知らない男の子がついていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you okay?[」] asked one of her friends.[dlr]
+[else]
+「大丈夫？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako raised her upper body with a groan, her hands still on the back of her head.[lr]
+[else]
+と、友人の一人が声をかけた。[l]
+呻きながら貴呼が上体を起こした。[l]
+打ち付けたらしい後頭部を抑えていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does it hurt?[」][lr]
+[else]
+「痛い？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ughh... it... doesn't...[」][lr]
+[else]
+「うう、痛くはない」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I noticed something red seeping through her fingers.[lr]
+[else]
+抑えている手の方を見ると、指の間から血が出ていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're bleeding.[」][lr]
+[else]
+「血が出てる」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized there were also some red stains on her back, and what looked like a puddle of blood about the size of my palm on the ground where she lay.[prcm]
+[else]
+見ると、シャツの背中には血がついており、地面にも手のひらくらいの大きさの血だまりが出来ていた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+One of the adults that saw the whole thing called an ambulance, and it arrived before we knew it.[dl] I ended up having to accompany Takako to the hospital.[dl]
+[r]
+[r]
+　            ＊
+[r]
+[r]
+Takako was lying limp on the ambulance's bed with a towel on her head.[dl] The adult who sat next to us was listening to how she got hurt.[dl] From what I could piece together, it appeared she jumped up and clutched on the aerial ladder that was pretty high up, but her fingers slipped. She ended up turning upside down in the air and fell to the ground, hitting her head directly.[lr][r]
+[else]
+すぐに、見ていた大人の誰かが呼んだ救急車がやってきて、貴呼はそれに乗せられた。[l]
+仕方がないので、一緒に救急車に乗って病院へと行った。[l]
+[r]
+[r]
+*|1979年10月06日
+　            ＊
+[r]
+[r]
+*|1979年10月06日
+　救急車の中では、タオルで頭を抑えた貴呼がぐったりとしている。[l]
+隣に座った大人の人が貴呼に、怪我をした時の話を聞いていた。[l]
+ポツリポツリ、と言うことを繋げると、少し高いところにある雲梯に飛びついたところ、引っ掛けた指が滑って、頭から落ちたという。[l]
+落ちた時に、足場にしていた鉄製の台場の角に、後頭部をぶつけたらしい。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your stupidity knows no bounds.[」][lr]
+[else]
+「何やってるのよ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I-I'm bleeding all over![」][lr]
+[else]
+「血が、いっぱい出てる」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's because you cut your head.[」][lr]
+[else]
+「頭を切ったからでしょう」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm starting to feel the pain.[」][lr]
+[else]
+「痛くなってきた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako told the adult her home's phone number.[dl] Then she proceeded to look at the ceiling of the ambulance car.[dl] She couldn't move her head, so only her eyes darted anxiously from one spot to another.[prcm]
+[else]
+　隣の大人に聞かれて、貴呼の家の連絡先を教えた。[l]
+その間、貴呼は救急車の中の天井や機材やらを見ている様子だった。[l]
+頭が動かせないので、目だけがキョロキョロ、と不安そうに動いている。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I might die.[」][lr]
+[else]
+「死ぬかも」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Relax. Worst case scenario, you'll get a few stitches.[」][lr][r]
+[else]
+「心配しなくても、縫って終わりだと思うけど？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her eyes stopped darting around and focused on me.[lr][r]
+"Will you visit my grave if I die?"[lr]
+[else]
+泳がせていた視線止めて、こちらを見ていた。[lr][r]
+「死んだらお墓に行くのかな？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose I'd have to.[」][lr]
+[else]
+「そうなったらね」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm going to be lonely, so come visit me every day.[」][lr]
+[else]
+「淋しいから、毎日遊びに来て」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...No way. That sounds like a pain.[」][lr]
+[else]
+「……毎日は面倒」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Th-Then at least drop by once in a while.[」][lr]
+[else]
+「じゃあ、たまにでいいから」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose that could work.[」][l]
+[else]
+「うん、たまになら」[lr]
+[endif]
+
+[r]
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+　            ＊
+[r]
+[r]
+After we reached the hospital, the doctors brought Takako to a room on a stretcher.[dl] I spent a few moments staring at the closed doors in the empty hallway, then sat down on the bench in front of the room.[dl] After a bit of time, I heard a sharp wail and some protests about needles or whatnot.[prcm]
+[else]
+　            ＊
+[r]
+[r]
+*|1979年10月06日
+　病院に着くと、担架に乗せられたまま貴呼は、病院の裏口から近くの病室に入っていった。[l]
+誰もいなくなった病院の廊下で閉まった扉を眺めていたが、足が疲れたので病室の外にあるベンチに座った。[l]
+しばらくして、注射を嫌がる声が聞こえてきた。[prcm]
+[endif]
+
+
+
+[playse buf = 0 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]W-Wait! I'm not ready yet!![」][lr][r]
+[else]
+「待って、心の準備が」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a few minutes, I heard some irritated adult voices saying that she wasn't the only patient here.[lr][r]
+[else]
+などと宣った挙句、数分後に業を煮やした医者の声が聞こえる。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+「ほかの患者さんも待ってるんだ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Yet even after that, the sounds of struggle wouldn't cease.[dl] I strained my ears and listened in.[dl] Judging from the voices and sounds, I guessed that she fought back against the nurses and doctors as they tried to hold her down, but as she was finally subdued and the needle came closer, she gave up and stopped struggling.[lr]
+[else]
+そのように怒鳴られてからも、少しの間はドタバタと物音がしていた。[l]
+耳を澄ませて、中の様子を伺う。[l]
+音と声から察するに、看護婦さんか医師が抑えてる間も体をよじって抵抗していたが、いざ注射針が近づくと、いつものように力を抜いて大人しくなった様だった。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The anesthetic must have worked as I couldn't hear anything anymore.[dl] Takako's mother came to the hospital a few minutes later.[dl] She must have come directly from work as she was still in her suit.[dl] After I explained her[r]everything that happened, she looked around, and entered Takako's room.[lr][r]
+[playse buf = 0 storage=se57.ogg]I looked over her shoulder as she began speaking to the doctor to see Takako lying on the bed with her back to me in the center of the room.[dl] The doctor leaned over her and sewed her wound with something that looked like a nipper before I even had the time to react.[dl] The silver tray that Takako was leaning her head on was filled with crimson blood.[prcm]
+[else]
+　それから麻酔が効いたのか、物音がしなくなった。[l]
+数分後に貴呼の母親がやってきた。[l]
+仕事中だったのかスーツ姿だった。[l]
+これまでの経過を簡単に説明すると、周りを見回してから病室に入っていった。[l]
+こちらもその後について病室に入る。[lr][r]
+
+[playse buf = 0 storage=se57.ogg]
+*|1979年10月06日
+　看護婦と話をしている母親の背中越しに、病室の中央に置かれた寝台の方を見ると、寝台に寝かされた貴呼の後ろ姿が見えた。[l]
+医師はその姿にかぶさるような姿勢でパチン、とニッパーのような器具を使って切り傷を縫い合わせた糸の端を切っていた。[l]
+頭を載せている銀色のお盆のような器には、なみなみと真っ赤な血が溜まっている。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can stand up now.[」][lr][r]
+[else]
+「もう起きれるよ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the doctor said that, Takako began to slowly rise to her feet.[dl] The nurse[r]wiped the blood off Takako's face while the latter kept staring into space with an empty expression.[lr][r]
+[else]
+と、医師が促すと、貴呼はゆっくり起きた。[l]
+そして看護婦がタオルでぼんやりとした貴呼の顔についた血を拭いた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The doctor told Takako's mother not to scratch or wash the wound until it completely closes up.[dl] He then turned to Takako and repeated the same thing.[prcm]
+[else]
+医師は母親に、傷が塞がるまで傷口を掻かないこと、風呂でも洗わないことなどを注意した。[l]
+それから医師は、貴呼にも同じようなことを簡単に言った。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After Takako's mother thanked the doctor, I helped Takako climb into her mother's car while she stayed behind for a bit more.[dl] Likely due to the[r]anesthetic, Takako leaned against the rear seat's door and stopped moving[r]altogether, almost like a squashed cockroach.[lr][r]
+[else]
+　母親は医師にお礼を言って、その後に私と貴呼を先に母親の車に乗せた。[l]
+車の中で、貴呼は麻酔が効いてるのか、疲れたのか、ぐったりとして後部座席のドアに寄りかかっていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your head looks weird,[」] I told her.[lr][r]
+[else]
+「変な頭」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The gauze bandages covering her wound were supported by a white, net-looking thing that coiled around her entire head.[dl] It opened up at the top, making her[r]hair stick out like a flower bulb.[dl] Takako simply let out a heavy sigh in response.[lr][r]
+[else]
+と、私が言った。[l]
+貴呼の頭は、傷口にガーゼがしてあり、そのガーゼが落ちないようにグルリと頭を包むように白いネットが巻いてあった。[l]
+ネットは頭の上の部分だけ開いており、その穴から髪の毛が少しだけ出てきて球根みたいな形になっていた。[l]
+それを聞いた貴呼は、余計に脱力して息をついた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you nervous?[」][lr][r]
+[else]
+「ナーバスになってるの？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave her a hard look.[dl] After a few moments of silence, she opened her mouth.[prcm]
+[else]
+と、貴呼の顔を覗き込むようにして聞いた。[l]
+しばらく黙っていると、貴呼はぼそり、と呟いた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Everyone's gonna make fun of me in school tomorrow.[」][lr]
+[else]
+「学校で馬鹿にされるかも」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think the fact that an ambulance car showed up at a sports festival is a much bigger event as far as everyone is considered.[」][l]
+[else]
+「そんなことより、運動会の最中なのに救急車を呼ばれて、あちらの方がよほど心配だわ」[lr]
+[endif]
+
+[r]
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+　            ＊
+[r]
+[r]
+Takako came to school the next day with that net still on her head, and everyone started calling her "the flower bulb." However, when she could finally take it off the next week, she began bragging and showing her stitches to everyone as though it was some honorable wound.[prcm]
+[else]
+　            ＊
+[r]
+[r]
+*|1979年10月06日
+　翌日、ネット付きの頭のまま登校した貴呼には案の定「球根」とあだ名がついた。[l]
+しかし、次の週に抜糸してネットが取れると、今度は縫あとの傷を名誉の負傷のように元気に自慢する貴呼があった。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[fadeoutbgm time=1000]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[playbgm storage="bgm21"]
+[backlay]
+[fbfscale_image storage="bg43_1" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule15" vague=300 time=400]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+; FBF: End of vertical section.
+[eval exp="f.fbfisverticaltext = false"]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt my head ache as I finished reading the entry.[lr]
+[else]
+　その日付のついた節を読み終わると、頭がズキリと痛む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The pain itself was hardly anything noteworthy, but the way it prickled behind my eyes was annoying. It reminded me of having a fish bone stuck in your throat.[lr]
+[else]
+　大した痛みではないが目の奥がズキズキと、喉に刺さった小骨のように痛んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I began massaging my eyes with my fingers when I suddenly realized Sanae was up and looking at me.[prcm]
+[else]
+　指で目をマッサージしていると、ふとベッドの上で上体を起こした早苗がこちらを見ていることに気がついた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did I surprise you?[」] she asked.[prcm]
+[else]
+　「驚きました？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、早苗が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No...[」][lr]
+[else]
+　「いや」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My muscles tensed up at the idea of being observed without my knowledge, but luckily, only my left hand — the one that held the notebook — twitched.[lr]
+[else]
+　いつの間にか見られていたことに対して何処か身体の筋肉が硬直するくらい驚いていたが、幸いピクリと動いたのは手帳の上に乗せていた左手の人差し指だけだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised the notebook higher and showed it to Sanae.[prcm]
+[else]
+　それから読んでいた手帳を持ち上げて、早苗に見せた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was reading the diary.[」][lr]
+[else]
+　「日記を読んでたんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, the notebook from yesterday.[」][lr]
+[else]
+　「この間の手帳ですね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you read it without permission?[」] She glared at me with accusing eyes.[lr]
+[else]
+　それから「勝手に読んじゃったんですか？」と少し避難の目でこちらを見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I waved my hand in denial... which kinda reminded me of those comedians on TV.[lr]
+[else]
+　「いやいや」と咄嗟に手を振ると、あとからその動作は芸人のようだと思った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Discarding that thought, I proceeded to explain myself.[prcm]
+[else]
+　その思いを振り払い弁明する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Looks like this thing really was addressed to me.[」][lr]
+[else]
+　「どうやらこれは、私宛で間違いないみたいなんだ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How can you tell?[」][lr]
+[else]
+　「というと？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This diary belonged to my friend.[l] It's pretty ancient, but there's stuff about me written in it.[l] It doesn't belong to some random stranger.[l] I'm sure she sent it to me so I would read it.[」][lr]
+[else]
+　「これは、知り合いの日記だよ。[l]随分昔の頃だけど、私のことが書いてある。[l]赤の他人の日記ではない。[l]きっと、私に読んでもらうために送ってきたんじゃないかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened up the book on the first page and showed it to Sanae.[lr]
+[else]
+　始めの方のページを開いて、早苗の方に向ける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She looked at it through her glasses, but seemed unable to make out the letters from that distance.[prcm]
+[else]
+　早苗は眼鏡を直しながらそれを見たが、この距離では文字までは見えないようだった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is it about?[」] She gave up and leaned back against her pillow.[prcm]
+[else]
+　「どんな話ですか？」と読むことを諦めて姿勢を直した早苗が聞いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A story about how an ambulance car came to a sports festival.[」][lr]
+[else]
+　「小学生の運動会で、救急車を呼ばれた話」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What on earth happened?[」][lr]
+[else]
+　「一体何があったんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I cracked my head at the playground and ended up needing stitches.[」][lr]
+[else]
+　「運動場の遊具から落ちて、頭の後ろを五～六針縫ったんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I carried the cane chair closer to her bed.[prcm]
+[else]
+　藤椅子を持って、もう少し早苗の近くに移動する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The playground?[l] So you didn't get hurt during the actual event?[」][lr]
+[else]
+　「遊具で？[l] ということは、別に競技で怪我したわけでもないのですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled my hair aside and showed Sanae the back of my head.[prcm]
+[else]
+　手で髪を抑えて、頭の後ろを早苗に見せた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it still there?[」][lr]
+[else]
+　「まだあるかな？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, I think I can see a little bump or something.[」][lr]
+[else]
+　「少し盛り上がってる部分があります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I knew it would never disappear.[」][lr]
+[else]
+　「やっぱりまだ残ってたか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I let go of my hair and sat back down into the chair.[prcm]
+[else]
+　手を離して、藤椅子に座り直した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you remember that event?[」][lr]
+[else]
+　「そのことは覚えていました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure.[l] I vaguely recalled attending it when I read through the diary, but...[」][lr]
+[else]
+　「どうかな。[l]日記を読んでいると、ああそんなこともあったな。[l]っていう感じだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized the pain was gone.[lr]
+[else]
+　と、早苗が返事をした時に、目の奥の痛みが消えていることに気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pressed my fingers against my eyes again.[lr]
+[else]
+　もう一度、手で目を抑えていると、早苗がこちらを見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae looked at me, so I hurriedly let go of them and opened the notebook.[prcm]
+[else]
+　心配されないように抑えていた手をすぐに離して手帳を開いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I flipped through a few pages, Sanae shifted her attention to the record player.[lr]
+[else]
+　パラパラと手帳のページをめくっていると、早苗は次にレコードの方を向いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I did the same.[lr]
+[else]
+　こちらもレコードを見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you actually look for the record of this song?[」] I asked her.[lr]
+[else]
+　「そういえば、この曲のレコード。探したの？」と早苗に聞いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+By now, the song had long since come to an end and the record player was dead silent.[lr]
+[else]
+　いつの間にか再生が終わり、レコードは止まっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The diary must've captured my attention so much that I didn't even notice.[prcm]
+[else]
+　停止音に気がつかないほど日記に集中していたようだった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I got curious about which song it was when you mentioned it during your story.[l] Did I get it right?[」][lr]
+[else]
+　「旅行の話を聞いた後にどんな曲なのか気になって探してみたんですよ。[l]合ってました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, hearing it again is really nostalgic.[l] Can I raise the volume a little?[」][lr]
+[else]
+　「すごく懐かしいよ。[l]もう一度かけるね。[l]もう少しボリュームを上げてもいい？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course.[」][prcm]
+[else]
+　「ええ、もちろん」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I got off my chair and turned up the volume knob.[prcm]
+[else]
+　藤椅子から立ち上がり、内蔵スピーカーの摘みをひねって少しだけボリュームを上げた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg43_3" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ended up chatting with Sanae until dinner.[lr]
+[else]
+　夕食までの時間を早苗と話をして過ごした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The windows didn't rattle too much that day.[prcm]
+[else]
+　その日、窓枠はあまり音を立てなかった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The view outside looked still and serene, with no wind. It reminded me of a picture you'd see on a postcard.[lr]
+[else]
+　外は風が無いようで日がな一日、外の景色はポストカードのように静止していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Only a single dried-up leaf kept fluttering on the tip of a branch.[lr]
+[else]
+　その中でただ一枚だけ、枝の先で揺れている枯葉があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was as though it was trying to fight against the onset of winter despite looking like it would fall apart at any second.[prcm]
+[else]
+　落ちそうで落ないその乾ききった葉っぱが、冬が来ることに対してたったひとりで抗議しているようだった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="088_3.ks" target=*088_3
+
+

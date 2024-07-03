@@ -1,0 +1,502 @@
+*159_5| A call
+; *159_5|コール
+[fbfstoretitle eng="A call" jp="コール"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle10"]
+
+[msglayer]
+[playbgm storage="bgm55"]
+[backlay]
+[fbfscale_image storage="bg103_3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 214"]
+[eval exp="sf.ItRelease = 215"]
+[endif]
+
+
+*| A call
+; *|コール
+[fbfstoretitle eng="A call" jp="コール"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I descended the spiral staircase in a hurry.[lr]
+[else]
+　螺旋階段を降りる。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg50_3" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I emerged into the lobby, I nearly crashed into Narasaki, who was standing in front of the phone.[lr]
+[else]
+　一階のロビーに出ると、電話機の前にいる[ruby text="なら"]楢[ruby text="さき"]崎を見つけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki noticed me and turned around.[prcm]
+[else]
+　楢崎は気がついてこちらを向いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h04" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you run into a polar bear upstairs or something?[」][lr]
+[else]
+　「そんなに急いでどうしたんだい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her hand was resting on the phone's receiver.[prcm]
+[else]
+　こちらを伺う楢崎の手は電話の受話器に触れていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you finished your walk yet?[」][lr]
+[else]
+　「もう散歩は済んだの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h15" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was about to leave.[」][lr]
+[else]
+　「そろそろ帰ろうかというところだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I want to ask you something about what we discussed earlier.[l] Or can't you even spare a minute?[」][lr]
+[else]
+　「さっきしていた話のこと。[l]もう少し聞いてもいいかな。[l]それとも時間無い？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki glanced at the stained glass on the door rather than the clock.[prcm]
+[else]
+　楢崎は時計よりも玄関のステンドグラスを見た。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can stay while it's still bright outside.[l] I'd rather not drive through the mountain roads in the dark, you know.[l] So what's bothering you?[」][lr]
+[else]
+　「日が落ちるまでなら構わないよ。[l]暗くなりすぎると運転が怖いからね。[l]一体何を聞きたいんだい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sachiko.[l] You implied you didn't know her. But you do, don't you?[」][lr]
+[else]
+　「[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子のこと。[l]さっきは知らないと言っていたけれど本当は佐知子のこと知っているんじゃないかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What makes you think that?[」][lr]
+[else]
+　「どうしてそう思うんだい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki shrugged.[prcm]
+[else]
+　楢崎は肩をすくめる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I remembered.[l] Narasaki is the name of the doll Sachiko used to play with.[l] And you look a lot like it, too.[l] And this same Narasaki sent Sachiko's diary to me.[l] You cannot be unrelated. It wouldn't make sense.[」][lr]
+[else]
+　「思い出したんだ。[l]楢崎って名前は佐知子が遊んでいたぬいぐるみの名前だった。[l]
+その姿は佐知子のぬいぐるみにとてもよく似ている。[l]
+その楢崎が佐知子の日記を送ってきたという。[l]何も関係がないとは思えないよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h12" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki slowly inhaled a breath, then looked at the floor.[lr]
+[else]
+　楢崎は息をついて少し俯いた。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't quite make out her face in the already dimly lit lobby.[lr]
+[else]
+この時間帯はいつも薄暗いロビーでは、その表情は少ししか見えなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her expression seemingly teetered between relief and exasperation, but I couldn't be sure.[prcm]
+[else]
+　それは安堵したような呆れたような非常にわかりづらい表情に見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You are correct. I do know her.[」][lr]
+[else]
+　「確かに私は佐知子のことを知っているよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why did you act like you didn't?[」][lr]
+[else]
+　「どうして知らないふりをしたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wanted you to remember it by yourself.[」][lr]
+[else]
+　「君に思い出して欲しかったからだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You still could've said something.[」][lr]
+[else]
+　「それなら言ってくれれば良かったのに」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h14" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki shook her head.[prcm]
+[else]
+　楢崎は首を振った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There would've been no point if you couldn't remember her yourself.[l] If anything I said had caused you to remember something, it would've ended up distorted by my subjective point of view.[l] It wouldn't be your genuine memory, and these kinds of uncertain things are the first to be taken away by your illness.[l] Your Sachiko and my Sachiko are different.[l] In order to remember your own Sachiko, you had to recall your memories by yourself.[l] That's why I avoided saying anything about her.[l] All I could do was unobtrusively guide you toward the key to your memories.[」][prcm]
+[else]
+　「佐知子のことは君が気づかないと意味がなかったんだ。[l]
+もしも私が佐知子のことについて君に話をして、君が何かを思い出したとしても、そこで思い出した記憶には必然的に私の考えというものが混ざってしまう。[l]
+それは本当の君の記憶じゃないし、物忘れの症状というのはそういう根のない記憶から奪っていくんだ。[l]
+君の佐知子と私の佐知子は別のものなんだ。[l]
+君が君の彼女を思い出すには、君自身が考えて記憶を取り戻さないといけない。[l]
+だから、私から佐知子のことについて君に何か言うことは出来なかった。[l]
+私に出来るのは記憶を呼び起こすキッカケ作りだけだったんだよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I understood what she was trying to say.[lr]
+[else]
+　私はなんとなく楢崎の言わんとするところを理解できた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even back when I read that diary, there were times when I wasn't entirely sure if those were really my memories or just my imagination.[lr]
+[else]
+　あの佐知子の日記を読んで何かを思い出すときも、本当に自分の身にあったことなのか分からなくなる時があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And when I started thinking like that, I'd grow anxious and uncertain.[lr]
+[else]
+　その記憶は思い出したものなのか、それとも日記から与えられたものかと考えると不安になる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once you forget something for good, you cannot be sure about it anymore.[prcm]
+[else]
+　一度すっかり忘れてしまうとそれが分からなくなる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks to you, I remembered something very important.[l] However, some of the stuff I remembered is pretty crazy, which is why I'm so stumped right now.[」][lr]
+[else]
+　「楢崎のおかげで大体のことを思い出したよ。[l]けれど思い出した事実がいささか突拍子のないことばかりで困ってるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki spoke up while I was trying to look for a better way to articulate my thoughts.[prcm]
+[else]
+　こちらがどう説明すればいいのか言い淀んでいると楢崎が先に言う。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h05" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What did you remember, exactly?[」][lr]
+[else]
+　「一体何を思い出したんだい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm pretty sure I now remember more or less everything about our life together.[l] But those memories don't explain why I'm here.[l] It's almost like I have two different selves, each with its own separate set of memories.[l] I feel like the time I spent living with Sachiko was akin to a dream that felt very real.[」][prcm]
+[else]
+　「多分佐知子と暮らしていたときのことなら殆ど思い出せたと思う。[l]
+でも、あの頃の記憶と今の療養所に居る私の記憶とがどうしても繋がらない。[l]
+まるで私が二人いるみたいだ。[l]
+あちら側の記憶とこちら側の記憶は別々のように感じられる。[l]
+佐知子と暮らしていた事は現実によく似た夢だったような気がしてくる」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki calmly listened to my rambling.[prcm]
+[else]
+　考えがまとまらず要領の得ない言葉を楢崎は黙って聞いていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe you really don't know her.[l] For all I know, she could just be a figment of my imagination.[」][lr]
+[else]
+　「本当に楢崎は佐知子のことなんて知らないのかも知れない。[l]
+私は佐知子がいると思い込んでいるだけなのかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Finding it hard to believe?[」] Narasaki asked.[prcm]
+[else]
+　「信じられないかい？」と楢崎は言った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But if you've remembered that much, we can always talk about it later.[」][lr]
+[else]
+　「しかし、そこまで思い出せたのなら話は[ruby text="あと"]後でいい」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki turned back toward the phone.[lr]
+[else]
+　そう言うと楢崎は再び電話の方に向かった。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[playse buf = 0 storage=se139.ogg]
+[ws buf=0]
+[playse buf = 0 storage=se148.ogg]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She picked up the receiver and pushed a coin into the slot.[prcm]
+[else]
+　それから再び受話器を取るとポケットから取り出した硬貨を投入口に入れた。[prcm]
+[endif]
+
+
+[playse buf = 0  storage=se141.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe she's still there,[」] she said while turning the dial.[lr]
+[else]
+　「もしかしたら、まだそこにいるかもしれない」と言ってダイヤルを回した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I drew closer to the phone. Narasaki held up the receiver in front of me.[lr]
+[else]
+　こちらが電話機の前まで行くと楢崎は受話器を差し出した。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se142.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I took it and pressed it against my ear, I could hear a long beep.[prcm]
+[else]
+　受話器を受け取り耳に当てると呼び出し音が聞こえた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle10]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="160.ks" target=*160
+
+

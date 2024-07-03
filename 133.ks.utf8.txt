@@ -1,0 +1,581 @@
+*133| Clear lake
+; *133|透き通った湖
+[fbfstoretitle eng="Clear lake" jp="透き通った湖"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm33"]
+[backlay]
+[playse buf = 0 storage=se10.ogg]
+[eval exp="sf.cg27=1"]
+[fbfscale_image storage="ev27" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 166"]
+[eval exp="sf.ItRelease = 167"]
+[endif]
+
+
+*| Clear lake
+; *|透き通った湖
+[fbfstoretitle eng="Clear lake" jp="透き通った湖"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I walked across the shallow beach; the stars flickered in the water puddles as I stepped on them.[lr]
+[else]
+　パシャパシャ、と薄く張った水面の星を揺らしながら、遠浅の浜辺を歩いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, the scenery would not change, no matter how far I walked. It was either a starry sky, or a starry sky with some holes repeating over and over.[prcm]
+[else]
+　何処まで行っても帷のような星空と、いくつも穴のあいた星空に挟まれた景色が続いている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well now...[」][lr]
+[else]
+　「参ったな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stuck my right index finger into my mouth and bit down on it. It hurt.[lr]
+[else]
+　右手の人差し指を曲げたまま噛んでみるとジクリ、とした痛みと重さがある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Glancing at one of the puddles, I saw the reflection of a woman with long, black hair and black eyes staring back at me.[lr]
+[else]
+　手鏡ほどの大きさの水たまりを覗くと、長い黒髪と黒い瞳の女性が映った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed one of my eyes, and so did she.[lr]
+[else]
+　片目をつぶると、鏡の女性も片方の目を閉じた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shifted my gaze back to the horizon.[prcm]
+[else]
+　水たまりから目を離して、もう一度水平を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stuck my hand in my pocket and fished out my car keys.[lr]
+[else]
+　ポケットに手を入れると、車のキーがあった。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se77.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They felt cold to the touch.[lr]
+[else]
+　鉄の部分に触れると冷たい感触がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned them a few times in my hand and continued toward the horizon.[prcm]
+[else]
+　車のキーを手の中で回しながら、水平線に向かって歩いた。[prcm]
+[endif]
+
+
+[seopt buf=1 volume=30]
+[playse buf = 1  storage=se89.ogg loop=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Suddenly, I felt like I heard something.[lr]
+[else]
+　ふと、耳を[ruby text="くす"]擽ぐるような感触があった。[lr]
+[endif]
+
+[r]
+[seopt buf=1 volume=40]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a few more steps and the noise — a kind of static reminiscent of hearing tests — increased.[lr]
+[else]
+　さらに歩いていくと、聴力検査の電子音のようにザアザア、と砂嵐のような音が近づいてくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped and strained my ears to listen.[lr]
+[else]
+　立ち止まり耳を澄ませる。[lr]
+[endif]
+
+[r]
+[seopt buf=1 volume=60]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sound was coming from below.[lr]
+[else]
+　耳元で聴こえていたと感じていたものは、足元から聴こえていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, there was only a puddle of water at my feet, its surface reflecting a massive black cloud.[lr]
+[else]
+　足元の大きな水たまりだけ、黒い大きな雲が映っている。[lr]
+[endif]
+
+[r]
+[playse buf = 3 storage=se71.ogg]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Just when I looked up, the puddle suddenly swallowed me.[prcm]
+[else]
+　空を見上げようと、頭を上げるとトプン、と水たまりの中に体が落ちた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fadeoutse buf=1 time=1500]
+[fadeinse buf=3 storage="se89.ogg" time=3000 loop=true]
+[wait time=1000]
+[fbfscale_image storage="bg97_2" page=back layer=base]
+[trans method = crossfade time=2000]
+[wt]
+[wf buf=3]
+[wait time=500]
+[seopt buf=1 volume=100]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Heavy rain poured all over me.[lr]
+[else]
+　ザアザア、と叩きつけるような雨が体を濡らしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was still on the same shallow beach, except now it was in the middle of a storm.[lr]
+[else]
+　遠浅の景色はそのままに、空には大きな雨雲が見下ろしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I glanced at the black cloud, the rainfall grew in intensity.[lr]
+[else]
+　それを見ると、一段と雨量が増して雨粒が重くなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Following the apparent source of the sound — the place where it felt the loudest — I soon reached a tropical forest of sorts.[lr]
+[else]
+　ザザザ、とひときわ音が激しい方を振り向くと、いつの間にか椰子や[ruby text="し"]羊[ruby text="だ"]歯のある熱帯の林が近くに来ていた。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[seopt buf=3 volume=70]
+[fbfscale_image storage="bg72_2" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I rushed there to escape the rain.[prcm]
+[else]
+　そちらへと駆けて、木の下で雨を凌いだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Water trickled down by hair, getting into my eyes.[lr]
+[else]
+　髪をつたった雨が目に入りそうになり、手で払う。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se97.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Suddenly, I heard something from the woods.[prcm]
+[else]
+　カサリ、と林の向こうから音がする。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is someone there?[」][lr]
+[else]
+　「誰かいるのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted traces of footsteps in the direction the sound was coming from.[lr]
+[else]
+　音のした方には、植物が踏み折られた跡がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed them, noticing some broken branches along the way as well.[lr]
+[else]
+　靴の跡のあるその通り道をたどる、目の高さにある枝も所々でおられていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped over a big set of roots rising from the ground and climbed the limestone rock blackened by the elements to find a hole splitting the path in two — it was the entrance to a cave, surrounded by ferns.[prcm]
+[else]
+　いくつもの幹が編み上がるように立っている大きな木の根を越えて、黒く変色した石灰岩の上へと登ると、苔と羊歯の森に埋まるようにある、大地に切り込みを入れたような洞窟の入口があった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look at how huge it is.[」][lr]
+[else]
+　「広いな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard something reminiscent of human voices from within.[prcm]
+[else]
+　そう言ったあとで、洞窟の奥から微かに人の声が聞こえる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is someone there?[」] I repeated my question.[lr]
+[else]
+　「誰かいるのかい？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　もう一度同じ問いを投げかける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My words reverberated across the cave walls.[lr]
+[else]
+　語尾がウンウン、と空洞内に響いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I waited for a dozen or so seconds, but received no reply.[prcm]
+[else]
+　しばらく様子を見ても、それきり返事は返ってこなかった。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=0 time=1200]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule13" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[seopt buf=3 volume=50]
+[fbfscale_image storage="bg76" page=back layer=base]
+[trans method=universal rule="rule13" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I climbed down the hole. Having reached an area with a solid roof, the sound of rain from outside began to abate.[prcm]
+[else]
+　岩場を降りて、洞窟の屋根の下に入ってしまうと雨の音が遠くなった。[prcm]
+[endif]
+
+
+
+[playse buf =1  storage=se135.ogg loop=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Instead, I heard the scarce dripping of water.[lr]
+[else]
+　ポチャン、と滴の音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were countless paths branching off in various directions in front of me.[lr]
+[else]
+　奥の方はさらに無数の洞穴の入口があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Some were too narrow for a person to pass, while others seemed good enough to drive a car through.[lr]
+[else]
+　人が通り抜けられないほどの小さな穴から車が通れそうなくらい大きな穴まである。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All of them had complex shapes, like lava stones.[lr]
+[else]
+　どれも風化した溶岩石のような複雑な形をしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pressed forward, trying to find some even footing, when I heard disjointed voices from some of the tunnels.[prcm]
+[else]
+　なるべく平坦な足場を探して先へ進んで行くと、無数の空洞のどこかから切れ切れの言葉が聞こえる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...wanted to show me?[」][lr]
+[else]
+　「…何かある」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...fireflies...[」][lr]
+[else]
+　「…ホタル…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You mean...[」][lr]
+[else]
+　「もしかして、…るの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...was told... You wanted to see...[」][lr]
+[else]
+　「…そ、聞いてたんだけど、見たいって言って…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed the voices until I saw a light beyond a large, black rock.[prcm]
+[else]
+　声を聞きながら進んでいくと、黒い大きな岩の向こう側に明りが見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah.[」][lr]
+[else]
+　「あ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a voice right by my ear.[prcm]
+[else]
+　耳元でハタ、と声が上がる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa.[」][lr]
+[else]
+　「おっと」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[playse buf = 0 storage=se71.ogg]
+[fbfscale_image layer=0 page=back storage="fgimage/other_img/bg76" visible=true left=0 top=0]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1]
+[wt]
+[fbfscale_move time=100 path="(0,20,255)" layer=0]
+[wm]
+[wait time=300]
+[fbfscale_move time=500 path="(0,-300,0)" layer=0]
+[wm]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I stepped on a puddle of water, my leg got swallowed by it.[prcm]
+[else]
+　トプン、と水たまりに片足が落ちた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sensation was similar to missing a step on the stairs — I ended up losing my balance and plummeted down into a dark void.[prcm]
+[else]
+　水に落ちた足には階段を踏み外したような踏み込めない浮遊感があり、そのままの勢いで水たまりの中に落ちていった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=1 time=3000]
+[fadeoutse buf=3 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[seopt buf=3 volume=100]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="134.ks" target=*134
+
+

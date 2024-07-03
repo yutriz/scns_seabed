@@ -1,0 +1,1173 @@
+*077| Polvoron
+; *077|ポルボロン
+[fbfstoretitle eng="Polvoron" jp="ポルボロン"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm41"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 93"]
+[eval exp="sf.ItRelease = 94"]
+[endif]
+
+
+*| Polvoron
+; *|ポルボロン
+[fbfstoretitle eng="Polvoron" jp="ポルボロン"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After reaching the lobby, we took the left corridor and after just a few steps, found a staircase leading underground to our right.[lr]
+[else]
+　ロビーから左手の通路に入ると、その直ぐ右手に地下へ下りる階段があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We descended in an orderly line.[lr]
+[else]
+　狭い階段を私達は縦に並んで降りた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki, who was at the front, stopped at the bottom step and opened another set of doors.[lr]
+[else]
+　階段を降りたところで、先を行く[ruby text="なら"]楢[ruby text="さき"]崎が立ち止まりそこにある扉を開く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sweet scent of sugar lingered in the air around us.[lr]
+[else]
+　砂糖の甘ったるい匂いがした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked back and saw Kozue grimacing.[prcm]
+[else]
+　後ろを見ると[ruby text="こずえ"]梢が少し顔をしかめていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After walking through a narrow underground corridor for a while, we reached the entrance to a wide room.[lr]
+[else]
+　私達は降りてきた階段と同じに狭い通路を、楢崎を先頭にして進み広い部屋に出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We stepped over the stone tile that separated the two areas.[prcm]
+[else]
+　通路と部屋を仕切る石タイルの段差をおりて部屋に入る。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg57" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a round table and three chairs in the center of the room.[lr]
+[else]
+　部屋の中心には丸テーブルがあり、椅子が三脚囲んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As well as Nanae's aunt in an apron.[lr]
+[else]
+　そこに薄手のエプロンを掛けた七重の叔母さんの姿があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was setting plates on the table.[prcm]
+[else]
+　小母さんは丸テーブルの上に食器類を並べている。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[eval exp="sf.cg11=1"]
+[fbfscale_image storage="ev11" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, you're already here?[」][lr]
+[else]
+　「あら、もう来たの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello,[」] said Narasaki as I bowed my head.[lr]
+[else]
+　「こんにちは」と楢崎が言い、私は会釈をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae's aunt said her greetings, then considered us one by one.[prcm]
+[else]
+　小母さんは挨拶を返してから、私達を順番に眺めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Forgive me, but I'm still in the middle of preparations.[l] Could you wait for me at that table?[l] I'll be back in a second.[」][lr]
+[else]
+　「ごめんなさいね。[l]いま準備していたところなの。[l]そこのテーブルで待っていてくださらない？[l] 直ぐにもどりますから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then disappeared into another room with a tray in hand.[lr]
+[else]
+　小母さんはゆっくりとした口調でそう言うと、お盆を持って奥の部屋に行ってしまった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before she closed the door, though, I caught a glimpse of an old stove.[prcm]
+[else]
+　小母さんが閉める扉の奥には古い釜戸が見えた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg57" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Doing as I'd been told, I pulled back one of the nearby chairs and sat down.[lr]
+[else]
+　私は言われたとおり、ひとつの椅子を引いて腰掛ける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue did the same.[lr]
+[else]
+　梢もそれに習った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki walked over to the sofa closer to the window, and after brushing off some of the accumulated dust, collapsed on it with a sigh.[prcm]
+[else]
+　楢崎は部屋の奥の壁際にあるソファのところまで行きソファの上の埃を手で払うと「ふう」と息をついてから腰を下ろした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The walls of the underground room were made of stone, with a couple of wooden windows at the top.[lr]
+[else]
+　地下の壁はタイルと石の造りになっていて、奥側の壁のやや上の方には木枠の窓があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Through said windows, I could see the tree in the yard.[prcm]
+[else]
+　窓からは中庭の木が見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized that the stairs next to Narasaki's sofa led straight to it.[lr]
+[else]
+　楢崎のソファーの隣にはカーキのチェストがあり、その向こうの部屋の角には中庭に続く石階段がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue, sitting in front of me, glanced around the room with an empty expression.[prcm]
+[else]
+　私の向かいに座った梢は、煙草の煙を眺めるようなぼんやりとした目でゆっくりと部屋の中を見回していた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p01_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sorry to have kept you waiting.[」][lr]
+[else]
+　「ごめんなさいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around and noticed that Nanae's aunt had returned from the other room.[lr]
+[else]
+　振り返ると、先ほどの部屋から小母さんが戻ってきたところだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She came closer to us, wiping her wet hands on her apron.[prcm]
+[else]
+　エプロンの裾で濡れた手を拭いながら、こちらへと歩いてくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, it's not a problem at all. I'm sorry for bothering you at such a busy time.[」][lr]
+[else]
+　「いいえ、こちらこそお忙しいところ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried standing up, but Nanae's aunt gestured for me to remain seated.[prcm]
+[else]
+　立ち上がろうとすると、小母さんは片手をあげてそれを止めた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I'm not busy at all.[l] And even if I was, I'd prioritize a good conversation over anything else.[l] The older a person gets, the gloomier their conversations become. So you see, I'm grateful for any chance that lets me spend some time with you youngsters.[」][lr]
+[else]
+　「忙しくはないのよ。[l]まあ、仮に忙しくてもお喋りを優先したいわね。[l]
+それに歳を取ると暗い話ばかり詳しくなるの。[l]だから、お年寄りはもっと若い人と話す機会を大事にするべきだと思ってるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She walked to the table and sat down in the one chair that still remained open.[prcm]
+[else]
+　彼女はそう言いながらテーブルまで来ると、空いた席に座った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p03_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nice to meet you. My name is Akei Lily.[l] Just call me Lily, okay?[」][lr]
+[else]
+　「はじめまして、[ruby text="あけ"]明[ruby text="い"]井リリィです。[l]気軽にリリィ小母さんって呼んでくださいね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h08" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p03_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you a foreigner?[」] asked Kozue.[prcm]
+[else]
+　「外国の人なの？」と梢が呟く。[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p01_h06" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, but I've spent a long time there.[」][lr]
+[else]
+　小母さんは「ううん」と首を振って「外国には長く居たけどね」と言った。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's weird,[」] said Kozue in a small voice. She chose not to pry further.[prcm]
+[else]
+　梢はそれについては深く聞かずに「変なの」と小さい声で言う。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it?[l] I like my name, though.[」][lr]
+[else]
+　「そう？[l] 小母さんは気に入ってるんだけどな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily made a sour face, pretending to be hurt.[prcm]
+[else]
+　小母さんはショックを受けたように少し腰を浮かせた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She turned to me, noticing that I'd been looking for a chance to introduce myself as well.[prcm]
+[else]
+　こちらが名乗るタイミングを逸していると、小母さんはこちらに向き直って先に切り出した。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p02_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're Sachiko, right?[l] I've heard all about you from Nanae.[l] She kept talking about what a beauty you were after she came back from Rome.[l] It made her so excited when she learned you'd be dropping by for a visit.[」][lr]
+[else]
+　「あなたが[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子さんね。[l][ruby text="なな"]七[ruby text="え"]重から話を聞いていたわ。[l]仕入れの時に出会った人がとても美人だったって。[l]こちらに来ると連絡があったときも、それは嬉しそうに話していたわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm?[」] Narasaki let out a suggestive mumble.[prcm]
+[else]
+　「へえ」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、楢崎が言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]She might look all grown-up, but she's still a child inside.[l] She's not causing you any trouble, is she?[」][lr]
+[else]
+　「あの子ああ見えて、子供っぽい所があるの。[l]ねえ、七重は迷惑をかけてないかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not at all.[l] If anything, I'm the one causing her trouble, and she's the one looking after me.[l] I think she makes an excellent landlady.[」][lr]
+[else]
+　「いいえそんなことは。[l]いつもお世話になっていますし、七重さんはいい女将だと思います」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You said it,[」] Narasaki added.[prcm]
+[else]
+　「違いないねえ」と楢崎が言った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p01_h11" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p01_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm glad to hear that.[l] Oh, and I've seen you at the library.[l] Your name was, um...[」][lr]
+[else]
+　「そう、よかった。[l]あら、あなたは図書館によく来てくれる。[l]確かお名前は…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily gave Kozue a gentle smile.[lr]
+[else]
+　小母さんは梢に優しく微笑みかける。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p04_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue returned a blank stare.[prcm]
+[else]
+　梢はそれを上目遣いに見返した。[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h10" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you forget what you came here for?[」] asked Narasaki.[lr]
+[else]
+　「話を聞きに来たんだろう？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　楢崎は促すと、ほらと急かすように視線を送る。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h12" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's Kozue.[」][lr]
+[else]
+　「梢よ」[lr]
+[endif]
+
+[r]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue looked at me and Narasaki, then finally introduced herself.[prcm]
+[else]
+と、梢はこちらを見て言った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p03_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, right, it was Kozue. Now I remember.[l] I'm Lily, the caretaker of this inn.[l] Nice to meet you.[」][lr]
+[else]
+　「そう、梢さんだったわね。[l]私はこの屋敷で仲居をしているリリィよ。[l]宜しくね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p03_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily placed her palm on the girl's small head, making Kozue's young face contort into a sour expression.[prcm]
+[else]
+　小母さんが小さな頭に手を乗せると、梢の小さな表情は苦虫を噛んだようになった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is the kitchen next door? I can smell something tasty from that direction.[」][lr]
+[else]
+　「向こうはキッチンですか？[l] 美味しそうな香りですね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p01_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily then turned to me.[prcm]
+[else]
+　小母さんがこちらを向いて、こちらの視線の先を見る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, that's right.[l] After learning that I'd be having guests, I decided to put my old baking skills to use, you see.[l] But things are not working out.[lr]
+I prepared things in advance so it would only take a minute or two to serve you, but... I must have lost my touch over the years.[l] Oh, but don't you worry, I'm sure the taste is just fine... Do you happen to like sweet things?[」][lr]
+[else]
+　「ええ、そうなの。[l]お客さんが来ると聞いて、久しぶりにお菓子を焼いてみたの。[l]でも駄目ね。
+[l]すぐ出来立てをお出しできるように準備していたのだけれど、手際が悪くなっているみたいね。[l]
+でも、安心してね、きっと味は変わらないはずだから。[l]甘いものは好きかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked toward the sofa.[lr]
+[else]
+　答えてから、ソファに目をやる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily shifted her gaze to Narasaki as well.[prcm]
+[else]
+　小母さんも楢崎の方を見る。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I prefer them to spicy food.[l] They'd be perfect with some tea, I'm sure.[」][lr]
+[else]
+　「辛いものよりは好きですよ。[l]美味しい紅茶があれば、言うことないですねえ」と楢崎が言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They certainly are.[」] Lily made a smile before turning to Kozue.[prcm]
+[else]
+　「本当にそうね」と小母さんは笑い、それから隣の梢を見た。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h12" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p01_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about you?[」][lr]
+[else]
+　「梢さんはどうかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know.[」][lr]
+[else]
+　「知らない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue made a troubled face.[prcm]
+[else]
+　梢が困った顔をする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My favorite is a foreign type of pastry.[l] I'm sure you'll like it, too.[」][lr]
+[else]
+　「外国のお菓子で私のお気に入りなの。[l]きっと気に入るわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily glanced at the clock on the wall.[prcm]
+[else]
+　小母さんはそう言うと壁掛け時計を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They should be finished by the time this old clock strikes two.[l] Just hold on for a little while longer, okay?[」][lr]
+[else]
+　「焼きあがるのは、二時の鐘が鳴る頃になるわね。[l]もう少しだけ待っていてね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it going to be Spanish pastries?[」][lr]
+[else]
+　「スペインの洋菓子ですか？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p01_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, that's right.[l] How did you know?[」][lr]
+[else]
+　「ええ、そうよ。[l]どうして分かったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I saw a picture of you in a Spanish bakery over at the cafeteria.[」][lr]
+[else]
+　「カフェラウンジにお店の写真がありました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, I see. That certainly brings back memories. I worked at that place for two years.[」][prcm]
+[else]
+　「ああ写真ね。懐かしいわ。その菓子屋では二年くらい働いたわね」と小母さんはしみじみと言った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That bakery was run by a married couple. They would look after me like their own daughter.[l] I mustered the courage to go overseas, but finding proper work wasn't all that easy.[l] I had a work visa, but I couldn't speak the language.[l] And just when my savings were about to run dry, I chanced upon that bakery.[l] The husband spoke English, so we could communicate.[l] I explained to him that I came to Spain to learn about cooking, but had no connections over here... nor any money left over.[l] So he offered to let me live and work at his place.[」][prcm]
+[else]
+「そこはご夫婦でお店を出されてたのだけど、夫妻にはよくお世話になったわ。[l]
+憧れの海外に来たものの、初めはなかなか仕事が見つからなくて大変だったわ。[l]
+就労ビザはあっても言葉がちゃんと出来なかったからね。[l]
+持って来たお金がもう無くなるかと言うところで、そのお店を見つけたの。[l]
+親父さんは英語がわかる人だったの。[l]私は料理の勉強に来たけど、お金もツテもないって拙い英語で説明したわ。[l]
+そうしたら、親父さんは住み込みで働けばいいって言ってくれたの」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You went all the way overseas to study the culinary arts?[」][lr]
+[else]
+　「海外には料理を習いに？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes. I wanted to learn about the national cuisines of a number of different countries.[l] After Spain, I also visited France and Germany.[l] But I was always planning to return to Japan eventually, to work at this inn.[」][lr]
+[else]
+　「ええ、色々な国の料理を勉強したかったの。[l]スペインのあとは、ドイツ、フランスにも行ったわ。[l]
+それでも、最後はまた日本に戻るつもりだったわ。[l]この屋敷で働くつもりだったのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You weren't thinking about staying overseas?[」][prcm]
+[else]
+　「ずっと海外で暮らそうとは思わなかったのですか？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I made a promise with Nana's mother that we'd build and run an inn together.[」][lr]
+[else]
+　「七ちゃんのお母さんと約束していたのよ。[l]二人で旅館を作ろうってね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nanae's mother?[」][lr]
+[else]
+　「七重さんのお母さんと？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's right. I think it was during one of our high school trips, but we got completely spellbound by this one inn we stayed at in Kyoto.[l] I still remember it like it was yesterday.[l] The look of the place, the amiable staff, the wonderful food... Everything was so great it felt almost like I barged into Heaven just a tad too early.[」][lr]
+[else]
+　「そうよ、あれは高校生の修学旅行だったかしら。[l]二人して京都の旅館の雰囲気に嵌ってしまったのね。[l]今でもよく覚えているわ。[l]
+宿の景観も親切な仲居さんも、美味しい料理も、どれも素晴らしくてまるで天国みたいねって、言ったのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki made a broad smile.[prcm]
+[else]
+　楢崎が、にやりと笑う。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I know that feel.[l] However, as far as I remember, the inns in Kyoto are mostly traditional Japanese-style buildings made out of wood.[l] That detail never had any influence on you two?[」][lr]
+[else]
+　「そういう気持ちなら、少しわかる気がします。[l] でも、京都の旅館といえば木造日本建築ですよね。[l]それに影響はされなかったんですか？」[lr]
+[endif]
+
+[r]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p01_h03" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p01_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What charmed us was the otherworldly atmosphere inside. It felt as though we had traveled through time.[l] We had all the choices in the world, so we decided to model our place according to what we liked the most.[l] Nana inherited Miki's love for western antiques.[l] I was also quite into fables and old western houses at the time.[l] We also liked how the cafeteria and the library were designed.[l] But above all else, we were lucky that this mansion belonged to Miki's family to begin with.[l] She inherited it after the passing of her grandmother, and then we remodeled it according to our taste.[」][prcm]
+[else]
+　「ええ、私たちが憧れたのは飽く迄、非日常っぽさだったのよね。[l]
+そこは私たちのつくる物だから、お互いの好きなものを詰め込んだのよ。[l]
+七ちゃんもそうだけれど、美紀も洋風アンティークが好きでね。[l]
+私も童話のお屋敷みたいなものに憧れていたから。[l]
+あとはカフェラウンジも、図書棟の書架も、って詰め込んでいったのね。[l]
+幸運だったのは、[ruby text="ふじ"]籘[ruby text="さか"]坂の親戚がこの屋敷を持て余していたことね。[l]
+元々の持ち主だった美紀の祖母が亡くなった時に、美紀はこれを相続して、それから手を加えて改装したの」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue, who was absentmindedly looking around the room with a bored expression, suddenly raised her head.[prcm]
+[else]
+　それまで、部屋を眺め終わり退屈そうにテーブルを眺めていた梢の頭が上がる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]By the way, Kozue, didn't you come here to ask her about the mansion?[」] said Narasaki.[prcm]
+[else]
+　「そういえば、梢はこの屋敷のことを聞きたいんだったんじゃなかったかな？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、楢崎が言った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it true that this place was a hospital before you took over?[」][lr]
+[else]
+　「このお屋敷は改築する前は病院だったって、本当なの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily turned to Kozue.[prcm]
+[else]
+　小母さんは、隣でようやく話をする機会を得てぎらぎらとした目で見つめてくる梢を見た。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p01_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I thought everyone had forgotten that rumor by now.[l] In a way, you are right — this place was used as a sanatorium before the war.[l] But it still belonged to the Fujisaka family.[l] Its master at the time was a doctor, and simply felt like he should lend some of his rooms to his long-term patients.[l] I heard there were times when over ten patients lived alongside him in the mansion.[」][lr]
+[else]
+　「その噂まだあったのね。[l]
+ええ、確かに戦前は療養所のように部屋を利用していたこともあったみたいね。[l]
+でも、もともとは籐坂家のお屋敷だったわ。[l]
+当時の主がお医者さんで、慢性の病気を治すために、長期に療養が必要な患者さんを泊めるために部屋を分けていたのね。[l]
+多いときには、十数人もの患者さんが生活されていたらしいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue listened to Lily's story in complete silence.[lr]
+[else]
+　梢は、黙って小母さんの話を聞いていた。[lr]
+[endif]
+
+[r][cm]
+
+[playse buf = 1 storage=se24_2.ogg loop=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the grandfather clock in the lobby chime the hour.[prcm]
+[else]
+　ボォーンボォーン、と階上のロビーにある柱時計の音がした。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/r_img/f02_p02_h10" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think the pastries should be ready by now.[l] Let's continue this conversation over some snacks and a cup of tea.[」][lr]
+[else]
+　「そろそろお菓子が焼ける頃ね。[l]続きはお茶とお菓子をしながらにしましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue gave the clock on the wall a quick glance.[lr]
+[else]
+　梢は、ちらりと時計を見た。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily stood up.[prcm]
+[else]
+　小母さんが席を立つ。[prcm]
+[endif]
+
+
+[fadeoutse buf=1 time=1000]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll help.[」][lr]
+[else]
+　「手伝います」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][lr]
+[else]
+　「ありがとう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up myself and followed Lily into the kitchen.[lr]
+[else]
+　席を立ち、小母さんの後に着いてキッチンへ向かう。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Still seated, Kozue picked up her carrier bag from the ground, placed it on her knees, and pulled out a folder packed with documents. She then opened it up and put it on the table.[lr]
+[else]
+　席に残った梢は椅子の横に置いていた手提げ袋を膝の上に乗せると、そこからファイルを取り出し、挟んでいたノートを机に開いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her bag seemed to be made of cloth, and had an engraving of a lily on it.[prcm]
+[else]
+　手提げ袋は布製で、睡蓮の刺繍がしてあった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[seopt buf=1 volume=100]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="078.ks" target=*078
+
+
+
+;[clickskip enabled=false]
+;[msgoff]
+;[msglayer2]
+;[backlay]
+;[fbfscale_image layer=1 page=back storage="fgimage/r_img/ev11_b" visible=true left=-700 top=-525 opacity=0]
+;[fbfscale_image storage="bg57" page=back layer=base]
+;[trans method = crossfade time=1]
+;[wt]
+;[fbfscale_move time=2000 path="(-450,-375,255)(-200,-225,255)" layer=1]
+;[wait time=2500]
+;[backlay]
+;[freeimage layer=1 page=back]
+;[eval exp="sf.cg11=1"]
+;[fbfscale_image storage="ev11" page=back layer=base]
+;[trans method = crossfade time=1500]
+;[wt]
+;[msgon]
+;[clickskip enabled=true]

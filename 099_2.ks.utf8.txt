@@ -1,0 +1,1851 @@
+*099_2| November 07, 1981
+; *099_2|1981年11月07日
+[fbfstoretitle eng="November 07, 1981" jp="1981年11月07日"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgOn_t"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgLayer_T"]
+
+[msglayer]
+[playbgm storage="bgm20"]
+[backlay]
+[fbfscale_image storage="item09" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 121"]
+[eval exp="sf.ItRelease = 122"]
+[endif]
+
+
+*| November 07, 1981
+; *|1981年11月07日
+[fbfstoretitle eng="November 07, 1981" jp="1981年11月07日"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The Christmas party continued even after the clock had struck ten.[lr]
+[else]
+　クリスマスパーティーは柱時計が二十二時の鐘を鳴らすまで続いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After admiring the bright lights of the tree, we returned to our seats and spent the rest of the time talking over cups of tea.[lr]
+[else]
+　ツリーを十分に眺めた後、またみんなで部屋に戻り少しお茶を飲みながら話をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the clock struck the hour again, Mayuko suggested calling it a night, and sent Sanae back to her room.[lr]
+[else]
+　コーンコーン、と鐘が鳴ると[ruby text="まゆ"]繭[ruby text="こ"]子が話を切り上げ、[ruby text="さ"]早[ruby text="なえ"]苗が部屋に帰った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae wanted to stay and help with the cleaning, but Mayuko wouldn't hear it.[prcm]
+[else]
+　早苗は、片付けを始めた繭子を手伝うと申し出たが、さすがに繭子はそれを断っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Meanwhile, Kozue had fallen completely silent by 9:30. Her eyes looked even more drowsy than usual.[lr]
+[else]
+　[ruby text="こずえ"]梢は二十一時半を回る頃から、いつも眠たそうな目をさらに眠そうにして黙って話を聞いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When Mayuko told us to wrap things up, she silently stood up and left the room, just like that.[prcm]
+[else]
+　梢も沈黙のまま椅子から立ち上がり、自室へと戻っていった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With no one left to talk to, I had no choice but to help Mayuko clean up.[lr]
+[else]
+　私は話し相手がいなくなると、仕方なく繭子の片付けを手伝うことにした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko tried refusing my help again, but I ignored her. I placed the remaining glasses on the tray and carried them to the kitchen.[lr]
+[else]
+　繭子はそれも断ろうとしたが、私は返事を聞かずに机に置いてあったカップを盆にのせて、食堂の台所へ運んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even during the party, Mayuko kept carrying out plates as we cleared them, so right now, the only things left were just a few glasses and a plate with some snacks.[prcm]
+[else]
+　パーティの途中にも空いた皿は繭子が台所に下げていたので、運ぶのは甘いものを置いていた皿と人数分のグラスだけだった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time = 500]
+[playse buf = 0 storage=se121.ogg]
+[backlay]
+[fbfscale_image storage="bg87" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is this all?[」] I asked Mayuko as I placed the glasses into the sink.[prcm]
+[else]
+　「これで終わり？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、台所の洗面台にグラスを乗せた盆を置いてから、繭子に聞いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h02" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] Feel free to return to your room and have some rest.[」][lr]
+[else]
+　「全部ですね。[l][ruby text="たか"]貴[ruby text="こ"]呼さんも部屋に戻って休んでください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about you?[」][lr]
+[else]
+　「繭子は？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll go back to my room as soon as I finish washing these glasses.[」][lr]
+[else]
+　「あとは、グラスだけ洗って部屋に戻ります」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se85.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko turned the handle of the water tap and began polishing one of the glasses as the sink gradually filled up.[prcm]
+[else]
+　そう言って、繭子は洗い場で水道の蛇口をひねり、水を出して洗い物の入った桶に水を貯めながらグラスをとって洗い始めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll return to the night duty room, then.[」][lr]
+[else]
+　「先に宿直室に戻っておくね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h10" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What? Are you planning to sleep there again?[」][lr]
+[else]
+　「先にって、今日もあそこで寝るつもりですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I worked so hard today I've no energy left to climb the stairs.[」][lr]
+[else]
+　「今日は頑張ったから、 もう階段を登る体力がないんだよ」[lr]
+[endif]
+
+[r]
+
+[fadeoutse buf=1 time=500]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko turned the water tap handle in the opposite direction once the sink had completely filled up.[clickskip enabled=false][wf buf=1][prcm]
+[else]
+　キュ、と桶に水が貯まると繭子が水道の蛇口を反対にひねる。[clickskip enabled=false][wf buf=1][prcm]
+[endif]
+
+[clickskip enabled=true]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h04" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose it cannot be helped, then.[」][lr]
+[else]
+　「仕方ないですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep. Anyway, I'm off.[」][lr]
+[else]
+　「じゃあ、お先に」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h04" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]See you.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After getting permission to sleep in the night duty room, I left the kitchen.[prcm]
+[else]
+　宿直室で眠る許可を得ると、台所を出る。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I doubt I'll be late, but feel free to go to sleep before me,[」] said Mayuko as I left.[lr]
+[else]
+　「遅くはならないと思いますけど、先に寝ていて下さい」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、立ち去るこちらの背に、繭子が声をかけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave her my reply and continued outside.[prcm]
+[else]
+　それに返事をして、宿直室へと向かった。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 1000]
+[playse buf = 0 storage=se43.ogg]
+[backlay]
+[fbfscale_image storage="bg44_4" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon entering the dark night duty room, I flipped the light switch.[lr]
+[else]
+　真っ暗な宿直室に入ると、まず電気のスイッチを入れて部屋を明るくする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I unfolded the foldable table by the wall and placed it in the center of the room.[lr]
+[else]
+　部屋の奥に立て掛けてある折りたたみ式の卓袱台の足を開き、部屋の中心に置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I sat down in my usual spot, I noticed two folded-up futons in the corner.[lr]
+[else]
+　いつもの位置に座った後で気がついて、部屋の隅に重ねてある座布団を取って来る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up, picked them up, and placed them somewhat closer to the table.[prcm]
+[else]
+　繭子の分と合わせて二枚の座布団を卓袱台の周りに置いて座り直した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, I sat down in front of the table and rested my head in my arms.[lr]
+[else]
+　卓袱台の上に載せた腕を枕にして頭を伏せる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I let all the energy leave my body, like air escaping an inflatable boat.[lr]
+[else]
+　栓を抜いた浮き輪のように脱力する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I must've been even more tired than I thought.[lr]
+[else]
+　身体は予想以上に疲れていたようで、ずしりと重くなった。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=1000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule3" vague=50 time=1000]
+[wt]
+[wait time = 500]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes.[prcm]
+[else]
+　それから目をつぶる。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[wb]
+[playbgm storage="bgm17"]
+[fbfscale_image storage="bg44_4" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remained still for a while, my mind empty of thoughts. Soon enough, I realized I'd lost track of time.[lr]
+[else]
+　そのまま何も考えずにジッ、としているとそのうち時間がよくわからなくなって目を開けた。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My body felt heavy as lead. Nonetheless, I mustered all the strength I could and slowly pushed myself away from the table.[lr]
+[else]
+　まだ体は重いままだったが、力を振り絞って腕を立てると、腕を支えに体を起こした。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se21.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I rose to my feet and staggered awkwardly toward the cupboard like some robot from an old movie. I opened its glass door and took out my notebook.[lr]
+[else]
+　古い機械のようにギクシャクとした動きで立ち上がると、食器棚の下にあるガラス戸を開けて、そこに置いていた手帳を取った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Finally, I sat back down on the futon.[prcm]
+[else]
+　もう一度、座布団の上に座る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The only thing on the notebook's leather cover was the name of its manufacturer.[lr]
+[else]
+　手帳の革製のカバーには、小さくメーカーの名前が書いてあるだけで、他の情報は無かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko said it was sent to me in an anonymous letter.[lr]
+[else]
+　繭子はこれは郵便物で、差出人の名前は書いていないので分からないといった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, that still meant -someone- had sent it.[prcm]
+[else]
+　少なくとも、これを書いた人物と届けた人物が居るはずだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened it and took out my bookmark.[lr]
+[else]
+　ページを開き、挟んでいた栞を取った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I read it little by little whenever I had time, and by now, the stack of pages on the right had grown thicker than the pages on the left.[lr]
+[else]
+　機会を見ては少しずつ読み進んでいたため、開いたページは既に右側より左側の方が薄くなっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+What I read so far was basically a diary about my childhood.[prcm]
+[else]
+　ここまで読み進めていても日記の内容は相変わらず、幼い頃の話が続いている。[prcm]
+[endif]
+
+
+;＊
+*099_2_2| November 07, 1981 (2)
+; *099_2_2|1981年11月07日_2
+[fbfstoretitle eng="November 07, 1981 (2)" jp="1981年11月07日_2"]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer_t]
+[backlay]
+[playse buf = 0 storage=se57.ogg]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon_t]
+*| November 07, 1981 (2)
+; *|1981年11月07日
+[fbfstoretitle eng="November 07, 1981 (2)" jp="1981年11月07日"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+November 7, 1981[dlr][r]
+Today, we visited an aquarium as part of a field trip.[dl] [clickskip enabled=true]We boarded the bus at the entrance of the school, drove down the streets, and after a dozen or so minutes spent on the highway next to the sea, reached the official border of the town.[dl] Since there were no other aquariums close by, most of the other kids had already been to it with their families. Nonetheless, Takako happily discussed all the fish she loved with everyone she could.[lr][r]
+[else]
+　[hch text="1981" expand=true]年[hch text="11" expand=true]月[hch text="07" expand=true]日[lr][r]
+
+*|1981年11月07日
+　遠足で水族館の見学に行く。[l][clickskip enabled=true]
+水族館へは小学校の校門からバスに乗り、街を通り抜け、海に面した国道を数十分走った先の市の境目にあった。[l]
+市内に他の水族館はないため、どこの家族も一度は訪れたことのあるようなところだった。[l]
+それでも貴呼は、バスで移動中のところから嬉しそうに好きな魚の話をしていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I love aquariums! Especially the electric eels![」][lr]
+[else]
+「水族館大好きなんだよね、とくに電気ウナギが好き」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They have eels here?[」][lr]
+[else]
+「そんなの居たっけ？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're in the hall after the corridor with the marinated oarfish.[dl] That thing was amazing, too. It was long enough to reach the ceiling of our gym.[」][lr]
+[else]
+「竜宮の使いのホルマリン漬けが置いてある廊下の先にあるホールだよ。[l]あの竜宮の使いもすごいよね。[l]体育館の天井くらい長いよね」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was it that big?[」][prcm]
+[else]
+「そんなに大きかった？」[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The noisy chatter of the students filled the bus.[dl] I glanced out the window to see the sea beyond the breakwater along the highway.[dl] The water sparkled as it reflected the rising sun.[dl] The teacher told everyone to keep it down, and the noise disappeared for a few moments, only to start up again a bit later.[l]
+[else]
+　バス内は隣同士やグループで話し合う生徒で騒がしかった。[l]
+窓を見ると、国道沿いの防波堤のむこう側にテトラポットと海が見えた。[l]
+登り始めた日がキラキラと海の波間を光らせている。[l]
+「騒ぐな」と先生が声を上げると、一瞬バス内が静かになったが、少しするとまた囁くような話し声が聞こえ始めた。[lr]
+[endif]
+
+[r]
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+　            ＊
+[r]
+[r]
+To enter the aquarium, we had to pass through the spinning tetrapod-looking thing one by one.[dl] It grew dimmer inside as I walked down the corridor, and the amount of water tanks on each side increased, too.[dl] Below, there were bright panels with the names of fish and brief descriptions of their[r]habitats.[dl] I spent some time staring at the beautiful corals inside, but couldn't find a single fish.[dl] Looking at the panel, I saw an introduction on a translucent shrimp.[dl] I looked at the tank again and spotted something akin to a permeable tentacle behind the red corals.[prcm]
+[else]
+　            ＊
+[r]
+[r]
+*|1981年11月07日
+　水族館の入場ゲートは四本足のテトラポットが横になったような形のバーを回転させて、生徒を一人ずつ順番に館内へ入れた。[l]
+廊下を少し歩くと入口からの光が薄くなり、両側に並ぶ水槽が増えていった。[l]
+水槽の下には中にいる魚の名前や簡単な説明が書かれたパネルがライトアップされており、その手前には手すりがあった。[l]
+カラフルな珊瑚のある綺麗な水槽に目を止めるが、魚が見当たらない。[l]
+パネルを読むと透明な小さな海老が紹介されていた。[l]
+もう一度水槽を見ると、赤い珊瑚の先に透明な海老が長い触覚を揺らしていた。[prcm]
+[endif]
+
+
+;＊
+
+[msgoff]
+[msglayer]
+[msgon]
+
+; FBF: End of vertical section.
+[eval exp="f.fbfisverticaltext = false"]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I quit reading for a moment and rubbed my eyes.[lr]
+[else]
+　一度、手帳から目を離して、指で目の間を揉む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt pain behind my eyes, just like the first time I read the diary.[lr]
+[else]
+　初めてこの日記を読んだ時と同じように、また目の奥が痛んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But it was no longer as intense as before.[prcm]
+[else]
+　しかし、その痛みは前回ほどではなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the pain passed, I returned my eyes to the notebook.[lr]
+[else]
+　痛みが引くと、手を離して手帳を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt the memories of the aquarium come alive in my mind.[prcm]
+[else]
+　頭の中に、水族館の思い出が蘇ってきていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We were playing shiritori in the back of the bus with Sachiko.[lr]
+[else]
+　行きのバスでは一番後ろの席で[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子としりとりをしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After we got to the actual aquarium, I spent most of my time looking at fish I liked with Sachiko.[lr]
+[else]
+　水族館についてからも佐知子とふたりで好きな魚を見に行った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The diary was written from Sachiko's perspective, though.[prcm]
+[else]
+　前回も今回もその日記は佐知子の視点で書かれていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave the script a hard look.[lr]
+[else]
+　日記の文字を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed somewhat rushed. The letters weren't perfectly aligned and were of uneven sizes.[lr]
+[else]
+　それは急ぎ書いたものか、ところどころ文字が走り、強弱がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Their shape, however, was perfect. Almost like they were printed.[lr]
+[else]
+　しかし、文字書体は非常に綺麗で印刷物などの書体に比べ好感が持てるほどだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+What I found disconcerting was that this obviously wasn't Sachiko's handwriting.[lr]
+[else]
+　気になるのはこれが佐知子の文字ではないことだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It bore some level of similarity, but Sachiko's handwriting reflected her calm and practical personality. I'd never seen her misalign her letters like this.[prcm]
+[else]
+　とてもよく似ていたが、見慣れた佐知子の文字は佐知子の性格を表したかのように写実的で物静かな文字だ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Meanwhile, the letters here felt dynamic — energetic.[lr]
+[else]
+　対してこちらの文字はいかにも動的だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Placing a finger on the current page, I flipped to the very end of the notebook.[lr]
+[else]
+　今のページに指を挟んで、最後のページを開く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its final pages were empty, without any information that would hint at who wrote it or why.[prcm]
+[else]
+　この手帳の最後の方のページは空白で、最後まで書いた人物や目的などの情報は記載されていない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And there was one more thing that bothered me.[lr]
+[else]
+　もうひとつ気になることがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The dates in this diary were all over the place.[prcm]
+[else]
+　それは、日記の日付がバラバラであることだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I flipped through a couple of pages and checked the dates.[lr]
+[else]
+　ページをパラパラ、と捲り日付を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Subsequent entries would occasionally be years apart; others even moved to the past.[lr]
+[else]
+　次の日記の日付が数年飛ぶこともあれば、次が翌日であったり、一転して過去に戻ることもあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt completely random.[lr]
+[else]
+　日付はランダムで規則はないようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The most likely explanation was that someone had Sachiko tell stories and wrote them down, but that didn't explain why the book was sent to me — and anonymously, to boot.[prcm]
+[else]
+　誰かが佐知子から聞いた話をそのまま日記として書いた可能性が高いが、わざわざそんなことをして匿名で届けてくる理由は今のところわかりかねた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stretched my neck and arms to avoid cramping up in this position.[lr]
+[else]
+　体が凝らないように、くるりと首を回す。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　腕も同じように回した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Blind guesses wouldn't get me any closer to the answer. I decided to continue reading.[prcm]
+[else]
+　考えてもわからないので、続きを読むことにした。[prcm]
+[endif]
+
+
+;＊
+
+[msgoff]
+[msglayer_t]
+[msgon_t]
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go see the electric eels.[」][lr][r]
+[else]
+　「電気ウナギを見に行こう」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako pulled me by the sleeve.[dl] After following the tunnel for a while, we ended up in a wide space with no roof.[dl] In the center, there was a big, curved pool that currently seemed to be in use for the sea lion and penguin show.[dl] Most of the students stopped there to look at the sea lion playing with a ball, but Takako said we could always check that out later, and continued to another corridor while cheerful music played in the background.[dl] It grew dark again, and I felt cold. The amount of water tanks also seemed to have decreased in number.[dl] Takako led the way with confident steps.[dlr][r]As the road curved around and the corridor grew even narrower, I spotted the marinated oarfish in a huge, rectangular tank.[lr][r]
+[else]
+と、貴呼が袖を引いた。[l]
+そして、館内を道なりにスイスイと進んでいく、途中屋根のないスペースに出る。[l]
+お椀を半分にした形のフロアの底には大きなプールがあり、アシカやペンギンのショーが行われていた。[l]
+多くの生徒たちが玉遊びをするアシカを見ていたが、貴呼は「後で見れるから」と言ってラッパの陽気な音楽が流れるそのフロアにある外側の廊下を通り過ぎた。[l]
+再びあたりは暗くなり、そして空気が冷たく、水槽の数が少なくなった。[l]
+貴呼は慣れた足取りで進む。[l]緩やかなカーブに差し掛かると通路は一層狭くなり、そして四角い水槽に入れられたホルマリン漬けの竜宮の使いが見えた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's huge, isn't it?[」][lr]
+[else]
+「大きいでしょう」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Feels almost like it grew bigger since last time.[」][lr]
+[else]
+「前より、大きくなったんじゃない？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, right.[」][lr][r]
+[else]
+「まさか」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The washed-out giant had cavities for eyes and looked quite creepy with its sharp teeth peeking from its half-opened mouth.[prcm]
+[else]
+理科室のそれのように、脱色して薄肌色になった竜宮の使いは目の部分が大きな空洞になっており、半開きの口に並ぶ歯と不気味な雰囲気を出している。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This thing could make a small child cry.[」][lr]
+[else]
+「小さい子が見たなら、泣きそうなんだけど」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I visited this place when I was small and never found it scary.[」][lr]
+[else]
+「でも割と小さい頃から来てるけど、怖いと思ったことないのよねえ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that so.[」][lr]
+[else]
+「ふうん」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer_t]
+[backlay]
+[eval exp="sf.cg67=1"]
+[fbfscale_image layer=3 page=back storage="fgimage/other_img/ev67" visible=true left=0 top=0 opacity=140]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon_t]
+[clickskip enabled=true]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We passed through the large door at the end of the corridor and found ourselves in a spacious cylinder-shaped hall.[dl] It seemed about twenty meters in diameter, and had a stairwell of seats in the middle that looked like a pyramid.[dl] Aquariums loomed embedded in the walls of the room at uniform distance from each other, circling around the seats. Animals inside looked down on the audience with indifferent eyes.[dl] The walls themselves were covered in black paint, making them almost impossible to make out in the dim lighting. Only the insides of the aquariums glowed illuminated by a faint light.[dl] Takako, mumbling something about the usual place, headed straight ahead and took a seat at the center of the pyramid.[dl] The electrical eel tank stood right in front of us.[prcm]
+[else]
+　通路の先にある体育館の入口程度の大きさの扉をくぐると、大きなホールに出る。[l]
+直径二十メートル程の円中の大きなホールは、中央にピラミッドのような腰掛け用の階段がある。[l]
+円柱の壁側には、少し高めの位置に水槽が埋め込まれてある。[l]
+水槽はグルリ、とピラミッドを囲むように一定の間隔を開けて並び、中の生き物たちはこちらを見ているようだった。[l]
+ホールは壁全体が黒色で明かりが乏しく薄暗く、並ぶ水槽だけがぼんやりとライトで照らされていた。[l]
+貴呼はいつもの場所と言って、入口と反対方向を向いたピラミッドの中程の席に座る。[l]
+正面に電気ウナギの水槽があった。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]Beep*[lr]
+[else]
+　―――ビー。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The show in this hall is scheduled to begin at 10:30.[」][lr]
+[else]
+　―――当ホールで行われるショーは十時半からの開始となります。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After looking around a bit, I spotted a red digital clock above one of the tanks.[l]
+[else]
+アナウンスを聞いて、辺りを見渡すと入口から左側の壁、水槽よりも高い位置に赤いデジタルの時計があった。[lr]
+[endif]
+
+
+;＊
+
+[r]
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+　            ＊
+[r]
+[r]
+[asterisk]Beep*[lr][r]
+[else]
+　            ＊
+[r]
+[r]
+*|1981年11月07日
+　―――ビー。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The speakers turned on again.[lr][r]
+[else]
+と、ブザー音が鳴る。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It is time to begin the show.[dl] Please direct your attention to the aquarium with the lights.[」][lr][r]
+[else]
+　―――時間になりましたので、ショーを開始します。[l]ランプのついた水槽に注目してください。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the one with an octopus.[dl] A translucent bottle seemed to fall inside it from the top. It came with a cap you had to turn in order to release the feed inside.[dl] The octopus caught the bottle in one of its tentacles, placed its sucker on the cap, and slowly opened the thing to access its meal.[prcm]
+[else]
+まずランプのついた水槽はタコの水槽だった。[l]
+水槽の上から、透明の瓶が降りてくる。瓶は回転式の蓋がついており中には切り身のような餌が入っている。[l]
+タコはゆっくりと瓶に近づくと、吸盤で瓶と蓋を固定し、やはりゆっくりとした動作で一分ほどかけて蓋を開けると、中の切り身を足でとって食べた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Most people don't realize just how intelligent octopuses are.[」][lr]
+[else]
+　―――タコは知られていませんが、非常に頭が良いです。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...or so the voice from the speakers claimed.[dlr][r]
+A moment later, the lights of the neighboring tank lit up.[lr][r]
+[else]
+と、テープの音声が解説していた。[l]
+次に、隣の水槽のランプがついた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Next, please observe this parrot fish.[」][lr][r]
+[else]
+　―――次は、魚の輪くぐりです。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A couple of colorful rings were lowered into the tank.[dl] The fish swam through all of them, and after getting some feed, circled around and passed through the rings again.[dl] It swam at normal speed while circling around, but got really fast when it passed through the rings.[dl] Then the lights on the neighboring[r]aquarium lit up.[dl] There was a flat, triangle-shaped archerfish in it.[lr][r]
+[else]
+こちらは縞模様のイシダイが泳いでおり水槽にはいつの間にか、カラフルな輪っかが降りていた。[l]
+イシダイは六つの丸い輪っかを潜り、餌をもらうと再び輪の外側を泳いで元の位置に戻り、再び輪を潜った。[l]
+イシダイは定位置に戻るまでは普通に泳ぎ、輪をくぐる時だけ速度を上げて泳いだ。[l]
+さらに隣の水槽のランプがついた。[l]
+平たい三角の形をしたテッポウウオが泳いでいる。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We will now see how archerfish make use of the water to catch their prey.[」][lr][r]
+[else]
+　―――テッポウウオは名前のとおり、水鉄砲で餌となる昆虫を水に落とします。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The water in the archerfish tank receded a bit.[dl] An employee then came out and placed something on a branch above the water. The archerfish swiftly swam to the surface near the branch, squirted out some water to knock the feed down, then promptly devoured it.[lr][r]
+[else]
+テッポウウオの水槽は水かさが低くなっていた。[l]
+係りの者が水面より上にある枝に餌を置くと、テッポウウオは機敏に泳ぎ、そして水面に顔を出したかと思うと一瞬で水を吹いて、枝の上の餌を落として食べた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Archerfish can squirt water up to 3 meters in height.[dl] However, they are also able to jump out of the water, increasing that height even further.[」][prcm]
+[else]
+　―――水鉄砲は[hch text="3" expand=true]ｍの高さまで飛ばすことができます。[l]また、テッポウウオはジャンプすることもでき、ジャンプして水上の餌をとることもあります。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The next one was the tank of electric eels.[dl] I stole a glance at Takako to see her staring at the tank with a serious expression and her mouth agape.[dl] The length of electric eels varied from 1 to 1.5 meters.[dl] I could see them swimming around in the tank with their huge, curtain-like fins.[dl] When another little fish was put inside the tank, a volley of zapping sounds burst forth from the speakers.[lr][r]
+[else]
+　次は電気ウナギの水槽だった。[l]
+チラリ、と隣を見ると貴呼は口を半開きにして真剣な目で水槽を見ていた。[l]
+電気ウナギは体長が[hch text="1" expand=true]メートル～[hch text="1.5" expand=true]メートル程はある。[l]
+大きめの水槽の中を、カーテンのようなヒレを靡かせながら悠々と泳いでいた。[l]
+そこに小魚が入れられるとドン、と大きな音がして続いてビビビ、とノイズのような音が鳴る。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The sound you are currently hearing is an auditory representation of the voltage in the tank.[」][lr][r]
+[else]
+　―――只今鳴っている音は水槽内の電圧を音に変換したものです。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a screen above the tank that represented the current voltage inside the cage.[dl] The little fish swam around quite energetically, but following another zapping noise, it suddenly stopped moving altogether and ended up swallowed by the electric eel.[prcm]
+[else]
+水槽の上では、電圧の数値とゲージがデジタルで表示されている。[l]
+初めは勢い良く逃げ回っていた小魚は大きなノイズ音で動きを止めると、近づいた電気ウナギにヒュッ、と飲み込まれた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[clickskip enabled=false]
+[msgoff]
+[msglayer_t]
+[backlay]
+[freeimage layer=3 page=back opacity=255]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_t]
+[clickskip enabled=true]
+;＊
+[r]
+[r]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+　            ＊
+[r]
+[r]
+As our train departed, Takako gazed at the receding aquarium through the window with wistful eyes.[lr][r]
+[else]
+　            ＊
+[r]
+[r]
+*|1981年11月07日
+　帰りの電車で、貴呼は名残惜しそうに窓から見える水族館を見ていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The electric eels were so cool.[」][lr]
+[else]
+「電気ウナギすごかったね」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+と、貴呼は言った。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We ended up missing the dolphin show, though.[」][lr]
+[else]
+「結局、イルカのショーは見れなかったけど」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Electric eels, sea otters, and axolotls are the best things that aquarium has, anyway.[」][lr][r]
+[else]
+「あの水族館は、電気ウナギとラッコとウーパールーパーが見られればいいの」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako displayed a particular interest in axolotls, so we had to go to the exit where its cage was located a bit early.[dl] We spent the rest of our time observing the barely motile pink amphibian.[lr][r]
+[else]
+貴呼はウーパールーパーにも異様な興味を示し、水族館の出口付近にあるその水槽を見るために、少し早目に出口に向かった。[l]
+それから時間まで、動きの極端に少ない薄桃色の両生類をジッ、と眺めていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder why they aren't selling axolotl plushies,[」] Takako remarked as she gazed at the picture of the axolotl she bought as part of a set in the souvenir store.[lr][r]
+[else]
+「なんでウーパールーパーの人形は無いんだろう」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+と、出口の外にあるお土産物屋で買った、写真セットからウーパールーパーの顔が正面から写っている写真を見ながら言った。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They had otter plushies.[」][prcm]
+[else]
+「ラッコのはあったわよ」[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a plushie of a mother otter with its cubs attached to its feet, as if it was embracing them. You could also detach the little ones and play with them separately.[lr][r]
+[else]
+それは土産物屋に置いていた親ラッコの腕が子ラッコを抱いているぬいぐるみのことで、抱いている手がマジックテープになっており子ラッコを取り外すことができた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I already have that one.[」][lr]
+[else]
+「それはもう持ってる」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[」][lr]
+[else]
+「そう」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was it really okay not to buy any souvenirs?[」] Takako looked at me.[lr]
+[else]
+「お土産、何も買わなくてよかったの？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+と、貴呼はこちらを見て言った。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+「別に」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako took out the axolotl picture from the batch and held up the rest in front of me.[lr]
+[else]
+貴呼はウーパールーパーの写真を抜いてこちらに残りの写真を寄越した。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can have one, if you want.[」][lr]
+[else]
+「記念に、どれか一枚あげようか？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't.[」][lr]
+[else]
+「いらない」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look, there's even one of the oarfish.[」][lr][r]
+[else]
+「ほら、リュウグウノツカイもあるよ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw an unnaturally long fish resembling a cutlassfish.[dl] Unlike a cutlassfish, though, this one had big, red fins.[dl] It was the exact same oarfish we saw marinating in the formaldehyde tank earlier.[dl] Actually, the same picture was attached to the tank, next to the description.[dl] If I remembered correctly, the description claimed that the oarfish was caught eight years ago in the net of a local fisherman.[dl] It was sent to the aquarium right away, and remained alive for a little while before ultimately passing away.[dl] In the picture, it was swimming in the tank.[prcm]
+[else]
+写真の中に太刀魚のような魚があった。[l]白銀で太刀のように細く長い体に紅色のヒレが付いている。[l]
+それは廊下に展示していたホルマリン漬けのリュウグウノツカイだった。[l]
+廊下のパネルにも同じ写真があった。[l]
+パネルには、写真の他に八年前の日付と、地元の漁師の定置網にかかったことが書かれてあった。[l]
+すぐに水族館に送られ、一度は生きた状態で展示されたが、すぐに死亡したとあった。[l]
+写真は水槽で泳ぐ姿で、やや斜めになって泳いでいる。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had no eyes when I saw it earlier today, but in the picture, it was looking in some weird direction. I felt like it was looking at me.[dl] I didn't understand why a deep sea fish would swim close enough to the surface to get caught in a net, though.[dl] I wondered what thoughts circled through its mind while being locked up in that tank. Did it regret coming up to the surface?[lr][r]
+[else]
+ホルマリン漬けのむき出しの眼窩と違い、写真には目がついていてあらぬ方を見ているようで、こちらを見ているようでもあった。[l]
+だが、その深海魚はどうして深海からやってきたのか良くわからなかった。[l]
+網にかかり浅瀬にやってきたことを後悔したか、水槽で何を考えていたかも分からなかった。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder why a deep sea fish like this was swimming so close to the surface.[」][lr]
+[else]
+「深海の魚なのに、どうして浅瀬を泳いでいたのかしら？」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe it got bored of the darkness and came to see the corals.[」][lr]
+[else]
+「暗い場所はもう見飽きて、陸とか浅瀬の珊瑚なんかを見たかったのかもね」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+と、貴呼がしみじみと言った。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But the corridor it ended up in was pretty dark, too,[」] Takako added.[lr]
+[else]
+「でも、あの廊下も暗いから、少し淋しいかもね」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If only the door had been open, it could have watched the electric eel show.[」][lr]
+[else]
+「ホールの入口が開いていれば、電気ウナギは見れるわよ」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then it would never have been bored,[」] said Takako with a smile.[lr]
+[else]
+「それなら、退屈しないで済むね」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[fadeoutbgm time=1500][playse buf = 1 storage=se54.ogg]
+[else]
+[fadeoutbgm time=1500][playse buf = 1 storage=se54.ogg]貴呼は嬉しそうに言った。[prcm]
+[endif]
+
+
+;＊
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="bg44_4" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[playbgm storage="bgm20"]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+; FBF: End of vertical section.
+[eval exp="f.fbfisverticaltext = false"]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The door to the night duty room opened around the same time I finished that passage.[lr]
+[else]
+　一小節を読み終わると、宿直室の扉が開かれる音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around to see Mayuko taking off her slippers by the door.[prcm]
+[else]
+　振り返ると、洗い物を済ませた繭子が座敷の前でスリッパを脱いでいる姿が見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm home.[」][lr]
+[else]
+　「お疲れ様」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Welcome back.[」][prcm]
+[else]
+　「お疲れ様です」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、繭子が言った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko passed by me, glancing at the notebook in my hand, but it didn't seem like she was particularly concerned about it.[lr]
+[else]
+　繭子は横を通り過ぎる時にこちらの手元にある閉じた手帳を見たがあまり気にならなかったようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She grabbed a cup from the small cupboard in the kitchen and filled it up with water.[lr]
+[else]
+　それから宿直室備え付けの炊事場に行った繭子はコップに水を汲んで飲んでいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I'd like some water, too,[」] I said as I placed the notebook back on the shelf.[prcm]
+[else]
+　「あ、私にもお水頂戴」と言いながら手帳を戸棚に片付けた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko washed the cup she had just drunk from, filled it with water again, and handed it to me.[lr]
+[else]
+　繭子は使ったコップを洗って、それに水を注いで持ってきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took it.[lr]
+[else]
+　お礼を言ってコップを受け取る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Maybe the temperature outside was to blame, but the water felt so cold I could've sworn I had just swallowed a chunk of pure ice.[lr]
+[else]
+　外の気温のせいか、水は氷を入れてかき混ぜたように冷たかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko sat down in front of me and let out a breath.[prcm]
+[else]
+　繭子は向かいに座ると息をついた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you like aquariums, Mayuko?[」][lr]
+[else]
+　「繭子は水族館は好き？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I used to visit them a lot when I was little.[l] Why?[」][lr]
+[else]
+　「小さい頃はよく行きましたよ。[l]何です突然？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Same here.[l] I kinda remembered my trip to one just earlier.[l] Do you have any fish you're especially fond of?[」][lr]
+[else]
+　「私も水族館が大好きで小さい頃よく行ったんだよ。[l]ちょっとだけ、そのことを思い出してね。[l]繭子は水族館で好きな魚っている？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like clownfish.[l] I'd say I'm pretty fond of colorful southern fish.[l] And the corals in their aquariums always look so pretty.[」][prcm]
+[else]
+　「好きな魚はクラウンアネモネですね。[l]基本的に南の海のカラフルで小さい魚が好きですね。[l]水槽の珊瑚礁も綺麗ですから」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of fish is a clownfish?[」][lr]
+[else]
+　「クラウンアネモネって、どんな魚なの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko made a fish shape out of her hands as she described it.[prcm]
+[else]
+　魚の特徴を聞くと、繭子は手で魚の形を作った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's orange and has a frame shaped like this.[l] It also has three white vertical lines going through its body.[l] Oh, and it tends to hide among anemone. It's especially cute to see it carefully peek its face from them.[」][lr]
+[else]
+　「胴体はこんな形で、オレンジ色。[l]縦に白の帯が二三本ありますね。[l]よく、イソギンチャクの中に隠れるんですよ。[l]そこから顔を出してると、また可愛いんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hm? That sounds like anemonefish.[」][lr]
+[else]
+　「それって、クマノミとは違うの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anemonefish?[l] I don't know that one.[l] I'm pretty sure the sign said clownfish, though.[l] It sounded kind of cute, so I remember it pretty well.[」][lr]
+[else]
+　「クマノミですか？[l] それは、知らないですけど。[l]確かに、クラウンアネモネって書いてましたよ。[l]
+名前の響きが綺麗だったので。[l]
+その魚の名前だけはよく覚えているんです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... it sure sounded like you were describing anemonefish...[」][prcm]
+[else]
+　「うぅん。[l]繭子の説明は、クマノミそのものに聞こえるよ」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of fish do you like, Takako?[」][lr]
+[else]
+　「貴呼さんはどんな魚が好きなんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Electric eels![」][lr]
+[else]
+　「やっぱり一番は電気ウナギかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Electric eels? The ones letting out that zapping noise, right?[」][lr]
+[else]
+　「電気ウナギって、あのドンドンと、大きな音と電気を出す魚ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The aquarium creates those sounds to make it easier to understand what's happening.[l] So I guess the aquarium you visited had them, too, huh.[」][lr]
+[else]
+　「あの音は水族館側が分かりやすいように効果音をつけているんだよ。[l]そう、繭子の行っていた水族館にもいたんだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] I even got a little startled when that sound just came out of nowhere as I passed by the area.[l] Are there any other fish you like?[」][prcm]
+[else]
+　「居ましたよ。[l]近くを歩いている時にいきなりあの音を聞くと驚きますよね。[l]他には、何か好きな魚はいますか？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're not fish, but I was always looking forward to seeing otters and axolotls.[」][lr]
+[else]
+　「魚じゃないけれど、ラッコとかウーパールーパーを見るのは、いつも水族館の楽しみの一つだったかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Me too.[l] Axolotls got wildly popular among everyone because of that television commercial.[」][lr]
+[else]
+　「私も好きですよ。[l]ウーパールーパーって少し前に流行りましたよね。[l]テレビのコマーシャルで有名になったんですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sure brings back memories.[」][prcm]
+[else]
+　繭子はウーパールーパーの話題で盛り上がると「懐かしい」と言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm glad you like them, too.[」][lr]
+[else]
+　「繭子も好きなんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Seeing them slowly move around is totally relaxing. And the dumb face they make as they open their mouths is cute.[」][lr]
+[else]
+　「あのゆっくりした動きとか、ポカンと口を開けたときのちょっと間抜けな顔なんて見てると、すごく癒されますよね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko smiled.[prcm]
+[else]
+　そう言って、繭子はニコリと微笑んだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm relieved to hear you like cute things, too.[l] I was worried you'd say killer whales or sharks after those electric eels.[」][lr]
+[else]
+　「貴呼さんも、ちゃんと可愛いものが好きで安心しました。[l]電気ウナギの次は、シャチかサメなんて言い出すんじゃないかと思いましたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I decided not to mention oarfish.[prcm]
+[else]
+　それを聞いて、リュウグウノツカイのホルマリン漬けの話題は伏せることにした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like cute things as much as the next person.[l] It's just that I have more curiosity than most.[」][lr]
+[else]
+　「私だって、可愛いと感じることくらいあるよ。[l]ただちょっと、好奇心が強いだけだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You certainly do,[」] Mayuko agreed with a nod.[prcm]
+[else]
+　私がそのように非難すると、繭子は「そうですね」と頷いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]By the way, axolotls are related to salamanders, right?[l] I wonder if they grow big and change colors once they come of age.[」][lr]
+[else]
+　「そういえば、ウーパールーパーはサンショウウオの仲間ですよね。[l]成体になると、大きくなって色が変わったりするんでしょうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Axolotls retain their juvenile features as they grow. It's called neoteny, I think.[l] But I heard they can change depending on the environment.[l] They lose their gills and adapt to lung breathing, and end up looking kinda like lizards... or at least that's what was written in the description.[」][lr]
+[else]
+　「ウーパールーパーは幼形成熟って言って、大人になってもあのままらしいよ。[l]ただ、生活環境次第では変態することもあるみたい。[l]そのときは、エラがなくなって肺呼吸になるから見た目はイモリみたいになるって説明文に書いていたよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h12" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そうなんですか」と繭子は目を丸くした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I read it countless times.[」][lr]
+[else]
+　「何度も見てたからね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You sound like you really liked aquariums.[l] How about we all go to one sometime later?[」][lr]
+[else]
+　「貴呼さんはホントに水族館が好きだったんですね。[l]それでしたら今度、みんなで水族館に行きますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are there any around here?[」][lr]
+[else]
+　「このあたりに水族館なんてあるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not anywhere close, but I heard a new one opened near Osaka. It's pretty big, too.[」][lr]
+[else]
+　「この近くには無いですけど。[l]大阪の方に新しく大きな水族館ができたらしいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds great.[l] When are we going?[」][prcm]
+[else]
+　「それは楽しそう。[l]いつにする」[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's see...[」][lr]
+[else]
+　「そうですね…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko fell in thought for a few moments, then looked straight at me.[prcm]
+[else]
+　繭子は少しの間考えるように黙ったが、すぐにこちらを見て言った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p04_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We can think about that once we finish cleaning up after Christmas.[」][prcm]
+[else]
+　「予定を立てるのは、クリスマスの後片付けが終わってからですね」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="099_3.ks" target=*099_3
+
+

@@ -1,0 +1,646 @@
+*141| Incinerator
+; *141|焼却炉
+[fbfstoretitle eng="Incinerator" jp="焼却炉"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[playbgm storage="bgm42"]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 177"]
+[eval exp="sf.ItRelease = 178"]
+[endif]
+
+
+*| Incinerator
+; *|焼却炉
+[fbfstoretitle eng="Incinerator" jp="焼却炉"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki passed by the road leading to the library.[lr]
+[else]
+　中庭を歩く[ruby text="なら"]楢[ruby text="さき"]崎は図書館へ続く垣根の道を通り過ぎていった。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg109" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I left the cafeteria and followed her, eventually finding an incinerator just before the exit to the mountain path.[lr]
+[else]
+　カフェラウンジを出て垣根の道を通り過ぎると、山道への入口の手前に焼却炉があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki stood in front of it with her back turned to me.[lr]
+[else]
+　その前に立つ楢崎は、こちらに背を向けたまま気づいた気配はない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a slow step forward, trying not to alert her.[lr]
+[else]
+　気が付かれないように、飛び石の上からそろりと足を出す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I ended up stepping on a dry tree twig — it cracked loudly under my foot.[prcm]
+[else]
+　しかし、その足は枯葉の下にあった枝を踏み抜いて小さな音をたてた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f03_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey.[」][lr]
+[else]
+　「やあ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She turned around and took one hand out of her pocket to greet me.[lr]
+[else]
+　肩をこちらに向けて振り返ると、反対側の手をポケットから出して挙げた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued toward Narasaki while all the twigs and withered leaves popped and cracked under my feet.[prcm]
+[else]
+　パキパキ、と枯れ枝を鳴らしながら楢崎の方へと向かう。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wanted to surprise you, but it's impossible on a road like this.[」][lr]
+[else]
+　「驚かせてあげようと思ったのだけど、これじゃあ無理ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki's usually sleepy-looking eyes slightly widened.[prcm]
+[else]
+　そういうと、楢崎はいつも眠たそうな目を少し見開いて見せた。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't recall you being the type to pull cute little pranks.[」][lr]
+[else]
+　「そんな可愛らしいことをする性格だったかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, even I can enjoy stuff like that when I'm in a good mood.[」][lr]
+[else]
+　「機嫌がいい時はね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh?[」] Narasaki smiled.[prcm]
+[else]
+　「へえ」と言って楢崎が笑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I lined up next to her and looked at the incinerator.[prcm]
+[else]
+　私が隣に並ぶと楢崎は焼却炉の方を見た。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeinse buf=1 time=1500 storage="se165.ogg" loop=true]
+[backlay]
+[freeimage layer=0 page=back]
+[eval exp="sf.cg12=1"]
+[fbfscale_image storage="ev12" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you doing?[」][lr]
+[else]
+　「何をしているの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was taking a walk when I found a nice place to warm up.[l] The temperature really dropped down this morning, didn't it?[」][lr]
+[else]
+　「散歩していたら丁度いい暖を見つけたのさ。[l]今朝は随分冷え込んでいたから助かったよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Indeed.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Crimson light illuminated her from behind.[lr]
+[else]
+　横顔に焼却炉の口からの赤い明かりがあたっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The tongues of the flames danced wildly within the central hole of the incinerator.[lr]
+[else]
+　片目の奥には金の鱗粉がチカチカと舞っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki's red locks, swaying in the hot wind, looked almost like they were on fire.[prcm]
+[else]
+　いつもの赤い髪は本物の炎のように赤く、吹き出す熱風に揺れた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was reading the bird encyclopedia and felt like trying to find some specimens out in the wild, so I went out into the forest.[l] You wouldn't believe how cold it was. Still, the fog covering the area lent the scenery an alluring, otherworldly quality.[」][lr]
+[else]
+　「野鳥図鑑を見ていたら、小鳥が見たくなってね。[l]この辺りの森を散策していた。[l]森の中は予想以上に寒かったが、とても濃い霧がかかっていてなかなか幻想的な景色を見ることができたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you find your birds in the end?[」][lr]
+[else]
+　「鳥は見つかったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I heard all sorts of chirping, but I could only spot a few through the fog.[l] The best one was a scaly thrush sitting on the stem of a wintersweet.[l] That was quite a charming sight.[」][prcm]
+[else]
+　「[ruby text="とらつぐみ"]鵺の鳴き声が聞こえたよ、霧がかかっていたので姿までは見えなかった。[l]
+他にも鳴き声が聞こえるんだが、目視まで出来たのはほんの数[ruby text="ひき"]疋だったよ。[l]
+ただ、ロウバイの黄色い花の枝に、アオジが留まっているのが割りと近くで見られてね、これがなかなか風流だったかな」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds nice.[l] I'd love to see that, too.[」][lr]
+[else]
+　「いいわね。[l]私も見てみたいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Better wear a thicker coat, then.[l] The forest's freezing cold in the morning.[」][lr]
+[else]
+　「もし朝早くに森に入るのなら、よく厚着をしたほうがいい。[l]思った以上に冷え込むから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Noted.[」][prcm]
+[else]
+　「そうするわ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki was right — I could already feel the cold wind robbing me of heat.[lr]
+[else]
+　楢崎が言うように、外の冷たい風が体温をじわりと下げ始めていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a step forward, gazing at the dancing flames in the incinerator's mouth.[lr]
+[else]
+　冷たい風を感じて一歩前に出る。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　楢崎が見つめる焼却炉の口を覗き込むと、乾風を受けて勢い良く火が上がっていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at Narasaki, spotting a stain of soot — or perhaps dirt — on her face.[lr]
+[else]
+　さっきよりも近くなった楢崎を見ると、頬に煤か土の汚れがついていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon taking a closer look, I realized that the sleeves of her white coat were covered in dirt, too.[prcm]
+[else]
+　よく見るとコートの裾も土で汚れている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How far did you go?[」][lr]
+[else]
+　「どこまで行ってきたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I got up pretty early, so I must've wandered quite far into the woods.[」][lr]
+[else]
+　「かなり早くから起きていたからね。[l]割と深いところまで行ったと思う」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After I pointed out the stain on her face, she brushed it off with her hand.[prcm]
+[else]
+　頬についた汚れを指摘すると、楢崎はそれを手で拭いながら言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose you never were one to show restraint.[」][lr]
+[else]
+　「あなたも無理するのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I got a sudden job request, so I'm leaving in the evening.[l] It's not every day I can come so deep into the mountains, so I figured I'd experience as much of the place as possible to make sure I wouldn't regret it later.[」][lr]
+[else]
+　「急に新しい仕事ができて、夕方にはここを出ていくことになったんだ。[l]こんな山奥に来ることなんて殆どないし、思い残すことがないようにしようとしてね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, that was certainly sudden.[」][lr]
+[else]
+　「それはまた急な話ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's how jobs work.[」][lr]
+[else]
+　「仕事ならそういうこともある」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose so.[l] What's... your plan for me?[」][prcm]
+[else]
+　「まあそうだけど。[l]私のことはどうするの？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You haven't been hallucinating or hearing things lately, correct?[」][lr]
+[else]
+　「このところ幻覚は見ていないし、耳鳴りもないんだろう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Perhaps not right now, but who knows when I might relapse.[」][lr]
+[else]
+　「今はそうでも、またいつ症状が出るかわからないわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki made a troubled face and shook her head.[prcm]
+[else]
+　楢崎は少し困った顔をして首を振った。[prcm]
+[endif]
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]To be honest, I wasn't planning to come here to begin with.[l] For one, you seemed to be getting better. But there was also the possibility that I myself could end up facilitating your hallucinations.[l] Nonetheless, if something does happen, don't be afraid to turn to the people here for help.[l] Nanae will understand, and it seems like Lily actually has experience with your kind of condition.[l] As for Kozue, she will lend you an ear, at least.[l] She might be little, but she's smart.[l] They're all on your side.[」][lr]
+[else]
+　「ホントはここまで来るつもりもなかったんだよ。[l]キミの症状はもう自然に治る見込みだったし、私自身が症状のきっかけになる可能性もあるからね。[l]
+それでももしも何か問題が起きたら、ここの人たちを頼ればいい。[l]
+七重は理解してくれるだろうし、どうやら小母さんも似たような症状をよく知ってるらしい。[l]
+梢も話くらい聞いてくれるかもね。[l]彼女は小さいけどとても頭がいいよ。[l]みんな力になってくれるさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki threw the dry twig she'd been holding into the incinerator.[lr]
+[else]
+　楢崎が手に持った乾いた木の枝で焼却炉の中を掻いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a low pop, and a trace of ash burst into the air.[prcm]
+[else]
+　何かが爆ぜるような音がして、僅かな灰が舞った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I guess I'll survive.[」][lr]
+[else]
+　「まあ、なんとかやってみるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I observed the black, burning lump of soot, but it soon fell apart and lost its prior shape.[lr]
+[else]
+　赤く燃える火の向こうに、焼けていく黒い煤の塊が見えていたがすぐに崩れてわからなくなる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A wisp of smoke billowed from the chimney, carrying the excess ash away.[prcm]
+[else]
+　煙突の上にはもくもくと広がる煙が上がり、舞い上がった灰たちを連れて行った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder what they were burning here.[」][lr]
+[else]
+　「何を焼いていたのかしらね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No idea.[l] No matter what it was, it's just ash now.[」][lr]
+[else]
+　「さあね。[l]焼いてしまえばどれも同じ灰だからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a sad way to put it.[」][lr]
+[else]
+　「寂しい言い方ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[l] Ash rises into the air and melds with clouds, only to return to the earth with rain.[l] It fertilizes the ground and gives birth to plants.[l] And eventually, those plants get digested by animals and turn into meat.[l] There are lots of things you can do, even after you become ash.[」][prcm]
+[else]
+　「そんなことはない。[l]灰は空に上がって雲になるから、雨に混じって地面に戻るよ。[l]
+地面に落ちた灰は土を肥やして植物を育てる。[l]そうすれば植物を食べる動物の血肉になる。[l]
+だから、灰になってもまだまだやることはたくさんある」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So you can still return to life, even from that state.[l] I wonder if I could return to being myself after traveling all over the world as ash.[」][lr]
+[else]
+　「また生き物に戻ることもあるのね。[l]それじゃあ、空で散り散りになった全部の灰がいろいろな世界を巡ったあとでまた一つになって私に戻ったりしないかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That'd be another person at that point.[l] It'd be interesting if they retained your personality, but they wouldn't know me, and I wouldn't know them.[」][lr]
+[else]
+　「それは別人だろう。[l]もしもキミだったら面白いとは思うけれど。[l]その人は私の事を知らないし、私もその人の事を知らない。[l]
+だから違う人だよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki smiled as she gazed in front of her.[prcm]
+[else]
+　楢崎は前を見ながら楽しそうな表情をした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The human body has about sixty trillion cells and they keep dying and being replaced by fresh ones.[l] The cells in the head have a somewhat longer lifespan, but they all get replaced within a year or so as well.[l] If you look at it like that, you're no longer the same person you were a year ago.[」][lr]
+[else]
+　「60兆ある人の細胞は一定ペースで新しい細胞に入れ替わっている。[l]
+頭の細胞は遅い部分でも一年くらいで入れ替わると言うよ。[l]もしかすると、一年後のキミはもうキミじゃないのかもね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We both chuckled.[prcm]
+[else]
+　そういう考えもあると言って、こちらも含み笑いをした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No one would notice, though.[」][lr]
+[else]
+　「でも、きっと誰も気づかないわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki replied with a smile. We then spent some time silently gazing at the flames and their prey in the incinerator.[prcm]
+[else]
+　楢崎がこちらに微笑んで返したあとしばらくの間、お互い何も言わずに焼却炉の中身が燃えるのを眺めた。[prcm]
+[endif]
+
+
+[wait time=1500]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think we should head back.[l] We might catch a cold out here.[」][lr]
+[else]
+　「そろそろ戻ろうかね。[l]風邪をひいてしまう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki most likely noticed me rubbing my arms.[lr]
+[else]
+　私が腕をさすったのを気遣ったのか、おもむろに楢崎が言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay,[」] I said, and returned to the mansion with her.[prcm]
+[else]
+　「ええ」と返事をしてから楢崎と屋敷に戻った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fadeoutse buf=1 time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="141_2.ks" target=*141_2
+
+

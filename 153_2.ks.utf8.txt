@@ -1,0 +1,279 @@
+*153_2| Before the finishing touches
+; *153_2|仕上げを前に
+[fbfstoretitle eng="Before the finishing touches" jp="仕上げを前に"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm58"]
+[backlay]
+[fbfscale_image storage="bg60_3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 196"]
+[eval exp="sf.ItRelease = 197"]
+[endif]
+
+*| Before the finishing touches
+; *|仕上げを前に
+[fbfstoretitle eng="Before the finishing touches" jp="仕上げを前に"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After leaving the barber shop, I looked around the shopping district, buying a few things here and there, then boarded my car to drive back to the clinic.[lr]
+[else]
+　私は美容院を出た後、商店街で見舞いの品を買い、車で療養所に向かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The port town visible beyond the trees covering the mountain grew smaller and smaller in the distance as I continued down the unpaved road.[lr]
+[else]
+　療養所に向かう山道を進むと、時折木の間から見える港町が徐々に小さくなっていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My car shook with every hole I drove over.[prcm]
+[else]
+　山道は相変わらずの未舗装道路でよく車が揺れた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg60_4" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped by the observation platform I spotted next to the road.[lr]
+[else]
+　道の途中に見晴台のような場所で車を止めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took my can of coffee, climbed onto the platform, and took a quick sip after sitting down on the bench there.[prcm]
+[else]
+　缶コーヒーを持って見晴台に登ると、そこにあるベンチに座って缶コーヒーを飲んだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see the entire port town.[lr]
+[else]
+　その展望台からは港町が一望できた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took another sip while observing its architecture from the distance.[lr]
+[else]
+　町並みを横目で見ながらコーヒーをもう一口飲んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I let out a breath and gave the scenery another scrutinizing look.[lr]
+[else]
+　それから一息ついて、もう一度じっくりと街を見回した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was made better than I'd expected.[prcm]
+[else]
+　その景色は予想以上によく出来ていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't spot any disparities between it and the road I took to Fujisaka Mansion.[lr]
+[else]
+　籘坂の屋敷に行く途中で見たものとほとんど変わらない風景だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was not a single detail wrong with the town, either.[lr]
+[else]
+　町中を歩いた時も特にこれといった違和感はなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The shopping district's arch and the sudden breakwater just outside it by the ferry boarding platform looked suspiciously like my hometown.[lr]
+[else]
+　ただ花のアーチのある商店街、フェリー乗り場埠頭の防波堤、道路脇に突然現れる踏切などは故郷の面影を色濃く映していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A certain phrase popped into my mind as I compared the two sides.[prcm]
+[else]
+　私は頭の中であちら側とこちら側を比較しながら、頭に浮かんだ言葉を小さく呟いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A world slowly dying to preserve her life.[」][lr]
+[else]
+　「彼女が生きるために少しずつ死んでいく世界」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko said that Takako's imagination exceeded hers by a wide margin.[lr]
+[else]
+　佐知子は仕事について語るとき、自身の創作は貴呼のそれに劣ると言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I didn't feel that was true.[prcm]
+[else]
+　しかし、私はそうは思わなかった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't know the extent of Takako's world, but I simply couldn't imagine it being even more detailed than this.[lr]
+[else]
+　貴呼の世界がどれほどのものかは分からないが、この出来はどうだろうか。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This world could extend indefinitely, like a sponge constantly absorbing all sorts of different values and thoughts without discrimination.[lr]
+[else]
+　ここはどこまでも拡大可能な世界、そしてあらゆる価値観を公平に内包出来る世界だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And that meant I could finish my job here without worries.[prcm]
+[else]
+　この世界なら私は安心してこの先の道を行くことが出来る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took out a few pieces of paper from my jacket's pocket.[lr]
+[else]
+　私は上着のポケットに入っている数枚の紙片を取り出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The way to the clinic was scrawled on one of them.[lr]
+[else]
+　ひとつの紙片には療養所までの道筋が書かれている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wrote that one down before coming here.[prcm]
+[else]
+　これは私がここに来る前に書いたものだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The others were pages of a diary.[lr]
+[else]
+　その他の紙には日記が書いてある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her memories. Memories I had to preserve.[lr]
+[else]
+　それは消すべきではなかった彼女の記憶の一部だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I imagined Sachiko sitting on the stool in the lobby.[prcm]
+[else]
+　佐知子のことを思い出して、私は彼女がロビーのスツールに腰をかけている姿を想像した。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="154.ks" target=*154

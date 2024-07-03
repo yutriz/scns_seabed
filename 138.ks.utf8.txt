@@ -1,0 +1,243 @@
+*138| Wilted grass
+; *138|枯れ尾花
+[fbfstoretitle eng="Wilted grass" jp="枯れ尾花"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[backlay]
+[playbgm storage="bgm54"]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 173"]
+[eval exp="sf.ItRelease = 174"]
+[endif]
+
+
+*| Wilted grass
+; *|枯れ尾花
+[fbfstoretitle eng="Wilted grass" jp="枯れ尾花"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped on something and almost tripped.[lr]
+[else]
+　少し[ruby text="つまづ"]躓いて上体を崩す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt softer than the rocky ground I'd been walking on so far.[lr]
+[else]
+　足をかけたものは岩よりも柔らかい感触だった。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se136.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon kicking it, I heard a wooden thump.[lr]
+[else]
+　蹴るとコオン、と乾いた木材をたたく音がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I prodded it a few more times with my toes, making it quiver.[lr]
+[else]
+　つま先で何度か叩いているとガタガタ、と木材が細かく揺れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The quivering extended across the entire cave, turning into rumbling.[prcm]
+[else]
+　揺れは直ぐに洞窟全体に広がると、地鳴りになって背後から近づいてきた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="item19" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=300]
+[wt]
+[quake time=500 hmax=0 vmax=30] 
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Two bright lights lit up as it traveled through the area.[lr]
+[else]
+　地響きは弓のように曲がった角を通り過ぎると、ふたつの眩しい明かりをつけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked down to see train tracks below my feet.[lr]
+[else]
+　遠くで照らし出された地面には、枕木とレールがこちらの足元まで緩い弧を描いて敷かれていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shaded my eyes with my hand and looked around, eventually spotting a hole in the wall.[prcm]
+[else]
+　目元を手で隠しながら、壁を見回して窪みを見つけるとそこへ移動する。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 0 storage=se167.ogg]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method=universal rule="rule11" vague=50 time=300]
+[wt]
+[wait time=3500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped into the hole just moments before the giant object with headlights zoomed past me, the light from its windows flickering in the darkness.[lr]
+[else]
+　空気を割るような音がして、目を焼くようなヘッドライトが通り過ぎると、車窓から漏れる明かりがパシパシ、と瞬いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't make out any human-shaped silhouettes beyond said windows, though.[prcm]
+[else]
+　瞬く間に木造の車内を映したが、人の影は見えなかった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule11" vague=50 time=300]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After the train had passed, I climbed out of the hole and brushed the dust off my clothes.[lr]
+[else]
+　列車が通り過ぎると、窪みから出て煤を払う。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg28_4" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking in the direction the train went, I could see the lights of the outside world.[prcm]
+[else]
+　電車の去った方を見ると、外の明かりが見えた。[prcm]
+[endif]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg74" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed the train tracks outside, eventually emerging into a forest covered by fog.[lr]
+[else]
+　枕木を踏みながら洞窟の外へと出ると、霧が漂う夜の森にいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The moon perched in the dark blue sky, right above the mountains and trees.[lr]
+[else]
+　暗い木々と山々の影の上、藍色の空に月が浮かんでいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't know what time it was.[lr]
+[else]
+　時間は分からなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Following the now abandoned railway line, I eventually made out the roof of the mansion looming beyond the trees.[prcm]
+[else]
+　旧国鉄の廃線跡が辿る先、霧がかかる森の向こうに洋館の屋根が見えていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="138_2.ks" target=*138_2
+
+

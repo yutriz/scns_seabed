@@ -1,0 +1,166 @@
+*sub1
+
+; FBF: Restore font in case we're in diary section.
+[mappfont storage="ptserif36.tft"]
+
+; FBF: Store language now so we'll know to reset current view later if language was changed in config.
+[eval exp="tf.nowLanguage = kag.FBFGetLanguage()"]
+
+[clickskip enabled=false]
+;一時的に状態を保存
+[tempsave place=0]
+; スナップショットをロックします
+[locksnapshot]
+*sub2
+;メッセージ履歴への出力を無効に
+@history output=false
+
+;クリッカブルマップをもし使っている場合はこのようにして無効化する
+@mapdisable layer=0 page=fore
+
+;このサブルーチン内ではメッセージレイヤ1を使う
+@backlay
+@layopt layer=message1 page=back visible=true
+@layopt layer=message0 page=back visible=false
+@current layer=message1 page=back
+@fbfscale_position left=0 top=0 width=800 height=600
+
+;このルーチンに入ったときにだけトランジションを行うように
+@eval exp="f.r_first=true"
+;
+*menu
+@rclick jump=true storage="rclick.ks" target="*ret" enabled=true
+@er
+@nowait
+[history output=false enabled=false]
+[style align = "center"]
+[r][r][r][r][r]
+
+[if exp="kag.FBFGetLanguage() == 0"]
+
+[link target=*hide]Hide Text[endlink][r]
+[link target=*history]Message History[endlink][r]
+[link storage="save.ks" target=*initialize]Save[endlink][r]
+[link storage="load.ks" target=*initialize]Load[endlink][r]
+[link storage="config.ks" target=*config]Settings[endlink][r]
+[link target=*gotostart]Return to Title[endlink][r]
+[link target=*ret]Close[endlink][r]
+
+[else]
+
+[link target=*hide]メッセージを消す[endlink][r]
+[link target=*history]メッセージ履歴を見る[endlink][r]
+[link storage="save.ks" target=*initialize]セーブ[endlink][r]
+[link storage="load.ks" target=*initialize]ロード[endlink][r]
+[link storage="config.ks" target=*config]コンフィグ[endlink][r]
+[link target=*gotostart]タイトルへ戻る[endlink][r]
+[link target=*ret]メニューを閉じる[endlink][r]
+
+[endif]
+
+[resetstyle]
+@endnowait
+@current layer=message1 page=fore
+@if exp="f.r_first"
+@trans time=500 rule="rule1" vague=128
+@wt
+@endif
+@eval exp="f.r_first=false"
+@s
+
+*ret
+; サブルーチンから戻る
+[history output=true enabled=true]
+@tempload bgm=false se=false backlay=true place=0
+[delay speed=user cond="kag.chUserMode"]
+@trans time=500 rule="rule1" vague=128
+@wt
+; スナップショットをアンロックします
+[unlocksnapshot]
+[clickskip enabled=true]
+
+; FBF: If language was changed, reset the screen's texts.
+[if exp="tf.nowLanguage !== void && tf.nowLanguage != kag.FBFGetLanguage()"]
+[eval exp="kag.goBackHistory(false, true)"]
+[endif]
+
+@return
+
+*hide
+; メッセージを消す
+@hidemessage
+@jump target=*menu
+
+*history
+; メッセージ履歴を見る
+@showhistory
+@jump target=*menu
+
+;*load
+;; 栞をたどる
+;; emb exp= .... については TJSをもっと使うために を参照
+;@rclick jump=true storage="rclick.ks" target="*menu" enabled=true
+;@er
+;@nowait
+;[link target=*lt0][emb exp="kag.getBookMarkPageName(0)"][endlink][r]
+;[link target=*lt1][emb exp="kag.getBookMarkPageName(1)"][endlink][r]
+;[link target=*lt2][emb exp="kag.getBookMarkPageName(2)"][endlink][r]
+;[link target=*lt3][emb exp="kag.getBookMarkPageName(3)"][endlink][r]
+;[link target=*lt4][emb exp="kag.getBookMarkPageName(4)"][endlink][r]
+;[link target=*menu]戻る[endlink][r]
+;@endnowait
+;@s
+;
+;*lt0
+;@load place=0 ask=true
+;@jump target=*menu
+;*lt1
+;@load place=1 ask=true
+;@jump target=*menu
+;*lt2
+;@load place=2 ask=true
+;@jump target=*menu
+;*lt3
+;@load place=3 ask=true
+;@jump target=*menu
+;*lt4
+;@load place=4 ask=true
+;@jump target=*menu
+;
+;*save
+;; 栞をはさむ
+;; emb exp= .... については TJSをもっと使うために を参照
+;@rclick jump=true storage="rclick.ks" target="*menu" enabled=true
+;@er
+;@nowait
+;[link target=*st0][emb exp="kag.getBookMarkPageName(0)"][endlink][r]
+;[link target=*st1][emb exp="kag.getBookMarkPageName(1)"][endlink][r]
+;[link target=*st2][emb exp="kag.getBookMarkPageName(2)"][endlink][r]
+;[link target=*st3][emb exp="kag.getBookMarkPageName(3)"][endlink][r]
+;[link target=*st4][emb exp="kag.getBookMarkPageName(4)"][endlink][r]
+;[link target=*menu]戻る[endlink][r]
+;@endnowait
+;@s
+
+;*st0
+;@save place=0 ask=true
+;@jump target=*menu
+;*st1
+;@save place=1 ask=true
+;@jump target=*menu
+;*st2
+;@save place=2 ask=true
+;@jump target=*menu
+;*st3
+;@save place=3 ask=true
+;@jump target=*menu
+;*st4
+;@save place=4 ask=true
+;@jump target=*menu
+
+
+*gotostart
+; 「最初に戻る」
+[call storage="FBFReturnToTitle.ks"]
+;@gotostart ask=true
+@jump target=*menu

@@ -1,0 +1,822 @@
+*087| Golden Gate Bridge
+; *087|金門橋
+[fbfstoretitle eng="Golden Gate Bridge" jp="金門橋"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle9"]
+
+[msglayer]
+[backlay]
+[playbgm storage="bgm01"]
+[fbfscale_image storage="bg89" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 106"]
+[eval exp="sf.ItRelease = 107"]
+[endif]
+
+
+*| Golden Gate Bridge
+; *|金門橋
+[fbfstoretitle eng="Golden Gate Bridge" jp="金門橋"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After filling our stomachs in the port, we rented ourselves a car.[lr]
+[else]
+　港で軽食をとると、近くでレンタカーを借りた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+During our test ride along the seashore, we spotted a flock of seagulls flying above the sea.[prcm]
+[else]
+　慣らしのつもりで、沿岸を走らせると、横目にカモメの群れが風に煽られているのが見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The wind's pretty strong here.[」][lr]
+[else]
+　「相変わらず風が強いね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like towns with strong wind. It lifts my spirits.[」][lr]
+[else]
+　「風が強い街は好きよ、気分が晴れるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once the traffic light dangling above the road changed to green, we made our turn and returned to town.[prcm]
+[else]
+　ぶら下がり式の信号が変わると、道を折れて港街へ戻った。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[playse buf = 0 storage=se92.ogg]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg11_2" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The well-kempt steering wheel felt right at home in my grip, while the neatly-polished front window gave me a clear and beautiful view of the scenery.[lr]
+[else]
+　良く手入れされたハンドルは使い慣れたそれのように握る手に馴染み、ぴかぴかに磨かれたフロント硝子には観たい景色が綺麗に映りこんだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we rode up a hill, all we could see was the horizontal line of the asphalt, and the clear, blue sky stretching above it.[lr]
+[else]
+　上り坂で空を向いたフロントは、アスファルトの水平線と、その上に大きな空を映している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted a few wooly clouds drifting across it.[prcm]
+[else]
+　いつの間にか晴れ渡った青い空には、ぽつぽつと白い綿雲が浮かんでいた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Eventually, we reached the top.[lr]
+[else]
+　ブウン、と坂を上りきる。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg10" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our red rental car returned to a horizontal position, but it lasted only a few moments, and we were soon on our way downhill.[lr]
+[else]
+　赤いレンタカーは少しの間だけ水平を向くが、またすぐに坂道を下り始める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This time, I could see the azure sea and a port in the distance, surrounded by colorful houses and some woodlands.[prcm]
+[else]
+　フロントの景色は下方向へとパンダウンをして、水平線から青い海と、船着場、木々の緑とカラフルな屋根の町並みとを、まるで地面から反り立つように映し出した。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wow...[」][lr]
+[else]
+　「うわあ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The uneven terrain made this city even more scenic, letting you observe it from a variety of angles.[lr]
+[else]
+　勾配の多い町並みは、景色に煽りと俯瞰を与えて実に多くの街の表情を見せてくれるようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I looked down at the slope, I spotted some pink and white flowers growing by the side.[lr]
+[else]
+　次に下り坂を見ると、建物が避けて出来た斜面はピンクと白の花と緑で覆われている。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The stone-paved road extending before our car cut through what seemed like a garden of sorts.[lr]
+[else]
+　車の前に続く石造りの坂道は、ぎざぎざに噛みあわせた歯のように植物園の間を縫うように敷かれている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The thick greenery higher up prevented me from seeing the end of the road.[prcm]
+[else]
+　また、どのカーブも斜面に作った階段と踊り場のような形をしており、カーブの向こうに続く石畳が緑の垣根で見えない程の高低差がある。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay...[」][lr]
+[else]
+　「えい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Releasing the breaks and promptly shifting to acceleration, I began to make my way down.[lr]
+[else]
+　ブレーキとアクセルを上手く切り替えてぐねぐねする坂道をするすると抜けていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Through the window on the passenger's side, Sachiko gazed out at the colorful flowers as they danced, her own hair wildly fluttering in the wind.[prcm]
+[else]
+　隣の佐知子は揺れるシートに髪を揺らしながら、助手席側の窓からカーブの風に揺れる色彩を眺めていた。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_image storage="bg08" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a huge and gorgeous Art Deco-style bridge connecting the port and the neighboring town further down the road.[lr]
+[else]
+　港町と向こう街を隔てる海峡には、絢爛装飾なアールデコ調の大きな吊り橋が架かっている。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The two towers supporting the bridge were so huge it felt almost like they were touching the sky.[lr]
+[else]
+　吊橋を支える二本の主塔は先が空に届きそうなほど高い。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I leaned forward to have a better look, but the rear view mirror sparkled in the sun, momentarily blinding me in one eye.[prcm]
+[else]
+　少しだけ背を浮かせて覗いていると、ドアミラーが一瞬光り片目を閉じる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The setting sun painted the western sky orange while making the ocean waves appear like brilliant, sparkling gold.[lr]
+[else]
+　キラリとした西の空を見やると、落ちかけた夕暮れの日が海平面上でオレンジ色に瞬き、海の細波を金に輝かせていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The waves reached all the way to the bridge, lending a golden hue to its lower part as well.[lr]
+[else]
+　金色の波は吊り橋の足元まで伸び、本来鮮やかな朱色の吊り橋を金の空気でぼかしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The towers appeared to almost be melting in the sky as that golden glow embraced their edges and the sun began sinking deeper below the horizon, painting the entire scenery orange.[prcm]
+[else]
+　吊り橋の上にある主塔も、日暮れが染めた大気の色と混ざり合って、天辺に行くほどオレンジ色に溶けていった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　手前の主塔の間から見える奥側の主塔は、薄っすらとした金のシルエットとなっている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm real glad it didn't rain today.[」][lr]
+[else]
+　「晴れてよかった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our drive across the suspension bridge started with observing how the madder red structure was slowly taking on darker hues.[prcm]
+[else]
+　吊り橋のドライブはそんな風に、オレンジ色の空と道、茜色から橙色のグラデーションになった主塔を眺めるところから始まった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「] Mmm. ♪ Whatever... Hmhm. ♪[」][lr]
+[else]
+　「ん～…Whatever…ふふん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I began singing a song, humming the parts where I'd forgotten the words. It made Sachiko smile and comment on how old it was.[prcm]
+[else]
+　うろ覚えの歌詞を鼻歌交じりに歌っていると、佐知子がふっと小さく笑い「その唄、懐かしいわね」と言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Phew. After spinning the wheel so much, it's nice to finally have a relaxing, straight road to drive on.[」][lr]
+[else]
+　「んー。[l]ずっとハンドル回しっぱなしだったから、気持ちがいい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I straightened my arms and my back.[prcm]
+[else]
+　ハンドルを握ったまま腕を伸ばし、背を伸ばす。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you want me to drive on the way back?[」][lr]
+[else]
+　「帰りは私が運転する？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No need. I'm good.[」][lr]
+[else]
+　「ううん。平気」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]click*[lr]
+[else]
+　がちゃり。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I changed gears and stepped on the gas a bit harder.[lr]
+[else]
+　ギアを切り替えて、アクセルを少しだけ踏み込む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A classical rock song began blaring from the radio when I pressed a button on it — the kind you'd hear all the time these days.[lr]
+[else]
+　カーラジオの摘みを押すと、今はどこででも聴かれている様なクラシックロックが流れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I lowered the sound a little.[prcm]
+[else]
+　摘みを回し、音量を調節した。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+;★背景差し替え  どうやったら夕焼けっぽい演出になるのか
+[fbfscale_image storage="bg08_k" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if that's mist.[」][lr]
+[else]
+　「霧かしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko, who was looking at the gulf from the window, pointed at the cars ahead of us — their lights were about to disappear into some haze.[lr]
+[else]
+　助手席の窓から湾の方を眺めていた佐知子がぽつり、と呟いたあとに、前を走る車に白い[ruby text="もや"]靄がかかりテイルランプがじわりと滲む。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It looked like the wind swept some mist our way from the gulf.[lr]
+[else]
+　霧は右側の湾内から風に乗って流れてきていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It swiftly covered the water below the bridge, and was now rising up to where we were. It had already covered most of the road.[prcm]
+[else]
+　脚の早い霧は橋の下の海を覆い尽くし、白くなった海は下のほうからすうっと水嵩を増して、橋の縁を越えて道路を沈める。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you going to be okay?[」][lr]
+[else]
+　「大丈夫？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can see the cable, so it shouldn't be a problem.[」][lr]
+[else]
+　「ケーブルが見えているから平気」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The white, dense mist hid the road in front of us like a cloud.[lr]
+[else]
+　白く濃い霧が雲のように道を隠してしまっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All we had was the orange red cable to guide our way.[prcm]
+[else]
+　雲の上には朱色のケーブルと主塔だけが残っている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]drrrrrrr*[lr]
+[else]
+　ブロロロ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We drove across the vanilla-colored cloud with our eyes fixed on the cable extending from one of the towers.[prcm]
+[else]
+　欠けた夕日が照らすバニラ色をした雲の平野を、金のシルエットの主塔から伸びるケーブルを頼りに走る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If I woke up in a place like this, I'd think I was dreaming for sure.[」][lr]
+[else]
+　「ここで目が醒めても、まだ夢の中かと思いそうだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「そうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our car drove over the clouds.[lr]
+[else]
+　車はもくもくと、雲の上を走る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sun dipped behind a golden-tinted cloud in the westward sky.[prcm]
+[else]
+　西の空を見ると、黄金色した雲の平野に沈んでいく夕日が見える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think we're going to be okay?[」][lr]
+[else]
+　「大丈夫かな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you mean?[」][lr]
+[else]
+　「なにが？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]At this rate, the road might very well lead us straight to Wonderland. Or Heaven.[」][lr]
+[else]
+　「この霧がさめたら、天国とか不思議の国に着くのかも知れないからさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko gave the scenery in front us a look before glancing back at me with a gentle smile.[prcm]
+[else]
+　佐知子がフロントの雲の上の景色を眺めて、こちらを見て少し笑んだような気がした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wouldn't mind that.[」][prcm]
+[else]
+　「それもいいわね」[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the wind picked up, our car was swallowed by the surrounding mist.[lr]
+[else]
+　ふわりと、霧が風に吹かれて赤い車を飲み込んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled the switch next to the wheel and made our headlights blink.[lr]
+[else]
+　手を伸ばして、ハンドルサイドのレバーを押してヘッドライトを点灯する。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The mist reflected their golden glow.[lr]
+[else]
+　手前の霧に乱反射して、じわりと金の明かりが灯る。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se13.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For a while, I observed the spreading clouds and the high towers peeking out from behind them, until I heard the abrupt sound of a horn.[prcm]
+[else]
+　広がる雲と主塔を眺めていると、ファン。と、音が鳴る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[」][prcm]
+[else]
+　「おっと」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...Hoooonk.[lr]
+[else]
+　・・・プワアア。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Hoooonk.[prcm]
+[else]
+　ボォォォ。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even after I floored the gas pedal, the sound continued to echo across the mist.[lr]
+[else]
+　ペダルの上の脚を少しだけ踏み込むが、音は山彦のように霧の中を鳴り続ける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko looked out the window and listened in.[prcm]
+[else]
+　助手席の佐知子が窓の外を覗いて、耳を澄ませている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think it's the horn of a ship. It's coming from below.[」][lr]
+[else]
+　「船の汽笛じゃないかしら、下のほうから聴こえるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if it's signaling its place so it doesn't collide with anyone else.[」][lr]
+[else]
+　「お互いにぶつからない様に、場所を教えているのかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I decelerated to our previous speed and made our tail lamps blink as well.[lr]
+[else]
+　ペダルを戻し、テイルランプを点滅させる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko lowered the volume of the radio. Now I could definitely tell the sound was coming from below.[prcm]
+[else]
+　佐知子がカーラジオのボリュームを絞ると、ファン。と、今度ははっきりと下から聴こえた。[prcm]
+[endif]
+
+
+
+[playse buf = 1 storage=se13.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...Hoooonk.[lr]
+[else]
+　ファアアン。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Hoooonk.[prcm]
+[else]
+　・・・ボォォォ。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There are all sorts of sounds in the world, huh.[」][lr]
+[else]
+　「色々な音があるのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned my gaze to the towers peeking out from behind the veil of mist.[lr]
+[else]
+　雲の上にぼんやりと見える主塔を眺める。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a few more honks, the mist cleared up and we continued onwards.[prcm]
+[else]
+　もやもやとした霧の中、聞こえる汽笛をひとつふたつと数えていると、すっと霧が晴れて橋を抜ける。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule7" vague=50 time=800]
+[wt]
+[msgon_b]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see the same blue sedan in front of us.[lr]
+[else]
+　目の前に、霧がかかる前と同じ、青のセダンが見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before we realized it, the sun had already set.[prcm]
+[else]
+　いつの間にか、日は沈みきっていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+[jingle9]
+@jump storage="088.ks" target=*088
+
+

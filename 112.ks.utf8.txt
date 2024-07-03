@@ -1,0 +1,1055 @@
+*112| The way back
+; *112|帰り道
+[fbfstoretitle eng="The way back" jp="帰り道"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm40"]
+[backlay]
+[fbfscale_image storage="item13" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 140"]
+[eval exp="sf.ItRelease = 141"]
+[endif]
+
+*| The way back
+; *|帰り道
+[fbfstoretitle eng="The way back" jp="帰り道"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Phew, that sure was nice.[l] Let's hurry home before we catch a cold.[」][lr]
+[else]
+　「ふう、温まったわね。[l]湯冷めしないうちに戻りましょうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae stepped out of the dressing room while I was gazing at a big maple tree.[prcm]
+[else]
+　大きな楓の木を眺めていると、脱衣所から[ruby text="なな"]七[ruby text="え"]重が出てくる。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se127.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wrong way.[」][lr]
+[else]
+　「こっちこっち」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae stopped me just as I started in the direction we had come from.[prcm]
+[else]
+　来た道を戻ろうとすると、七重に引き止められる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go back through a different route.[」][lr]
+[else]
+　「帰りは別の道を歩きましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She began walking in the opposite direction. I followed her.[prcm]
+[else]
+　七重が別の方向に歩き出し、私もそれについて歩く。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=200]
+[backlay]
+[fbfscale_image storage="bg81_3" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This alternate route down the mountain had a small safety fence, but I wasn't sure how helpful that would be once you actually tripped.[lr]
+[else]
+　別の道は、山のなだらかな斜面を削った細い道で、石垣と柵が疎らにあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked over the fence and — through some branches — saw a glimpse of the mansion's roof in the distance.[lr]
+[else]
+　柵の向こうを見ていると、時折木々の隙間から館の屋根が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae took out a green candy from her sleeve and popped it into her mouth.[prcm]
+[else]
+　七重が袖から緑色の飴玉をつまんで食べた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She offered me a red candy.[prcm]
+[else]
+　こちらにも赤い飴玉を差し出す。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm fine.[」][lr]
+[else]
+　「私はいいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, then.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae put the red candy into her mouth.[lr]
+[else]
+　先を歩く七重は前に向き直ると赤い飴玉も口に放る。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se39.ogg]
+[wait time=100]
+[playse buf = 1 storage=se39.ogg]
+[wait time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard her bite through it.[prcm]
+[else]
+　すぐにカリ、と噛み砕いた音がした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You like candies?[」][lr]
+[else]
+　「飴が好きなの？」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I guess.[」][lr]
+[else]
+　「ええ、まあそうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You had some with you when we went to the waterfall, too.[」][lr]
+[else]
+　「滝に行ったときも持っていたわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h23" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I get hungry easily.[」][lr]
+[else]
+　「なんだか直ぐにお腹が減っちゃうのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're hungry?[」][prcm]
+[else]
+　「お腹がすいてるの？」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is my emergency fuel. Think of it as coals in a steam engine.[」][lr]
+[else]
+　「これは燃料みたいなものなの。[l]蒸気機関車の石炭みたいなものと考えてくれていいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are your teeth okay?[」][lr]
+[else]
+　「歯は悪くならないの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h21" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've never been to a dentist in my life.[l][msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h24" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon] ...I guess my parents didn't love me very much.[」][lr]
+[else]
+　「私、歯科にかかったことがないのよ。[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h24" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+
+きっと、親に愛されなかったのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you mean that story about oral bacteria transmitted by the mother causing bad teeth?[l] I never believed that.[」][lr]
+[else]
+　「口移しで菌が[ruby text="う"]感[ruby text="つ"]染るってあれね。[l]本当かしら」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know about that, but it's true my mother didn't pay much attention to me when I was little.[」][lr]
+[else]
+　「さあどうかしら、でも小さい頃に母があまり構ってくれなかったのは本当よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure how to explain it, but she was kind of unable to pay attention to multiple things at the same time.[l] When she focused on her work, she'd forget to sleep, eat... and pretty much everything else.[l] The same rule applied to the people she loved. When I was little, she had someone more important than me.[」][lr]
+[else]
+　「なんていうか。[l]母はあまり多くのものに意識をさけない人だったの。[l]仕事に集中してる時なんか、寝るのも食べるのも忘れるくらい。[l]
+それは好きな人に対しても同じで、私の小さい頃には、ずっと私よりも大事な人がいたのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't love your mother?[」][lr]
+[else]
+　「母親のことは好きじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Never really gave that much thought.[l] I don't know. It just felt normal to me.[l] But I did feel a bit jealous when they looked happy together.[」][lr]
+[else]
+　「それは別に。[l]なんでだろう、それが普通と思っていたからかしら。[l]ただ私はそれを見て幸せそうで羨ましかったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think that's still better than forcing yourself on others, at least.[」][lr]
+[else]
+　「他人に何かを望むよりは、そっちの方が良いと思うわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] I think I understood that back then, too.[」][prcm]
+[else]
+　「そうね。[l]それにきっと私もそうだって、その頃からわかってたから」[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se39.ogg]
+[wait time=100]
+[playse buf = 1 storage=se39.ogg]
+[wait time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard her chew through another candy.[prcm]
+[else]
+　カリ、と飴玉を噛んでから。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　また別の飴を取り出して食べた。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="item12" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wait a second.[」][lr]
+[else]
+　「ちょっとまっててね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae leaned over the fence to the right and plucked out some plant.[prcm]
+[else]
+　七重はそう言って、右手の斜面に背を伸ばすと、そこにある野草を採った。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=300]
+[backlay]
+[fbfscale_image storage="bg81_3" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go.[」][lr]
+[else]
+　「いきましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What was that?[」][lr]
+[else]
+　「何を採ったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here.[」][lr]
+[else]
+　「ほら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She showed me a long stem with many small leaves on it.[prcm]
+[else]
+　茎に波打つ緑の葉をつけたそれを見せる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, a shepherd's purse.[」][lr]
+[else]
+　「ナズナね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep. Found it right away.[l] Luck seems to be with us today.[」][lr]
+[else]
+　「ええ、早速見つけたわよ。[l]幸先がいいわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She put it in the basket she carried.[lr]
+[else]
+　山菜はこちらに見せたあとに、小脇に抱えた竹の籠に入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She took it from the dressing room of the bathhouse.[lr]
+[else]
+　竹の籠は脱衣所から取ってきたものだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And with that, we continued down the road.[prcm]
+[else]
+　乗っていた岩から降りると、前を歩き始める。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can you find any other vegetables here?[」][lr]
+[else]
+　「他には何が取れるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Dropworts and henbits grow here in droves.[l] If you see something that looks edible, tell me. I'll give them a look so we don't poison ourselves.[」][lr]
+[else]
+　「セリ、ホトケノザなんか割と多いわね。[l]食べられそうなのを見つけたら教えてね、私が見るから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][prcm]
+[else]
+　「ええ」[prcm]
+[endif]
+
+
+
+;//////
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg81_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We came out onto a wide, even road. It grew brighter as the trees thinned out.[lr]
+[else]
+　平坦な広い道に出ると、木々が開けて明るくなる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+By the time the scale roof of the mansion disappeared from view, our basket had been filled to the brim not only with dropworts and henbits, but shiitake and oyster mushrooms as well.[prcm]
+[else]
+　屋敷の鱗屋根が見えなくなる頃には、籠の中にはセリとホトケノザと言った山菜のほかにシイタケやヒラタケと言ったキノコもあった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We certainly managed to pick a lot.[」][lr]
+[else]
+　「たくさん採れたわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I didn't have high hopes, but I guess you can still find them if you look hard enough.[」][lr]
+[else]
+　「期待はしていなかったけれど、案外探せばあるものねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you just admit that it really was too early in the season for them?[」][lr]
+[else]
+　「やっぱり季節外れなんじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]C'mon, all's well that ends well, you know?[」][lr]
+[else]
+　「結果オーライだわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We came by a stone irrigation channel — a sign that we were getting closer to home.[lr]
+[else]
+　石で出来た用水路が見えてくる、屋敷近くの見覚えのある道だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted a familiar vegetable near my feet, right under the leaves.[prcm]
+[else]
+　枯葉の下に、知っている山菜が見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Isn't that butterbur?[」][lr]
+[else]
+　「これフキノトウじゃない？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, it totally is. But it's still pretty small.[」][lr]
+[else]
+　「本当ね、でもまだ小さいわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can't we eat it?[」][lr]
+[else]
+　「食べられないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's not a good idea to eat them when they're this small. Gotta be patient until they grow bigger over the winter.[」][lr]
+[else]
+　「これから冬を越した頃に、大きくなると食べごろね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeinse buf=1 storage=se70.ogg time=1000 loop=true]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wait time=300]
+[backlay]
+[fbfscale_image storage="bg48" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wf buf=1]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll go wash the dirt off our plunder. Gimme a moment.[」][lr]
+[else]
+　「そこの水で土を落としてくるから、ちょっと待ってて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She descended the stone steps, and leaning over the edge, immersed the entire basket in water.[lr]
+[else]
+　石段を降りて水路に降りると、縁に屈んで籠ごと山菜を水に浸けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The dirt was swept away in the translucent liquid, traveling toward the mansion.[prcm]
+[else]
+　透明の水の流れに、山菜についていた土が滲んで屋敷の方へ流れていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It stings...[」][lr]
+[else]
+　「冷たいわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae continued to wash the vegetables with her bare hands.[lr]
+[else]
+　七重はじゃぶじゃぶ、と利き手で山菜を洗った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted an odd branch covered in bundles of white hair.[prcm]
+[else]
+　その上に、いくつもの白い毛の花穂をつけた枝があった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is this?[」][lr]
+[else]
+　「それ何て名前だったかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, it's a pussy willow.[」][lr]
+[else]
+　「これはネコヤナギね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae lifted her face while remaining seated.[prcm]
+[else]
+　七重は座ったまま顔を上に向けていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huff.[」][lr]
+[else]
+　「えい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She broke the willow tree branch in half and ascended the stairs.[prcm]
+[else]
+　ぱしぱし、と籠の水気を切ってからネコヤナギの枝をポキリ、とひとつ折って石段を上がって戻ってくる。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[seopt buf=1 volume=70]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=300]
+[backlay]
+[fbfscale_image storage="bg81_2" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here you go.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took one of the resulting branches from her.[prcm]
+[else]
+　と、差し出された枝を受け取る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You like pussy willow trees?[」][lr]
+[else]
+　「ネコヤナギ好きなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I do.[」][lr]
+[else]
+　「少し」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I touched the hairy bundle, finding it just as soft as its appearance would suggest.[prcm]
+[else]
+　花穂を摘むと、ふかふかとした手触りがする。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like them, too.[l] My mother used to keep a branch in our room at all times.[l] I didn't get why she refused to pick more colorful-looking flowers, but now I myself lean toward this kind of simple aesthetic.[l][msgoff][backlay][freeimage layer=0 page=back][trans method=universal rule="rule1" vague=300 time=400][wt][msgon] Uh, my right hand has gotten all red. Let's hurry home, okay?[」][lr]
+[else]
+　「私も好きよ。[l]母が良くネコヤナギの枝を部屋に飾っていたの。[l]子供の頃は、花びらも色もなくてどうして飾ってるのか分からなかったけど、今はこんな地味なものも好きになったわね。[l]
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+
+右手が真っ赤になっちゃった。[l]早く戻りましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae started down the road.[prcm]
+[else]
+　七重が前を歩いていく。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We were so close to the mansion that I could no longer see the entirety of its building — the high wall of the east wing filled the entirety of my vision.[lr]
+[else]
+　屋敷はもう全体を見まわせないほど近く、東棟の側面だけが見えている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around and saw a mountain covered in lush greenery.[lr]
+[else]
+　振り返ると、折り重なる常緑の森山がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Above it drifted a huge cloud, looking almost like a vast layer of snow.[prcm]
+[else]
+　歩いてきた道の先の山の裂け目に、白い雪山のような濃い雲が見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We might be getting snow tonight.[」][lr]
+[else]
+　「雪でも降りそうな天気ね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae turned to me before I knew it.[prcm]
+[else]
+　いつのまにか七重がこちらを振り返っていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think it's going to pile up?[」][lr]
+[else]
+　「積もるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, it's definitely that kind of cloud over there.[」][lr]
+[else]
+　「ええ、あれはそういう雲よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go back and warm ourselves.[」][lr]
+[else]
+　「帰って暖かくしましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][prcm]
+[else]
+　「ええ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fadeoutse buf=1 time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="113.ks" target=*113
+
+

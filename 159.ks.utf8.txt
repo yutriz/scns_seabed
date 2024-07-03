@@ -1,0 +1,488 @@
+*159| Train
+; *159|電車
+[fbfstoretitle eng="Train" jp="電車"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle10"]
+
+[msglayer2]
+[playbgm storage="bgm44"]
+[seopt buf=1 volume=60]
+[fadeinse buf=1 storage=se46 time=1500 loop=true]
+[wait time=3000]
+[backlay]
+[eval exp="sf.cg07=1"]
+[fbfscale_image storage="ev7" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 210"]
+[eval exp="sf.ItRelease = 211"]
+[endif]
+
+[quake hmax=0 vmax=10 time=200]
+[wait time=300]
+[quake hmax=0 vmax=10 time=200]
+*| Train
+; *|電車
+[fbfstoretitle eng="Train" jp="電車"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The train car rocked back and forth.[lr]
+[else]
+　ガタンガタン、と一両編成の車両が揺れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I let out a sigh, then inhaled a breath, realizing that the air here smelled a lot like the way it does back home in the countryside — a complex mix of steel, trees, the sea, old buildings, and incense.[lr]
+[else]
+　ため息をつくように息を吐き、空気を吸うと実家の田舎に似た匂いがする。[lr][r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[quake hmax=0 vmax=10 time=200]
+[else]
+　電車の鉄の匂いと、森の木、[l]海、[quake hmax=0 vmax=10 time=200][l]古い建物、[l]線香などここにある色々なものとが混じった複雑な匂いだった。[lr]
+[endif]
+
+[r]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The scent waned with each station we passed.[lr]
+[else]
+　それは駅を経ていく度に薄くなり消えていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Instead, the towns began to grow bigger and bigger.[prcm]
+[else]
+　その変わりに、窓から見える駅と町は少しずつ大きくなっていく。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After the next station, we emerged next to a highway along the sea.[lr]
+[else]
+　次の駅を乗り過ごすと、国道をはさんで海が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I watched the sun set along the sea, illuminating the train car in its orange glow.[prcm]
+[else]
+　正面の車窓に空と海の境目に沈み始めた太陽が映り、車輛内を赤く染めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It sank deeper and deeper into the western horizon.[prcm]
+[else]
+　西に沈む太陽。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadese buf=1 volume=30 time=1500]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule3" vague=50 time=1500]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg105" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes turning my face to the center of the light.[lr]
+[else]
+　目を閉じて赤く眩しい日差しを見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I imagined a world where the sun rose from the west.[lr]
+[else]
+　それから西から太陽が昇るところを想像した。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　そこでは、いま沈んだ太陽が西から登り始めていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg85_2" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was sleeping there, on the other side.[lr]
+[else]
+　いつも傍らにあるその世界で、貴呼は眠っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The faint sunrays would soon fall on her closed eyelids, gently waking her.[lr]
+[else]
+　貴呼は瞼の裏で同じ日差しを見て目が覚める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She would then do her usual routine of radio exercises and head to work.[prcm]
+[else]
+　そしていつものようにラジオ体操をして、今日の仕事に向かうのだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That silly train of thought was enough to make me feel like I would be okay.[prcm]
+[else]
+　そんなただの妄想でも、私をまだ大丈夫だという気にさせるのには十分だった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadese buf=1 volume=60 time=1500]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=1500]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="ev7" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Opening my eyes, I saw the entire train car painted in orange.[lr]
+[else]
+　目を開けると、半分になった太陽が車内を天井まで照らしていた。[lr]
+[endif]
+
+[r]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt almost like I was in a pleasantly warm bath.[prcm]
+[else]
+　ぬるま湯に浸かるように心地よい。[prcm]
+[endif]
+
+
+;＊
+
+[quake hmax=0 vmax=10 time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I truly managed to put my vacation time to good use this time.[lr]
+[else]
+　この休日はとても有意義に過ごすことができた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The hallucinations and ear ringing that had been plaguing me for quite a while seemed to have completely disappeared over the past few days.[lr]
+[else]
+　近頃、頭を悩ませていた軽い幻覚や耳鳴りも、この数日ですっかり現れなくなっていた。[lr]
+[endif]
+
+[r]
+[quake hmax=0 vmax=10 time=200]
+[wait time=300]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I could return to work in top shape, but I also wasn't planning to take on as much as I used to near the end of the year.[lr]
+[else]
+　帰ったら仕事を頑張ろうという気分だが、もう年末のような無理はしないつもりだった。[lr]
+[endif]
+
+[r]
+
+;＊
+
+
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shoved my right hand into the pocket of my jacket to confirm my ticket when my fingers touched something cold and hard inside.[lr]
+[else]
+　切符を確認するために上着のポケットに手を入れると、指の先に硬いものが触れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took it out and realized it was the penguin toy Kozue gave me as a present.[prcm]
+[else]
+　取り出してみると、それは梢がくれたペンギンの玩具だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It shone dully in the orange light, its silly face looking somewhat sad.[lr]
+[else]
+　ペンギンはブリキ製の黒が夕日に焼けて鈍く光り、呆けた顔はどこか悲しそうに見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt a tear roll down my cheek.[prcm]
+[else]
+　ふと、ひとつ涙が頬を伝う。[prcm]
+[endif]
+
+
+[quake hmax=0 vmax=10 time=200]
+[wait time=300]
+[quake hmax=0 vmax=10 time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Wondering if a stray sunray reflected on some nearby surface had hurt my eye, I slightly rubbed it. When I did, another tear spilled forth from it.[lr]
+[else]
+　何処かで反射した光で目を痛めたものと思い、軽く手で拭うが、その後からまたひとつ涙が流れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I paused for a moment, unable to understand what was causing this.[lr]
+[else]
+　何が原因でそうなるのか見当がつかなかったため、拭う手を止めてしまう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+No other tears followed, with the second one remaining moist on my cheek.[prcm]
+[else]
+　もうそれより涙は落ちず、それは頬を湿らせただけで止んでしまった。[prcm]
+[endif]
+
+
+[quake hmax=0 vmax=10 time=200]
+[wait time=300]
+[quake hmax=0 vmax=10 time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The exact same scenery I'd observed on my way here drifted along on the other end of the window.[lr]
+[else]
+　車窓には夕日が映り、来た時に見たものと同じ風景が流れていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But I felt like I myself was now somehow different.[lr]
+[else]
+　しかし、自身の中で何かが変わってしまったような気がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Something didn't add up.[lr]
+[else]
+　何かが不自然だった。[lr]
+[endif]
+
+[r]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was like I left behind something in that mansion.[lr]
+[else]
+　あの洋館に何かを忘れてきたのかもしれない。[lr]
+[endif]
+
+[r]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could recall someone telling me I had nothing to worry about anymore, but I couldn't remember who it was or when it happened.[lr]
+[else]
+　それについては『何も心配することはない』と誰かが言ったのを耳が覚えている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And I had a feeling I'd never be able to.[prcm]
+[else]
+　その時のことや、それを言った誰かについて、二度と思い出すことはないと感じる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I touched the trail left by the teardrop on my cheek, feeling pain in my heart every time the train car swayed.[lr]
+[else]
+　涙が伝わった[ruby text="あと"]痕に触れた。[lr]
+[endif]
+
+[r]
+[quake hmax=0 vmax=10 time=200]
+[wait time=300]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　電車の揺れに合わせて、胸が痛んだ。[lr]
+[r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was like something important was being peeled away from it, little by little.[lr]
+[else]
+　大事だった何かがぱらぱらと剥がれていくようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I had no way of escaping the moving train. All I could do was sit here, waiting for it to reach its final destination.[prcm]
+[else]
+　既に走り出した電車から降りる術はなく、ただそこに座ってすべてが終わるのを待つことより他はなかった。[prcm]
+[endif]
+
+
+
+;[clickskip enabled=false]
+;[msgoff]
+;[backlay]
+;[fbfscale_image storage="ev7" page=back layer=base rceil=100 gceil=100 bceil=100]
+;[trans method = crossfade time=1500]
+;[wt]
+;[msgon_b]
+;[clickskip enabled=true]
+;
+;[r][r][r][r][r][r]
+;  『気にするな。私はキミにもらったものを、[r]返しきれないでいるんだからね』[lr]
+;[r]
+
+
+;[clickskip enabled=false]
+;[msgoff]
+;[msglayer2]
+;[backlay]
+;[fbfscale_image storage="ev7" page=back layer=base]
+;[trans method = crossfade time=1500]
+;[wt]
+;[msgon]
+;[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I heard a faint voice in the corner of my mind, but I couldn't make it out.[lr]
+[else]
+　頭の隅で声が聞こえたが、どれも掬い取ることはできなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A deep darkness enveloped everything.[prcm]
+[else]
+　全て残らず溢れてはどこか底へと落ちて消えていった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=1]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[jingle10]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="159_2.ks" target=*159_2
+
+

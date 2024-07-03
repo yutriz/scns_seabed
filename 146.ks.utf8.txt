@@ -1,0 +1,926 @@
+*146| Man-eating anteater
+; *146|人喰いアリクイ
+[fbfstoretitle eng="Man-eating anteater" jp="人喰いアリクイ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[playbgm storage="bgm18"]
+[backlay]
+[fbfscale_image storage="bg41_5" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time = 1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 187"]
+[eval exp="sf.ItRelease = 188"]
+[endif]
+
+
+*| Man-eating anteater
+; *|人喰いアリクイ
+[fbfstoretitle eng="Man-eating anteater" jp="人喰いアリクイ"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I walked down the moonlit corridor, looking at the dim, red glow of the emergency lights.[lr]
+[else]
+　中庭からの月明かりが照らす薄暗い廊下を歩いていくと、赤く光る非常用ランプがポツリ、と見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the metal plate strike the wooden pole outside.[lr]
+[else]
+　外にある、旗の[ruby text="けい"]掲[ruby text="よう"]揚用ポールの金具が鳴らす音が聴こえる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Light escaped through the gaps of Sanae's door.[lr]
+[else]
+　二階の[ruby text="さ"]早[ruby text="なえ"]苗の部屋からかすかに明かりが漏れていた。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se68.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave it a light knock and received a quiet response.[prcm]
+[else]
+　控えめなノックをすると、控えめな返事が聞こえた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 1 storage=se54.ogg]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg43_6" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Stepping inside, I saw Sanae reading a book in the table lamp's light.[prcm]
+[else]
+　扉を開けると、早苗がベット脇のテーブルにある卓上ランプの光で本を読んでいる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not going to sleep yet?[」][lr]
+[else]
+　「まだ寝ないの？」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[eval exp="sf.cg35_10=1"]
+[fbfscale_image storage="ev35_10" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wasn't feeling sleepy, so I decided to read.[l] What about you?[」][lr]
+[else]
+　「眠れなくて、本を読んでいたんです。[l]貴呼さんは？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Same here, except I was out taking a walk.[」][lr]
+[else]
+　「こっちも眠れなくて、散歩していたところ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I sat down in the cane chair by her bed, I heard a weird, high-pitched sound from outside that reminded me of a flute.[prcm]
+[else]
+　早苗のベット脇にある藤椅子に腰掛けると、何処からかヒィー、と笛の音のような細い音が聞こえる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg35_11=1"]
+[fbfscale_image storage="ev35_11" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've been hearing this a lot in my room lately.[l] Do you think it's a bird?[」][lr]
+[else]
+　「この頃、よく聞きますね。[l]鳥ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's Nue.[」][lr]
+[else]
+　「あれは、[ruby text="ぬえ"]鵺の鳴き声だよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nue?[」][lr]
+[else]
+　「鵺？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a small bird also known as the scaly thrush.[」][lr]
+[else]
+　「こんな小さなトラツグミって鳥だよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made a gesture to show its rough size with my palm.[prcm]
+[else]
+　手のひらで大きさを示した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They sound like a whistle. It's kinda creepy.[」][lr]
+[else]
+　「口笛みたいで、気味が悪いと思ってましたけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But it instantly becomes better when you realize it's a cute bird, no?[」][lr]
+[else]
+　「鳥の音だと分かると、風情じゃない？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[eval exp="sf.cg35_9=1"]
+[fbfscale_image storage="ev35_9" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose so.[」] Sanae smiled.[prcm]
+[else]
+　「そうですね」と早苗は言って微笑んだ。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg35_12=1"]
+[fbfscale_image storage="ev35_12" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Aren't you scared to take a walk alone at night?[」] she added.[lr]
+[else]
+　「夜中に散歩って怖くないです？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nah.[l] It's more exciting than doing it during the day.[」][lr]
+[else]
+　「ううん。[l]昼間と違って、面白いよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I imagine you've walked past everyone's rooms.[」][lr]
+[else]
+　「実は、みんなの部屋の前を通ったんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe.[」][prcm]
+[else]
+　「通ったかもしれない」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I bet the ghost stories we have here all originate from you.[」][lr]
+[else]
+　「療養所の怪談話の殆どって、貴呼さんの[ruby text="はい"]徘[ruby text="かい"]徊なんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not all.[」][lr]
+[else]
+　「それだけじゃないと思うよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg35_4=1"]
+[fbfscale_image storage="ev35_4" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you mean?[」][lr]
+[else]
+　「どういう意味ですかそれ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae knitted her brows.[prcm]
+[else]
+　と、早苗が眉をひそめる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm hungry.[」][lr]
+[else]
+　「お腹すいたな」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_10" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's yesterday's jelly in the refrigerator.[」][lr]
+[else]
+　「冷蔵庫に、お昼のゼリーが入ってますけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can I have it?[」][lr]
+[else]
+　「もらっていいの？」[lr]
+[endif]
+
+[r]
+[playse buf = 1  storage=se33.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened the small fridge by my feet, finding a single plastic package of tangerine jelly on the top shelf.[prcm]
+[else]
+　と、言いながら足元の冷蔵庫を開けると、プラスチックの容器に入った蜜柑のゼリーがひとつ網の棚の上に置いてあった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Go ahead.[」][lr]
+[else]
+　「どうぞ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][lr]
+[else]
+　「頂きます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I peeled off the seal with the picture of a tangerine on it, took the little wooden spoon from the package, and began eating the orange jelly.[lr]
+[else]
+　蜜柑のイラストのついたビニールの蓋を剥がして、蓋の上に乗っていた木の[ruby text="さじ"]匙で柑橘色のゼリーを掬って食べた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was cool and had the sweet-sour taste characteristic of citrus fruits.[prcm]
+[else]
+　冷たさと、柑橘の甘酸っぱい味がした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You want some?[」][lr]
+[else]
+　「少し食べる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If I eat this stuff at night, it will only make my stomach feel all cold.[」][lr]
+[else]
+　「夜に冷たいものを食べると、お腹を冷やすので」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put a spoonful of jelly in my mouth.[prcm]
+[else]
+　差し出した匙の上のゼリーを口に入れる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's put on some music.[」][lr]
+[else]
+　「レコードでもかけようか」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_12" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mayuko won't like it.[」][lr]
+[else]
+　「繭子さんに叱られますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think she'd run all the way to your room with complaints?[l] Now that I think about it, we don't have a single TV in this place.[」][lr]
+[else]
+　「飛んでくるかな。[l]そういえば、ここにはテレビが無いよねえ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_11" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, now that you mention it...[l] Not like it's something I'd use.[」][prcm]
+[else]
+　「そういえばそうですね。[l]無くても困ったことはないですけど、気づかないくらいですし」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Aren't you worried we might be missing some vital news or something?[」][lr]
+[else]
+　「何か大変な事件が起きていたらどうしようかってならない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind, for example?[」][lr]
+[else]
+　「そんな事件はないと思いますけど、例えば？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked at the ceiling and cocked my head.[prcm]
+[else]
+　天井を見て、首を傾ける。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Like... a giant monster approaching our town... or something.[」][lr]
+[else]
+　「例えば、巨大な怪物が街に接近中です。[l]とか」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_9" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae chuckled.[prcm]
+[else]
+　クス、と早苗が背中を丸めて笑う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of monster?[」][lr]
+[else]
+　「怪物ってどんなのですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um... a humanoid, fifteen-meter-tall anteater that uses its snout to suck people straight into its belly through the windows of their houses.[」][lr]
+[else]
+　「ええと、推定十五メートルで人型で、ビルの窓とかからアリクイみたいに人を食べる」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_10" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made the shadow of an anteater with my fingers in the dim light.[prcm]
+[else]
+　と、右手の人差し指と、左手の指を五つ立てて早苗を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Now I'm going to be too afraid to go to sleep.[」][lr]
+[else]
+　「ちょっと鳥肌が立ちました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We might be in severe danger if we missed an announcement on TV telling us to keep the lights off and not make a sound.[」][lr]
+[else]
+　「明りを消して、物音を立てないようにしてください。[l]ってニュースを見逃してしまったらこの部屋だけ明かりがついているかもしれない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae glanced at the window.[prcm]
+[else]
+　早苗がチラリ、と窓を見た。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]These kinds of things always just appear in front of the window without warning.[」][lr]
+[else]
+　「こういうのって、窓の前にいきなり出てきたりするよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then you've gotta run and barricade yourself in the bathroom.[」][lr]
+[else]
+　「そうしたら、急いでお手洗いに逃げます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Trapping yourself in a confined space in horror movies is basically suicide.[l] I don't think I've ever seen anyone survive that.[」][lr]
+[else]
+　「ホラー映画とかだと個室って処刑室だよね。[l]色々な趣向が凝らされていて、あまり助からない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The moment the character begins praying, you know they're dead.[」][lr]
+[else]
+　「そこでお祈りを始めたら、もうお仕舞いですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There was this one movie with worms that traumatized me.[」][lr]
+[else]
+　「それ、ミミズの映画でトラウマになったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The one where they travel through pipes?[」][lr]
+[else]
+　「管を通る方ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's the one.[」][prcm]
+[else]
+　「それそれ」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There was another movie where they had a sudden close-up of a freaky alien's face out of nowhere. I almost got a heart attack.[」][lr]
+[else]
+　「他のものだと、先に顔の大きなエイリアンが入っていたシーンが一番怖かったです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's the one about the alien that can split into particles and reform, right?[」][lr]
+[else]
+　「粒粒になるエイリアンの話ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, I'm surprised you know that.[」][lr]
+[else]
+　「そう、よく分かりましたね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I used to watch lots of movies.[l] Is there anything else that scared you?[」][lr]
+[else]
+　「映画はよく観ていたからね。[l]他には何かある？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「そうですねえ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev35_9" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]T-Rexes.[」][lr]
+[else]
+　「ティーレックス」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We pretty much said that at the same time.[prcm]
+[else]
+　と、こちらが言ったのとほぼ同時に早苗が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I get why he decided to take shelter in there, but why did he just keep sitting without doing anything?[」][lr]
+[else]
+　「駆け込んだのまではわかるけど、どうして座ってたんだろうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess the writers figured it'd be more fun that way?[」][lr]
+[else]
+　「そのほうが面白いからじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose so.[」][prcm]
+[else]
+　「やっぱりそうだよねえ」[prcm]
+[endif]
+
+
+;//////
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg43_6" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I yawned.[lr]
+[else]
+　口を開けて、欠伸をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A whiff of wind blew into the room through the partially open window. I narrowed my eyes to see the moon blur and elongate in the distance.[prcm]
+[else]
+　少しだけ開けた窓から風が吹いて、目を細めると月が滲んで白い線が伸びた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not planning to go to bed yet?[」][lr]
+[else]
+　「そろそろ寝ます？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess I'm starting to feel pretty sleepy.[」][lr]
+[else]
+　「そうだね、少し眠くなってきた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Though my legs still felt heavy as lead, I mustered enough strength to stand up.[prcm]
+[else]
+　藤椅子から眠気で重くなった足に力をいれて立ち上がった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Goodnight.[」][lr]
+[else]
+　「おやすみなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]'Night.[」][lr]
+[else]
+　「おやすみ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued to the exit of the room with uncertain steps.[prcm]
+[else]
+　フラフラとした足取りで部屋の出口へ向かう。[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se54.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]See you tomorrow,[」] said Sanae as I opened the door.[prcm]
+[else]
+　「また、明日」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　扉を開けたところで、早苗の声がした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, see you.[l] Thanks for the jelly.[」][prcm]
+[else]
+　「うん、また。[l]ゼリーありがとう」[prcm]
+[endif]
+
+
+;/////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg85_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+[playse buf = 1 storage=se75.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned to my room and threw myself onto the white bed.[lr]
+[else]
+　部屋に戻ると、白いベットめがけて倒れこんだ。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wrapped the sheet around myself like a cocoon, letting my consciousness slowly melt into the world of dreams.[lr]
+[else]
+　掛け布団を簀巻きのように巻き取ると、そのまま夢の中に意識が落ちていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I dreamed of seeing a fifteen-meter-high humanoid anteater by my window that made me panic and lock myself in the bathroom.[prcm]
+[else]
+　その日の夢では、推定十五メートルで人型で、ビルの窓とかからアリクイみたいに人を食べる怪物が待っており、咄嗟にお手洗いの個室に逃げ込んでしまった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=1 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle4]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="147.ks" target=*147
+

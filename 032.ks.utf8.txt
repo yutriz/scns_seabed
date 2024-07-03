@@ -1,0 +1,295 @@
+*032| Drug Store
+; *032|薬局
+[fbfstoretitle eng="Drug Store" jp="薬局"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+
+[playse buf = 0 storage=se94.ogg]
+[backlay]
+[fbfscale_image storage="bg110" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 40"]
+[eval exp="sf.ItRelease = 41"]
+[endif]
+
+
+*| Drug Store
+; *|薬局
+[fbfstoretitle eng="Drug Store" jp="薬局"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I entered the drugstore to see a family sitting on the bench, most likely waiting for their medicine to be prepared.[lr]
+[else]
+　診療所の斜向かいにある薬局に入ると、処方待ちの親子がベンチに腰掛けている。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I passed by the benches and handed the prescription slip to the clerk.[prcm]
+[else]
+　ベンチのあいだを抜けて受付まで行き、楢崎が書いた処方箋を渡す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you.[」][lr]
+[else]
+　「お預かりします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The female clerk unfolded the paper and gave it a closer look.[prcm]
+[else]
+　受付の女性が処方箋を開き、内容を確認する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you have any allergies?[」][lr]
+[else]
+　「アレルギーや喘息の症状はありますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「いいえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you have any questions about how to use the medicine?[」][lr]
+[else]
+　「お薬の処方に当たり、質問などありますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「いいえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I will call you when your medicine is ready. Feel free to sit down while you wait.[」][prcm]
+[else]
+　「お薬が出来次第お呼びしますので、椅子に掛けてお待ちください」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The clerk rose from her seat and disappeared beyond the glass door further behind the counter.[lr]
+[else]
+　受付の白衣を着た女性は、そう言って席を立つと奥のガラス張りの部屋に入っていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down on one of the benches and placed my handbag next to me.[prcm]
+[else]
+　こちらも下がって待合のベンチに腰を下ろし、肩に掛けていたハンドバックを横に置く。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rays of the warm afternoon sun fell on my legs through the drugstore window.[lr]
+[else]
+　薬局の大きなガラス張りの壁から、お昼の暖かい日が差している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The line between shadow and light quivered around the area of my knees.[lr]
+[else]
+　膝の上を、陽光と影の境界が線を引いていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved slightly toward the shadowy area.[lr]
+[else]
+　拳一つ分ほど、影側に座り直した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the bell rang, a man entered the store with a prescription slip in hand, prompting the woman I just spoke with to return to the counter.[lr]
+[else]
+　ウィン、と処方箋を持った男の患者が入ってくると、先ほどの受付にいた女性が出てきて応対をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see two people in white coats walking back and forth between the shelves further beyond the counter.[prcm]
+[else]
+　受付の奥では、白衣を着た二人が四方にある棚を行き来している。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ms. Kasahara.[l] Ms. Kasahara Mitsuko.[」][lr]
+[else]
+　「笠原様。[l]笠原美津子さま」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The female clerk called out a name in an emotionless tone.[lr]
+[else]
+　受付の女性が敬称を無感情に伸ばして言う。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The mother of the family sitting at the bench put her newspaper down and walked over to the counter.[prcm]
+[else]
+　先に待っていた母親が新聞を置いて受付へ向かう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was about to pull a paperback from the handbag I had left at my side, but I changed my mind, stopping my hand mid-way.[lr]
+[else]
+　横に置いていたハンドバッグから読みかけの文庫を取り出しかけて、手を止めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up and continued to the medicine corner, examining the various labels.[lr]
+[else]
+　立ち上がり、薬の販売コーナーへ向かい商品を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For medicinal bath.[l] Compresses.[l] Nutrients.[l] I was looking through the merchandise, trailing my finger against the labels as I read them.[lr]
+[else]
+　薬湯、[l]湿布、[l]栄養剤、[l]と指でさしながら商品を探していく。[lr]
+[endif]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Brown rice.[l] Mixed grain.[l] Glutinous rice.[lr]
+[else]
+　玄米、[l]五穀米、[l]餅米。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They actually had one kilogram packs of glutinous rice here.[prcm]
+[else]
+　一キロの餅米も置いてあった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「].[wait time=500].[wait time=500].[wait time=500]Glutinous rice?[」][prcm]
+[else]
+　「・[wait time=500]・[wait time=500]・[wait time=500]餅米？」[prcm]
+[endif]
+
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ms. Sachiko.[」][lr]
+[else]
+　「[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子様」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Having found what I was looking for, I continued to the counter.[lr]
+[else]
+　と、やはり敬称が間延びした声がかかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[prcm]
+[else]
+　見つけた商品を棚から取って、カウンターへ向かった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="033.ks" target=*033
+

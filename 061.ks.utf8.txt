@@ -1,0 +1,379 @@
+*061| An Old Pole, Nanae, and Children
+; *061|古い支柱と七重と子供達
+[fbfstoretitle eng="An Old Pole, Nanae, and Children" jp="古い支柱と七重と子供達"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg56_2_s" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 76"]
+[eval exp="sf.ItRelease = 77"]
+[endif]
+
+*| An Old Pole, Nanae, and Children
+; *|古い支柱と七重と子供達
+[fbfstoretitle eng="An Old Pole, Nanae, and Children" jp="古い支柱と七重と子供達"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped on the thin ice, making it crack under my feet.[lr]
+[else]
+　土の上に薄く張られた氷を踏むとパリ、と蜘蛛の巣が走る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped at a place just a little ways away from the courtyard.[lr]
+[else]
+　中庭から少し外れたところで立ち止まる。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg151" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up at the towering pole before me, its tip backdropped by a sky of light clouds.[lr]
+[else]
+　正面の石の台から伸びる木の棒を見上げると、薄く雲の張った空の前に先端が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a pulley and a rope attached to said tip.[lr]
+[else]
+　先端には滑車がついており、ロープが垂れている。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=60]
+[playse buf = 0 storage=se68_2.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Another gust of wind swept across the frozen grounds, making the metallic parts attached to the rope hit against the wooden pole with a knocking sound.[lr]
+[else]
+　たまに風が吹くと、ロープにつけた金具が木の支柱を叩いてコン、と小気味の良い音を立てた。[lr]
+[endif]
+
+[seopt buf=0 volume=100]
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It looked like a flagpole, but I saw no trace of a flag anywhere.[prcm]
+[else]
+　旗を立てる支柱のようだが、立てるはずの旗はどこにもない。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spent a few moments looking at the noisy pole, trying to imagine what kind of flag it once bore, when I suddenly heard something else.[lr]
+[else]
+　しばらく立ち止まり、コンコン、と鳴る支柱を薄目で眺めながら、どのような旗がたなびいていたのかについて思いを巡らせていると、どこからか別の音が聴こえてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It sounded like a person's voice coming from the main entrance of the mansion.[prcm]
+[else]
+　屋敷の角の向こう側、洋館の正面玄関のほうから聞こえてくる音は、近づくと人の話し声になっていった。[prcm]
+[endif]
+
+
+
+[fadeinbgm storage="bgm39" time=5000]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought I heard Nanae's laugh.[prcm]
+[else]
+　はっはっは、と[ruby text="なな"]七[ruby text="え"]重の陽気な笑い声が聞こえる。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg56_2_s" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[wait time=500]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h07" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon returning to the mansion, I came upon Nanae chatting with a couple of children riding bicycles.[lr]
+[else]
+　正面玄関へ続く道の先で、箒を持った七重と自転車に乗った子供たちが話をしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't make out what they were talking about, but judging from her swaying shoulders, it seemed like Nanae found the conversation amusing.[prcm]
+[else]
+　会話の内容までは聴こえなかったが、何かを話しては七重が可笑しそうに肩を上下させた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Today's the day I catch the River King, I swear![」][lr]
+[else]
+　「今日はぬし釣って来るから、川のぬし」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's some confidence.[」][lr]
+[else]
+　「へえ凄いわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The children all wore waist bags and backpacks.[lr]
+[else]
+　自転車に乗った子供達はウェストポーチやリュックを身に着けている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could spot fishing rods poking out from some of them.[prcm]
+[else]
+　いくつかのリュックからは釣竿が覗いている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I saw it just the other day! It was this big![」][lr]
+[else]
+　「前に見たんよ、こんなに大きい奴」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I saw a bigger one![l] It was like this![」][lr]
+[else]
+　「うちはもっとデカイの見てん。[l]こんなの！」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You idiots, the king of the river can't be that small.[l] It's gotta be at least this big.[」][lr]
+[else]
+　「アホやな、ぬしがそない小さいわけないやろ。[l]こんくらいやし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The children opened their arms wide, trying to show off how large a size they were thinking of.[prcm]
+[else]
+　腕を広げて見せる子供達。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't forget to bring some for me, too.[」][lr]
+[else]
+　「ちゃんとお姉ちゃんの分も釣ってくるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh?[」][lr]
+[else]
+　「えー」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think I let you keep your bicycles and use my river for free?[」][lr]
+[else]
+　「自転車置き場と釣り場の貸し代よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's dirty![」][lr]
+[else]
+　「なにそれ汚い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You gotta play dirty now and then to survive in the world.[」][lr]
+[else]
+　「いい大人は、それなりに汚いのものなのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Everyone gets an equal share, then![」][lr]
+[else]
+　「それじゃあ、山分けだからね！」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With that, the children began pedaling their bicycles and rode off toward the woods.[prcm]
+[else]
+　ひとりがそういうと、子供達は自転車を漕ぎ出した。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[l] I'm having a guest right now, so don't forget her share, either![」][lr]
+[else]
+　「あ。[l]今お客さんが来てるから、もう一人分も宜しく」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Seriously?![」][lr]
+[else]
+　「マジか！」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was a mistake to stop here![」][lr]
+[else]
+　「鬼やな！」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae sounded another one of her hearty laughs.[prcm]
+[else]
+　はっはっは、と七重が笑う。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p02_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Be careful out there.[」][lr]
+[else]
+　「気をつけるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She waved the children goodbye.[prcm]
+[else]
+　と、木犀の垣根の向こうの林に消える子供達に手を振った。[prcm]
+[endif]
+
+
+[seopt buf=0 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="062.ks" target=*062
+
+

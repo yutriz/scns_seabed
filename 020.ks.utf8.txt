@@ -1,0 +1,587 @@
+*020| Kamaboko board and day business trip
+; *020|事務所の昼（かまぼこ板と日帰り出張）
+[fbfstoretitle eng="Kamaboko board and day business trip" jp="事務所の昼（かまぼこ板と日帰り出張）"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+[playbgm storage="bgm02"]
+
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 22"]
+[eval exp="sf.ItRelease = 23"]
+[endif]
+
+*| Kamaboko board and day business trip
+; *|事務所の昼（かまぼこ板と日帰り出張）
+[fbfstoretitle eng="Kamaboko board and day business trip" jp="事務所の昼（かまぼこ板と日帰り出張）"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If my memories of our elementary school summer vacation are anything to go by, we did have to bring a kamaboko board to the pool. [wait time=500]Right, Sachi?[」][lr]
+[else]
+　「小学校の夏休みのプールといえば、[wait time=500]こんなかまぼこ板を持って行ったよねサチ」[lr]
+[endif]
+
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=100 path="(125,0,255)(105,0,255)" layer=0]
+[wm]
+[fbfscale_move time=100 path="(125,0,255)(105,0,255)" layer=0]
+[wm]
+[wait time=300]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=100]
+[wt]
+[fbfscale_move time=100 path="(85,-20,255)(105,-40,255)(125,-20,255)(105,0,255)" layer=0]
+[wm]
+[wait time=300]
+[fbfscale_move time=100 path="(105,-20,255)(105,0,255)" layer=0]
+[wm]
+[wait time=300]
+[fbfscale_move time=100 path="(105,-20,255)(105,0,255)" layer=0]
+[wm]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f02_p03_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=200]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako used a corkscrew to open a hole in the board, passed a piece of string through it, then hung it around her neck. It was a bit too complicated for anyone to understand what she was trying to convey.[prcm]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼がかまぼこ板にキリで穴を開けて、通した糸を結んで首にかけるといった、初めから知っていない人には分かりづらい、少し複雑なジェスチャーをした。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h07" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why would you carry such a thing around with you?[」][lr]
+[else]
+　「どうして、かまぼこ板なんか持っていくんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai, who went over to Takako's desk to ask her for advice on coloring, raised his shoulders and made a contemplative face.[prcm]
+[else]
+　貴呼の席まで、着手中の着色作業についての質問に来ていた[ruby text="いぬ"]犬[ruby text="かい"]飼は、肩を少し上げて難しい顔をした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You really don't know?[」][lr]
+[else]
+　「なんで知らないの？」[lr]
+[endif]
+
+[r]
+
+[playse buf = 0 storage=se61.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako took out a piece of paper and a pen from the desk drawer, and drew a kamaboko with a piece of string on it. She then separated its area into three parts with a huge T and wrote "class" on top, "name" on the bottom right, and "address" on the bottom left.[prcm]
+[else]
+　と、貴呼は言いながら、事務机の横長の引き出しから不要な紙とペンを取り出し、
+板の上部に穴を開けて紐を通したかまぼこ板を描き、
+そのオモテ面をアルファベットのT字で三つに区切って上段に年組、[l]右下に名前、[l]左下に住所を書いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's what I'm talking about.[l] Surely you've seen that before.[」][lr]
+[else]
+　「こういうものだよ。[l]ちゃんと見たことあるでしょう」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h08" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not at my school, at least.[」][lr]
+[else]
+　「うちにはそんなのありませんでしたね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You have, haven't you, Fumi?[」][lr]
+[else]
+　「[ruby text="ふみ"]文は知ってるでしょう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako leaned over from the her monitor and showed Fumi the picture.[prcm]
+[else]
+　貴呼がモニタの横から顔を出して、先ほど描いた絵を見せた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h07" visible=true left=105 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h06" visible=true left=330 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h02" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have.[l] It's used to make sure people know how to contact your family in case you end up drowning.[」][lr]
+[else]
+　「知ってますよ。命札って言うんです。[l]万が一、溺れたりした時に連絡先と名前を書いてるんです」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I see.[」][lr]
+[else]
+　「へえ、そうだったんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if it's only practiced in southern prefectures, given that Ms. Fumi is familiar with it while I'm not.[」][lr]
+[else]
+　「文さんも知ってるってことは、やはり南の方限定の風習では？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've had a discussion about this after coming to Tokyo, and even in the same area, there are apparently schools that do it and ones that don't.[」][lr]
+[else]
+　「私もこっちに来ていろんな人に聞きましたけど、同じ地域でもやってる学校とやらない学校があるみたいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi went on in a disinterested tone while tapping away on her calculator.[prcm]
+[else]
+　文が電卓を叩きながら、興味なさげに言う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうなの」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h08" visible=true left=330 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This was about as alien to me as that Mont Blanc ice cream thing.[」][lr]
+[else]
+　「モンブランアイスのときほど、共感できなかったですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai returned to his desk to resume his work.[prcm]
+[else]
+　犬飼が事務机に戻り、作業を始めた。[prcm]
+[endif]
+
+
+;///
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h01" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h02" visible=true left=280 top=0]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is there anything that the school in your area did the same way as us? With pool-related things, I mean.[」][lr]
+[else]
+　「それじゃあ、犬飼は何かプールにまつわる共感できる話あるの？」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't feel like starting a weird game, but...[l] Hmm...[l] Did you have to collect colored balls during your pool lessons?[」][lr]
+[else]
+　「そういうゲームをしていたんじゃないんですけど？[l] まあ、そうですね。[l]プールの授業だとカラーボール集めとかやりませんでした？」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, my place had that, too.[」][prcm]
+[else]
+　「それうちもやってたわ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm pretty good at swimming, so I collected a bunch.[」][lr]
+[else]
+　「潜水が割と得意なんで、沢山拾ってましたね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds like something you'd be good at, Inukai.[」][lr]
+[else]
+　「犬飼らしい特技だね」[lr]
+[endif]
+
+[r]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's that supposed to mean?[」][prcm]
+[else]
+　「どう言う意味ですか？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When you had to collect the remaining balls, did you go in circles with the others until you made a whirlpool?[」][lr]
+[else]
+　「それやった後ってさ、残ったカラーボールを集める為に皆でグルグルプールを回って渦を作らなかった？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h02" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We did that, yeah.[」][r]
+[r][「]Right? All schools make you do that.[」][lr]
+[else]
+　「やりましたねそれ」[r]
+[r]
+
+*|事務所の昼（かまぼこ板と日帰り出張）
+　「そうでしょう、やるよねえ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was busy having a conversation unrelated to work, ultimately dragging Inukai into the mix as well.[prcm]
+[else]
+　貴呼が仕事に関係のない話で盛り上がり、いつの間にか犬飼が釣られていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I also remember trying to do an underwater somersault and getting my nose full of water. I wonder why it hurts when that happens.[」][lr]
+[else]
+　「あとさ、プールの水の中で前転して、鼻に水が入って苦しくなったことあるよね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're the only one dumb enough to pull a stunt like that.[」][lr]
+[else]
+　「そんな馬鹿なことはしないわよ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I decided to interrupt their never-ending conversation.[prcm]
+[else]
+　と、こちらから終わりのない話に横槍を入れた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h03" visible=true left=-70 top=0]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah... can't say that ever happened to me, either.[」][lr]
+[else]
+　「ええ、それは無いですね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Noticing the look of reproach on my face, Inukai returned to his desk and resumed work.[prcm]
+[else]
+　貴呼より先にこちらの非難の視線に気がついた犬飼が事務机に戻り、作業を始めた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そう？」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h10" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h16" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=300]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=300]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako, now leaning toward Fumi to address her next, finally noticed my expression and promptly returned to work.[prcm]
+[else]
+　文に話しかけようとした貴呼も、身を乗り出しかけたところで気がついて、作業に戻った。[prcm]
+[endif]
+
+
+
+
+[playse buf = 0 storage=se07.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I inserted the poster sample into a tube and tucked it under my arm, then picked up the bag with all the receipts and my notebook inside before standing up to leave.[lr]
+[else]
+　見本のポスターを筒に入れて脇に挟み、請求用の資料と手帳とを入れた鞄を持って、席を立つ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako addressed me as I jotted down my destination and the exact time I'd be going home.[prcm]
+[else]
+　ホワイトボードの前で、行動予定表に行き先と帰宅時間を書いていると、貴呼が後ろから声をかけてきた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where you off to?[」][lr]
+[else]
+　「何処に行くの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We have to deliver the things that advertisement column requested of us. Then there's also a meeting about that poster, I believe.[」][lr]
+[else]
+　「広告欄の納品と、ポスターの打ち合わせですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi answered in my place.[prcm]
+[else]
+　と、文が答えた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see. Well, good luck.[l] I hope you buy me something tasty on the way.[」][prcm]
+[else]
+　「そっか、行ってらっしゃい。[l]お土産よろしく」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=3000]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="021.ks" target=*021
+
+

@@ -1,0 +1,1075 @@
+*022| Evening at the Office (Konpeito)
+; *022|事務所の夕方前（金平糖）
+[fbfstoretitle eng="Evening at the Office (Konpeito)" jp="事務所の夕方前（金平糖）"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm02"]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+[msglayer2]
+
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h02" visible=true left=105 top=0]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 24"]
+[eval exp="sf.ItRelease = 25"]
+[endif]
+
+*| Evening at the Office (Konpeito)
+; *|事務所の夕方前（金平糖）
+[fbfstoretitle eng="Evening at the Office (Konpeito)" jp="事務所の夕方前（金平糖）"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How did it go with the client?[」][lr]
+[else]
+　「お客さんはどうでしたか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi, calming down with Takako's departure, turned to me.[prcm]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼が去ったあとで、落ち着きを取り戻した[ruby text="ふみ"]文がこちらに向いて聞いてくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think it's going steady enough.[l] They didn't ask to change anything, at least.[」][lr]
+[else]
+　「まずまずといったところね。[l]特に仕様の変更なんてのは無かったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up the paper bag that I'd left on my desk.[prcm]
+[else]
+　事務机の引き出しの前に置いた紙袋を取る。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] I brought presents.[」][lr]
+[else]
+　「そう。[l]お土産買ってきたの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled out two boxes — one small, one big — and handed them to Fumi.[prcm]
+[else]
+　紙袋から大きな箱と小さな箱の二つを取り出すと、立ち上がってこちらへ来た文に渡す。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry. I was in a hurry so I didn't have much time to choose.[」][lr]
+[else]
+　「御免なさい。[l]急いでいて、ちゃんと選べなかったの」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, thank you.[」][lr]
+[else]
+　「いえ、わざわざ有難うございます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Give the small one to Inukai, and share the big one with Takako.[」][lr]
+[else]
+　「小さい方は[ruby text="いぬ"]犬[ruby text="かい"]飼くんに渡して、大きい方は文と貴呼で分けて頂戴」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi handed the smaller box to Inukai.[prcm]
+[else]
+　文が小さい方の箱を犬飼に渡す。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=280 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h07" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you very much.[」][lr]
+[else]
+　「有難うございます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai fixed the position of his glasses and considered the box.[lr]
+[else]
+　受け取ると、犬飼は眼鏡の位置を直して箱を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi left the big box on her desk.[prcm]
+[else]
+　大きい方の箱は、文が事務机の上に置いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anything happen while I was away?[」][lr]
+[else]
+　「こっちはどうだった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[l] Well, Takako was goofing off instead of working, so there's that.[」][lr]
+[else]
+　「特に問題はありませんでした。[l]ただ、貴呼さんがサボってました」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[playse buf = 0 storage=se25.ogg]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h02" visible=true left=450 top=0 opacity=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=1000 path="(280,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you guys talking about me?[」][lr]
+[else]
+　「誰がなんて？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi made sure that Takako, who we had just heard coming through the corridor, could hear her.[prcm]
+[else]
+　文が後半を廊下を歩いている貴呼に聞こえるように言うとガチャリ、と扉を開けた貴呼が言った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, Sachi.[l] Where are my presents?[」][lr]
+[else]
+　「あ、サチ。[l]お土産は？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Fumi has them.[l] Share them with her.[」][lr]
+[else]
+　「文に渡したわよ。[l]二人で分けてね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Konpeito?[」][lr]
+[else]
+　「金平糖か」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako looked at the box on Fumi's desk.[lr]
+[else]
+　と、貴呼が文の事務机に置いてある箱を見て言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then returned to her own desk and glanced at the clock.[prcm]
+[else]
+　それから、貴呼は席に着くと、壁掛時計の方を見た。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wow, you were quick.[」][lr]
+[else]
+　「サチ戻るの早かったね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I accidentally boarded the express train.[」][lr]
+[else]
+　「それは、電車を間違えて特急に乗ってしまったのよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh, that's kinda unlike you.[」][lr]
+[else]
+　「サチが珍しいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako chuckled as I made an indignant face.[prcm]
+[else]
+　こちらが苦い顔をして言うとクス、と貴呼が笑う。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was in a hurry when changing trains and ended up boarding a behind-schedule express at the place where my train was supposed to be.[」][lr]
+[else]
+　「乗り換えで急いでいたのよ。[l]そこに丁度よく、遅れて来た特急が止まっていたのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did the conductor find you?[」][lr]
+[else]
+　「車掌さんに見つかった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes. I had to pay for a new ticket.[」][lr]
+[else]
+　「ええ、余計にお金を払わされたわ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Everyone misses or mistakes their train once in a while.[l] Right, Inukai?[」][lr]
+[else]
+　「乗り過ごしとか、乗り間違いだとか、よくありますよ。[l]ねえ犬飼」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi considered the joyous Takako and my indignant face for a while before finally turning to Inukai.[prcm]
+[else]
+　文は嬉しそうな貴呼と眉根を寄せたこちらを交互に見てから、最後に犬飼の方を見た。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, that's right. Last year, when I was going to see my parents, I realized I couldn't find my ticket after I left my bullet train.[」][lr]
+[else]
+　「そういえば、去年実家に帰るときに新幹線の降り口で切符が無いことがありました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How'd you get out of the station?[」][lr]
+[else]
+　「どうやってホームを出たの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I explained what happened to the station worker, and they let me out.[」][lr]
+[else]
+　「駅員に事情を説明して、なんとか出してもらいました」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You should make yourself one of those railroad-affiliated credit cards. All their transactions are computerized and remain in the records, so you'd never have to worry about tickets or explaining yourself again.[」][lr]
+[else]
+　「鉄道提携のクレジットカードにすればいいのに、落としてもコンピュータに履歴が残るから安心よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi pulled out a silver credit card from her purse.[prcm]
+[else]
+　コレ、と文が財布から銀色のクレジットカードを出した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That was like a commercial just now.[」][lr]
+[else]
+　「今のコマーシャルみたいですね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h07" visible=true left=105 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=330 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h02" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, I wanna do it, too.[l] Gimme that card for a sec.[」][lr]
+[else]
+　「私もやりたい。[l]ちょっと貸して」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako leaned over the desk and reached out toward Fumi's purse.[prcm]
+[else]
+　貴呼が身を乗り出して、文の持っているクレジットカードに手を伸ばす。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Should we expect a thirty-second version from you?[」][lr]
+[else]
+　「そっちは三十秒のバージョンですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Enough.[l] Commercials are not part of our commission, so I would appreciate it if you all would return to your seats already.[」][lr]
+[else]
+　「はいはい。[l]そんな仕事無いから。[l]皆席に戻ってね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I struck my desk with the binder I had in my hand, putting an end to their frolicking.[prcm]
+[else]
+　と、こちらで手に持ったバインダーを叩いて、与太話を終わらせた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The konpeito box was left at the area connecting Fumi's and Takako's desks.[lr]
+[else]
+　文と貴呼の事務机の間には、金平糖の入った木の箱が置かれている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It contained a piece of paper with a faint flower design and lots of colorful candies.[lr]
+[else]
+　箱の中には、薄い花の押された和紙がひいてあり、そこに沢山の色の金平糖がある。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako picked up a blue star and put it into her mouth.[prcm]
+[else]
+　貴呼が青色のギザギザの付いた小さなつぶを取ると口に入れた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sweets go well with tea.[」][lr]
+[else]
+　「やっぱり甘味には紅茶が合いますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi held her personal teacup in her hands.[prcm]
+[else]
+　と、文は給湯室に置いてあった持参のティーカップを手に持っていった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h10" visible=true left=280 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you know any famous Indian black teas?[」][lr]
+[else]
+　「インドで有名な紅茶て何か知ってる？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm? You mean like Darjeeling or Assam?[」][lr]
+[else]
+　「ダージリンとかアッサムですか？」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You got it.[l] I'll give you this konpeito as a reward.[」][lr]
+[else]
+　「当たり。[l]金平糖一個あげる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That entire box belongs to us both, though.[」][lr]
+[else]
+　「お土産は二人で貰ったものですからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako began chewing on the candies, filling the room with crackling sounds.[lr]
+[else]
+　ポリポリ、と貴呼が金平糖を齧っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As she was taking her next konpeito, her fingers struck the bottom of the box.[prcm]
+[else]
+　次の金平糖を取ろうとした貴呼の爪がカツ、と箱の底を付いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h02" visible=true left=280 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh?[」][lr]
+[else]
+　「あれ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With fewer candies in the box, the cherry blossom design at the bottom became partially visible.[prcm]
+[else]
+　色とりどりの金平糖は数を減らして、箱の底の和紙に押された桜の花を見せていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How can you eat this fast?[l] Geez,[wait time=500] I've only had time to eat a few.[」][lr]
+[else]
+　「そんなにパクパク食べるからですよ。[l]もう、[wait time=500]こっちはまだそんなに食べてないのに」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h14" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, damn.[l] Hey, let's slow down a bit so it lasts until the end of our shift.[」][lr]
+[else]
+　「勿体ないなあ。[l]文ももっとゆっくり食べて定時まで保たせよう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How old are you?[」][lr]
+[else]
+　「なにを子供みたいなことを言ってるんですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sachi went out of her way to get us this present. We shouldn't wolf it down all at once.[」][lr]
+[else]
+　「折角、サチが買ってきてくれたお土産なんだから、大事に食べよう」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]In that case...[」][prcm]
+[else]
+　「そういうことでしたら」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h12" visible=true left=280 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h02" visible=true left=-70 top=0]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+
+[playse buf = 0  storage=se07.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I need to go check something.[」][lr]
+[else]
+　「ちょっと、席外すね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako stood up while Fumi was still gazing at the box.[lr]
+[else]
+　文が木箱を見ていると、貴呼が声を出しながら立ち上がった。[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=1500 path="(800,0,255)" layer=0]
+[wm]
+[wait time=1000]
+[fbfscale_move time=500 path="(280,0,255)" layer=0]
+[wm]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako walked to the door, then suddenly turned around and came back.[lr]
+[else]
+　貴呼は一旦扉の方まで歩いて、また引き返してきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi gave her a confused look.[prcm]
+[else]
+　文が不審そうに貴呼を見た。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's wrong?[」][lr]
+[else]
+　「どうしたんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, y'know... I got this feeling I might find that box empty when I came back.[」][lr]
+[else]
+　「いやね。[l]そんなこと言っておいて、居ない間に全部食べてたら面白いなと思ってさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako bent her back slightly.[prcm]
+[else]
+　と、貴呼が少し背を曲げて言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]C'mon, I won't eat them all.[l] God knows how much weight I might put on if I did that.[」][lr]
+[else]
+　「ひとりで全部なんて食べませんよ。[l]こんなに食べたら太るじゃないですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... Okay then.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't believe you get so suspicious over a few candies.[」][lr]
+[else]
+　「お菓子で、そんなに疑心暗鬼になるなんて驚きです」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h01" visible=true left=280 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Haven't you heard of all the wars that broke out over sweets?[」][lr]
+[else]
+　「甘味のために起きた戦争を知らないの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I have not.[」][prcm]
+[else]
+　「知りませんよ。[l]そんな歴史」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be going, then.[」][lr]
+[else]
+　「じゃあ、行ってきます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+
+[playse buf = 0 storage=se25.ogg]
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=1500 path="(400,0,0)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako walked to the door and actually left the room this time.[prcm]
+[else]
+　と、扉の方へ歩いて事務室を出た。[prcm]
+[endif]
+
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time= 1000]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=1000 path="(280,0,255)" layer=2]
+[wm]
+[wait time=1000]
+[fbfscale_move time=200 path="(280,20,255)(280,0,255)" layer=2]
+[wm]
+[wait time=300]
+[fbfscale_move time=200 path="(280,20,255)(280,0,255)" layer=2]
+[wm]
+[wait time=1000]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h08" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=1000 path="(-70,0,255)" layer=2]
+[wm]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi, after making sure that Takako was really gone, took out a white piece of paper from her desk and placed all the konpeito from the box on it.[lr]
+[else]
+　貴呼が事務所を出ていくのを見送った文は、事務机の引き出しから白の用紙を取り出すと、貴呼と文の事務机の間においてあった金平糖の木の箱を取り、白い用紙の上に金平糖を移した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then carefully folded up the paper and hid it inside her drawer.[lr]
+[else]
+　それから、白い用紙と金平糖を綺麗に畳んで事務机の引き出しに隠した。[lr]
+[endif]
+
+[r]
+
+[playse buf = 0 storage=se25.ogg]
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=1000 path="(280,0,255)" layer=0]
+[wm]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h06" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h16" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before long, the door opened again, revealing Takako. She glanced at the empty box, then at Fumi, then back at the empty box.[prcm]
+[else]
+　程なくしてガチャリ、と事務所の扉を開けて貴呼が戻ってきて、金平糖の空の箱を二度ほど見た。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=100 path="(280,-30,255)(280,0,255)(280,-30,255)(280,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How could you?![l] Those were mine...!![」][lr]
+[else]
+　「あんた、[l]人のものを…！」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm just messing with you.[」][lr]
+[else]
+　「冗談ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi produced the paper from her drawer.[prcm]
+[else]
+　文が事務机の引き出しから、隠していた包み紙を取り出した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Also, those were for us both.[」][prcm]
+[else]
+　「あと、ふたりで貰ったものですからね」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=3000]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="023.ks" target=*023
+
+

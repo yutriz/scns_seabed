@@ -1,0 +1,165 @@
+*050| In the changing room
+; *050|脱衣所にて
+[fbfstoretitle eng="In the changing room" jp="脱衣所にて"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playse buf = 0 storage=se59.ogg]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 63"]
+[eval exp="sf.ItRelease = 64"]
+[endif]
+
+
+*| In the changing room
+; *|脱衣所にて
+[fbfstoretitle eng="In the changing room" jp="脱衣所にて"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko made an audible sniff as we left the bathroom.[lr]
+[else]
+　風呂を出るとクスン、と[ruby text="まゆ"]繭[ruby text="こ"]子が鼻を鳴らす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Drops of water dripped down onto the wooden floor.[prcm]
+[else]
+　簀の子の上にポタポタ、と雫が落ちる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here you go.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up two towels from a shelf and handed one to Mayuko.[lr]
+[else]
+　塔の棚からタオルを二枚取り出し、小さな手ぬぐいで器用に体を隠している繭子に渡す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko wrapped herself in the towel, then pulled off a smaller one from the shelf and wrapped that around her head.[prcm]
+[else]
+　繭子は手にしたタオルをくるりと体に巻いてしまうと、棚からもう一枚手ぬぐいを取り出して髪を拭いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wiped myself dry with my own towel, walked to the long shelf that had the basket with my clothes in it, and began changing.[lr]
+[else]
+　私も手に持ったタオルで体を拭くと、簀の子を降りて、正面の編み籠の並ぶ長い棚から着替えを入れておいた籠の前へ行き、手早く着替える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put on my underwear and was pulling my sweater over my head when...[prcm]
+[else]
+　下着を身に着けてしまうと、編み籠の中の上着を取り出して頭からかぶった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Achoo![」][lr]
+[else]
+　「へっくし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you catch a cold or something?[」][lr]
+[else]
+　「風邪でも引いた？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After managing to jam my head through the collar, I carefully pulled my hair through it.[lr]
+[else]
+　ぽすっと顔を出すと、シャツから髪を取り出す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once I'd finished changing, I glanced toward Mayuko and noticed she still only had a towel on even as she was drying her hair.[prcm]
+[else]
+　着替え終わり、繭子を見ると、タオルを巻いたまま洗面台で髪を乾かしている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You should put on some clothes before you start getting cold.[」][lr]
+[else]
+　「湯冷めしないうちに着替えたほうがいいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[」][prcm]
+[else]
+　「はい」[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="051.ks" target=*051
+
+

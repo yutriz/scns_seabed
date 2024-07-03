@@ -1,0 +1,335 @@
+*062| Morning Work
+; *062|朝のお仕事
+[fbfstoretitle eng="Morning Work" jp="朝のお仕事"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 77"]
+[eval exp="sf.ItRelease = 78"]
+[endif]
+
+
+[msglayer2]
+[msgon]
+
+*| Morning Work
+; *|朝のお仕事
+[fbfstoretitle eng="Morning Work" jp="朝のお仕事"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good morning.[」][lr]
+[else]
+　「おはよう」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h08" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, good morning.[」][lr]
+[else]
+　「あら、おはよう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae looked behind her shoulder in response to my greeting.[prcm]
+[else]
+　声をかけると、手を振る[ruby text="なな"]七[ruby text="え"]重が肩越しに振り返り、こちらを見やる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're kids from the town. Apparently, they plan to fish here today.[」] said Nanae, noticing me stare at their receding backs.[prcm]
+[else]
+　「[ruby text="ふもと"]麓の子供達よ、今日は川釣りに来たみたい」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　子供達の去っていったほうを瞬き程度に見たのを、知ってかしらずにか七重が言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What were you talking about?[」][lr]
+[else]
+　「何を話していたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Food.[l] We might get some fresh fish for dinner tonight.[」][lr]
+[else]
+　「食材の仕入れ。[l]夕飯に新鮮な川魚が食べられるかもしれない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Provided they manage to catch anything, that is.[」][lr]
+[else]
+　「みんなの[ruby text="ちょう"]釣[ruby text="か"]果が良ければの話だけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You could have taught them how to make a bamboo net.[」][lr]
+[else]
+　「竹編みの[ruby text="ふせご"]筌の作り方でも教えてあげたらどうかしら」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a good idea, but those kids don't know when to stop, so...[」][lr]
+[else]
+　「いい案だけど、子供は加減を知らないから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae shrugged her shoulders.[prcm]
+[else]
+　と、七重が肩をすくませる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do they come here a lot?[」][lr]
+[else]
+　「良く来るの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Plenty of places to play around here.[l] Mountains, rivers, lakes...[l] This area is open to the public — we even have a library.[」][lr]
+[else]
+　「この辺りは遊び場が多いからね。[l]山に川に湖もね。[l]ここも空いてるホールや図書館なんかは、公民館みたいに開放しているの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae pointed at a building further in the distance.[prcm]
+[else]
+　言って七重は、図書館とホールの辺りを指差した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That aside... what are you doing outside so early in the morning? Did something happen?[」][lr]
+[else]
+　「そういえば、こんな早くに外に出ているなんて、何かあったのかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I was just curious about something.[」][lr]
+[else]
+　「ううん、少し気になって」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae glanced in the direction I came from.[prcm]
+[else]
+　私が少しだけ首を傾けると、七重は私の来た方向を見た。[prcm]
+[endif]
+
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p02_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, so you found out.[」][lr]
+[else]
+　「ああ、もうばれちゃったのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Only because of this windy weather. Might've been a different story otherwise.[」][lr]
+[else]
+　「風が吹いていなかったら、きっと分からなかったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was planning to let you enjoy the mystery for a while longer. Damn this stupid wind, it ruined everything on the first day.[」][lr]
+[else]
+　「もう少しミステリアスな現象を楽しんでほしかったのに。[l]全く、空気が読めない風よねえ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Another breeze swept across the courtyard, carrying some leaves and a few leftover golden petals from the withered flowers.[prcm]
+[else]
+　ふっ、と風が吹いて石畳の上に、木犀の金の花と落ちた広葉が乗った。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se68.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And there was that knocking sound in the distance again.[lr]
+[else]
+　向こうでコン、と音がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae let out another guffaw.[prcm]
+[else]
+　ははは、とリズム良く七重が笑った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You okay with toast for breakfast?[」][lr]
+[else]
+　「そうそう、朝はパンで良いかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you have hot coffee to go with it.[」][lr]
+[else]
+　「熱いコーヒーも頂けるかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course we do. I'll prepare it right away.[」][prcm]
+[else]
+　「勿論よ、すぐに準備するわね」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[fadeoutbgm time=3000]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="063.ks" target=*063
+
+

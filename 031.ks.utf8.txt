@@ -1,0 +1,149 @@
+*031| Campo de' Fiori
+; *031|カンプスフローラ
+[fbfstoretitle eng="Campo de' Fiori" jp="カンプスフローラ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 37"]
+[eval exp="sf.ItRelease = 38"]
+[endif]
+
+*| Campo de' Fiori
+; *|カンプスフローラ
+[fbfstoretitle eng="Campo de' Fiori" jp="カンプスフローラ"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After looking around the Grand Cathedral and enjoying the nighttime streets for a while, we returned to the hotel.[lr]
+[else]
+　ゆっくりと大聖堂を観光したあと、夜の街を楽しんでから、ホテルに戻る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I drifted off to sleep pretty much the moment I climbed into bed, and ended up having a surprisingly vivid dream.[prcm]
+[else]
+　明日の準備もそこそこにベッドに入ると、随分と鮮明な夢を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A blonde girl in linen clothes was collecting flowers in her basket, standing in the field that would later became the market square. It all kind of reflected what Takako said back there.[lr]
+[else]
+　昼間にレストランで[ruby text="たか"]貴[ruby text="こ"]呼が言っていたような、麻の服を着たブロンドの少女が花畑だった頃の広場で籠に花を摘んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued observing her, being seemingly transparent myself.[lr]
+[else]
+　こちらはユラユラと透明になって、その様子を見ている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I approached the girl to get a better look at the contents of her basket, she abruptly looked me straight in the eye, even though she wasn't supposed to see me.[prcm]
+[else]
+　花籠をよく見ようと近づくと、気づくはずのない少女がこちらを見上げた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In that moment, the flower field disappeared as though swept away by a hurricane, turning into a field for executions.[lr]
+[else]
+　それから花畑が嵐のように消えて、広場は処刑場になった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A man adamant to preach a philosophy that contradicted the tenets of the local doctrine was seized by the Inquisition and burned at the stake for refusing to renounce his beliefs.[lr]
+[else]
+　教義神学に反する哲学を唱えて、異端審問にかかった男は、自説の撤回を拒んだまま火炙りにされていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt as though his panicked eyes had been glaring at me through the flames.[prcm]
+[else]
+　その目は、ユラユラと燃える炎と、こちらの影を見ているような気がした。[prcm]
+[endif]
+
+
+ 
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h08" visible=true left=105 top=0 opacity=255]
+[fbfscale_image storage="bg63" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The next day.[lr]
+[else]
+　翌日。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I told Takako about my dream as we moved south on the high speed railway. She said her dream had aliens instead.[lr]
+[else]
+　高速鉄道で南へ移動する最中に夢の話をすると、貴呼は夢で宇宙人を見たと言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then started describing their countless characteristics and proceeded to never shut up about it.[prcm]
+[else]
+　そして火星人と木星人の特徴について延々と語っていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="031_2.ks" target=*031_2
+
+

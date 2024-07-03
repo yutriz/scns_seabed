@@ -1,0 +1,1268 @@
+*m01|Goldfish scooping
+; *m01|金魚すくい
+[fbfstoretitle eng="Goldfish scooping" jp="金魚すくい"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+[call storage="MyMacro.ks" target="*Jingle6"]
+
+[clickskip enabled=false]
+
+[playbgm storage="bgm46"]
+[wait time=5000]
+[backlay]
+[fbfscale_image storage="subtitle_k" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=5000]
+[backlay]
+
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[fbfscale_image storage="subtitle_ks1" page=back layer=base]
+[trans method = crossfade time=2000]
+[wt]
+[wait time=500]
+[backlay]
+
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=3000]
+
+[fbfscale_image storage="subtitle_ks2" page=back layer=base]
+[trans method = crossfade time=2000]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="subtitle_ks3" page=back layer=base]
+[trans method = crossfade time=2000]
+[wt]
+[wait time=500]
+
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=1500]
+[msgon_b]
+[clickskip enabled=true]
+
+
+;章選択フラグ
+[if exp="sf.CpRelease <= 0"]
+[eval exp="sf.CpRelease = 1"]
+[endif]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 0"]
+[eval exp="sf.ItRelease = 1"]
+[endif]
+
+*m01_b|Goldfish scooping
+; *m01_b|金魚すくい
+[fbfstoretitle eng="Goldfish scooping" jp="金魚すくい"]
+
+*|Goldfish scooping
+; *|金魚すくい
+[fbfstoretitle eng="Goldfish scooping" jp="金魚すくい"]
+
+; FBF: Enable ctrl-skip.
+[ctrlskip enabled="true" quickflg="true"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The light from the round moon broke into countless rays, wavering as it drew back.[prcm]
+[else]
+　丸い月の光は千々に割れると揺らめきながら遠ざかる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My head felt empty... as though I was submerged in water.[prcm]
+[else]
+　頭は虚ろで水の中に凭れているような心地になる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My eyelids felt exceedingly heavy.[prcm]
+[else]
+　瞼がとても重い。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And so did my entire body, languidly sinking into the bed.[prcm]
+[else]
+　気怠い体もベッドに沈むように重い。[prcm]
+[endif]
+
+
+;※エフェクト過去のイラスト（モザイク）
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even in the darkness, I could tell Sachiko — my childhood friend — was right there next to me.[lr]
+[else]
+　暗くてよく見えないが、隣には幼馴染の[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子がいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd known her for twenty-three years.[lr]
+[else]
+　佐知子と出会ったのは二十三年前で今でも覚えている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was twenty-eight now, which meant I first met her when I was five.[prcm]
+[else]
+　今の私が二十八歳だから当時の私は五歳だった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg127" page=back layer=base]
+[trans method=universal rule="rule23" vague=300 time=2000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My family moved that year.[prcm]
+[else]
+　その年、私の家族は引越しをした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our new house was only a thirty-minute drive down the mountain from the old place, with a large supermarket behind it.[lr]
+[else]
+　新しい住まいはそれまで暮らしていた団地から車で三十分ほど山を降りたところにあり、裏には大きなスーパーがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were no shops around where kids could spend their allowance, save for the occasional moving stall.[lr]
+[else]
+　もともと住んでいた団地には商店などは無く、買い物といえばたまに来る移動販売車で済ませるのが普通だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Back in the day, I thought of my new place as a huge city, but that was far from the truth. We had few buildings that exceeded five stories, and you could see both edges of our town as well as the factory at the sea from the northern mountain.[lr]
+[else]
+　それで当時の私は都会だと思っていたが、実際はそれほど広い町でもなく、
+ビル五階ほどの高さがあれば、街の端と端、北の山から南の海にある工場まで見渡すことができた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But the fact there were fewer rice fields and more buildings compared to where I came from made it seem like a bustling city to my child's mind.[prcm]
+[else]
+　以前と比べて田んぼが少なくなって建物が増えただけで都会にやって来たような気がしていたのだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the day we moved, my mother drove back and forth between the city and the country many times.[lr]
+[else]
+　引越しの日、母が運転する車はその田舎と都会の間を何度か往復した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I got into the backseat of the car with the last of our luggage.[lr]
+[else]
+　私は最後の荷物と一緒に車の後部座席に乗りこんだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Initially, we took the same road we did to reach my kindergarten. But once we had passed it, the roads turned fresh and alien.[lr]
+[else]
+　出発のあと車は幼稚園へ向かう道を辿ったが、幼稚園を過ぎるとその先は私には知らない道だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And seeing how we kept driving along the river, I somehow thought that perhaps I could make it back to the countryside on foot.[prcm]
+[else]
+　しかし田舎からずっと河川沿いに降りてきているので、もしかしたら歩いて田舎に戻ることもできるかもしれないと思った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Not that it mattered.[lr]
+[else]
+　別にそれはどうでもいいけれど。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I lost myself in thought, I barely even noticed when we finally reached our destination.[prcm]
+[else]
+　車に揺られながら考え事をしているといつの間にか引越し先についた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As our car blasted the few unfortunate pebbles off the parking lot, my mother told me that we had arrived.[lr]
+[else]
+　パリパリと車が駐車場の砂利をはねると母が「着いたわよ」と言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The parking lot was positioned right in front of our new home, its white lines — denoting where the cars should stand — curiously slanted.[lr]
+[else]
+　駐車場は新しい住まいの正面に沿うようにしてあって、また駐車場の線は斜めに引かれていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Glancing out the rear window of the car, I spotted a red four-story apartment building.[prcm]
+[else]
+　そのため母がバックでキチンと止めると後部座席の窓から赤いゴツゴツした四階建てのアパートが見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Back then, my child's mind failed to comprehend why anyone would want to draw those lines slanted.[lr]
+[else]
+　当時、子供心に駐車場の線がやや斜めに引かれていたのは常々不思議に思っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Now that I think about it, it was probably to make it easier to park cars driving in reverse gear.[lr]
+[else]
+　今考えてみるとあれは車庫入れしやすいようにそうなっていたのかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I moved from that apartment before I could get my own car, so I never had the chance to test if it was worth sacrificing one or two potential parking spaces for a bit of extra comfort.[prcm]
+[else]
+　けれど、私が車を持つ前にその四階建てのアパートからもまた引っ越してしまったので、
+それが駐車場を斜めにすることで失われた一、二台分の駐車スペースの価値があるかどうかはついに分からず仕舞いになってしまった。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's our new home,[」] said my mother.[prcm]
+[else]
+　「ここが新しい家よ」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、母が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...[」][lr]
+[else]
+　「…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you still sulking over it?[」][lr]
+[else]
+　「なにをまだぶうたれてるのよ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She let out a sigh as I focused my attention on the view outside, refusing to look her in the eye.[prcm]
+[else]
+　私が窓の外を見たまま、目も合わせないでいると母はため息をついた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You'll make new friends here right away.[」][lr]
+[else]
+　「友達ならこっちでもきっとすぐにできるわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What if I don't?[」][lr]
+[else]
+　「いなかったらどうするの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look how many houses there are. Plenty of children living here, I'm sure.[」][lr]
+[else]
+　「こっちはお家も多いし、子供もたくさんいるわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...[」][lr]
+[else]
+　「…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's a park behind this building. You can go take a look.[」][prcm]
+[else]
+　「ここの裏に公園があるから、見てくるといいわ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My mother turned the ignition key to stop the engine and got out of the car. She then opened the door on the opposite side of me and began unloading our bags.[prcm]
+[else]
+　母はキーを回しエンジンを止めてバタンと外に出ると、私のいる後部座席の反対側のドアを開けて荷をおろし始めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I suddenly noticed a small girl walking in front of our new house.[lr]
+[else]
+　ふと、アパートの前を小さな女の子が歩いていくのが見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was carrying a red basket and a trowel.[lr]
+[else]
+　手には赤いバケツとスコップを持っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She circled around the building, disappearing behind it.[lr]
+[else]
+　その子はアパートの前を横切ると、その裏の影へと歩いていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I got out of the car and started running after her, I heard my mother's voice from behind.[prcm]
+[else]
+　すぐに車を降りて、そのあとを追いかけていくと母が声をかけた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, Takako! Where are you going?[」][lr]
+[else]
+　「ちょっと貴呼、どこに行くの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll go look at that park.[」][prcm]
+[else]
+　「公園見てくる」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence0_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence0_1_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+[wait time=1000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence0_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence0_2_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=8000]
+[fadeoutbgm time=3000]
+[wait time=5000]
+
+
+
+
+;＊OP
+
+[seopt buf=3 volume=50]
+[playse buf = 3 storage=se168.ogg loop =true]
+[wait time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=500]
+[fadeinbgm storage="bgm31" time=1500 loop=true]
+[backlay]
+[wait time=5000]
+[msgon_b]
+[clickskip enabled=true]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw her jet black locks flicker through the slits of my half-closed eyelids.[prcm]
+[else]
+　黒いまぶたの隙間で黒い髪が揺れている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko turned to me as I extended my hand, her long, black hair swaying in the air.[lr]
+[else]
+　肩肘を曲げて手を出すと、隣で佐知子がその黒い髪を揺らしてそちらを見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She gave me her hand in response.[lr]
+[else]
+　それからその手を握った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could feel moist warmth from her palm.[lr]
+[else]
+　手のひらにしっとりと暖かい感触が伝わる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even without looking, I could feel her familiar, slender fingers intertwining with mine.[prcm]
+[else]
+　見なくてもそこに、よく知っている細くて形の綺麗な指の形があることが分かる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I absentmindedly gazed at her, she parted her lips.[prcm]
+[else]
+　上を向いてぼんやりしていると、佐知子の声がした。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg25_1=1"]
+[fbfscale_image layer=1 page=back storage="fgimage/s_img/ev25_b" visible=true left=0 top=-150 opacity=0]
+[trans method = crossfade time=1]
+[wt]
+[fbfscale_move time=2000 path="(-250,-150,255)(-500,-150,255)" layer=1]
+[wait time=2500]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="ev25_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you thinking?[」][lr]
+[else]
+　「何考えてる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I tried to remember when we last held hands like this.[l] As I did, the memories of how we went to a festival came flooding into my mind.[」][lr]
+[else]
+　「こんな風に手をつないだのって、いつ以来だったかなって。[l]そうしたら、縁日に一緒に行ったときのことを思い出してた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Which festival?[」][lr]
+[else]
+　「いつの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The one we went to back in kindergarten. Or was it elementary school?[l] The same one where we got all those goldfish.[」][lr]
+[else]
+　「幼稚園か、小学生のとき。[l]金魚たくさん掬ったとき」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm pretty sure that wasn't the last time we held hands.[」][prcm]
+[else]
+　「全然最近じゃないわね」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you remember how many fish we got?[」][lr]
+[else]
+　「覚えてる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, was it twenty or so?[」][lr]
+[else]
+　「二十匹くらいだった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It didn't go that high. I think it was either eighteen or nineteen.[」][lr]
+[else]
+　「二十行かなかった、多分十八か十九」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When I came back after looking around some other shops, I found your bowl so full of fish they could barely fit in anymore.[」][lr]
+[else]
+　「私が出店をひと回りして帰ってきたとき、既にお椀三つ分くらい端に浮かべてたわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You bought me a caramel apple back then, right?[」][lr]
+[else]
+　「あの時、りんご飴買ってきてくれてたよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did I?[l][msgoff][backlay][eval exp="sf.cg25_7=1"][fbfscale_image storage="ev25_7" page=back layer=base][trans method = crossfade time=300][wt][msgon] Honestly, I was more shocked by how eager you were to keep on catching goldfish despite your scooping paper already being in shambles.[」][prcm]
+[else]
+　「そうだった？[l] 
+[msgoff]
+[backlay]
+[eval exp="sf.cg25_7=1"]
+[image storage="ev25_7" page=back layer=base]
+[trans method = crossfade time=300]
+[wt]
+[msgon]
+まあそれより、あのときは呆れたわ。[l]もう紙が破れそうなのに、まだまだ取る気みたいに泳いでいる金魚をジッと見ていたから」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was waiting for it to dry up.[」][lr]
+[else]
+　「紙が乾くのを待ってたんだよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[eval exp="sf.cg25_2=1"]
+[fbfscale_image storage="ev25_2" page=back layer=base]
+[trans method = crossfade time=300]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does that actually work?[l] I mean, it'll just get wet the moment you stick it back into the water.[l] Sounds like a waste of time to me.[」][lr]
+[else]
+　「それって効果あるの？[l] 結局、次に水に入れた途端に破れたでしょう。[l]散々待った挙句」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Patience is exactly what you need to win that game.[」][lr]
+[else]
+　「時間だとかって、みんなが焦らせるから」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[eval exp="sf.cg25_3=1"]
+[fbfscale_image storage="ev25_3" page=back layer=base]
+[trans method = crossfade time=300]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She considered the space above me for a second.[prcm]
+[else]
+　そして少しの間、彼女は右上を見るように顔を動かした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Something wrong?[」][lr]
+[else]
+　「何かあった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You said it was around twenty, but I'm pretty sure we only brought one bag with us on our way back.[」][lr]
+[else]
+　「二十匹って言ったけれど。[l]貴方帰るとき、金魚の袋ひとつしか持っていなかったわよね？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You are only allowed to take up to three with you.[」][lr]
+[else]
+　「持って帰れるのは、三匹までだよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev25_7" page=back layer=base]
+[trans method = crossfade time=300]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[l] Well, that really was a waste of time, then.[」][lr]
+[else]
+　「そう。[l]本当に無駄な時間だったのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But I could choose the cutest and most energetic ones.[」][lr]
+[else]
+　「いやでも、その中から特別元気でかわいいやつを目利き厳選したからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good for you.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]One lived for quite a long time. I still remember having it around the time I got into middle school.[」][lr]
+[else]
+　「一匹は随分長生きしたなあ、中学入る前くらいまで生きてたからね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev25_3" page=back layer=base]
+[trans method = crossfade time=300]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, was it that black one with a long tail?[」][lr]
+[else]
+　「ああ、もしかして。[l]あの、黒くて尾の長いやつ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, it lived for so long I even gave it a name.[」][lr]
+[else]
+　「そう、あんまり長生きなもので名前もつけてたんだから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was it Bell or something?[」][lr]
+[else]
+　「スズかなんかだった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was it?[」][prcm]
+[else]
+　「そうだったっけ？」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Didn't you say it reminded you of a temple's bell?[」][lr]
+[else]
+　「神社の鈴に似てるからとか言ってなかった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah.[」][lr]
+[else]
+　「ああ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't 'ah' me.[l] Oh yeah, I remember there always being one goldfish in the water tank... but then it disappeared right alongside the tank itself.[l] Did it get sick?[」][lr]
+[else]
+　「ああじゃないわよ。[l]そういえば、一匹だけはずっと水槽にいたわよね。[l]いつの間にか、その水槽ごと無くなってたけど。[l]病気か何か、だったかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think it was mold or something.[l] One day I realized that it had some sort of weed growing from its scales.[l] I tried plucking it out, but...[」][lr]
+[else]
+　「カビかなんかだったと思う。[l]いつか気がついたら、鰓から糸みたいな藻が生えてた。[l]そのうち藻が増えすぎて、引っこ抜いたりしたんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko knitted her eyebrows.[prcm]
+[else]
+　それを聞くと、彼女は眉をひそめた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They grew right back.[l] I think it suffocated in the end.[」][lr]
+[else]
+　「すぐに元に戻ってしまって。[l]最期は多分、窒息したんだと思う」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that really mold?[」][lr]
+[else]
+　「それって、カビなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I found a book about goldfish diseases sometime later.[l] It said that weed doesn't grow on a live fish, but in the case of goldfish, it can grow on mold that gets stuck between its scales.[l] The book even explained how to fix it.[」][lr]
+[else]
+　「それからずっと後で、金魚の病気の本を見つけたのよね。[l]そもそも生きてる魚に藻は生えないけど、金魚についたカビの上からなら、藻が生えることもあるって。[l]治し方も書いてあった」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[eval exp="sf.cg25_4=1"]
+[fbfscale_image storage="ev25_4" page=back layer=base]
+[trans method = crossfade time=300]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Would have been nice if you found that book earlier.[」][lr]
+[else]
+　「もう少し、早く知っていればよかったわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][prcm]
+[else]
+　「そうだね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes and listened to the silence, but it was so overwhelming I ended up opening my mouth again.[prcm]
+[else]
+　目を閉じたまま耳を澄ませていると、あまりに静かなので口を開く。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think that goldfish resented its master for being unable to cure even a simple disease like that?[」][lr]
+[else]
+　「あの金魚は、病気の治し方も知らない主人を恨んだかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know. What do you think?[」][lr]
+[else]
+　「さあ、どう思う？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know either. I loved that goldfish, though.[l] I haven't kept another fish since.[」][lr]
+[else]
+　「わからないけど、あの金魚が好きだったんだけどな。[l]それからもう金魚飼ってないくらい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I liked how elegant it looked as it swam with its long tail behind it.[l] When I got it at the festival, it wasn't that long, you know, but then it grew really fast.[l] It was always different from the others.[」][lr]
+[else]
+　「尾が長くて、泳ぐとゆらゆらするのがなんとも優雅で好きだった。[l]縁日で掬ったときは短かったのに、いつの間にかすごく長くなってた。[l]それくらいから、特別気に入ってたんだ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev25_2" page=back layer=base]
+[trans method = crossfade time=300]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=1500]
+[fadeoutse buf=3 time=1500]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wf buf=1]
+[wait time=3000]
+[seopt buf =0 volume=50]
+[playse buf = 0  storage=se80.ogg loop=true]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The usual spasm woke me up.[prcm]
+[else]
+　いつもの発作で目が覚めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My ears were ringing.[lr]
+[else]
+　耳鳴りが始まっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lying atop my bed in the fetal position, I prepared myself to endure its ever loudening sound.[prcm]
+[else]
+　身を小さくして徐々に大きくなる耳鳴りに備えた。[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se168_2.ogg loop =true]
+
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="item17" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the clock next to my pillow.[lr]
+[else]
+　目を動かし、枕元の時計を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It hadn't even been an hour since I went to sleep.[prcm]
+[else]
+　床についてから、一時間も経過していなかった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=1000]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item18" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The room was weakly illuminated by a lone light bulb.[lr]
+[else]
+　部屋はナツメ球の小さな光で見えていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Soon enough, the string next to the light bulb entered my vision.[prcm]
+[else]
+　ふと、ナツメ球のとなりから下がる紐が目に入る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I stared intently at the plastic knob at the end of the string, I began to feel like it started to move.[lr]
+[else]
+　ジッとして紐の先にあるプラスチックの取手の動きを見ようと目を凝らすと、ゆっくりと動いている様に見え始めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It grew bigger and bigger, drawing closer to me at a terrible speed before finally disappearing.[prcm]
+[else]
+　次第に大きく揺れると同時に、取っては迫り来るように巨大になり凄まじい速さで目の前を通り過ぎる。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=1000]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked away,[clickskip enabled=false][seopt buf=0 volume=100][quake hmax=0 vmax=50 time=200][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg][wait time=50][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg][wait time=50][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg loop=true][clickskip enabled=true] only to be met with a noise even more unbearable.[lr]
+[else]
+　ようやく視線を外すと、
+
+[clickskip enabled=false]
+[seopt buf=0 volume=100]
+[quake hmax=0 vmax=50 time=200]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg]
+[wait time=50]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg]
+[wait time=50]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg loop=true]
+[clickskip enabled=true]
+
+
+今度は身を粉々にするような音量となった耳鳴りが襲った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes and covered my ears, stiffening my entire body, waiting for the storm to pass.[prcm]
+[else]
+　目と耳を固く閉ざし、身を石のように硬直させて、感覚の嵐が過ぎ去るのを待つ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered a surefire way to fall asleep quickly. A trick taught to me by a friend.[lr]
+[else]
+　頭の中で、友達が教えてくれたすぐに眠れる方法を思い出す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had to imagine myself floating on the surface of an empty sea.[lr]
+[else]
+　それは、何もない海の上に浮かぶイメージだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Yet right now, a storm was ravaging my personal sea, making it a less than ideal place for relaxation.[lr]
+[else]
+　しかし今、海の上は嵐が吹きすさび、すぐに眠りが訪れるような気配はない。[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt sick. Tremendously so.[prcm]
+[else]
+気分がとても悪い。[prcm]
+[endif]
+
+
+
+;※雨の音（葬式の雨の音と同じ）ー徐々に小さく。
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fadeoutse buf=0 time=3000]
+[fadeoutse buf=1 time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[seopt buf=1 volume=100]
+[seopt buf=3 volume=100]
+[jingle6]
+
+@jump storage="001.ks" target=*001
+
+

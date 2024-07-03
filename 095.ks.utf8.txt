@@ -1,0 +1,972 @@
+*095| Cooking
+; *095|料理
+[fbfstoretitle eng="Cooking" jp="料理"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+[playbgm storage="bgm17"]
+[fbfscale_image storage="bg87" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 116"]
+[eval exp="sf.ItRelease = 117"]
+[endif]
+
+*| Cooking
+; *|料理
+[fbfstoretitle eng="Cooking" jp="料理"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa.[」][lr]
+[else]
+　「おっと」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My knife slipped and instead of peeling the potato, almost ended up slicing off my fingers.[prcm]
+[else]
+　じゃがいもの皮を切る包丁が滑って、じゃがいもを持つ指を切りそうになる。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h12" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time= 500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h14" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time= 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, give that to me.[」][lr]
+[else]
+　「ちょっと貸してください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My potatoes got taken away.[lr]
+[else]
+　手からじゃがいもを奪われる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko pressed the kitchen knife against the potato, and using only her thumb, guided the blade to swiftly peel the skin off the thing.[lr]
+[else]
+　[ruby text="まゆ"]繭[ruby text="こ"]子はじゃがいもに包丁を乗せると、ぺたぺたと包丁を持つ手の親指を進めながらすいすいと皮をむいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She picked up the peeled potato with the tip of the knife and tossed it into the bowl.[prcm]
+[else]
+　刃の角で芽を取ると、コロン、とボールにいれた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I got it.[」][lr]
+[else]
+　「だいたい分かった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up another potato, pressed the blade against it, and using only my thumb...[prcm]
+[else]
+　もう一つじゃがいもを取ると、刃を乗せて親指を進めたところまで刃を滑らせる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h04" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, just like that.[」][lr]
+[else]
+　「そんな感じです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa.[」][lr]
+[else]
+　「おっと」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h14" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I almost severed my fingers.[lr]
+[else]
+　刃が滑りすぎて、指を切りそうになった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the potato on the chopping board and sliced it into a rectangle.[lr]
+[else]
+　まな板にじゃがいもを置くと、面で削ぐように皮を切り落とす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It became half its previous size, but at least my fingers were safe.[prcm]
+[else]
+　じゃがいもの角度を変えて、同じように皮をそぐ。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h05" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're wasting food.[」][lr]
+[else]
+　「勿体ない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Geez, give me a break.[l] It's not like we're short on potatoes or anything.[」][lr]
+[else]
+　「もう、少しくらいいいや。[l]芽もきちんと取れるし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't cook much, do you?[」][lr]
+[else]
+　「あまり料理はしないんですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][prcm]
+[else]
+　「やらない」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You have made curry before... right?[」][lr]
+[else]
+　「カレーは作ったことあるんですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A few times, using a curry sauce mix.[l] This is my first time cooking with spice powder, though.[」][lr]
+[else]
+　「何度かは。[l]粉からは初めてだけど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h12" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your... first time...?[」][lr]
+[else]
+　「初めて？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't get your panties in a bunch, okay?[l] I've written down the recipe.[」][lr]
+[else]
+　「大丈夫、だいじょうぶ。[l]ちゃんとレシピはメモしてあるから」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the little paper hanging on one of the cookware hooks on the wall.[prcm]
+[else]
+　調理具ようの取っ手に引っ掛けてあるメモを見る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Add salad oil and some butter, then warm the pot.[r]
+Add shredded onion to fill the entire pot.[lr]
+[else]
+　鍋にサラダ油とバターを引いて温めたところに、ボールいっぱいの千切り玉ねぎをいれる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The oil vapor began hurting my eyes as I squinted into the pot, stirring it up with a rice scoop.[lr]
+[else]
+　しゃもじでくるくる回しながら、じっと見ていると、煙で目がしみてくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled the cord to turn the ventilator on.[prcm]
+[else]
+　紐を引いて換気扇を回す。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h06" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's going to be quite a bit of work to prepare a serving for four.[l] Is there anything I can help with?[」][lr]
+[else]
+　「四人分だと、結構な量ですね。[l]何か手伝いましょうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm good. I think it'd be better if you took care of that instead.[」][lr]
+[else]
+　「ここはいいから、繭子はあっちの仕上げをやってて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed toward the inner yard.[prcm]
+[else]
+　と、中庭のほうを指した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You may be right.[l] I'm leaving this to you, then.[」][lr]
+[else]
+　「そうですね。[l]任せましたよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, it's starting to smell nice.[」][lr]
+[else]
+　「いい香りがしてきた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard Mayuko leave the kitchen.[prcm]
+[else]
+　後ろで、繭子が調理場を出ていく音がした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]stir stir*[prcm]
+[else]
+　くるくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r][r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]stir stir*[l] *stir stir*[prcm]
+[else]
+　くるくる。[l]くるくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the clock on the wall to the left.[lr]
+[else]
+　左の壁に掛けてある時計を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Three minutes had passed since I started sautéing the onions.[lr]
+[else]
+　鍋を炒め始めて、三分程が経過していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Aside from the clock, there were various cooking utensils — frying pans and ladles — hung on the wall.[lr]
+[else]
+　壁には時計の他にも、フライパンやお玉などの調理器具がかけられてある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Bottles of salt and sugar rested on the shelf in front of me, as well as the can of cinnamon and a bag of cardamon I bought yesterday.[lr]
+[else]
+　正面の棚には塩や砂糖の瓶のほかに、買い出したシナモンやカルダモンの缶や銀の袋がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a window below the shelf, through which I could see a part of the inner yard.[prcm]
+[else]
+　棚の下には小さな窓があって、面している中庭の一部が見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]stir stir*[lr]
+[else]
+　くるくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped stirring in the same direction and tried flipping the onions over.[lr]
+[else]
+　と、同じ方向に向けて回すのをやめて、玉ねぎを縦に返すと煙が上がる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A wisp of smoke escaped from the bottom of the pot, making me cough.[lr]
+[else]
+　煙にむせてしまう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I hurriedly lowered the intensity of the flame.[prcm]
+[else]
+　摘みを回して、火を抑えた。[prcm]
+[endif]
+
+
+
+;///////
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fadeinse buf=1 storage="se120.wav" time=1000 loop=true]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg87" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The onions on the bottom all looked pretty brown.[lr]
+[else]
+　玉ねぎの色がきつね色をすぎて褐色になる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once the onions release water and settle on the bottom of the pot, add water, curry powder, and seasonings, then simmer.[lr]
+[else]
+　鍋いっぱいにあった玉ねぎの水分がとんで、鍋のそこに残るのみとなると、水とカレー粉と調味料を加えて煮込む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko returned to the kitchen by the time my dish turned into curry vegetable soup.[prcm]
+[else]
+　カレー味の野菜スープが出来上がると、繭子が調理場に戻ってくる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h02" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It smells good.[」][lr]
+[else]
+　「いい匂いですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]'Cause I made everything myself, starting with the powder.[」][lr]
+[else]
+　「粉から作ってるからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It definitely smells more like the real deal compared to the store-bought sauce mix.[」][lr]
+[else]
+　「確かにルウよりも、本格的な匂いがします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I scooped up a bit of it with my rice scoop, I saw it drip down like soup.[prcm]
+[else]
+　しゃもじを鍋から浮かせると、スープのように滴った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I might have made it a bit too thin.[」][lr]
+[else]
+　「少し薄いかも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe it just needs more time to simmer.[」][lr]
+[else]
+　「煮こみ足りないんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「そうかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made the flame a bit stronger.[prcm]
+[else]
+　カチャ、と少し摘みをまわして少しだけ火を強くした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]By the way... what are you doing there?[」][lr]
+[else]
+　「ところでそれ、なにしてるの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h23" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's going to be a surprise.[」][lr]
+[else]
+　「おたのしみ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko took a bowl from one of the shelves, and added flour, salt, and some water into it.[prcm]
+[else]
+　繭子はカチャカチャ、と棚からボウルを取り出して、小麦と塩と水を捏ねている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Udon?[l] I'm not going to turn this into udon curry.[」][lr]
+[else]
+　「うどん？[l] カレーうどんにはしないからね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h08" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It won't be udon.[」][prcm]
+[else]
+　「違います」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's right. Remember how there was a couple with huge shopping bags walking ahead of us back at the shopping district?[」][lr]
+[else]
+　「そういえば、昨日の商店街でさ、前に大きな買い物袋を持ったカップルが歩いてたの覚えてる？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h03" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was there?[」][lr]
+[else]
+　「そうでしたか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When I tried to get past them, I hit my head against the sign.[l] Look.[」][lr]
+[else]
+　「追い越そうとしたら、買い物袋にあたって、それから喫茶店の看板に頭ぶつけたの。[l]ほら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, I remember now.[」][lr]
+[else]
+　「ああ、あのときの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I brushed aside the hair from my forehead to show Mayuko my lump.[prcm]
+[else]
+　前髪をかきあげて、繭子に見せる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h11" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Looks like it's swollen up a little.[」][lr]
+[else]
+　「少し腫れてますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's why I keep saying it's rude to take the entire sidewalk for yourselves.[」][lr]
+[else]
+　「だから往来を並んで歩くのはいかんと常日頃から言ってるわけ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h02" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You could have said 'excuse me' and had them open some space.[」][lr]
+[else]
+　「失礼します、って言って通してもらったら良かったんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd probably hurt the guy's feelings if I made him look like a fool in front of his girlfriend.[」][prcm]
+[else]
+　「他人にそんな注意を言われたら、彼氏が少し恥ずかしいんじゃない」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're actually considerate when it comes to that?[l] Hm, but I see bicyclers ring their bells all the time.[」][lr]
+[else]
+　「それは気にするんですね。[l]でも自転車とかだと、わりと気にせずに鈴は鳴らしません？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if I should be carrying a bell, too.[」][lr]
+[else]
+　「歩くときにも自転車みたいに鈴を携帯するべきかな」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h04" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can take it off a bicycle. It's not that hard.[」][lr]
+[else]
+　「取り外して、持っていきます？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That might be a good idea.[」][prcm]
+[else]
+　「それはいいかも」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, but don't you think it would result in an even more embarrassing situation?[」][lr]
+[else]
+　「いや、そんなので注意されたら、余計恥ずかしいです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then what am I supposed to do?[」][lr]
+[else]
+　「どうすればいいの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe you don't need to get past them and just stay behind?[」][lr]
+[else]
+　「追い越さなければいいじゃないですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふうむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a bubbling sound and glanced at the pot.[lr]
+[else]
+　コポコポ、と泡を吹き出した鍋を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I licked a bit of my dish off the side of the ladle.[prcm]
+[else]
+　お玉で少しとろみの付いたカレースープを掬って舐める。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It tastes... burned.[」][lr]
+[else]
+　「なんか、焦げ臭い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko stopped kneading the dough.[prcm]
+[else]
+　生地をこねていた繭子の手が止まる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can I see?[」][lr]
+[else]
+　「ちょっといいですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She took the ladle and had a taste of the curry.[prcm]
+[else]
+　お玉をとって、一口啜る。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h05" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's burned.[」][lr]
+[else]
+　「焦げてますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do I do?[」][lr]
+[else]
+　「どうしよう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko scooped up a bit of each ingredient from the pot, testing their taste.[prcm]
+[else]
+　繭子は鍋の中の具を取って、少しずつ口にする。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Some of the ingredients seem to still be okay.[l] Do you have any curry powder left?[」][lr]
+[else]
+　「まだ大丈夫なものもありますね。[l]カレー粉はまだありますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Almost none...[」][lr]
+[else]
+　「そんなに残ってない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's too bad.[」][lr]
+[else]
+　「参りましたね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the clock — it was 3 PM.[prcm]
+[else]
+　時計は、三時頃を指していた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutse buf=1 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="096.ks" target=*096
+

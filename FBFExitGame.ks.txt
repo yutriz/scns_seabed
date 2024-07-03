@@ -1,0 +1,7 @@
+title: 
+Some text may not be added by this script, e.g. 
+	[if exp=kag.FBFPrepareLanguage() == 1]
+	[r]
+	　と、母が言った。[prcm]
+	[endif]
+0 place(s) of [if exp=kag.FBFPrepareLanguage() == 1] found, pleaze check the **.ks.utf8.txt file manually

@@ -1,0 +1,325 @@
+*159_3| Dark town
+; *159_3|暗い街
+[fbfstoretitle eng="Dark town" jp="暗い街"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm37"]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg103_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h11" visible=true left=-70 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 212"]
+[eval exp="sf.ItRelease = 213"]
+[endif]
+
+*| Dark town
+; *|暗い街
+[fbfstoretitle eng="Dark town" jp="暗い街"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ran into Sanae near the spiral staircase in the lobby.[lr]
+[else]
+　ロビーから二階へ上がる螺旋階段の出口でバッタリと[ruby text="さな"]早[ruby text="え"]苗に会う。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h03" visible=true left=-70 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was looking for you,[」] said Sanae as she approached me.[lr]
+[else]
+　早苗はこちらを見つけると近づいてきて「丁度良かった」と言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She told me she was just on her way to the night duty room after finding my room empty.[prcm]
+[else]
+　部屋に私がいなかったので、今から宿直室を見に行くところだったと言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's up?[l] I'm not working today.[」][lr]
+[else]
+　「どうしたの？[l] 仕事は休みだよね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h02" visible=true left=-70 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You told me you wanted me to recommend you some books.[」][lr]
+[else]
+　「前におすすめの本を教えて欲しいと言ってましたよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the cover of the book she was holding.[lr]
+[else]
+　早苗の持っている本の表紙を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had an illustration depicting a sci-fi cityscape with a semi-futuristic look.[lr]
+[else]
+　側面に近未来SFチックな街の絵が描かれたバケツのイラストだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered seeing Sanae read that book before.[lr]
+[else]
+　いつか早苗が読んでいた本だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I saw you reading that.[」][prcm]
+[else]
+　「最近よく読んでた本だね」と聞くと早苗は頷いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a mystery novel with lots of action elements. I think you'd enjoy it.[」][lr]
+[else]
+　「ミステリなんですけどアクションの要素もあって退屈しないし、貴呼さんに向いてるかと思いますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The mystery itself is pretty good, too,[」] she added.[prcm]
+[else]
+　それから「ミステリ要素も見ごたえがあります」と付け加えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds fun, but I'm a bit busy right now.[l] I'll swing by your room to pick it up later, okay?[」][lr]
+[else]
+　「楽しみだけど今から少し用事があってね。[l]本はまたあとで取りに行くよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h01" visible=true left=-70 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Fine by me.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae nodded and returned to her room.[prcm]
+[else]
+　わかりました、と言って早苗は本を持って部屋に戻っていった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg41_3" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued down the corridor in the opposite direction, slowing my step so Sanae wouldn't see me stop in front of the locked room. I waited for her to turn a corner.[lr]
+[else]
+　こちらも早苗と反対方向にある鍵の部屋へ向かい廊下を歩く。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　早苗が角を曲がるより先にこちらが鍵の部屋にたどり着いてしまわないよう、歩を調節する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a glance over my shoulder — Sanae was nowhere to be seen.[lr]
+[else]
+　鍵の部屋の前で振り向くと、廊下に早苗の姿は見えなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I quickly surveyed the rest of my surroundings, making absolutely sure there wasn't anyone on the opposite end of the corridor, either.[lr]
+[else]
+　さらに振り返り反対側の廊下にも誰もいないことを確認した。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se77.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I then took the key out of my pocket and stuck it into the lock.[prcm]
+[else]
+　ポケットから鍵を取り出して鍵穴にさした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On second thought, I didn't necessarily have to hide this from Sanae.[lr]
+[else]
+　考えてみると、そこまでして早苗に隠す必要はないように思えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She wouldn't tell Mayuko about it if I asked her to keep it a secret. Besides, all she would've likely done was warn me to be careful. I doubted she would've tried to stop me.[lr]
+[else]
+　口止めしておけば早苗は[ruby text="まゆ"]繭[ruby text="こ"]子には言わないだろうし、言ったところで少し注意されるだけのような気もする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Still, I didn't want to force her to lie for me, so perhaps this was for the best.[prcm]
+[else]
+　それでも、早苗に嘘を付かせるのも悪いのでこれで良かったのかもしれない。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se41.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned the key with a click, and the lock opened.[lr]
+[else]
+　鍵を回すと中で留め金が外れる音がして鍵が開く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The handle no longer resisted me.[prcm]
+[else]
+　ノブは抵抗もなく回る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I considered what I would do if I ended up being unable to return.[lr]
+[else]
+　ここで、もしも前に体験した通りのことが起きて私が戻って来れなくなることを考えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered promising Mayuko to tell her before going somewhere.[lr]
+[else]
+　いつか繭子に、どこかへ行く前には一言伝えて欲しいと言われたことを思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But that was already after I had entered the room and closed the door behind me.[prcm]
+[else]
+　しかしそれは、部屋に入って扉が閉じたあとのことだった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="159_4.ks" target=*159_4
+
+

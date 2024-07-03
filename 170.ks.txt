@@ -1,0 +1,18 @@
+title: 花弁
+
+洗面台で顔を洗う。
+今朝の特に冷たい水が肌を刺して目を覚ませた。
+
+水を流すと洗面台に落ちた花びらが水に浮かんで回る。
+その一片を摘まみ上げた。
+
+鏡を見ると顔の前に空の瓶が置いてある。
+私はその隣に花びらを置いてから濡れた顔をタオルで拭いた。
+髪を整えてから服を着替えて部屋を出た。
+
+Some text may not be added by this script, e.g. 
+	[if exp=kag.FBFPrepareLanguage() == 1]
+	[r]
+	　と、母が言った。[prcm]
+	[endif]
+0 place(s) of [if exp=kag.FBFPrepareLanguage() == 1] found, pleaze check the **.ks.utf8.txt file manually

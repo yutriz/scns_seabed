@@ -1,0 +1,532 @@
+*072| Chess
+; *072|チェス
+[fbfstoretitle eng="Chess" jp="チェス"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm10"]
+[backlay]
+[fbfscale_image storage="bg05_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h05" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=800]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 87"]
+[eval exp="sf.ItRelease = 88"]
+[endif]
+
+
+*| Chess
+; *|チェス
+[fbfstoretitle eng="Chess" jp="チェス"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A gust of wind found its way into the room, making Narasaki's hair flutter as she stared down at the chessboard.[lr]
+[else]
+　テーブル上の盤を見つめる[ruby text="なら"]楢[ruby text="さき"]崎の髪が風に靡いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The afternoon sky was colored in a pale, grayish hue.[lr]
+[else]
+　昼ごろに翳りだした空は薄く灰色の雲がかかっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see dense clouds drifting our way from beyond the mountains.[prcm]
+[else]
+　山の向こうには濃い雲が見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's gotten pretty cold. Can I close the window?[」][lr]
+[else]
+　「少し冷えてきたみたい、窓閉めるわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Go ahead.[」][lr]
+[else]
+　「ああ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki answered without looking away from the board, keeping her palm on her chin.[prcm]
+[else]
+　顎に手を当てて盤を見ながら楢崎が返事をする。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The final breeze that snuck inside as I was closing the window made a high-pitched, flute-like sound due to its passage of entry getting narrower, but ceased the moment I finished.[lr]
+[else]
+　窓は閉まる瞬間に隙間から風を吹いて笛のように鳴ったが、パシリと閉まるとすぐに音は止まった。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I latched the window and returned to the table to meet Narasaki's gaze.[prcm]
+[else]
+　掛け金を落としてテーブルに戻ると、楢崎はこちらに目を合わせてから盤を見た。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="item07" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=800]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's your turn,[」] she declared.[lr]
+[else]
+　「どうぞ」と楢崎が言う。[lr]
+[endif]
+
+[r]
+
+[playse buf = 0 storage=se105.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached out to the queen and took her pawn without sitting down.[stopse][lr]
+[else]
+　私は立ったまま手を伸ばして女王の駒を取ると、兵士を押しのけた。[stopse][lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The board let out a pleasant clang as I placed my piece on its surface.[lr]
+[else]
+　マスに駒を乗せると短くて高い小気味のいい音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down, crossed my legs, and once again picked up the book I'd been reading.[prcm]
+[else]
+　それから椅子に座って足を組みなおしてから、伏せていた本を取って開いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The board and the pieces Narasaki brought with her were smaller than usual and were made of glass.[lr]
+[else]
+　楢崎が持ってきたチェスは本格的なものよりも一回り小さく、盤も駒もガラスで出来ていた。[lr]
+[endif]
+
+[r]
+;★チェス画像編集の必要有り
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The two opposing sides, rather than being black and white, were crafted from transparent and opaque glass.[prcm]
+[else]
+　敵味方の色は通常の白と黒ではなく、擦りガラスの白い駒と透明なガラスの駒で分けられている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki's hand stopped mid-way to her knight.[lr]
+[else]
+　楢崎の手が自陣の馬に伸びかけて止まる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then reached out toward one of her pawns, yet once again, her hand stopped and returned to her chin instead.[lr]
+[else]
+　次に手は前方の兵士にも伸びたが、結局もとにあった顎の方へと帰っていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A black kite outside let out an ear-piercing cry.[prcm]
+[else]
+　ピーヒョロロロ、と外で[ruby text="とび"]鳶が鳴いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think you could have done some serious damage with that first move.[」][lr]
+[else]
+　「その手、前者ならいいところまで攻められるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, but I don't think it would've been enough to break through your wall.[」][lr]
+[else]
+　「だけど壁が厚くて破りきれないねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you go this way, my lineup will get to the point faster.[l] If you attack, though, you could take my rook at the front.[」][lr]
+[else]
+　「このまま進めてもこちらの布陣の方が足が速いわよ。[l]今攻めれば前衛の戦車は持っていけるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tilted my book slightly to see the board.[prcm]
+[else]
+　手に持っている本を少し傾けて、盤を見て言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Another cry of the kite reverberated across the mountain range outside.[lr]
+[else]
+　また山のほうから鳶の笛が聞こえる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the gray sky but saw no birds from this angle.[prcm]
+[else]
+　しかし、灰色の空を見ても鳶の姿は見えなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if it's going to rain today.[」][lr]
+[else]
+　「雨が降るのかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, then maybe I should do this.[l] The radio said the latter half of today would be cloudy with weak rain.[」][lr]
+[else]
+　「じゃあ、こっちかねえ。[l]今朝方のラジオは、曇りのち雨だと言っていたね」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se105.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki's knight moved forward, taking out my pawn.[prcm]
+[else]
+　カチ、と楢崎の馬が飛んでこちらの兵士を跳ねた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg05_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you notice any changes in your mood after coming here?[」][lr]
+[else]
+　「こっちに来てから気分的に変わったことはあるかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[」][lr]
+[else]
+　「特には無いわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're not feeling anxious or ill for no apparent reason?[」][lr]
+[else]
+　「何か不安になったりとか、気分が悪くなることはないのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I feel pretty calm.[l] Are you asking me because it's going to rain?[」][lr]
+[else]
+　「気持ちは落ち着いているわ。[l]雨だからそんなことを聞くの？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h13" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's not related to the weather, just...[」][lr]
+[else]
+　「天気は関係ないさ、ただねえ」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se105.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The battle on our board was proceeding just as we had foreseen.[prcm]
+[else]
+　カチカチカチ、とお互いが想定していた場面での戦況が進んでいく。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the cry of a bird again, but this time, it sounded closer.[lr]
+[else]
+　ピッピッ、と近くで鳥の鳴き声が聞こえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Raising my face, I saw a blue bird on the windowsill outside.[prcm]
+[else]
+　そちらを見ると、窓の柄に瑠璃色の鳥が留まっていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You sure hear birds a lot in this place.[」][lr]
+[else]
+　「ここは鳥の笛がよく聞こえるね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They seem to pass through this area often while migrating during winter.[l] The mountain here is full of evergreen trees, which must attract them.[」][lr]
+[else]
+　「冬鳥が来てるみたいね。[l]この辺りの山は常緑樹が多いからきっと居心地がいいのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Migratory birds?[l] It's hard to believe something that small can actually cross the sea.[」][lr]
+[else]
+　「渡り鳥か。[l]あんなに小さいのに、よく海を越えてきたもんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've heard they can put half of their brain to sleep as they close one of their eyes.[l] This allows them to keep flying for long periods of time without rest.[」][lr]
+[else]
+　「渡り鳥は片目を閉じて脳の半分を眠らせることが出来るそうよ。[l]半球睡眠って言ってそれで休みながらも飛び続けられるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][prcm]
+[else]
+　「へえ」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h02" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki moved one of her pieces and considered the bird beyond the window with curious eyes.[lr]
+[else]
+　そう感心したように息をつくと、駒をひとつカチ、と動かしてから窓の外の小鳥を見つめた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The little thing let out a cry and jumped around on its thin legs a few times.[prcm]
+[else]
+　小鳥はひとつ鳴くと細い足でちょんちょん、と跳ねた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="item07" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=800]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Hearing Narasaki move a piece again, I shifted my gaze back to the board.[lr]
+[else]
+　カチ、と楢崎が駒を進める音が聞こえて盤上に目を戻す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Although at the cost of a few pieces, she managed to prevent her king from being surrounded, and was now gearing up for a new attack.[lr]
+[else]
+　点数を落としながらも包囲を逃れた楢崎の王が自陣の奥で新しい布陣を完成させつつあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I began reaching out toward one of the pieces I failed to evacuate in time, but stopped.[lr]
+[else]
+　私は逃げ遅れた駒に手を伸ばしかけて止める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized that if I took it, I'd be opening a way for Narasaki's queen to get inside the back of my formation.[lr]
+[else]
+　気づかずにその手を打てば、数手先で楢崎の女王がこちらの陣に斬り込む隙間ができる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki raised one of her eyebrows in an obviously exaggerated way.[prcm]
+[else]
+　私が手を止めると、楢崎は海外の俳優みたいに片眉を上げた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You make it look like you aren't thinking anything, but you're actually conniving and laying traps all over the board.[l] That's so like you.[」][lr]
+[else]
+　「考えてないみたいにみせておいて、実は仕組んでいたりするのね。[l]そういうのあなたらしいわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hahaha, not at all. It was just a coincidence.[」][prcm]
+[else]
+　「ははは。[l]そんなことは無いさ、たまたまだよ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="072_2.ks" target=*072_2
+
+

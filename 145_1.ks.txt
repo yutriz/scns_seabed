@@ -1,0 +1,15 @@
+title: 最後の日記
+
+開いたページの冒頭には次の日記の日付があった。
+その日記を読む前にページを捲ってみた。
+二ページ先から文字は無い。
+開いたところは白い紙に罫線が引かれてあるだけだった。
+
+ページを戻って、今から読もうとしていた日付に戻る。
+何も書かれていないページから、その日付までの間には別の日付はなかった。{lr}
+Some text may not be added by this script, e.g. 
+	[if exp=kag.FBFPrepareLanguage() == 1]
+	[r]
+	　と、母が言った。[prcm]
+	[endif]
+1 place(s) of [if exp=kag.FBFPrepareLanguage() == 1] found, pleaze check the **.ks.utf8.txt file manually

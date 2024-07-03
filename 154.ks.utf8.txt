@@ -1,0 +1,1265 @@
+*154| Kunugihara Sanatorium
+; *154|クヌギハラ療養所
+[fbfstoretitle eng="Kunugihara Sanatorium" jp="クヌギハラ療養所"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm53"]
+[wait time=1500]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 197"]
+[eval exp="sf.ItRelease = 198"]
+[endif]
+
+
+*| Kunugihara Sanatorium
+; *|クヌギハラ療養所
+[fbfstoretitle eng="Kunugihara Sanatorium" jp="クヌギハラ療養所"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw a mansion through the leaves covering the mountain road.[lr]
+[else]
+　蛇行する道の先、枝葉の間に屋敷が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon reaching the black iron fence, I passed through the red brick gates.[lr]
+[else]
+　黒鉄の柵を辿り、赤いレンガを積み上げた柱が挟む門を抜ける。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se76_2.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a sign reading "Kunugihara Sanatorium" on them.[lr]
+[else]
+　門の柱には「[ruby text="くぬぎ"]椚[ruby text="はら"]原[ruby text="りょう"]療[ruby text="よう"]養センター」と書かれていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I parked my car by the mansion and turned off the engine.[prcm]
+[else]
+　門を抜けた敷地内の適当なところに車をとめると、エンジンを切ってキーを外した。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg51_4" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped out of the car and continued toward the entrance.[lr]
+[else]
+　車を降りて、正面入口へと向かう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The mansion was built of gray and red bricks, its windows and doors boasting sturdy wooden frames.[lr]
+[else]
+　療養所の建物自体は灰色の石と赤いレンガで出来ており、窓や扉は木製だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It looked very much like the mansion Sachiko stayed at, but in terms of design, it was an even older structure.[prcm]
+[else]
+　造りは佐知子の泊まっていた洋館に似ていたが、意匠としてはこちらの方が少し古かった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule8" vague=50 time=800]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg50_1" page=back layer=base]
+[trans method=universal rule="rule8" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its front doors were open. I could see the lobby and the counter from outside.[lr]
+[else]
+　正面入口の両開きの扉は開け放たれており、奥のロビーとカウンターが見えていた。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se149.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pressed the call bell on the counter.[lr]
+[else]
+　カウンターの上にある呼び鈴を鳴らす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A stringent sound reverberated across the lobby, but I received no reply.[prcm]
+[else]
+　チン、と硬い鉄の音がロビーに響いたが、そのどこからも返事は無かった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is nobody here?[」][lr]
+[else]
+　「誰かいないのか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Someone glanced at me through the door window on the other end of the lobby.[lr]
+[else]
+　ロビーの奥を抜ける通路の向こうの扉の窓から、誰かがこちらを伺っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After our eyes met, the person disappeared.[lr]
+[else]
+　目が合うと向こうへと去ってしまった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I hurried to the door.[prcm]
+[else]
+　早足でそちらに向かう。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[playse buf = 0 storage=se54.ogg]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg45_1" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened it to find myself in the inner yard of the building.[lr]
+[else]
+　扉を開けると中庭に出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a tall Persea tree in the middle.[lr]
+[else]
+　中庭の中心は土手のように薄く盛り上がっており、中心の辺りに背の高い椨の木があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted the back of a woman with braided hair moving toward the west wing.[prcm]
+[else]
+　大きな幹の向こう側にある西棟の角へと、おさげをした女の後ろ姿が去っていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh? Are you a guest?[」][lr]
+[else]
+　「あら、お客さん？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Hearing a voice from above made me turn around. When I did, I saw a woman in a nurse outfit looking at me through the guardrails on the building's roof.[prcm]
+[else]
+　上からの声に振り返り、顔を上げると看護婦の格好をした女が屋上の黒い鉄柵に手をかけてこちらを見ていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry.[l] I rang your bell but no one came, so...[」][lr]
+[else]
+　「すまない。[l]ベルを鳴らしていたんだが、誰も出てこなかったもので」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My apologies.[l] I'll be down in a minute.[」][lr]
+[else]
+　「御免なさい。[l]すぐに降ります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She let go of the guardrails and disappeared, but then her head popped up again.[prcm]
+[else]
+　彼女は柵から手を離して屋根の奥へと消えるが、直ぐにまた顔を出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can wait in the lobby.[」][lr]
+[else]
+　「ロビーでお待ちください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[」][prcm]
+[else]
+　「ああ」[prcm]
+[endif]
+
+
+;///////
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[playse buf = 0 storage=se54.ogg]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg50_1" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned to the lobby and checked the clock. It seemed to be around noon... in winter.[lr]
+[else]
+　ロビーに戻って、柱時計を見ると冬の昼下がり時だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The glass panel covering its pendulum reflected my face.[lr]
+[else]
+　柱時計の振り子を収めた硝子戸に、こちらの顔が映っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I fiddled with my bangs for a while.[lr]
+[else]
+　覗き込んで、前髪を整えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I straightened my back, I felt a sharp pain in my neck.[lr]
+[else]
+　それから背筋を伸ばすと、首筋にチクリとした痛みがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I slid my hand underneath my scarf, I found a piece of hair sticking to my neck.[prcm]
+[else]
+　首後ろの襟に手を入れると、短い髪の毛が付いていた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sorry to have kept you waiting.[」][lr]
+[else]
+　「お待たせして申し訳ありません」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The young woman in the nurse outfit appeared in the lobby.[lr]
+[else]
+　出てきたのは看護婦の格好をした若い女性だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[」][lr]
+[else]
+　「こんにちは」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[l] I'm Koma Mayuko. I work here as a nurse.[」][lr]
+[else]
+　「こんにちは。[l]看護婦の[ruby text="こま"]狛[ruby text="まゆ"]繭[ruby text="こ"]子です」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm Narasaki Hibiki.[」][prcm]
+[else]
+　「[ruby text="なら"]楢[ruby text="さき"]崎[ruby text="ひびき"]響といいます」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What brings you here?[」][lr]
+[else]
+　「こちらにはどのようなご要件でしょうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I came to visit a patient.[」][lr]
+[else]
+　「患者に面会に来たんだ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just one moment.[」][lr]
+[else]
+　「少々お待ちください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The nurse calling herself Mayuko moved behind the counter and took out a form and a pen from the drawer.[prcm]
+[else]
+　と、繭子と名乗った看護婦はカウンターの中へ移動して、カウンターの内側から用紙とペンを取り出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Please fill this out.[」][lr]
+[else]
+　「こちらのご記入をお願いします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The paper she placed on the counter had columns made for time periods and patient names.[prcm]
+[else]
+　カウンターに置かれた用紙には、時間や面会者名などといった内容の記入欄があった。[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se61.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the present I bought on my way here on the counter, then took the pen from her and filled out the form with the information she wanted.[lr]
+[else]
+　ここに来る途中で買った見舞いの品をカウンターの上に置いてからペンを受け取って、
+カリカリと線の細いボールペンで用紙の記入欄を埋めて繭子に渡した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko took my form and ran her eyes through it.[prcm]
+[else]
+　繭子は用紙を受け取ってから記入欄を確認した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h21" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um... are you a friend... or a family member?[」][lr]
+[else]
+　「失礼ですがご友人ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I was merely asked to check on her by our mutual acquaintance.[l] And this is just a little something I brought.[」][lr]
+[else]
+　「いや、知人に頼まれてね。[l]その人の様子を見に来たんだ。[l]それと差し入れをね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I lifted the paper bag I'd placed on the counter.[prcm]
+[else]
+　そう言ってカウンターに置いてあった紙袋を持ち上げた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h17" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうでしたか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko returned the form to its drawer and moved out of the counter.[prcm]
+[else]
+　繭子は用紙をカウンターの内側にしまってからカウンターを出た。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h24" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Follow me.[l] I'll show you to her room.[」][lr]
+[else]
+　「こちらです。[l]お部屋まで案内します」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg103_3" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She passed by me and continued up the spiral staircase.[lr]
+[else]
+　隣を通り過ぎると、ロビーの奥にある螺旋階段を上がる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The walls along the stairway were lined with small paintings.[lr]
+[else]
+　螺旋階段の壁には壁掛けランプと小さな絵画が交互に飾ってあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I peeked through a window on our way and spotted a camphor tree in the inner yard.[lr]
+[else]
+　途中にひとつある目窓を除くと中庭の大きな楠がみえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko stole a glance at me, probably curious as to why I was looking around so much.[lr]
+[else]
+　廊下に出ると、こちらが辺りを見回していることが気になったのか、前を行く繭子が少しだけ振り返る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You have a pretty scenic place here.[」] I made up something on the spot.[prcm]
+[else]
+　「立派な建物だね」と適当に誤魔化す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It used to be the mansion of a rich family before being turned into a sanatorium.[」][lr]
+[else]
+　「この療養所は以前お屋敷として使われていたものですから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was almost identical to the Fujisaka mansion Sachiko stayed at.[prcm]
+[else]
+　実際に屋敷は佐知子が泊まっていた籘坂の屋敷にとてもよく似ていた。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 500]
+[playse buf = 1 storage=se68.ogg]
+[wait time = 1500]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko stopped in front of one of the rooms and knocked on the door.[lr]
+[else]
+　繭子はある部屋の前で立ち止まると部屋の扉をノックした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A dull, wooden sound reverberated in the hallway.[prcm]
+[else]
+　コンコンと乾いた木の音がする。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako.[l] You have a visitor.[」][lr]
+[else]
+　「貴呼さん。[l]お見舞いの方がお見えですよ」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se54.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko then seized the doorknob and opened the door.[lr]
+[else]
+　繭子は扉を叩いた手で今度はノブをつかみ扉を開いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It wasn't locked, apparently.[prcm]
+[else]
+　鍵はかかっていないようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm coming in.[」][lr]
+[else]
+　「入りますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed her into the room.[lr]
+[else]
+　繭子が先に部屋に入るのを見て、こちらもそれに続く。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg47_5" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The room itself was surprisingly empty. It only had a bed and a single shelf.[lr]
+[else]
+　部屋の中は意外なほどものが少なく、大きな家具は棚と寝台くらいしかない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako didn't seem to be around, though.[prcm]
+[else]
+　そのさっぱりとした部屋の中に貴呼の姿はなかった。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, she forgot to close her window again,[」] Mayuko mumbled as she closed the window.[prcm]
+[else]
+　「また開けっ放しにしてる」[lr]
+[endif]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg47_6" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h27" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　ポツリと呟いた繭子は部屋の開けたままになっていた窓を閉めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It doesn't look like she's around.[」][lr]
+[else]
+　「留守だったみたいだね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can I wait here?[」][lr]
+[else]
+　「ここで待っていてもいいかな？」[lr]
+[endif]
+
+[r]
+[r][cm]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course... but we have other patients here, so I would kindly ask you not to wander outside, if possible.[」][lr]
+[else]
+　「それは構いませんが、他の入寮者がいらっしゃいますので療養所内はあまり歩き回らないようにお願いしますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't worry. I'll read a book or something.[」][lr]
+[else]
+　「ここで本でも読んでいるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko began walking to the door.[prcm]
+[else]
+　繭子が部屋の扉の方へと向かう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll tell her you're here if I manage to find her.[」][lr]
+[else]
+　「お見かけしたら、お待ちしているとお伝えしますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I nodded.[prcm]
+[else]
+　こちらは頷いて答える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You should be able to find me in the lobby or the inner yard if there's anything you need.[l] The door opposite the entrance leads to it.[」][lr]
+[else]
+　「私に用があればカウンターか中庭にいます。[l]中庭にはロビー奥の廊下から出られます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll keep that in mind.[」][lr]
+[else]
+　「何かあれば伺わせてもらうよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be on my way, then.[」][lr]
+[else]
+　「それでは」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1000]
+[backlay]
+[freeimage layer=0 page=back]
+[playse buf = 0 storage=se53.ogg]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko smiled and left the room.[prcm]
+[else]
+　繭子はニコリと笑顔を見せると、部屋を出て扉を閉めた。[prcm]
+[endif]
+
+
+;//////
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Left alone, I slowly surveyed my surroundings.[lr]
+[else]
+　部屋に一人になると、部屋の中を眺めながら歩いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It really was an empty room.[prcm]
+[else]
+　本当にさっぱりとした部屋だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the shelf and spotted something shining on it.[lr]
+[else]
+　棚の方を見ると棚の上で何かが光っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon approaching the shelf, I realized they were colored glass beads reflecting the light of the evening sun.[prcm]
+[else]
+　近くで見るとそれは様々な色の付いたガラス玉のようだった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　陽の光を受けて静かに輝いている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shifted my gaze to the rest of the shelf.[lr]
+[else]
+　それから棚を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was filled with books and notebooks.[lr]
+[else]
+　棚には本と手帳が並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The notebooks were probably Takako's diaries.[lr]
+[else]
+　手帳はおそらく貴呼の日記だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I got curious about what they might contain, but considering how awkward it would have been if Takako came back as I was reading one, I decided against touching them for now.[prcm]
+[else]
+　日記がどのようになっているか気になったが、もしもその時に貴呼が戻ってきた場合のことを考えると手帳を手に取ることはできなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sitting down on the bed, I looked out the window — specifically, at the sky above the port.[lr]
+[else]
+　ベッドに腰掛けて正面にある窓の外、港側の空を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The clock in the lobby pointed at around the children's napping time.[lr]
+[else]
+　ロビーの柱時計は幼稚園児が昼寝をしているような時間を示していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Purple and pink colors extended and merged on the sky, giving it the feel of a watercolor canvas.[prcm]
+[else]
+　空は水を薄く載せた水彩用紙に紫色と桃色の絵の具を落としたような色をしていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed my hands between my legs and joined my fingers.[lr]
+[else]
+　足の間に手をおろして指を組んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+If I'd get any more comfortable, I feared I might fall asleep.[lr]
+[else]
+　姿勢を楽にしているとこのまま寝てしまいそうな気分になった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was a heavy and unforgiving sleepiness. I would most like have lost consciousness if I so much as closed my eyes.[prcm]
+[else]
+　それは思いのほか強い眠気で、目を閉じればすぐに意識を失いそうだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My fingers slipped out of each other's grasp.[lr]
+[else]
+　ふと、組んだ手の指が解けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sunlight passed through my fingers as if they were transparent.[prcm]
+[else]
+　手を持ち上げると陽に透けて見えた。[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se54.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Just as I pressed my fingers against my eyelids to massage them for a few moments, I heard the sound of the door opening behind me.[lr]
+[else]
+　目元を抑えて軽くマッサージしていると背後で扉の開く音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I turned around, I saw the door being partially opened, with a sliver of the corridor visible through the gap.[lr]
+[else]
+　振り返ると扉が半分開いていて廊下が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+No one was there.[lr]
+[else]
+　貴呼が戻ってきたと思ったが、そこには誰も居なかった。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se53.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And still with no sense of any human presence, the door closed.[lr]
+[else]
+　そして、人が見当たらないまま半開きの扉が自然に締まる。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se129.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The floor let out a creak.[prcm]
+[else]
+　それから床板が鳴った。[prcm]
+[endif]
+
+
+[playse buf = 2 storage=se129.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The creaks continued to the shelf, then stopped.[lr]
+[else]
+　床板の軋みは人の歩幅で移動して棚の前で止まった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I rubbed my eyes again, but all I could see was the wall.[prcm]
+[else]
+　目を凝らしてみても、棚の前には何もなく向こう側の壁しか見えない。[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se07.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And while I looked at the remnants of dust floating in the air, the bed let out a creak next.[prcm]
+[else]
+　壁と棚のあたりに漂う塵を見ていると、また別の音が聞こえた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　それはベッドのスプリングが撓む音に似ていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I blinked a few times and felt like I could almost glimpse Sachiko for a moment.[lr]
+[else]
+　瞬く間のほんの少しだけ佐知子の姿が浮かんだように見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Perhaps she had returned to her room in the Fujisaka mansion and lain down on the bed just now.[lr]
+[else]
+　もしかすると、今佐知子は籘坂の屋敷で自分の部屋に戻ってベッドで寝ているのかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sounds disappeared when I started thinking about her.[prcm]
+[else]
+　佐知子が何をしているのか考えていると、音が聞こえなくなった。[prcm]
+[endif]
+
+
+[playse buf = 2 storage=se74.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a few moments, a gust of cold wind made my hair flutter.[lr]
+[else]
+　しばらくすると、冷たい風が髪を揺らした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Despite the window being closed, the incoming breeze carried a certain humidity, as well as the scent of soil.[lr]
+[else]
+　締め切った部屋の中のどこからか吹いてくる風は湿った空気と土の匂いがした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Yet I was more than familiar with the source and nature of that wind.[lr]
+[else]
+　私はその独特の風と、さらにその源である風穴を知っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It came straight from my heart, calling out to me.[prcm]
+[else]
+　それは自身の心から吹く風であり、私自身を呼ぶ風だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ignored it, and soon enough, it began to wane and eventually vanished.[lr]
+[else]
+　私が振り向かないでいると、空気と風はすぐに消えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, it still managed to remind me of the cave I got lost in back when I was looking for Sachiko.[lr]
+[else]
+　しかし、その風は以前佐知子を探して辿りついた洞穴を頭の中に思い起こさせた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found myself unnerved and unable to relax anymore.[prcm]
+[else]
+　そのイメージは私を少々落ち着かない気分にした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up and decided to leave the room for now.[prcm]
+[else]
+　私はベッドから腰を上げて、一度部屋を出ることにした。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="155.ks" target=*155
+

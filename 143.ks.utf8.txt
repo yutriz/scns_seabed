@@ -1,0 +1,730 @@
+*143| Narasaki's absence
+; *143|楢崎の不在
+[fbfstoretitle eng="Narasaki's absence" jp="楢崎の不在"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm54"]
+[backlay]
+[fbfscale_image storage="bg51_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 181"]
+[eval exp="sf.ItRelease = 182"]
+[endif]
+
+*| Narasaki's absence
+; *|楢崎の不在
+[fbfstoretitle eng="Narasaki's absence" jp="楢崎の不在"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I circled around the mansion, emerging at its front entrance.[lr]
+[else]
+　裏庭から西回りに屋敷を回り込んで玄関のある正面へと抜けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon reaching the parking lot, I spotted an old, Japanese bike in the shade of the trees. There was not a single car in sight, though.[prcm]
+[else]
+　木陰にある駐車場には、和製の旧式バイクが一台留めてあるだけで自動車は見当たらなかった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h01" visible=true left=105 top=0  opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you looking for something?[」][lr]
+[else]
+　「なにか探し物？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I began looking around, Nanae suddenly appeared from beyond the open front doors.[prcm]
+[else]
+　首を振りながら歩いていると、正面玄関の開け放った扉の間から[ruby text="なな"]七[ruby text="え"]重が伺っていた。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm looking for Narasaki.[」][lr]
+[else]
+　「[ruby text="なら"]楢[ruby text="さき"]崎を探しているの」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Uh... who?[」][lr]
+[else]
+　「ナラサキ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You haven't seen her?[」][lr]
+[else]
+　「見ていないわよね？」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p02_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're the first person I've met today.[」][lr]
+[else]
+　「今日はあなた以外には、誰にも会っていないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se24_12.ogg loop=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the grandfather clock in the lobby strike the hour.[prcm]
+[else]
+　鐘の鳴る音が聞こえる。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　七重の後ろのロビーにある柱時計が鐘を鳴らしている。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fadeoutse buf=2 time=400]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wf buf=2]
+[seopt buf=2 volume=100]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you're not in a hurry, how about we have lunch together?[」][lr]
+[else]
+　「もしも急いでいないなら、お昼食にしない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up at the sky — there were no clouds, only some dry, warm sunlight.[prcm]
+[else]
+　空を見ると、雲ひとつない南の高い空で、太陽が乾いた空気を温めていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][prcm]
+[else]
+　「ええ」[prcm]
+[endif]
+
+
+;/////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg54" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae looked out the window as we enjoyed our post-meal coffee.[prcm]
+[else]
+　食後のコーヒーを飲んでいるときに、七重は窓の外を見ていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's not a single cloud in the sky today.[」][lr]
+[else]
+　「雲ひとつなくて天気がいいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Looks like a sunburn waiting to happen.[l] I've heard the sun is more potent in the mountains. Is that true?[」][lr]
+[else]
+　「日焼けしそうね。[l]山の上だと、日差しが強くなるって聞いたけど？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ultraviolet rays apparently get stronger here because the atmosphere is thinner, but don't worry, I come well prepared.[l] Look.[」][lr]
+[else]
+　「大気が薄くなるから紫外線は多くなるらしいわね。[l]でも、ちゃんと対策はしているから大丈夫よ。[l]ほら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae rolled up her sleeve and showed me her white forearm.[prcm]
+[else]
+　と、七重が袖をめくって白い腕を見せた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've got some homemade sunscreen[l]. Wanna try it?[」][lr]
+[else]
+　「手作りの日焼け止めがあるの。[l]使ってみる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[l] But I've brought my own, so I'm okay.[」][lr]
+[else]
+　「有難う。[l]でも、持ってきているから大丈夫よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you say so.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae shifted her position, lowering her arms.[lr]
+[else]
+　七重が姿勢を変えて、腕を上げかけて下ろした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned to the window to see her combing her front hair in the reflection.[prcm]
+[else]
+　こちらが窓の方を向くと、視界の端で前髪を[ruby text="て"]手[ruby text="ぐし"]櫛で整えていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder what the weather is going to be tomorrow.[l] I was thinking of going hiking.[」][lr]
+[else]
+　「明日も晴れるかしら？[l] ハイキングに出かけようと思うの」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's nice.[l] Should be clear weather tomorrow.[」][lr]
+[else]
+　「良いわね。[l]明日も天気はいいはずよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you want to come?[」][lr]
+[else]
+　「貴方も来る？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I do, but... I'm not sure if I could make it.[」][lr]
+[else]
+　「行きたいけど、明日は難しいかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae hid her hands behind her back and made a deeply sad face.[lr]
+[else]
+　七重は前髪をいじっていた手を首の後ろに回して、心底残念そうに言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She explained that she had to participate in a local inn proprietor meeting tomorrow from the early morning.[prcm]
+[else]
+　それから七重は午前中から近隣の旅館女将の寄り合いがあるのだと説明した。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that why you were looking for this Narasaki person?[」][lr]
+[else]
+　「もしかして、それでナラサキって人を探していたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I nodded.[prcm]
+[else]
+　七重の質問に頷いて答えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] She's an old friend.[」][lr]
+[else]
+　「そう。[l]旧い友人なの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can you tell me what she looks like?[l] I'll tell her about your plans if I see her.[」][lr]
+[else]
+　「どんな人なのか教えてくれる？[l] ハイキングのことを伝えておくわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, she's a tall woman with red hair.[l] Her mannerisms and speech might come off as a bit masculine, I guess.[」][lr]
+[else]
+　「背が高い女の人よ。[l]髪の色が薄くて、日に透かすと赤く見えるわ。[l]それと、話し方が少し男の人みたいなところがあるわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, got it.[」][lr]
+[else]
+　「うん、大体分かったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you see her, tell her I was looking for her.[」][lr]
+[else]
+　「それと、もし楢崎を見かけたら、私が探してたって伝えてくれる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll do that.[」][prcm]
+[else]
+　「ええ、それも伝えるわ」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, are you sure you don't know her?[l] She was staying here.[」][lr]
+[else]
+　「ねえ、本当に知らないの？[l] ここに泊まっている筈なんだけれど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h09" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're closed right now.[l] I thought I've already told you.[」][lr]
+[else]
+　「ここは今休業しているのよ。[l]言ってなかった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's right... You did.[」][lr]
+[else]
+　「そうだったわね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The cafeteria door suddenly opened.[prcm]
+[else]
+　キィ、とカフェラウンジの扉が開く。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/r_img/f02_p02_h13" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry. Did I intrude?[」][lr]
+[else]
+　「御免なさい、取り込み中だったかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lily stood in the entrance.[prcm]
+[else]
+　カフェラウンジの扉の前で小母さんが言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[」][lr]
+[else]
+　「いえ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h08" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/r_img/f02_p01_h07" visible=true left=280 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nana, could you come over for a spell?[」][lr]
+[else]
+　「七ちゃん、ちょっと来てもらえる？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry, I've got to go.[」][lr]
+[else]
+　「御免なさい、行ってくるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just leave the plates here.[」][lr]
+[else]
+　「食器はそのままにしておいて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae apologized to me and stood up.[prcm]
+[else]
+　七重はこちらに向かって目を瞑って謝ると、席を立った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sorry for interrupting you in the middle of conversation.[」][lr]
+[else]
+　「ごめんなさいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's okay, but I thought we agreed you wouldn't call me Nana in front of people.[」][lr]
+[else]
+　「良いけれど、人前で七ちゃんって呼ばないでって言ったじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We did?[」][lr]
+[else]
+　「そうだったかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear a bit of their conversation beyond the door.[prcm]
+[else]
+　扉の向こうで少しだけ話し声が聞こえた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se30.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I finished my cold coffee and brought the cup to the kitchen along with Nanae's.[lr]
+[else]
+　冷めてしまったコーヒーを飲み終わると、七重のカップと一緒にカウンターへと運んだ。[lr]
+[endif]
+
+[r]
+[seopt buf=1 volume=50]
+[playse buf = 1 storage=se67.ogg loop=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood there for a few moments when I suddenly heard a ringing sound.[lr]
+[else]
+　しばらくその場で立ち止まっていると、微かにベルの音が聞こえる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I walked toward its source.[prcm]
+[else]
+　音のする方へと足を運ぶ。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I left the cafeteria and continued to the lobby.[prcm]
+[else]
+　カフェラウンジを出てロビーの方へと向かう。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[seopt buf=1 volume=100]
+[fbfscale_image storage="bg52_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The big, black, and somewhat antique-looking telephone on the counter was ringing.[prcm]
+[else]
+　ジリリ、となるベルの音はロビーにある旧く大きな黒電話から鳴り響いていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=1 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="144.ks" target=*144
+
+

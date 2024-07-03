@@ -1,0 +1,349 @@
+*169_6| Furnace
+; *169_6|燃焼室
+[fbfstoretitle eng="Furnace" jp="燃焼室"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle3"]
+
+[playbgm storage="bgm58"]
+[fadeinse buf=0 storage=se187 time=3000 loop=true]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg159" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=3000]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+
+*| Furnace
+; *|燃焼室
+[fbfstoretitle eng="Furnace" jp="燃焼室"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After the bath, Sachiko came to the furnace room.[lr]
+[else]
+　風呂上がり姿の[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子が燃焼室で後始末をしている私のところにやってきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Without even trying to fight the loud noise inside, she mouthed that the bath was now open and free to use.[lr]
+[else]
+　彼女は風呂が空いたのを知らせに来た様子で、燃焼室の騒音に逆らわず口の動きで「空いたわよ」と伝える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gestured that I understood.[prcm]
+[else]
+　手で分かったと合図をすると、彼女は納得した様子だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd normally use the shower in the clinic, but once a week, I'd heat up the underground bath.[lr]
+[else]
+　診療所ではいつもシャワーを使うが、週に一度くらいの頻度で地下にある風呂を沸かした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After making sure that the furnace was working as intended, I headed to the bath.[prcm]
+[else]
+　私はいつも通りの手順で燃焼室の点検を終えてから、支度をして風呂に向かった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutse buf=0 time=1500]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[playse buf = 1 storage=se59.ogg]
+[wait time=500]
+[playse buf = 2 storage=se116.ogg loop=true]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg160" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon entering, I washed myself off, then stepped into the hot water.[lr]
+[else]
+　浴場に入ると私はさっさと体を洗ってしまい、自分で沸かした風呂に足を浸した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I lowered myself into the water, letting my hips, shoulder and neck be completely immersed, with only my chin remaining above the surface.[prcm]
+[else]
+　そのまま腰から、肩、首、顎まで一気に浸かってから「ふう」と息をついた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Heating up the bath was a bit of a pain, but the payoff was more than worth it.[lr]
+[else]
+　風呂の準備は面倒だが、これだけ気持ちよければやっても構わないと思う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But that initial tedium was exactly what made finishing it so satisfying.[lr]
+[else]
+　面倒だからこそ、やり終えたあとの達成感があり、これだけ心地よいのかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered how there used to be more patients and doctors in this clinic in the past. We'd have the bath heated every day back in those days.[lr]
+[else]
+　以前はこの診療所にももう少し患者と従業員がいて、風呂も毎日沸かしていたのを思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But eventually, the number of our patients decreased, and so did the doctors.[prcm]
+[else]
+　そのときは風呂の準備が出来る従業員がまだ数人もいたのだが、こちらの療養棟患者が居なくなってからは、従業員も減っていった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Soon enough, evening was upon us, and the only source of illumination in the humid bathroom became the thin ray of light from the ceiling.[lr]
+[else]
+　いつの間にか外は暗くなっていて、天井の細長い灯が湯船に光っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered my experience in Room 208 today.[lr]
+[else]
+　光を見上げながら、昼食後に208号室に立ち寄った時のことを思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried looking for traces of the unfamiliar bedroom that appeared in front of me for a brief moment, but couldn't find anything out of the ordinary.[prcm]
+[else]
+　昨晩の見たことのない寝室について痕跡のようなものを調べたが、部屋にはこれといった変わりはなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a deep breath, then slowly exhaled it.[lr]
+[else]
+　私は大きく息を吸い、吐いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered if it wasn't all just a dream of some sort.[prcm]
+[else]
+　その一連または一部の出来事は、私は寝ぼけていた為に見た夢の話ではないのかと思えてきた。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[fadeoutse buf=0 time=1500]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_image storage="bg160" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I heard something, prompting me to strain my ears.[lr]
+[else]
+　何かの音が聞こえたような気がして、私は耳を澄ませる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could quite clearly hear the sound of drops falling to the wet floor, but somewhere in the distance... I felt like I could hear voices.[lr]
+[else]
+　はっきりと聞こえるのは、風呂場の床に水滴が落ちる音と空気の音だけだが、それよりもっと遠くで声がしている気がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was just a feeling, though.[prcm]
+[else]
+　しかし、気がするだけだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I splashed my face with the hot water.[lr]
+[else]
+　湯船で顔を洗う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was probably tired.[lr]
+[else]
+　私は疲れていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Now that I thought about it, the only time I slept over the past few days was that one time when I lost consciousness for an hour or so.[prcm]
+[else]
+　思えば、昨日から今まで睡眠は早朝意識を失ったあの一時間程だけだった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutse buf=2 time=3000]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[seopt buf=2 volume=100]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After soaking for some time, I stood up and wiped the remaining water off my skin. Then I changed back into my clothes and dried my hair with the dryer resting by the water basin.[lr]
+[else]
+　しばらくして風呂を上がると、体を拭いて着替えを済ませ、脱衣所の洗面台に備え付けのドライヤーで適当に髪を乾かした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned everything off and left the keys to the furnace and the dressing room where they belonged. I was just about ready to head off toward the night duty room when a sudden onset of dizziness made me stagger on my feet.[prcm]
+[else]
+　風呂の後始末を終えて燃焼室と脱衣所に鍵をかけた後、宿直室へと向かい廊下を歩いていると、急に立ちくらみがして足がふらついた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I needed to get myself some coffee and emergency sleep once I got back.[prcm]
+[else]
+　宿直室についたらコーヒーを淹れよう、それから少し仮眠しよう。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　そう思った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[seopt buf=1 volume=100]
+[seopt buf=2 volume=100]
+[seopt buf=3 volume=100]
+[jingle3]
+@jump storage="tips.ks" target=*tips
+

@@ -1,0 +1,1515 @@
+*165| At the end of the second trip
+; *165|二度目の旅の果てに
+[fbfstoretitle eng="At the end of the second trip" jp="二度目の旅の果てに"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*Jingle3"]
+
+[playbgm storage="bgm58"]
+[wait time=4000]
+[seopt buf=0 volume=80]
+[fadeinse buf=0 storage="se175.ogg" loop=true time=3000]
+[backlay]
+[fbfscale_image storage="bg141" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*| At the end of the second trip
+; *|二度目の旅の果てに
+[fbfstoretitle eng="At the end of the second trip" jp="二度目の旅の果てに"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wake up, it looks incredible outside.[」][lr]
+[else]
+　「起きてよ外がすごいわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Feeling like someone was calling out to me, I opened my eyes.[lr]
+[else]
+　そう呼ばれた気がして目が覚める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The seats of the bus trembled as the driver skillfully navigated through the crooked country road.[lr]
+[else]
+　田舎の細道を運転手の技巧で行くバスの座席は揺れに揺れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had finally managed to fall asleep just earlier, but I didn't feel like I could repeat the feat again.[prcm]
+[else]
+　先程はようやく眠ることができたのだが、次に眠ることはできそうにない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Resigning myself to that fate, I instead looked out the window.[lr]
+[else]
+　仕方なく私は横にある窓を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was no point to even confirm that the seat next to me had been unoccupied.[lr]
+[else]
+　隣は空き席なのは確認するまでもない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The voice that woke me up came from a distant memory.[prcm]
+[else]
+　私を起こした声は遠い昔の記憶から聞こえたものだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A friend that used to be by my side was no longer there.[lr]
+[else]
+　以前そこにいた友人はもういない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I said that, but it wasn't like she had passed away or anything.[lr]
+[else]
+　とは言っても彼女は死んだわけではない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was just that one day, she forgot all her memories about me.[lr]
+[else]
+　ただ、あるとき私との思い出の記憶を無くしてしまった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She probably did it consciously, too.[lr]
+[else]
+　それもおそらく意図的に。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I still couldn't understand the reason why.[prcm]
+[else]
+　今でも私にはその理由が理解できないままだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We had known each other since we were little.[lr]
+[else]
+　私は小さい頃から彼女のことを知っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She had always been a little strange, but I simply couldn't imagine her ending up like that, given her personality.[prcm]
+[else]
+　確かに彼女には少し変わったところがあったが、私の知る限り彼女の性格ではどのようにしてもそんな事になるとは思えなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The bus finally reached a mountain path.[prcm]
+[else]
+　バスはようやく山道に入っていた。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg140" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking out the window, I started spotting patches of snow as we drove uphill.[lr]
+[else]
+　山道をバスが進むとそのうち雪が見えてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The amount of snow increased the higher we went.[lr]
+[else]
+　バスが山道を登るほどに雪はその層を増していった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+By the time my ears started ringing from the pressure difference between the lowlands and the mountain, the snow walls around the road had exceeded the bus' height.[lr]
+[else]
+　その雪の層は山の気圧差で耳が鳴り始める頃にバスの車高を超えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remember my friend saying how the sight reminded her of Moses and the Red Sea.[prcm]
+[else]
+　この辺りで「まるで十戒みたいね」と彼女が言ったのを私は覚えていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The tour conductor stood up from her seat and began talking about our trip.[lr]
+[else]
+　バスの添乗員が補助席から立ち上がり、目的地の説明を始めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Basically, we could do whatever we wanted as long as we returned to the bus on time.[lr]
+[else]
+　基本的には自由行動だが、時間内にバスに戻るようにと言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then began explaining the two alternate courses the passengers were free to choose from: one for beginners, another for the more experienced.[prcm]
+[else]
+　それから時間内に巡ることのできるコースは二つ種類があり「初めての方にお勧めのコース」についてその道筋を説明していた。[prcm]
+[endif]
+
+
+*|
+[fadeoutse buf=0 time=1000]
+[ws]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The bus stopped almost at the same time as her explanation ended.[lr]
+[else]
+　添乗員の説明が終わるのとほぼ同時にバスは目的地についた。[lr]
+[endif]
+
+[r]
+*|
+[playse buf = 1 storage=se176.ogg]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The tour guide reminded us of the departure time one more time before the bus doors opened.[prcm]
+[else]
+　添乗員が最後にもう一度、集合時間を念押しするとバスの扉が開いた。[prcm]
+[endif]
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg142" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The passengers scattered, each of them going in their chosen direction.[lr]
+[else]
+　バスを降りると乗客は各々の目的地に向かって歩き始めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Reminiscing about the last time I'd been here, I turned 360 degrees to take in the snowy panorama surrounding me.[lr]
+[else]
+　私は以前来たときのことを思い出しながら360度の白いパノラマを眺めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sky was clear and blue above the white mountains, just like back then.[lr]
+[else]
+　冬の雪山はあの時と同じでよく晴れていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, so where do we go for a beginner's course?[」] she asked me.[prcm]
+[else]
+　「ねえ、初心者コースはどっちに行けばいいのかしら？」と彼女が聞いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Weren't you listening?[」][lr]
+[else]
+　「添乗員さんの話は聞いてなかったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I wasn't.[l] I thought you would, anyway.[」][lr]
+[else]
+　「ええ。[l]貴方が聞いていると思ったから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess we both got a bit overly excited by the snow,[」] I deflected.[lr]
+[else]
+　「お互い少し雪に興奮しすぎていたみたいね」と私は誤魔化してみた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh...[l] Well, then let's follow where everyone's going.[」][prcm]
+[else]
+　「仕方ないわね。[l]それじゃあ、皆が行く方に行ってみましょうか」と彼女は言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't want to panic over small details like this, and she wasn't the type to complain about them, either.[lr]
+[else]
+　私はこういう場合はくよくよしても仕方がないと思っていたし、彼女の方もつまらない事は言わない性格だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We found the longest train of people nearby and mixed in with them, eventually entering a relatively small, wooden structure.[prcm]
+[else]
+　私たちは辺りを見回して大きな列を見つけると、それに混ざり目の前の小屋の中に入っていった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg143" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inside, we found a souvenir store and a cable car station.[lr]
+[else]
+　小屋の中はお土産物屋とケーブルカーか何かの発着所が一緒になっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We observed a line of tourists buying tickets for the cable car.[lr]
+[else]
+　大きな流れの列は小屋の中でケーブルカーか何かのチケットを買っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We did the same and lined up behind them.[prcm]
+[else]
+　私たちも同じようにチケットを買って列に並んだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+From a closer look, I realized it was a trolleybus, not a cable car.[lr]
+[else]
+　券売機を見ると、それはケーブルカーではなくトローリーバスであることが分かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the faces of people around us as we waited.[lr]
+[else]
+　並んで待っている間、私は周りの人の顔を確認した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I hadn't memorized the faces of our tourmates, but I was pretty sure I'd never seen these people before.[lr]
+[else]
+　同じバスの乗客の顔は正確に覚えてはいないが、どうにも並んでいる人の顔には覚えがなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Seemed like we had mixed in with an entirely different group.[lr]
+[else]
+　やはり別のツアーバスの客のようだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was looking around as well, probably thinking the same thing.[prcm]
+[else]
+　彼女も周りを見て、同じことを考えている様子だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've never ridden a trolleybus before,[」] she said.[prcm]
+[else]
+　「トローリーバスって初めてよね」と彼女は言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Me neither.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed like she had grown a little worried.[lr]
+[else]
+　どうやら彼女も少し不安になっているようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Looks like it's going through a tunnel,[」] I said.[lr]
+[else]
+　「トンネルを走るみたいだね」と私が言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm,[」] she replied.[prcm]
+[else]
+　「ふうん」と彼女が言った。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg144" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once the trolleybus had parked next to us, we boarded it with the rest of the tourists.[lr]
+[else]
+　トローリーバスが到着して、私は列とともにバスに乗り込む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The seat at the front was open, so I sat down there.[lr]
+[else]
+　一番前の席が空いていたのでそこに座る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We had the same spot back then, too.[prcm]
+[else]
+　以前二人で座った場所と同じところだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The same speedometer caught my eyes as back then.[lr]
+[else]
+　いつか見たのと同じメーター計器が目に入る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The tunnel I could see through the front window was dark and narrow.[lr]
+[else]
+　フロントガラスから見えるトンネルは暗い上に狭かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Being in a bus racing through that tunnel at a relatively high speed was quite thrilling.[lr]
+[else]
+　そのトンネルをそれなりのスピードで走るバスの移動は中々スリリングだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Back then, I didn't really have time to enjoy it, though.[prcm]
+[else]
+　ただし、以前はそんなことを楽しむ余裕はなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We were looking at the trolleybus timetable to confirm whether we could get back to our bus in time.[lr]
+[else]
+　私たちはトローリーバスの時間表を見て、バスの時間までには帰れることは確認していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But we weren't sure what to do or how long it would all take, so we couldn't even make an educated guess.[prcm]
+[else]
+　しかし、あまりゆっくりとする時間はない上に、正規のコースを外してまで行く向こう側に満足できるものがあるかわからなかったからだ。[prcm]
+[endif]
+
+
+;＊
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg145" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The trolleybus stopped.[lr]
+[else]
+　トローリーバスが到着した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We arrived at a place that looked a lot like the wooden structure we'd left, with an almost identical souvenir store and bus station.[lr]
+[else]
+　そこにはもと来た小屋と同じく土産物屋とバス乗り場があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Relying on my old memories, I left the souvenir store and ascended the concrete stairs.[lr]
+[else]
+　私は蘇る記憶を頼りに土産物屋を抜けて奥の扉を抜けてコンクリートの階段を上がった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened the door at the top of the stairs and entered a lookout area. A dark mountain range extended in front of me in the distance.[prcm]
+[else]
+　階段を上がりきった先にある扉を開いて展望台に出ると、正面に黒い山の大連峰が見えた。[prcm]
+[endif]
+
+
+[fadeoutbgm time=1500]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The lookout was built at an angle that allowed a full view of the mountains, provided the weather was clear.[lr]
+[else]
+　展望台の下は正面に見える山の根元まで切り落としたように一気に抉れており、向こうの山々は下から上までを眺めることができた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Layers of snow covered the mountains like a set of beautiful white roots sparkling under the blue sky.[lr]
+[else]
+　連峰の山々は山頂から白い根のように霜を降らせて青い空に映えていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had been to a lot of places, but nowhere else could I see colors like that.[lr]
+[else]
+　色々な場所を見てきたが、この色合いはまだここでしか見たことがなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Confirming that the scenery hadn't changed over the years, I drew away from the railing and found a bench to sit down on further back. This time, I simply took in the scenery over the heads of the other tourists.[prcm]
+[else]
+　変わらない景色を確認したあとで、手すりから離れて奥まったところにあるベンチに座って今度は観光客越しに眺めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Eventually, a group came in through the door and completely blocked my field of view.[lr]
+[else]
+　少しすると団体が到着して景色が見えなくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A guide began introducing the mountain, talking over gasps of awe from the newcomers.[prcm]
+[else]
+　感動の声を上げるツアー客に聞こえるように、ガイドが大きな声で山の紹介を始めた。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[playbgm storage="bgm61"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes, forming the scenery of the mountain in my mind, as well as myself sitting next to my friend.[prcm]
+[else]
+　私は先程まで見えていた山の輪郭を頭の中に映しながら目を閉じて、そこに私と彼女を並べてみた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Unable to find the words to express myself, I simply shifted my eyes from one corner of the breathtaking scenery to the other.[lr]
+[else]
+　私はうまい言葉が見つけることができずに、ただ景色を左から右へと見流していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was better with words than me, so I gave up on coming up with something to do the scenery justice, and instead waited for her to say something.[lr]
+[else]
+　そういう類の感動の表現については彼女の方が巧かったので、私は途中から言葉を考えることを諦めて、ただ景色を眺めて彼女の言葉を待つことにした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, as unusual as that was, she remained silent as well.[lr]
+[else]
+　しかし珍しいことにその時の彼女は、展望台からの景色について特に印象的な言葉は述べなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Instead, she seemed to be too taken in by the scenery to talk.[lr]
+[else]
+　その時の彼女はしきりに辺りを見回していた様子だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The mountains were indeed amazing, but she was also gazing at the white plains extending below them.[prcm]
+[else]
+　確かに見事な大連峰のことも話していたが、それよりも彼女は展望台のすぐ下や後ろの雪原もよく眺めていた。[prcm]
+[endif]
+
+;＊
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[eval exp="sf.cg72=1"]
+[fbfscale_image storage="ev72" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=1500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The guide's speech ended and the lookout fell silent as the group left.[lr]
+[else]
+　ガイドの説明が終わりガイドの率いる団体が展望台から出て行くと辺りは静かになった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Only a few families that didn't seem to belong to any group still lingered around.[prcm]
+[else]
+　残ったのは家族連れぐらいだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're not going to join the walk down, young lady?[」] asked a man that had unexpectedly sat down beside me a bit earlier.[lr]
+[else]
+　「お嬢さんは散策に行かないのかい？」といつの間にか隣に座っていた男性が言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was in my late twenties, so I looked around to confirm whether he wasn't addressing someone else.[lr]
+[else]
+　私は二十代後半でお嬢さんという歳ではないのでまず辺りを見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But there was no one else around me, so I nodded.[lr]
+[else]
+　そして、近くに私しかいないことを確認してから「ええ」と返事をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At a closer look, the man looked like he was in his fifties or sixties.[lr]
+[else]
+　男性はよく見ると五十か六十くらいにみえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+His thick, naked wrists peeking out from under his coat indicated that he either did sports or worked in the fields. Both required quite a bit of physical strength.[prcm]
+[else]
+　袖から見える手首は太く、スポーツか体力を使う仕事をしているようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The scenery is amazing down there.[l] You almost wouldn't believe it's Japan.[」][lr]
+[else]
+　「中々いい景色だよ。[l]この国じゃないみたいにね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about you? Are you not going?[」][lr]
+[else]
+　「[ruby text="お"]小[ruby text="じ"]父さんは行かないんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't have much experience speaking to someone in his age group, which made me somewhat hesitant. Nonetheless, I ended up responding to him, anyway.[prcm]
+[else]
+　あまり関わらない年代だったので呼び方を迷うが、相手はこちらをお嬢さんと呼んだのでこちらは小父さんと呼ぶことに決めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I ran out of breath so I decided to take a break here.[l] Besides, I've already been there like a hundred times.[」][lr]
+[else]
+　「ちょっと疲れたから、ここで待つことにしたよ。[l]それにもう何度も見てるからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The man looked at me.[prcm]
+[else]
+　そう言うと、小父さんは私の方を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't look like a part of the tour.[l] Are you traveling alone?[」][lr]
+[else]
+　「見たところツアー客というわけでも無さそうだね。[l]旅行者か何か？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wore weathered clothes that favored mobility over style, and had a large backpack on my shoulders. I must've looked like a wilderness camper, truth be told.[prcm]
+[else]
+　私の格好は動きやすさを重視していておしゃれからは程遠く、テントが入りそうな大きなリュックに登山靴を掃き、どれもそこそこ使い込まれていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You could say that.[」][lr]
+[else]
+　「ええ、そのようなものです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How long have you been traveling?[」][lr]
+[else]
+　「どれくらい旅をしている？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]About half a year now.[」][lr]
+[else]
+　「かれこれ半年位ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's nice,[」] said the man.[lr][r]He then went on: [「]It's best to travel while you're still young.[」][lr]
+[else]
+　「いいね」と小父さんは言い「旅は若いうちにするものだ」と付け加えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you have a goal of some sort?[」][lr]
+[else]
+　そして「旅の目的というのはあるのか？」と聞いてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I mulled over his question for a bit.[prcm]
+[else]
+　私は久しぶりにそれを考えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I began my trip because I thought it would help me understand why my friend had lost all her memories of me.[lr]
+[else]
+　私が旅をするのは、そうすることで彼女が記憶をなくした理由が何かわかるような気がしたからだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was prompted by my trip to a zoo half a year ago.[lr]
+[else]
+　そのきっかけは半年前にふらりと立ち寄った動物園での出来事だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That day, I felt like I saw a side of her I'd never known before.[lr]
+[else]
+　あの時、私は彼女の知らない一面を見たような気がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And I felt like I could find out even more if I retraced our shared steps.[lr]
+[else]
+　過去に彼女と来た場所に訪れて、その道程をたどることで見逃していた何かを拾えたような気がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was hard to explain it in concrete terms, though.[prcm]
+[else]
+　何がそうだったのかを具体的に説明するのは難しかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought about it some more on my train ride home, but I couldn't come up with anything in the end.[lr]
+[else]
+　帰りの電車の中で、私はそれがどういうことかを考えたが結局わからなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I figured I'd get off at the same station we used to in the past.[prcm]
+[else]
+　そこで、私は以前二人で降りた駅に降りてみた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess I don't really have much of a goal.[」][lr]
+[else]
+　「目的というのは特には」と小父さんに言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I just got a long break from work, so...[」] I gave him one side of the story.[lr]
+[else]
+　「ただ仕事に暇ができたから」と事実の一部を説明した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The man continued to ask me questions for some time.[lr]
+[else]
+　それから、小父さんは私にいくつか質問した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I told him about the route that led me here, and mentioned a few things that happened along the way.[lr]
+[else]
+　私は旅の道のりを説明して、そこで起きたことをいくつか話した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we ran out of things to discuss and fell silent, the man glanced at the clock.[prcm]
+[else]
+　話題がなくなるとしばらく沈黙があり、小父さんは時計を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Would you like to read a book?[」][lr]
+[else]
+　「本でも読みます？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached into my backpack and took out a paperback novel I'd been reading on the bus.[prcm]
+[else]
+　私は乗り物での移動中に読んでいた単行本をリュックのポケットから出して勧めてみた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't care much for books.[l] They're all just a pack of lies, anyway.[」][lr]
+[else]
+　「いや、わしはどうも小説が好かんでな。[l]あれは嘘ばかりだからな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He shifted his gaze to the dam at the bottom of the mountain range.[lr]
+[else]
+　それから小父さんは連峰の足元にあるダムに目をやった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Back when I was a young'un, we didn't have electricity here.[」][prcm]
+[else]
+　「わしが若い頃には電気が無くてな」と小父さんは言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The small villages all had diesel plants, but they kept failing all the time.[l] So when I was in elementary school, I had my teacher tell me all about how their engines worked.[l] They weren't all that complicated, but without any knowledge, even the easiest fix would be a huge hurdle, let me tell you.[」][lr]
+[else]
+　「小さな村にはディーゼル発電機がいくつかあったが、よく故障して停電していたよ。[l]
+だから私は小学生の時に理科の先生にエンジンの仕組みを習った。[l]
+ディーゼルの仕組みはそれほど難しくはないが、分からんものにはちょっとした故障も直せん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you a mechanic?[」][lr]
+[else]
+　「エンジン技師なんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I didn't become that.[l] We didn't have electricity, but we were short on food, too.[l] So I worked in the fields, and would go sell the extra yield to the neighboring villages.[l] And, well... I couldn't tell you how they learned about me knowing a thing or two about gizmos, but one day, they asked me to fix a power plant.[」][lr]
+[else]
+　「いいや、そうはならなかった。[l]電気も無かったが、食べ物も少なかったからね。[l]
+私は農業で沢山働いて、余ったものを他所の食べ物の少ない村に売りに行ったよ。[l]
+まあ、どこから聞きつけたか知らんが、他所に行くとよく発電機の修理を頼まれたりはしたね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「なるほど」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He was telling me about a time long before I was born.[lr]
+[else]
+　小父さんの話は知らない世代の話だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I understood why he specialized in the sciences.[lr]
+[else]
+　それを聞いて小父さんが理系を専攻した理由を理解した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But that didn't explain why he didn't like books.[lr]
+[else]
+　しかし、文系が好きではない理由については少しだけ不明な点が残った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Could be just a generation gap.[prcm]
+[else]
+　それは、世代の考え方の違いなのかもしれない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, all things have a reason,[」] the man said.[lr]
+[else]
+　「まあ、何事にも理由はあるな」と小父さんは言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't tell whether he was talking about the fact he didn't like books, or if he had already returned to the issue of my trip not having a goal.[lr]
+[else]
+　それが、小父さんが小説を読まない理由のことを言っているのか、それとも私の旅の理由のことを言っているのか、それも私には分からなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before I had the chance to confirm that, it was time for me to board my trolleybus.[prcm]
+[else]
+　それを確認する方法を考えるより前に帰りのトローリーバスの時間が来た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I said goodbye to the man and descended from the lookout.[prcm]
+[else]
+　私は小父さんに別れの挨拶をして、展望台を降りた。[prcm]
+[endif]
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg163" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned to the bus stop in the wooden building and killed some time in the souvenir store while waiting for the trolleybus to come.[lr]
+[else]
+　バス停のある山小屋に戻ると、バスの到着時刻まで土産物コーナーで時間を潰した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted some cookies and chocolate named after the location. You could see those a lot at places like this.[lr]
+[else]
+　土産物コーナーにはよくある現地の名前が付いたクッキーやらチョコレートなどが並んでいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were also some local character goods. I personally found the plushie of a snow chicken particularly cute.[lr]
+[else]
+　現地のキャラクターのグッズもいくつかあり、個人的に雷鳥のキャラクターが可愛かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was a bird whose feathers would turn white in winter. There was a big statue of it by the entrance; there were also some pictures of it for sale.[prcm]
+[else]
+　それは冬に白い羽になる鳥で通路に大きな置物があり、そこには近くで撮影された写真も置いてあった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I suddenly realized my friend was probably looking for this bird from the lookout.[lr]
+[else]
+　ふと、彼女が展望台の周囲を眺めて探していたのはこの鳥だったのだと気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't realize it back then, but it was quite obvious in retrospect, given how much of a bird lover she was.[prcm]
+[else]
+　あの時は彼女の様子に気がつかなかったが、野鳥好きの彼女のことを考えると当然のことだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My trolleybus would soon arrive, so I moved over to the bus stop.[lr]
+[else]
+　しばらくして、バスの到着時間になりバス停へ向かう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ended up not buying anything.[lr]
+[else]
+　結局ここでは何も買い物はしなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I almost bought a tasty looking battera, but then I remembered seeing it cheaper at the main station, which made me change my mind.[lr]
+[else]
+　おいしそうなバッテラを見つけて買おうとしたが、駅にも売っていたのを思い出して買うのを踏みとどまる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I decided to buy it later so I could enjoy it in the comfort of my train compartment on my way back.[prcm]
+[else]
+　それは帰りに駅で買って電車の中でゆっくり食べることにした。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[seopt buf=0 volume=80]
+[fadeinse buf=0 storage="se178.ogg" loop=true time=1500 cond="kag.skipMode != 4"]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg141" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was the first person to board the bus. I took my seat and waited.[lr]
+[else]
+　到着したバスに一番に乗り込んで席に座って時間を待つ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This time, I spotted some familiar faces among the people who boarded after me.[lr]
+[else]
+　続々と戻ってくる乗客の中に今度は知っている顔があった。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se177.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once the time came to leave and the other tourists had assembled, the guide made sure that everyone was present. After that, the bus rolled out of the station and toward its next destination.[lr]
+[else]
+　出発時間内に全員が揃うと、ガイドが確認してバスは最後の目的地に向けて出発した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the highest waterfall in the country.[prcm]
+[else]
+　次の目的地は国内一の落差を誇る滝だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Last time, she made the 30-minute trip up that perilous mountain path all by herself, just to reach the waterfall at the end of it.[lr]
+[else]
+　前回の旅では、バスを降りてから徒歩で三十分程の場所にあるその滝へ彼女は一人で行った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd given up as soon as I saw the slope, and waited for her at a nearby café.[prcm]
+[else]
+　私はやや上り坂のその道を見て、滝を見に行くことを諦めてしまった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　そして、バス停の近くにあるカフェで彼女の帰りを待った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This time, I'd go where she went.[lr]
+[else]
+　今回は彼女と同じところまで行くつもりだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the neighboring seat.[lr]
+[else]
+　私は隣の席を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She looked out the window with narrowed eyes.[lr]
+[else]
+　彼女は窓の外を目を細めて見ている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We should bring a pair sunglasses next time,[」] she remarked.[prcm]
+[else]
+　それから「次はサングラスを持ってくるべきね」と言った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[seopt buf=1 volume=100]
+[seopt buf=2 volume=100]
+[jingle3]
+@jump storage="tips.ks" target=*tips
+
+

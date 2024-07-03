@@ -1,0 +1,474 @@
+*159_2| Cure
+; *159_2|治す方法
+[fbfstoretitle eng="Cure" jp="治す方法"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm37"]
+
+;章題表示
+[msgoff]
+[wait time=3000]
+[backlay]
+[fbfunlockachievement number="10"]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence10_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence10_1_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+[wait time=1000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence10_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence10_2_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=2500]
+[fadeinse buf =0  storage=se85.ogg time=1500]
+[wait time=1500]
+
+
+[backlay]
+[fbfscale_image storage="bg44_3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;章選択フラグ
+[if exp="sf.CpRelease <= 10"]
+[eval exp="sf.CpRelease = 11"]
+[endif]
+
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 211"]
+[eval exp="sf.ItRelease = 212"]
+[endif]
+
+
+*| Cure
+; *|治す方法
+[fbfstoretitle eng="Cure" jp="治す方法"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned to the night duty room after my conversation with Narasaki. I picked up our teacups and pot from the table and carried them to the kitchen.[lr]
+[else]
+　[ruby text="なら"]楢[ruby text="さき"]崎と別れたあと宿直室に戻り、卓袱台の上に置いてある使った湯呑を台所で洗った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spilled what little tea was left on the bottom of the pot into the sink, then realized I was out of boiled water to make more.[lr]
+[else]
+　急須に少し残っていた湯を捨てた時に、ポットの湯がないことに気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled a kettle off one of the shelves, filled it with water, and put it on the stove.[lr]
+[else]
+　戸棚から薬缶を取り出して水を入れ、コンロで湯を沸かす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I mulled over my conversation with Narasaki while waiting for the water to boil.[lr]
+[else]
+　お湯が沸くまでの数分間、先ほどの楢崎とのやり取りを思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The conversation hardly took an hour, but I'd learned a lot.[prcm]
+[else]
+　そのやりとり自体はほんの小一時間ほどだったが、様々な事実を知らせていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My head was still spinning, having received all this information about diaries and illnesses and whatnot.[lr]
+[else]
+　頭の中は病気のことや手帳のことで始終混乱していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Now that I thought about it, I should've used that chance to ask Narasaki more questions.[lr]
+[else]
+　今思うと楢崎にはもっと聞くべきことがあった気がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For example, she said she had met me before in the past.[lr]
+[else]
+　例えば、楢崎は以前に私に会ったことがあるといった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I forgot to even ask when that happened.[prcm]
+[else]
+　それがいつの事なのかも聞けていない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Besides, while Narasaki seemed amiable and answered more or less everything I asked, I felt there was still something off about how she phrased certain things.[lr]
+[else]
+　それに楢崎は色々と親切に話をしてくれていたが、その口ぶりに何か心に引っ掛かりのようなものを感じる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered if she really didn't know Sachiko like she tried to imply.[lr]
+[else]
+　本当に楢崎は[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子のことを知らなかったのだろうか。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She didn't seem at all surprised or even curious when I told her Sachiko was the most important person in my life... Almost as though she knew about our relationship.[prcm]
+[else]
+　私が佐知子のことを大事だと言ったときの、楢崎の反応が薄い気がする。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　まるで佐知子との関係をはじめから知っていたように見えなくもない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The hiss of the kettle brought me back to reality.[lr]
+[else]
+　薬缶の水蒸気の音で我に返る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I poured the boiling water into the pot filled with old tea leaves.[lr]
+[else]
+　薬缶からお茶の葉の残った急須にお湯を入れ、余った湯はポットに足した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I filled my teacup with the freshly made tea and took a sip, feeling my head clear up.[prcm]
+[else]
+　急須から湯呑にお茶を注いで飲むと、ぼやけた頭の中が少しだけ覚めた。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I grabbed one of the monaka that Narasaki brought me and returned to the living room, sitting down on the cushion by the table.[prcm]
+[else]
+　湯呑と楢崎から貰った[ruby text="も"]最[ruby text="なか"]中を一つ取って卓袱台の前に敷いていた座布団の上に座る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A bunch of keys Narasaki handed me lay in the middle of the table.[lr]
+[else]
+　卓袱台の上には楢崎から受け取った鍵束が置いてあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They were all connected by a silver ring.[lr]
+[else]
+　鍵束は銀のリングでまとまっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Some of the keys had small green hexagonal key holders attached to them.[lr]
+[else]
+　いくつかの鍵には深緑色をした六角柱の小さなキーホルダーが付いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Being all the same, they reminded me of the keys used in hotels.[prcm]
+[else]
+　キーホルダーのデザインはすべて同じで見るからに古いホテルで使われていそうなデザインだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They were different from the key holders Mayuko used.[lr]
+[else]
+　[ruby text="まゆ"]繭[ruby text="こ"]子の持っている鍵のキーホルダーとは違った。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se77.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked one key holder up to realize it was a bit heavier than I had thought. It sparkled slightly, reflecting the light as I turned it in my palm.[lr]
+[else]
+　キーホルダーは手にすると重みが有り、回すと光を反射してキラキラと光る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I suddenly spotted a number on it.[lr]
+[else]
+　横にしてみると六角柱の中に数字が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon turning it a bit more in the light, I could make out a room number.[lr]
+[else]
+　キーホルダーを回すと中に黒文字で部屋番号が描かれていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried checking which room keys I had, and eventually found one to Kozue's old room.[prcm]
+[else]
+　試しにどの部屋の合鍵があるのか確認していくと、以前[ruby text="こずえ"]梢が使っていた部屋の番号を見つけた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se77.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the keys back on the table.[lr]
+[else]
+　しばらくキーホルダーを見つめたあとで鍵束を机の上に置く。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered how I saw Sachiko in that room.[lr]
+[else]
+　梢の部屋で見た佐知子の姿を思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried to get back to that room multiple times, but it was always locked.[prcm]
+[else]
+　あの後も何度かその部屋に入ろうとしたがいつも鍵がかかっていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't realize it until now, but the tea I drank seemed more bitter than usual.[prcm]
+[else]
+　お茶を飲むと先程は気づいていなかったが、葉の量が違っていたのかいつもより少し苦い味がする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I now had the chance to check that room before returning the keys to Mayuko.[lr]
+[else]
+　今なら繭子に鍵を返す前にあの部屋を見に行くことができる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For some reason, I felt like it wasn't complete coincidence that they ended up in my possession.[lr]
+[else]
+　何故かは分からないが、この鍵がここにあるのは偶然ではない気がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried coming up with an explanation, but ultimately failed.[prcm]
+[else]
+　理由について考えてみたがあまり真っ当な理由は思いつかなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered whether I should go to that room right now, or instead tell Narasaki about what I'd experienced there.[lr]
+[else]
+　次に、部屋を見に行くべきか、それとも楢崎にあの部屋で起きたことについて話をするべきか考えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I couldn't figure out exactly what I was supposed to ask her.[lr]
+[else]
+　しかし、楢崎には何について聞けばいいかイマイチ思いつかない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was the only one who knew what happened there.[lr]
+[else]
+　その部屋の[ruby text="いわ"]曰くについては今のところ私しか知らない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki might have understood something I didn't, had I told her everything. On the other hand, she might have just deeming me crazy and locked me up or something.[prcm]
+[else]
+　そのことを楢崎に説明すれば何かしらの情報を聞くことが出来そうだが、その前にこちらの正気を怪しまれる可能性もある。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Besides, based on our previous conversation, it was already evident that she was trying to avoid discussing Sachiko with me.[lr]
+[else]
+　もし楢崎が何かを知っていたとしても、楢崎は先ほどの会話でそれについて何も触れていない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were no guarantees she'd tell me anything, even if she knew.[prcm]
+[else]
+　もう一度改めて聞いたところで答えてくれる保証はなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gulped down the remainder of my drink and picked up the keys.[lr]
+[else]
+　残ったお茶を一息に飲んだ。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se77.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I removed the one with Kozue's old room number on it, then shoved it into my pocket.[lr]
+[else]
+　それからもう一度鍵束を取ると、その銀のリングからあの部屋の鍵を取り外してズボンの横のポケットに入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was entirely possible that nothing would happen, even if I went there.[lr]
+[else]
+　あの部屋に行ったところで何も起きない可能性もある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I couldn't help but feel like there was something important in that room.[prcm]
+[else]
+　しかし、今あの部屋には何かあるような気がしていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made sure to slide a flashlight into my back pocket before leaving the night duty room.[prcm]
+[else]
+　宿直室を出る前に玄関にある懐中電灯をズボンの後ろポケットに入れた。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="159_3.ks" target=*159_3
+
+

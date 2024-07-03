@@ -1,0 +1,293 @@
+*054_2| Half past twelve
+; *054_2|十二時半
+[fbfstoretitle eng="Half past twelve" jp="十二時半"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=800]
+[backlay]
+[fbfscale_image storage="bg00_r" page=back layer=base]
+[trans method = crossfade time=100]
+[wt]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=10]
+[wt]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=70 visible=true opacity=0]
+[trans method = crossfade time=10]
+[wt]
+[seopt buf =0 volume=40]
+[playse buf = 0  storage=se80.ogg loop=true]
+[r][r][r][r][r][r]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[ch text="...Snap!"]
+[else]
+[ch text="                    ―ブツン。"]
+[endif]
+
+[clickskip enabled=true]
+[quake hmax=0 vmax=30 time=200]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 68"]
+[eval exp="sf.ItRelease = 69"]
+[endif]
+
+
+[prcm]
+*| Half past twelve
+; *|十二時半
+[fbfstoretitle eng="Half past twelve" jp="十二時半"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I woke to the unnerving sound of something extremely tense and tough — like a piano string — seemingly snapping in two. There was ringing in my ears.[prcm]
+[else]
+　ピアノ線のような丈夫な糸が何か大きな力で引き千切られるような感触があり、目が覚めると既に耳鳴りが始まっていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg44_5" page=back layer=base rfloor=0 gfloor=0 bfloor=0 rceil=40 gceil=40 bceil=40]
+[trans method=universal rule="rule7" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see the contours of a traditional Japanese room[quake hmax=0 vmax=10 time=200] in my hazy vision.[lr]
+[else]
+　目の前に障子の竹と雲の[quake hmax=0 vmax=10 time=200]水彩画がぼんやりと見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Most of it had been overtaken[quake hmax=0 vmax=10 time=200] by darkness[quake hmax=0 vmax=10 time=200], almost giving me the impression I was deep underwater.[prcm]
+[else]
+　それ以外[quake hmax=0 vmax=10 time=200]は暗く、深い闇の淵が見えて[quake hmax=0 vmax=10 time=200]いる。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule7" vague=50 time=800]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+[seopt buf=0 volume=60]
+[quake hmax=0 vmax=30 time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The ringing suddenly grew worse, and my eyes misted over.[lr]
+[else]
+　耳鳴りが一段とひどくなり、視界が霞む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was sure that every monster known to man was lurking within that darkness, glaring at me with hungry eyes.[prcm]
+[else]
+　広がる暗い闇には、この世にある恐ろしいもの全てが潜んでおり、それが一斉にこちらを見ているような気分がした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Cold sweat covered my forehead.[lr]
+[else]
+　冷や汗が流れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I slowly rose to my feet, careful not to make a sound, and continued to the kitchen.[prcm]
+[else]
+　もそり、と音を立てないように体を起こして台所へ向かう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found a cup and turned on the tap.[lr]
+[else]
+　水を飲もうとコップを取り、水道の蛇口をひねる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The moment the water hit the sink[clickskip enabled=false][quake hmax=0 vmax=50 time=200][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg][wait time=50][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg][wait time=50][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg loop=true][clickskip enabled=true], it sounded almost like standing next to a waterfall. I hurriedly stuck out my cup to block the stream.[lr]
+[else]
+　蛇口から溢れた水がシンクを叩き、大瀑布の滝壺にいるような音が耳を打ち、
+[clickskip enabled=false]
+[quake hmax=0 vmax=50 time=200]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg]
+[wait time=50]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg]
+[wait time=50]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg loop=true]
+[clickskip enabled=true]
+すぐに蛇口とシンクの間にコップを入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a sip of the ominously sloshing liquid.[prcm]
+[else]
+　ドプドプ、と不気味な音を立てながら貯まる水を飲む。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My eardrums nearly exploded at the sound of water passing through my throat, making me fall to my knee in surprise.[lr]
+[else]
+　水が喉を通る音で鼓膜を痛めながらその場に膝をつく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made myself focus on the cold sensation in my stomach for relief.[prcm]
+[else]
+　胃に貯まる冷たい水の感触がほんの一瞬だけ気を紛らわした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I leaned against the stove, and [clickskip enabled=false][quake hmax=0 vmax=30 time=200][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg][wait time=50][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg loop=true][clickskip enabled=true]embraced my knees.[lr]
+[else]
+　炊事場を背にして両ヒザを抱えるように座り込み、
+[clickskip enabled=false]
+[quake hmax=0 vmax=30 time=200]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg]
+[wait time=50]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg loop=true]
+[clickskip enabled=true]
+身を縮める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Closing my eyes, I remembered that special trick a friend once taught me that would always help me fall asleep.[prcm]
+[else]
+　目を閉じ頭の中で、友達が教えてくれたすぐに眠れる方法を思い出す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I would imagine myself floating in the middle of an empty sea.[lr]
+[else]
+　それは、何もない海の上に浮かぶイメージだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, no matter how hard I tried now, a raging storm would come to carry me away.[lr]
+[else]
+　しかし今、海の上は嵐が吹きすさび、すぐに眠りが訪れるような気配はない。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg44_5" page=back layer=base rfloor=0 gfloor=0 bfloor=0 rceil=40 gceil=40 bceil=40]
+[trans method=universal rule="rule7" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I slightly opened my eyes and saw Mayuko sleeping in the night duty room.[lr]
+[else]
+　少しだけ目を開く、宿直室で眠る繭子が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Reminding myself that I wasn't alone in this storm, I closed my eyes again.[prcm]
+[else]
+　体を揺らす音の嵐の中で一人ではないと考えるようにして再び目を閉じた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=0 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="054_3.ks" target=*054_3
+
+

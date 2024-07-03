@@ -1,0 +1,560 @@
+*089| A trip outside
+; *089|外出
+[fbfstoretitle eng="A trip outside" jp="外出"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+[playbgm storage="bgm19"]
+[fbfscale_image storage="item42" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 110"]
+[eval exp="sf.ItRelease = 111"]
+[endif]
+
+
+*| A trip outside
+; *|外出
+[fbfstoretitle eng="A trip outside" jp="外出"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I reclined in my seat, I saw the window of my second floor room through the front glass.[lr]
+[else]
+　助手席のリクライニングを少しだけ倒すと、フロントガラス越しに療養所の二階にある自室の窓が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+To the right of my room was Sanae's, but her window was located on the other wall, so I couldn't see it from here.[prcm]
+[else]
+　今は誰もいないその窓から右手側に[ruby text="さ"]早[ruby text="なえ"]苗の部屋がある。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　早苗の部屋の窓は建物の角より向こう側にあるため、見ることはできなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat up and opened the glove compartment.[lr]
+[else]
+　背もたれにあずけていた上体を起こして、助手席のダッシュボードを開く。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inside, I found a pair of sunglasses, some pocket tissues, and a softcover book.[prcm]
+[else]
+　中にはサングラス、ポケットティッシュ、書房の名前が印刷された紙カバー付きの文庫本の他には何もなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had nothing else to do, so I took out the sunglasses and tried putting them on.[lr]
+[else]
+　暇なので、サングラスを取り出して掛けてみた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They had thick, black frames.[lr]
+[else]
+　サングラスは黒縁の厚みのあるフレームだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned the rear-view mirror toward myself.[lr]
+[else]
+　センターミラーを手で掴んでこちらに向けてみる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A small bag dangling from it touched my hand.[lr]
+[else]
+　するとセンターミラーに下げてある小さな袋が手に触れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked at it.[lr]
+[else]
+　手をどけて小さな袋を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was made of some kind of thin material, like Japanese paper. There seemed to be something inside.[lr]
+[else]
+　袋は和紙のような薄い生地で出来ていて、中に何か入っているようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I placed it on my palm and held it up to the light, I saw something purple.[lr]
+[else]
+　小さな袋を手に乗せてみると軽く、光に透かすと中に何か紫色をしたものが見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That must've been the origin of the lavender smell in the car.[lr]
+[else]
+　車内に香っているラベンダーの素の様だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon drawing it closer to my nose, I realized I was right.[prcm]
+[else]
+　触れた手を顔に近づけるとやはりラベンダーの香りがした。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se87.ogg]
+[quake time=100 hmax=0 vmax=5]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you doing?[」][lr]
+[else]
+　「何をしているのですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The door on the side of the driver's seat suddenly opened, startling me.[lr]
+[else]
+　運転席のドアが急に開き、私は少し肩を跳ねさせてしまった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko climbed into the car.[prcm]
+[else]
+　そちらを見ると、[ruby text="まゆ"]繭[ruby text="こ"]子が席に座るところだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How does it look?[」][lr]
+[else]
+　「似合ってる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked at her from an angle and pointed at the sunglasses.[lr]
+[else]
+　繭子の方より斜めの角度を向いて、サングラスを指で持ち上げた。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se88.ogg]
+[quake time=100 hmax=0 vmax=5]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I feel like some thinner frames would suit you better.[」][prcm]
+[else]
+　「貴呼さんには、もう少し細めの方が似合いそうですね」と繭子が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, can we really just go outside like this?[」][lr]
+[else]
+　「ねえ、勝手に外に出てもいいの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have permission.[」][lr]
+[else]
+　「ちゃんと許可はもらっていますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's good to hear.[」][lr]
+[else]
+　「それは良かった」[lr]
+[endif]
+
+[r]
+;[clickskip enabled=false]
+[playse buf = 1 storage=se91_2.ogg]
+[fadeinse buf = 2 storage=se45.ogg loop=true time=6000]
+[quake time=500 hmax=0 vmax=10]
+;[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon checking that the ignition key was in its place, Mayuko promptly turned it.[lr]
+[else]
+　繭子はキーホルダー付きのキーがハンドル横の差込口にあることを確認すると、それを回した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The car jerked for a moment and the engine whirred to life with a low roar.[prcm]
+[else]
+　グルル、と一揺れしてエンジンがかかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, Mayuko... Who's the one giving you permission?[」][lr]
+[else]
+　「ねえ繭子。[l]外出の許可って誰が発行するの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The head doctor of the sanatorium.[l] And when they're not present, the responsibility falls on the head nurse.[」][lr]
+[else]
+　「外出許可は各療養所の医師が発行するんです。[l]担当不在の場合は、看護師長が発行します」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Isn't that you?[」][lr]
+[else]
+　「それって繭子じゃないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave her a suspicious look.[prcm]
+[else]
+　心の中で職権乱用の罪に問われた繭子に、訝しげな視線を送る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's right.[l] I'll be in a whole heap of trouble if you disappear on me, so be sure to stick close.[」][lr]
+[else]
+　「そうですよ。[l]見失うと困るので、外に出ても私のそばにいてくださいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't need to tell me that.[」][lr]
+[else]
+　「わかってるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Even if you find something interesting, don't wander off without first telling me.[l] I'll accompany you if need be.[」][lr]
+[else]
+　「何か興味を惹かれても、ふらりと離れないでくださいね。[l]どうしても、行きたい場所があったら私に声をかけて、一緒に行動しましょうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How old do you think I am?[」][prcm]
+[else]
+　「子供か私は」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko extended an arm to fix the position of the rear-view mirror.[lr]
+[else]
+　繭子がセンターミラーを合わせるために手を伸ばした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In it, I saw the reflection of a woman with twin tails and sunglasses.[prcm]
+[else]
+　そこにはサングラスを付けたツーサイドの女性が映っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm looking good.[」][lr]
+[else]
+　「似合ってる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm really worried.[」][lr]
+[else]
+　「私もとても心配しています」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmhm.[」][lr]
+[else]
+　「ふむふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko fastened her seatbelt.[lr]
+[else]
+　繭子がシートベルトをかける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned the sunglasses to the glove compartment and fastened my seatbelt, too.[prcm]
+[else]
+　こちらもダッシュボードにサングラスを直して、シートベルトをかけた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you fasten your seatbelt?[」][lr]
+[else]
+　「シートベルトはいいですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes...[」][lr]
+[else]
+　「してる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're off, then.[」][lr]
+[else]
+　「行きますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, it's Sanae.[」][lr]
+[else]
+　「あ、早苗だ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Probably drawn by the sound of the engine, Sanae was looking at us through the corridor's window.[lr]
+[else]
+　エンジン音で気がついたのか、早苗がぼんやりと廊下の窓からこちらを見ていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She returned my wave with one of her own.[prcm]
+[else]
+　手を振ると、小さく手を振りかえした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko changed gears and began going in reverse.[lr]
+[else]
+　繭子はバックギアを入れると、左にハンドルを切りながら車を後退させた。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se92.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She then switched gears again and turned the steering wheel to the right — toward the gate. Meanwhile, I could hear the sharp screeching of the tires.[lr]
+[else]
+　ギアを戻すとジャリジャリ、と砂利の噛み合う音をさせて、右にハンドルを切って車を門へと向けてから発進させた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Soon enough, I lost sight of Sanae.[prcm]
+[else]
+　シートベルトを伸ばしながら、ドア硝子越しに手を振っている早苗を見送る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think Sanae will be fine on her own?[」][lr]
+[else]
+　「早苗、留守番大丈夫かな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「大丈夫ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What happens if she gets hungry?[」][lr]
+[else]
+　「お腹減ったらどうするの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I prepared a meal for her. Besides, there are all sorts of things left in the fridge.[」][lr]
+[else]
+　「作り置きを置いてます。[l]食材もまだありますから、足りなければ料理しますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I didn't know she could cook.[」][prcm]
+[else]
+　「そうなの」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're going to cook for us tomorrow, right?[」][lr]
+[else]
+　「明日は[ruby text="たか"]貴[ruby text="こ"]呼さんが料理するんですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess I better do my best not to disappoint everyone.[」][lr]
+[else]
+　「これは、頑張らないとがっかりさせちゃうな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Please do.[」][lr]
+[else]
+　「頑張りましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][prcm]
+[else]
+　「うん」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fadeoutse buf=2 time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=2 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="090.ks" target=*090
+

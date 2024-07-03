@@ -1,0 +1,602 @@
+*039| Radio exercise
+; *039|ラジオ体操
+[fbfstoretitle eng="Radio exercise" jp="ラジオ体操"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm17"]
+
+;章題表示
+[msgoff]
+[wait time=3000]
+[backlay]
+[fbfunlockachievement number="1"]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence1_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence1_1_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+[wait time=1000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence1_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence1_2_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=4000]
+
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+;章選択フラグ
+[if exp="sf.CpRelease <= 1"]
+[eval exp="sf.CpRelease = 2"]
+[endif]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 50"]
+[eval exp="sf.ItRelease = 51"]
+[endif]
+
+
+*| Radio exercise
+; *|ラジオ体操
+[fbfstoretitle eng="Radio exercise" jp="ラジオ体操"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]click*[lr]
+[else]
+　バチン。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After finishing breakfast, I returned to my hospital room and turned on the radio with the broken spring by forcing its switch a little.[prcm]
+[else]
+　朝の食事を済ませて病室に戻るとはじめに、バネが壊れて押しづらくなったラジオのスイッチを強めに入れる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good morning.[」][lr]
+[else]
+　――おはようございます。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It'll take a few more minutes for the sun to peek its face from the horizon.[」][lr]
+[else]
+　――お日様が顔を出すまでには、あと数分かかりそうです。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]However, you can already see the clouds being illuminated by its golden light. Certainly a sight that fills one's soul with energy, is it not?[」][prcm]
+[else]
+　――でも既に上空の雲は、黄金色に染まっています。気持ちいいですね。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The radio began transmitting someone's cheerful voice through the usual noise.[prcm]
+[else]
+　ラジオはジッ、と唸るとすぐにノイズ入りの電波放送を流し始める。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]First, allow me to detail today's weather.[」][lr]
+[else]
+　――まずはじめに各地の天気をお伝えします。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ishigaki is going to be exposed to east-southeast winds of level three strength; meanwhile, the sky will be cloudy with 1013hPa barometric pressure and temperatures at 24 °C. Naha...[」][prcm]
+[else]
+　――石垣島では東南東の風、風力3、天気は曇、気圧1013hPa、気温24℃。那覇では―[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved to the plain room's window to confirm the weather of southern Japan.[lr]
+[else]
+　本日の天気を南日本から確認しながら、簡素な部屋の奥にある窓辺に立つ。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[playse buf = 1 storage=se103.ogg]
+[backlay]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method=universal rule="rule8" vague=50 time=300]
+[wt]
+[backlay]
+[fbfscale_image storage="bg85_2" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The curtains parted with an energetic sound, and the gloomy room was instantly filled with bright, golden light.[lr]
+[else]
+　バシャ、と勢い良くカーテンを開くと金色の光が陰気な部屋を、鮮やかに染める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I considered the blue sky and azure sea beyond the window.[lr]
+[else]
+　窓の外、真っ青な空と、遠くの青い海を眺める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I inhaled a deep breath, filling my chest with the pleasantly chilly morning air.[prcm]
+[else]
+　大きく息を吸うと、心地の良い冷たさの空気が肺を満たした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you ready?[」][lr]
+[else]
+　――レファソラレファラファラシドソ～。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Exercise number one.[」][prcm]
+[else]
+　――ラジオ体操第一～。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Exercise directions began spilling forth from the radio.[prcm]
+[else]
+　ラジオから体操の音頭が、流れてくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nmmmh.[」][lr]
+[else]
+　「んーっ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I straightened my stance, stuck out my chest, and stretched my back.[prcm]
+[else]
+　姿勢を正して、胸を反り大きく背伸びした。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se68.ogg]
+[ws buf=0]
+[playse buf = 1 storage=se54.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Soon enough, I heard a knock on the door.[lr]
+[else]
+　トントン、とノックの音。[lr]
+[endif]
+
+[r]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg33_4=1"]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/ev33_4" visible=true left=0 top=-100 opacity=0]
+[fbfscale_image storage="bg85_2" page=back layer=base]
+[trans method = crossfade time=1]
+[wt]
+[fbfscale_move time=2000 path="(-250,-100,255)(-500,-100,255)" layer=1]
+[wait time=2500]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="ev33_4" page=back layer=base]
+[trans method = crossfade time=1500]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/ev33_4" visible=false left=0 top=0 opacity=255]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned my head back as part of the exercise and saw Mayuko, my nurse.[lr]
+[else]
+　イッチニッサンシッ、と大きく斜め後ろに振り返ると、看護婦の[ruby text="まゆ"]繭[ruby text="こ"]子が見えた。[lr]
+[endif]
+
+[r]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Each time I turned, the light being reflected from her white uniform would blind me. I didn't miss the chance to marvel at her sizable bosom, though.[prcm]
+[else]
+　振り向くたびに、朝光を浴びた白い看護服が眩しく、胸も相変わらず大きい。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg33_1=1"]
+[fbfscale_image storage="ev33_1" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You seem to be in high spirits today.[l] How are you feeling?[」][lr]
+[else]
+　「今日も元気そうですね。[l]具合の悪いところはありませんか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm good.[l] I think I've been doing pretty well these last couple of days.[」][prcm]
+[else]
+　「んっ、おかげさまで。[l]近頃は、ずっと調子がいいよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Bending forward, I touched the floor with my palms.[lr]
+[else]
+　いっちにっ、と弾みをつけて前屈すると、手のひらがぴったりと地面についた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could do better back in my teens, but my body was still far from stiff.[lr]
+[else]
+　十代の頃のようにはいかないが、まだ体は柔らかいことを確認する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With my hands on my waist, I bent backwards.[lr]
+[else]
+　両手を腰に当てて状態を反らせる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was just what my rusty old back needed. It felt great.[lr]
+[else]
+　寝起きで、少し動きの鈍かった腰に丁度いい負荷がかかり気持ちが良かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see Mayuko upside down.[prcm]
+[else]
+　そして、逆さまの繭子が見える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Regular exercise is well and good, but please try not to overdo it.[」][lr]
+[else]
+　「体操はいいですけれど、あまり無理な体の動かし方はしないでくださいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our eyes met.[prcm]
+[else]
+　と、繭子が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, this is nothing.[l] It's not like I've got a physical condition.[」][lr]
+[else]
+　「これくらい平気だよ。[l]別に体が悪いわけではないんだから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I suppose that's true.[」][lr]
+[else]
+　「まあ、それもそうですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko, brushing the topic aside, placed the notebook she'd been holding on the side table.[prcm]
+[else]
+　繭子はあっさりと認めると、手に持っていた手帳をサイドテーブルに置いた。[prcm]
+[endif]
+
+
+;★ 手帳
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll leave your new notebook here.[」][lr]
+[else]
+　「新しい手帳はここに置いておきますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Glancing at the side table, I saw that the notebook in question was covered in brown leather.[lr]
+[else]
+　サイドテーブルを見ると、茶色い革製のカバーの手帳があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was similarly designed to the one I was using before, but still had an odd sense of newness about it.[lr]
+[else]
+　前に使っていた手帳と同じデザインだが、こちらはまだ新品で艶があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I bent down, touching my left and right toes.[prcm]
+[else]
+　ごうろくっ、と左のつま先、右のつま先へと手を伸ばして体を折る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, and after you're done exercising, I would like you to make good on your promise from yesterday.[」][lr]
+[else]
+　「ああ、それと。体操が終わったら昨日の約束、お願いしますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure, just gimme a sec.[」][lr]
+[else]
+　「うんっ、ちょっと待っててね」[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="bg85_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko passed by me and sat down on my bed.[lr]
+[else]
+　繭子は、傍らを歩いていきポスン、とベットに腰を下ろすと片手を付いて休んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Trying not to make too much commotion by jumping around, I instead kept moving up and down on my tiptoes while lifting my arms.[prcm]
+[else]
+　両足跳びは音がしないように、飛ばずに適当に肩を上げ下げして両腕を開いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can certainly keep this up for a long time.[」][lr]
+[else]
+　「よく続きますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't wake up unless I do this.[l] Though, to be honest, a morning bath would do the job even better.[」][lr]
+[else]
+　「これやんないと、目が覚めないの。[l]ホントは、朝風呂のほうがいいんだけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We are not running a hotel here.[」][lr]
+[else]
+　「うちは、ホテルじゃありませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, that's why I gotta generate my own energy like this.[」][lr]
+[else]
+　「だからこうして自家発電してるんじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stretched again, my unbrushed hair tickling my shoulders.[prcm]
+[else]
+　屈伸すると、括られていない髪の毛が、肩を撫でる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You have low blood pressure, if I remember correctly.[」][lr]
+[else]
+　「そういえば、血圧低いですよね[ruby text="たか"]貴[ruby text="こ"]呼さんって」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Jealous? I'm a walking energy saving machine.[」][lr]
+[else]
+　「いいでしょう、省エネなのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you sure?[l] Given the amount you eat, I'd say you have a faulty engine, if anything.[」][lr]
+[else]
+　「そうですか？ [l]その割にはご飯はよく食べるし、やっぱり燃費悪いんじゃありません？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's just how much I work.[」][lr]
+[else]
+　「それだけ働いてるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heaved a deep sigh.[prcm]
+[else]
+　と、深呼吸をしながら言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, let's make use of all that energy, then.[」][prcm]
+[else]
+　「それでは、元気良く行きましょうね」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="040.ks" target=*040
+
+

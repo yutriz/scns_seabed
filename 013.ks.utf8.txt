@@ -1,0 +1,611 @@
+*013| Dinner Together
+; *013|ふたりの夕食
+[fbfstoretitle eng="Dinner Together" jp="ふたりの夕食"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle6"]
+
+
+[msglayer2]
+
+
+[playbgm storage="bgm08"]
+;本
+[msgoff]
+[backlay]
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 15"]
+[eval exp="sf.ItRelease = 16"]
+[endif]
+
+*| Dinner Together
+; *|ふたりの夕食
+[fbfstoretitle eng="Dinner Together" jp="ふたりの夕食"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My reading was interrupted by the sound of the rice cooker signaling that the rice was done.[prcm]
+[else]
+　ソファに座り文庫本を読んでいると、炊飯器のご飯が炊き上がる音がした。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 0 storage=se50.ogg]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule14" vague=50 time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="bg04_4" page=back layer=base]
+[trans method=universal rule="rule14" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+[ws]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I slid the bookmark into my paperback and left it on the sofa. [playse buf = 1 storage=se33.ogg]Stepping into the kitchen, I opened the fridge.[prcm]
+[else]
+　文庫本に栞をはさみ、座っていたソファに置いてから、[playse buf = 1 storage=se33.ogg]キッチンへと向かい冷蔵庫を開ける。[prcm]
+[endif]
+
+[ws]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I grabbed all the eggs from the holders on the top shelf of the door, then reached for the oil and a bowl in the bottom cabinet.[lr]
+[else]
+　扉側の一番上にある穴付きの棚にあった残りの卵を全て取り出し、炊事場の下の戸から油とボウルを取った。[lr]
+[endif]
+
+[playse buf = 2 storage=se48.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After cracking the eggs on the side of the bowl, I discarded their shells in the garbage basket below the sink.[lr]
+[else]
+　ボウルの上で残りの卵を割ると、殻は流しのかごに捨てた。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se47.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up a pair of chopsticks and parted the two pieces ever so slighty, then gently began moving them back and forth to mix the white with the yolk.[lr]
+[else]
+　それから、ボウルの卵を箸をすき間をあけてまっすぐに立てて、前後に動かしカチャカチャ、と小気味の良い音を立てて白身を切るように混ぜ合わせた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I was doing that, I heard the front door behind me unlock.[lr]
+[else]
+　箸をあげたところでガチャガチャ、と玄関の鍵を開けている音がする。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se25.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the floor creak, and the living room door opened.[prcm]
+[else]
+　ギシギシ、と廊下の板が軋む音が聴こえてから、リビングの扉が開く。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p03_h13" visible=true left=330 top=0 opacity = 0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[fbfscale_move time=400 path="(230,0,255)(130,0,255)(30,0,255)(-70,0,0)" layer=0]
+[wm]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm back.[」][lr]
+[else]
+　「ただいま」[lr]
+[endif]
+
+[r]
+[stopse buf = 0]
+[stopse buf = 1]
+[stopse buf = 2]
+[playse buf = 1 storage=se51.ogg]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako left the shopping bag on the table and pulled up a nearby chair to sit down.[ws][prcm]
+[else]
+　貴呼はガサリ、と買い物袋をテーブルの上に置くと、近くの椅子を引いて座ったようだった。[ws][prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Welcome home.[」][lr]
+[else]
+　「おかえり」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Leaving the bowl with my mixed egg, I moved to the kitchen and checked the contents of the shopping bag Takako brought back.[lr]
+[else]
+　溶いた卵の入ったボウルを置いて、キッチンからリビングへ出るとテーブルの買い物袋を開けた。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se51.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found a pack of sukiyaki meat with a bargain sale sticker on it, some chrysanthemum greens, shirataki...[ws][prcm]
+[else]
+　特売のシールが付いたすき焼き用の肉と、春菊と、しらたきが見えた。[ws][prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about the soy sauce?[」][lr]
+[else]
+　「醤油は？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It should be at the bottom.[」][lr]
+[else]
+　「下の方」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found it under the shirataki bag.[lr]
+[else]
+　しらたきの袋の下に醤油のボトルがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thanked her, and she responded by raising her arm.[prcm]
+[else]
+　買出しの礼を言うと、テーブルに頭を伏せた貴呼が片手を挙げて応えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once I got out everything I needed from the bag, I brought them to the kitchen.[lr]
+[else]
+　買い物袋からすき焼きの材料を取り出してキッチンへと運ぶ。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se52.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I left the frying pan on the stove.[lr]
+[else]
+　フライパンをコンロに置いて、コンロのつまみを回す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned its knob three times until the flame lit up, then drained the oil from the frying pan with a kitchen towel as I heated it up.[lr]
+[else]
+　カチカチカチッ、と三回つまみを回したところでようやく火をつけると、フライパンを強火で温めながらキッチンペーパーで油を引く。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se35.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a beep, followed by the sound of the TV.[prcm]
+[else]
+　ピ、と微かな音がしてテレビの音が聴こえてくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the probability of rain remains high, we recommended taking an umbrella in the event of going out.[lr]
+[else]
+　――少しぱらつく可能性があるでしょう。[l]にわか雨や雪の可能性があるので、折りたたみ傘がお守りです。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the weather forecast.[prcm]
+[else]
+　と、テレビが天気情報を話していた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They said it's gonna rain tomorrow.[」][lr]
+[else]
+　「明日、雨だって」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+[ws]
+[playse buf = 2 storage=se47.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached out to the bottle of mentsuyu on the cabinet, and dripped a few drops of it into my egg bowl before stirring the mixture with my chopsticks again.[lr]
+[else]
+　手を伸ばして戸棚に置いてあっためんつゆを取り蓋を開けると、溶いた卵の入ったボウルに少しだけつゆを落としてから、箸で再び攪拌する。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once I was finished with that, I spilled about half of what was in the bowl into the frying pan.[lr]
+[else]
+　それが終わるとボウルを取って、フライパンの上で傾けて溶き卵を落とした。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se49.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A sharp sizzling sound followed.[lr]
+[else]
+　ジュウ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I rotated the frying pan so the beaten eggs would cover its entire surface, then popped the bubbles that would appear on it with my chopsticks. A delicious smell began to fill the entire kitchen.[lr]
+[else]
+　溶いた卵はフライパンに満遍なく伸ばし、そこにできる大きな気泡を箸で潰していくと、香ばしい香りがした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the sound of changing TV channels from the living room.[wm][prcm]
+[else]
+　リビングの方から、テレビの番組を切り替えるピピ、という音が聞こえていた。[wm][prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p03_h05" visible=true left=-120 top=0 opacity = 255]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you frying eggs over there?[」][lr]
+[else]
+　「もしかして卵焼きしてる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako momentarily stopped fiddling with the remote control.[prcm]
+[else]
+　リモコンを操作を止めた貴呼が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The eggs in the frying pan started to congeal.[lr]
+[else]
+　手元のフライパンでは、卵の表面がドロドロになっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I folded the whole thing in half with my chopsticks.[lr]
+[else]
+　箸を使って卵を奥から手前にパタン、と半分に畳む。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I drained the oil from the newly opened area with a kitchen towel, and after moving the folded egg to it, drained the other half as well.[lr]
+[else]
+　空いたフライパンのスペースに、再びキッチンペーパーで油をひいて、たたんだ卵を移動させると、もう半分のスペースにも油をひく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Finally, I unfolded the egg and spilled the rest of the bowl's contents on it.[ws][prcm]
+[else]
+　それから、卵の位置を戻してボウルに残った溶き卵を全て流した。[ws][prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p04_h02" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Smells like we're having a feast tonight.[」][lr]
+[else]
+　「本日の夕食は豪華だね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're about the only one who gets this excited over a sukiyaki and a fried egg.[」][lr]
+[else]
+　「すき焼きに、卵焼きがついただけでそれだけ喜ぶのって、貴方くらいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I love fried eggs.[」][lr]
+[else]
+　「卵焼き大好き」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the egg began to harden, I folded it again...[lr]
+[else]
+　流した卵の表面が固まりだすと、もう一度、卵を奥から手前に半分にパタンと畳む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...while also making some minor adjustments to its shape with my spatula.[prcm]
+[else]
+　少しだけ、へらで形を整えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm pretty sure this is a dream, though.[」][lr]
+[else]
+　「きっと、夢だけど」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p04_h03" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh yeah?[」][lr]
+[else]
+　「そうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「そうなのよ」[lr]
+[endif]
+
+[r]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p04_h04" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p04_h02" visible=true left=-120 top=0][trans method=universal rule="rule1" vague=100 time=400][wt][msgon]Well, I don't care as long as I get my food.[」][prcm]
+[else]
+　「そう。[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f08_p04_h02" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+まあいいや、夕食が豪華ならどちらでもいいじゃない」[prcm]
+[endif]
+
+
+
+;///
+
+[clickskip enabled=false]
+[fadeoutbgm time=3000]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time = 1000]
+[backlay]
+[fbfscale_image storage="bg04_2" page=back layer=base]
+[trans method=universal rule="rule2" vague=300 time=3000]
+[wt]
+[msgon]
+
+[wait time=1000]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I sat up from the sofa, I immediately clutched my head in response to a sudden, sharp jolt of pain.[prcm]
+[else]
+　ソファの背もたれからもたれていた上体を起こすとズキン、と痛む頭を抑えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced out the window to see the sun already vanishing beyond the horizon and a few stray stars shining in the night sky.[lr]
+[else]
+　明かりがなく薄暗い部屋から、ベランダの外を見ると日はとうに落ちきって、ひとつふたつの星が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My laundry was all neatly folded next to my feet.[prcm]
+[else]
+　足元には、全てたたまれた洗濯物が並んでいる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was no pot on the dining table in front of the TV, nor any shopping bag on the other table.[lr]
+[else]
+　テレビの前の食卓テーブルの上には鍋はなく、もうひとつのテーブルにも買い物袋は置かれていない。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se54.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up and peeked out the living room door to check the boxes — they were indeed gone.[ws][prcm]
+[else]
+　立ち上がって、リビングの扉を開いて見ると、ダンボール箱は片付けられていた。[ws][prcm]
+[endif]
+
+
+[playse buf = 0 storage=se53.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed the door again, then turned around and stuffed my dried clothes into their designated drawers before getting ready to make my... second dinner tonight.[ws][prcm]
+[else]
+　ガチャリ、と扉を閉める。[ws][lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　振り返り、たたんだ洗濯物を自室の引き出しに仕舞ってから、二度目の夕食の準備に取り掛かった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=2000]
+[wt]
+[wait time=3000]
+[jingle6]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="014.ks" target=*014
+
+

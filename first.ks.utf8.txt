@@ -1,0 +1,480 @@
+@laycount layers=20
+
+; FBF: Load our macros.
+[call storage="FBFMacro.ks" target=*fbf_macro]
+
+; FBF: Load yes/no prompt.
+[call storage="FBFYesNo.ks"]
+
+; FBF: Load Alt + Enter functionality.
+[call storage="AltEnterFullScreen.ks"]
+
+; FBF: Load ctrl skip plugin.
+[call storage="FBFplugin_CtrlSkip.ks"]
+
+[macro name=ctrlskip]
+[if exp="typeof(global.CtrlSkip_obj) != 'undefined'"]
+	[eval exp=".CtrlSkip_obj.setOptions(mp)"]
+[endif]
+[endmacro]
+
+[ctrlskip enabled="false" quickflg="false"]
+
+[iscript]
+//CGギャラリーモードのページ番号初期化
+f.cg_page=1;
+
+// FBF: Try to determine user language on first start.
+if (sf.textfade === void)
+{
+	if (FBFSteam != void)
+	{
+		var userLanguage = FBFSteam.GetUserLanguage();
+		
+		// Japanese.
+		if (userLanguage == 1)
+		{
+			kag.onJapaneseLanguageMenuClick();
+		}
+		// English.
+		else
+		{
+			kag.onEnglishLanguageMenuClick();
+		}
+	}
+	
+	sf.textfade = 1;
+}
+
+//sf.textfade   0:テキストをフェードで表示しない（瞬間表示）、1:フェードで表示する
+//sf.textfade = 1 if sf.textfade === void;
+//テキストのフェード命令用
+f.textfade_enabled = 0;
+
+
+function site_on1()
+
+{
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]);
+  kag.fore.layers[2].visible = true;
+  kag.fore.layers[1].visible = false;
+}
+
+function site_on2()
+{
+  kag.se[1].play(%["storage" => "se123.ogg", "loop" => false]);
+  kag.fore.layers[4].visible = true;
+  kag.fore.layers[3].visible = false;
+}
+
+
+function site_on3()
+{
+  kag.se[2].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[6].visible = true;
+  kag.fore.layers[5].visible = false;
+}
+
+function site_on4()
+{
+  kag.se[3].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[8].visible = true;
+  kag.fore.layers[7].visible = false;
+}
+
+function site_on5()
+{
+  kag.se[4].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[10].visible = true;
+  kag.fore.layers[9].visible = false;
+}
+
+function site_on6()
+{
+  kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[12].visible = true;
+  kag.fore.layers[11].visible = false;
+}
+
+function site_on7()
+{
+  kag.se[6].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[14].visible = true;
+  kag.fore.layers[13].visible = false;
+}
+
+// サイト画像（レイヤ１）を非表示
+
+function site_off1()
+{
+  kag.fore.layers[2].visible = false;
+  kag.fore.layers[1].visible = true;
+}
+
+function site_off2()
+{
+  kag.fore.layers[4].visible = false;
+  kag.fore.layers[3].visible = true;
+}
+
+function site_off3()
+
+{
+  kag.fore.layers[6].visible = false;
+  kag.fore.layers[5].visible = true;
+}
+
+function site_off4()
+{
+  kag.fore.layers[8].visible = false;
+  kag.fore.layers[7].visible = true;
+}
+
+function site_off5()
+{
+  kag.fore.layers[10].visible = false;
+  kag.fore.layers[9].visible = true;
+}
+
+function site_off6()
+{
+  kag.fore.layers[12].visible = false;
+  kag.fore.layers[11].visible = true;
+}
+
+function site_off7()
+{
+  kag.fore.layers[14].visible = false;
+  kag.fore.layers[13].visible = true;
+}
+
+[endscript]
+
+
+;-----------------------------------------------------------------------------
+;■プラグインの読み込み
+;-----------------------------------------------------------------------------
+[loadplugin module="wuvorbis.dll"]
+[loadplugin module="krflash.dll"] 
+[loadplugin module="krmovie.dll"] 
+
+[startanchor]
+*start|開始位置
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Textfade"]
+
+;★デバッグ用
+
+;[eval exp="sf.CpRelease = 12"]
+;[eval exp="sf.ItRelease = 300"]
+;[eval exp="sf.CpRelease_tips = 4"]
+;[eval exp="sf.ItRelease_tips1 = 8"]
+;[eval exp="sf.ItRelease_tips2 = 2"]
+;[eval exp="sf.ItRelease_tips3 = 3"]
+;[eval exp="sf.ItRelease_tips4 = 1"]
+
+;★デバッグ用
+
+
+;正式処理
+[eval exp="f.CpRelease = sf.CpRelease"]
+[eval exp="f.ItRelease = sf.ItRelease"]
+[eval exp="f.CpRelease_tips = sf.CpRelease_tips"]
+[eval exp="f.ItRelease_tips1 = sf.ItRelease_tips1"]
+[eval exp="f.ItRelease_tips2 = sf.ItRelease_tips2"]
+[eval exp="f.ItRelease_tips3 = sf.ItRelease_tips3"]
+[eval exp="f.ItRelease_tips4 = sf.ItRelease_tips4"]
+
+[textfade enabled=true]
+
+[msgoff]
+
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1]
+[wt]
+
+;★サークルタイトル
+
+
+[if exp="f.CpStartFlg == 0"]
+
+[backlay]
+[image layer=1 page=back storage="circle_title1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[wait time=1000]
+;
+[backlay]
+[playse buf = 1 storage=se169.ogg]
+[image layer=1 page=back storage="circle_title2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1]
+[wt]
+[wait time=1500]
+[endif]
+
+[if exp="f.CpStartFlg == 0"]
+[clickskip enabled=false]
+[backlay]
+[image layer=2 page=back storage="bg00" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[image layer=2 page=back storage="bg00_w" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=800]
+[wt]
+[playbgm storage="bgm30"]
+[wait time=3000]
+[backlay]
+[image layer=2 page=back storage="menu_fade0" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=3000]
+[wt]
+[backlay]
+[image layer=2 page=back storage="menu_fade1" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=300]
+[wt]
+[backlay]
+[image layer=2 page=back storage="menu_fade2" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[image layer=2 page=back storage="menu_fade3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=3000]
+[wt]
+[endif]
+
+;★サークルタイトル
+[if exp="f.CpStartFlg == 1"]
+[clickskip enabled=false]
+[playbgm storage="bgm30"]
+;[backlay]
+;[image layer=2 page=back storage="menu_fade0" visible=true left=0 top=0 opacity=255]
+;[trans method = crossfade time=800]
+;[wt]
+;[backlay]
+;[image layer=2 page=back storage="menu_fade1" visible=true left=0 top=0 opacity=255]
+;[trans method = crossfade time=300]
+;[wt]
+;[backlay]
+;[image layer=2 page=back storage="menu_fade2" visible=true left=0 top=0 opacity=255]
+;[trans method = crossfade time=800]
+;[wt]
+[backlay]
+[image layer=2 page=back storage="menu_fade3" visible=true left=0 top=0 opacity=255]
+[trans method = crossfade time=1500]
+[wt]
+[endif]
+
+[seopt buf=0 volume=100]
+[seopt buf=1 volume=100]
+[seopt buf=2 volume=100]
+[seopt buf=3 volume=100]
+[seopt buf=4 volume=100]
+[seopt buf=5 volume=100]
+
+[clickskip enabled=false]
+
+
+;★メニューimage表示
+[if exp="f.CpRelease <= 0"]
+[backlay]
+[image storage="menu_nochap" page=back layer=base]
+[trans method = crossfade time=200]
+[wt]
+[endif]
+
+[if exp="f.CpRelease >= 1 && f.CpRelease_tips <= 0"]
+[backlay]
+[image storage="menu_notips" page=back layer=base]
+[trans method = crossfade time=200]
+[wt]
+[endif]
+
+[if exp="f.CpRelease >= 1 && f.CpRelease_tips >= 1"]
+[backlay]
+[image storage="menu" page=back layer=base]
+[trans method = crossfade time=200]
+[wt]
+[endif]
+
+
+;[image layer=1 page=back storage="menu1" visible=true left=0 top=0 opacity=255 rfloor=80 gfloor=80 bfloor=80]
+;[image layer=2 page=back storage="menu1" visible=false left=0 top=0 opacity=255]
+;[image layer=3 page=back storage="menu2" visible=true left=0 top=113 opacity=255 rfloor=80 gfloor=80 bfloor=80]
+;[image layer=4 page=back storage="menu2" visible=false left=0 top=113 opacity=255]
+;[image layer=5 page=back storage="menu3" visible=true left=0 top=197 opacity=255 rfloor=80 gfloor=80 bfloor=80]
+;[image layer=6 page=back storage="menu3" visible=false left=0 top=197 opacity=255]
+;[image layer=7 page=back storage="menu4" visible=true left=0 top=320 opacity=255 rfloor=80 gfloor=80 bfloor=80]
+;[image layer=8 page=back storage="menu4" visible=false left=0 top=320 opacity=255]
+;[image layer=9 page=back storage="menu5" visible=true left=635 top=0 opacity=255 rfloor=80 gfloor=80 bfloor=80]
+;[image layer=10 page=back storage="menu5" visible=false left=635 top=0 opacity=255]
+;[image layer=11 page=back storage="menu6" visible=true left=665 top=228 opacity=255 rfloor=80 gfloor=80 bfloor=80]
+;[image layer=12 page=back storage="menu6" visible=false left=665 top=228 opacity=255]
+;[image layer=13 page=back storage="menu7" visible=true left=653 top=316 opacity=255 rfloor=80 gfloor=80 bfloor=80]
+;[image layer=14 page=back storage="menu7" visible=false left=653 top=316 opacity=255]
+
+[if exp="sf.cg101 == 0"]
+[eval exp="sf.cg101=1"]
+[endif]
+
+
+[mapdisable layer=base]
+[fbfscale_image layer=1 page=back storage="menu1" visible=true left=0 top=0 opacity=255]
+[fbfscale_image layer=2 page=back storage="menu1_b" visible=false left=0 top=0 opacity=255]
+[fbfscale_image layer=3 page=back storage="menu2" visible=true left=0 top=113 opacity=255]
+[fbfscale_image layer=4 page=back storage="menu2_b" visible=false left=0 top=113 opacity=255]
+[if exp="f.CpRelease >= 1"]
+[fbfscale_image layer=5 page=back storage="menu3" visible=true left=0 top=197 opacity=255]
+[fbfscale_image layer=6 page=back storage="menu3_b" visible=false left=0 top=197 opacity=255]
+[endif]
+[if exp="f.CpRelease_tips >= 1"]
+[fbfscale_image layer=7 page=back storage="menu4" visible=true left=0 top=320 opacity=255]
+[fbfscale_image layer=8 page=back storage="menu4_b" visible=false left=0 top=320 opacity=255]
+[endif]
+[fbfscale_image layer=9 page=back storage="menu5" visible=true left=635 top=0 opacity=255]
+[fbfscale_image layer=10 page=back storage="menu5_b" visible=false left=635 top=0 opacity=255]
+[fbfscale_image layer=11 page=back storage="menu6" visible=true left=665 top=228 opacity=255]
+[fbfscale_image layer=12 page=back storage="menu6_b" visible=false left=665 top=228 opacity=255]
+[fbfscale_image layer=13 page=back storage="menu7" visible=true left=653 top=316 opacity=255]
+[fbfscale_image layer=14 page=back storage="menu7_b" visible=false left=653 top=316 opacity=255]
+
+
+;★デバッグ用
+;[trans method = crossfade time=1]
+[playse buf =1  storage=se137.ogg]
+[trans method=universal rule="rule7" vague=50 time=500]
+;★デバッグ用
+[wt]
+@position left=400 width=220
+@wt
+*fromload
+[rclick enabled=false]
+[history output=false enabled=false]
+[laycount layers=20 messages=2]
+[current layer=message0 page=fore]
+[eval exp="f.loadFromTitle=0"]
+[eval exp="f.CpStartFlg = 0"]
+[if exp="f.CpRelease <= 0"]
+[image layer=base storage="menu_nochap" page=fore]
+[image layer=base storage="menu_nochap" page=back]
+[endif]
+
+[if exp="f.CpRelease >= 1 && f.CpRelease_tips <= 0"]
+[image layer=base storage="menu_notips" page=fore]
+[image layer=base storage="menu_notips" page=back]
+[endif]
+
+[if exp="f.CpRelease >= 1 && f.CpRelease_tips >= 1"]
+[image layer=base storage="menu" page=fore]
+[image layer=base storage="menu" page=back]
+[endif]
+[s]
+
+*st
+[mapdisable layer=base]
+@er
+[playse buf = 1 storage=se124.ogg]
+[fadeoutbgm time=3000]
+[backlay]
+[freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back][freeimage layer=4 page=back]
+[freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back][freeimage layer=8 page=back]
+[freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back][freeimage layer=12 page=back]
+[freeimage layer=13 page=back][freeimage layer=14 page=back]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=2200]
+[wt]
+[wait time=3000]
+[history output=true enabled=true]
+@jump storage="m01.ks" target=*m01
+
+
+*load
+[mapdisable layer=base]
+;LOAD画面をタイトル画面から読み込んだときの制御フラグ
+[eval exp="f.loadFromTitle=1"]
+@jump storage="load.ks" target=*initialize
+
+
+*cha
+[mapdisable layer=base]
+[playse buf = 1 storage=se124.ogg]
+[fadeoutbgm time=3000]
+[backlay]
+[freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back][freeimage layer=4 page=back]
+[freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back][freeimage layer=8 page=back]
+[freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back][freeimage layer=12 page=back]
+[freeimage layer=13 page=back][freeimage layer=14 page=back]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=2200]
+[wt]
+[wait time=500]
+@jump storage="chapter.ks" target=*chapter
+
+
+*tip
+[mapdisable layer=base]
+[playse buf = 1 storage=se124.ogg]
+[fadeoutbgm time=3000]
+[backlay]
+[freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back][freeimage layer=4 page=back]
+[freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back][freeimage layer=8 page=back]
+[freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back][freeimage layer=12 page=back]
+[freeimage layer=13 page=back][freeimage layer=14 page=back]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=2200]
+[wt]
+[wait time=500]
+@jump storage="tips.ks" target=*tips
+
+
+*pic
+[mapdisable layer=base]
+[playse buf = 1 storage=se124.ogg]
+[fadeoutbgm time=3000]
+[backlay]
+[freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back][freeimage layer=4 page=back]
+[freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back][freeimage layer=8 page=back]
+[freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back][freeimage layer=12 page=back]
+[freeimage layer=13 page=back][freeimage layer=14 page=back]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=2200]
+[wt]
+[wait time=500]
+@jump storage="cg.ks" target=*cg
+
+
+*config
+[mapdisable layer=base]
+[eval exp="f.configFromTitle=1"]
+@jump storage="config.ks" target=*config
+
+*ex
+
+[call storage="FBFExitGame.ks"]
+[s]
+
+//[iscript]
+//
+//kag.process("FBFExitGame.ks");
+// kag.closeByScript(%[ask:true]);
+//[endscript]

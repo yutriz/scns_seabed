@@ -1,0 +1,265 @@
+*120_2| The not-so-scary dream
+; *120_2|怖くない夢
+[fbfstoretitle eng="The not-so-scary dream" jp="怖くない夢"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm26"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 149"]
+[eval exp="sf.ItRelease = 150"]
+[endif]
+
+
+*| The not-so-scary dream
+; *|怖くない夢
+[fbfstoretitle eng="The not-so-scary dream" jp="怖くない夢"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was playing with the diary girl and the plush toys in the children's room.[lr]
+[else]
+　自分の子供部屋で、日記の女の子とぬいぐるみで遊んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were four plushies in total.[lr]
+[else]
+　並べてあるぬいぐるみは全部で四つある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An otter, a fat bird, a melon with arms and legs, and a doctor.[prcm]
+[else]
+　ラッコと、ずんぐりな鳥と、手足のついたメロンみたいなキャラクター、それにお医者さんだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I got the otter from that aquarium I liked.[lr]
+[else]
+　ラッコのぬいぐるみは、お気に入りの水族館で買ってもらった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A mother otter held many little otters in her embrace. The cubs, in turn, each held seashells.[lr]
+[else]
+　親ラッコが子ラッコを抱いて、子ラッコは貝を持っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+You could take the otter cubs off if you removed the magic tape on the mother's paw.[lr]
+[else]
+　親ラッコの手にあるマジックテープを外すと、子ラッコを離すことができる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I got my own room for the first time in my life after we moved, it took me some time to get used to sleeping alone. As a result, this otter plush ended up keeping me company in bed many a night.[lr]
+[else]
+　引越しした後に子供部屋をもらって一人で寝るようになったばかりの頃、まだ一人で眠るのは寂しくてよくこのぬいぐるみを抱いて寝ていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The bird came from my late grandmother.[prcm]
+[else]
+　ずんぐりむっくりの鳥のようなぬいぐるみは、亡くなったおばあさんがくれたものだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I think it was supposed to talk if you pushed a certain part of it, but it either ran out of batteries or broke by the time I got it, and never let out a single peep in my presence.[lr]
+[else]
+　このぬいぐるみは、どこかを押したら喋っていたような気がする。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　しかし、もらった頃には電池が切れていたのかそれとも壊れていたのか、ぬいぐるみは喋らなくなっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+His voice was most likely pre-recorded.[lr]
+[else]
+　その声は、録音音声だったのかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Perhaps it belonged to my grandmother, even.[prcm]
+[else]
+　そして、そこにはおばあさんの声が入っていたかもしれない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I was much older when I realized that.[lr]
+[else]
+　しかし、そういうことに気がつく前に私はぬいぐるみで遊ばなくなっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+By that time, that toy had moved to collect dust on a tall shelf, and eventually disappeared altogether.[prcm]
+[else]
+　そのぬいぐるみは高い本棚の上で埃をかぶり、いつしか本棚の上からも無くなっていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't even remember where I got the melon plushie.[lr]
+[else]
+　メロンに手足がついた、なにかのキャラクターのようなぬいぐるみは、どこで貰ったものか覚えていない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its troubled face was really cute, now that I thought about it.[lr]
+[else]
+　今思えば、困ったような表情が面白くて可愛かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Back then, though, I was too young to read much into its expression, and simply played with it by throwing it around.[lr]
+[else]
+　しかし、小学校の頃の私には、その機微な表情は読み取れなかったようで、ただ投げて遊んでいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Being small enough to fit into my palm made it the perfect ball to throw around the room; I watching his arms flail in the air as he did all sorts of acrobatic tricks before crashing into the wall or ceiling. One day, however, I lost it.[prcm]
+[else]
+　手のひらにちょうど収まる大きさで、投げやすいメロンのようなキャラクターのぬいぐるみは、ホントにアクション映画のスタントマンのように、部屋中を飛びまわり、そしていつかなくしてしまった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I only rediscovered it when I was already in high school.[lr]
+[else]
+　そのメロンの困った顔を再び見つけたのは、高校生になってからだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was looking for something in the old closet when I found it all covered in dust.[lr]
+[else]
+　何かを探して押入れに入った時に、埃だらけになっていたそのメロンのキャラクターのぬいぐるみが見つかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Despite the passage of time, its facial expression remained the same.[prcm]
+[else]
+　経過した時間の割には余裕のある表情だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The diary girl brought the doctor toy. Apparently, it was the mascot of some hospital.[lr]
+[else]
+　お医者さんのぬいぐるみは、日記の女の子が持ってきたどこかの病院のマスコットだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It originally belonged to a kindergarten she attended, but she liked it so much that the nurse ended up giving it to her as a present.[prcm]
+[else]
+　これはもともと幼稚園にあったものだが、彼女が気に入って譲り受けたものだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We would sometimes take out our toys and play together when we were still in our early years of elementary school.[prcm]
+[else]
+　小学生になっても低学年の頃までは、たまにこうしてぬいぐるみを取り出してきては、おままごとやお医者さんごっこなど、たわいもない遊びをした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This time, we tried to make a play with our plushies as the characters, but we failed to construct any sort of continuous story in the end.[prcm]
+[else]
+　その日はぬいぐるみを使って劇のようなものを作る、という遊びをしたがまともな話はできなかった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="121.ks" target=*121
+
+

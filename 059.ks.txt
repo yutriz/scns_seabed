@@ -1,0 +1,17 @@
+title: 青白い朝
+
+窓から白い光が入り込み、部屋にぼんやりとした薄青色が漂った。
+冷たい窓硝子には雪の結晶のような霜。
+外の屋根には小さな氷柱が降りている。
+雪の結晶のフレームの向こうには夜の内に白んでしまった玄関前の庭園が見えた。
+
+遠くでコン、と乾いた音がした。
+
+氷柱を下に伝う透明な雫が、その先から音もなく落ちた。
+
+Some text may not be added by this script, e.g. 
+	[if exp=kag.FBFPrepareLanguage() == 1]
+	[r]
+	　と、母が言った。[prcm]
+	[endif]
+0 place(s) of [if exp=kag.FBFPrepareLanguage() == 1] found, pleaze check the **.ks.utf8.txt file manually

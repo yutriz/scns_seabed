@@ -1,0 +1,382 @@
+*161| Clover Offices
+; *161|クローバー事務所
+[fbfstoretitle eng="Clover Offices" jp="クローバー事務所"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[fadeinse buf=1 storage=se146 time=1500 loop=true]
+[wait time=3000]
+[playbgm storage="bgm02"]
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 216"]
+[eval exp="sf.ItRelease = 217"]
+[endif]
+
+
+*| Clover's Offices
+; *|クローバー事務所
+[fbfstoretitle eng="Clover's Offices" jp="クローバー事務所"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I listened to the sound of our printer working quietly in the background.[lr]
+[else]
+　カシュンカシュン、と印刷機が紙を排出している音がしている。[lr]
+[endif]
+
+[r]
+[stopse buf=1]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Suddenly, it let out an electronic beep before stopping completely motionless.[prcm]
+[else]
+　小気味のいい音は唐突にガチンと大きなものに変わった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　その直後、ピーッという電子音と共に印刷機が身震いして止まる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/f_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, it stopped,[」] Fumi said in front of the machine.[prcm]
+[else]
+　「あ、止まった」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　印刷機の前にいた[ruby text="ふみ"]文が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Inukai, this thing swallowed my papers again.[」][lr]
+[else]
+　「[ruby text="いぬ"]犬[ruby text="かい"]飼、紙詰まりしたんだけど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/f_img/f01_p01_h01" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi turned to Inukai, who was still working at his desk. He silently stood up, walked over to the printer and kneeled down in front of it to open its tray.[prcm]
+[else]
+　文が机で作業をしている犬飼の方を振り向くと、犬飼は黙って立ち上がり印刷機の前で膝をついてトレーを開けた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I thought it was a steal when we got it from the neighboring office for almost nothing, but it keeps getting stuck all the time.[」][lr]
+[else]
+　「となりの事務所から持ってきたのはいいけど、よく詰まるわね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]To be honest, you really should know how to fix this by yourself.[」][lr]
+[else]
+　「これくらい自分で直してくださいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai removed the cover from the back of the machine and pulled out a crumpled piece of paper.[lr]
+[else]
+　犬飼が印刷機の後ろのカバーを外すと、ローラーに引っかかった紙を引き抜いてから、元に戻した。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se146.ogg loop=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He pushed a button and the calm printing noise resumed.[prcm]
+[else]
+　ボタンを押すと再び、印刷機が紙を排出する小気味のいい音が事務所に戻ってきた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't want to get my hands dirty.[」][lr]
+[else]
+　「手が汚れるじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai glanced at his fingers, now covered in cyan-colored dye.[prcm]
+[else]
+　犬飼が見た手のひらには、シアンの色が付いていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What?[」][lr]
+[else]
+　「どういうことですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Frowning, he pulled out a handkerchief from his back pocket and began wiping off his fingers.[lr]
+[else]
+　彼は悪態をつきながら、お尻のポケットからハンカチを取り出して指を拭った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The handkerchief had a picture of a cute sheep on it.[prcm]
+[else]
+　ハンカチには、かわいい羊のマスコットがプリントしてあった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can endure that much, can't you?[l] It still beats going next door to beg every time you need to print something.[」][lr]
+[else]
+　「いいじゃないこれくらい。[l]いつもみたいに、印刷機借りに外に出なくて良くなったんだから」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadese buf=1 time=400 volume=60]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wf buf=1]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Jesus... Okay, fine.[」][lr]
+[else]
+　「ああもう、分かりましたよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a knock on the door as Inukai returned to his seat.[prcm]
+[else]
+　と、言い残して犬飼が席に戻ったところに、事務所の扉が叩かれた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Excuse me.[」][lr]
+[else]
+　「すみません」[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se68.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The windows of our beige-colored door trembled in response to the knock.[prcm]
+[else]
+　コンコン、とベージュのペンキで塗られた板と磨ガラスの扉が叩かれている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes?[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi moved closer to see what was going on.[lr]
+[else]
+　と、文が扉へと向かう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I paused and shifted my gaze to the door.[prcm]
+[else]
+　作業をしていた手を止めて、扉を見た。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry for the intrusion, but I was wondering if Ms. Mizuno was currently present.[」][lr]
+[else]
+　「すみません、ここに水野さんはいらっしゃいますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi was speaking to someone on the other side of the door.[prcm]
+[else]
+　文が扉が開き、扉の向こうの相手に応対している。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes. Just give me a moment.[」][lr]
+[else]
+　「はい、少々お待ちください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made out a long-haired, familiar-looking woman standing at the door.[prcm]
+[else]
+　扉の間から、見知った長い髪の女性が見えた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae, a massive Boston bag at her feet, waved at me as our eyes met.[prcm]
+[else]
+　大きなボストンバックを足元においた七重が、こちらに気がついて手を振った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f01_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey there. I came over to hang out.[」][prcm]
+[else]
+　「やあ、遊びに来たよ」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fadeoutse buf=1]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="162.ks" target=*162
+
+

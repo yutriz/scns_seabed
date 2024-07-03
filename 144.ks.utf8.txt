@@ -1,0 +1,483 @@
+*144| Train
+; *144|電車
+[fbfstoretitle eng="Train" jp="電車"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm35"]
+[fadeinse buf=1 storage=se46 time=1500 loop=true]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg59_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 182"]
+[eval exp="sf.ItRelease = 183"]
+[endif]
+
+*| Train
+; *|電車
+[fbfstoretitle eng="Train" jp="電車"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked out at the sea beyond the window.[lr]
+[else]
+　車窓を眺めると海が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rays of the setting sun painted the interior of the train car in orange.[prcm]
+[else]
+　正面には沈み始めた太陽が空と海と[ruby text="しゃ"]車[ruby text="りょう"]輛内を染めている。[prcm]
+[endif]
+
+
+[quake hmax=0 vmax=10 time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]Clank clank*[lr]
+[else]
+　ガタンガタン。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The train car rocked back and forth as it travelled along the rails.[lr]
+[else]
+　と、電車が揺れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my eyes and looked around.[lr]
+[else]
+　目を開けて車内を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A row of seats lined each wall of the car.[lr]
+[else]
+　座席は、車両と並行に向かい合って二列に並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An old woman and a girl — likely her grandchild — sat further away from me on the same long seat.[prcm]
+[else]
+　同じ長椅子には左側の少し離れたところに老婆と子供が座っている。[prcm]
+[endif]
+
+
+[quake hmax=0 vmax=10 time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The child was kneeling on the seat, looking out the window.[lr]
+[else]
+　子供は座席に膝を載せて、窓の外を見ていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The old woman looked at the same scenery from the corner of her eye.[lr]
+[else]
+　子供の隣にいる老婆は横目でそれを見ていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her thin hand, resting on her knees, had a golden watch on its wrist.[lr]
+[else]
+　膝の上の手提げに載せた細い手首には金の腕時計を巻いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In front of me sat a middle-aged man in a suit, reading a black notebook.[lr]
+[else]
+　向かいの長椅子には、スーツ姿の中年男性が黒い手帖を睨んでいる。[lr]
+[endif]
+
+[r]
+[quake hmax=0 vmax=10 time=200]
+[wait time=300]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A little bit further away, a high school girl in her uniform had nodded off.[prcm]
+[else]
+　その少し離れたところで、首を垂れて眠っているセーラー姿の女子高生がいた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...at's good.[」][lr]
+[else]
+　「――くれて、安心したよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard brief fragments of the conversation two clerks were having nearby.[prcm]
+[else]
+　吊革を持った二人のサラリーマン風の男の話が聞こえる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You've chosen the right woman.[l] She's smart and works hard.[」][lr]
+[else]
+　「いい相手を選んだよ。[l]彼女は賢いし、よく働くからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The other man nodded.[prcm]
+[else]
+　相手の男が頷いていた。[prcm]
+[endif]
+
+
+
+[quake hmax=0 vmax=10 time=200]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll admit, her being a beaut played a role when I chose her, but I was mostly attracted to her smarts.[l] I still sometimes feel like a child around her.[」][lr]
+[else]
+　「私が今の連れを選んだのは、美人って言うのもあるが、頭がいいところが大きいな。[l]私が子供のときから、あいつは大学生に見えるくらいだったんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The other man nodded again.[lr]
+[else]
+　相手の男が再び頷いた。[lr]
+[endif]
+
+[r][cm]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, the most important thing is that you're happy.[」][lr]
+[else]
+　「それは、どれだけ我慢ができるかでもあるんだが、結局は性なんだな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The well-built clerk that had his sleeves rolled up emphasized the word "happy."[lr]
+[else]
+　白いカッターシャツを腕まくりした、大柄のサラリーマンは性という言葉を強調して言った。[lr]
+[endif]
+
+[r]
+[quake hmax=0 vmax=10 time=200]
+[wait time=300]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The tall, handsome man nodded.[prcm]
+[else]
+　背の高い、彫りの深い表情の男が頷いていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We can certainly agree on that point.[」][lr]
+[else]
+　「その辺で、君は私に似ているんじゃないかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was an advertisement above them, showcasing a hot springs establishment.[lr]
+[else]
+　話をしている二人の向こう側の天井には、大分の温泉旅行切符の広告があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The words "once-in-a-lifetime prices" were floating above the steam-covered scenery of Beppu Bay.[lr]
+[else]
+　湯けむりの上がる別府湾を一望している風景写真と、割安の値段が印刷されている。[lr]
+[endif]
+
+[r]
+[stopse buf=1]
+[quake hmax=0 vmax=10 time=200]
+[wait time=300]
+[quake hmax=0 vmax=10 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An electronic voice burst out from the speakers, announcing the next stop. Soon after, the train began to slow down with a metallic shrill.[lr]
+[else]
+　駅へ到着するアナウンスがあり、甲高いブレーキの音と共に電車が横揺れして止まる。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se108.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The doors opened and a young woman in a white shirt stepped into the car.[prcm]
+[else]
+　排気音がして隣の窓が開くと、白いシャツの若い女が入ってきた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her hair had been let down on one side, and she held a book with the words "How To Live" printed on it.[lr]
+[else]
+　片方にお下げにしている髪と、手に持った本の表紙には「生き方」と大きく印字されていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She sat down in the seat diagonally from me and opened up a book to read.[prcm]
+[else]
+　窓を挟んで斜め向かいにある座席に座ると、指を挟んでいたページを開きなおして本を読み始める。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg59_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The middle-aged man in a suit left the car at the next station.[lr]
+[else]
+　次の駅でスーツ姿の中年男性が電車を降りた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After two more stops, I was the only one left in the car.[lr]
+[else]
+　さらに二駅が過ぎると、車内に誰もいなくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The electronic voice announced that the next stop would be the last.[lr]
+[else]
+　その次の駅で、電車は接続を行うためのアナウンスを流した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up and got out of the train car.[prcm]
+[else]
+　そこで座席を立つと、電車を降りた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg82_2" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+[playse buf = 1 storage=se20.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped onto the stone platform.[lr]
+[else]
+　コツリ、と石を積み上げただけのホームに降りる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It smelled like dried leaves.[lr]
+[else]
+　乾いた落ち葉の匂いがしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Cool, humid sea breeze blew up the mountain slope.[lr]
+[else]
+　海の方から吹く湿った冷たい風にのって山の上へ流れていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the rustling of the grass.[prcm]
+[else]
+　風に揺られたススキのこすれ合う音が聴こえる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The station was deserted, so I walked around for a bit.[lr]
+[else]
+　駅の構内は人気がなく閑散としている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I managed to make out the name of the station from the rusted, ancient-looking iron plate, but whatever was written on the backrest of the faded plastic bench — which probably used to be blue — was completely illegible.[lr]
+[else]
+　掲げられた看板は赤い錆で駅名が辛うじて読み取れたが、奥にある色褪せた青いプラスチック製のベンチの背もたれにあった白い文字は薄くなって読めなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was no one at the wooden ticket gate, either.[prcm]
+[else]
+　木造瓦屋根の改札には人がいない。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg82_3" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry... Could I borrow a phone?[」][lr]
+[else]
+　「すまない。[l]電話を借りたいのだが」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I received no reply. The area behind the ticket window was completely empty.[lr]
+[else]
+　返事はなく、ガラス窓の向こうにも人の気配はなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I passed the gate and walked to the ivory public telephone I spotted further away.[prcm]
+[else]
+　改札を抜けて、待合室にあったアイボリーの公衆電話の前まで来ると受話器を取った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="145.ks" target=*145
+

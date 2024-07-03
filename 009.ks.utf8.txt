@@ -1,0 +1,1145 @@
+*009| Late summer evening)
+; *009|事務所の夕（晩夏初秋）
+[fbfstoretitle eng="Late summer evening)" jp="事務所の夕（晩夏初秋）"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[seopt buf=0 volume=60]
+[fadeinse buf = 0 storage=se172.ogg loop = true time = 3000]
+[wf buf=0]
+[playbgm storage="bgm03"]
+[wait time=2000]
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 11"]
+[eval exp="sf.ItRelease = 12"]
+[endif]
+
+
+*| Late summer evening
+; *|事務所の夕（晩夏初秋）
+[fbfstoretitle eng="Late summer evening" jp="事務所の夕（晩夏初秋）"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All the windows in the office were opened wide, the curtains around them quivering as the odd light breeze would find its way into the room.[lr]
+[else]
+　事務所にある窓は全て開かれており、束ねたカーテンの裾が時折吹く風にヒラリ、と舞い上がった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the uneven buzzing of cicadas, like a server machine of sorts, from outside.[prcm]
+[else]
+　ジジジ、[wait time = 700]とどこか遠くで蝉がサーバ機の不調のような声で鳴いていた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's hot![」][lr]
+[else]
+　「暑い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I was inspecting Inukai's design at my desk, Takako paused her work and faced Fumi at the desk opposing hers.[lr]
+[else]
+　奥の事務机で、犬飼の提出したデザインシートを確認していると、文と向かい合って作業をしている貴呼が言った。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p01_h04" visible=true left=-70 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/i_img/f01_p02_h07" visible=true left=280 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[wait table=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p01_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi gave her a short glance, but said nothing.[lr]
+[else]
+　文はチラリ、と貴呼の方を見たが何も言わずに作業に戻った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai continued his work in silence.[prcm]
+[else]
+　文の隣にいる犬飼は、黙々と作業を続けている。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=280 top=0]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I didn't know these things still kept buzzing in October.[」][lr]
+[else]
+　「ツクツクボウシって十月過ぎても鳴いていたっけ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako picked the paper fan off her desk and started fanning herself.[prcm]
+[else]
+　と、貴呼は言いながら事務机の上の本棚に立てていた団扇を取って扇いでいた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe it's global warming.[l] El Niño or however they called it.[」][lr]
+[else]
+　「温暖化のせいじゃないですか？[l] エルニーニョでしたっけ、今年もあれなんですよね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi finally joined the conversation.[prcm]
+[else]
+　今度は文が顔をあげて言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that for real?[」][lr]
+[else]
+　「そうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]For real?[l] Don't you watch TV?[l] The news are full of all these climate phenomena lately.[」][lr]
+[else]
+　「そうなの？[l] ってテレビ見ないんですか。[l]よくニュースで異常気象だって騒いでますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I recall seeing something about that last year.[l] But if it's abnormal every year, doesn't that make the abnormality normal instead?[」][lr]
+[else]
+　「それ去年も言ってた気がする。[l]毎年異常ならもうそれ正常だよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Summers do feel longer lately.[」][lr]
+[else]
+　「確かに、夏日は伸びてますよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako started fanning herself more strongly, letting out a contemplative groan.[prcm]
+[else]
+　と、文が言ったのを聞いた貴呼はウウン、と唸りながら勢い良く団扇で扇いだ。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=105 top=0]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder how long it'll continue this year.[」][lr]
+[else]
+　「今年はいつまで続くんだろうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They said the heat wave might continue until the end of November.[」][lr]
+[else]
+　「ニュースだと、霜月になるまで残暑が続くって言ってたわね」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[fbfscale_move time=80 path="(105,-40,255)(105,0,255)" layer=0]
+[wm]
+[wait table=200]
+[fbfscale_move time=80 path="(105,-40,255)(105,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then when is autumn going to come?! Do your job, people![」][lr]
+[else]
+　「それじゃあ秋はいつ来るの? 仕事しろよっ！」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd appreciate it if you did yours, too.[」][prcm]
+[else]
+　「あんたもね」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h14" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, can I turn on the air conditioner?[」][lr]
+[else]
+　「ねえ、クーラーつけていい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced out the window Takako had just opened — the curtains were swaying ever so faintly as a light breeze entered the room.[prcm]
+[else]
+　貴呼が開いている窓のほうを見た。窓の白いカーテンはそよそよ風に靡いていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The wind's blowing inside.[l] You can handle a bit of hot air, can't you?[」][lr]
+[else]
+　「風が吹いてるわ。[l]これくらいなら我慢できるでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at the wall next to the entrance.[lr]
+[else]
+　それから事務所の出入り口付近の壁を指差した。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The place where the air conditioner's control panel was.[lr]
+[else]
+　そこには空調設備を操作するパネルがあった。[lr]
+[endif]
+
+
+[clickskip enabled=false]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On top of it was a sticker with the words[r][r][wait time=500]"Save power. Save money."[wait time=1000][r][r]written on it.[prcm]
+[else]
+　そのパネルの上には、マジックで[r][r]
+[wait time=500]          「費用節約につき節電」[wait time=1000][r][r]
+と書かれた印刷用紙がセロテープで張ってあった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And wasn't it you who put that sticker on there to begin with?[」][lr]
+[else]
+　「それに、[wait time = 700]あの紙を貼ったの貴方だったわね」[lr]
+[endif]
+
+[clickskip enabled=true]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was it?[」][lr]
+[else]
+　「そうだったかな」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[fadeoutse buf = 0 time = 1000]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako grabbed a bottle of water and started loudly gulping its contents down.[lr]
+[else]
+　貴呼はゴクゴク、と喉を鳴らしてペットボトルの飲料水を飲んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After finishing the entire bottle, she returned to work.[prcm]
+[else]
+　全部飲み干してから、事務机に向かって作業に戻った。[prcm]
+[endif]
+
+
+[seopt buf = 0 volume=100]
+[playse buf=2 storage=se02.ogg loop = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]click click*[lr]
+[else]
+　カシャカシャ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]click click*[lr]
+[else]
+　カチッカチ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]click click*[lr]
+[else]
+　カチ、カチ。[lr]
+[endif]
+
+[r]
+[stopse buf=2]
+[wait time = 700]
+[playse buf=3 storage=se07.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]creak*[prcm]
+[else]
+　ガタ。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h14" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I feel like I'm going to melt.[」][lr]
+[else]
+　「熱くて溶けそう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Raising her hands, she leaned against her chair.[lr]
+[else]
+　両手を挙げて後ろに反り返る貴呼。[lr]
+[endif]
+
+[r][r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't worry, we'll turn on the air conditioner if you do.[」][lr]
+[else]
+　「本当に溶けたら、きっとみんな驚いて冷房を付けてくれますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi addressed Takako with her eyes still glued to the monitor.[prcm]
+[else]
+　文がマウスをクリックして、くるりと回しながら言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can I take your word on that?[」][lr]
+[else]
+　「ホントに？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And we'll make sure to put what's left of you in the ice cube tray in the freezer so you can solidify again.[」][lr]
+[else]
+　「それに溶けた後はちゃんとタッパーに詰めて冷蔵庫で固めて差し上げます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako lightly pressed her bent index finger against her jaw.[prcm]
+[else]
+　それを聞いた貴呼は軽く曲げた人差し指を顎に当ててウウン、と唸った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+[clickskip enabled=false]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't want to become a cube.[」][prcm]
+[else]
+　「四角くなるのは、[wait time = 1000]嫌だな」[prcm]
+[endif]
+
+[clickskip enabled=true]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h07" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you start melting, I'm vacating the premises right away.[」][lr]
+[else]
+　「僕は先輩が溶けはじめたら、歩けるうちに帰りますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai joined the conversation as well.[prcm]
+[else]
+　と、そこで犬飼が言った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h08" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hold your goddamn horses.[l] At least call an ambulance for me.[」][lr]
+[else]
+　「待て。[l]救急車だけ呼んでおいて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I would appreciate it if you all would stop running your mouths and return to work.[」][prcm]
+[else]
+　「つまらない事言ってないで、仕事しなさい」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h05" visible=true left=280 top=0]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, that's it.[l] Now that I've grown conscious of the heat, I can't put it out of my mind.[l] Not even changing my wallpaper to the cool sea is helping.[」][lr]
+[else]
+　「駄目だ。[l]一度気がついてしまったら、もう暑さが気になって仕方ない。[l]壁紙をバカンスに変更しても、全然気が紛れない」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe you should try listening to some soothing music.[」][lr]
+[else]
+　「涼しい音楽を聴いてみたらどうですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi handed Takako a CD case over their monitors.[prcm]
+[else]
+　デスクのモニタ越しに、貴呼にディスクを渡す文。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is the electronic music I'm currently listening to.[」][lr]
+[else]
+　「それ、お勧めのエレクトロニカです。[l]今聴いてるのもそれです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi pointed at her headphones.[prcm]
+[else]
+　文が耳にしているヘッドフォンを指した。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h10" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Electronic music?[l] The one they make with synthesizers and stuff, right?[l] Does it really cool you down?[」][lr]
+[else]
+　「エレクトロニカ。[l]電子音の音楽だったかな。[l]それって涼しいの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako inspected the back of the CD case.[prcm]
+[else]
+　ペラペラ、とアルバムの裏表を確認する貴呼。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a folktronica summer special.[l] The rhythm is inspired by the flow of water, so it makes you feel like you're cooling off under the sea.[」][lr]
+[else]
+　「夏用のフォークトロニカです。[l]水をイメージした音とかリズムなので、水の中に居るみたいに気持ちいいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi was passionately gesticulating with her hands and head as she explained all this.[prcm]
+[else]
+　文が指を回して、首を振ってコポコポコポ、と言った感じです。と、説明した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't focus while listening to music.[」][lr]
+[else]
+　「音楽って、聴きながら作業に集中できない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[l] I would say I have a harder time concentrating without it.[」][lr]
+[else]
+　「そうですか？[l] こっちのほうがよほど集中できますけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi took out a bag from one of her desk's drawers.[prcm]
+[else]
+　と、文がデスクの引き出しの中から鞄を取り出した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then maybe you'd prefer this?[」][lr]
+[else]
+　「それじゃあ、これ使います？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pulled out a small blue tube and handed it to Takako.[prcm]
+[else]
+　鞄から青色の小さなチューブを取り出して、デスクのモニタ越しに渡した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's this?[」][lr]
+[else]
+　「何これ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mint gel.[l] You have to put it on your neck, like this.[」][lr]
+[else]
+　「ミントのゲルですよ。[l]こうやって首の周りに塗るんです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi made a neck stroking motion.[lr]
+[else]
+　と、文が首の後ろを撫でるジェスチャーをしてみせた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako imitated her movements, rubbing the gel from the tube on her neck.[prcm]
+[else]
+　貴呼がその動作を真似て、青いチューブから手のひらに押し出した透明のゲルを首に塗った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How is it?[」][lr]
+[else]
+　「どうですか？」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h11" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[wait table=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't feel anythinGel.[」][lr]
+[else]
+　「あまり変わった気がしないゲル」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's not how it works.[」][lr]
+[else]
+　「そんな効果はありません」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With that, Fumi returned to work.[prcm]
+[else]
+　と、言って文は作業に戻った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Aren't you hot, Inukai?[」][lr]
+[else]
+　「犬飼は暑くないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako turned to Inukai next.[lr]
+[else]
+　貴呼が犬飼のほうに振り向いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai's fingers — previously dancing on the keyboard at a brisk pace — had now halted.[prcm]
+[else]
+　声をかけられると、軽快に動いていた犬飼の指が止まった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h06" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hot?[l] I didn't notice until you mentioned it.[l] I don't feel it much if I concentrate on the job at hand.[」][lr]
+[else]
+　「暑さですか？[l] 聞かれるまで、忘れていました。[l]仕事に集中していれば、暑さもなにも分からないですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai readjusted his glasses.[prcm]
+[else]
+　カチリと、メガネの位置を戻す犬飼。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's the problem. I can't concentrate.[」][lr]
+[else]
+　「集中できないから、困ってるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako leaned heavily against the back of her chair.[prcm]
+[else]
+　ギシギシ、と椅子の背もたれを揺らす貴呼。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How about you take a break and cool down?[」][lr]
+[else]
+　「休憩して、涼んでくるのはどうですか？」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That might be a good idea.[」][lr]
+[else]
+　「そうしようかねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Pressing her hand against the back of her chair, Takako was about to stand up.[prcm]
+[else]
+　貴呼が背もたれを手で押さえて立ち上がろうとした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wait, they're having a sale at the grocery store today, right?[」][lr]
+[else]
+　「そういえば、今日は八百屋が特売日だったわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「うん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wonder if I should make curry tonight if we get home early.[」][lr]
+[else]
+　「早く帰れたら、夕飯はカレーにしようかしら？」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[wait time=1000]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h08" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako fell back on her seat...[prcm]
+[else]
+　立ち上がりかけた貴呼がそのまま席に着いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's do our best to finish on time today![」][lr]
+[else]
+　「今日はみんな頑張って定時に帰ろうか」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=100 time=200]
+[wt]
+[msgon]
+
+[playse buf = 0 storage=se03.ogg]
+[playse buf = 1 storage=se05.ogg loop = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...and began frantically typing at her keyboard.[prcm]
+[else]
+　ギイ、と椅子を引くと事務机に向かってテキパキと仕事を始める貴呼。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well... that was simple.[」][lr]
+[else]
+　「あからさまですね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「].[wait time = 300].[wait time = 300].[wait time = 300]Takako tamer.[」][lr]
+[else]
+　「・[wait time = 300]・[wait time = 300]・[wait time = 300]貴呼テイマー」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai and Fumi had something to say.[prcm]
+[else]
+　ポソリ、と犬飼と文が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look, I'm not a beastmaster.[l] She's just simple as an animal.[」][prcm]
+[else]
+　「猛獣使いじゃないわ。[l]貴呼が動物みたいにわかりやすいだけ」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yo, private convos during work go against protocol. Or are you planning to stay late and cash in on the overtime?[」][lr]
+[else]
+　「さあ、みんなも私語なんてしないで仕事に集中しなさい。[l]それとも残業代を稼ぐ気かい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Three pairs of eyes shifted to Takako.[prcm]
+[else]
+　と、曰う貴呼に三人分の視線が集まった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[freeimage layer=0 page=back]
+[trans method = crossfade time=1500]
+[wt]
+[fadeoutbgm time=3000]
+[fadeoutse buf = 1 time = 3000]
+[wait time=3000]
+[wb]
+[wl]
+[stopse buf=0]
+[seopt buf=0 volume=100]
+[stopse buf=1]
+[seopt buf=1 volume=100]
+[seopt buf=2 volume=100]
+[seopt buf=3 volume=100]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="010.ks" target=*010
+
+

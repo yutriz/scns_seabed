@@ -1,0 +1,566 @@
+*103| Punishment
+; *103|制裁
+[fbfstoretitle eng="Punishment" jp="制裁"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+[call storage="MyMacro.ks" target="*Jingle7"]
+
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm43"]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg56_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 126"]
+[eval exp="sf.ItRelease = 127"]
+[endif]
+
+*| Punishment
+; *|制裁
+[fbfstoretitle eng="Punishment" jp="制裁"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Eventually, Miya's brother returned to come pick her up.[prcm]
+[else]
+　長閑な昼下がりを過ごしていると、ミアの兄がミアを迎えに来た。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You sure you got all your toys with you?[」][lr]
+[else]
+　「忘れ物はないかな？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Miya spent a few moments rummaging through her bag, then stuck her hands in her pockets and checked something in there as well.[prcm]
+[else]
+　ミアはハンドバッグの中をごそごそと探り、それからポケットの中にも手を入れて確認した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][prcm]
+[else]
+　「ない」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg56_2" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/bro_img/f01_p01_h02" visible=true left=280 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f02_p02_h19" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[playse buf = 0 storage=se08.ogg]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/bro_img/f01_p01_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[quake time=200 hmax=0 vmax=30]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ouch![」][lr]
+[else]
+　「あいた！」
+[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/bro_img/f01_p01_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=100 path="(-70,-20,255)(-70,0,255)" layer=1]
+[fbfscale_move time=100 path="(-70,-20,255)(-70,0,255)" layer=1]
+[fbfscale_move time=400 path="(300,0,255)" layer=0]
+[wait time=400]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's up with running off and leaving your little sister all on her own?[」][lr]
+[else]
+　「妹を置いて遊びに行くなんて、どういうつもりなのよ！[l] だいたいねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Further away, it seemed like Nanae's iron fist of punishment had just landed on the boy's head.[lr]
+[else]
+　と、向こうでは、迎えに来たミアの兄の頭に[ruby text="なな"]七[ruby text="え"]重の鉄拳の制裁が落ちていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He staggered backwards, clutching his head with one of his hands.[prcm]
+[else]
+　ミアの兄は短髪の頭を片手で抑えながら後ずさる。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg56_2" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ms. Narasaki.[」][lr]
+[else]
+　「[ruby text="なら"]楢[ruby text="さき"]崎お姉ちゃん」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt someone tug on my sleeve. Glancing down, I saw Miya looking at me.[lr]
+[else]
+　服を引っ張られて下を見ると、ミアがこちらを見上げている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I leaned down and patted her on the head.[prcm]
+[else]
+　屈んで頭をなでる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Goodbye. Let's play again some other time.[」][lr]
+[else]
+　「さよなら、また遊んでね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Be careful on your way back, okay?[」][lr]
+[else]
+　「気を付けて帰るんだよ」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1000]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Miya smiled, then ran off to her brother and Nanae.[prcm]
+[else]
+　手を振ると、ミアはにこりと笑ってから、七重と兄のいる方へ駆けていった。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/bro_img/f01_p01_h04" visible=true left=280 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f02_p02_h19" visible=true left=90 top=0]
+[fbfscale_image storage="bg56_2" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[fbfscale_move time=100 path="(105,0,255)" layer=1]
+[wm]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Things ended well this time around, but what do you think would've happened if she tried following you and got lost in the mountains?[l] Someone has to look after her. Use your head. You're her brother.[」][lr]
+[else]
+　「今度は大丈夫だったけど、一人で置いていかれて山にでも入ったら迷子になるかもしれないし。[l]誰かについて行ってもわからなくなるのよ。[l]お兄さんなら、もっとよく考えてあげなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I thought you'd look after her if I left her here...[」][lr]
+[else]
+　「姉ちゃん、探してもいないし。[l]ここに置いていけば、見つけてくれるかなあ、と」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Miya's brother kept making excuses in a small voice while still clutching his head.[prcm]
+[else]
+　ミアの兄は手で頭を抑えて、小声で弁明する。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/bro_img/f01_p01_h05" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=50]
+[fbfscale_move time=300 path="(145,0,255)" layer=1]
+[fbfscale_move time=150 path="(300,-10,255)" layer=2]
+[fbfscale_move time=150 path="(320,0,255)" layer=2]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Move your hand, I'm gonna give you another one.[」][lr]
+[else]
+　「もう一回叩くから、手をどけなさい」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h02" visible=true left=-115 top=0 opacity=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=500 path="(-15,0,255)" layer=0]
+[wm]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f02_p01_h08" visible=true left=145 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=300 path="(-35,0,255)" layer=0]
+[fbfscale_move time=300 path="(125,0,255)" layer=1]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nanae.[」][lr]
+[else]
+　「七重お姉ちゃん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Miya tugged on Nanae's sleeve with a worried expression.[lr]
+[else]
+　ミアが困り顔で七重の袖を引っ張る。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/bro_img/f01_p01_h06" visible=true left=330 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f02_p01_h03" visible=true left=105 top=0]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h03" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae let out a sigh and lowered her fist.[prcm]
+[else]
+　はあ、とため息をつくと七重は手を下ろした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, whatever. Make sure to be home by the time it gets dark.[」][lr]
+[else]
+　「もういいわ、遅くなる前に帰りなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry.[」][lr]
+[else]
+　「ごめんなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The boy lowered his head, took Miya's hand and her bag, and walked off.[prcm]
+[else]
+　ミアの兄は頭を下げると、ミアの荷物を持ち、手を引いて歩き始めた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I told everything that happened to your parents, so better be ready when you get home.[」][lr]
+[else]
+　「親御さんにも連絡しといたから、後でしっかり怒られるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The boy startled for a moment, but then continued walking.[lr]
+[else]
+　それを聞いた彼は一瞬ぎくりとしたが、そのままミアの手を引いて行った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I watched the siblings walk off in the afternoon glow, Nanae turned to me and made an embarrassed smile.[prcm]
+[else]
+　昼下がりの道を歩いていく兄妹を見送ると、七重はこちらに向き直って苦笑いする。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I ended up causing you trouble.[」][lr]
+[else]
+　「迷惑かけちゃったわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nah, it's been a while since I could return to my inner child. It was fun.[」][lr]
+[else]
+　「いや、童心に帰った気分になれて楽しかった」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f02_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really? I'm glad to hear that.[」][lr]
+[else]
+　「そう？ 良かった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Contrary to her words, her expression still remained somewhat sour.[prcm]
+[else]
+　言葉とは裏腹に、少しだけ苦々しい顔をしている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You sure you didn't go overboard with the boy?[」][lr]
+[else]
+　「あんなに怒って大丈夫かい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't worry.[l] I know all the kids and their parents around here.[l] I can't let them misbehave in front of my eyes.[」][lr]
+[else]
+　「平気よ。[l]この辺の子供は親も知ってるもの。[l]それに子供には間違ったことをさせてはいけないわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What if he starts hating you for beating him and such?[」][lr]
+[else]
+　「叩いたりしたら、子供に嫌われやしないかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sure he'll understand.[l] And if he starts hating me, I'll do my best to make him change his mind.[」][lr]
+[else]
+　「きっと分かってくれるわ。[l]それに嫌われたら、好かれる努力をするわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't want to upset them, but you can't let them do as they please, either.[」][lr]
+[else]
+　「嫌われても駄目。[l]怒らなくても駄目」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's the hard part about being an adult.[」][prcm]
+[else]
+　「大人の辛いところよねえ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae shook her head.[prcm]
+[else]
+　そう言って、七重は首を振った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle7]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="104.ks" target=*104
+
+

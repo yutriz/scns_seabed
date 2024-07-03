@@ -1,0 +1,605 @@
+*091| Choosing presents
+; *091|プレゼント選び
+[fbfstoretitle eng="Choosing presents" jp="プレゼント選び"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+[playbgm storage="bgm19"]
+[fbfscale_image storage="bg156" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 112"]
+[eval exp="sf.ItRelease = 113"]
+[endif]
+
+
+*| Choosing presents
+; *|プレゼント選び
+[fbfstoretitle eng="Choosing presents" jp="プレゼント選び"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After we bought all of the necessary ingredients, we moved on to stocking up on miscellaneous goods. The store was located in the shopping district, which was only a few minutes on foot from the food store.[lr]
+[else]
+　食材の調達を終えると、今度は雑貨を揃えるため、食品量販店より南へ徒歩十分程のところにある商店街に向かう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko, however, drove us there in her car, going so far as to park in a paying spot, being the ever-diligent person that she was.[prcm]
+[else]
+　繭子はその少しだけの移動にも車を使い、律儀に車を有料駐車場へ停めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We left our bags in the car and continued down a narrow street until we reached a long, wide road on a slope.[lr]
+[else]
+　私達は荷物を置いて車を出ると、細い道を抜けてなだらかな坂道が続く長い道路に出る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had decorative trees on both sides, though by now they had already shed most of their leaves.[lr]
+[else]
+　広い道路の両脇にほとんど葉を落としてしまった街路樹が植えられている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The boulevard curved further down the road, eventually disappearing beyond the buildings.[prcm]
+[else]
+　並木道の先は弓なりで、遠くの方でビルの影に消えていった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I didn't even know bay leaves were literally laurels.[」][lr]
+[else]
+　「知らなかった、ローレルもローリエも[ruby text="げっ"]月[ruby text="けい"]桂[ruby text="じゅ"]樹のことだって」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's called that in English, French, and... I think Italian, too.[l] I read somewhere that it was used to mask bad smells in old Europe, along with pepper and nutmeg.[」][lr]
+[else]
+　「英語と、[l]フランス語、[l]あれ、イタリア語だったかな。[l]確かそんな感じです。[l]胡椒やナツメグとかと同じで、西洋の方だと臭い消しとかに割とよく使っているみたいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't help feeling a bit worried, though.[」][lr]
+[else]
+　「なんだか不安になってきましたけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, just leave everything to me.[l] The ingredients might look odd at first sight, but this is my ultimate curry we're talking about.[」][lr]
+[else]
+　「任せなさい。[l]材料はわからなくてもレシピはうちの秘伝のカレーなんだから」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h23" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, if worst comes to worst, at least we'll still have milk.[」][lr]
+[else]
+　「とりあえず、牛乳も買っておいたので万が一でも大丈夫ですが」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're worrying way too much.[」][lr]
+[else]
+　「いいから、そういう伏線はいらないから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I waved my hand at Mayuko. She gave me a sidelong look.[prcm]
+[else]
+　横目でこちらを見ながら隣を歩いている[ruby text="まゆ"]繭[ruby text="こ"]子に手をパタパタ、と振ってみせる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose you're right.[」][lr]
+[else]
+　「そうですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko touched her nose with the back of her index finger and smiled.[prcm]
+[else]
+　と、言った繭子は人差し指の背で少し鼻に触れさせて笑った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Adding broccoli to curry, though... Well, that's not something I ever would've considered.[」][lr]
+[else]
+　「しかしね、カレーにブロッコリーが入るなんて、なにかおかしいとは思ったよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I almost thought you changed your mind and decided to make stew instead. I mean, it's Christmas and all.[」][lr]
+[else]
+　「クリスマスだから、てっきりシチューだと思ってました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh? What does Christmas have to do with stew?[」][lr]
+[else]
+　「そう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I mean, that's how it's traditionally been done, as far as I'm aware.[l] Even in commercials, you always hear that curry is for summer, and stew is for winter.[」][prcm]
+[else]
+　「割と一般的じゃないですか。[l]コマーシャルも夏はカレー、冬はシチューが多くないですか？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, it's from The Pillow Book, right?[」][lr]
+[else]
+　「枕草子か」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No... not even close.[」][lr]
+[else]
+　「全然違いますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, I can't say I get that.[」][prcm]
+[else]
+　「やっぱり冬はよく分かんないな」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I smelled something sweet, and after looking around a bit, spotted some chocolate and maple syrup waffles in the store window of one of the shops.[lr]
+[else]
+　甘ったるい香りがして、見回すとカラフルな装飾屋根のお店のショーウィンドウにチョコやメープルシロップのワッフルが並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Most buildings around here gave home to various stores on their first floor, selling all kinds of items from food to toiletries and clothes.[lr]
+[else]
+　その辺からは、まわりを囲んでいる建物の一階は店舗になっており色々な売り物が並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The wide road had no arches, letting the slanting rays of the sun reach us from the right.[prcm]
+[else]
+　広い道はアーチも無く、傾いた日が右前にあり目がチカリとした。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h22" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We've reached the shopping district. Any specific place you want to check out first?[」][lr]
+[else]
+　「この辺から商店街ですけど、どんなものを買います？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The bookstore.[」][lr]
+[else]
+　「まずは本屋」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A present for Ms. Sanae, I take it?[l] Have you decided on the book yet?[」][lr]
+[else]
+　「[ruby text="さ"]早[ruby text="なえ"]苗さんの贈り物ですね。[l]本は決まっているのですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]She keeps telling me about what she's reading, so I have a rough idea — some of the books she likes have sequels, and none of them are in our library.[」][lr]
+[else]
+　「いつも読んだ本の話なんかもしているからね、図書館になかった続きものとかいくつかあったから探してみるつもり」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sounds good.[l] [msgoff][backlay][freeimage layer=0 page=back][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]If we're looking for older books, then...[」][lr]
+[else]
+　「いいですね。[l]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+図書館にあるような古い本なら、そうですねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko took a few steps ahead of me.[prcm]
+[else]
+　と、繭子が少し前を歩きだした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An advertisement sign with a female model in a black suit.[lr]
+[else]
+　女性モードの黒い服を着たモデルの広告。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Souvenir stores with all sorts of trinkets lined up.[lr]
+[else]
+　カラフルな装飾品が表に並ぶ雑貨屋。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A cosmetics store under a brown roof.[lr]
+[else]
+　ブラウンの屋根がシックな化粧品店。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A clothing store with mannequins wearing both child and adult-size clothes.[r]
+[r]
+A store selling cloth with flower and bird designs.[lr]
+[else]
+　木製マネキンがガラスウィンドウの中で着飾っている子供服や紳士服の専門店に、花や鳥の[ruby text="し"]刺[ruby text="しゅう"]繍柄を虹のように垂らした[ruby text="たん"]反[ruby text="もの"]物をディスプレイした店。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our heels clicked against the stone pavement as we continued through this neverending sea of shops.[prcm]
+[else]
+　色々なお店の間を、赤とグレーの[ruby text="き"]幾[ruby text="か"]何[ruby text="がく"]学的な模様を描く石畳を鳴らしていった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[eval exp="sf.cg86=1"]
+[fbfscale_image storage="ev86" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mayuko.[」][lr]
+[else]
+　「繭子」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes?[」][lr]
+[else]
+　「はい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How about this?[」][lr]
+[else]
+　「こういうのはどうかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at the hairpin on one of the stands.[lr]
+[else]
+　雑貨屋のテーブルに飾ってあるヘアピンを指さす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko took a step back and considered the shop's sign.[prcm]
+[else]
+　それを確認すると、繭子が一歩下がってお店の看板を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I recognize this place. It's a handmade accessory shop that's been gaining in popularity lately.[」][lr]
+[else]
+　「あ、ここって手作り小物で、近頃人気らしいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうなんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it for Kozue?[」][lr]
+[else]
+　「[ruby text="こずえ"]梢ちゃんに？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah. I mean, she's always like this, right?[」][lr]
+[else]
+　「うん、いつもこんな風にしているでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I used the pin to shift my front hair to the side.[prcm]
+[else]
+　と、前髪をピンでまとめて横に止めて見せた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It suits you.[」][lr]
+[else]
+　「似合いますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You like seeing the forehead?[l] Well, it doesn't really matter how it looks on me.[」][lr]
+[else]
+　「おでこが見えるのも良いかい？[l] まあ、私に似合っても仕方ないんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the hairpin back to where I took it from.[prcm]
+[else]
+　ヘアピンを取ってもとの場所に戻した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think this would look good on you. Try it.[」][lr]
+[else]
+　「繭子ならこっちかな、ちょっと付けてみて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh? I'm okay.[」][lr]
+[else]
+　「私はいいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, don't be like that. I just showed you my forehead, didn't I?[」][lr]
+[else]
+　「そう言わないでよ、さっき私のおでこ見たでしょう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh? What is going on here?[」][prcm]
+[else]
+　「えええ？ どういうことですか」と繭子が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, we tried a couple of other accessories.[lr]
+[else]
+　そのあと、二人であれやこれやとお店の商品を吟味した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked out the one I thought would be the best for a present.[prcm]
+[else]
+　そしてこれというプレゼントを決めた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="092.ks" target=*092
+

@@ -1,0 +1,918 @@
+*015| A conversation at the café
+; *015|カフェでの話
+[fbfstoretitle eng="A conversation at the café" jp="カフェでの話"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+[playbgm storage="bgm05"]
+[wait time = 3000]
+[playse buf = 0 storage=se29.ogg]
+[backlay]
+[fbfscale_image storage="bg03" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 17"]
+[eval exp="sf.ItRelease = 18"]
+[endif]
+
+*| A conversation at the café
+; *|カフェでの話
+[fbfstoretitle eng="A conversation at the café" jp="カフェでの話"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The bell affixed to the corner of the café's door gave off a chime.[lr]
+[else]
+　カランカラン、と喫茶店の扉の角に取り付けられた鐘が鳴る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down at the counter and ordered a one-coin lunch.[lr]
+[else]
+　入口近くのカウンター席に座って、ワンコインのランチを注文する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I absentmindedly observed the steward in a black and white suit prepare a coffee, someone rose from their seat at the back of the restaurant and stood behind me.[prcm]
+[else]
+　白と黒の制服をきっちりと着たマスターが、サイフォンコーヒーを煎れているのを眺めていると、奥に座っていた客が立ち上がり、こちらの背後に立った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sachi.[」][lr]
+[else]
+　「サチ」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p01_h01" visible=true left=105 top=0 opacity=255]
+[trans method = crossfade time=2000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around to see Narasaki raising her hand in greeting.[prcm]
+[else]
+　振り返ると、[ruby text="なら"]楢[ruby text="さき"]崎が手のひらを見せて、よっと言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You were here?[」][lr]
+[else]
+　「来てたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was waving at you when you came in.[」][lr]
+[else]
+　「キミが入って来た時に、そこで手を振ってたんだけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I didn't notice at all.[」][lr]
+[else]
+　「気がつかなかったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So I've seen.[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p02_h06" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]I was starting to wonder if this was some elaborate game on your part.[」][lr]
+[else]
+　「みたいだね。[l]
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/n_img/f01_p02_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+新しい遊びかなって思った」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not into things like that.[」][lr]
+[else]
+　「そういうからかい方はしないから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki placed the saucer with her coffee on the counter and sat down next to me.[prcm]
+[else]
+　楢崎は持ってきたコーヒーカップを載せたソーサーを置いて、すっと隣のカウンター席に座る。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What did you order?[」][lr]
+[else]
+　「何を頼んだのさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Lunch.[l] Did you eat already?[」][lr]
+[else]
+　「ランチ。[l]貴方はもう済ませたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was enjoying a cake.[」][lr]
+[else]
+　「さっきケーキを食べた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A cheesecake with green tea?[」][lr]
+[else]
+　「抹茶のレアチーズ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nah, I tried something else today.[」][prcm]
+[else]
+　「いいや、今日は別のを試した」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You come here a lot?[」][lr]
+[else]
+　「よく来てるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] I told you this place was close to the clinic.[」][lr]
+[else]
+　「まあね。[l]診療所が近くだって言ったろう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki crossed her legs and beckoned for the steward, ultimately ordering another cup of coffee.[prcm]
+[else]
+　楢崎はカウンターの椅子を軋ませて足を組むと、カウンターの向こうに居たマスターを呼んでコーヒーのお代わりを注文した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You came here before lunch time?[」][lr]
+[else]
+　「お昼前から居たの？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p02_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I came about thirty minutes ago.[l] I finished my morning shift early. Well, I guess that's usually how things go, anyway.[」][lr]
+[else]
+　「三十分くらい前かな。[l]午前の診察も早く終わったんだよ、まあいつものことさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The steward came over and placed two cups of coffee on the counter, one for Narasaki, and one for me.[prcm]
+[else]
+　マスターがこちらにやってくると、ランチセットのコーヒーと楢崎のコーヒーをカウンターに置いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you.[」][lr]
+[else]
+　「どうも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki passed my cup to me.[lr]
+[else]
+　と、楢崎が受け取って、こちらの前に寄越す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before long, I received the salad part of my lunch set as well.[prcm]
+[else]
+　程なくして、ランチセットのサラダも運ばれてきた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[wait time=800]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you know what fwarinben is?[」][lr]
+[else]
+　「フワリンベンって何かわかる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki addressed me just as I stuck my wooden fork into the salad.[prcm]
+[else]
+　木のボウルに入ったサラダに、木のフォークを刺したところで、不意に楢崎が聞いてくる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Fwari-what?[」][lr]
+[else]
+　「何リンベン？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Fwarinben.[」][lr]
+[else]
+　「フワリンベン」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Never heard of it.[」][lr]
+[else]
+　「知らない」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p01_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I guess you wouldn't have.[」][prcm]
+[else]
+　「まあ、そうだよな」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is it?[」][lr]
+[else]
+　「何なのよ？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p02_h09" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Even I've only heard about it for the first time last week. One of our patients was crying that he had lost his fwarinben.[」][lr]
+[else]
+　「こっちも先週初めて聞いたんだけど、うちに通院してる患者が困った顔をしてフワリンベンが無いって騒いでたのさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You should have asked him about it.[」][lr]
+[else]
+　「本人に聞けばいいじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed a forkful of salad into my mouth.[lr]
+[else]
+　と言って、フォークでさしたサラダを頬張る。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could feel the taste of the traditional dressing and the onions spreading across my tongue.[prcm]
+[else]
+　和風のドレッシングで軽く味付けしたサラダはシャキッ、としていてスライスした玉ねぎがピリ、と辛味を付けていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's common practice to change the subject when a patient starts talking about something strange, so as not to encourage their delusions.[」][lr]
+[else]
+　「よく意味の分からない話をしてくるときは、妄想が膨らまないように出来るだけ話題を逸らすんだよ、大抵ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So it was just something he made up in his mind?[」][lr]
+[else]
+　「それじゃあ、ただの妄想なんじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, the same patient came to the clinic today and was overjoyed about having finally found his fwarinben.[l] Curiousity was gnawing away at me, but all I could do was say I was happy for him and end the conversation there.[」][lr]
+[else]
+　「それがさ、ついさっきもその患者が来てね。[l]
+今度は嬉しそうな顔をしてフワリンベンが見つかったって言うのさ。[l]何なのか凄く気になったけど、それは良かったですね。って、言うしかなかったよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki took a sip of her still-steaming coffee.[prcm]
+[else]
+　楢崎がまだ湯気の立つコーヒーを、一口飲む。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Fwarinben?[」][lr]
+[else]
+　「フワリンベン」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p02_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep, fwarinben.[」][lr]
+[else]
+　「そう、フワリンベン」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put a slice of tomato in my mouth.[lr]
+[else]
+　こちらは、水滴の滴るプチトマトを口に入れた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It melted in my mouth with a cool sensation and a hint of sweetness.[prcm]
+[else]
+　トマトは甘くてよく冷えていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm afraid I have no idea what it could be.[」][lr]
+[else]
+　「やっぱり知らないわね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But it doesn't sound that weird to say, does it?[l] Like, it gives you the feeling that you might have heard the word somewhere.[l] I'd say it's entirely possible it might have come up in some picture book or something.[」][lr]
+[else]
+　「でも、口にするのにあまり違和感ないと思わない？ [l]何か言われてみれば以前に聞いたことがあるような気がしない？ [l]私は何かの絵本にありそうな気がしてきているんだがね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki placed a palm on her forehead, making an excited smile.[prcm]
+[else]
+　と、言うと楢崎は顎に手を当てて、楽しそうな顔をした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't get it.[l] Do you get a lot of these things at work?[」][lr]
+[else]
+　「よく分からないけど。[l]そういう単語って他にもあるの？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Absolutely.[l] When you work with these kinds of patients, you tend to hear an unusual word here and there.[wait time=500] Like beam surfer.[」][lr]
+[else]
+　「あるよ。[l]患者を診ているときに、油断していると不意にそういう単語が出てくる。[l]例えば、[wait time=500]ビームムサファとか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's that?[」][prcm]
+[else]
+　「何それ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This patient would apparently wake up laughing in the middle of the night, but come morning, he could no longer remember what cracked him up to that extent.[l] But since he was laughing that much, he figured it must have been something hilarious, so one time he left a pen and a paper next to his pillow before hitting the sack.[l] He woke up laughing as usual, but jotted down everything before going back to sleep so he could remember.[l] Then morning came, and all he found on the paper were those two words.[」][prcm]
+[else]
+　「それを話してくれた患者さんは毎朝笑いながら起きるんだけど、何が面白かったのか思い出せなかったみたいでね。[l]
+ただ、いつも笑ってるし相当面白いことに違いないという事で、起きてすぐにメモが取れるように枕元に紙とペンを置いて寝たんだと。[l]
+案の定、その日も笑いながら起きて、すぐに忘れないようにメモを取ってから、安心して二度寝したんだ。[l]
+起きた時に確認した紙に書いてあったのが、さっきの単語だってさ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Makes me wonder what was so funny about it.[」][lr]
+[else]
+　「何がそんなに面白かったのかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know.[l] Nor did he.[」][lr]
+[else]
+　「分からない。[l]本人も結局わからんかったようだしな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I finished swallowing the last tomato, the steward brought the main dish — a sandwich with smoked salmon and cream cheese.[prcm]
+[else]
+　最後のプチトマトを飲み込んだあとに、マスターがランチのメイン料理であるスモークサーモンとクリームチーズのベーグルサンドをカウンターにおいた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was separated into three pieces to make it easier to eat.[lr]
+[else]
+　レタスの緑を挟んだハーフサイズ分のベーグルサンドは、さらに食べやすく三等分にされていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wiped my fingers with a napkin, picked up one of the pieces, and put it into my mouth.[lr]
+[else]
+　サラダを食べ終わって、もう一度ナプキンで手を拭いてから、ひとつベーグルサンドを取ってふた口で食べた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I took a gulp of the coffee, which had now cooled off just enough to be comfortable to drink.[lr]
+[else]
+　それから、少し冷めて丁度いい温度になったコーヒーを飲んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Feeling the warmth of the cup with my palms, I glanced beyond the counter to see the steward washing some dishes.[lr]
+[else]
+　カップ越しにコーヒーの熱さを感じながら、カウンターの向こうを見ると、マスターが食器を洗っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki added a few spoons of sugar to her coffee.[prcm]
+[else]
+　横目に楢崎がコーヒーに砂糖を足しているのが見えた。[prcm]
+[endif]
+
+
+
+
+
+
+
+
+
+
+[clickskip enabled=flase]
+[msgoff]
+[backlay]
+[fbfscale_image storage="item02" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p01_h01" visible=false left=105 top=0]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After I finished eating lunch, I told Narasaki about the dream I had yesterday.[prcm]
+[else]
+　ランチを食べ終わってから、楢崎に先日見た貴呼の話をした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So you made her dinner, despite knowing it was a dream?[」][lr]
+[else]
+　「それで分かってて、夕食を出したのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki chuckled.[prcm]
+[else]
+　息を吐くように楢崎が笑った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I got a little excited, I guess. I haven't spoken to her in ages.[」][lr]
+[else]
+　「久しぶりに話が出来て、少し嬉しかったのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, good for you, but as I said, it's best not to encourage this kind of thing.[」][lr]
+[else]
+　「まあ、それならいいけど。[l]さっきも言った通り、そういうのにはあまり話を合わせないほうがいい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki gave me a brief glance.[prcm]
+[else]
+　と、楢崎がこちらを見て言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose that's true.[」][lr]
+[else]
+　「そうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Otherwise, it might end up interfering with your everyday life.[」][lr]
+[else]
+　「そうじゃないと、普通に生活できなくなる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I know that.[l] But doesn't it make for an interesting story?[」][lr]
+[else]
+　「分かってるわ。[l]でも、そっちの話を聞く限り、面白そうではあるわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It might also severely disorient you.[」][lr]
+[else]
+　「本人の気持ちとは別のところに、あわを食わすこともある」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm aware of that too.[」][lr]
+[else]
+　「それも分かってるわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki stuffed her hands in her pockets and leaned closer to me.[prcm]
+[else]
+　楢崎はポケットに手を入れて、少し前かがみの姿勢で、隣に座るこちらを見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you have any medicine that would make it go away?[」][lr]
+[else]
+　「なにか、すぐに良くなる薬とかないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why not drop by my clinic?[l] I could prescribe something for you.[」][lr]
+[else]
+　「それなら、診療所に一度来てみるかい？ [l]お薬の処方箋も書いてやれる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll think about it.[」][lr]
+[else]
+　「考えておく」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No need to be scared.[l] It's the kind of place that's frequented by housewives when they have no one to talk to.[」][lr]
+[else]
+　「あまり気負わんでもいいよ。[l]実際、近所の小母さんが世間話に来るようなところだからね」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f01_p01_h01" visible=true left=105 top=0]
+[fbfscale_image storage="bg03" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki spun around in her chair and stood up.[prcm]
+[else]
+　キコ、と椅子を半分回して楢崎が立ち上がる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I should be going.[」][lr]
+[else]
+　「そろそろ行くよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[」][prcm]
+[else]
+　「ええ」[prcm]
+[endif]
+
+
+
+;///
+[clickskip enabled=false]
+[msgoff]
+[playse buf = 0 storage=se29.ogg]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg58_5" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once Narasaki had left, I finished my coffee, paid for everything, and exited the café myself.[lr]
+[else]
+　楢崎が去った後、コーヒーの残りを飲んでから会計を済ませて喫茶店を出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced up at the narrow patch of gray sky visible between the buildings surrounding me, noticing more and more clouds scattered about it.[lr]
+[else]
+　貸ビルや商店の並ぶ路地には、狭い空が見えた。空は灰色に色を変え、薄い雲を貼り付け始めていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked my wristwatch, then crossed the street and entered a convenience store. After I picked up a drink and some gum to keep me awake, I returned to the office.[prcm]
+[else]
+　腕時計を見たあとで、商店街を横切り、コンビニで飲み物と目覚ましガムを買って事務所に戻った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h02" visible=false left=180 top=0 opacity=255]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=2000]
+[wt]
+
+[fadeoutbgm time=3000]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="016.ks" target=*016
+
+

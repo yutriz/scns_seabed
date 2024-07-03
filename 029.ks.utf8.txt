@@ -1,0 +1,1047 @@
+*029| The City of Stones
+; *029|石で出来た町
+[fbfstoretitle eng="The City of Stones" jp="石で出来た町"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+
+[playbgm storage="bgm01"]
+[wait time = 3000]
+[seopt volume=40]
+[fadeinse buf=0 storage=se70.ogg time=1000 loop=true]
+[wf buf=0]
+[backlay]
+[fbfscale_image storage="bg34_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 35"]
+[eval exp="sf.ItRelease = 36"]
+[endif]
+
+*| The City of Stones
+; *|石で出来た町
+[fbfstoretitle eng="The City of Stones" jp="石で出来た町"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was walking behind Takako, who kept looking left and right.[prcm]
+[else]
+　キョロキョロ、と辺を見回しながら前を歩いている[ruby text ="たか"]貴[ruby text ="こ"]呼のあとを歩いていく。[prcm]
+[endif]
+
+[wf buf=0]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the cool sound of running water as we continued down the stone-paved street, surrounded by tall stone buildings.[lr]
+[else]
+　石造りの建物のあいだにある、細い石畳の路地を進んでいくと、涼しげな水の音が聴こえてきた。[lr]
+[endif]
+
+
+[seopt buf=0 volume=60]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg33" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=1000]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At the end of the alley, we found ourselves in a small square at the very center of the old town. There was a giant fountain there.[lr]
+[else]
+　路地を抜けて旧市街の中にある小さな広場に出ると、そこには巨大な噴水があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Marble sculptures lined the wall behind the fountain, with all sorts of engravings on its edge.[lr]
+[else]
+　大きな噴水の奥には絵画のような大理石の彫刻が小山を造り、その先の壁面にはさらに大きな彫像がある。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In the center stood the ruler of the seas, Neptune, surrounded on each side by the fertility goddess Ceres and the goddess of health, Salus.[lr]
+[else]
+　中央の海の王ネプチューンと、その両側にある豊穣の女神ケレスと健康の神サルースの大理石の荘厳な彫像だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Water flowed forth from the legs of all three, trickling down to the huge puddle below them like a waterfall.[lr]
+[else]
+　三体の彫像の足元から水が溢れ、彫刻のあいだを流れて、滝になって落ちた水が小さな広場に大きな青い溜まりを作っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako already had two coins in her hand.[prcm]
+[else]
+　早速、[ruby text="たか"]貴[ruby text="こ"]呼がポケットから二枚のコインを取り出した。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I hope I don't miss.[」][lr]
+[else]
+　「入らなかったら、どうしよう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it even possible with such a huge target?[l] Just try not to hit anyone like you did at Asakusa.[」][lr]
+[else]
+　「あれだけ大きい噴水だから外さないと思うけど、人には当てないようにしてね。[l]浅草の時みたいに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The small square, half of which was taken up by the fountain, was filled with people: a group of workers pulling a cart packed with large boxes, people resting on the stairs, a couple sitting on the stone handrail — seemingly more interested in each other than the fountain — and a group of tourists listening to the explanations of their guide.[lr]
+[else]
+　噴水がその殆どを占める広場は、台車で大きな木箱を運ぶ人、[l]緑のビール瓶を置いて階段に座って休んでいる人、[l]石の手すりに腰掛けて向かい合う若いカップルや、ガイドの話を聞いているツアーの観光客などで賑わっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako turned her back to the fountain and tossed the coin backwards.[lr]
+[else]
+　貴呼は噴水に背を向けると、後ろに向かってコインを投げた。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[seopt buf=0 volume=40]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg32" page=back layer=base]
+[trans method=universal rule="rule11" vague=300 time=800]
+[wt]
+[wait time = 100]
+[backlay]
+[fbfscale_image storage="bg33" page=back layer=base]
+[trans method=universal rule="rule11" vague=300 time=800]
+[playse buf =1  storage=se71.ogg]
+[wt]
+[wait time=200]
+[msgon]
+[clickskip enabled=true]
+
+[seopt buf=0 volume=60]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The coin, painting a beautiful arc against the blue of the sky, plopped into the water, vanishing from sight.[prcm]
+[else]
+　コインは青い空の下で放物線を描くと、水音と小さな飛沫を立てて青い水面に沈んだ。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did I get it in?[」][lr]
+[else]
+　「入った？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I nodded, Takako's face lit up.[prcm]
+[else]
+　頷くと、楽しそうな貴呼の表情が更に明るくなった。[prcm]
+[endif]
+
+
+
+;/////
+[clickskip enabled=false]
+[fadeoutse buf=0 time=1500]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg34_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After taking a handful of pictures in front of the fountain, I grabbed Takako — still reluctant to leave — by the arm and left the square.[prcm]
+[else]
+　噴水前の写真をたくさん撮ったあとで、名残惜しそうにしている貴呼の腕を掴んで広場を出た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where are we going next?[」][lr]
+[else]
+　「次は何処へ行くの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p01_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「そうねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we entered the alley neighboring a gelato shop, Takako placed the camera back into her bag and pulled out the tourist booklet we bought at the airport, spreading the map that she kept inside it.[lr]
+[else]
+　三色アイスの看板が出ているジェラート屋の角から路地へ入ると、貴呼はカメラをバックに仕舞い、空港で買った観光案内のブックレットに挟まっている地図を取り出して広げた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then she checked the compass key holder that was attached to her bag.[prcm]
+[else]
+　それからバックにぶら下げてあるキーホルダーのコンパスを見た。[prcm]
+[endif]
+
+
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The main attraction today is obviously the cathedral, which is here.[l] [backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h01" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt]And we're... here.[l] [backlay][fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p01_h11" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt]Which means we gotta go there.[」][lr]
+[else]
+　「何といっても本日の目玉の大聖堂がここ。[l]
+
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f05_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+それで、現在位置がここでしょう。[l]
+
+[backlay]
+[image layer=0 page=back storage="fgimage/t_img/f05_p01_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+だから、あっち」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako showed me the map and pointed at the alley to the west.[prcm]
+[else]
+　と、貴呼はこちらに地図を見せてから西へ伸びる路地を指差した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're interested in churches and cathedrals, right?[l] After checking out this temple and that square, we can cross the river and head for the Grand Cathedral.[」][lr]
+[else]
+　「サチは教会や聖堂が見たいんでしょう？[l] この神殿と広場を見てから、川を越えて大聖堂に行こう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako pointed at the pictures in the booklet as we walked.[prcm]
+[else]
+　と、貴呼は歩きながらブックレットを開いてカラー写真をこちらに見せた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a rattling sound from behind the corner next to the shoe store.[prcm]
+[else]
+　靴屋の角の向こうからガタガタ、と音が聴こえる。[prcm]
+[endif]
+
+
+[msgoff]
+[playse buf=1 storage=se72.ogg]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=80 path="(105,-40,255)(65,0,255)" layer=0]
+[wm]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa![」][lr]
+[else]
+　「おっと」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako jumped out of the way of a yellow tricycle that suddenly appeared.[lr]
+[else]
+　ガタガタ、と音を立てて黄色い三輪車が前の路地を横切り、貴呼が身を引いた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The tricycle, its cargo box filled with red and pink flowers, creaked as though expressing some sort of discontent, then swiftly disappeared beyond another corner, leaving only a faint fragrance of flowers in its wake.[prcm]
+[else]
+　荷台に赤や桃色の花を高く積んだ三輪車は、文句を言うように車体をブルルン、と震わせ車体スレスレの路地を進むと、一つ先の交差点をほとんど速度を落とさず器用に曲がって姿を消した。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　三輪車の通ったあとには淡い花の香りが残った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h04" visible=true left=65 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It smells nice,[」] Takako remarked.[prcm]
+[else]
+　「いい香り」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、貴呼が言った。[prcm]
+[endif]
+
+
+
+;/////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg34_3" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were many stores in the arc-shaped alleyway, their display windows filled with a plethora of things.[lr]
+[else]
+　緩やかな弧を描く路地にも店がいくつかあり、狭い路地にショーウィンドウを張り出させていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A wine store had a bunch of wooden boxes with bottles stacked in front of it. A confectionery had two transparent bags of colorful beans hanging above its doors; its orange-tinted display window was packed with three rows of various chocolates and candies shaped in the form of flowers and fruits.[prcm]
+[else]
+　瓶を入れた木箱を山積みにしているワイン店があり、その先にある扉の上にカラフルなビーンズを入れた透明な袋をふたつ下げているのは菓子屋で、
+オレンジ色の明かりで照らされたショーウィンドウには三つの透明ガラスの段があり、その上に花や果物の形をした菓子が乗っていた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p01_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sachi, let's hurry on to the temple.[」][lr]
+[else]
+　「サチ、神殿だよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako, who had gotten ahead of me as I briefly halted to look at the candies, came back and clasped my hand.[prcm]
+[else]
+　少し先を歩いていた貴呼が、戻ってきてショーウィンドウの可愛らしいお菓子を見ていたこちらの手を取る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're not embarrassed to hold hands?[」][lr]
+[else]
+　「手をつなぐのは、恥ずかしくない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Everyone's doing it here.[l] Remember that couple at the fountain? Those two were glued to each other.[」][lr]
+[else]
+　「ちらほら見かけるよ。[l]噴水前でもべったりの二人いたし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pulled on my hand.[prcm]
+[else]
+　と、言いながら手を引いていった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Besides, we already went on a trip together. What's there to be embarrassed about?[」][lr]
+[else]
+　「それに、二人で旅行に来ておいて、何をいまさらだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako let out an audible laugh.[prcm]
+[else]
+　と、言って貴呼はハハハ、と笑う。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg31" page=back layer=base]
+[trans method=universal rule="rule10" vague=300 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we exited the alleyway, we found ourselves in another square with a fountain.[lr]
+[else]
+　路地を抜けたその先には、中心に噴水のある広場があった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was surrounded by people who looked like street performers, and souvenir shops that seemed to specialize in wood carvings.[lr]
+[else]
+　広場の噴水の周りには、大道芸のピエロや、木彫りのお土産物が置いてある出店が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Turning to the right, I spotted a huge white pillar.[lr]
+[else]
+　そして、右手の方に振り返ると、巨大な白い柱が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we continued down the bustling square while clasping each other's hands, another set of pillars appeared from the shadow of the one we saw from the distance.[prcm]
+[else]
+　路地とは打って変わって賑やかな広場の方へ手を繋いだ貴呼と歩いていくと、重なって見えていた柱たちが手前の柱の影から現れてズラリ、[wait time=500]と並び立った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa, it's huge.[」][lr]
+[else]
+　「うわ、大きい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The triangle-shaped roof of the temple was supported by sixteen big stone pillars.[lr]
+[else]
+　噴水の前から神殿の入口を見ると、十六のコンクリの石柱が大きな三角の屋根を支えていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Under it, there was a long entrance with a tall ceiling that was shaped like a cylindrical dome from the outside.[prcm]
+[else]
+　屋根の下には、見上げるほどの高さの縦長い入口があり、その向こうにある神殿は円筒状の巨大なドームになっていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's okay to go inside, right? I wanna see how it looks.[」][lr]
+[else]
+　「入れるんだよね、入ってみよう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako pulled my hand toward the entrance, nimbly evading the people in the crowd.[prcm]
+[else]
+　貴呼はこちらの手を引いて、人だかりのあいだをスイスイ、と抜けていった。[prcm]
+[endif]
+
+
+
+;//////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg38" page=back layer=base]
+[trans method=universal rule="rule12" vague=300 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up at the dome above our heads.[lr]
+[else]
+　大聖堂の中は大きなドーム状の空間になっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Unlike the entrance, there were no pillars supporting it, and I could see the blue sky peeking out from the hole in its center.[lr]
+[else]
+　外と違ってそこにはひとつの柱もなく、天蓋にある大穴からは真っ青な空が見えた。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg30" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After admiring that divine-looking pillar of light, we continued toward the morning market that was mentioned in the booklet.[lr]
+[else]
+　私達はその大穴から差す神秘的な光の柱を十分に堪能したあとで、ブックレットに紹介されていた午前中に開かれる市場へと向かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were no big roads that led to it, so we had to use lots of tiny alleyways between buildings.[lr]
+[else]
+　市場へは大通りらしい通りがなく、建物のあいだの細かな道を歩くことになった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Despite getting lost a few times, we finally found our way to our destination. However, being exhausted by the long trek, we decided to first take a break at a nearby restaurant.[prcm]
+[else]
+　少し迷いながら市場到着すると、少し歩き疲れたので近くにあったレストランで休憩をすることにした。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of flower do you think that is?[」][lr]
+[else]
+　「あの花、なんて花かな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Which one?[」][lr]
+[else]
+　「どれ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We gazed at the market from under the white parasols lining the restaurant's terrace.[lr]
+[else]
+　レストランのテラス席にある白いパラソルの日陰から市場を眺めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were countless wooden stands next to each other; every single one sported canvas roofs to protect them from the sun.[lr]
+[else]
+　市場はからっと晴れた真っ青な空の下に木と布で作った日よけを張った屋台が所狭しと並んでいる。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Their assortment included food, spices, fruits, flowers, and other miscellaneous goods.[prcm]
+[else]
+　屋台では、生鮮食品、香辛料、雑貨、花と実に様々なものが売られていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's a blue bucket with purple flowers near that stand.[」][lr]
+[else]
+　「ほら、そこの前にある花屋の、手前の青いバケツに入った紫の花」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure what they are. They look kinda like chrysanthemums, though.[」][lr]
+[else]
+　「知らないわね、菊に似てるけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if we have them in Japan.[l] Remember that vegetable store from earlier? It was pretty awesome.[l] Who would've thought there'd be so many different species of tomatoes...[」][lr]
+[else]
+　「こっちにしか無い種類かな。[l]さっきの八百屋も凄かったね。[l]トマトだけであんなに種類があるなんて知らなかったな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if they use different ones for different dishes.[」][lr]
+[else]
+　「料理で使い分けたりするのかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we were discussing the market, the waiter approached us to take our order.[prcm]
+[else]
+　市場の話をしているとウェイターが注文を取りに来た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You gonna order salad again?[」][lr]
+[else]
+　「サラダ頼む？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As Takako spoke with the waiter, all the while gesturing like a crazy person, I glanced back at the market one more time.[prcm]
+[else]
+　貴呼が呼び止めたウェイターに向かって身振り手振りを交えて注文をしている間に、私はもう一度市場を眺めた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It looks like a festival.[l] It's nice to see everyone running back and forth with so much energy.[l] I wonder if it's like that every day.[」][lr]
+[else]
+　「まるでお祭りみたいだね。[l]活気があって良いな。[l]ここは毎日こうなのかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako said that as she finished conveying our orders.[prcm]
+[else]
+　と、注文を終えた貴呼が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Seems like this square has served a variety of different purposes over the years. At one point, it was a field of flowers. In another period, it was used to stage executions.[」][lr]
+[else]
+　「この広場は花畑だったり、[l]処刑場だったり、[l]色々な用途で使われてきたみたいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I told her what was written on the building.[prcm]
+[else]
+　と、ブックレットの紹介記事に書いてあったことを話した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Executions...?[」][lr]
+[else]
+　「処刑場？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You know, like flogging.[」][lr]
+[else]
+　「鞭打ちの」と私が言うと貴呼は「へえ」と言った。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if the people who came here to pick flowers ever imagined the place would end up like that.[l] Or if the people who were flogged here expected this area to eventually become a market.[」][lr]
+[else]
+　「花畑の時に花を摘んでた子は、ここが処刑場になるとは思わなかっただろうね。[l]処刑される人はいつかそこが市場になるなんて想像したかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure how that matters in any way.[」][lr]
+[else]
+　「してもしなくても、どっちでも同じことでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako shook her head, wolfing down the fruit she bought at the market.[prcm]
+[else]
+　貴呼は、市場で買ってきたフルーツを口でモグモグ、とさせながら首を振る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Like, try imagining someone in the distant past sitting in the same place as we do.[l] What if that someone imagined that there would be a restaurant here, and that a woman sitting there would be thinking about them? Wouldn't that be incredible?[」][lr]
+[else]
+　「座っている椅子のこの場所に、その昔いた誰かに思いを馳せてみる。[l]向こうも、いつかここがレストランのテラス席になって、そこに座っている女性に思いを馳せていたとしたら、それって凄いと思わない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] It would've been pretty miraculous for them to imagine that some asian girl would one day be bringing it up to her girlfriend while chewing on fruits.[l] I'm willing to bet it's about as likely as the birth of another universe or something.[」][lr]
+[else]
+　「ふむ。[l]東方から来た女性が、市場で買ってきたカットフルーツを食べながら、彼女とそんな話をしていることを想像していたとしたら、とても奇跡的ね。[l]もし本当にあったら、もう一つ宇宙ができるくらいの確立かもしれないわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h16" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「ホントに？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Or rather, even less likely than that.[」][prcm]
+[else]
+　「もう少し低い確率かもしれない」[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako stuffed a piece of orange in her mouth and closed her eyes.[prcm]
+[else]
+　それを聞いた貴呼が、柑橘系の大きな切り身を口に入れてモグモグ、とさせながら目を閉じた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right. Now I'm thinking about two homosexual aliens from Jupiter having a picnic here after the fall of humanity, and thinking about two asian women eating fruits at a restaurant in the very same place while they themselves snack on seaweed-filled rice balls.[」][lr]
+[else]
+　「将来、滅びた地球にやってきた同性愛の木星人が、ワカメおにぎりを食べながら、ここがレストランのテラス席だった頃に、席に座っていた東方から来た女性がカットフルーツを食べながら、将来来るであろう自身たちの事に思いを馳せていたことに、思いを馳せているところを想像してみる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you skipped the homosexual bit and the rice balls, you might even be right.[」][lr]
+[else]
+　「同性愛とワカメおにぎりじゃなかったら、当たるかもしれないわね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think it'd be as likely as the birth of a new universe?[」][lr]
+[else]
+　「もう一つか二つ、宇宙ができるくらい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That would be nice.[」][prcm]
+[else]
+　「出来たらいいわね」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f05_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I hope someone builds a temple for us too if that happens.[」][lr]
+[else]
+　「そしたら、女神のサチと一緒に祀った神殿を建てて欲しいな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, right. I think the possibility of the current gods punishing you for these ideas is a lot higher, actually.[」][prcm]
+[else]
+　「どうでもいいけどあまり馬鹿なこと考えてると、罰が当たるわよ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[seopt buf=0 volume=100]
+[msgoff]
+[fadeoutbgm time=3000]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="030.ks" target=*030
+
+

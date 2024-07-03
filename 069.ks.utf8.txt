@@ -1,0 +1,376 @@
+*069| Nursery Rhyme
+; *069|童謡
+[fbfstoretitle eng="Nursery Rhyme" jp="童謡"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle9"]
+
+[msglayer2]
+[playbgm storage="bgm15"]
+[backlay]
+[seopt buf=0 volume=50]
+[fadeinse buf = 0 storage=se70.ogg time=1000]
+[fbfscale_image storage="bg83" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=800]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 84"]
+[eval exp="sf.ItRelease = 85"]
+[endif]
+
+
+*| Nursery Rhyme
+; *|童謡
+[fbfstoretitle eng="Nursery Rhyme" jp="童謡"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the flow of a river beside me.[lr]
+[else]
+　さらさら、と流れる水の音が聴こえる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was sometimes interrupted by the rocks in its stream knocking together.[prcm]
+[else]
+　その音には、時折に川が流した石同士がぶつかるカラカラ、と言う音も混じっていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[eval exp="sf.cg80=1"]
+[fbfscale_image storage="ev80" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The sky turns orange as the sun goes down♪[」][lr]
+[else]
+　「夕焼け小焼けで  日が暮れてえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako, walking a few steps in front of me on our way back from the rental store, was singing a tune.[lr]
+[else]
+　レンタルビデオショップの帰り道、河原沿いの遊歩道で少し前を歩く[ruby text="たか"]貴[ruby text="こ"]呼が歌っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It wasn't exactly orange, though. It was more like that time during dusk when you could barely make out the faces of people walking on the other side of the street.[prcm]
+[else]
+　夕焼けと言うよりは、暗くて人の顔もわからなくなってくる[ruby text="た"]誰そ[ruby text="がれ"]彼の時である。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go home, together with the crows♪[」][lr]
+[else]
+　「カラスと一緒に帰りましょうぅ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think you're forgetting the lyrics.[」][lr]
+[else]
+　「歌詞忘れてるわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh?[」][lr]
+[else]
+　「あれ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was an old song, long since banished to the cobwebbed corners of our minds.[lr]
+[else]
+　記憶のかなたでほこりをかぶっていたような歌だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was pretty sure I hadn't heard her sing it since kindergarten.[prcm]
+[else]
+　最後に貴呼がこの歌を歌っているのを聴いたのは、幼稚園の歌のお遊戯の時だった気がする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... Mhmmm... Ghgmghm...[」][lr]
+[else]
+　「ん～んん、んんん、うんうんん～」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She made another attempt.[prcm]
+[else]
+　もう一度、忘れたフレーズのところを歌っている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go home, together with the crows♪[」][lr]
+[else]
+　「カラスと一緒に帰りましょうぅ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's still the same.[」][lr]
+[else]
+　「変わってないわよ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huhh?[」][lr]
+[else]
+　「あれ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She started mumbling again.[prcm]
+[else]
+　んんぅと、言って、また音階だけを口ずさむ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Listening to her humming, I tried recalling how she used to sing that song.[lr]
+[else]
+　貴呼の鼻歌を聴きながら、貴呼がそれを歌ったときのことを思い出してみる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako kept shaking her shoulders in tune with the song, her ponytail dancing with every motion.[prcm]
+[else]
+　貴呼が歌いながら肩を揺らすのにつられて、アップテイルの髪も元気に揺れている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... Nmhm... Grhrhm...[」][lr]
+[else]
+　「ん～んん、んんん、うんうんんぅ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The bells at the mountain temple ring♪[」][lr]
+[else]
+　「山のお寺の  鐘が鳴る」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... Mhmm... Unghh...[」][lr]
+[else]
+　「んーんーんーうんうん、うんうんん～」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go home with our hands joined together♪[」][lr]
+[else]
+　「お手々つないで  みな帰ろう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go home, along with the crows♪[」][r]
+[「]Let's go home, along with the crows♪[」][lr]
+[else]
+　「からすといっしょに  かえりましょ」[r]
+*|童謡
+　「からすといっしょに  かえりましょ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako turned to me and smiled.[prcm]
+[else]
+　貴呼がこっちを向いて笑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, that's how it went.[」][lr]
+[else]
+　「そうだったそうだった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Walking ahead of me, she began her song again.[lr]
+[else]
+　遊歩道を前を歩きながら、貴呼がまた歌いだす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried to join her in a small voice, as embarrassing as it was.[prcm]
+[else]
+　小さな声であわせると、少し恥ずかしいばかりだった。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg83" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[r][r]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sky turns orange as the sun goes down♪[wait time=1500][r]
+[r][r]
+The bells at the mountain temple ring♪[wait time=1500][r]
+[r][r]
+Let's go home with our hands joined together♪[wait time=1500][r]
+[r][r]
+Let's go home, along with the crows♪[wait time=1500][prcm]
+[else]
+　夕焼け小焼けで  日が暮れて[wait time=1500][r]
+[r][r]
+
+*|童謡
+　山のお寺の  鐘が鳴る[wait time=1500][r]
+[r][r]
+
+*|童謡
+　お手々つないで  みな帰ろう[wait time=1500][r]
+[r][r]
+
+*|童謡
+　からすといっしょに  かえりましょ[wait time=1500][prcm]
+[endif]
+
+[clickskip enabled=true]
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was glad it was actually dusk.[lr]
+[else]
+　黄昏時でよかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Dusk, the time when it was too dark to see anyones face.[lr]
+[else]
+　暗くなって人の顔がわからず、誰そ彼。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the time of day when one had to question who anyone was.[prcm]
+[else]
+　誰ですかあなたは、とたずねる頃合いだった。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=3000]
+[fadeoutse buf=0 time=3000]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[jingle9]
+
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="070.ks" target=*070
+
+

@@ -1,0 +1,99 @@
+*059| Pale Morning
+; *059|青白い朝
+[fbfstoretitle eng="Pale Morning" jp="青白い朝"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg05_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=3000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 74"]
+[eval exp="sf.ItRelease = 75"]
+[endif]
+
+
+*| Pale Morning
+; *|青白い朝
+[fbfstoretitle eng="Pale Morning" jp="青白い朝"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Light filtered in through the window, painting the room in a pale, bluish hue.[lr]
+[else]
+　窓から白い光が入り込み、部屋にぼんやりとした薄青色が漂った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The windows seemed to have frosted over during the night.[lr]
+[else]
+　冷たい窓硝子には雪の結晶のような霜。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could even spot a small icicle extending from the roof.[lr]
+[else]
+　外の屋根には小さな[ruby text="つら"]氷[ruby text="ら"]柱が降りている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The courtyard visible through the window was now blanketed in white.[prcm]
+[else]
+　雪の結晶のフレームの向こうには夜の内に白んでしまった玄関前の庭園が見えた。[prcm]
+[endif]
+
+
+[seopt buf=0 volume=80]
+[playse buf = 0  storage=se68_2.wav]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the floor creak.[seopt buf=0 volume=100][lr]
+[else]
+　遠くでコン、と乾いた音がした。[seopt buf=0 volume=100]
+[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A tiny bead of water traveled down the shaft of the icicle before soundlessly dropping to the ground below.[prcm]
+[else]
+　氷柱を下に伝う透明な雫が、その先から音もなく落ちた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="060.ks" target=*060
+
+

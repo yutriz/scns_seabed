@@ -1,0 +1,451 @@
+*033_2| Librarian
+; *033_2|司書
+[fbfstoretitle eng="Librarian" jp="司書"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle6"]
+
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg04_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 42"]
+[eval exp="sf.ItRelease = 43"]
+[endif]
+
+
+
+*| Librarian
+; *|司書
+[fbfstoretitle eng="Librarian" jp="司書"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the weekend, I spent most of the afternoon finishing up my laundry.[lr]
+[else]
+　休日の昼に洗濯物を干した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My workload had halved compared to how things used to be, so I could now use the extra space on the veranda to hang the futon as well.[lr]
+[else]
+　以前と比べて洗濯物の量が半分になったので、空いたスペースを利用して布団も干すことができるのは、少し楽だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I began dusting it off, I heard the exact same sound of someone hammering on their futon in the distance.[lr]
+[else]
+　布団をたたいていると、どこからか同じように布団を叩く音が聞こえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The middle-aged forecaster on TV claimed the weather would remain clear until tomorrow night.[lr]
+[else]
+　朝のニュースで見た天気予報では、いつもの中年の天気予報士が明日の夜まで快晴が続くと言っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I finished hanging my laundry, I moved to the kitchen and began preparing today's lunch.[prcm]
+[else]
+　洗濯物が終わると、台所で昼食の準備に取り掛かる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I hadn't been to the supermarket lately, so all I had in the fridge was chinese cabbage, some poultry, and onions.[lr]
+[else]
+　このところ買い出しをしていない冷蔵庫にあるものは、主に白菜と鶏肉とネギくらいしかない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had bought a 1/4 cut of the cabbage, and by now, only about a third of that was still left.[lr]
+[else]
+　白菜などは、4分の1カットがさらに3分の1くらいになっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With no eggs left, I had to give up on making oyakodon.[lr]
+[else]
+　たまごが無くなっていたので親子丼を諦めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I splashed some water and oil into the frying pan, followed by a few pieces of cabbage, onion, and poultry.[lr]
+[else]
+　フライパンに水とだしを入れて、煮立つと白菜、ネギ、鶏肉を入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the onions began to lose their shape, I added some leftover udon I found in the freezer.[prcm]
+[else]
+　ほどよくネギがしなると、冷凍庫に余っていたうどんを入れた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made lunch from throwing random things together, but it turned out better than expected. I ate it while watching TV.[prcm]
+[else]
+　適当に作った昼食はやはり適当だがそれなりに美味しく、お昼のテレビ番組を見ながら一人で食べた。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[playbgm storage="bgm10"]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg124" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On my way to do some shopping, I dropped by the library to return the books I borrowed.[prcm]
+[else]
+　買い物のために外へ出るついでに、図書館へ寄り借りていた本を返した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was a municipally-owned establishment, but probably because of the location, there was barely anyone inside despite it being the weekend.[lr]
+[else]
+　図書館は市営だが、場所が悪いのか休日だというのに人はまばらだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Back in the countryside where I grew up, all the libraries would be filled with schoolchildren on days like this, to the point you had to really struggle to find an empty seat.[lr]
+[else]
+　田舎の市営図書館では休日になると勉強に来る学生などでテーブルはほぼ埋まり、席を確保するのにそれは苦労したものだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There seemed to be slightly more people around compared to my previous visit, but it was still nothing compared to what I'd been used to.[prcm]
+[else]
+　先日よりは人が多い気がするが、田舎のそれと比べるとやはり淋しいものだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the right hand side from the entrance, a separate space was set up for children — it had a small bookshelf lined with various picture books.[lr]
+[else]
+　玄関から右手の奥には壁際に広めの子供用スペースが用意されており、周辺には絵本を収めた背の低い棚が並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They were the same fairy tales I used to read as a child.[lr]
+[else]
+　中には幼い頃に読んでいたものと同じ、童話の本があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A story about a penguin traveling around the world on a patch of ice. Another story about a cat that loved quizzes.[prcm]
+[else]
+　ペンギンが氷山に乗って旅をする話と、クイズが好きな猫の話だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved to the left side of the entrance, where a bunch of tables were lined up next to a set of large windows that made the spot ideal for reading.[lr]
+[else]
+　玄関から左手の方に移動すると、とても日あたりがいい位置にいくつか机が置かれていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Not only were all the normal seats empty, there wasn't anyone using the lavish — and comfortable-looking — sofa, either.[lr]
+[else]
+　しかしどれも空席で、それだけ少し他よりも豪華なソファの席ですら空いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A poster for the local neighborhood association decorated the side of one of the bigger shelves, making it visible even from the reading room.[lr]
+[else]
+　広い場所に面した棚の横には、町内会のポスターが貼られていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I wandered into the psychology section, I spotted the librarian who printed my card.[prcm]
+[else]
+　そうしてふらふら、とまた心理学の本があったスペースへ行くと、この間の利用者カードを発行してくれた司書がいた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made a bow, which — upon noticing me — she returned with a bow of her own.[lr]
+[else]
+　お辞儀をすると、向こうもこちらに気がついてお辞儀を返した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She seemed to be in the middle of arranging books, holding the map of the library in one hand. I was about to pass by her when she suddenly addressed me.[prcm]
+[else]
+　本棚の整理なのか、手に図書を持った司書の後ろを通り過ぎようとすると声がかかる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're the same person I made that membership card for the other day, right?[l] Did the books you borrowed prove to be of any help?[」][lr]
+[else]
+　「先日、利用者カードを作られた方ですよね。[l]この間の本は、参考になりましたか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't expect her to call out to me like that, but after a few moments of startled silence, I answered that they did.[prcm]
+[else]
+　思いがけずに声をかけられたので、少し驚いてしまい「ええ」とだけ返した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]To tell you the truth, most of the books from that section are a bit on the old side.[l] But since someone finally borrowed some of them, I could use it as an excuse to order newer editions.[」][lr]
+[else]
+　「実は、このあたりの本って古いままなんです。[l]貸出があったので、少し新しいのを入れてみたんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After placing the books she'd been holding back to their respective ledges, she pointed at the shelf where the volumes I borrowed were originally from.[lr]
+[else]
+　そう言って、司書は持っていた本を棚に直してからこちらへ近づくと、以前本を借りた棚の一部を指差した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It did seem like there were a few more books there than before.[prcm]
+[else]
+　確かに、以前見たときよりも関連する本の数が増えているようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Judging from the titles, they were mainly focused on hypnotic therapy and the workings of the brain.[lr]
+[else]
+　背表紙のタイトルから、催眠医療や脳の仕組みについての本であるようだった。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1000]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Saying that she thought I might be interested, the librarian gave me another bow and left.[prcm]
+[else]
+　よろしければどうぞ、と司書は言い、それからお辞儀をして去っていった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spent a few minutes looking over those new books.[lr]
+[else]
+　しばらくその場で、新しく書棚にならんだ本を見ていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, no matter which one I checked, I wasn't able to focus on them. In the end, I left the library without borrowing anything.[prcm]
+[else]
+　しかし、この日は本を開いてもなかなか頭に入っては来ないので、結局何も借りないまま書棚を離れた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ran into the librarian on my way back.[lr]
+[else]
+　帰り際に、ほかの棚を整理している司書を見つけると、向こうもこちらに気がついた。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I made a curt bow, she once again returned it with her own.[prcm]
+[else]
+　やはり歩きながら少しお辞儀すると、向こうもお辞儀を返した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you ever need to look up anything else, don't hesitate to ask.[」][lr]
+[else]
+　「また、調べ物がありましたら遠慮なく言ってください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And with that, we parted ways.[prcm]
+[else]
+　と、司書は言った。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle6]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="033_3.ks" target=*033_3
+
+

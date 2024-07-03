@@ -1,0 +1,678 @@
+*003| Airport
+; *003|空港
+[fbfstoretitle eng="Airport" jp="空港"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+[fadeinse buf = 0 storage=se96.ogg time = 2000 loop = true]
+[wf buf=0]
+[wait time=1000]
+[playse buf = 1 storage=se95.ogg]
+[wait time=1000]
+[playbgm storage="bgm06"]
+[backlay]
+[fbfscale_image storage="bg20_2.jpg" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 3"]
+[eval exp="sf.ItRelease = 4"]
+[endif]
+
+[r][r][r][r]
+*| Airport
+; *|空港
+[fbfstoretitle eng="Airport" jp="空港"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We will now begin boarding for Flight 56 to Paris.[」][prcm]
+[else]
+――パリ行きの５６便はただいまからご搭乗手続き始めさせていただきます。[lr]
+[endif]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+――We will now begin boarding for Flight 56 to Paris.[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The caster wheels attached to my bag rolled over the immaculately cut stone floor in an energetic clatter.[lr][r]
+[else]
+バッグの底についたキャスターが綺麗にカットされた石の床を転がりカラコロ、と小気味のいい音がする。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There weren't that many people in the off-season airport, so I could walk relatively freely.[lr]
+[else]
+シーズンオフだった空港は人がまばらで快適に歩くことが出来た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I walked to the escalator going up, placed my bag on it, then boarded it myself.[lr][r]
+[else]
+階を上がるエスカレータの前まで行き、先にバックをエスカレータに載せた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced down to see Takako staggering as she tried carrying a large boston bag in her arms.[lr][r]
+[else]
+登っていくエスカレータから下を振り向くと、[ruby text="たか"]貴[ruby text="こ"]呼がヨタヨタとボストンバックを抱えて付いて来ていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked to see if my bag was steady on the escalator, and pulled down my right sleeve to confirm the time.[prcm]
+[else]
+バッグをキチンと段の上に載せ直してから、右手の袖をめくり時計を確認する。[prcm]
+[endif]
+
+
+[fadeoutse buf=0 time=2000]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're late.[」][lr]
+[else]
+「遅れてるわね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's because you drive so slow.[」][lr]
+[else]
+「分かった、サチの運転が遅いからだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Actually, it's because you overslept.[」][lr]
+[else]
+「あんたが二度寝したからよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shifted my gaze from the clock to Takako, who looked away to avoid my eyes.[prcm]
+[else]
+時計から貴呼の方に目を移すと、貴呼はあからさまに視線を逸らした。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This escalator is pretty long. I've never seen one like this before.[」][lr]
+[else]
+「このエスカレータ長いね、こんなに長いの初めて見た」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the escalator buzzing below us.[lr]
+[else]
+ウンウン、とエスカレータの作動音が聞こえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heaved a brief sigh.[prcm]
+[else]
+小さくため息をついた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And if you felt I was driving slow, there's seriously something wrong with you.[l] Has no one ever taught you about 'Preventive Driving'?[」][lr]
+[else]
+「それと車が遅いと感じたのなら、あんたの運転早すぎるわよ。[l]かも知れない運転は習わなかったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Preventive Driving?[」][lr]
+[else]
+「かも知れない運転？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's based in foreseeing the possible dangers on the road.[l] You might be going too fast without realizing it.[l] A car might appear in the opposing lane.[l] You might have to abruptly break.[l] A pedestrian might jump on the road.[」][lr]
+[else]
+「こうなったら危険だって事を予め考えておくのよ。[l]思ったより速く進んでいるかもしれない。[l]対向車が来るかもしれない。[l]急ブレーキをかけるかもしれない。[l]歩行者が突然現れるかもしれない」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p04_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You might have run over something.[」][lr]
+[else]
+「何か撥ねたかも知れない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Too late to worry about that now.[」][lr]
+[else]
+「それは手遅れよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako let out a hearty chortle.[prcm]
+[else]
+ケタケタ、と貴呼が笑った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p04_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are we really cutting it that close?[」][lr]
+[else]
+「時間はもうそんなに余裕ないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's about an hour and a half until the flight.[」][lr]
+[else]
+「出発まで一時間半くらいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think we'll make it in time for the check-in?[」][lr]
+[else]
+「チェックイン間に合うかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's hurry.[」][lr]
+[else]
+「少し急ぐわよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p03_h16" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You want me to run again?[」][lr]
+[else]
+「また走るの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako didn't seem too thrilled about the idea.[lr]
+[else]
+貴呼が口をいを言う形にして抗議していた。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glared back at Takako. She leaned against her boston bag placed a step above the one she was standing on, and closed her eyes.[prcm]
+[else]
+眉を寄せて見せると、貴呼は上の段に乗せたボストンバックに寄りかかって目を閉じた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't sleep.[」][lr]
+[else]
+「寝るな」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p03_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[playse buf = 1 storage=se08.ogg]
+[fbfscale_move time=100 path="(105,-20,255)(105,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her head was at the perfect height for me to flick it.[prcm]
+[else]
+丁度いい高さにあった貴呼の額を指で弾くとペコ、と小気味のいい音がする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ouch.[」][lr]
+[else]
+「痛い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako placed her left hand on her forehead.[prcm]
+[else]
+貴呼は左手で額を押さえた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did that help wake you up?[」][lr]
+[else]
+「目が覚めた？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][prcm]
+[else]
+「覚めた」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I lifted my bag and stepped off the escalator as it reached the top.[lr][r]
+[else]
+長かったエスカレータを上りきると、バッグを持ち上げてエスカレータを降りた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako picked her boston bag back up and followed me.[lr][r]
+[else]
+貴呼もボストンバッグを持って、後からエスカレータを降りた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I walked through the carpeted corridor at a hurried pace.[lr][r]
+[else]
+やや急ぎ足でカーペットの通路を歩く。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Through the row of windows to the right, I could clearly see the cloudless blue sky.[lr]
+[else]
+右手側は淵の少ない大きなガラス窓が続いており、雲もまばらな青い空が見えていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked to my side as the caster wheels of my bag rolled at a brisker pace than before.[lr][r]
+[else]
+カラカラ、と先ほどより早く転がるキャスターバッグを引きながら隣を見る。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako held the boston bag in her arms.[lr][r]
+[else]
+貴呼はキャリー用のボストンバッグを手に持っている。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had no idea where she got it. It seemed like an antique, covered in freight seals with a bunch of different languages.[prcm]
+[else]
+何処で買ったかわからないような見るからにアンティークな代物で、様々な国の文字の貨物シールが貼られていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You didn't bring much, as usual.[」][lr]
+[else]
+「相変わらず、荷物少ないわね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p01_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think so?[l] I think I packed everything I would need.[l] Passport.[l] Tickets.[l] Camera.[l] Notepad.[l] Medicine.[l] And a nail clipper.[」][lr]
+[else]
+「そうかな？[l] ちゃんと必要なものは持ってるよ。[l]パスポート、[l]チケット、[l]デジカメにノパでしょ。[l]あと、薬と爪切りと」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're buying clothes at our destination again?[」][lr]
+[else]
+「服はまた向こうで買うの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep.[l] And I can wear this for as long as there's a washing machine around.[」][lr]
+[else]
+「そのつもり。[l]それに、これだって洗って着られるからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako pulled on her shirt to show it off.[prcm]
+[else]
+と、貴呼はシャツを摘んで見せた。[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p04_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's buy everything we need once we get there.[」][lr]
+[else]
+「向こうに着いたらショッピングで必要なもの揃えよう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good idea.[」][prcm]
+[else]
+「そうね」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg20_1.jpg" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we followed the guide map, we found ourselves in a wide hall.[lr][r]
+[else]
+案内図に従い通路を突き抜けると、天井の高いホールに着いた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were check-in counters at the end of it and the flight board in the middle, dangling midway between the ceiling and the ground.[lr][r]
+[else]
+奥にはチェックインカウンターがあり、中心には天井と地面の中空にフライトボードがあった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I left my bag on the ground and took a few steps toward the board to confirm our boarding gate. Takako soon followed suit.[lr]
+[else]
+バッグを置いてフライトボードより搭乗口を確認すると、貴呼もそれに習った。[lr]
+[endif]
+
+[r][playse buf = 1 storage=se95.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A melody rang out from the speakers at the top, signaling the beginning of another boarding announcement.[lr]
+[else]
+ピンポンパンポン、とチャイムが鳴って搭乗案内のアナウンスが流れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wasn't listening too closely at first, but I could confirm the details from the simple English announcement and the actual flight board.[prcm]
+[else]
+初めのところを少し聞き逃したが、次の簡単な英語のアナウンスとフライトボードの表示で確認できる。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg20_3.jpg" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't you think it's this?[」][lr]
+[else]
+「ねえ、これじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It is.[」][lr]
+[else]
+「これね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Spotting a big, round clock in the middle of the hall, I confirmed how much time we still had.[prcm]
+[else]
+ホールの真ん中の支柱に円時計を見て、時間の余裕を確認する。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go.[」][lr]
+[else]
+「行くわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up my pace again.[prcm]
+[else]
+そして、もう少しだけ歩調を速める。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa, don't leave me here![」][lr]
+[else]
+「わ、待ってよ」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=100 path="(105,-20,255)(105,0,255)" layer=0]
+[wm]
+[fbfscale_move time=400 path="(700,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako cried out behind me.[prcm]
+[else]
+と、貴呼が言った。[prcm]
+[endif]
+
+
+
+[seopt buf=0 volume=100]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="003_2.ks" target=*003_2
+

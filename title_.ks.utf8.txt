@@ -1,0 +1,8 @@
+[startanchor]
+*start| Hiding from heat in late summer
+; *start|晩夏初秋 暑さしのぎ
+[fbfstoretitle eng="Hiding from heat in late summer" jp="晩夏初秋 暑さしのぎ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+
+@jump storage="001.ks" target=*001

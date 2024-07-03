@@ -1,0 +1,657 @@
+*134| Dive
+; *134|潜水
+[fbfstoretitle eng="Dive" jp="潜水"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm34"]
+[backlay]
+[playse buf = 0 storage=se137.ogg]
+[fbfscale_image storage="bg102_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 167"]
+[eval exp="sf.ItRelease = 168"]
+[endif]
+
+
+*| Dive
+; *|潜水
+[fbfstoretitle eng="Dive" jp="潜水"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my eyes, only to realize I was slowly sinking.[lr]
+[else]
+　目を開くと、ゆっくりと下降していく最中だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I regained control of my body, I extended my arms and landed at the bottom.[prcm]
+[else]
+　強ばった体が解れてから手を広げるとスウ、と水の底に足がついた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[eval exp="sf.cg16=1"]
+[fbfscale_image storage="ev16" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The water was crystal clear. If one discounted the sensation of weightlessness, this was hardly different from the inside of the cave.[lr]
+[else]
+　水は透明度が高く、月面のような無重力感を除けば、さっきまでの洞窟と変わりはない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I exhaled a breath — it didn't feel uncomfortable at all.[lr]
+[else]
+　コポ、と息を吐いても苦しくはならなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The air bubbles ascended, getting sucked toward the light coming from the hole I fell through.[prcm]
+[else]
+　空気の泡はグリグリと細かくなりながら落ちてきた穴の光の中へと吸い込まれていった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[bgmopt volume=80]
+[fbfscale_image storage="ev16_1" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[wait time=500]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, this...[」][lr]
+[else]
+　「ね、これ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[bgmopt volume=100]
+[fbfscale_image storage="ev16" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[wait time=500]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a voice from beyond the water.[prcm]
+[else]
+　水の向こうから声が聞こえる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a dark cave entrance right in the middle of the seabed.[lr]
+[else]
+　水の底には暗い洞の入口がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around and began walking toward it.[lr]
+[else]
+　向きを変えてそちらへと移動する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt like walking on clouds.[lr]
+[else]
+　つま先で水の底を蹴ると、あとは雲の上を歩くようにゆっくりと先へ進んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Although I drew further away from the light coming from the hole, it painted the entire place pale blue, almost like it had simply melted into the water.[lr]
+[else]
+　落ちてきた穴の光が届かなくなっても、ぼんやりと光が水に溶けたように、うすら青い岩肌が見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was moving onwards with one hand on the wall when I heard some voices again.[prcm]
+[else]
+　壁に手を当てながらゆっくりと進むと、また聞き覚えのある声が聞こえてくる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[bgmopt volume=80]
+[fbfscale_image storage="ev16_1" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wow, there's a window here.[l] I can see the vegetables in the inner yard from here.[」][lr]
+[else]
+　「こんなところに窓があるよ。[l]中庭の菜園が見える」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There was a huge window covered by the stairs, too.[l] I wonder if they built them later.[」][lr]
+[else]
+　「下の踊り場の天井に半分の窓があったわよ。[l]階段はあとから増築したのかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They must've been in quite a hurry when they did that.[l] Few people nowadays think of modern architecture as superior...[l] Ah, look at how small that door is.[l] I wonder if it's a broom closet.[l] Oh, it's locked.[」][lr]
+[else]
+　「それともよほど急いで作ったのかもね。[l]近代建築っていいよね考え方が今と違うみたいで。[l]見てよ、こんなに細い扉がある、用具入れかな。[l]あら、鍵がかかってる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can ask the landlord about it later.[」][lr]
+[else]
+　「気になるなら後で、管理人さんに聞いてみればいいじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll do that.[」][prcm]
+[else]
+　「そうすることにするよ」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev16_2" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if it's this room.[」][lr]
+[else]
+　「この部屋かしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The plate matches the key, at least.[l] Let me see if it fits the lock.[」][prcm]
+[else]
+　「うん、鍵の番号と同じみたい。[l]待ってて、今開けるから」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's bigger than I thought.[」][lr]
+[else]
+　「思ったより、広いわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Concrete walls, huh...[l] We could raise hell in here and no one would hear us.[」][lr]
+[else]
+　「コンクリートか。[l]これなら騒いでも大丈夫だね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not planning to do anything like that.[」][lr]
+[else]
+　「別に、騒ぎはしないわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll open the windows.[」][lr]
+[else]
+　「窓を開けるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[」][prcm]
+[else]
+　「ええ」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev16_3" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So we're taking this one?[」][lr]
+[else]
+　「ねえ、ここで決まりじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「そうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay. We have to get our stuff, then.[l] Tomorrow's going to be a busy day.[」][lr]
+[else]
+　「決まりだね、まずは荷物を搬入しないと。[l]明日から忙しくなるね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Indeed.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued down the rocky path, sweeping my hands through the water.[prcm]
+[else]
+　歪な岩場を足で蹴って、水を手で掻いて、ふたりの声がする方へと進んでいく。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[bgmopt volume=100]
+[fbfscale_image storage="ev16" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you there?[」][lr]
+[else]
+　「そこにいるのか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My voice turned into bubbles, disappearing in the darkness above me.[lr]
+[else]
+　吐く声は音にならずに泡になって頭上のどこかへ消える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized the cave's ceiling had grown low enough for me to reach it.[lr]
+[else]
+　気が付くと洞窟の天井は、手を伸ばすと届きそうなところまで降りてきていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The path turned more uneven, so I slowed my pace and continued in careful steps.[lr]
+[else]
+　足元の岩場は[ruby text="いびつ"]歪さを増して、その先は慎重に進むようになる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted the silhouette of a crouching person in front of a large rock in the distance,[prcm]
+[else]
+　向こうの大きな岩の前に人が蹲るような影を見つける。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I drew closer, I realized it was just an old doll.[prcm]
+[else]
+　小さな影は近くで見ると、ただのくたびれた人形だった。[prcm]
+[endif]
+
+
+;//////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[playse buf = 0 storage=se135.ogg loop=true]
+[wait time=1500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The path would grow narrow, then widen up again.[lr]
+[else]
+　洞窟はある時は狭くなり、ある時は広い空洞があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, the rock walls surrounding me on both sides remained the same. I completely lost sense of how far I'd walked.[lr]
+[else]
+　しかし、それ以外はどれくらい歩いているか分からなくなるほど代わり映えの無い岩肌が続いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could no longer hear anything besides the echo of the dripping water and my own footsteps.[prcm]
+[else]
+　いつの間にか、足音と水滴が落ちる反響音しかなくなっていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[msglayer3]
+[fbfscale_image storage="bg69" page=back layer=base]
+[trans method=universal rule="rule13" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the other side of the rock, there was a huge puddle of water.[lr]
+[else]
+　岩の向こう側は大きな空洞になっており、広い水たまりがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I also spotted a large hole in the rocks beyond it.[lr]
+[else]
+　水たまりの向こう側にある岩石は大きく口を開いており、外の大きな緑の木と白んだ空が見えている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Though I caught a glimpse of some green trees and a darkened sky beyond the hole, most of the view was blocked by the water pouring down through it like a waterfall.[prcm]
+[else]
+　そこから滝のように水が洞窟内へと流れて、水たまりにしぶきを立てていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="bg70" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The ceiling rocks around it glimmered in a pale, bluish hue.[lr]
+[else]
+　天井の壁には青い光の粒がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As a dark cloud passed by the hole, the ceiling lit up like a sky illuminated by stars.[prcm]
+[else]
+　雨雲が上を通ると、真っ暗の壁面に星のように無数の青い光の粒が浮かび上がった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized that my body felt very heavy.[lr]
+[else]
+　ふと、体が重いことに気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sensation of walking underwater faded, and I was once again back on solid ground.[lr]
+[else]
+　水の中を行くような浮遊感はなくなりジリ、と地面を踏むことができた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped for a while to observe the blue stars — which formed no constellations whatsoever — as well as the puddle and the waterfall.[lr]
+[else]
+　立ち止まり星座のない青い星たちと、水たまりと、滝を眺めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The path ended here.[lr]
+[else]
+　進んできた洞窟は、広い水たまりの縁で行き止まりだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked down into the water.[prcm]
+[else]
+　水の中を見る。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule21" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It looked like a stairway continuing downward without end.[prcm]
+[else]
+　そこは、急な階段のように深く深くへと続いていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I want to see it.[」][lr]
+[else]
+　「見てみたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could've sworn I heard Kozue's voice.[prcm]
+[else]
+　と、[ruby text="こずえ"]梢の声が聞こえた気がした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm too tired to go back now.[」][lr]
+[else]
+　「今から戻るにしても、少し疲れたよ」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+;★SE  トプン  もっと良い音ないかな
+[fbfscale_image storage="bg102_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped into the water and was transported to a shining, blue world.[prcm]
+[else]
+　トプン、と水の中に足を入れて、青く光る水の中に入っていった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=0 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="135.ks" target=*135
+
+

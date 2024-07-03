@@ -1,0 +1,784 @@
+*160| The last phone call
+; *160|最後の電話
+[fbfstoretitle eng="The last phone call" jp="最後の電話"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+;章題表示
+[msgoff]
+[wait time=3000]
+[backlay]
+[fbfunlockachievement number="11"]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence11_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence11_1_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+[wait time=1000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence11_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence11_2_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=4000]
+
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg52_3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time = 1500]
+[msgon]
+[clickskip enabled=true]
+
+;章選択フラグ
+[if exp="sf.CpRelease <= 11"]
+[eval exp="sf.CpRelease = 12"]
+[endif]
+
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 215"]
+[eval exp="sf.ItRelease = 216"]
+[endif]
+
+
+*| The last phone call
+; *|最後の電話
+[fbfstoretitle eng="The last phone call" jp="最後の電話"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I finished my conversation with Narasaki and sat down on the stool by the phone to catch my breath.[lr]
+[else]
+　[ruby text="なら"]楢[ruby text="さき"]崎との会話が終わり受話器を降ろしたあと、近くのスツールに腰掛けて休んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a couple of minutes, I stood up and was about to head to the spiral staircase when the phone started ringing again.[prcm]
+[else]
+　しばらくして、そこから立ち上がって部屋に戻るために螺旋階段の方へ向かう。[lr]
+[endif]
+
+[playse buf = 0 storage=se67.ogg loop=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　そのとき、もう一度黒電話が鳴りだした。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought it was either Narasaki, having forgotten to tell me something, or some actual hotel business this time.[lr]
+[else]
+　楢崎が言い忘れたことでもあったか、それともこの屋敷の関係者への電話なのか考えた。[lr]
+[endif]
+
+[r]
+[stopse buf=0]
+[playse buf = 1 storage=se139.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a few moments of hesitation, I picked up the receiver.[prcm]
+[else]
+　少し悩んだ末に電話に出ることにした。[prcm]
+[endif]
+
+
+;＊
+[wait time=1500]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Hello.'[lr]
+[else]
+　『もしもし』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It wasn't Narasaki's voice that reached me from the other end of the line.[lr]
+[else]
+　受話器から聞こえた声は、楢崎のものではなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was an even more familiar one — a voice I had listened to for most of my life.[prcm]
+[else]
+　覚えのある声はこれまでに一番長く聞いたことのある声だった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[playbgm storage="bgm57"]
+[wait time=3000]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako.[」][lr]
+[else]
+　「[ruby text="たか"]貴[ruby text="こ"]呼なのね」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[eval exp="sf.cg50=1"]
+[fbfscale_image storage="ev50" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'It's been a while, Sachi.'[lr]
+[else]
+　『サチ、久しぶり』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The abruptness of her call rendered my mind completely blank.[prcm]
+[else]
+　突然の貴呼の声に、頭の中が真っ白になってしまう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was most likely another one of my hallucinations, but...[lr]
+[else]
+　恐らくこれは幻聴だと思う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was something different about this one.[lr]
+[else]
+　それと同時にいつもの幻聴とは少し様子が違う気がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Up until now, my head would always cloud over whenever Takako appeared, making me go through the motions as though in a lucid dream.[lr]
+[else]
+　これまで貴呼の姿なり声なりを感じる時は頭の中がぼんやりとしていて、過ぎてみれば夢のような感じがしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This time, however, I felt no different from usual — my mind was serene as a lake.[lr]
+[else]
+　でも今の頭は湖のように澄み渡っていて、とても静かだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear her voice clearly through the receiver.[prcm]
+[else]
+　受話器越しの声をとても鮮明に感じ取ることができる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where are you calling me from?[」][lr]
+[else]
+　「何処から電話をかけてるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'A sanatorium.'[lr]
+[else]
+　『療養所だよ』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A sanatorium?[」][lr]
+[else]
+　「療養所？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Yeah, I've kinda been having trouble remembering things lately.'[lr]
+[else]
+　『そう、ちょっと物忘れが酷くてね』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I always knew you were just one step away from dementia.[」][lr]
+[else]
+　「若呆けでもしたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Maybe I was.'[prcm]
+[else]
+　『そうかも』[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh? Are you serious?[」][lr]
+[else]
+　「そうかもって、貴方ねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard Takako chuckle on the other end of the line.[prcm]
+[else]
+　受話器から軽く、貴呼の笑い声が聞こえる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it's not like forgetting things is anything new to you.[l] Remember the time you mixed up your shoes back in school?[」][lr]
+[else]
+　「まあ、よく考えたら物忘れがひどいのは昔からよね。[l]上履きを間違えたこと覚えてる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'I do.[l] I accidentally put on my friend's shoes after class in the AV room.'[prcm]
+[else]
+　『覚えているよ。[l]視聴覚室から戻る時に間違えて友達の上履きを履いていった事でしょう？』[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's still within the scope of reason. But after that, you forgot to change them before leaving school and only realized what you were wearing when you got home.[」][lr]
+[else]
+　「それまでなら分かるわよ。[l]でも下校時も靴箱で靴に履き直すのを忘れて、上履きのまま帰って家に着いてから気がついたのよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Yeah, I promptly changed into sandals and went outside to hang out with you, but then my sister panicked when she got home and found unfamiliar shoes with someone else's name in the lobby, and the neighbors called the police.[l] I was in for a shock when I got home and found a police car in front of our place.[l] I had to explain the situation, and then the policeman who was checking my room for signs of burglary gave me such an exasperated look there's no way I'll forget it until I die.'[prcm]
+[else]
+　『それからサンダルに履き替えて遊びに出かけたんだよ。[l]
+そのあいだに学校から帰ってきた妹が知らない名前の書いてある上履きがあると騒いだから、近所の小母さんが警察を呼んだんだ。[l]
+帰ってきたら家の前にパトカーが止まっててびっくりしちゃった。[l]
+そのあとも警察に事情を説明したり大変だった。[l]最後には私の部屋を調べていた警察官に、「それではここは荒らされたわけじゃないんですね」なんて嫌味まで言われたんだから。[l]忘れるわけないよ』[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your memory was pretty bad, even back in those days.[」][lr]
+[else]
+　「あの頃からもう忘れっぽかったわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That old episode made a smile naturally form on my lips.[prcm]
+[else]
+　そう言いながら、久々の昔話で自然と笑みがこぼれる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'That's not entirely right.[l] When I was younger, I... I'd just easily get obsessed with one thing or the other and forget about everything else.'[lr]
+[else]
+　『それとはまた違うよ。[l]あのときは、ただなんていうのかな。[l]一つのことに夢中になると周りが見えなくなるっていうかさ』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That was true, but it didn't change the fact she was among the most forgetful people I'd met in my life.[lr]
+[else]
+　確かに以前からそんな性格ではあったが忘れっぽいのも事実だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That said, there was little point in pursuing the subject any further at this point.[prcm]
+[else]
+　しかし、それについて討論しても仕方がないので話題を変えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A sanatorium sounds so not like you.[l] Aren't you bored there?[」][lr]
+[else]
+　「それにしても療養所なんて似合わないわね。[l]退屈はしていない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'I'm not.[l] If anything, this place is unlike any other.[l] I'm free to do almost anything I want, so I'm actually having loads of fun here.'[prcm]
+[else]
+　『退屈はしていないよ。[l]この療養所の方がらしくないのさ。[l]
+何をしても割と自由だし、楽しく暮らしているよ』[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[l] And how do you feel?[」][lr]
+[else]
+　「ふうん。[l]具合はどうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Not bad.'[lr]
+[else]
+　『悪くないよ』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We both fell silent for a moment.[lr]
+[else]
+　そこで受話器は少し沈黙した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized I kept asking questions without giving Takako the chance to speak up.[lr]
+[else]
+　気づくと、こちらが貴呼に聞いてばかりだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+So this time, I paused and waited for Takako.[lr]
+[else]
+　ひとまず落ち着いて貴呼の言葉を待った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard her voice again just before the silence could grow awkward.[prcm]
+[else]
+　沈黙が不安になる前に、再び受話器から貴呼の声は聞こえてきた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'I was forgetful, I admit that, but that's why you were always such a lifesaver for me. You diligently remembered things in my stead.'[lr]
+[else]
+　『確かに私は忘れっぽかった。[l]だからサチがしっかりしていてくれて凄く助かっていたよ』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My lips unconsciously formed into a smile again.[prcm]
+[else]
+　それを聞いて自然と口元が綻んだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, as long as you understand.[」][lr]
+[else]
+　「まあ、分かればいいのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Where are you now, Sachi?'[lr]
+[else]
+　『サチは今どこにいるの？』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm staying at a friend's mansion... to recuperate.[」][lr]
+[else]
+　「私は今休暇中で知人の屋敷で療養中なの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Recuperate?[l] Are you also sick?'[prcm]
+[else]
+　『療養中？[l] サチもどこか悪いの？』[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I contemplated explaining everything that had happened to me thus far.[lr]
+[else]
+　私は貴呼に今まで起きたことを説明しようと言葉を練ろうとした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I couldn't find the right words.[prcm]
+[else]
+　しかし、中々うまく説明する方法は見つからない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's not a big deal. Don't worry about it.[」][lr]
+[else]
+　「別に気にするほどじゃないわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It would have taken a long time to explain, and I wanted to speak to her about other things.[prcm]
+[else]
+　その話をすればきっと長い話になるし、そんな話よりももっと貴呼と別の話がしたかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'I see,' she said.[lr]
+[else]
+　『そう』と貴呼は言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'How are you doing lately?' she added after a pause.[prcm]
+[else]
+　それから貴呼は『サチは最近どうなの？』と聞いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've wanted to talk to you for the longest time.[」][lr]
+[else]
+　「ずっとこんなふうに貴方と話がしたかった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Me too.[l] I wanted to see you.'[prcm]
+[else]
+　『もちろん私もだよ。[l]サチとずっと会いたいと思ってた』[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We then talked about our past.[lr]
+[else]
+　それから貴呼と昔話をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+About the trips we took together. The island in the far south, the countries in the west, our experiences on a long bridge... We discussed everything, from our days in the kindergarten to when we quit our jobs and went independent.[lr]
+[else]
+　たくさんの旅行の事、南の島、西洋の国、西海岸の街での出来事や、幼稚園から自立して働くに至るまでの思い出を確認するように話した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were a few details I forgot, but Takako filled in the blanks for me. And I did the same for her.[lr]
+[else]
+　ときには知らない部分もあったが、私が覚えてないことを貴呼が、貴呼の覚えていないことは私が補った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes and gazed at the lucid memories on the back on my eyelids.[lr]
+[else]
+　私は目を閉じて、瞼の裏に浮かぶ鮮やかな記憶を眺めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Those days came back to me, and were now about to disappear again.[prcm]
+[else]
+　その日が甦り、今が消えるような気がした。[prcm]
+[endif]
+
+
+
+[playse buf = 0 storage=se148.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After we finished talking about the time we snuck into a pool at night, Takako said that her coins were about to run out. She was on her last one.[lr]
+[else]
+　夜中にプールに忍び込んだ話が終わった時に、貴呼が『これが最後の硬貨だ』と言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I slowly opened my eyes.[prcm]
+[else]
+　私はゆっくりと目を開けた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Those were... happy days.[」][lr]
+[else]
+　「幸せな日々だったわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Not "were." We still have plenty more ahead of us.'[prcm]
+[else]
+　受話器の向こうで貴呼が『これからもね』と言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard Takako whisper my name under her breath before falling silent.[lr]
+[else]
+　それからポツリ、とひとつ溢れたかのように貴呼の声が私の名前を呼ぶと、受話器から音がしなくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I whispered her name, too.[prcm]
+[else]
+　私が貴呼の名前を呼ぶと「うん」と貴呼は返事をした。[prcm]
+[endif]
+
+
+[wait time=1500]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...I suppose this is goodbye.[」][lr]
+[else]
+　「…さよならね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+'Yeah.[l] Goodbye, Sachi.'[prcm]
+[else]
+　『うん。[l]さようなら、サチ』[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[playse buf = 0 storage=se143.ogg]
+[ws buf=0]
+[playse buf = 1 storage=se147.ogg]
+[ws buf=1]
+[backlay]
+[fbfscale_image storage="bg52_3" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I listened to the beeping sound for a while.[lr]
+[else]
+　しばらく回線の途切れた音を聞いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the receiver back into its place with a loud clang.[prcm]
+[else]
+　受話器を置くとチン、と短く高い音がした。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="161.ks" target=*161
+
+

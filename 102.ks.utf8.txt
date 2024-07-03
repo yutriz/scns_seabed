@@ -1,0 +1,680 @@
+*102| Playing house
+; *102|おままごと
+[fbfstoretitle eng="Playing house" jp="おままごと"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playse buf = 1 storage=se18.ogg loop=true]
+[wait time=1500]
+[playbgm storage="bgm43"]
+[backlay]
+[fbfscale_image storage="bg42_2_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 125"]
+[eval exp="sf.ItRelease = 126"]
+[endif]
+
+
+*| Playing house
+; *|おままごと
+[fbfstoretitle eng="Playing house" jp="おままごと"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The library was dead silent without Kozue and Lily.[lr]
+[else]
+　小母さんも梢もいない図書館はとても静かだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The short heels of my red shoes clicked against the floor, their sound reverberating across the walls and the high ceiling.[lr]
+[else]
+　赤い靴の短い踵が床を鳴らすと、高い天井によく響く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For fun, I tried making them click at calculated intervals, producing a sound akin to the ticking of a clock.[prcm]
+[else]
+　私は幾分気分が良くなり、それを時計のように規則正しく鳴らした。[prcm]
+[endif]
+
+
+[stopse buf=1]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On a second floor shelf — near the window — I finally found a wild bird encyclopedia.[lr]
+[else]
+　二階の目窓近くの棚で、ようやく野鳥図鑑を見つける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked it up, brushed off the dust, and flipped through a few pages.[lr]
+[else]
+　手に取り埃を払いぱらぱらとページをめくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw something blue and returned to that page.[lr]
+[else]
+　青い色が通り過ぎるのが見えて、そのページに戻る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a picture of the blue bird I saw yesterday on the windowsill.[prcm]
+[else]
+　先日、窓辺に来た青い鳥の名前を見つけた。[prcm]
+[endif]
+
+;/////
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg56_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I left the library some time after noon.[lr]
+[else]
+　昼を過ぎた頃に図書館を出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I passed the row of olive trees and reached the inner yard, I heard voices from the rough direction of the camphor tree.[lr]
+[else]
+　木犀の並木を抜けると、中庭の大楠の方から声がしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed the sound to see Nanae talking to a girl I didn't know.[lr]
+[else]
+　声の方へ向かうと、楠木の下で[ruby text="なな"]七[ruby text="え"]重と知らない女の子が話をしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl sat on a plastic sheet surrounded by a bunch of toys. As she nodded, Nanae patted her on the head, which made her close her eyes in response.[prcm]
+[else]
+　ビニールシートとおもちゃを広げた女の子がこくり、と頷くと、七重はその頭を片手でぐらんぐらんと撫でて、女の子が目を瞑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be back with some snacks.[」][lr]
+[else]
+　「少し待っていてね、お菓子を持ってきてあげる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And with that, Nanae disappeared into the mansion through a side entrance.[prcm]
+[else]
+　と、言い残すと七重は中庭の勝手口から屋敷へ入っていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Left alone, the girl resumed playing with her toys.[lr]
+[else]
+　一人で残された女の子はおもちゃ遊びを再開する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With her short hair fastened into a side tail, she reminded me of Takako in her childhood.[prcm]
+[else]
+　短めの髪をアップテールに結んだ後ろ姿が、幼い頃の貴呼を思い出させた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved to her side so as not to startle her.[lr]
+[else]
+　私は女の子を驚かせないように、少し離れたところから横手に回った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl was trying to give her doll some milk.[lr]
+[else]
+　女の子はおままごと用の人形にミルクを与えようとしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, unable to properly press the tip of the bottle into the doll's mouth, she kept brushing it against its face.[prcm]
+[else]
+　上手く人形の口に哺乳瓶の口を当てられずに、ぐりぐりと押し付けていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked at her profile.[lr]
+[else]
+　女の子の横顔を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Big eyes, angled, energetic-looking eyebrows... She shared some features with Takako, but she definitely wasn't her.[prcm]
+[else]
+　くりくりと大きな瞳、活発そうな角度の眉毛、いくつかの共通点はあったが貴呼ではなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[」][lr]
+[else]
+　「こんにちは」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I addressed her as I reached the camphor tree.[lr]
+[else]
+　楠木の下まで行くと声をかける。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl turned toward me.[lr]
+[else]
+　すると女の子ははた、とこちらを向いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, her eyes were fixed not on me, but the doll I was holding.[lr]
+[else]
+　女の子がこちらより先に目に留めたのは、少し古ぼけたぬいぐるみだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made the doll's hand move as though it was knocking on the door.[prcm]
+[else]
+　ぬいぐるみの手を扉をノックするように動かした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Who is it?[」][lr]
+[else]
+　「どなた？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I am Hibiki.[l] I work nearby as a doctor.[l] What about you?[」][lr]
+[else]
+　「私はヒビキ。[l]この近くに開業したお医者さんだよ。[l]君は何ていうの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I am Miya.[l] She is Lily.[」][lr]
+[else]
+　「私はミアっていうの。[l]この子はリリっていうの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She showed me the baby doll she was holding.[prcm]
+[else]
+　抱えている赤ん坊の人形を見せた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You two came here alone?[」][lr]
+[else]
+　「ここには二人で来たのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She shook her head.[prcm]
+[else]
+　女の子が首を振った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I came here with my brother.[l] But he went off to the mountains, leaving me to take care of everything.[」][lr]
+[else]
+　「お兄ちゃんと来たの。[l]でも、お兄ちゃんがお山に行ったから、お留守番してるの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] Must be tough on you.[」][lr]
+[else]
+　「そうかい。[l]それは大変だね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It is.[」][lr]
+[else]
+　「そうなの、大変なの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl was staring at the doll in my hands.[lr]
+[else]
+　女の子はこちらの手にあるぬいぐるみを見ていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made it walk and bow in front of her.[prcm]
+[else]
+　私はぬいぐるみを女の子の前まで歩かせてお辞儀をさせてみた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's dirty.[」][lr]
+[else]
+　「汚れてる」とミアが言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made an embarrassed smile.[lr]
+[else]
+　私は苦笑いする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had obvious tear marks, and its colors had mostly faded.[prcm]
+[else]
+　確かにぬいぐるみは少しだけ解れがあり、少しだけ色落ちもしている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it's a pretty old doll, after all.[l] It might not look like much now, but he's actually our clinic's mascot.[」][lr]
+[else]
+　「まあ、年季が入ってるからね。[l]これでもうちのクリニックのマスコットなんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved my doll's hand to take the milk bottle from the girl, and by shifting its angle a little, pushed it into the mouth of her doll.[lr]
+[else]
+　私はぬいぐるみの手を動かして、女の子の手に持った哺乳瓶を支えると、少し角度を変えておままごと用の人形の口に上手くあてがう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I did that, the liquid inside the bottle decreased.[prcm]
+[else]
+　すると、哺乳瓶の中のミルクを表す白い部分が減っていった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you.[」][lr]
+[else]
+　「ありがとう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This time, the girl looked at me.[prcm]
+[else]
+　お礼を言った女の子は、今度はぬいぐるみを手にしているこちらを見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're welcome.[」][lr]
+[else]
+　「どういたしまして」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ms. Doctor.[l] Would you accept an invitation for dinner as a token of our gratitude?[」][lr]
+[else]
+　「お医者さん。[l]お礼に、お夕飯を食べていきますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like that idea.[」][lr]
+[else]
+　「いいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl began preparing dinner, placed toy plates and food on a board.[prcm]
+[else]
+　それを聞いて、女の子は夕食の準備を始めた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　ちゃぶ台の上におもちゃの食器と料理が並べられていく。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It looks delicious.[l] I see you've prepared a melon pie and some vegetable soup... but what's this?[」][lr]
+[else]
+　「美味しそうだね。[l]かぼちゃのパイと、野菜スープと、これは何かな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Potato salad.[」][prcm]
+[else]
+　「ポテトサラダ」[prcm]
+[endif]
+
+
+;★サウンド出力を右か左かに偏らせることができたはず
+
+[playse buf = 1 storage=se25.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]creak*[lr]
+[else]
+　ガチャ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The door of the side entrance opened.[prcm]
+[else]
+　と、勝手口の扉が開く音がする。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f02_p01_h08" visible=true left=105 top=0]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh?[」][lr]
+[else]
+　「あら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae closed the door behind her with one leg.[lr]
+[else]
+　勝手口前の石段に立った七重は、ゆっくりと締まる扉を後ろ足で閉めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was carrying a tray full of madeleines, and had an extra madeleine in her mouth.[prcm]
+[else]
+　手に持った盆には狐色に焼けたマドレーヌが乗っていて、そのひとつは口に銜えていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good evening.[」][lr]
+[else]
+　「こんばんは」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I greeted her with my doll.[lr]
+[else]
+　と、ぬいぐるみを持って返事をする。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f02_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae came closer to us and saw the "food" the girl had prepared.[prcm]
+[else]
+　七重は楠の下まで来ると、食事の準備をしている女の子とちゃぶ台の上の料理を見た。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f02_p02_h01" visible=true left=-70 top=0]
+[fbfscale_image layer=0 page=back storage="fgimage/mia_img/f01_p01_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that smells nice.[」][lr]
+[else]
+　「あら、いい匂いね。[l]美味しそうだわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You want some too, Nanae?[」][lr]
+[else]
+　「七重おねえちゃんも、食べる？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/nanae_img/f02_p02_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course.[l] I even brought dessert.[l] Let's all have some later.[」][prcm]
+[else]
+　「ええ、頂くわ。[l]丁度、食後のデザートもあるの。[l]こっちも後で皆でいただきましょう」と七重は笑顔で言った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="103.ks" target=*103
+
+

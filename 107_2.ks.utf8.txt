@@ -1,0 +1,289 @@
+*107_2| Lily's routine
+; *107_2|小母さんの日課
+[fbfstoretitle eng="Lily's routine" jp="小母さんの日課"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm51"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 134"]
+[eval exp="sf.ItRelease = 135"]
+[endif]
+
+*| Lily's routine
+; *|小母さんの日課
+[fbfstoretitle eng="Lily's routine" jp="小母さんの日課"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The chilly air in the room woke me up earlier than usual.[lr]
+[else]
+　今朝は冷たい部屋の空気のせいでいつもより早く起きた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I went out for a walk to kill some time before breakfast, and ran into Lily as she was sweeping the leaves off the path in front of the entrance.[prcm]
+[else]
+　朝食までの時間つぶしに散歩に出かけると玄関先で落ち葉を掃いている小母さんに出会った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg51" page=back layer=base rceil=230 gceil=230 bceil=240]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/r_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Morning.[」][lr]
+[else]
+　「おはよう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good morning.[」][lr]
+[else]
+　「おはようございます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Today's pretty chilly, isn't it?[」][lr]
+[else]
+　「今朝は一段と冷えますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Indeed.[l] The clouds should clear up by noon, though, so it'll get warmer then.[」][lr]
+[else]
+　「ええ。[l]昼間は晴れるみたいだから、そのときはもう少し暖かくなると思うけれど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a big bamboo basket filled with leaves by the entrance.[prcm]
+[else]
+　玄関の横には大きな竹かごがあり、竹かごの中には集めた落ち葉が入っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Cleaning up must be a pain during this season.[」][lr]
+[else]
+　「この時期は掃除が大変ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It certainly is,[」] answered Lily, smiling.[prcm]
+[else]
+　「ええ」と小母さんは笑顔で答えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Aren't you officially closed right now, though?[」][lr]
+[else]
+　「今はシーズンオフではありませんでしたか？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/r_img/f02_p03_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, this is just a part of my daily routine.[l] Besides, it's good exercise.[」][lr]
+[else]
+　「これは日課みたいなもので。[l]それに、いい運動にもなるんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「なるほど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw Lily brush the leaves into the dustpan, so I brought the bucket over to her. She looked up and thanked me.[lr]
+[else]
+　小母さんが落ち葉を塵取りに入れているのを見て竹かごを近くまで運ぶと、こちらを見上げた小母さんが柔かに礼を言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the leaves were safely delivered to the basket, Lily gave me a hard look.[prcm]
+[else]
+　塵取りの落ち葉を竹かごに落としきると、小母さんは顔を上げてこちらを見た。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/r_img/f02_p02_h23" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you been sleeping well?[」][lr]
+[else]
+　それから「あら、寝不足なの？」と聞いてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pointed at the area below her eyes.[prcm]
+[else]
+　小母さんは塵取りを持った方の手の指で自身の目の下をなぞり「ここのところ」と言う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Haha, perhaps I've been enjoying myself a little too much.[」][lr]
+[else]
+　「ちょっと、遊びすぎましたかね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/r_img/f02_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's good to be active, but don't overdo it.[」][prcm]
+[else]
+　「気晴らしもいいけれど、ほどほどにね」[prcm]
+[endif]
+
+
+
+
+[playse buf = 0 storage=se74.ogg]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A gust of wind swept across the yard.[lr]
+[else]
+　そのとき枯葉が擦れる乾いた音とともに風が吹いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It turned into a kind of minor whirlwind sweeping dust into the air.[lr]
+[else]
+　風は玄関の前で小さな旋風になり、砂を巻き上げた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Though Lily pressed the leaves she had collected down with her broom, some of them nonetheless flew up into the sky.[lr]
+[else]
+　小母さんは目の前にある集めた木の葉を箒で抑えたが、端から少しだけ木の葉が舞い上がった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh my,[」] she said, watching them fly off.[lr]
+[else]
+　小母さんは「あらあら」と空に昇る木の葉を見送っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spent the time until breakfast talking with Lily and helping her with her chores.[prcm]
+[else]
+　それから朝食の時間になるまで小母さんと話をしながら掃除を手伝った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="108.ks" target=*108
+
+

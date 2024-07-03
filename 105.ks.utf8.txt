@@ -1,0 +1,1433 @@
+*105| Sachiko napping
+; *105|居眠り佐知子
+[fbfstoretitle eng="Sachiko napping" jp="居眠り佐知子"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm35"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg53_9" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=1000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 129"]
+[eval exp="sf.ItRelease = 130"]
+[endif]
+
+
+*| Sachiko napping
+; *|居眠り佐知子
+[fbfstoretitle eng="Sachiko napping" jp="居眠り佐知子"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sensed a shadow pass over the yellow light filtering through my eyelids. Egged by curiosity, I opened my eyes to see what it was.[lr]
+[else]
+　黄色の光の前をちらちら、と[ruby text="よ"]過ぎる影が気になって目を開けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Slanted sunrays covered the table I'd been hugging, creating a gleaming patchwork of light as they passed through the branches of the camphor tree beyond the window.[prcm]
+[else]
+　突っ伏していたテーブルの上に、斜光が樹冠を通して暖色のパーチワークを描いている。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In my still-blurry field of view, I spotted Narasaki standing by the bookshelf.[prcm]
+[else]
+　開けきらない視界の中、本棚の前に[ruby text="なら"]楢[ruby text="さき"]崎の姿があった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When did you come here?[」][lr]
+[else]
+　「いつからいたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh? Good morning.[」][lr]
+[else]
+　「やあ、おはよう」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A blanket slid down my shoulders as I raised my upper body.[lr]
+[else]
+　頭を起こすと、肩にかかっていたブランケットがずれた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt dizzy and pressed my thumbs against my temples.[prcm]
+[else]
+　頭がぼんやりとして、こめかみを手で抑えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I had a dream.[」][lr]
+[else]
+　「夢を見たわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind?[」][lr]
+[else]
+　「どんな夢だい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well...[」][lr]
+[else]
+　「そうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After I straightened my back and used my palm to iron out the wrinkles on my clothes, I began telling her about the dream.[lr]
+[else]
+　姿勢を直して、服のヨレを直しながら夢の内容を思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The misty haze blanketing my mind slowly withdrew.[prcm]
+[else]
+　ぼんやりした頭にまとわりついていた霧が徐々に晴れていく。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does that question have something to do with my condition?[」][lr]
+[else]
+　「もしかして、その質問は私の問題と何か関係があるのかしら？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h13" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really,[」] said Narasaki as she sat down in the chair before me.[prcm]
+[else]
+　「そんなんじゃないよ」と言いながら、楢崎は椅子にゆったりと深く座り直した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I read a book about the interpretation of dreams the other day.[」][lr]
+[else]
+　「少し以前に、夢占いの本を読んだものでね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh? That sounds interesting.[l] Though it doesn't sound much like you.[」][lr]
+[else]
+　「へえ、面白そうね。[l]だけど、貴方にしては少し可愛らしい趣味よね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The corners of Narasaki's lips curled up.[prcm]
+[else]
+　楢崎は口の端を上げて笑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sure I've said this before, but I've got a profound sense of curiosity.[」][lr]
+[else]
+　「前にも言ったけれど、私は何でも理由が知りたくなる性質でね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][prcm]
+[else]
+　「ふうん」と適当に答えながら夢の内容を思い出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, my dream started with me and Takako in the bus.[l] It was going through what looked like the countryside, and then got into a tunnel.[l] Passing that, we emerged into a city I've never seen before.[l] I got worried, and after discussing it with Takako, got off the bus together.[l] We walked around a bit, but no matter where we went, the place felt completely unfamiliar to us.[l] Then Takako said she wanted to climb the mountain we saw in the distance.[l] She said she could figure out where we were from a higher vantage point.[l] So we climbed that mountain together.[」][lr]
+[else]
+　「はじめは、そう。[l]
+[ruby text="たか"]貴[ruby text="こ"]呼とバスに乗っていたわね。[l]
+バスは田舎を走っていて、それからトンネルに入ったわ。[l]
+トンネルを抜けると、知らない都会の街に出て。[l]
+でも、だんだん不安になってきて、貴呼と話をして二人でバスを降りたの。[l]
+バスを降りてからしばらくその街を歩いたんだけど、どこを歩いても全く知らない場所だったわ。[l]
+お店に入って道を訪ねようとしたけれど、道を知っている人は誰もいなかったわね。[l]
+それで、貴呼が街の向こうに見えた山を登ろうって言ったの。[l]
+山を登って、この街を一望できれば場所がわかるって。[l]
+それで、二人で山を登っていたの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The details had become foggy by now, but I could remember the gist of it.[lr]
+[else]
+　細かいところは朧げだったが、大筋は思いのほか思い出すことができた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does that tell you anything?[」][prcm]
+[else]
+　楢崎の方を見て「こんな内容でも何かわかるの？」と聞いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, at least three things, I guess.[」][lr]
+[else]
+　「そうだな。[l]とりあえず三つほど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]From just that?[」][lr]
+[else]
+　「そんなに？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]First, riding in a bus symbolizes being influenced by others regardless of your will.[l] A place you don't know represents your dissatisfaction and wish for a change in your current life.[l] Finally, climbing a mountain means working hard toward a certain goal.[」][lr]
+[else]
+　「まずひとつ、バスに乗ることは自身が周囲に流されている状況を表してる。[l]
+ふたつめ、知らない場所は今ある生活に変化を求めている心理を表している。[l]
+最後にみっつめ、山に登る行動は目標に向かって努力していることを表している」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, does any of those ring a bell?[」][prcm]
+[else]
+　楢崎は「どう、なにか当たってるかい？」と言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When you put it like that...[」][lr]
+[else]
+　「そうね、言われてみるとそうだった気がするわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Now that I thought about it, the whole thing about the bus and how we got off reminded me of how Takako and I quit our jobs in the city.[prcm]
+[else]
+　夢の中でバスを降りた状況が、貴呼と話しあって仕事を辞めたときの状況と重なり、妙に納得してしまう。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What happened afterwards?[」][lr]
+[else]
+　「それから、どうなったんだい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then... er, it all kind of changed.[l] Before I knew it, I was dreaming about going to my old home in the country.[l] The city turned into my old town, but we were still climbing a steep hill together.[」][lr]
+[else]
+　「それから…それからね。[l]
+ええっと、少し話が飛ぶんだけれど。[l]
+いつの間にか田舎に帰る夢になったの。[l]
+風景が懐かしい田舎の街に変わって。[l]
+でも、そこでも坂を登っていたわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I remember our old town having lots of tall hills.[」][prcm]
+[else]
+　「確かに、あちらも坂が多いからね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, and when we reached the top, we could see the entire place from high above.[l] We sat down on a bench and gazed at the sunset for a while.[l] Then I realized I lost my wallet, but found it almost immediately afterwards.[l] The money in it was all gone, but I was just happy to have it back.[」][lr]
+[else]
+　「ええ、それで坂を登ったところで、田舎の景色を見ていたわ。[l]
+ふたりでベンチに腰掛けて、夕焼けを眺めてたの。[l]
+そこで、財布をなくしたことに気がついたのだけど、すぐに見つかったわ。[l]
+お金が抜かれていたけれど、でも見つかったよかったって思ったわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h03" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki's expression grew somewhat mellow.[prcm]
+[else]
+　それを聞いた楢崎は表情を和らげて言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's good.[l] They say that seeing the countryside in your dreams means your mind is stabilizing itself and that your imagination has become richer.[」][lr]
+[else]
+　「それはいいね。[l]夢の中に田舎の景色が出てくるときは、精神が安定して感性が豊かになる兆候と言われているからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't necessarily feel that way, but her previous comments hit close to the mark, so hearing that made me feel a little relieved.[prcm]
+[else]
+　実感は無かったが、先ほどの夢占いの分析には信憑性があったので、少しだけ気持ちが楽になる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Losing something means being turned down in love, while finding something means being successful in your romantic relationship.[」][lr]
+[else]
+　「それと、物を失くすのは失恋、失くし物が見つかるのは恋愛成就を表している」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So what does it mean if you lose something but find it soon afterwards?[」][lr]
+[else]
+　「それって、失くして見つかった場合はどうなるのかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure.[」] Narasaki shook her head, making an embarrassed smile.[prcm]
+[else]
+　楢崎は苦笑いして「さてね」と首を振った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it's pretty much fortune telling, so don't take it too seriously.[」][lr]
+[else]
+　「まあ、あくまでも占いだからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The first part felt accurate enough, but I'm not sure about the rest.[」][lr]
+[else]
+　「なんだか、[ruby text="しん"]信[ruby text="ぴょう"]憑[ruby text="せい"]性が薄まる話ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, the point is that you have fun.[l] I'm surprised you remember everything so well, though.[」][lr]
+[else]
+　「こういうものは面白ければいいのさ。[l]しかし、よく覚えているものだな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm good at remembering dreams.[l] And I get tired easily these days, so I keep falling asleep everywhere.[l] I suppose shallow sleep like that results in lots of dreams.[」][lr]
+[else]
+　「元々、夢はよく覚えている方なのよ。[l]
+それに、このところすぐに疲れてしまって、こうして寝ていることが多いのよ。[l]
+それで、眠りが浅くなってよく夢を見るのかも」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h03" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] Is that where you dream ended?[」][prcm]
+[else]
+　「ふむ。[l]夢は、それで終わりかい？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, there's a bit more.[l] Later, I met a person that claimed to know me, even though I didn't recognize them.[l] Still, they said we were in the same class.[l] When I tried thinking about it, I realized this person participated in the party we had shortly before we left to move to the city.[」][lr]
+[else]
+　「もう少しだけあるわ。[l]
+そのあと、知らない人にあって、でもその人は以前に会ったことがあるって言うの。[l]
+『同期だよ。知らないか？』 って。[l]
+それで思い出していたら、確かに、以前引越し祝いの飲み会に来ていたのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hm? What kind of person was it?[l] In dreams, people you don't know tend to be your idolized versions of various traits.[」][lr]
+[else]
+　「へえ、どんな人だい？[l] 知らない人っていうのは、理想の人物だったりするんだけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[l] I couldn't see their face, though.[l] And the dream ended there.[」][prcm]
+[else]
+　「そうなの？[l] だけど、顔は見えないのよ。[l] そして、夢はそれで終わり」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm. So did that party actually happen in the real world?[」][lr]
+[else]
+　「ふうん。引越し祝いの飲み会って、それは実際にあったことなのかい？」と楢崎は聞いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt a little strange.[prcm]
+[else]
+　私は少し不思議な気分になった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Something wrong?[」][lr]
+[else]
+　「どうかしたのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I tried remembering who that person was, but couldn't.[l] And when I thought about the party, I realized it was something that happened in another dream I had.[l] I'd totally forgotten about it until then, though.[」][prcm]
+[else]
+　「その知らない人って誰だったか思い出そうとしたのだけど。[l]
+でも、全然思い出せないし。[l]
+それじゃあ、あの引越し祝いはいつの事だったのかと考えていたら、実はそれも別の日に見た夢の話だったの。[l]
+すっかり忘れていたけれど」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h05" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You mean you remembered one of your dreams in another dream?[」][lr]
+[else]
+　「夢の中で、別の日に見た夢の話を思い出したのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think so, yes.[」][lr]
+[else]
+　「そういうことになるわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」] Narasaki slowly recrossed her legs.[prcm]
+[else]
+　楢崎は「ふむ」と言って、ゆっくりと足を組み直した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it's hardly an impossible phenomenon.[」][lr]
+[else]
+　「まあ、そんなのも有り得ない事ではないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Remembering other dreams inside a dream?[」][lr]
+[else]
+　「夢の中で、それ以前に見た夢を思い出すことが？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h14" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, though I've never experienced it myself.[」][prcm]
+[else]
+　楢崎は頷いて「私には経験がないけどね」と付け加えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうなの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When you're awake, it's difficult to remember dreams but easy to recall things you did during your waking hours.[l] The opposite is also true.[」][lr]
+[else]
+　「起きているときに夢のことを思い出すことはとても難しいけど、起きている時のことを起きている時に思い出すのは簡単なんだ。[l]
+逆もそうなんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why does it work that way?[」][lr]
+[else]
+　「どうしてそうなってるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Because your memories are separated into two categories: one pertaining to reality, another to dreams.[l] Your brain can tell when you're dreaming, and stores your dream memories in a different place so the two don't get mixed up.[」][prcm]
+[else]
+　「それは、記憶がきっちりと夢と現実で分類されているからなんだ。[l]
+夢を見ている時には頭のどこかではちゃんと夢だってわかっていて、それと現実が一緒くたにならないように頭は記憶を分けて管理してるのさ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So you're saying it's easier to remember dreams when you're dreaming?[」][lr]
+[else]
+　「それで夢の中では夢の記憶が、現実では現実の記憶が思い出しやすいの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's probably a bit more complicated than that, but that's the gist of it.[」][lr]
+[else]
+　「それぞれの記憶にはまた特徴はあるけどね、大雑把に言うとそんな感じさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] So there are memories particular to dreams.[l] I thought that dreams were just random images your brain assigned to the disjointed noise that went through your mind as you slept.[」][lr]
+[else]
+　「ふうん。[l]夢にもちゃんと記憶があるのね。[l]
+私は夢なんてものは寝ているあいだに頭に浮かんだ気ままなノイズに、起きたばかりの寝ぼけた頭が適当に意味をつけたものだと思っていたけど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h05" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki shook her head with a smile.[prcm]
+[else]
+　楢崎はちょっとだけ冗談ぽく「いやいや」と首を振った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think that happens, too, but you also dream when you're asleep.[l] As for the accuracy of dream memories, I don't think your memories of reality are all that much different.[」][lr]
+[else]
+　「確かにそういう場合もあるけどね。[l]ちゃんと夢は寝ている時にも見ているよ。[l]
+それと、夢の記憶の正確性についての話なら、現実の記憶もそんなに変わらないと思うよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, I suppose so.[」][lr]
+[else]
+　「まあ、確かに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I experienced that first hand.[prcm]
+[else]
+　それには私にも心当たりがある。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You really do know a lot of things, Narasaki.[」][lr]
+[else]
+　「やっぱり楢崎は詳しいわね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h09" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've just had an opportunity to research this stuff for something else.[」][lr]
+[else]
+　「別件でそれに近いことを調べていたことがあるのさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What exactly did you research?[」][lr]
+[else]
+　「調べたってどんなことを？」と私は聞いてみた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, well...[」][prcm]
+[else]
+　楢崎は「うん」と唸り、それから「まあ簡単に言うと」と言って続けた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]People store all the things they see and hear in their head, right?[l] However, some things are stored in a way you can remember and use them, while others are impossible to consciously pull out.[l] Are you still with me?[」][lr]
+[else]
+　「人は見たもの聞いたものをなんでも頭に蓄えて記憶している。[l]
+しかし、思い出して思考に利用できる部分と、思い出しが不可能で思考に利用できない部分のふたつの記憶がある。[l]
+それはわかる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I think so.[」][lr]
+[else]
+　「まあ、なんとなく」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're called conscious memories and subconscious memories.[l] Both are memories, but you only have access to the conscious ones.[l] I was contemplating if one could prove the existence of a subconscious thought system constantly using those memories as well.[」][lr]
+[else]
+　「そのふたつを意識的な記憶と無意識的な記憶としてだね。[l]
+どちらも同じ記憶であるのに、意識的な記憶は思考することができる。[l]無意識的な記憶は思考することができない。[l]
+調べていたのは、無意識的な記憶を思考する別の思考の存在を証明できるかという事なんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure I understand. What happens if you prove that?[」][prcm]
+[else]
+　「良くわからないけど。[l]それを証明するとどういう意味があるの？」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h13" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, all I want to know is how things work.[」][lr]
+[else]
+　「さあね、理由が知りたいだけだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki looked out the window.[prcm]
+[else]
+　それから楢崎は窓の外を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The evening sun illuminated her red hair, making it look almost like flames.[prcm]
+[else]
+　赤い髪が夕日に照らされ、炎のように赤く見えた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's right.[l] The bird we saw yesterday is called a red-flanked bluetail.[l] It's a winter bird that comes here from Shikoku.[」][lr]
+[else]
+　「そういえば、昨日見た青い鳥。[l]ルリビタキって名前らしい。[l]四国からくる冬鳥だそうだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You looked it up?[」][lr]
+[else]
+　「調べてきたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There was a bird encyclopedia in the library.[」][lr]
+[else]
+　「図書館に野鳥図鑑があったんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It made a brief mention of unihemispheric slow-wave sleep.[l] Birds that travel long distances over the seasons have evolved so they can put half of their brain to sleep while the other remains alert.[l] Apparently, it's not just birds, either. Dolphins and seals are also capable of sleeping with one of their eyes closed.[」][lr]
+[else]
+　「渡り鳥の半球睡眠に関しても、少し記載があったよ。[l]長距離の飛行で眠ることのできない渡り鳥の中には、脳を半分眠らせた状態で飛び続けるそうだ。[l]鳥だけではなく、イルカやオットセイなんかも目を半分閉じて眠ることができるらしい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's convenient.[l] I wonder if I could work twenty-four hours a day if I could pull that off.[」][lr]
+[else]
+　「便利ね。[l]それを使えば、私も眠らないで働き続けることができるのかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]As long as they abolish the overtime agreement of the Labor Standards Act.[」][lr]
+[else]
+　「労働基準法の三六協定がなくなれば、あるいはね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's actually quite interesting.[l] Can such a thing really be possible?[」][lr]
+[else]
+　「思いの外、興味があるわね。[l]本当にそんなことできるのかしら？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h13" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki inhaled a breath and smiled.[prcm]
+[else]
+　楢崎がはっ、と息をついて笑う。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder what one side of their brain thinks as the other sleeps, and if it's conscious of the memories of their dreams. Or if the half that slept remembers what happened during the time the other half was awake.[」][lr]
+[else]
+　「なあ、頭を右と左で使い分け出来る動物たちは右の脳が寝ている時、左の脳は何を考えてるんだろうな。[l]次の脳は起きたときに、寝ていた間の記憶は残っているんだろうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't remember anything from when I sleep, so I imagine they wouldn't, either.[」][lr]
+[else]
+　「私は寝ているときの事は覚えてはいられないわ、彼らもそうなんじゃないかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that so.[」][lr]
+[else]
+　「そうかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Feeling my hands grow cold, I stuck them under the blanket covering my lap. Narasaki noticed and followed my motions with her gaze.[prcm]
+[else]
+　冷えていた手を膝に掛けなおしたブランケットに入れると、気がついた楢崎がそこに目線をうつした。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's your plan for today?[」][lr]
+[else]
+　「今日は、このあとどうするつもりだい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I might just go back to my room and sleep.[」][lr]
+[else]
+　「部屋に戻って、もうひと眠りしようかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're going to sleep again?[」][lr]
+[else]
+　「まだ、寝るのかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My vision suddenly grew dark as I stood up.[lr]
+[else]
+　立ち上がると視界が暗くなりかけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Making sure not to panic, I lowered my head a bit and endured it.[prcm]
+[else]
+　私は慌てずに少しだけ頭を下げて堪える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've been feeling really sleepy lately.[l] I don't know if it's because I've changed beds, but I seem unable to get proper rest.[」][lr]
+[else]
+　「最近、やけに眠いのよ。[l]いつもとベットが違うせいかしら、疲れが取れ切れていないみたいだわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The hallucinations might be one of the factors exhausting you.[」][lr]
+[else]
+　「幻覚っていうのも、消耗する原因になるのかもしれないな」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw Narasaki hold out her hand, and after a few seconds of staring at it, I handed her the blanket.[prcm]
+[else]
+　楢崎が手を伸ばしたのを見て、少し間を開けてからブランケットを手渡した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm no longer seeing them.[l] Thanks.[」][lr]
+[else]
+　「もう見てないわ。[l]ありがとう」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h03" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that so.[」][lr]
+[else]
+　「そうかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you going to do after this?[」][lr]
+[else]
+　「あなたは、このあとどうするの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've no plans.[」][prcm]
+[else]
+　「さてね」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, Narasaki...[」][lr]
+[else]
+　「ねえ、楢崎」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah?[」][lr]
+[else]
+　「何だい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You once said there existed another world in one's head.[」][lr]
+[else]
+　「頭の中にもう一つの現実があると、貴方は前に言ったわね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h05" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I did.[」][lr]
+[else]
+　「言ったね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And Takako is there, isn't she?[」][lr]
+[else]
+　「そこには貴呼がいるのよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki slightly cocked her head, then nodded.[prcm]
+[else]
+　楢崎は斜め前に首を傾けて、肯定した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was thinking about what kind of place it might be.[l] And how Takako lived there.[」][lr]
+[else]
+　「そこはどんなところなのか考えていたのよ。[l]貴呼はそこでどんな風に暮らしているのかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And what conclusion did you come to?[」][lr]
+[else]
+　「キミはどう思う？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The branches in front of the window trembled.[lr]
+[else]
+　窓の近くの枝が揺れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki gave them a sidelong glance.[lr]
+[else]
+　楢崎が横目でそれを見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There seemed to have been a bird there, but it had since flown away.[prcm]
+[else]
+　いつの間にかそこに留まっていた鳥が飛んだようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know.[l] Maybe she's seeing the past like I did during your hypnosis.[l] Or maybe she feels as though she's in a dream.[」][lr]
+[else]
+　「わからないわ。[l]貴方の催眠術のように過去の思い出を見ているのかしら。[l]それとも、夢の中のような感じなのかしら」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h09" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Both of those sound closer to a dream, but I believe it's much closer to the real world than you think.[」][lr]
+[else]
+　「その二つで言うなら夢に近いところだね。[l]ただ、キミが思うよりも現実に近いよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You know what it's like?[」][lr]
+[else]
+　「どんなところなのか分かるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I can make an educated guess, at least.[」][prcm]
+[else]
+　楢崎は「大体ね」と肯定し「予想はつく」と付け足した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's start from how it differs from reality.[l] First, the passage of time must be quite vague, since you're creating the story from your subconsciousness. No one remembers every little detail that happens during the day.[」][lr]
+[else]
+　「ただいくつか現実と違う部分がある。[l]まず、日にちの経過が曖昧だ。[l]
+キミが無意識に作っているところだから、誰もがキッチリと毎日を覚えてはいない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But reality's like that as well, no?[」][lr]
+[else]
+　「現実もそんなものじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep, so no one in your world would notice anything strange.[l] And the things you forget or are unable to remember simply disappear without a trace.[」][lr]
+[else]
+　「まあね、だから向こうでも誰もそんなことには気づかないのさ。[l]それと、キミが忘れたり思い出せなくなったりしたものは消えてしまう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] Are there any other differences?[」][prcm]
+[else]
+　「ふうん。[l]他には違いはあるの？」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h04" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The sun rises in the west and sets in the east.[」][lr]
+[else]
+　「そこでは太陽は西から昇り、東に沈む」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why?[」][prcm]
+[else]
+　「どうして？」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, sorry, I made it sound more confusing than I should have.[l] It's because of how your eyes work.[l] Your brain recognizes light as it strikes your retinas at the back of your eyes.[l] However, since it passes through the lens in your eye, your brain actually gets an inverted image that also has left and right backwards.[l] However, in your world, no one is seeing their surroundings with their eyes.[l] As such, top and bottom, as well as right and left, are inverted.[」][lr]
+[else]
+　「いや、言い方が悪かった。[l]けれど、それは目の仕組みのせいなんだ。[l]
+目というのは光を網膜への刺激として認識する。[l]
+しかし、光は水晶体を通るから網膜に映るのは上下と更に左右が反転した像なんだ。[l]
+現実は目で物を見ているけど、あちら側では実際のところ誰も目では見てはいない。[l]
+だから、そこでは左右上下すべてが逆なんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds weird.[l] If the cause is physical, such as the eyes inverting things, then wouldn't we all perceive our surroundings the same way in both worlds?[」][prcm]
+[else]
+　「変な話ね。[l]上下左右が逆になるのは目の仕組みのせいであって、現実はどちらもそのままなんじゃない？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+No matter how I looked at it, Narasaki's statement didn't make much sense.[lr]
+[else]
+　どのように考えてみても楢崎の言っていることは、少し的が外れているような気がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Besides, there were no means to check or test how things were supposed to work in that hypothetical world, anyway. How could she be so certain?[prcm]
+[else]
+　よく考えてみると、あちら側がどのようなものかなど確認のしようがなかった。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You didn't just come up with all this on the spot, did you?[」][lr]
+[else]
+　「もしかして全部、あなたの思いつきじゃないの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h15" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave Narasaki an incredulous look.[prcm]
+[else]
+　訝しげな表情を楢崎に向けると、楢崎は笑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoops.[l] You got me.[」][prcm]
+[else]
+　「全く。[l]してやられたわね」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h04" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=800]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, Narasaki accompanied me back to my room, then soon left, saying she had to return the blanket.[prcm]
+[else]
+　そのあと、楢崎は部屋まで私を送ると「ブランケットを返してくる」と言って別れた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="106.ks" target=*106
+
+

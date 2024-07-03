@@ -1,0 +1,573 @@
+*007| A morning at the office (fuel)
+; *007|事務所の朝（燃料）
+[fbfstoretitle eng="A morning at the office (fuel)" jp="事務所の朝（燃料）"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+[playbgm storage="bgm03"]
+
+[playse buf = 0 storage=se34.ogg]
+[wait time=1000]
+
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 9"]
+[eval exp="sf.ItRelease = 10"]
+[endif]
+
+
+*| A morning at the office (fuel)
+; *|事務所の朝（燃料）
+[fbfstoretitle eng="A morning at the office (fuel)" jp="事務所の朝（燃料）"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I grabbed a pack of iced coffee from the fridge and filled my flower-patterned cup, then returned to the office with cup in hand.[lr]
+[else]
+　給湯室の冷蔵庫からアイスコーヒーを取り出して花柄のコップに注ぐと、それを持って事務室に戻る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The office itself was a small, cream-colored room with five office desks crammed into it.[lr]
+[else]
+　事務室はクリーム色が基調のこじんまりとした造りで、部屋の割に大きな事務机が五つあった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Four of the desks faced each other, while the last one was slightly further away, positioned by the window.[lr]
+[else]
+　そのうち四台は向かい合って置かれていて、一台は部屋の奥の窓側にあった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I headed toward that particular desk, sat down, and proceeded to turn on my computer.[lr]
+[else]
+　その一台の席に腰を下ろすと、モニタの電源を入れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sipping coffee with one hand while typing my password with the other, I listened to Takako nibble on her tenth or so candy.[prcm]
+[else]
+　片手で冷たいコーヒーを飲みながら片手でパスワードを打ち込んでいると向こう側からガリガリ、と貴呼が何個目かの飴玉を噛んでいる音が聞こえた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[eval exp="sf.cg45=1"]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/ev46_1" visible=true left=0 top=0]
+[trans method=universal rule="rule9" vague=10 time=1000]
+[wt]
+[wait time=300]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/ev45_1" visible=true left=267 top=0]
+[trans method=universal rule="rule1" vague=10 time=1000]
+[wt]
+[wait time=300]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_1" visible=true left=533 top=0]
+[trans method=universal rule="rule10" vague=10 time=1000]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_3" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_4" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_1" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[playse buf = 0 storage=se39.ogg]
+[wait time=100]
+[playse buf = 1 storage=se39.ogg]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_2" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=150]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_1" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=150]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_2" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=150]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_1" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=150]
+[wt]
+[fbfscale_move time=100 path="(0,-20,255)(0,0,255)" layer=1]
+[wm]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/ev46_2" visible=true left=0 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h10" visible=true left=280 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+;[wait time = 300]
+;[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako, her eyes fixed on the documents, reached out toward a transparent glass jar resting next to her monitor.[lr]
+[else]
+　貴呼が紙資料を見ながら手を伸ばした先は、ディスプレイの隣においてある透明のガラス瓶だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was filled with colorful candies.[lr]
+[else]
+　太い銀の留め金がついた瓶の中は、カラフルな果物色の飴玉が詰まっている。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She nimbly undid its cap and, avoiding the lemon-colored ones, picked a candy with an apple design on its wrapping.[lr]
+[else]
+　慣れた手つきで蓋を開けると、檸檬色の飴玉を避けて林檎色の飴を取る。[lr]
+[endif]
+
+[r]
+;[clickskip enabled=false]
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h02" visible=true left=280 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h03" visible=true left=280 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+;[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After unwrapping the thing, she quickly chucked it into her mouth...[prcm]
+[else]
+　パリ、と包を開けて飴を口に放った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nmh.[」][lr]
+[else]
+　「ん」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_3" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_4" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_1" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[playse buf = 0 storage=se39.ogg]
+[wait time=100]
+[playse buf = 1 storage=se39.ogg]
+[wait time=100]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_2" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=150]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_1" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=150]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_2" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=150]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/ev47_1" visible=true left=533 top=0]
+[trans method=universal rule="rule1" vague=300 time=150]
+[wt]
+[fbfscale_move time=100 path="(267,-20,255)(267,0,255)" layer=2]
+[wm]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/ev45_2" visible=true left=267 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...and started nibbling on it.[lr]
+[else]
+　ガリガリ、と貴呼が何個目かの飴玉を噛んだ。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Soon enough, she casually thrust her hand into the bottle again and pulled out a lemon-colored one.[lr]
+[else]
+　それから無造作に手を伸ばして透明の瓶から檸檬の飴玉を取り出す。[lr]
+[endif]
+
+[r]
+
+;[clickskip enabled=false]
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h02" visible=true left=280 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[wait time=1000]
+;[backlay]
+;[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h04" visible=true left=280 top=0]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+;[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her hand stopped as she noticed the color of its wrapping.[prcm]
+[else]
+　貴呼が手にとった飴玉の包を見て、それを開けようとした手を止めた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h11" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Want a candy, Fumi?[」][lr]
+[else]
+　「[ruby text="ふみ"]文ちゃん飴玉いる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako addressed the employee sitting in front of her — Ooita Fumi.[lr]
+[else]
+　貴呼が向かいの事務机で作業をしている事務員、[ruby text="おお"]大[ruby text="いた"]分
+[ruby text="ふみ"]文に向かって言う。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi shifted her gaze to Takako, knitting her eyebrows.[prcm]
+[else]
+　それを聞いた文は、眉根を寄せて貴呼を見た。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p01_h11" visible=true left=280 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How many of those can you eat in a day?[l] The sound you make when you're chewing is bothering me.[」][lr]
+[else]
+　「今日何個目ですか？[l] 噛む音がうるさいんですけど」[lr]
+[endif]
+
+[r]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h13" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm always sleepy past noon.[l] If I don't eat something, I might fall asleep.[」][lr]
+[else]
+　「だって午前中眠いんだもの。[l]何か食べてないと眠りそうだよ」[lr]
+[endif]
+
+[r]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your sugar intake must be off the charts.[l] Don't come crying to me when you gain weight.[」][lr]
+[else]
+　「それって絶対糖分過多。[l]カロリー摂りすぎで太っても知らないですよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's okay. My brain burns all the sugar, anyway.[l] To me, candies are like coal to a steam engine.[」][lr]
+[else]
+　「大丈夫だよ、たくさん頭使ってるから。[l]飴玉は言ってみれば蒸気機関の石炭みたいなものなの。[l]私にとっては」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She let out a hearty guffaw.[l][r]
+Figuring that I'd seen enough, I rose from my desk and drew closer to them.[lr]
+[else]
+　そう言ってハハハ、と軽笑いをする。[l]
+[r]
+*|事務所の朝（燃料）
+　そこで様子見をやめて、奥の事務机を立って貴呼と文の事務机の隣に行く。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up the candy bottle from the table.[prcm]
+[else]
+　手を伸ばして飴玉の入った硝子の瓶を取った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be confiscating this.[」][lr]
+[else]
+　「没収」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[playse buf = 0 storage=se40.ogg]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h08" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=200]
+[wt]
+[fbfscale_move time=80 path="(240,0,255)(320,0,255)(280,0,255)" layer=0]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But that's my fuel![」][lr]
+[else]
+　「燃料がっ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako spun around as Fumi made a crooked smile behind her back.[prcm]
+[else]
+　貴呼が勢い良く振り向くと、文はニヤリと笑う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The sound you make is bothering everyone.[l] If you can't eat them in silence, then chew on this instead.[」][lr]
+[else]
+　「音がうるさい。[l]舐めて食べられないなら、これでも噛んでなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I held up a piece of mint gum in front of her face.[lr]
+[else]
+　眠気覚ましのミントガムを貴呼の口の前に差し出す。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h09" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h03" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako opened her mouth, biting the gum straight out of my hand.[prcm]
+[else]
+　貴呼はパクリ、と銜えて噛み始めた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Gum doesn't make me feel like I've eaten anything, but I guess it's better than nothing.[」][lr]
+[else]
+　「ガムは食べた気がしないけど、まあいいか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the candy bottle on my desk and resumed my accounting work.[prcm]
+[else]
+　コトリ、と飴玉の入ったガラスの瓶を奥の事務机に置くと、椅子に戻り会計作業を再開する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]chew-chew*[prcm]
+[else]
+　クチャクチャ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave the completely unfazed Takako an exasperated look.[lr]
+[else]
+　平気な顔をした貴呼をジト目で見る。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h03" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi did the same.[prcm]
+[else]
+　文も同じように貴呼を見ていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[fadeoutbgm time=3000]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="008.ks" target=*008
+

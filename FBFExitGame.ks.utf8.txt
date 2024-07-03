@@ -1,0 +1,40 @@
+
+; FBF: Exit game prompt.
+*fbfexitgame
+
+; Store game state variables.
+[eval exp="kag.FBFOnYesNoPromptStart()"]
+
+[rclick target="*fbfexitgame_no" storage="FBFExitGame.ks" jump=true enabled=true]
+
+; Set message.
+[if exp="kag.FBFPrepareLanguage() == 0"]
+	[eval exp="tf.promptMsg = 'Are you sure you want to exit?'"]
+[else]
+	[eval exp="tf.promptMsg = '終了しますか？'"]
+[endif]
+
+[fbf_yesnowindow message="&tf.promptMsg" targetyes="*fbfexitgame_yes" targetno="*fbfexitgame_no"]
+[s]
+
+; FBF: Exit game? Yes.
+*fbfexitgame_yes
+[fbf_yesnowindow_clear]
+
+; Restore game state variables.
+[eval exp="kag.FBFOnYesNoPromptEnd();"]
+
+; Exit game.
+[eval exp="System.removeContinuousHandler(FBFCallback);"]
+[eval exp="kag.shutdown()"]
+
+[return]
+
+; FBF: Exit game? No.
+*fbfexitgame_no
+[fbf_yesnowindow_clear]
+
+; Restore game state variables.
+[eval exp="kag.FBFOnYesNoPromptEnd();"]
+
+[return]

@@ -1,0 +1,74 @@
+;///////////////////////////////////////////////////////////////////////////////////////
+;	FBF: Yes/No dialog window.
+;///////////////////////////////////////////////////////////////////////////////////////
+
+[eval exp="sf.FBFYesNoFrameHeight = 216"]
+[eval exp="sf.FBFYesNoFrameMessageTop = 30"]
+[eval exp="sf.FBFYesNoFrameButtonsTop = 46"]
+[eval exp="sf.FBFYesNoFrameButtonWidth = 160"]
+[eval exp="sf.FBFYesNoFrameButtonSpace = 14"]
+[eval exp="sf.FBFYesNoFont = 'ptserif36.tft'"]
+[eval exp="sf.FBFYesNoFontSize = 36"]
+
+[macro name="fbf_yesnowindow"]
+
+; Override text speed temporarily.
+[eval exp="tf.userChSpeed = kag.userChSpeed"]
+[eval exp="kag.userChSpeed = 0"]
+
+; Get filenames depending on language.
+[if exp="kag.FBFGetLanguage() == 0"]
+	[eval exp="tf.fbfyesbuttongraphic = 'YesNoImageDialog_Yes.png'"]
+	[eval exp="tf.fbfnobuttongraphic = 'YesNoImageDialog_No.png'"]
+[else]
+	[eval exp="tf.fbfyesbuttongraphic = 'YesNoImageDialog_Yes_JP.png'"]
+	[eval exp="tf.fbfnobuttongraphic = 'YesNoImageDialog_No_JP.png'"]
+[endif]
+
+; Add extra layers to KAG.
+[laycount layers="&kag.numCharacterLayers + 1" messages="&kag.numMessageLayers + 1"]
+[eval exp="sf.FBFYesNoImageLayer = kag.numCharacterLayers - 1"]
+[eval exp="sf.FBFYesNoMessageLayer = kag.numMessageLayers - 1"]
+
+; Background.
+[image storage="YesNoImageDialog_Frame.png" page=fore layer="&sf.FBFYesNoImageLayer" visible=true top="&kag.scHeight / 2 - &sf.FBFYesNoFrameHeight / 2 - 24" left=0 opacity=255 index="2100000"]
+
+; Text draw.
+[current page=fore layer="&'message' + sf.FBFYesNoMessageLayer"]
+[layopt layer="&'message' + sf.FBFYesNoMessageLayer" page=fore visible=true index="2150000"]
+[position layer="&'message' + sf.FBFYesNoMessageLayer" opacity=0 top="&kag.scHeight / 2 - &sf.FBFYesNoFrameHeight / 2 + &sf.FBFYesNoFrameMessageTop" left=0 opacity=0 width="&kag.scWidth" height="&kag.scHeight" margint=0 marginb=0 marginl=0 marginr=0]
+[eval exp="kag.fore.messages[sf.FBFYesNoMessageLayer].opacity=255"]
+
+; Yes.
+[locate x="&kag.scWidth / 2 - &sf.FBFYesNoFrameButtonSpace / 2 - &sf.FBFYesNoFrameButtonWidth" y="&sf.FBFYesNoFrameButtonsTop" index="2200000"]
+[button graphic="&tf.fbfyesbuttongraphic" clicksebuf=1 entersebuf=1 enterse="se123.ogg" target="&mp.targetyes"]
+
+; No.
+[locate x="&kag.scWidth / 2 + &sf.FBFYesNoFrameButtonSpace / 2" y="&sf.FBFYesNoFrameButtonsTop" index="2200000"]
+[button graphic="&tf.fbfnobuttongraphic" clicksebuf=1 entersebuf=1 enterse="se123.ogg" target="&mp.targetno"]
+
+; Text style.
+[locate x=0 y=16]
+[font color="0xFFFFFF" shadow="false" size="&sf.FBFYesNoFontSize" face="&sf.FBFYesNoFont"]
+[mappfont storage="&sf.FBFYesNoFont"]
+[style align=center]
+[nowait]
+[history output=false]
+[emb exp="mp.message"]
+[history output=true]
+[s]
+[endmacro]
+
+[macro name="fbf_yesnowindow_clear"]
+[layopt layer="&'message' + sf.FBFYesNoMessageLayer" page=fore visible=false]
+[layopt layer="&sf.FBFYesNoImageLayer" page=fore visible=false]
+
+; Clear extra layers.
+[laycount layers="&kag.numCharacterLayers - 1" messages="&kag.numMessageLayers - 1"]
+
+; Restore user text speed.
+[eval exp="kag.userChSpeed = tf.userChSpeed"]
+
+[endmacro]
+
+[return]

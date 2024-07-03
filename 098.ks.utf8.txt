@@ -1,0 +1,376 @@
+*098| Christmas party
+; *098|クリスマスパーティ
+[fbfstoretitle eng="Christmas party" jp="クリスマスパーティ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm23"]
+[backlay]
+[fbfscale_image storage="item10" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 119"]
+[eval exp="sf.ItRelease = 120"]
+[endif]
+
+
+*| Christmas party
+; *|クリスマスパーティ
+[fbfstoretitle eng="Christmas party" jp="クリスマスパーティ"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After we got rid of all the dishes, the only thing left on the table was a lone pencil holder.[lr]
+[else]
+　食器類を片付け終わったテーブルの上には、ペン立てが置いてある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was filled with pencils of various length and age.[lr]
+[else]
+　ペン立ては嵩が低く、その中には使われて長さのまちまちになった色鉛筆が立てられている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko took a red pencil out of it. The empty space this created was then promptly filled up by the other pencils, making the whole thing even more unstable.[prcm]
+[else]
+　[ruby text="まゆ"]繭[ruby text="こ"]子がそっと手を伸ばして、その中から赤色の鉛筆を取ると、カラ、と取り出された鉛筆分のスペースに立てられている色鉛筆が扇の形に広がった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg90" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h01" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The purple one's next, [wait time=600]Takako.[」][lr]
+[else]
+　「貴呼さん、[wait time=600]次は紫色です」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure it's even possible at this point.[」][lr]
+[else]
+　「もう無理なんじゃないかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I grabbed the purple pencil and swiftly pulled it out.[lr]
+[else]
+　手を伸ばし、真ん中の方にある紫の色鉛筆をつかむと、一気に引き抜いた。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se122.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Losing their support, the pencils fell and scattered across the table.[prcm]
+[else]
+　バラバラ、と互いを支えきれなくなった色鉛筆が、ペン立てから溢れて机を叩いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ugh, I lost again.[」][lr]
+[else]
+　「ううん。[l]また負けた」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/sana_img/f02_p01_h07" visible=true left=330 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's because you're doing it too fast,[」] said Sanae.[prcm]
+[else]
+　「一気に引き抜くから」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、[ruby text="さ"]早[ruby text="なえ"]苗が言った。[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se24_8.ogg loop=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The grandfather clock in the lobby struck the hour.[prcm]
+[else]
+　ボォン、ボォン、とロビーの柱時計の音が聞こえてくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Excuse me for a bit.[」][lr]
+[else]
+　「ちょっと失礼」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up and left the room.[prcm]
+[else]
+　席を立って部屋を出る。[prcm]
+[endif]
+
+
+;//////
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=1 time=1000]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[seopt buf=1 volume=100]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned, now dressed in a red coat, pants, and hat. Plus a white beard.[prcm]
+[else]
+　赤い服、赤いズボン、に着替えると赤いキャップと、白いヒゲをつけて部屋に戻る。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[playse buf = 0 storage=se54.ogg]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/k_img/f02_p02_h02" visible=true left=105 top=0]
+[fbfscale_image storage="bg90" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[fbfscale_move time=100 path="(105,-20,255)(105,0,255)" layer=2]
+[wm]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Merry Christmas![」][lr]
+[else]
+　「メリークリスマス」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue jumped up as I threw the door open — she was the first one to see me.[prcm]
+[else]
+　一気に戸を開けて片手を上げると、[ruby text="こずえ"]梢が前を見たまま少し腰を浮かせた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/sana_img/f02_p02_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have all of you been good kids this year, hm?[」][lr]
+[else]
+　「みんないい子にしていたかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I met Sanae's silent gaze.[prcm]
+[else]
+　黙ってしまった早苗と目が合う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, if it isn't Ms. Sanae.[l] You were very good this year.[l] Here, have this.[」][lr]
+[else]
+　「やあ、早苗さんだね。[l]今年はホントにいい子だったね。[l]はいプレゼント」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled out a book from my white bag and handed it to her. It was covered in a wrapping decorated with a flower design.[prcm]
+[else]
+　白い袋から、花柄の包装紙で包んだ本を渡した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you very much.[」][lr]
+[else]
+　「有難うございます」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image layer=2 page=back storage="fgimage/k_img/f02_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned to Kozue next.[prcm]
+[else]
+　次に梢の方に振り返る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Next up on the list would be Kozue.[l] You were a little naughty this year, especially concerning your treatment of Ms. Takako.[」][lr]
+[else]
+　「君は梢ちゃんだね。[l]梢ちゃんは今年は悪い子だったかもしれないね。[l]特に貴呼さんに対しての態度は目に余る」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image layer=2 page=back storage="fgimage/k_img/f02_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, whatever.[l] Just get it over with already.[」][lr]
+[else]
+　「いいから。[l]早く」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I handed her a red bag with a big ribbon.[prcm]
+[else]
+　白い袋から、赤い大きなリボンの付いた小包を渡した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Be a nice girl next year, okay?[」][lr]
+[else]
+　「来年は、いい子にするんだよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image layer=2 page=back storage="fgimage/k_img/f02_p01_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][prcm]
+[else]
+　「ありがとう」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="099.ks" target=*099
+
+

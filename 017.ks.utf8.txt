@@ -1,0 +1,574 @@
+*017| Home Alone
+; *017|ひとりで帰宅
+[fbfstoretitle eng="Home Alone" jp="ひとりで帰宅"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle6"]
+
+[msglayer2]
+[seopt buf=4 volume=45]
+[fadeinse buf=4 storage=se84.ogg time=1500 loop=true]
+[wf buf=4]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg02_7" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 19"]
+[eval exp="sf.ItRelease = 20"]
+[endif]
+
+[playse buf = 0 storage=se57.ogg]
+*| Home Alone
+; *|ひとりで帰宅
+[fbfstoretitle eng="Home Alone" jp="ひとりで帰宅"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I collected the documents in a binder, which I then placed in the top drawer of my desk.[lr]
+[else]
+　トントン、と束にした資料の角を揃えてバインダーに挟むと、[r]パサ、と一番上の引き出しに仕舞う。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed all the scattered writing utensils back into the pen holder.[lr]
+[else]
+　散らばっていた筆記用具は、掴んでペン立てに放り込んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The hands of the wall clock indicated that it was a few minutes before midnight.[prcm]
+[else]
+　時計を見ると、真夜中の数分前といった時刻だった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Out of the four other office desks, Fumi's was the only one yet to be cleaned up.[lr]
+[else]
+　四つの事務机の内、[ruby text="ふみ"]文の席にだけはまだ作業道具が散らばっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai went home before we started our late-night overtime, while Fumi was currently in the bathroom.[lr]
+[else]
+　[ruby text="いぬ"]犬[ruby text="かい"]飼は深夜残業の前に帰宅して、文は先程まで作業をしていたが、今は洗面所に行っている。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was dark as pitch beyond the windows.[lr]
+[else]
+　給湯室も廊下の見える磨ガラスの窓の向こうもすでに暗い。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se171.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My office phone rang, and I promptly picked up the receiver.[prcm]
+[else]
+　プルル、と電話が鳴って受話器を取る。[prcm]
+[endif]
+
+
+[stopse buf=0]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm locking up the building in ten minutes.[l] Are you going to need the lights for the night?[」][lr]
+[else]
+　『あと十分で鍵を掛けます。[l]電気はどうしますか？』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the night watchman.[lr]
+[else]
+　と、電話機の向こうで、貸ビルの宿直が言った。[lr]
+[endif]
+
+[r]
+
+[playse buf = 0 storage=se25.ogg]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The office door opened, and Fumi came into the room.[prcm]
+[else]
+　ガチャリ、と丁度事務所の扉を開けて、[ruby text="ふみ"]文が戻る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm leaving. What about you, Fumi?[」][lr]
+[else]
+　「あがるけど、文は？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Me too.[」][lr]
+[else]
+　「私もあがります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave her a nod and removed my hand from the receiver.[prcm]
+[else]
+　それを聞いて、文に頷いて見せると、受話器にかけた手を外した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're leaving right now.[」][lr]
+[else]
+　「もう出ます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[l] Don't forget to lock the doors.[」][lr]
+[else]
+　『分かりました。[l]部屋の鍵締めをお願いします』[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the receiver back to its place.[prcm]
+[else]
+　チン、と受話器を置いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's go.[」][lr]
+[else]
+　「帰りましょう」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Catching the last train could be tough. Need a lift?[」][lr]
+[else]
+　「終電ギリギリですね。[l]送りましょうか？」[lr]
+[endif]
+
+[r]
+[playse buf=0 storage=se77.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi tapped her skirt pocket to draw attention to her car keys.[prcm]
+[else]
+　文がスカートのポケットをたたいて、車の鍵を鳴らした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I'm good. I might need to drop by another place first.[」][lr]
+[else]
+　「いいわ、少し寄り道するかも知れないし」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そうですか」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[freeimage layer=1 page=back]
+[trans method = crossfade time=1000]
+[wt]
+[fadeoutse buf=4 time=1500]
+[playse buf = 2 storage=se92.ogg]
+[wf buf=4]
+[wf buf=2]
+[backlay]
+[fbfscale_image storage="bg01" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The inside of the taxi lit up as the car in the opposing lane came closer, then fell dark again as soon as it passed us.[lr]
+[else]
+　対向車のヘッドライトが近づいて、一瞬だけ車内を見せた後に、テイルライトが遠ざかっていく。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see all sorts of small lights beyond the window.[lr]
+[else]
+　暗い街を映すタクシーの窓に、そんな光が次々と流れていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I leaned back against my seat, heaving a sigh.[prcm]
+[else]
+　後部座席のシートに深く腰を下ろすと、息をつく。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I briefly regarded the driver's graying hair before shifting my gaze back to the window. Juxtaposed with the multitude of lights beaming from the skyscrapers and the rows of cars speeding past, I could see the reflection of a positively exhausted woman.[lr]
+[else]
+　タクシーの運転手の白髪の混じった頭を見たあとで、もう一度隣の窓を見ると、深夜の高層ビルに並ぶ無数の窓の光と、車の流れと、疲れた女の顔が映っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon closer inspection, the woman's face — now distorted in apparent disgust — reminded me of the pictures I'd seen of my mother.[prcm]
+[else]
+　よく見ると、昔の母親に似ている顔が、苦虫をかんだように歪む。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We seem to have hit a traffic jam. This could take a while.[」][lr]
+[else]
+　「思ったより渋滞していますね、少し遅くなるかもしれませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The driver said so.[prcm]
+[else]
+　運転手が、そう言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I narrowed my eyes to more thoroughly examine the driver through the back mirror.[lr]
+[else]
+　目を細めて、バックミラーの運転手を見た。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, the visor of his hat hid his eyes as he slightly tilted his head down.[prcm]
+[else]
+　運転手が俯くと帽子のつばで、目元が見えなくなった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h01" visible=false left=180 top=0]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon_b]
+[wait time=1000]
+[clickskip enabled=true]
+
+[playse buf=0  storage=se25.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I unlocked the front door with an audible click.[prcm]
+[else]
+　ガチャリ、と玄関の鍵を開ける。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm back.[」][lr]
+[else]
+　「ただいま」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My voice was swallowed by the darkness of the corridor.[lr]
+[else]
+　声は暗い廊下に、吸い込まれる。[lr]
+[endif]
+
+[r]
+[playse buf=0 storage=se43.ogg]
+[msglayer2]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg04_4" page=back layer=base]
+[trans method=universal rule="rule13" vague=300 time=300]
+[wt]
+[msgon]
+
+[playse buf=0 storage=se33.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Entering the living room, I flipped on the light switch and continued to the kitchen, where I opened the fridge and helped myself to a jug of tea.[lr]
+[else]
+　リビングに入り証明のスイッチを入れ、遅れて明かりの灯ったキッチンで冷蔵庫を空けて、作り置きのお茶を取り出して飲んだ。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the cup on the silver tray, but as I turned around to return the jug to the fridge,[l] [quake hmax=0 vmax=50 time=200][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg][wait time=50][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg][wait time=50][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg loop=true][msgoff][backlay][fbfscale_image storage="bg00" page=back layer=base][trans method=universal rule="rule12" vague=300 time=500][wt][msgon_b]my vision was enveloped by darkness, forcing me to lean on the fridge door.[prcm]
+[else]
+　コン、と銀の流しにコップを置いてから、お茶を冷蔵庫に直そうと振り向いたところで、[l]
+[quake hmax=0 vmax=50 time=200]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg]
+[wait time=50]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg]
+[wait time=50]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg loop=true]
+[msgoff]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule12" vague=300 time=500]
+[wt]
+[msgon_b]
+視界がフワリと暗くなって冷蔵庫の扉に片手をつく。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I hung my head, waiting for my eyesight to return to normal, the abrupt sensation of the very floor trying to swallow me whole sent me to my knees.[prcm]
+[else]
+　すぐに頭を下にさげて、視界がもどるのを待っていると、今度は急に地面が下に開いたような感覚に膝をついてしまう。[prcm]
+[endif]
+
+[msglayer2]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=100]
+[wt]
+[backlay]
+[fbfscale_image storage="bg04_4" page=back layer=base]
+[trans method = crossfade time=100]
+[wt]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=100]
+[wt]
+[fadese buf=0 time=5000 volume=50]
+[backlay]
+[fbfscale_image storage="bg04_4" page=back layer=base]
+[trans method = crossfade time=200]
+[wt]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=100]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_image storage="bg04_4" page=back layer=base rceil=150 gceil=100 bceil=100]
+[trans method=universal rule="rule13" vague=300 time=3000]
+[wt]
+[msglayer2]
+[wf buf=0]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a while, [wait time=500]my vision began to gradually normalize.[lr]
+[else]
+　しばらくして、[wait time=500]視界が戻り始めてくる。[lr]
+[endif]
+
+[r]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had been a while since I got a dizzy spell that bad. I couldn't help but chuckle at it all.[lr]
+[else]
+　久しぶりの酷い立ちくらみの感覚が心地よく感じて、少し笑ってしまう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With my vision still occasionally blinking out, I felt some of the strength in my legs return. This prompted me to try and stand up, but I ended up losing my balance and hitting my head against the fridge.[prcm]
+[else]
+　まだ視界が点滅する間に、膝に力を入れて起き上がろうとするとバランスを崩し、両手で冷蔵庫を押すような格好で、冷蔵庫にゴツンゴツン、と何度か頭をぶつけてしまった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[fadeoutse buf=0 time=3000]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the fit finally passed, I stood up, placed the jug of tea that I had managed not to spill in the fridge, and returned to the living room to get changed.[prcm]
+[else]
+　視界が戻り、キチンと立つことができるようになると、溢れていなかった作り置きのお茶のボトルを冷蔵庫に仕舞ってから、着替えをしに部屋に戻った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wf buf=0]
+[seopt buf=0 volume=100]
+[seopt buf=4 volume=100]
+[wait time=3000]
+[jingle6]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="018.ks" target=*018
+

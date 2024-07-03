@@ -1,0 +1,15 @@
+title: あと少し覚えていて
+
+ロビーに戻ると、柱時計で時間を確認した。
+時計は午後六時頃を指していた。
+電話の受話器を取るとポケットから硬貨を数枚取り出した。
+手のひらに一枚だけ残して、電話機の隣に重ねた硬貨を置いた。
+手に残っているコインを電話機の投入口に入れてダイヤルを回す。
+
+耳に受話器を当てるとコール音が聞こえた。{lr}
+Some text may not be added by this script, e.g. 
+	[if exp=kag.FBFPrepareLanguage() == 1]
+	[r]
+	　と、母が言った。[prcm]
+	[endif]
+1 place(s) of [if exp=kag.FBFPrepareLanguage() == 1] found, pleaze check the **.ks.utf8.txt file manually

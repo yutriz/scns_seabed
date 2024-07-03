@@ -1,0 +1,694 @@
+*028_2| The Possibility of a Cure
+; *028_2|治る可能性
+[fbfstoretitle eng="The Possibility of a Cure" jp="治る可能性"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg04_4_t" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=500]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 34"]
+[eval exp="sf.ItRelease = 35"]
+[endif]
+
+
+*| The Possibility of a Cure
+; *|治る可能性
+[fbfstoretitle eng="The Possibility of a Cure" jp="治る可能性"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned home, took a shower, and ate yesterday's potato salad leftovers for dinner.[lr]
+[else]
+　家に帰ると風呂に入り、昨日の夕食のあまりの煮物とポテトサラダを作って食べた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I slumped down into the sofa and began watching TV.[lr]
+[else]
+　それからソファに座ってテレビを見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The news commentator kept babbling on about unrelated things instead of introducing the actual news.[lr]
+[else]
+　ニュースはコメンテイターが好き勝手喋っているだけでニュースそのものはあまり紹介されていなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I kept absentmindedly staring at the screen, and as I hadn't really paid attention to all the details of what happened and why, I realized I only remembered the opinion of the expert they'd brought in.[prcm]
+[else]
+　ぼんやり眺めていると、何が起きてどうなったのかの詳細はぼやけて、専門家の理屈だけが残っていった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I began my search for a less tiring program, and after a bit of flipping through channels, settled on the weather broadcast.[lr]
+[else]
+　あまりうるさくない番組を探すと、天気予報を見つけてリモコンをおいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought about my time in the clinic.[prcm]
+[else]
+　それから診療所でのことを思い出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki told me that she needed some preparation for the hypnotherapy, so I was sent home right after the explanation of my test results.[lr]
+[else]
+　[ruby text="なら"]楢[ruby text="さき"]崎は退行催眠の治療は準備が必要だとして、その日は検査の結果説明と症状についての説明だけで帰された。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Give it some thought before our next appointment.[」][prcm]
+[else]
+　「次の診察までによく考えてくるといい」と楢崎は言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+According to Narasaki, I'd forgotten the very thing that caused me to hallucinate.[lr]
+[else]
+　楢崎の見立てでは、私は幻覚を見るようになった原因を忘れているという。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Both that and my memory loss was apparently some sort of self-defense mechanism against a mental trauma.[lr]
+[else]
+　その原因を忘れたことも幻覚を見ることも、一種の自然治癒力が働いた結果だと診断しているようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako's disappearance was so shocking it made me forget how it even happened. If the hallucinations were simply caused by not having Takako in my life anymore, time could easily solve the issue.[prcm]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼の失踪のショックが原因でその記憶を忘れて、
+貴呼の不在がストレスとなって貴呼の幻覚を見ているのだとすれば、それは時間が解決してくれるかもしれなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Still, shock and stress being the cause just didn't sound right to me.[lr]
+[else]
+　しかし、ショックやストレスが原因とはどうしても思えなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was the most important person in my life.[lr]
+[else]
+　貴呼のことは私にとって何よりも大事だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd do anything if there was a way to make her come back.[lr]
+[else]
+　本当に貴呼が戻るのなら私は何でもするだろう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But neither she nor I could have wished for nonsense like this.[prcm]
+[else]
+　しかしこのような症状になることを私も貴呼も望む筈がなかった。[prcm]
+[endif]
+
+
+;＊
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[playbgm storage="bgm54"]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg06" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I returned to the clinic, I found Narasaki staring at her notebook.[prcm]
+[else]
+　再び診療所に来たとき、楢崎は診察室のデスクで手帳を開いていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you reading?[」][lr]
+[else]
+　「何を読んでいるの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/n_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She gave me a glance, and said "It's a record of some of my old patients."[lr]
+[else]
+　楢崎はこちらを見ると「以前診た患者の記録だよ」と答えた。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se22.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I sat down, Narasaki closed her notebook and stuffed it into a drawer.[prcm]
+[else]
+　こちらが椅子に座ると、楢崎は手帳を閉じて[ruby text="ひき"]抽[ruby text="だし"]斗にしまった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You said my hallucinations were special, but how do people normally start seeing them?[」][lr]
+[else]
+　「私の幻覚は特徴的と言っていたけど、大抵の場合はどのようにして見えるようになるの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/n_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki answered with an aloof "hmm."[prcm]
+[else]
+　ふむ、と楢崎は薄い反応を返した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Many hypotheses exist that pertain to hallucinations, but there's still a lot we don't know.[l] The most accepted one is the dopamine hypothesis.[l] Your nervous cells secrete too much dopamine in the synapses, and it makes the electrical impulses in your brain go haywire, showing you hallucinations.[l] There's another hypothesis that hallucinations occur when your self-awareness drops.[l] When you wake up in the morning, sometimes there's a short period when you don't remember who you are, right?[l] It's something like that, basically. The hypothesis states that you lose the ability to differentiate between things happening in reality and things happening inside your head.[」][lr]
+[else]
+　「幻覚の仕組みについては、いくつか仮説があって完全に解明できていない点も多いよ。[l]
+一般的な仮説のひとつにはドーパミン仮説が知られている。[l]
+シナプスを移動するドーパミンが過剰分泌されると、思考が暴走して妄想が起きるという説。[l]
+もうひとつ、自己認識機能が低下することによって幻覚を見る説もある。[l]
+朝、目が覚めて[ruby text="ゆめ"]夢[ruby text="うつつ"]現の状態では、少しの間自身が誰であるか認識できない感覚があるだろう？[l] 
+あれと同じような仕組みで、現実に起こっている事と頭の中で考えている事とが区別できなくなる説だ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, those are the most common cases, anyway.[」][prcm]
+[else]
+　というのがまあ一般的な幻覚の仕組みじゃないかな、と楢崎は言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How do you treat them?[」][lr]
+[else]
+　「その場合はどうやって治療すればいいの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]In both cases, you've got do away with the cause first.[l] There are many things that can cause dopamine excess, but in most cases, it's induced by drugs.[l] Most of the time, you can take care of that by simply taking medicine with dopamine antagonists.[l] As for the drop of self-awareness, it's usually the result of stress after a strong mental trauma.[l] In that case, you first have to elucidate the concrete cause and solve it for the patient.[」][prcm]
+[else]
+　「どちらの仮説の場合も、その原因を断つことだな。[l]
+ドーパミンの過剰分泌の原因は様々だが、主な原因は麻薬などの薬物が摂取であることされている。[l]
+このような場合はドーパミン拮抗薬である抗精神病薬が有効なことが多いな。[l]
+自己認識機能低下の原因も様々だが、主に心的外傷後ストレス障害なんかが考えられる。[l]
+この場合は、ストレスの原因を明らかにして解消することだな」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] It sounds pretty complicated.[」][lr]
+[else]
+　「ふうん。[l]なんだか小難しいわね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/n_img/f01_p02_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't worry about it.[l] Your case is different, and besides, you can leave all the complicated stuff to me.[」][lr]
+[else]
+　「問題ないさ。[l]キミの症状とは違うし、難しい事は私が考えればいいんだからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki gave me a smile.[prcm]
+[else]
+　と、笑いながら楢崎が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if determining the cause will also make my hallucinations disappear.[」][lr]
+[else]
+　「私の症状も原因がわかれば治るかしら」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/n_img/f01_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Everything has a cause and a reason.[l] We'll start from clarifying those.[」][prcm]
+[else]
+　「何事にも原因や理由がある。[l]まずはそれを明らかにすることから始まる」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Everything had a reason.[lr]
+[else]
+　何事にも理由がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was something I heard Narasaki say before.[lr]
+[else]
+　それは楢崎からいつか聞いた言葉だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Actually, I think I'd heard her say something along those lines multiple times.[lr]
+[else]
+　楢崎から何度か似たような言葉を聞いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And I agreed with the idea.[prcm]
+[else]
+　それについては同感だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think my symptoms have a reason, too.[」][lr]
+[else]
+　「私もこの症状には理由があると思う」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I told Narasaki what I'd been thinking about since last night.[prcm]
+[else]
+　昨晩から考えていたことを楢崎に伝える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think...[l] I think I've mistaken the date of Takako's disappearance to make sense of why they'd both be in the office at the same time.[l] That has to be it.[l] But I'm still not sure why my hallucinations happen in the first place.[l] Even if her disappearance was an incredible shock to me, I doubt I'd want to deceive myself just so I wouldn't have to face it. I just wouldn't do something like that.[l] So I want to remember what really happened and figure this thing out properly.[」][lr]
+[else]
+　「たぶん。[l]貴呼の失踪の時期を間違えていたことは、事務所で[ruby text="いぬ"]犬[ruby text="かい"]飼と貴呼が同時にいることを不自然に思わなくするため。[l]
+それは間違ってないと思う。[l]だけど、幻覚を見る理由はやっぱりわからない。[l]
+貴呼の失踪が心的外傷になったとしても、私の性格上、幻覚を見る事で私の中のそういった傷やら何かが癒えるとも思えないの。[l]
+だから事実を思い出して、ちゃんとした理由を知っておくべきだと思うわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/n_img/f01_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki nodded.[prcm]
+[else]
+　それを聞いた楢崎は「わかった」と頷いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You might end up remembering something unpleasant, though.[」][lr]
+[else]
+　「しかし、辛いことを思い出すかもしれないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried imagining what it could possibly be, but nothing came to mind.[lr]
+[else]
+　どのような辛い出来事があるだろうか考えてみたが、あまり思いつかなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Putting that aside, though, I was more scared of living my life seeing things that weren't real.[prcm]
+[else]
+　それよりも、このまま他人と違うものを見続けて生活することの方が気になっていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If it's related to Takako, I can't allow myself to just forget it.[」][prcm]
+[else]
+　「それが貴呼のことだとしたら私にとって忘れてはいけないことだわ」[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg06" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki picked up the five yen coin from the desk.[prcm]
+[else]
+　楢崎は五円玉を手に握って言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you really going to use that?[」][lr]
+[else]
+　「本当にそれを使うの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki made a silent smile as she attached a piece of string to the coin.[prcm]
+[else]
+　私が小声で聞くと、楢崎は絡まった糸を解きながら少し笑うだけだった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/n_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll use hypnosis to bring out memories from your subconsciousness to the surface.[l] However, there's no guarantee they'll be real memories.[l] There were cases when a hypnotized patient started talking about being kidnapped by aliens, or their memories from the previous life.[l] The brain has a hard time differentiating between real memories and delusions.[」][lr]
+[else]
+　「退行催眠は潜在意識にある記憶を浮かび上がらせる。[l]しかし、必ずしも本当に起きたことを思い出すわけではない。[l]
+海外では退行催眠で宇宙人に誘拐された経験を語りだしたり、前世の記憶を思い出し語るなんていう例もある。[l]
+これらは、妄想が実際にあったことのように浮かび上がった例だ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So if something like that happens, what are we going to do?[」][lr]
+[else]
+　「それじゃあ、どうするつもり？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll ask you questions.[l] Then I'll try my best to lead you to the answers we need while you're in an unconscious state.[」][prcm]
+[else]
+　「私は催眠状態のキミにいくつか質問する。[l]催眠状態で潜在意識が取り出せる状態になったとき、その質問で上手くキミが失くしてしまった記憶に誘導する」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So... it's all up to you, basically?[」][lr]
+[else]
+　「つまり、貴方の腕次第なのね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/n_img/f01_p02_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep.[l] Don't worry, I'm actually pretty good at this.[l] Are you ready?[」][lr]
+[else]
+　「そういうこと。[l]腕なら安心していい、私はこれが得意なんだ。[l]いいかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I am.[」][prcm]
+[else]
+　「構わないわ」[prcm]
+[endif]
+
+;＊
+[playse buf = 0 storage=se112.wav]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down into a cozy armchair, almost lying down. Narasaki came closer and told me to relax.[lr]
+[else]
+　大きめのゆったりとした一人がけのソファにほぼ横になるように座ると、楢崎はその隣に来て、ゆっくり力を抜くようにと言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then she told me to watch the coin.[lr]
+[else]
+　それから、五円玉をじっと見るように言い。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As it started to slowly sway, she began to talk.[prcm]
+[else]
+　それをゆっくりと揺らすと、またゆっくりと楢崎は喋った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Try remembering that trip.[」][lr]
+[else]
+　「あの旅行のことを思い出してみてくれ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I focused my thoughts on the last trip I had with Takako.[prcm]
+[else]
+　貴呼と最後に行った旅行のことを思い出す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A street paved with stones... brick buildings around me... Takako and I are walking together.[」][prcm]
+[else]
+　「石畳の街路、レンガの街、貴呼と二人で歩いている」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A street paved with stones... brick buildings around me... Takako and I are walking together.[lr]
+[else]
+　石畳の街路、レンガの街、貴呼と二人で歩いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt the nostalgic scent of a town I visited a long, long time ago.[prcm]
+[else]
+　いつか訪れたあの街の、懐かしい匂いを感じる。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="029.ks" target=*029
+
+

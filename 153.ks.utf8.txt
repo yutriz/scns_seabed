@@ -1,0 +1,693 @@
+*153| Morning in the cheap hotel
+; *153|安ホテルと朝
+[fbfstoretitle eng="Morning in the cheap hotel" jp="安ホテルと朝"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[fadeinse buf = 1 storage=se31.ogg time=1500]
+[wf buf=1]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 195"]
+[eval exp="sf.ItRelease = 196"]
+[endif]
+
+*| Morning in the cheap hotel
+; *|安ホテルと朝
+[fbfstoretitle eng="Morning in the cheap hotel" jp="安ホテルと朝"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The shower I hoped would help wake me up felt like a tropical downpour even after the slightest turn of the handle.[lr]
+[else]
+　目覚まし替わりに入った室内シャワーは、少し蛇口を捻るだけで台風が直撃したときの豪雨ほどの水圧になった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I promptly washed my sweat off, then wrapped myself in a towel.[prcm]
+[else]
+　軽く汗を流してから、取っ手にかけてあったバスタオルを体に巻いた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[fadeoutse buf = 1 time=1000]
+[backlay]
+[fbfscale_image storage="item36" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Freshly reinvigorated, I left the bathroom with steady steps and finished the can of beer I had left on the table.[lr]
+[else]
+　今度はしっかりした足取りで室内シャワーを出ると、テーブルに置いてあった飲みかけの缶ビールを飲み干した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It tasted like warm, bitter water.[lr]
+[else]
+　泡は薄く、苦いぬるい水の味がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I closed my eyes and began wiping my hair with the towel resting on my shoulders, a blue light slowly extended along the inner side of my eyelids.[prcm]
+[else]
+　立ったまま目をつぶって、肩にかけたタオルで髪を拭いていると、瞼をさして青白い光がじくりと滲んだ。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+
+;///////
+
+[playbgm storage="bgm54"]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have a good day.[」][prcm]
+[else]
+　「行ってらっしゃいませ」[prcm]
+[endif]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[playse buf = 1 storage=se25.ogg]
+[fbfscale_image storage="bg108" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A cold gust of wind rattled the collar of my coat as I stepped out of the hotel.[lr]
+[else]
+　ホテルの外に出ると、冷たい風が吹いてコートの襟をはためかせた。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I left the still fairly deserted shopping district and continued down to a barber shop I saw by the park. A young woman with glasses seemed to be in the process of opening the shutters and setting up the signboard of the establishment.[lr]
+[else]
+　まだ人通りの少ない商店街を抜けて公園の近くにあった美容室に行くと、ちょうど眼鏡をかけた店員が美容室のシャッターを開けて看板を外に出すところだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our eyes met.[prcm]
+[else]
+　コキコキ、と首を鳴らしている若い女性店員と目が合う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good morning.[」][lr]
+[else]
+　「おはようございます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The woman made a curt bow.[prcm]
+[else]
+　そう言った店員に軽く会釈で返す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you open?[」][lr]
+[else]
+　「もうやってるのかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, just moments ago.[l] Do come inside.[」][prcm]
+[else]
+　「ちょうど今開けたところです。[l]どうぞ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg112" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She opened the glass door with a tall pachira houseplant right next to it and urged me inside.[lr]
+[else]
+　それから店員は少し背の高いパキラの観葉植物の隣にあるガラスの扉を開いて、中へと促した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was only a single chair in the classical western interior.[prcm]
+[else]
+　先日見た外観通り、さっぱりとした西洋クラシックな作りの内装の店内には、椅子がひとつしかない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can hang your coat for you.[」][lr]
+[else]
+　「上着預かりますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took off my jacket and handed it to her.[lr]
+[else]
+　上着を脱いで渡す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As soon as I seated myself in the chair, she spun it so that I'd be facing the mirror.[prcm]
+[else]
+　それから、こちらを向いていた椅子に座ると、くるりと鏡台の方へ向きを変えられた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What would you like?[」][lr]
+[else]
+　「どうなさいます？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I slipped my arms through the sheet protecting me from stray locks of hair while she fiddled with the chair to raise me up.[prcm]
+[else]
+　髪避けのフードの袖に腕を通してクルリと巻くとキコキコ、と音がして椅子が持ち上がった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just a regular haircut. Oh, and some shampooing as well.[」][lr]
+[else]
+　「カット、あと洗髪とセットをお願い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[l] What kind of haircut would you like?[l] Do you wish to consult our catalogue?[」][lr]
+[else]
+　「はい。[l]カットはどんな風にしますか。[l]カタログ見ます？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I'm fine with what I have.[l] Just make it a few centimeters shorter.[」][lr]
+[else]
+　「カタログはいい。[l]このままでいいよ。[l]二センチ位伸びたから揃えてくれるかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at the length I wanted my hair to be.[prcm]
+[else]
+　眼鏡の店員と鏡越しに、髪を手で指しながら示した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Understood.[l] I'll undo your hair, then.[」][lr]
+[else]
+　「わかりました。[l]髪解きますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I nodded, and she removed my hair clip and placed it on the cabinet.[lr]
+[else]
+　頷くと、髪留めを外してカチャン、とそれ用の台の上に置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt my head being pulled backwards as she brushed my hair.[lr]
+[else]
+　串で梳くと、軽く首を後ろに引っ張られた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes and inhaled a breath.[prcm]
+[else]
+　目を閉じて、息をつく。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I was suddenly pulled out of my slumber by the chirping of some bird.[lr]
+[else]
+　しばらく目を閉じているとピイピイ、と鳥の音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my eyes and looked at the mirror to see a birdcage by the register, with a red parrot cocking its head within.[lr]
+[else]
+　目を開けて鏡を見るとレジの近くに鳥のケージがあり、中で頬に赤マルを付けたインコが首をかしげていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The barber sprinkled and brushed my hair with experienced motions. She was about to place the scissors against my head when our eyes met in the mirror.[lr]
+[else]
+　店員は慣れた手つきで霧吹きをあてた髪を梳いて、掬った髪に鋏をあてようとしていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　気がついた店員が鏡を見ると、もう一度目が合う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She made a few exaggerated blinks like a character from some western cartoon.[prcm]
+[else]
+　店員は眼鏡の奥で、健康的な二重まぶたを海外のアニメ映画のキャラクターのように瞬きさせた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is this how long you would like it?[」][lr]
+[else]
+　「長さは、このくらいでいいですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, that's about right.[」][lr]
+[else]
+　「それくらいでいいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The narrow room held a register, a sofa, a chair and a mirror for cutting hair, a cabinet with the usual barber items inside, and an indoor plant.[lr]
+[else]
+　手狭な店内にはレジとソファ、理髪用の椅子と鏡台、道具入れといった基本的な美容院にある用具と、インテリアの洋箪笥、観葉植物などがある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Glancing around, I also spotted a small old TV to my right, near the ceiling.[lr]
+[else]
+　右手奥の天井近くには、小さな旧いテレビがある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see the reflection of my face on its dark screen.[prcm]
+[else]
+　消灯したテレビは黒い面に見上げている顔を映していた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, could you please not move your head?[」][lr]
+[else]
+　「頭下げてもらえます？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, sorry.[」][lr]
+[else]
+　「ああ、悪い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Would you like me to turn on the TV?[l] As you can see, it's pretty old, so I can't vouch for the quality of the screen.[」][lr]
+[else]
+　「テレビつけます？[l] 見たとおり古いんで、映りはあまりよくないですけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's okay. I don't really want to watch TV.[」][lr]
+[else]
+　「いや、テレビを見たいわけじゃなかったんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a sharp, slicing sound, after which a lock of my hair fell onto my knees.[prcm]
+[else]
+　チョキン、と音がしてパサリ、と膝の上に髪が落ちた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You have nice hair.[」][lr]
+[else]
+　「髪綺麗ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think so?[」][lr]
+[else]
+　「そうかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You must spend a lot of time maintaining it.[」][lr]
+[else]
+　「お手入れとか、大変そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could feel the sheet on my shoulders getting heavier as my hair gradually piled up on it with each new slice from the barber's scissors.[prcm]
+[else]
+　シャキシャキ、とハサミの軽快な音がするたびに、フードに髪が流れていく重みが伝わる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you come from the city?[」][lr]
+[else]
+　「都会の方からですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can tell?[」][lr]
+[else]
+　「分かるのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can more or less tell from the way you're dressed.[l] That coat was brand new, wasn't it?[l] And it's from a minor brand, too. You won't find things like that around here.[」][lr]
+[else]
+　「格好とかで何となく。[l]さっきかけたコートって新着ですよね？[l] ああいったマイナーブランドの新作はこっちだと中々手に入らないんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're probably right.[l] They said something along those lines in the store, I think.[l] You're pretty knowledgeable about these things, aren't you?[」][lr]
+[else]
+　「多分合ってる。[l]服屋もそんなこと言っていたよ。[l]なかなか詳しいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You could say it's a hobby of mine.[」][prcm]
+[else]
+　「そういうの好きですから」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh? Do you work alone in this shop?[」][lr]
+[else]
+　「へえ、この店はあなた一人で？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] I used to work at Harajuku.[」][lr]
+[else]
+　「ええ、そうなんですよ。[l]以前は原宿の美容院で働いていたんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa.[l] Isn't that, like, the hotbed of the industry?[」][lr]
+[else]
+　「凄いね。[l]あの辺はその手のメッカじゃないのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The barber let out an embarrassed laugh.[prcm]
+[else]
+　あはは、と店員が笑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, things have changed.[l] At one point, we had a barber boom of sorts and accepted lots of jobs, but most people these days seem to prefer cheaper options located closer to their homes. As you might imagine, the whole thing kind of faded out over time.[」][lr]
+[else]
+　「今はあまり良くないんですよ、向こう。[l]一時は美容師ブームで仕事も多かったけれど、最近は地方のチェーン店が進出してきて、割安なんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And now you're back here in the countryside?[」][lr]
+[else]
+　「それで、地元に戻ったのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] But I'm glad I made that choice.[l] I get customers just because I have a reputation of having worked in a big city.[l] I saved up some money during those days, so I had no problem establishing my own shop over here.[」][lr]
+[else]
+　「そんなところですね。[l]でも、良かったんです。[l]こっちでは、都会で働いてたってだけでお客さんは集まるし。[l]向こうで忙しかった分、貯金が出来てたんで、それで自分の好きなお店がやれるんだから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, that sounds pretty nice.[」][prcm]
+[else]
+　「そういうのも、いいかもしれないな」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where are you from?[」][lr]
+[else]
+　「地元はどちらですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm from Kyushu, actually.[」][lr]
+[else]
+　「九州の方だよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] I've never been there myself.[」][lr]
+[else]
+　「そうなんですか。[l]私、九州って一度も行ったことがないです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My hometown is famous for its hot springs.[」][lr]
+[else]
+　「こっちの地元は、温泉が有名だよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that sounds nice.[」][prcm]
+[else]
+　「いいですね温泉」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We also had a port not unlike the one in this town.[」][lr]
+[else]
+　「あと、向こうも海があって港がある。[l]ここと似たようなもんさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="153_2.ks" target=*153_2
+

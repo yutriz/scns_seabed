@@ -1,0 +1,758 @@
+*045_2| Sanae as a Fish
+; *045_2|さかなの早苗
+[fbfstoretitle eng="Sanae as a Fish" jp="さかなの早苗"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[fadeinbgm storage="bgm31" time=3000 loop=true]
+[wb]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg85_4" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 58"]
+[eval exp="sf.ItRelease = 59"]
+[endif]
+
+
+*| Sanae as a Fish
+; *|さかなの早苗
+[fbfstoretitle eng="Sanae as a Fish" jp="さかなの早苗"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried dropping by the night duty room later that night, but Mayuko wasn't there.[lr]
+[else]
+　夜になり宿直室を訪ねるが、繭子は留守だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With the door locked and me unable to wait inside, I had no choice but to return to my own room and lay down on the bed.[lr]
+[else]
+　しかも珍しく扉に鍵をかけていたので宿直室で待つこともできず、仕方なく自室に戻って大人しくベッドに横になる。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The cold sheets I pulled on robbed me of warmth.[lr]
+[else]
+　布団をかぶると、冷え切った布団が体温を奪った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stretched my legs as far as I could, ignoring the cold.[prcm]
+[else]
+　体が感じる寒さをを無視するように肢体をつま先までのばした。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule3" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After shifting to my back, I closed my eyes.[lr]
+[else]
+　仰向けになり、目を閉じる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had been a while since I'd seen that weird pattern behind my eyelids.[lr]
+[else]
+　もやもやと、久しぶりに瞼に映る妙な模様が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It would sometimes flicker like an old film reel, and there were letters spinning around in a spiral pattern.[lr]
+[else]
+　模様はときに、映画のフィルムのようにチカチカと光り、ときには知らない文字がグルグルと螺旋を描いているように見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon closer inspection, I realized it was the alphabet.[lr]
+[else]
+　ひとつの文字はよく見るとアルファベッドのように見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered if it spelled out any sensible words, but soon realized that the letters would deform and change shape once I began to focus on them, so I stopped looking.[prcm]
+[else]
+　何か意味のあることでも書いているのかと期待したが、想像したアルファベッドに形が変わっていくことに気が付いて、見るのをやめた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All the conversations I had throughout the day raced through my mind.[lr]
+[else]
+　寝ようと決めたあとには、その日の色々な会話が頭に浮かんだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+If only I had said this or that back then.[lr]
+[else]
+　あれはあのように、これはこのように答えていれば。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I began to ponder my conversation with Sanae, I suddenly realized that she never really told me why she was originally sent here.[lr]
+[else]
+　そんなことを考えながら早苗との会話を反芻していると、そういえば結局「早苗が療養所に来た理由は聞けなかったまま」だったことに気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered what was wrong with her.[lr]
+[else]
+　それは一体、何が問題だったんだろう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Was it some kind of untreatable fits?[prcm]
+[else]
+　やはり発作のせいだろうか。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She said that only people who couldn't live normally on the outside would be sent here.[lr]
+[else]
+　早苗が言うには、早苗には、外で暮らしにくくなる問題があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then she got better after spending some time at the sanatorium.[lr]
+[else]
+　しかし、療養所に来てその問題は無くなり。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But she never left, realizing that life was more convenient in this place.[lr]
+[else]
+　そしてその頃には療養所の方が暮らしやすくなり、そこに留まった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nowadays, she worked mornings in the library, and spent the rest of the day reading either there or in her own room.[lr]
+[else]
+　今では、昼間は図書館で働き、閉館後は図書館か自室で本を読んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For an extreme bookworm like Sanae, life at a sanatorium was perhaps more comfortable than in the outside world.[prcm]
+[else]
+　本が好きな早苗にとってみれば、初めから療養所の生活の方が肌に合っていたのかもしれない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if that could be true...[」][lr]
+[else]
+　「そんなことってあるのだろうか？」と思う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought this was a place for people to seek temporary solace from the hardship and fatigue of the real world.[lr]
+[else]
+　ここの療養所というのは、そもそも外での疲れを療養するための場所であると思っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An environment completely isolated from the outside, where you'd relax and collect your thoughts for a while. Then once you had rested up, you would think of a way to resolve your problems.[prcm]
+[else]
+　外とは何の関係もない環境に入って「まあ、外のことは置いておいてひとまず休もう。[l]そのうち落ち着いたら問題に取り組もう」[lr]と、そんな場所だと考えていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, no matter how I looked at Sanae, she didn't seem to be particularly ill.[prcm]
+[else]
+　少なくとも今ここで早苗を見るに、何か問題があるようには見えない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Was she...[lr]
+[else]
+　元々。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Was she more suited for life in a sanatorium to begin with?[lr]
+[else]
+　…元々外よりも、療養所の方が適していたのだろうか。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Or did she only become that way after coming here?[prcm]
+[else]
+　それとも療養所に来てから、そうなったのか。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered what she told me about how the whites of human eyes evolved.[prcm]
+[else]
+　ふと、人の白目の進化について思い出す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With them, you could indicate the direction of your gaze to your peers.[lr]
+[else]
+　白目があると視点が相手に伝わる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In nature, it had the disadvantage of potentially revealing your escape route or target to others.[lr]
+[else]
+　自然では、逃げる方向や狙っている獲物を相手に知られてしまうデメリットになる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, in society it had the benefit of helping communication.[lr]
+[else]
+　社会では、視線でコミュニケーションを行えるメリットになる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae loved books and lived her life completely immersed in them.[lr]
+[else]
+　早苗は本が好きで、本に浸かるように暮らせる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, being outside, she'd have to allocate some of that time to other things, and that was most likely a big drawback for her.[lr]
+[else]
+　外では、他にいろいろなことをやらなければならないのでデメリットになる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In here, she could work at a library, which was obviously a huge bonus.[prcm]
+[else]
+　療養所では、図書館で仕事ができるのでメリットになる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt that something about this wasn't quite right.[lr]
+[else]
+　何か違う気がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I began to think. What problem in the outside world could've driven her to come to this place?[lr]
+[else]
+　そもそも、早苗が外でどのような問題があったかについて考えていたのだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Yet my train of thought soon drifted toward comparing the outside world to the sanatorium, nature to society, and evolution itself.[lr]
+[else]
+　それなのに、外と療養所、自然と社会、進化の過程、と好き放題に風呂敷が広がったのだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I decided to return to my initial point.[prcm]
+[else]
+　少し話を戻そう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae faced a certain problem outside. As a result, she ended up at the sanatorium.[lr]
+[else]
+　早苗は外で問題があり、療養所に来た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Here at the sanatorium, her problem was solved.[lr]
+[else]
+　療養所でその問題はなくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She even preferred to live here now.[prcm]
+[else]
+　今では、療養所の方が暮らしやすい。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+If I had to draw a parallel with evolution, she was like a fish who used to live in the sea, but due to some problem — either a lack of food or too many predators — ended up evolving lungs to move to the surface.[lr]
+[else]
+　これを進化で例えてみると、海にいた魚は食べ物が少なくなった、または天敵が多くなったかの問題が生じ、肺を作って陸に出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the surface, there was plenty of food and few predators.[lr]
+[else]
+　陸では食べ物があり、天敵はいなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As she spent her time on the surface, she developed arms and legs — life there became even more convenient.[prcm]
+[else]
+　陸で暮らしているうちに手や足ができて、陸の方が暮らしやすくなった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I still felt like something was off about this.[lr]
+[else]
+　まだ何か違う気がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In this scenario, the fish left a poor environment for a richer one.[lr]
+[else]
+　これだと海から陸という豊かな環境に出てきた感じがする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sanatorium, however, was an environment both smaller and poorer than the outside world.[lr]
+[else]
+　しかし、実際の療養所は外より狭くて豊かではない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It reminded me of whales and dolphins that, despite having spent some time on the surface, always returned to the sea.[prcm]
+[else]
+　どちらかというと、一旦陸に出てきたが海に帰ったクジラやイルカのイメージだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae, unable to endure the rigorous competition that the otherwise plentiful and delicious food on land required, decided to return to the calm sea.[lr]
+[else]
+　早苗も一旦陸に出てみたが、賑やかな陸での食べ物の取り合いとかそんな競争に嫌気がさして、静かな海に帰っていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae was like a fish.[prcm]
+[else]
+　さかなの早苗。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I imagined her sitting at the bottom of the sea, reading a book, and chuckled to myself.[prcm]
+[else]
+　海の底でひとり、本を読んでいる魚の早苗を想像して少し笑ってしまう。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg85_4" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wished I could tell her to come up and bask in the sun at least once in a while.[lr]
+[else]
+　早苗に、本もいいけどたまには水面に出て陽の光でも浴びたらどうだろうと提案する。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could imagine her making a troubled face at that comment.[lr]
+[else]
+　それを聞いた早苗の困った表情が容易に想像できた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was looking at me.[lr]
+[else]
+　そして、早苗はこちらを見上げている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt a strong sense of déjà vu.[prcm]
+[else]
+　強い既視感を感じた。[prcm]
+[endif]
+
+
+
+[bgmopt volume=50]
+[playse buf =0  storage=se170.ogg]
+[quake time=100 hmax=0 vmax=20]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]ssshwh*[lr]
+[else]
+　ブツ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I suddenly heard a sound similar to what a phonograph would make as it reached the end of the record.[prcm]
+[else]
+　と、レコードの再生終了時のような音が耳の中から聞こえた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All my thoughts were swept away in an instant.[lr]
+[else]
+　それは、いつもの耳鳴りの発作の前兆だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That was the sign of an ear-ringing fit.[lr]
+[else]
+　机の上のものを一斉に引き出しに片付けるように、今考えていることを頭から消した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I fell completely motionless, trying to avoid causing any rustling.[lr]
+[else]
+　体の動きを止めて、衣擦れの音が起きないようにした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a deep breath so as not to panic.[lr]
+[else]
+　焦らないように、深呼吸をする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the sound of the air.[prcm]
+[else]
+　耳から、空気の音が聞こえる。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=1500]
+[fadebgm time=1000 volume=100]
+[backlay]
+[fbfscale_image storage="bg85_4" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Listening in, I slowly confirmed that no sounds seemed to be exaggerated.[lr]
+[else]
+　しばらくそのままで空気の音を聞いて、音が大きくならないことを確かめた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The ear ringing didn't happen.[lr]
+[else]
+　耳鳴りは起きなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Exhaling, I glanced at the clock on the side table.[lr]
+[else]
+　息をついてから、チラリとサイドテーブルに置いてある時計を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was 1 AM.[lr]
+[else]
+　時計の針は午前一時を指していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Roughly the time I thought it would be.[prcm]
+[else]
+　時計を見る前に予想した時間に近かった。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes again.[lr]
+[else]
+　再び目を閉じる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled the already warm sheets up to my shoulders.[lr]
+[else]
+　すっかり暖かくなった布団をしっかり肩の上まで掛け直す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I fixed the position of the pillow to make sure my head was at the same height it would be when I was standing straight.[prcm]
+[else]
+　枕の位置を調節して、頭の高さをまっすぐ立っている時とほぼ同じになるようにした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a while, I saw that weird pattern again.[lr]
+[else]
+　しばらくして、あのもやもやが見えてくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I could see Sanae in the form of a fish swimming through the darkness.[lr]
+[else]
+　真っ暗でもやもやした海を、さかなの早苗が泳いでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sleep wouldn't come just yet.[prcm]
+[else]
+　まだ、眠りは訪れない。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle4]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="046.ks" target=*046
+
+

@@ -1,0 +1,132 @@
+*122_2| September 22, 1975
+; *122_2|1975年09月22日
+[fbfstoretitle eng="September 22, 1975" jp="1975年09月22日"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgOn_t"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgLayer_T"]
+
+[msglayer_t]
+[playbgm storage="bgm17"]
+[wait time=3000]
+[backlay]
+[playse buf = 1 storage=se57.ogg]
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_t]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 152"]
+[eval exp="sf.ItRelease = 153"]
+[endif]
+
+
+*| September 22, 1975
+; *|1975年09月22日
+[fbfstoretitle eng="September 22, 1975" jp="1975年09月22日"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+September 22, 1975[lr]
+[else]
+　[hch text="1975" expand=true]年[hch text="9"]月[hch text="22"]日[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The clouds that had been covering the skies since early in the morning began to shower the ground with rain come noon, forcing us to change up our plans of playing outside and instead settle for a game of musical chairs inside.[dlr][r]The children circled around a bunch of chairs as a simple piano melody played in the room.[dl] As I failed to grab a chair in the first round, I was now watching them play from the sidelines.[lr][r]
+[else]
+　朝から空を覆っていた雲が、午後になって雨を降らせた。[l]
+幼稚園では、外で行われるはずだったお遊戯が中止になって、室内での椅子取りゲームが始まっていた。[l]
+単調なピアノの音楽が流れる中、円状に並べられた椅子の周りを園児が回っている。[l]
+一回目のゲームで椅子が取れなかったので、今はその光景を外野から座って見守っていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was still with the others, alert and ready for the song to stop playing at any second.[dl] She had a dead serious expression on her face, reminding me of cowboys during quick draw scenes in western flicks.[lr][r]
+[else]
+[ruby text="たか"]貴[ruby text="こ"]呼は、まだグルグルと回る輪の中に居て、ピアノの音楽が止まる時を見計らっていた。[l]
+座っていた私の前を通った貴呼は真剣な顔で、まるで西部劇に出てくる早打ち勝負のガンマンのようだった。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The music suddenly stopped.[lr][r]
+[else]
+ふと、音楽が止んだ。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The children dashed toward the chairs.[dl] Takako was the first to react and started toward the closest one, but due to her position, she was further away from[r]either of the chairs than the children around her.[prcm]
+[else]
+ダダダ、と椅子の周りを歩いていた園児たちが駆け出して、園児たちよりも少ない椅子に駆け寄った。[l]
+あたりをつけていたのか、踏み出した足のタイミングが良かったのか、いち早く飛び出した貴呼は一番近くにある椅子に駆け寄る。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako gave up on the chair to the left, seeing how a boy had almost already reached it. Instead, she twisted her body and leaped toward the chair to the right.[lr][r]
+[else]
+しかし、飛び出した位置は、前の椅子と次の椅子の間だったため、他の園児よりも椅子までの距離が長い。[l]
+貴呼は、隣の園児がもう届きそうな左の椅子を諦めると、体をねじって右の椅子へと飛んだ。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She crashed into the shoulder of the boy who was about to sit down on it and swept him away before ultimately landing on the chair.[dl] The chair tilted to the side on two of its legs, but Takako managed to balance it back down.[lr]
+[else]
+そっちの椅子を取ろうとしていた、男の子に肩をぶつけながらも、その勢いのまま椅子に座る。[l]
+椅子は勢いに片足を浮かせたが、何とかこけずに収まった。[lr]
+[endif]
+
+[r]
+;＊
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That day marked her first ever victory in a game of musical chairs.[dl] Her eyes sparkling in triumph, Takako received a golden origami medal from the nurse.[dl] She spent the rest of the day with that thing dangling from her neck.[lr][r]
+[else]
+　その日、貴呼は椅子取りゲームで初めて優勝した。[l]
+ずっと欲しがっていた金の折り紙で折られたメダルを保育園の先生から貰い、目を輝かせた。[l]
+貴呼はその後の遊戯の時間も、お昼寝の時間と自由時間も、ずっとピンクのリボンが付いたそれを首にかけて過ごしていた。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako's mother was the first to show up when it was time for us to go home.[dl] Before leaving, Takako handed the medal to me.[dl] I watched it sparkle in the[r]evening sun, up until my parents came to pick me up.[prcm]
+[else]
+帰りの時間になると、先に貴呼の母親が車で迎えに来た。[l]貴呼は別れ際に、首に下げていたメダルを私にくれた。[l]
+複雑に折られたメダルで、迎の車が来るまで、夕焼けの陽の光でキラキラ、と光るそれを眺めた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+
+; FBF: End of vertical section.
+[eval exp="f.fbfisverticaltext = false"]
+
+@jump storage="122_3.ks" target=*122_3
+
+
+
+

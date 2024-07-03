@@ -1,0 +1,698 @@
+*172| Water Game
+; *172|ウォーターゲーム
+[fbfstoretitle eng="Water Game" jp="ウォーターゲーム"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle3"]
+
+[clickskip enabled=false]
+[playbgm storage="bgm35"]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg147" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+
+*| Water Game
+; *|ウォーターゲーム
+[fbfstoretitle eng="Water Game" jp="ウォーターゲーム"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once we'd paid our bill, we stepped outside into the cold night.[lr]
+[else]
+　会計を済ませて二人でビルの外に出ると夜の冷たい空気が肌を刺した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I noticed Sachiko staggering while I was adjusting the position of my scarf.[lr]
+[else]
+　私がマフラーをなおしていると隣で佐知子がよろめいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I clasped her arm out of reflex.[prcm]
+[else]
+　腕を掴むと佐知子は「大丈夫」と言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was that a bit too much for you?[」][lr]
+[else]
+　「少し飲みすぎたかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I'm fine.[l] I didn't realize how hot I was until I got outside.[l] But I'm okay now.[」][lr]
+[else]
+　「平気よ。[l]外に出てようやく体が温まってるのがわかったわ。[l]これくらいが丁度いいのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was close to midnight, but the neon signs all around us made the night hardly any darker than the middle of the day.[prcm]
+[else]
+　冬の街中は夜だというのに建物やネオンの灯りで眩しかった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="item37" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As we were passing by the park near the station, we spotted a fully decorated Christmas tree.[lr]
+[else]
+　駅前の公園まで行くと、中心にある大きな木がクリスマスツリーの装いになっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're getting a bit ahead of themselves, aren't they?[l] I remember seeing Halloween decorations here just a few weeks ago.[」][prcm]
+[else]
+　「少し気が早いんじゃないかしら。[l]この間までハロウィンの飾り付だったのにね」と佐知子が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's nice to have something to look forward to.[」][lr]
+[else]
+　「楽しみがあるのはいいことだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Something to look forward to, huh.[」][lr]
+[else]
+　「楽しみねえ」[lr]
+[endif]
+
+[r]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="item38" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, we passed through the station gates and ascended to the train platform.[lr]
+[else]
+　それから私と佐知子は定期券で改札を抜けてホームへと登り電車を待った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There weren't that many people there at this hour.[lr]
+[else]
+　週末でもそこまで込むことのないホームには殆ど人はいなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko's scarf hid half of her face, but I could still see her exhaling white breaths.[prcm]
+[else]
+　佐知子はマフラーに埋まるように首を窄めて白い息を吐いていた。[prcm]
+[endif]
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you remember all your Christmas presents from previous years?[」][lr]
+[else]
+　「クリスマスにもらったプレゼントって覚えているかい？」と私は佐知子に適当な質問をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[l] I remember getting lots of clothes when I was little, though.[」][lr]
+[else]
+　「殆ど覚えてないけれど。[l]小さい頃はよく洋服をプレゼントされたわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, really? What kind?[」][lr]
+[else]
+　「へえ、どんな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I recall a frilly skirt, and some dress with tons of ribbons.[l] I wanted more clothes that were easy to move in, like the ones Takako used to wear, so I remember not being very happy with my presents.[」][lr]
+[else]
+　「フリフリのスカートとかリボンのついたドレスみたいなものね。[l]
+私は貴呼の普段着ているようなもっと動きやすい服が欲しかったから、貰った服のことはかえってよく覚えているわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your parents probably wanted you to grow up into the kind of lady these clothes would fit.[」][prcm]
+[else]
+　「親御さんはきっとそういう服が似合う女性になって欲しかったんだよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko's clouded expression suddenly cleared up.[prcm]
+[else]
+　佐知子は少し曇らせた表情を元に戻して言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]One time, I remember getting this weird toy from Takako.[l] It was a small, transparent box with water where you had to get rings on a big coral by pushing a button that created a stream inside and swept everything around.[」][lr]
+[else]
+　「そういえば、そのとき貴呼も変な玩具をくれたわ。[l]水の中で輪投げする玩具なの。[l]
+これくらいのケースに水が入っていて、ボタンをおして水の中の輪を動かすの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I know that one.[l] I've seen something like that at my hairdresser's.[」][lr]
+[else]
+　「ああ、知ってるよ。[l]床屋に同じ玩具が置いてあったね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko nodded.[prcm]
+[else]
+　佐知子は首を縦に小さく揺らした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Now that you mention it, I do recall spotting them at a number of barber shops.[」][lr]
+[else]
+　「そういえば、あの頃行った理髪店にはどこでもおいていた気がするわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a great time killer.[l] Kinda like puzzle rings and journals.[」][lr]
+[else]
+　「待ち時間の退屈しのぎにちょうどいいんだろうね。[l]知恵の輪や雑誌みたいにさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried recalling more details about that toy as a train passed by us on the opposite lane, but couldn't remember much besides the fact that it was there.[prcm]
+[else]
+　私は快速の電車が通過する少しの間にその玩具のディテールを思い出そうとしたが、そのようなものがあったということ以外は色も形も確かには思い出せなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They were everywhere.[l] I wonder if the union recommended them or something.[」][lr]
+[else]
+　「ほんとに近所の理髪店にはどこでも置いてたわね。[l]組合みたいなところで推奨していたのかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think it was just a fad.[l] Lots of oddities were popular back then.[」][lr]
+[else]
+　「ただの流行りだろう？[l] あの頃は変わったものがよく流行ってた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A fad...[l] Was there anything else like it?[」][lr]
+[else]
+　「流行りね。[l]何か他にそういうのあった？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, there was a spring that could climb down the stairs, then a fishing game where the fish would keep opening and closing their mouth, and all sorts of driving games that came with actual wheels and gears. I also remember a flower that would react to sounds.[」][prcm]
+[else]
+　「ひっくり返して跳ねるゴムとか、ハンドルとギアがついたドライブゲームとか、階段を下りるバネとか、魚が口を開けたり閉じたりする釣りゲームとか、音で踊る花とかね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Those are all toys.[」][lr]
+[else]
+　「玩具ばっかりね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like them.[l] Some people call me childish because of that, but I don't care.[」][lr]
+[else]
+　「結構好きなんだ。[l]子供っぽいと言われるけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[l] I know all the ones you listed, by the way.[」][lr]
+[else]
+　「ふうん。[l]でも今言ったものなら全部わかるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Be careful with that — people will find out how old you are.[」][lr]
+[else]
+　「歳がばれるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't mind.[l] And it makes me happy to remember those things.[」][lr]
+[else]
+　「構わないわよ。[l]分かると少し嬉しいもの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そうかい」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've always made fun of fads, but it's nice to share a memory with someone.[」][lr]
+[else]
+　「流行りものって少し馬鹿にしてたけど、思い出を共有できるのはいいわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't see that many crazy fads these days.[」][lr]
+[else]
+　「最近はあまり流行りって言葉自体聞かないけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Now that you mention it...[l] Why do you think that is?[」][lr]
+[else]
+　「言われてみるとそうね。[l]どうしてかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's a huge variety of toys nowadays, so people usually just get the ones they like and ignore the others.[」][lr]
+[else]
+　「玩具も沢山種類が増えたからね。[l]大衆の好き好みも分かれて行ったんじゃないのかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced up at the electric board one more time to check the scheduled time of arrival for our train.[lr]
+[else]
+　私は電光掲示板で次の電車の時間を再確認した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko regarded the lane with drowsy eyes.[prcm]
+[else]
+　佐知子は眠たげな瞼で線路を見ていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But considering your line of work, wouldn't you know more about fads than me?[」][lr]
+[else]
+　「しかし、流行りなんてのはそっちの仕事の方が敏感ではないのか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose so.[l] And what you said is basically how I felt as well.[l] Most of our work consists of making ads for products, and most of them are geared toward a specific group of people.[l] Unusual designs that stand out tend to be more popular at first compared to traditional ones, but they go out of style sooner.[l] It's become harder and harder to make something that would appeal to everyone.[」][lr]
+[else]
+　「そうね。[l]本当に貴方の言うとおりかも知れない。[l]
+今は商品広告も多いし、その広告デザインのターゲットである大衆層も細かく指定されるわ。[l]
+デザイン自体も正統派より突飛で目立つデザインの方が人気があるけど、そういうのは廃りも早い気がする。[l]
+広く大衆にウケるのは以前よりもっと難しい気がするわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「なるほど」と私は言う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw the lights of the train appear at the end of the lane.[prcm]
+[else]
+　線路の向こうに電車のライトが見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you ever considered how an increase in all these material things that serve as distractions led to a deterioration of our imagination?[」][lr]
+[else]
+　「なあ。[l]ものが増えてかえって心が貧しくなると言うのはある意味当たってるのかも、なんて考えてないかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I might have.[」][lr]
+[else]
+　「少しだけね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see you're past your prime.[」][lr]
+[else]
+　「それはいよいよ年寄りみたいだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What? Why?[」][prcm]
+[else]
+　「そうかしら？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That didn't sound like you at all.[」][lr]
+[else]
+　「とてもキミらしくないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][prcm]
+[else]
+　「そうかしら？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The old you would've said something along the lines of 'so what?'[」][lr]
+[else]
+　「キミは、だからってどうしたと言うんだいって言うタイプさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe I'm just drunk.[」][lr]
+[else]
+　「分からないけど、貴方がそう思うならやっぱり少し酔っているのかもね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe you are.[」][lr]
+[else]
+　「そう思うよ」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The train stopped in front of us and opened its doors.[lr]
+[else]
+　待っていた電車がホームに停まり扉が開いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko had her eyes closed, staying silent for most of the trip.[prcm]
+[else]
+　電車で移動する間、佐知子は目を閉じていて私達はほとんど会話をしなかった。[prcm]
+[endif]
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I decided to escort her to the entrance of her apartment as we reached the station nearest to her home.[lr]
+[else]
+　佐知子のマンションの最寄駅に着いたあと、私は佐知子の家の玄関前まで付き添うことにした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Naturally, Sachiko refused at first, but I wouldn't relent.[lr]
+[else]
+　もちろん佐知子は遠慮したが、心配なので半ば強引について行った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After seeing her off, I considered walking to the clinic instead of taking the train again.[lr]
+[else]
+　佐知子を見届けたあと私は診療所へ歩いて帰ることにした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I passed a few creepy alleyways along the way, and arrived at the clinic in just under thirty minutes.[prcm]
+[else]
+　近道のやけに暗い路地を通り抜けると三十分もかからずに目的地に辿りついた。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I unlocked the outside doors and entered the dark corridor.[lr]
+[else]
+　診療所の鍵を開けて中にはいるとロビーは真っ暗だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued down to the night duty room with confident steps.[lr]
+[else]
+　私は慣れた足取りで宿直室まで行くと鍵を開けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was pitch dark inside the room, but I knew every single nook and cranny of the place, so it posed no problem.[lr]
+[else]
+　宿直室にも灯りは無かったが、この部屋のことは隅から隅まで熟知しているので問題はなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I unfastened my hair, washed my face, got changed, and lay down on my futon.[lr]
+[else]
+　髪を解き軽く顔を洗い着替えをして布団を敷いて横になる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lying on my back, I adjusted the height of the pillow and closed my eyes.[prcm]
+[else]
+　仰向けになり枕の高さを合わせてから目を閉じた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought about what I had discussed with Sachiko.[lr]
+[else]
+　寝る前に佐知子と話したことを思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I remembered a patient that used to frequent this place.[lr]
+[else]
+　それから、以前ここにいた患者のことも思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The way Sachiko acted today reminded me of that same patient.[prcm]
+[else]
+　今日の佐知子はその患者に一番よく似ていた気がした。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle3]
+
+@jump storage="tips.ks" target=*tips
+
+

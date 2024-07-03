@@ -1,0 +1,388 @@
+*037| Auditory hallucinations and Takako
+; *037|きつねつきの幻聴と貴呼
+[fbfstoretitle eng="Auditory hallucinations and Takako" jp="きつねつきの幻聴と貴呼"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[seopt buf=0 volume=50]
+[playse buf = 0  storage=se80.ogg loop=true]
+[msgoff]
+;[backlay]
+;[fbfscale_image storage="bg61_b" page=back layer=base]
+;[trans method = crossfade time=1500]
+;[wt]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 48"]
+[eval exp="sf.ItRelease = 49"]
+[endif]
+
+*| Auditory hallucinations and Takako
+; *|きつねつきの幻聴と貴呼
+[fbfstoretitle eng="Auditory hallucinations and Takako" jp="きつねつきの幻聴と貴呼"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I slowly opened my heavy eyelids, waking up to a grating noise.[lr]
+[else]
+　強い耳鳴りで意識が戻り、重い瞼を開いた。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lub-dub. [quake hmax=0 vmax=10 time=200]It sounded like something hitting a large drum.[prcm]
+[else]
+　ドクン、[quake hmax=0 vmax=10 time=200]と大きな音がした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was pitch dark around me. I couldn't see anything.[lr]
+[else]
+　辺りは暗く、はっきりとものが見えない。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I finally made out the vague, cobalt-tinted light of my alarm clock with the one eye that wasn't blocked by my pillow, and saw the numbers on its display.[prcm]
+[else]
+　うっすらと見えてきたのは、枕に埋もれていない片方の目で、コバルト色に光るデジタル時計が示す数字が見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lub-dub. [quake hmax=0 vmax=10 time=200]The sound seemed to be coming from my chest — it was the beating of my heart.[lr]
+[else]
+　ドクン、[quake hmax=0 vmax=10 time=200]と近くで聴こえている太鼓を叩くような音は、心臓の音だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The blood vessels in close proximity to my ears [quake hmax=0 vmax=20 time=200]were sending blood up into my head, [quake hmax=0 vmax=50 time=200]contracting like a throat gulping down water.[lr]
+[else]
+　耳の近くにある血管が、[quake hmax=0 vmax=20 time=200]喉を鳴らして水を飲むように[quake hmax=0 vmax=50 time=200]ドクンドクン、と血液を送っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I squeezed my sheet and firmly closed my eyes.[lr]
+[else]
+　ベッドのシーツを握り、強く目を瞑る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I must have been woken up by a bad dream or something.[lr]
+[else]
+　なにか怖い夢を見て、起きたようだった。[lr]
+[endif]
+
+[r]
+
+[seopt buf=0 volume=70]
+[quake hmax=0 vmax=30 time=200]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I continued to listen, the sound grew more and more unbearable.[prcm]
+[else]
+　力を込めると、聴こえてくる鼓動は信じられないほど巨大になった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard someone clutch the sheets. As I opened my eyes, I saw Takako's back.[lr]
+[else]
+　モソリ、とシーツを擦る音がして、少しだけ目を開けると、[ruby text="たか"]貴[ruby text="こ"]呼の背中が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached out, but [quake hmax=0 vmax=50 time=200][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg][wait time=50][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg][wait time=50][stopse buf =0][wait time=50][playse buf = 0  storage=se80.ogg loop=true]my eardrums almost exploded as my arm brushed against the sheet.[lr]
+[else]
+　手を伸ばすと、シーツがヨレる音がバリバリ、
+[quake hmax=0 vmax=50 time=200]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg]
+[wait time=50]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg]
+[wait time=50]
+[stopse buf =0]
+[wait time=50]
+[playse buf = 0  storage=se80.ogg loop=true]
+と巨大な音になって鼓膜を震わせる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Still enduring that terrifying sound, I finally managed to reach her back with my palm.[prcm]
+[else]
+　耐え難いほど恐ろしい音を堪えて、ようやくそこに手の平を当てる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is [quake hmax=0 vmax=50 time=200]something wrong?[」][lr]
+[else]
+　「どう[quake hmax=0 vmax=50 time=200]かした？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I was unable to force out a single word, Takako — with my hand still against her back — spoke up herself.[prcm]
+[else]
+　とても返事を出来ずにいると、貴呼が背中に手を当てられたまま、静かに言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it [quake hmax=0 vmax=50 time=200]another one of those?[l] Did you have [quake hmax=0 vmax=50 time=200]a bad dream?[」][lr]
+[else]
+　「また発[quake hmax=0 vmax=50 time=200]作かな。[l]怖い夢で[quake hmax=0 vmax=50 time=200]も見た？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gently pulled on her pajamas.[lr]
+[else]
+　貴呼の寝巻きを掴む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako slowly turned around to face me. After wrapping her arms around my tense shoulders, she held me tight to her chest.[lr]
+[else]
+　貴呼は一度前にずれてからゆっくりと振り返ると、こちらの強ばる肩に腕を回して、すっぽりと身体を抱え込むように包んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sound — which, at this point, was beginning to sound like a battering ram against my eardrums — grew in intensity.[lr]
+[else]
+　鼓膜を殴るような音はその間にもずっと大きく、近くに聴こえるようになっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rustling of clothes, the compressor — each and every little sound in the vicinity assailed my ears like the boom of thunder.[lr]
+[else]
+　衣擦れ、コンプレッサー、空気に至るまで全ての音が、耳元で雷が落ちたように聴覚を打つ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Lub-dub.[quake hmax=0 vmax=20 time=200] Lub-dub. The sound of running blood was the rumble trying to tear my nerves to shreds.[prcm]
+[else]
+　ドクン[quake hmax=0 vmax=20 time=200]ドクン、と流れる血の音が、神経を破るような轟音で絶えず聴こえている。[prcm]
+[endif]
+
+
+[seopt buf=0 volume=65]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako's hand touched my hair.[lr]
+[else]
+　貴呼の手が髪を触った。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=60]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She began stroking it.[lr]
+[else]
+　貴呼は回した手でゆっくり髪を撫でていた。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=55]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her hand moved slowly like a cloud in the sky, or a shadow upon the face of a sundial.[lr]
+[else]
+　空にある雲や、影時計のようにゆっくりと撫でる。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=50]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All the terrible sounds, now melded into one agonizing cacophony, were returning to normal one by one with each of her strokes.[lr]
+[else]
+　個々の区別のつかないほどに聴こえる大音量が、一撫でされるたびに、ひとつひとつ、元の音に分かれていく。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=45]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The fridge in the kitchen, the digital clock next to my pillow, the wind howling against the window — they became more and more distant.[prcm]
+[else]
+　キッチンの冷蔵庫、枕元にあるデジタル時計、窓を叩く風、近づきすぎていたそれらの音は、元の場所へと戻っていった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be up until you fall asleep, [quake hmax=0 vmax=10 time=200]so relax.[」][lr]
+[else]
+　「寝るまで起き[quake hmax=0 vmax=10 time=200]てるから、安心して」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her whisper still sounded like an ear-piercing scream, but it no longer made me break out in a cold sweat.[prcm]
+[else]
+　その囁きは、まだ叫ぶような音量で聴こえていたが、もう冷や汗を流すことはなくなっていた。[prcm]
+[endif]
+
+
+[fadeoutse buf=0 time=3000]
+[wf buf=0]
+
+;////////
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method=universal rule="rule2" vague=300 time=3000]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Feeling something warm against my eyelids, I opened my eyes.[lr]
+[else]
+　まぶたの裏に暖かいものを感じて、ゆっくりと目を開ける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The bright light of morning found its way through a gap in my curtains.[prcm]
+[else]
+　カーテンの間から射していた、白い朝日で目を痛めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I traced a hand along my shoulder, finding the spot Takako was touching just moments before.[lr]
+[else]
+　先程まで、貴呼が腕を乗せていた肩に、手を這わせる。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could feel warmth — the unmistakable trace of someone's touch.[lr]
+[else]
+　そこに熱があるように、触れられた感触が残っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking at the bed after I had climbed out of it, I noticed some wrinkles on the sheets, almost as though someone had really been lying next to me.[lr]
+[else]
+　ゆっくりと起き上がり、ベットを見ると、つい今しがたまで、そこに誰かが居たかのようにベットシーツには皺がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed my hand on the wrinkled spot, finding it still warm.[lr]
+[else]
+　手を置いてみると、僅かに温もりが残っているようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The door to my bedroom was left partially opened.[prcm]
+[else]
+　寝室の扉は、半分開いたままになっている。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[seopt buf=0 volume=100]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="038.ks" target=*038
+
+

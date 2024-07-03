@@ -1,0 +1,423 @@
+*110| The sky in the southern hemisphere
+; *110|南半球の夜空
+[fbfstoretitle eng="The sky in the southern hemisphere" jp="南半球の夜空"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm54"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 138"]
+[eval exp="sf.ItRelease = 139"]
+[endif]
+
+
+*| The sky in the southern hemisphere
+; *|南半球の夜空
+[fbfstoretitle eng="The sky in the southern hemisphere" jp="南半球の夜空"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could've sworn I saw some white mist in the darkness; upon closer inspection, I spotted a crouching Nanae surrounded by it.[lr]
+[else]
+　暗闇に白い靄が見えたような気がして、目を凝らすと[ruby text="うずくま"]蹲っている[ruby text="なな"]七[ruby text="え"]重が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We passed by her.[prcm]
+[else]
+　私達はその傍らを通り過ぎた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And here's the exit.[」][lr]
+[else]
+　「出口が見えてきたわ」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=true]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg28_4" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw light in the distance.[lr]
+[else]
+　七重の促すその先に、ポツリと白い点が見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It grew bigger and bigger with each of our steps.[lr]
+[else]
+　それは歩に合わせて揺れながら、次第に大きくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The raindrops on the ceiling sparkled in the light like stars.[prcm]
+[else]
+　上を見ると、天井の雨しずくが外の光を受けて星のように光っている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could make out a hand holding mine in the darkness.[lr]
+[else]
+　握っている手が見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its long, warm fingers felt somewhat nostalgic.[lr]
+[else]
+　爪が大きく形のいい指は暖かく、懐かしい気がした。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p03_h04" visible=true left=105 top=0]
+[trans method = crossfade time=1000]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I let go of her hand, Takako turned to me.[prcm]
+[else]
+　手を離すと、[ruby text="たか"]貴[ruby text="こ"]呼が振り向いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's wrong?[」][lr]
+[else]
+　「どうしたの？」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+
+[backlay]
+[fadeinse buf = 1 storage=se10.ogg loop=true time=1000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg74" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The countless stars of the Milky Way extended across the sky.[lr]
+[else]
+　空には、無数の星の天の川がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The Southern Cross shone almost blindingly in the distance.[prcm]
+[else]
+　南十字星が一際明るく輝いている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know.[l] I felt odd for a moment.[」][lr]
+[else]
+　「わからないわ。[l]どうしちゃったのかしらね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako let out a laugh.[lr]
+[else]
+　ははは、と貴呼が笑う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the soughing of waves somewhere behind me.[prcm]
+[else]
+　その後ろではザアザア、と暗闇に透明な白波のしぶきが押して返していた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg23_3" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p04_h04" visible=true left=105 top=0]
+[trans method = crossfade time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess we've had enough fun for today.[l] We still have a whole day left here, so maybe it's about time we returned to our cottage.[」][lr]
+[else]
+　「さすがに疲れちゃったか、また明日もあるしそろそろコテージに戻ろうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed Takako's gaze to see a long, shallow bridge leading to a cottage above the cobalt blue sea, sparkling in the moonlight.[prcm]
+[else]
+　貴呼が見た方向には、星の灯りを映して暗く透き通って光るコバルトブルーの海の上をわたる桟橋と水上コテージが見えた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f01_p01_h08" visible=true left=105 top=0]
+[trans method = crossfade time=1000]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, let's lie down on the terrace benches and watch the stars.[l] Then let's sleep together.[」][lr]
+[else]
+　「ねえ、テラスのベンチで横になって星を見ようか。[l]それで一緒に寝よう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could make out black hair and black eyes reflected in Takako's pupils.[prcm]
+[else]
+　振り向いた貴呼の海色に光る瞳の中に、黒い髪と瞳が映った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[stopse buf=1]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h02" visible=true left=105 top=0]
+[trans method = crossfade time=1]
+[wt]
+[wait time=10]
+[playse buf = 2 storage=se127.ogg]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method = crossfade time=1]
+[wt]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=70 visible=true opacity=0]
+[trans method = crossfade time=1]
+[wt]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're planning to [quake hmax=0 vmax=50 time=200]sleep in the dream?[」][lr]
+[else]
+　「夢の中で眠るつ[quake hmax=0 vmax=50 time=200]もりかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Someone took my arm from behind and jerked me back.[lr]
+[else]
+　後ろから腕を取られると、強く引き寄せられた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the sound of a foot kicking up dirt.[prcm]
+[else]
+　ジャリ、と地面を蹴る音がした。[prcm]
+[endif]
+
+
+
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h08" visible=true left=105 top=0 rceil=140 gceil=140 bceil=140]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you okay, Sachiko?[」][lr]
+[else]
+　「佐知子さん、怪我は無い？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As my hand was pulled, I thought I saw red hair for a moment.[lr]
+[else]
+　腕を引いた方に、赤い髪が一瞬見えたようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki's voice lingered in my ears.[prcm]
+[else]
+　[ruby text="なら"]楢[ruby text="さき"]崎の声が耳に残っていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm okay.[」][lr]
+[else]
+　「大丈夫」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My arm hurt.[lr]
+[else]
+　手が痛みを感じている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae supported my weight in the blinding darkness.[prcm]
+[else]
+　まだ何も見えない闇の中で、七重が倒れないようにしっかり手を握っている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What happened?[l] It came so out of nowhere I almost fell with you.[」][lr]
+[else]
+　「何かに躓いちゃったのね。[l]急だからこけちゃいそうだったわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry.[」][lr]
+[else]
+　「ごめんなさい」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h07" visible=true left=105 top=0 rceil=140 gceil=140 bceil=140]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The exit's just a few steps away.[」][prcm]
+[else]
+　「もう直ぐ出口よ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="111.ks" target=*111
+
+

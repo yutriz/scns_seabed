@@ -1,0 +1,567 @@
+*116| Cicada
+; *116|蝉
+[fbfstoretitle eng="Cicada" jp="蝉"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[fadeinse buf=0 storage=se01.ogg time=1000 loop=true]
+[wf buf=0]
+[wait time=1500]
+[playbgm storage="bgm26"]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg07_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 144"]
+[eval exp="sf.ItRelease = 145"]
+[endif]
+
+*| Cicada
+; *|蝉
+[fbfstoretitle eng="Cicada" jp="蝉"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the cry of cicadas around me.[lr]
+[else]
+　ミンミンミン、とけたたましい蝉の音がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The hot, humid air felt heavy on my skin.[prcm]
+[else]
+　じわりと蒸し暑さが肌を触った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A row of large trees extended in front of me.[lr]
+[else]
+　真っ直ぐ背の高い木が立っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They reminded me of cedars, but their leaves were flat and big.[prcm]
+[else]
+　杉によく似ているが、葉の形は平たくて大きい。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　右にも左にも同じ木が並んでいる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a green fence behind them.[lr]
+[else]
+　木の向こうは緑のフェンスがある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And beyond that fence, there was a wide, deep ditch.[lr]
+[else]
+　フェンスの向こう側は、広くて深い溝がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't see the bottom from here, but I could tell there was a river — roughly five meters deep — running through it.[lr]
+[else]
+　ここから底は見えないが、五メートル程の深さのあるブロックで作られた用水路の底に、ほんの数センチほどの深さの川が流れていることが分かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The park area was shaped like a shortcake, situated between the ditch and the road. Said road had a slide connected to a jungle gym, some swings, a tire half-buried in the ground, and a sandbox.[prcm]
+[else]
+　山の谷間にある小さな公園は、水路と後ろの道路で挟まれたショートケーキ状の土地にジャングルジムとつながったスべり台とブランコと、半分に埋まったタイヤと砂場が押し込められている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if this is another dream.[」][lr]
+[else]
+　「やれやれ、また夢かしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a deep breath, letting the familiar scent of soil fill my nostrils.[lr]
+[else]
+　深呼吸をすると、懐かしい腐葉土の香りがした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up to see the sky covered in white mist that made the sunlight appear a pale hue of pink or yellow, depending on the location.[prcm]
+[else]
+　見上げると空は、白い靄に薄桃と薄黄色が混ざったような不完全な色をしていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f07_p01_h02" visible=true left=-70 top=0 opacity=0]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f03_p01_h02" visible=true left=-120 top=0 opacity=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=500 path="(130,0,255)(330,0,0)" layer=1]
+[fbfscale_move time=800 path="(80,0,255)(280,0,0)" layer=0]
+[wm]
+[wait time =500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Two children suddenly rushed by my feet.[lr]
+[else]
+　不意に足元を二人の子供がかけていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A girl with a ponytail, and another one with long, straight black hair.[prcm]
+[else]
+　髪をアップテイルにしている女の子と、長い黒髪を真っ直ぐに伸ばした女の子だった。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg07_2" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f07_p01_h02" visible=true left=280 top=0 opacity=255]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f03_p01_h01" visible=true left=-70 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=100 path="(280,-20,255)(280,0,255)" layer=1]
+[wm]
+[fbfscale_move time=100 path="(280,-20,255)(280,0,255)" layer=1]
+[wm]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's catch some cicadas today.[l] The one who gets the most wins.[」][lr]
+[else]
+　「蝉取りしよう。[l]どっちがたくさん捕まえるかやろうよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No thanks.[l] I'd rather play with my doll.[」][lr]
+[else]
+　「いやよ。[l]それならお人形で遊ぶほうがいいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The ponytail girl was holding hands with the black-haired one while also carrying an insect net.[lr]
+[else]
+　アップテイルの女の子は、右手に黒髪の女の子の手を握って、左手に虫取り網を持っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Meanwhile, the black-haired girl was holding a doll in her free hand.[prcm]
+[else]
+　黒髪の女の子は、左手に手を握り返して、右の腕に人形を抱えている。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f07_p02_h17" visible=true left=280 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can borrow my net.[l] [msgoff][fbfscale_move time=100 path="(270,-20,255)(260,0,255)" layer=1][wm][msgon]Here.[」][lr]
+[else]
+　「じゃあ、虫取り網かしてあげる。[l]
+
+[msgoff]
+[move time=100 path="(270,-20,255)(260,0,255)" layer=1]
+[wm]
+[msgon]
+
+
+はい」[lr]
+[endif]
+
+[r]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't like bugs.[」][lr]
+[else]
+　「虫は嫌い」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's easy.[l] Look, there's a cicada right there.[l] I'll show you how this works.[」][lr]
+[else]
+　「簡単だよ。[l]ほら、あそこに緑蝉がいる。[l]お手本見せるからみてて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The young Takako pulled me by the hand to a large tree.[lr]
+[else]
+　幼い[ruby text="たか"]貴[ruby text="こ"]呼が、手を引いて大きな木の前に来る。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=500 path="(0,0,255)" layer=1]
+[fbfscale_move time=500 path="(-100,0,255)" layer=0]
+[wm]
+[wait time=200]
+[fbfscale_move time=200 path="(30,0,255)" layer=1]
+[wait time=50]
+[fbfscale_move time=200 path="(-70,0,255)" layer=0]
+[wm]
+[wait time=500]
+[fbfscale_move time=200 path="(60,0,255)" layer=1]
+[wait time=50]
+[fbfscale_move time=200 path="(-40,0,255)" layer=0]
+[wm]
+[wait time=500]
+[fbfscale_move time=200 path="(90,0,255)" layer=1]
+[wait time=50]
+[fbfscale_move time=200 path="(-10,0,255)" layer=0]
+[wm]
+[wait time=1000]
+[fbfscale_move time=500 path="(150,0,255)" layer=1]
+[wm]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f07_p01_h01" visible=true left=150 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She readied the net with her mouth wide open.[prcm]
+[else]
+　ぽかん、と大きく口を開けてゆっくりと網を伸ばした。[prcm]
+[endif]
+
+
+[msgoff]
+[fbfscale_move time=100 path="(150,-20,255)(150,0,255)" layer=1]
+[fbfscale_move time=100 path="(-30,-20,255)(-50,0,255)" layer=0]
+[wm]
+[wait time=500]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey![」][r]
+[r]
+[「]Kyah![」][lr]
+[else]
+　「えい」[r]
+[r]
+*|蝉
+　「きゃっ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The insect flew away, avoiding Takako's net as she swung it downward.[prcm]
+[else]
+　貴呼が網を振り下ろすと同時に、蝉はすり抜けるようにどこかへ飛んでいった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f03_p01_h02" visible=true left=-50 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I felt something touch my face.[l] I'm leaving.[」][lr]
+[else]
+　「何か顔にかかった、もう帰る」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The black haired girl began walking toward the park exit, wiping her face with the back of her hand.[prcm]
+[else]
+　黒髪の女の子は手の甲で顔を拭いながら、公園の出口の方に歩いていく。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f07_p02_h15" visible=true left=150 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=100 path="(150,-20,255)(150,0,255)" layer=0]
+[wm]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey![l] Wait! I just had a bit of bad luck there![」][lr]
+[else]
+　「わあ！[l] 待って今の失敗」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako, still looking for the escaped cicada, turned around with a panicked expression and chased after the girl.[lr]
+[else]
+　蝉が飛んでいった方を見ていた貴呼が、慌てた顔で振り返り追っていこうとする。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f07_p01_h03" visible=true left=150 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, as she did so, a sizable dragonfly flew right across her face.[prcm]
+[else]
+　と、その目の前を大きな蜻蛉が通り過ぎる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f07_p01_h02" visible=true left=150 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a golden-ringed dragonfly![」][lr]
+[else]
+　「オニヤンマだ！」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She chased after the dragonfly, swinging the insect net in its direction.[prcm]
+[else]
+　そのまま、虫取り網を振りながら[ruby text="とん"]蜻[ruby text="ぼ"]蛉の後を追いかけていく貴呼。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Glancing down, I spotted something on the ground.[lr]
+[else]
+　二人がいなくなったその場に、何かが落ちていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked it up and brushed the dirt off it.[lr]
+[else]
+　近くに行って拾い上げて、土を払う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the doll the black-haired girl had with her. I knew it well.[prcm]
+[else]
+　黒髪の女の子が持っていた人形は、よく知っているものだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey.[」][lr]
+[else]
+　「こら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I caught Takako — who was about to pass by me in her relentless chase after the dragonfly — by the shoulder.[prcm]
+[else]
+　[ruby text="とん"]蜻[ruby text="ぼ"]蛉を追いかけ、こちらの前を通り過ぎる貴呼を捕まえる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f07_p02_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa.[」][lr]
+[else]
+　「わあ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your friend dropped this.[l] You should bring it to her.[」][lr]
+[else]
+　「これ、あの子の落し物でしょう。[l]持って行ってあげて」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f07_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's Sachi's doll.[」][prcm]
+[else]
+　「サチの人形だ」[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fadeoutse buf=0 time=3000]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="117.ks" target=*117
+
+

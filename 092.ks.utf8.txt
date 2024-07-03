@@ -1,0 +1,771 @@
+*092| Gallery
+; *092|画廊
+[fbfstoretitle eng="Gallery" jp="画廊"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+[playbgm storage="bgm17"]
+[fbfscale_image storage="bg155" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 113"]
+[eval exp="sf.ItRelease = 114"]
+[endif]
+
+*| Gallery
+; *|画廊
+[fbfstoretitle eng="Gallery" jp="画廊"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is something the matter?[」][lr]
+[else]
+　「どうかしました？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko, who had been walking a few steps ahead of me, turned around.[prcm]
+[else]
+　やや前方を歩いていた[ruby text="まゆ"]繭[ruby text="こ"]子が振り返る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The shopping district looks a little different compared to what I expected.[」][lr]
+[else]
+　「商店街って、考えていたのと少し違うなって」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What did you think it would look like?[」][lr]
+[else]
+　「どんな風だと思っていたんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A bunch of bananas for five hundred yen! [wait time=600]Four hundred yen! [wait time=600]Three hundred yen![l] Argh, I can't go any lower, but I can throw in something extra![l] What do you say?[」][lr]
+[else]
+　「バナナちゃんひと房いこう、五百円、[wait time=600]四百円、[wait time=600]三百円。[l]ええい、これ以上は負からないからこの上にもうひと房付けよう、これはおまけだ。[l]いい数だね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thwacked my thighs with my palms to imitate the sound of a stick thumping against the ground.[prcm]
+[else]
+　パンパン、と棒の代わりに手のひらで腿をたたく。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you expect this to be like a traditional Mojiko banana market?[」][lr]
+[else]
+　「それもしかして、[ruby text="も"]門[ruby text="じ"]司[ruby text="こう"]港バナナの叩き売り？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was hoping to see salesmen making passionate speeches as they introduce their merchandise and stuff.[」][lr]
+[else]
+　「[ruby text="たん"]啖[ruby text="か"]呵商売が見れると思ったのに」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What age are you from? These days, you only see stuff like that as part of special shows given at tourist locations.[」][prcm]
+[else]
+　「いつの時代の人ですか、今どき大道芸でもないと見られませんよ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg157" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We continued down the silent road, our heels clicking against the red and gray stone pavement, until we reached a building that looked like a box made of concrete.[lr]
+[else]
+　赤とグレーの[ruby text="き"]幾[ruby text="か"]何[ruby text="がく"]学模様を描く石畳をコツコツ、と閑静な商店街を鳴らして歩いていくとコンクリートと硝子で出来た箱のような建物が目を引いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stared at it, wondering what it was. Eventually, I found a sign next to an enclosed space which looked like the entrance.[prcm]
+[else]
+　何者かと眺めていると、入口らしき小さな窪みの横に立て看板を見つけた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a gallery.[」][lr]
+[else]
+　「画廊ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a large and imposing steel door at the end of the enclosed space. It was painted completely black.[prcm]
+[else]
+　コンクリートの窪みの奥には厚みのある黒鉄の扉があった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You said you wanted something to decorate the lounge with.[」][lr]
+[else]
+　「前にラウンジに飾るものが欲しいって、言ってたよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pushed the door open and stepped inside with Mayuko trailing behind me.[prcm]
+[else]
+　先に扉を押して中に入ると、繭子もそれに続いた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[playse buf = 1  storage=se66.ogg]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule8" vague=300 time=1000]
+[wt]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/other_img/bg25_b" visible=true left=0 top=0]
+[trans method=universal rule="rule8" vague=300 time=1000]
+[wt]
+[wait time=500]
+[fbfscale_move time=2000 path="(0,-200,255)" layer=2]
+[wm]
+[wait time=2000]
+[playse buf = 2 storage=se18.ogg]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our heels clicked against the hard parquet inside.[lr]
+[else]
+　コツン、と硬い床はむき出しのフローリングになっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Multiple easels stood in the middle of the room. The paintings on them were facing in different directions.[lr]
+[else]
+　部屋の真ん中に、絵を立てかけられたいくつかのイーゼルがそれぞれ別の方向を向いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced around to see a window to the right of us, and a counter to the left.[lr]
+[else]
+　扉を抜けたところには、硝子窓と反対側、外からは見えない位置にカウンターがあった。[lr]
+[endif]
+
+[r]
+
+;[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+;[fbfscale_image layer=0 page=back storage="fgimage/i_img/f01_p02_h08" visible=true left=-120 top=0]
+[fbfscale_image storage="bg25_1" page=back layer=base]
+[trans method = crossfade time=1]
+[wt]
+;[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A young, spectacled man was sitting at said counter, reading a book with a stern expression on his face. He didn't react to our arrival in the slightest.[lr]
+[else]
+　カウンターの向こうには、気難しそうな眼鏡の若者が、こちらを気にした様子もなく椅子に座って本を読んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I also spotted some shelves and a table close to the window, their warm colors lending the place a certain countryside-esque feel.[prcm]
+[else]
+　日当たりが良い方には、棚やテーブルなどの家具も置いてあり、暖色のカントリー調でそろえてあった。[prcm]
+[endif]
+
+
+;[msgoff]
+;[backlay]
+;[freeimage layer=0 page=back]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you think about this?[」][lr]
+[else]
+　「これなんていいんじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed at a painting depicting a river and a sky in some European-looking land.[prcm]
+[else]
+　どこか西洋の片田舎にある川と空が描かれた絵だった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The color of the sky is certainly peculiar in this one.[」][lr]
+[else]
+　「なんていうか不思議な色の空ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All sorts of colors had been blended to make it that way — a pale mix of purple and pink.[lr]
+[else]
+　空にはたくさんの色が混じって薄紫と薄桃に見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The river was quite colorful, too, with golden trees towering above it.[prcm]
+[else]
+　やはりたくさんの色が混じる川には、その不思議な色の空と、金の林が映っている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you think it would look nice in our lounge?[」][lr]
+[else]
+　「ラウンジには合いますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd say it's perfect for our building.[」][prcm]
+[else]
+　「あの建物の雰囲気にぴったりじゃないかな」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We ascended the artistically distorted stairs — reminding me of a wisp of smoke — and reached a narrow corridor on the second floor.[lr]
+[else]
+　一階と二階が繋がる階段はアーティスティックに歪曲している。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg25_2" page=back layer=base]
+[trans method=universal rule="rule9" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　ゆらゆらと煙のように階段を上った二階は、二人並んで歩けるほどの幅しかない廊下のような長い部屋になる。[lr]
+[r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The stairs leading to the third floor had a Keep Out sign in front of them.[lr]
+[else]
+　三階への階段は立ち入り禁止となっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A row of small, palm-sized windows lined the wall on our right, their light illuminating the pictures on the left wall.[prcm]
+[else]
+　部屋の右手側には手のひらほどの大きさの窓があり、採光した光が左手の壁に飾っている絵画を照らしている。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if this light gets misaligned when the sun moves.[」][lr]
+[else]
+　「この光、反対側の絵画とずれたりしないのかしら？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko took a few steps toward the row of windows.[prcm]
+[else]
+　繭子が窓の方に歩いていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're probably using mirrors or something.[」][lr]
+[else]
+　「鏡で調整しているんじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I inspected the paintings — their frames were of a lot simpler design compared to what we'd seen below.[lr]
+[else]
+　左手の壁沿いに、一階とは対照的なシンプルな額に入れられた絵を眺めていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Most of them were similar to our candidate for the lounge, boasting a wide palette of unusual colors.[lr]
+[else]
+　ラウンジ候補の絵と似て、印象的な色使いの絵が並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The last one was a painting of a clover.[lr]
+[else]
+　一番奥にはクローバーの絵がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its four leaves all had different colors.[prcm]
+[else]
+　四枚の葉がそれぞれ別の色をしている。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They look like normal windows to me. Maybe a little on the thick side, but still.[l] There are probably mirrors inside, but I can't see them.[」][lr]
+[else]
+　「見た目は少し厚めの普通の窓ですね。[l]多分鏡だと思うんですけど、わかりませんでした」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko returned.[prcm]
+[else]
+　と、繭子が戻ってくる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a beautiful one.[」][lr]
+[else]
+　「良い絵ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized I had been staring at that oddly familiar thing.[prcm]
+[else]
+　その声を聞くまで、どこかで見覚えのあるクローバーを眺めていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It looks a lot like a painting I drew in the past.[」][lr]
+[else]
+　「ずっと前に描いた絵に似てる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Well, not like using a clover as a motive was a particularly original idea.[lr]
+[else]
+　そうは言っても、クローバーをモチーフにしたデザインは数多く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd already seen plenty of pictures like this.[lr]
+[else]
+　これまでにも、たくさん見てきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried searching my memories to figure out which picture this one resembled, but that abrupt feeling I had when I first saw it was already gone.[lr]
+[else]
+　いつ見たクローバーがこの絵に似ているのか、頭の中を探し回ってみるが、このクローバーの絵を見た時、一瞬だけ現れた感情を再現するものは見つからなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nonetheless, I felt certain it must've been something akin to nostalgia and loneliness.[prcm]
+[else]
+　それは、どこか寂しく懐かしい感触だった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h22" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't you paint anymore?[」][lr]
+[else]
+　「もう絵は描かないのですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, perhaps it's a hobby I should pick back up.[」][prcm]
+[else]
+　「久々に描いてもいいかもしれない」と思っていたことを言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then how about we hang your picture in the lounge instead?[」][lr]
+[else]
+　「それじゃあ、ラウンジに飾る絵は貴呼さんが描いた絵を飾りましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a few moments of admiring the clover painting...[prcm]
+[else]
+　二人で少しの間、その廊下の突き当りにある絵を眺めた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg25_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...I answered her question with a curt "okay," then moved away from the picture.[lr]
+[else]
+　幾分か経った後「うん」と頷き、先にその絵の前をあとにする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Realizing that Mayuko wasn't following me, I glanced over my shoulder and saw her still staring at the clover.[prcm]
+[else]
+　なかなかついて来ない繭子を横目で見ると、まだその絵を見ている繭子の背中が見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe I should paint you.[」][lr]
+[else]
+　「それじゃあ、繭子を描こうかな」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p04_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sounds like a good idea.[」] Mayuko turned around and smiled at me.[prcm]
+[else]
+　繭子が振り向いて「それは良いですね」と言ってにこりと微笑んだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you really okay with it?[」][lr]
+[else]
+　「いいんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I saw her smile, that feeling I couldn't remember earlier passed through the back of my mind again.[lr]
+[else]
+　繭子の表情を見た時、先ほど思い出せなかった感情がチラリと蘇った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could've sworn I saw a brief moment of my past pop up for a split-second like a camera flash.[prcm]
+[else]
+　写真のフラッシュのようなほんの瞬く間に、過去に過ごした懐かしい風景を見た気がした。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko caught up to me and we continued to look around the gallery together.[lr]
+[else]
+　後を追って繭子がついてくると、並んで画廊を回った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After checking all the works in the narrow corridor, we descended the stairs and found another room with pictures on the first floor.[lr]
+[else]
+　その通路の作品を見終わったあとは、一階の見ていない部屋の作品を眺めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spent the entire time trying to remember the image that flashed through my mind when Mayuko smiled.[lr]
+[else]
+　繭子と歩きながらも、ずっと先ほど一瞬だけ蘇った風景を思い出そうとしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Yet no matter how hard I wracked my brain, I simply couldn't recall it.[prcm]
+[else]
+　しかし、それがどの風景なのかはどんなに頭を振るっても現像されることはなかった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="093.ks" target=*093
+
+

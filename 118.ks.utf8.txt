@@ -1,0 +1,666 @@
+*118| The road to the truth
+; *118|真宵の道
+[fbfstoretitle eng="The road to the truth" jp="真宵の道"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm35"]
+[backlay]
+[fbfscale_image storage="item41_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 146"]
+[eval exp="sf.ItRelease = 147"]
+[endif]
+
+
+*| The road to the truth
+; *|真宵の道
+[fbfstoretitle eng="The road to the truth" jp="真宵の道"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was walking on the snow along the camellia fence when I saw Sachiko approaching from the opposite direction.[prcm]
+[else]
+　サクサク、と雪を踏み抜きながら椿の垣根沿いに歩いていると、向こうから同じようにして歩いてくる[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子とすれ違う。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey. Fancy seeing you here.[」][lr]
+[else]
+　「佐知子じゃないか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Narasaki... What are you doing here?[」][lr]
+[else]
+　「[ruby text="なら"]楢[ruby text="さき"]崎、こんなところで何をしてるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just out for a walk.[l] What about you?[l] You look pale.[」][lr]
+[else]
+　「散歩だよ。[l]キミこそ、どうした？[l] 顔色が悪いな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I drank too much.[」][lr]
+[else]
+　「少し飲みすぎたみたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Drinking while the sun's still up will make you grow old faster, apparently.[」][lr]
+[else]
+　「昼間からお酒を飲むと早く歳をとるって聞くよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Doing it once in a blue moon won't kill me, will it?[」][prcm]
+[else]
+　「たまにはいいでしょう」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you okay?[」][lr]
+[else]
+　「大丈夫かい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes. I was on my way to my room to rest.[」][lr]
+[else]
+　「ええ、今から部屋に戻って休むつもりよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good.[l] Don't forget to drink plenty of water before going to bed.[」][lr]
+[else]
+　「それがいい。[l]それと、眠るなら水分を多めに取るといい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][lr]
+[else]
+　「ありがとう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko passed by me.[prcm]
+[else]
+　と、佐知子が隣を通り過ぎていった。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg95_2" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around to see her back recede toward the mansion as she treaded the snow-covered path.[prcm]
+[else]
+　振り返ると、佐知子の後ろ姿が洋館のほうへと白い雪道を行ってしまった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned back and continued in the direction Sachiko came from.[lr]
+[else]
+　向き直り、サクサクと垣根の道を佐知子の来た方へ歩いていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Following the path created by her footsteps made it easier to walk across the snow.[lr]
+[else]
+　佐知子の来た道は、佐知子の足跡を踏んでゆくと歩き易くなった。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg93_4" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f08_p02_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I turned my attention toward the annex of the east wing, I saw its door suddenly open, revealing Nanae.[lr]
+[else]
+　東棟の近くにある離れを眺めていると、戸が開いて[ruby text="なな"]七[ruby text="え"]重が表に出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised my hand to greet her.[prcm]
+[else]
+　片手をあげて挨拶をした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure is cold today.[」][lr]
+[else]
+　「寒いわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae wore a long-sleeved trainer and some light colored jeans.[prcm]
+[else]
+　七重は柄のない長袖のトレーナーを着て、明るめのジーンズを履いている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was clear in the morning, so I didn't expect for all this snow to suddenly pile up.[」][lr]
+[else]
+　「今朝は晴れていたから、雪が積もるなんて思わなかったよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f08_p02_h03" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I did tell you about how fickle the weather was here in the mountains.[」][lr]
+[else]
+　「山の天気は変わりやすいのよ、言ったとおりだったでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking at Nanae's face nearly made me gasp.[lr]
+[else]
+　と、言った七重の表情を見て、はっ、と息が漏れそうになる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her hair was fastened into long twin tails.[lr]
+[else]
+　七重の髪はアップ気味のところでふたつ左右に括っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I watched them sway in the cold breeze.[prcm]
+[else]
+　冷たい風が吹いて揺れている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How are you feeling?[」][lr]
+[else]
+　「具合はどう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you mean?[」][lr]
+[else]
+　「何のことだい？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f08_p02_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae looked at me with a frown.[prcm]
+[else]
+　七重が眉を寄せてこちらを見た。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sorry, I just remembered something. Gotta run.[」][prcm]
+[else]
+　「すまない。[l]少し用事を思い出したから行くよ」[prcm]
+[endif]
+
+
+
+;/////
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[playse buf = 0 storage=se68.ogg]
+[wait time=1000]
+[backlay]
+;★背景差し替え  窓の外を雪加工
+[fbfscale_image storage="bg53_9" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sachiko, are you in?[」][lr]
+[else]
+　「佐知子、居るのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I knocked on her door and strained my ears, but couldn't hear a sound.[prcm]
+[else]
+　佐知子の部屋の扉を叩いて、一息のあいだ耳を澄ませてみても物音は一つとない。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm opening the door.[」][lr]
+[else]
+　「開けるよ」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[playse buf = 0 storage=se54.ogg]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg05_3" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The stale air of the room escaped through the door as I opened it.[lr]
+[else]
+　ガチャ、と扉を開けるとシン、とした部屋の空気が漏れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't see Sachiko in her bed.[prcm]
+[else]
+　ベッドの上に佐知子の姿はなかった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Stepping into the room, I took a quick look around.[lr]
+[else]
+　見回しながら段差を上がる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her bag was on the other side of the bed.[lr]
+[else]
+　旅行鞄がベッドの向こうにあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her pouch was on the dressing table.[prcm]
+[else]
+　化粧台には、佐知子の使っていた小さなポーチが置かれていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I walked closer to the window.[lr]
+[else]
+　窓の方に行く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a chessboard on the table.[lr]
+[else]
+　テーブルの上にチェス盤があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The pieces were in the same arrangement as we left them.[prcm]
+[else]
+　駒の配置は以前のままだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An old doll sat in the chair by the window.[prcm]
+[else]
+　窓側の椅子には古びた人形が座っていた。[prcm]
+[endif]
+
+
+
+;/////
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+;★背景差し替え  中庭雪加工
+[fbfscale_image storage="bg95_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked all over the mansion, and as I finally stepped outside, I ran into Kozue.[prcm]
+[else]
+　屋敷を一巡りして、中庭から図書館へ続く道を歩いていると、[ruby text="こずえ"]梢の姿が見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey. Another day of research?[」][lr]
+[else]
+　「やあ、今日も調べ物かい？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h13" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「そうよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue gave me a sideways glance.[prcm]
+[else]
+　梢はこちらを一瞥して答える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about you?[」][lr]
+[else]
+　「貴方はどうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was looking for something.[」][lr]
+[else]
+　「ちょっと探し物をしていてね」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h11" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1000]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue jumped from one stone to another on the stone path.[lr]
+[else]
+　梢は少し大股で飛び石の上を歩く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking only at her profile, I couldn't properly read her expression.[prcm]
+[else]
+　その横顔から彼女の僅かな表情は読み取れない。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[playse buf = 0 storage="se66.ogg"]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule8" vague=200 time=2000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg42_2_3" page=back layer=base]
+[trans method=universal rule="rule8" vague=200 time=2000]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could tell Sachiko wasn't inside as soon as I reached the library.[lr]
+[else]
+　図書館にたどり着いたとき、佐知子がそこにいないことは直ぐにわかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After wandering the library for a while, I exchanged a few words with Kozue, then left.[prcm]
+[else]
+　ゆっくりと図書館を一回りした後、梢と一言二言交わして外に出た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Meanwhile, I was thinking about Sachiko.[lr]
+[else]
+　図書館を一回りする間に佐知子のことを考えてみた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried imagining where I would go if I was her, but I couldn't come up with anything.[prcm]
+[else]
+　佐知子になったつもりで、いま自身がどこに居るべきかを考えてみたが何も思い浮かばなかった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="119.ks" target=*119
+
+

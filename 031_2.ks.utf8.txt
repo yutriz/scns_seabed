@@ -1,0 +1,201 @@
+*031_2| Return
+; *031_2|帰路
+[fbfstoretitle eng="Return" jp="帰路"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[fadeinse buf=2 storage="se162" loop=true time=1500]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg21" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 38"]
+[eval exp="sf.ItRelease = 39"]
+[endif]
+
+
+
+*| Return
+; *|帰路
+[fbfstoretitle eng="Return" jp="帰路"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The light from outside made my eyelids flutter open.[prcm]
+[else]
+　チカリ、と目に刺すような光が当たり、うす赤く見えるまぶたを開ける。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You awake?[」][lr]
+[else]
+　「起きた？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled Takako's jacket closer to my chest — she must've placed it on me while I slept.[lr]
+[else]
+　いつの間にか体にかけてある[ruby text="たか"]貴[ruby text="こ"]呼の上着を引き寄せる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako, sitting next to me, was gazing at the clouds beyond the window.[lr]
+[else]
+　となりのシートに座る貴呼は、窓際の席で小窓から見える雲を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A massive mountain range stretched below them.[prcm]
+[else]
+　雲の合間には、大きな山脈が見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're almost home.[」][lr]
+[else]
+　「もうすぐ家に帰れるね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What time is it?[」][lr]
+[else]
+　「今何時？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As Takako was looking for the clock, the plane's speakers turned on, making an announcement in English.[lr]
+[else]
+　ええっと、と貴呼が時計を探していると、機内放送でまもなく到着とのアナウンスが英語で流れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako finally pulled the clock out of her pouch.[prcm]
+[else]
+　貴呼はポーチから時計を取り出す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Eight-ish.[」][lr]
+[else]
+　「八時くらい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you already set it to Japanese time?[」][lr]
+[else]
+　「時間はもうあわせてあるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course.[」][lr]
+[else]
+　「もちろん」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shifted my weight under the jacket and leaned against Takako's shoulder.[prcm]
+[else]
+　もぞもぞ、と上着の下で移動して貴呼の肩に寄りかかる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll take another nap, so wake me up when we're about to land.[」][lr]
+[else]
+　「もう少し寝るから、起こして」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako reassured me that she would.[prcm]
+[else]
+　はいはい、と貴呼が答える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The last thing I saw before drifting off to sleep was the plane ticket in her hand.[prcm]
+[else]
+　眠る前に、貴呼が手に持った搭乗券が見えた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=2 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=2 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="031_3.ks" target=*031_3
+
+

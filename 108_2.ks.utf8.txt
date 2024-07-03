@@ -1,0 +1,297 @@
+*108_2| A thing Narasaki left behind
+; *108_2|楢崎の忘れ物
+[fbfstoretitle eng="A thing Narasaki left behind" jp="楢崎の忘れ物"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg05" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 136"]
+[eval exp="sf.ItRelease = 137"]
+[endif]
+
+
+*| A thing Narasaki left behind
+; *|楢崎の忘れ物
+[fbfstoretitle eng="A thing Narasaki left behind" jp="楢崎の忘れ物"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard something that sounded like the laugh of a child as I was reading a book in my room.[lr]
+[else]
+　部屋の中で本を読んでいると子供の笑い声が聞こえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked out the window to see two children playing with the snow.[lr]
+[else]
+　窓から外を見ると、子供が雪の上を駆けているのが見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They disappeared behind a row of trees, leaving behind only a set of footprints.[prcm]
+[else]
+　二人は背の高い須々木の向こうに消えた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　白い雪には走り回っていた足跡が残っていた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se50.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't feel like going back to the book.[lr]
+[else]
+　再び本の世界に戻る気分ではなくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The snow sparkled vividly in the warm sun. I felt like finding someone and having a conversation — anyone would do.[lr]
+[else]
+　外は雪が光るほど天気がよく、珍しく誰でもいいので捕まえて話をしたい気分だった。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I was putting on my sweater, I spotted an encyclopedia on the table.[lr]
+[else]
+　上着を羽織ると机の上にある図鑑に気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For a moment, I was confused by the unfamiliar book, but I soon remembered it to be the one Kozue brought me.[lr]
+[else]
+　見慣れない本に一瞬戸惑うが、それは梢が持ってきたものだとすぐに思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I recalled my conversation with Narasaki from yesterday.[prcm]
+[else]
+　続けて、昨夜の[ruby text="なら"]楢[ruby text="さき"]崎とのやり取りまでが思い出される。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if she forgot it.[」][lr]
+[else]
+　「忘れていったのかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I considered returning it to the library, but instead decided to personally hand it to Narasaki. With that in mind, I placed the book in my handbag.[prcm]
+[else]
+　図書館に返すことも考えたが、とりあえず楢崎に届けるつもりで図鑑をハンドバックに入れて部屋を出た。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg53_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I was walking through the mansion, I realized something was odd.[lr]
+[else]
+　改めて屋敷を回ると少し変わったところが目に付いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was a distortion of sorts.[prcm]
+[else]
+　それは一言で言うと歪さだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Although the windows on the first and second floors all opened to the same area, they gave me different views.[lr]
+[else]
+　まず一階と二階の廊下の窓から見える方角が違った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+From the first floor, I saw the port town and the mountains, while the second floor windows gave me a view of the inner yard, which was supposed to be on the other side.[lr]
+[else]
+　一階の窓は港町の方角を向いており山の間に海が見えたが、二階の窓からは反対側にある中庭が覗けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The number of rooms and windows didn't seem to add up either, while the ceiling seemed to rise higher and sink lower depending on my location.[prcm]
+[else]
+　他にも各階の部屋や窓の数が違っていたり、場所によっては天井の高さも大きく異なった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Could this have been a result of the renovation, or was the place always designed like this? I wondered what could have led to this.[lr]
+[else]
+　元々そのような設計なのか、増改築を経てこのような形になったのか、少し興味がわいてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even after exploring all three floors, I ran into no one.[prcm]
+[else]
+　三階から一階まで歩き回ったが誰にも出会わなかった。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg52_1" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In the end, I went outside, letting the chilly air bite at my exposed cheeks.[lr]
+[else]
+　ロビーから外に出ると、頬に冷たい空気が張り付いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't see a soul around.[lr]
+[else]
+　辺りには誰の気配もなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The children had probably moved on to somewhere else.[prcm]
+[else]
+　先ほどの子供たちもどこか別の場所に繰り出したあとのようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Snow had piled up quite high around the area of the fence.[lr]
+[else]
+　垣根の裏の道からは少し雪が積もっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could still see the footsteps on it.[lr]
+[else]
+　先ほどの子供たちの足跡がまだ残っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed them, only to realize they were leading to the inner yard.[prcm]
+[else]
+　その足あとを追って屋敷の壁伝いにぐるりと回っていく、足跡は中庭の方まで続いていた。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="109.ks" target=*109
+
+

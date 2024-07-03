@@ -1,0 +1,1775 @@
+*085| A scary story of the sanatorium
+; *085|療養所の怖い話
+[fbfstoretitle eng="A scary story of the sanatorium" jp="療養所の怖い話"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[msglayer]
+[backlay]
+[playbgm storage="bgm21"]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 103"]
+[eval exp="sf.ItRelease = 104"]
+[endif]
+
+
+*| A scary story of the sanatorium
+; *|療養所の怖い話
+[fbfstoretitle eng="A scary story of the sanatorium" jp="療養所の怖い話"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even after sunset, the gray clouds drifted along the sky and all the way to the sea.[lr]
+[else]
+　太陽が落ちかける時間になっても、もやもやとした灰色の雲は厚く海の上まで続いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The woodlands stretching below the heavy clouds lost their once-vivid colors, making the scenery resemble an old monochrome photograph.[lr]
+[else]
+　重そうな雲の下では山林の緑も鮮やかさを失ってモノクロ写真の景色のように見えた。[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[playse buf = 0 storage=se54.ogg]
+[fbfscale_image storage="ev9_1" page=back layer=base rceil="192" gceil="192" bceil="192"]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I opened Sanae's door with a yawn, she looked up at me from her bed.[prcm]
+[else]
+　あくびを噛みながら[ruby text="さ"]早[ruby text="なえ"]苗の部屋の扉を開けると、奥のベットの上で早苗が顔を上げた。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01" visible=true left=105 top=0]
+[fbfscale_image storage="bg43_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[」][lr]
+[else]
+　「こんにちは」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae closed the book she'd been holding and placed it on bedside table.[lr]
+[else]
+　早苗は手元のハードカバーの本を閉じると、ベッド横のテーブルに置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the nearby table rested an unfinished lunch with the wrapping still on it.[prcm]
+[else]
+　テーブルには食べかけの昼食がラップをかぶっている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you not feeling well?[」][lr]
+[else]
+　「具合悪いの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae lightly shook her head.[prcm]
+[else]
+　問いかけると早苗は軽く首を振った。[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was too absorbed in my book to care about anything else.[」][lr]
+[else]
+　「それよりも本の続きが気になってしまって」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you all right? I've heard you had an attack.[」][prcm]
+[else]
+　「発作は大丈夫でしたか？」と早苗が心配そうに聞いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm okay.[l] It wasn't that bad this time.[」][lr]
+[else]
+　「大丈夫。[l]今回はそんなに酷いものじゃなかったみたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down in the cane chair that had been left next to the bed.[lr]
+[else]
+　そう言った後でベッドの隣に置いてある藤椅子に座る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see some moisture accumulating on the wrap around the tray.[lr]
+[else]
+　トレイの上には水滴をつけたラップがかぶせてある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the other hand, the wooden dessert bowl next to it was empty.[prcm]
+[else]
+　椀の隣にあるはずのデザートは無かった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You seemed to have eaten the coffee jelly, though.[」][lr]
+[else]
+　「コーヒーゼリーは食べたんだ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't tell me it's what you came here for.[」][lr]
+[else]
+　「もしかして、ゼリーが欲しかったんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned to her and waved my hand.[prcm]
+[else]
+　冗談めかして言う早苗に向けて軽く手を振る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[l] I just wanted to borrow a paper knife.[l] And I was also curious about how you were doing.[」][lr]
+[else]
+　「ううん。[l]ちょっと、ペーパーナイフを借りに来たんだ。[l]それと、早苗どうしてるかなと思ってね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[playse buf = 0 storage=se21.ogg]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Give me a second.[」] Sanae turned her body without breaking her sitting position and reached out to open the drawer of her side table.[prcm]
+[else]
+　「ちょっと待ってください」と言った早苗はベッドの上に座ったまま体を捻ってサイドテーブルの引き出しを開けた。[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Same as always.[」][lr]
+[else]
+　「こっちはいつも通り、何も変わりませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae handed me the paper knife she fished out from the drawer.[lr]
+[else]
+　早苗が引き出しから取り出したペーパーナイフをこちらに寄越した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I walked over to her and took the knife.[prcm]
+[else]
+　こちらから近くまで行き、それを受け取る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's good to hear.[」][lr]
+[else]
+　「それはいいことだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it?[」][lr]
+[else]
+　「そうですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「そうだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose you're right.[」][lr]
+[else]
+　「そうなんですね」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae also handed me a shawl that was lying on the bed.[prcm]
+[else]
+　早苗はついでとばかりに布団の上に置いてあった肩掛けも渡してくれた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][lr]
+[else]
+　「ありがとう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I hung the shawl on the backseat of the cane chair, and picked up the paper knife along with the other thing I brought.[prcm]
+[else]
+　肩掛けを羽織って椅子に腰掛けると、持ってきた荷物を膝においてペーパーナイフを持ち直す。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is this parcel-looking thing?[」][lr]
+[else]
+　「その小包はどうしたんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Got it from Mayuko this morning. Apparently it was sent to me. I've no idea what's inside until I open it up and see for myself.[」][prcm]
+[else]
+　「今朝、繭子が持ってきてくれた私宛の荷物だよ。中身は開けてみないとわからない」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I undid the straps and checked the edges of the parcel.[lr]
+[else]
+　紐を解いて小包の折り目を眺める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Finding the one that felt the softest, I pierced it with my newly-gained knife.[lr]
+[else]
+　糊付けをしている部分を確認すると、切り目が少なくなる折り目を選んでペーパーナイフを刺した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pushed the knife all the way to the other side, changing its angle. The kraft paper had already fallen apart by the time I finished.[lr]
+[else]
+　ナイフの角度を変えながら外側に引くと、スパッとクラフトペーパーが切れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a white cardboard box inside.[lr]
+[else]
+　包み紙を解くと中には白い厚紙の箱があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I opened its lid and turned the thing upside down, a notebook fell out.[prcm]
+[else]
+　その箱の蓋を開けて口を下に向けるとストン、と一冊の手帳が落ちた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Looks like a notebook,[」] said Sanae.[prcm]
+[else]
+　「手帳ですね」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、早苗が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized it was a notebook because it looked just like the one I was using for my diary here.[lr]
+[else]
+　すぐにそれが手帳だとわかったのは、普段日記用に使っている手帳と同じデザインだったからだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I inspected both its top and bottom.[lr]
+[else]
+　手を返して裏と表を確かめる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its color had already begun to fade, which made it look older than any of my own notebooks.[prcm]
+[else]
+　こちらの手帳は色が褪せて、随分使い込まれているように見える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's written in it?[」][lr]
+[else]
+　「何か書いてますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a date at the top of the first page with a bunch of text below it.[lr]
+[else]
+　その手帳のはじめのページの最初の行には日付があり、その下には日記が続いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had the same design as our diaries.[prcm]
+[else]
+　私たちの日記と同じフォーマットだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Looks like a diary to me.[l] Wonder whom it belonged to.[」][lr]
+[else]
+　「日記みたい。[l]誰のだろう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked both the first and the last pages but couldn't find a name.[lr]
+[else]
+　始めと最後のページを確認するが名前は書かれていない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After I gave up and returned to the first page to read it, Sanae interrupted me.[prcm]
+[else]
+　仕方なく始めのページに戻って日記を読んでみようとしたところで、早苗が声をかけてきた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We don't know whose diary it is.[l] There might have been some mistake, so maybe it'd be better to ask Mayuko about it first?[」][lr]
+[else]
+　「誰の日記かわかりませんね。[l]手違いかもしれませんし。[l]一応、繭子さんに聞いてみたほうがいいんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess you have a point.[」][prcm]
+[else]
+　「そうだね」[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the notebook on the table.[lr]
+[else]
+　ひとまず手帳をサイドテーブルの上に置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My arms felt a bit cold, so I covered them with Sanae's shawl.[lr]
+[else]
+　腕に少し寒気を感じて、早苗に借りた肩掛けの位置を直す。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　それから腕を引っ込めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt like the temperature of Sanae's room had dropped compared to when I came in.[lr]
+[else]
+　早苗の部屋の温度は前に来た時よりも少し下がっているようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the window. It was covered in dew.[prcm]
+[else]
+　窓を見るとガラスが結露していた。[prcm]
+[endif]
+
+
+
+;///////
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg43_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I collected it all on my finger to form a droplet.[lr]
+[else]
+　窓ガラスについた結露を指で集めると大きな水滴になる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Which then fell down as soon as I moved my finger away.[prcm]
+[else]
+　指を離すとすぐに下に落ちた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you doing?[」][lr]
+[else]
+　「何をしているんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I turned around, I saw Sanae laughing at me.[prcm]
+[else]
+　声を聞いて振り返ると、早苗が少し笑いながらこちらを見ていた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nothing, really.[l] I noticed some dew on the window, so I thought it might've grown pretty cold outside.[」][lr]
+[else]
+　「別に何も。[l]ガラスが結露してるから、外は寒いのかなと思っただけだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled my chair to a spot with more moisture, only to realize there was already something on the window glass.[lr]
+[else]
+　椅子をずらして水滴の多い場所へと移ると、カーテンの後ろに模様が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Parting the curtains revealed a drawing on the window's dew-covered surface.[prcm]
+[else]
+　サッ、と窓の半分を隠していたカーテンを開けると、結露の上に指で描いた絵があった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is this some animal?[」][lr]
+[else]
+　「これは動物かな？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I messed that one up.[」][lr]
+[else]
+　「それは失敗してしまったんです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae's face was ridden with guilt.[prcm]
+[else]
+　早苗はバツが悪そうに言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked back at the glass again.[lr]
+[else]
+　もう一度硝子を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her drawing was quickly disappearing.[lr]
+[else]
+　指の[ruby text="あと"]跡は薄く曇り始めていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In any case, my best guess was that it depicted some four-legged animal.[prcm]
+[else]
+　その線は四本足の動物を描いている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is this a cat?[」][lr]
+[else]
+　「これは猫かな？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was trying to draw a bear.[」][lr]
+[else]
+　「熊のつもりです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] You might want to do this, then.[」][lr]
+[else]
+　「なるほど。[l]それならこうした方がいいかもね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed a finger against the mouth of the drawing, and slid it in the shape of a fish.[prcm]
+[else]
+　熊らしき動物の口元に指を置くと、冷たい硝子の上で魚の形をなぞる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that a fish?[」][lr]
+[else]
+　「魚？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A salmon.[l] You often see bears holding them in their jaws on pictures.[」][lr]
+[else]
+　「鮭だよ。[l]熊の木彫りもよく咥えてるでしょう」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Cats eat fish, too.[」][lr]
+[else]
+　「猫も魚を咥えますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not talking about saury here, okay?[l] Anyway, if it doesn't look salmon-y enough... look, I can make its jaw a little longer.[」][lr]
+[else]
+　「秋刀魚じゃないよ。[l]でもまぁ、なるほどね。[l]それじゃあ鮭らしくこの魚の顎を長くしてみようか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I breathed against the glass, making both the bear and the fish disappear.[prcm]
+[else]
+　窓ガラスに息を吹きかけると、熊も魚も白く塗りつぶされてしまう。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah...[」][lr]
+[else]
+　「あ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry. I only wanted to erase the fish, but...[」][lr]
+[else]
+　「ごめん、魚だけ消そうと思ったんだけど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it's no big deal, at any rate.[」][prcm]
+[else]
+　「まぁ、いいですけど」[prcm]
+[endif]
+
+
+
+*085_b| A scary story of the sanatorium
+; *085_b|療養所の怖い話
+[fbfstoretitle eng="A scary story of the sanatorium" jp="療養所の怖い話"]
+
+
+*| A scary story of the sanatorium
+; *|療養所の怖い話
+[fbfstoretitle eng="A scary story of the sanatorium" jp="療養所の怖い話"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The white on the window melted away like an iceberg in warm water.[lr]
+[else]
+　ガラスの雲りは氷山が溶けるように白い島を減らしていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And by the time it was gone, it left behind a pattern reminiscent of a face.[prcm]
+[else]
+　そして全部消えて言ったあとに顔のような模様を残した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right...[l] I had this really scary dream the other day, but I can't remember it.[」][lr]
+[else]
+　「そういえば。[l]少し前に怖い夢を見たんだけど、これが何も思い出せないんだよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's how most dreams are.[」][lr]
+[else]
+　「夢なんてそういうものですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I remembered it just fine when I woke up.[l] I thought I could use it to scare everyone, so I was planning not to forget it, but...[」][lr]
+[else]
+　「起きたときは覚えていたんだけどな。[l]きっと皆も怖がると思って覚えておくつもりだったのに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe when you remember it, you'll realize it wasn't all that scary at all.[」][lr]
+[else]
+　「思い出したら全然怖くないかもしれませんね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mayuko said the same thing.[l] Hmm, maybe I should prepare myself a pen and some paper next time I go to sleep.[」][lr]
+[else]
+　「繭子もそう言ってたよ。[l]今度から寝る前にメモ紙とペンを用意しようかな」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae snickered to herself.[prcm]
+[else]
+　早苗がクスリと笑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako, trying to jot these things down is all well and good. But are you writing your diary after a fit, just like Ms. Mayuko told you?[」][lr]
+[else]
+　「貴呼さん。[l]夢の話を書くのもいいですけど、発作のあと日記はちゃんと書いてますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I am.[l] Just recently, I spent an entire day reading through all the notebooks I'd already filled. Geez.[」][lr]
+[else]
+　「書いてるよ。[l]少し前までは日記を読んだって、それだけ日記に書いていたけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't you want to write something else down?[l] You might forget it all after your next attack.[」][lr]
+[else]
+　「他の事を書かなくて大丈夫ですか？[l] 次に発作が起きたとき、思い出せなくなっても知りませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't really have that much stuff to write about.[」][lr]
+[else]
+　「書いただけでも良い方だよ。[l]実際に何もしてなかったからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko didn't comment on the state of my diaries, but I had a feeling that continuing to sum up entire days in one sentence might piss her off.[prcm]
+[else]
+　日記の内容について繭子は何も言わなかったが、これからも一行日記を続けるとなるとさすがに咎められそうだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that reminds me. I know this one scary story about the sanatorium.[」][lr]
+[else]
+　「そういえば、この療養所の怖い話ならひとつ知っていますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of story?[」][prcm]
+[else]
+　「どういう話？」[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=1500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h02" visible=true left=105 top=0 opacity="255"]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_image storage="item29" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01_bg" visible=true left=105 top=0 opacity="255"]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you lock your room, Takako?[」][lr]
+[else]
+　「貴呼さんは部屋の鍵をかけていますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No. I just can't be bothered.[l] What about you?[」][lr]
+[else]
+　「面倒だから掛けてないよ。[l]早苗もでしょう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, you have a point.[l] While it does feel somewhat pointless to lock our doors, the locks themselves were installed for a reason.[l] Can you guess what that reason was?[」][lr]
+[else]
+　「そうですね。[l]今では鍵をかける意味はそれほどないですが、鍵はちゃんとした理由があって取り付けたらしいのですよ。[l]どんな理由があったのか気になりません？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[l] There were more people here in the past, so not everyone knew each other?[」][lr]
+[else]
+　「分からないな。[l]昔は今より人が多くて、知らない人も沢山いたとか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose that could be one explanation.[l] However, what I've heard was the opposite — the locks were there to prevent patients from leaving their rooms.[」][prcm]
+[else]
+　「確かにそういう考え方もありますね。[l]
+でも私が聞いたところによると、むしろ貴呼さんの言ったこととは逆で、患者を外に出さないための鍵なのだそうですよ」[prcm]
+[endif]
+
+
+[playbgm storage="bgm52.ogg"]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So they wouldn't escape?[」][lr]
+[else]
+　「患者を外に出さないため？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You wouldn't suspect it now, but in the past, there were apparently cases of patients going missing.[l] The nurses began locking them in their rooms so they wouldn't try to escape and hide during the night.[」][lr]
+[else]
+　「今では考えられないですが、以前の療養所では患者が行方不明になる事件が度々起きていたみたいです。[l]
+それで、患者が勝手に抜け出したり隠れたりしないようにするために部屋ごとに鍵を取り付けたそうです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why would they try to escape?[l] Were the chores too hard for them or something?[」][prcm]
+[else]
+　「どうして抜け出したりするんだろう？[l] 仕事がきつかったのかな」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Apparently, it was more related to their memories.[l] Did you remember anything when you read your diary, Takako?[」][lr]
+[else]
+　「それが、鍵の理由は物忘れの症状らしいですよ。[l]貴呼さんは発作のあと、日記を読んでみて何か思い出すことはありました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[l] There were a few parts I couldn't remember all that well, but I feel that's still within healthy boundaries.[」][prcm]
+[else]
+　「どうかな。[l]こんなこともあったなって言う程度だけど、それくらいのことってみんな忘れちゃうんじゃないかな」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="item01" page=back layer=base rceil=150 gceil=150 bceil=150]
+[trans method = crossfade time=1000]
+[wt]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They didn't use diaries in the past.[l] They didn't even know the symptoms led to memory loss and were instead trying to treat them.[l] Anyway, they didn't occupy themselves with their memories too much, and some patients ended up forgetting almost everything about themselves.[」][prcm]
+[else]
+　「昔は、その日記で思い出すという方法を取ってなかったみたいです。[l]
+発作がそのものの症状と思われて物忘れに気がついていなかったか。[l]
+それとも別の方法を取っていたのかはわかりませんが。[l]
+忘れたものはほぼそのままにされていたらしいですよ。[l]
+そうするとどうなるかということですけれど。[l]
+その患者は発作の回数が増えて、一度に忘れてしまう記憶も大きくなっていったそうです」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You mean, they became like amnesiacs?[」][lr]
+[else]
+　「記憶喪失になるということ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae slightly tilted her head.[prcm]
+[else]
+　その疑問に対して早苗は右に少しだけ首を傾けた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]As in, forgetting all your memories since birth? That's what you're thinking about, right?[」][lr]
+[else]
+　「きっと貴呼さんが考えているのは、出生以来すべての記憶を忘れる状態のことですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I nodded.[prcm]
+[else]
+　早苗の言葉に首を縦に振る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Our symptoms are somewhat different, though.[l][clickskip enabled=false][backlay][fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01_bg" visible=true left=105 top=0 opacity="128"][fbfscale_image layer=1 page=back storage="fgimage/sana_img/f01_p01_h01_bg" visible=true left=105 top=0 opacity="128"][fbfscale_image storage="bg00" page=back layer=base][trans method = crossfade time=1000][wt][fbfscale_move time=1500 path="(-70,0,255)" layer=0][fbfscale_move time=1500 path="(280,0,255)" layer=1][clickskip enabled=true] First, you have to realize that your various memories of phenomena happening around you, as well as your feelings in response to said phenomena are different things. [wm canskip=true][clickskip enabled=false][backlay][freeimage layer=0 page=back][trans method = crossfade time=800][wt]In our case, we mostly lose the feeling part of our memories. [fbfscale_move time=1000 path="(105,0,255)" layer=1][clickskip enabled=true]We might vaguely remember what happened, but we don't remember how we felt about it.[l] Anyway, that's the kind of memory loss we're dealing with.[」][prcm]
+[else]
+　「それは全生活史健忘と言うみたいですけど、私たちの症状は少し違うみたいですよ。[l]
+どう違うかというとですね。[l]
+[clickskip enabled=false]
+[backlay]
+[image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01_bg" visible=true left=105 top=0 opacity="128"]
+[image layer=1 page=back storage="fgimage/sana_img/f01_p01_h01_bg" visible=true left=105 top=0 opacity="128"]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[move time=1500 path="(-70,0,255)" layer=0]
+[move time=1500 path="(280,0,255)" layer=1]
+[clickskip enabled=true]
+[ruby text="こ"]療養[ruby text="こ"]所では、記憶というのは身の回りで起きた事象とそれに対して本人が受けた何かしらの感動の二つに分けて考えているんです。[l]
+[wm canskip=true]
+[clickskip enabled=false]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method = crossfade time=800]
+[wt]
+;[move time=1000 path="(105,0,255)" layer=1]
+[clickskip enabled=true]
+私たちの発作で失う記憶というのは主に感動の方なんです。
+[l]
+過去にどんなことがあったのかは覚えていても、それに対して何を思っていたのか分からない。[l]
+そういう類の記憶喪失なんです」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I more or less understood the difference from her explanation.[lr]
+[else]
+　早苗の言ったことを反芻して、物忘れの症状と健忘の違いについてはなんとなく理解することができた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave her another few nods.[prcm]
+[else]
+　それからウンウン、と二度ほど軽く縦に頭を振る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But what of it?[l] If you can remember the facts of your past, you won't forget how to read or write... or any other skills you need to survive in the world.[」][lr]
+[else]
+　「しかしそうすると一体どうなるんだろう？[l] 過去のことは覚えているのなら、言葉や読み書きはできるんだよね。[l]
+生活にどんな支障が出るの？」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/sana_img/f01_p01_h01_bg2" visible=true left=280 top=0 opacity="128"]
+[trans method = crossfade time=800]
+[wt]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, the ultimate end point of our condition is that we lose our individuality — our personalities, if you will.[l] We lose interest in what we used to like and forget what we hated.[l] That's the extent of what I was told about it.[l] Um, to give an example, imagine reading a book and understanding what's going on, but not feeling anything about it. Or having a meal and understanding its taste, but being unable to decide whether or not it's delicious.[」][prcm]
+[else]
+　「これは患者の個性や性格が失われる病気と言われています。[l]
+あらゆるものに興味を持てなくなって、好き嫌いというものがまるで無くなるそうです。[l]
+私はそこまでしか聞いたことがないですが。[l]
+例えば、本を読んで内容を理解できてもそれが面白いと感じなかったり、ご飯を食べて味がわかっても美味しいと感じなかったり。[l]
+そういうものではないでしょうか？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That would suck.[」][lr]
+[else]
+　「それは嫌だね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think the symptoms had a name, but I've already forgotten.[l] I think it was 'memory loss' something.[」][lr]
+[else]
+　「確かここではその症状の名前があったはずですが、それは忘れてしまいましたね。[l]
+喪失性なんとかって言った筈ですが」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I briefly pondered what she had just told me and realized that her story about locks hadn't been finished yet.[prcm]
+[else]
+　早苗が症状の名前を思い出している間、初めて聞く症状について考えを巡らせていると、元々の話が鍵を取り付けた理由だったことを思い出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, I got the part about our condition, but what does it have to do with locks?[」][prcm]
+[else]
+　「ねえ、物忘れの症状についてはわかったけど。[l]鍵の件はどうなったの？」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg41_3" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/sana_img/f01_p01_h01_bg2" visible=true left=280 top=0 opacity="128"]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, that's right.[l] Anyway, one of the early patients who displayed this 'memory loss something' went missing, apparently. [clickskip enabled=false][backlay][freeimage layer=1 page=back][trans method = crossfade time=800][wt][clickskip enabled=true]They couldn't find them no matter where they looked.[l] Everyone, from the nurses to the town militia, searched all over the mountain but found nothing — at the time, they even thought that the person may have been 'spirited away.'[」][lr]
+[else]
+　「そう鍵の件。[l]その喪失性なんとかっていう症状の患者が初めて現れだした頃に、その患者の一人が行方不明になってしまったそうです。[l]
+[clickskip enabled=false]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method = crossfade time=800]
+[wt]
+[clickskip enabled=true]
+どこを探しても見つからない。[l]
+療養所の職員と街の人で山の中まで探したのですが、足跡すらつかめなかったようです。[l]
+それで当時は神隠しかと騒がれたそうです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]On top of it...[」] Sanae went on in an emphasized tone.[prcm]
+[else]
+　「しかもですよ」と言うとき早苗は声を強めて強調した。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg41_3" page=back layer=base]
+[fbfscale_image layer=1 page=back storage="fgimage/other_img/shade1" visible=true left=325 top=200 opacity="128"]
+[fbfscale_image layer=2 page=back storage="fgimage/other_img/shade2" visible=true left=360 top=0 opacity="128"]
+;[fbfscale_image layer=3 page=back storage="fgimage/other_img/shade3" visible=true left=280 top=0 opacity="128"]
+[fbfscale_image layer=4 page=back storage="fgimage/other_img/shade4" visible=true left=-50 top=30 opacity="128"]
+[fbfscale_image layer=5 page=back storage="fgimage/other_img/shade5" visible=true left=180 top=130 opacity="128"]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=4 page=back]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If it ended there, it probably wouldn't have become as big of a thing. But some time later, another patient disappeared the exact same way.[」][lr]
+[else]
+　「それで終わればそれまでの話だったのですが。[l]すぐにまた別の患者が同じように姿を消したんです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did that patient have the same symptoms, too?[」][lr]
+[else]
+　「その患者もさっき言った症状なの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] Anyway, we have finally reached the part about the locks.[clickskip enabled=false][backlay][freeimage layer=5 page=back][trans method = crossfade time=800][wt][clickskip enabled=true] After the second case, the sanatorium added locks to the rooms of every patient to prevent any similar cases from cropping up.[l] At the time, you couldn't unlock the rooms from the inside, and the sanatorium staff had complete control over who would leave their rooms and when.[」][lr]
+[else]
+　「そうなんです。[l]そしてようやく鍵の件です。[l]
+[clickskip enabled=false]
+[backlay]
+[freeimage layer=5 page=back]
+[trans method = crossfade time=800]
+[wt]
+[clickskip enabled=true]
+二人目の行方不明者が出たときに、療養所側はこれを問題視してこれ以上行方不明者を出さないようにと療養所の部屋に鍵をかけることにしたんです。[l]
+当時は部屋の鍵は内側からは開かないようになっていて、就寝前には療養所の人が患者が部屋にいるか確認して回っていたということです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And did that help?[」][prcm]
+[else]
+　「それで、行方不明はなくなったの？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae shook her head.[prcm]
+[else]
+　早苗は首を横に振った。[prcm]
+[endif]
+
+[clickskip enabled=false]
+[backlay]
+[freeimage layer=2 page=back]
+;[freeimage layer=4 page=back]
+[trans method = crossfade time=800]
+[wt]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]From what I've heard, people continued to go missing even after that.[l] Patients that were confirmed to be in their rooms before bedtime disappeared by morning.[」][lr]
+[else]
+　「そのあとでも行方不明者は出続けたと言われています。[l]
+不思議なことに、就寝前には部屋にいることが確認された患者も翌日の朝に居なくなっていたそうです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Didn't they just climb out through the window or something?[」][lr]
+[else]
+　「窓から外に出たんじゃないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The windows were locked, too, and there were no signs of the locks being broken, either.[l] They all vanished like a wisp of smoke.[」][prcm]
+[else]
+　「窓にも鍵がかかっていて扉を壊したあともない。[l]
+まるで煙のように姿を消したということですよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it's not like people could actually do that, though.[」][lr]
+[else]
+　「とは言っても、本当に人が煙になるわけでもないでしょうに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Everyone felt the same way, of course. But no matter how much they searched, they couldn't find a single trace of the missing patients.[l] The only thing they understood was that the patients who had forgotten all about themselves and lost their personalities would eventually disappear.[」][lr]
+[else]
+　「もちろん誰でもそう思いますが、実際にどんなに調べても失踪者の痕跡はなく。[l]
+ただ、物忘れの症状が末期の患者、つまり自身の性格を失うまで病状が悪化した患者が消えてしまうということしか分からなかったみたいです」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method = crossfade time=1500]
+[wt]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Mhm...[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried to more or less summarize Sanae's story in my mind.[prcm]
+[else]
+　もう一度早苗の話を整理してみた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base rceil=100 gceil=100 bceil=100]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item01" page=back layer=base rceil=150 gceil=150 bceil=150]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01_bg" visible=true left=105 top=0 opacity="255"]
+[trans method = crossfade time=1000]
+[wt]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Patients didn't use diaries in the past.[lr]
+[else]
+　気になる要点は以前の患者が日記を書いていなかったこと。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01_bg2" visible=true left=105 top=0 opacity="255"]
+[fbfscale_image layer=1 page=back storage="fgimage/sana_img/f01_p01_h01_bg2" visible=true left=105 top=0 opacity="255"]
+[trans method = crossfade time=800]
+[wt]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the symptoms of memory loss grew worse, they forgot who they were.[lr]
+[else]
+　物忘れが進行して自身すら分からなくなってしまうこと。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[trans method = crossfade time=800]
+[wt]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Finally, they disappeared without a trace.[prcm]
+[else]
+　そして、そうなった患者が行方不明になることだった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg43_2" page=back layer=base rceil=150 gceil=150 bceil=150]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The story was peculiar, but then again, so was this sanatorium.[lr]
+[else]
+　どれも奇妙な話だったが、そもそもこの療養所もそうだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd never heard about this kind of sickness before. Besides, patients here had jobs and duties, despite this being a sanatorium supposedly meant for relaxation.[lr]
+[else]
+　物忘れの症状というのもここに来るまでは聞いたことのないものだったし、療養所なのにそれぞれの患者に仕事があったりする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Well, the part about work was possibly because Mayuko was the only nurse on the grounds and couldn't manage everything by herself, but still... it was kind of weird that there were no doctors here, for example.[lr]
+[else]
+　仕事の件は療養所の人手が繭子だけしかいないからかもしれないが、そもそも医師が不在なのも理由を知らない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't think too much about it before, but it was peculiar, for sure.[prcm]
+[else]
+　あまり気にしてはいなかったが、考えてみると不思議な場所だった。[prcm]
+[endif]
+
+
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01_bg" visible=true left=105 top=0 opacity="255"]
+[trans method = crossfade time=800]
+[wt]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered that odd feeling I had when I was cleaning the storage room.[lr]
+[else]
+　ふと、物置部屋の掃除で妙な気配を感じたことを思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Maybe this place still hid some unknown secrets.[prcm]
+[else]
+　もしかすると、療養所には私もまだ知らないことがあるのかもしれない。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[fadeoutbgm time=3000]
+[backlay]
+[fbfscale_image storage="bg43_2" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h03" visible=true left=105 top=0 opacity="255"]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, it's all just a rumor, though.[」][prcm]
+[else]
+　「とまあ、そんな噂話ですよ」と早苗が言った。[prcm]
+[endif]
+
+
+[playbgm storage="bgm21"]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was pretty interesting.[l] Still, the part about people just disappearing didn't make much sense.[」][lr]
+[else]
+　「中々面白かったよ。[l]人が消える件は少し突拍子もない気がするけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, that's just how most rumors are.[」][lr]
+[else]
+　「あくまでも噂ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But then again, most rumors also have a bit of truth mixed into them, no?[」][prcm]
+[else]
+　「噂ならいくらか事実もあるのかもね」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you're curious, you can always try it for yourself.[l] I mean, you were complaining that writing your diary was a pain in the neck.[」][lr]
+[else]
+　「気になるのなら、ひとつ試してみることはできますよ。[l]貴呼さんは日記を書くのが面倒だっていつも言っていますし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that what it all comes down to?![」][lr]
+[else]
+　「なんていうオチだ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae snickered to herself.[prcm]
+[else]
+　おどけて言うと、早苗がクスリと笑った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="085_2.ks" target=*085_2
+
+

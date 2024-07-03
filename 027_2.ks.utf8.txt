@@ -1,0 +1,626 @@
+*027_2| Library
+; *027_2|図書館
+[fbfstoretitle eng="Library" jp="図書館"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg123" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 31"]
+[eval exp="sf.ItRelease = 32"]
+[endif]
+
+
+*| Library
+; *|図書館
+[fbfstoretitle eng="Library" jp="図書館"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sun shone brightly in the sky as I left the clinic; I wouldn't have been surprised to see a rainbow as well.[lr]
+[else]
+　診療所を出ると空はカラリと晴れていて、探せば虹が見つかりそうな空気だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't dislike the smell of wet asphalt.[lr]
+[else]
+　アスファルトの濡れた匂いは嫌いではない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked at the taxi parked in front of the pharmacy, but quickly averted my gaze before the driver could make eye contact.[prcm]
+[else]
+　薬局の前でとまっているタクシーを見ると、運転手がこちらを見る前に目をそらした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Another taxi drove to the clinic.[lr]
+[else]
+　診療所へはタクシーで来た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wasn't really knowledgeable about this area, but I felt that my office shouldn't have been that far from it.[lr]
+[else]
+　診療所の周辺は普段通らないため、地理には疎いが行きはさほど遠くはないように感じた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After thinking for a few moments, I decided to go on foot.[prcm]
+[else]
+　少し考えて、事務所へ歩いてもどることにする。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[playse buf = 1 storage=se14.ogg loop=true]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg58_1" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I expected, after moving north a few blocks, I found myself on a familiar street.[lr]
+[else]
+　予想通り、少し北へ上がると見知った通りに出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Relieved, I continued walking, thinking back to my conversation with Narasaki.[prcm]
+[else]
+　安心して、通りを歩き始める。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　それから、[ruby text="なら"]楢[ruby text="さき"]崎との話を少し思い出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Hallucinations, ringing in the ears, and dysmnesia did sound pretty depressing.[lr]
+[else]
+　幻覚、耳鳴り、記憶障害ではやはり気は重い。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, as Narasaki said, I didn't feel that anxious or confused about it.[prcm]
+[else]
+　しかし、楢崎の言ったとおり、思ったほど焦燥や混乱はなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]At least you're self-aware.[」][lr]
+[else]
+　「その問題は承知している」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I recalled what she told me.[prcm]
+[else]
+　楢崎が言ったことを思い出す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd say it's pretty important to get the full picture.[」][lr]
+[else]
+　「確かに、状況を把握するのは大事であるような気がする」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized I had walked into a shadow. Raising my face, I stopped just a moment before bumping into a street sign.[lr]
+[else]
+　ふと視界が陰り、いつの間にか下を向いてた頭を上げると、咄嗟に目の前にあった電柱を避けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The last time I actually hit a street sign with my face was still in elementary school. Takako, however, kept telling me how it was a bad habit of mine to completely lose sight of my surroundings when I had something on my mind.[prcm]
+[else]
+　歩いて電柱に当たったことなど小学校の遠足以来ないことだが、[ruby text="たか"]貴[ruby text="こ"]呼はことあることにその事件を蒸し返してはフラフラ歩くのが悪い癖だと言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized I was standing in front of a library.[lr]
+[else]
+　目線を上げると、いつも素通りしていた図書館があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked my wristwatch; I still had some time before work.[prcm]
+[else]
+　腕時計を見ると、事務所に戻る時間までまだ余裕があった。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutse buf=1 time=1000]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1500]
+[backlay]
+[playbgm storage="bgm54"]
+[fbfscale_image storage="bg124" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[seopt buf=1 volume=100]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Psychology was in a different section from medicine, so it was a pain to find it. However, before I could spot an idling library worker, I found myself in front of a shelf with these kinds of books.[lr]
+[else]
+　心理学は医療関係の棚と別になっていたため探すのに少し骨が折れたが、暇そうな司書を見つける前にようやくそれらしい本が並ぶ棚を見つける。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I randomly picked one up and opened it.[prcm]
+[else]
+　適当な本を取り、ページを捲る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed to be a dictionary dealing with terms of clinical psychology.[lr]
+[else]
+　それは、心理医療の用語をまとめたもののようだった。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se57.ogg]
+[wait time=500]
+[playse buf = 2 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I read through a few random pages until my eyes stopped on something.[prcm]
+[else]
+　パラパラと流し読みをして、気になったページは少し目に止めてみた。[prcm]
+[endif]
+
+
+[r]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Catharsis.[lr]
+[else]
+　カタルシス。[lr]
+[endif]
+
+[r][r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A method of treatment that makes repressed memories resurface in order to avoid an explosive buildup.[prcm]
+[else]
+　精神医療においては「抑圧されていた心理を意識化させ、鬱積(うっせき)した感情を除去することで症状を改善しようとする精神療法」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Making repressed memories resurface...[」][lr]
+[else]
+　「心理を意識化させる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+According to the definition I was aware of, the word referred to the purification of emotions. However, in the context of psychology, it also seemed related to what Narasaki was talking about — understanding the whole picture.[prcm]
+[else]
+　精神の浄化といった意味で覚えていた単語の精神医療においての意味は、楢崎が大事だと言っていた状況を把握することに通じているような気がした。[prcm]
+[endif]
+
+
+[playse buf = 2 storage=se50.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed the book and considered the shelf again.[lr]
+[else]
+　本を閉じて片手に持ち、そのあたりの棚を眺める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In the end, I chose two books and brought them to the counter.[prcm]
+[else]
+　それから、気になった本を二冊手にとってカウンターへ向かう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I left the psychology section, I stopped, wondering if I should perhaps borrow some other books, mostly for recreational reading.[lr]
+[else]
+　書棚を抜けてカウンターが見えてくると、心理学以外の本も借りようかと迷い、一瞬足を止める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The librarian behind the counter noticed me lingering about.[prcm]
+[else]
+　そこに、カウンターの向こうで本を積んでいた司書のひとりがこちらに気がついて声をかけてくる。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Over here, please.[」][lr]
+[else]
+　「こちらへどうぞ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The librarian was a woman of short stature whose head barely reached up to my shoulders.[lr]
+[else]
+　声をかけてきた司書は、こちらより頭一つ分ほど背が低い女性だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked the floor behind the counter — it was the same height as the floor on my side.[prcm]
+[else]
+　カウンターの奥の床を見て、同じ高さであることを確認した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you happen to have a membership card?[」][lr]
+[else]
+　「利用者カードをお持ちでしょうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She addressed me in a slightly high-pitched tone.[prcm]
+[else]
+　と、少し高めの声で聞いてくる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「いいえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is this your first time visiting?[」][lr]
+[else]
+　「こちらのご利用は初めてですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll prepare a card for you, then.[l] Can you fill out this form here?[」][lr]
+[else]
+　「それでは、ご利用カードを作成しますね。[l]こちらの用紙に記入をお願いします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She placed a piece of paper and a pen in front of me.[lr]
+[else]
+　パッパ、と記入用紙とペンが出てくる。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se61.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wrote down my name and contact information.[prcm]
+[else]
+　そこに名前と連絡先を記入する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How long will this take?[」][lr]
+[else]
+　「利用カードの発行にはどれくらいかかりますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I handed her the form and glanced at the clock on the counter.[prcm]
+[else]
+　記入が終わり用紙の向きを返すと、カウンターに置いてある時計を見て聞いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just a few minutes.[」][lr]
+[else]
+　「直ぐに終わりますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her reply was quick and curt.[prcm]
+[else]
+　と、返事が返ってきた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wished she was more specific, but I nodded and decided to wait.[lr]
+[else]
+　出来れば時間で教えて欲しかったが、頷いて待つことにする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed three books on the counter, and the librarian scanned their covers with a bar code reader.[prcm]
+[else]
+　カウンターに三冊の本を置くと、背表紙にバーコードリーダーをかざした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard three beeps.[lr]
+[else]
+　電子音が三回鳴った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She picked up the card that came out of a machine beyond the counter, gave it a final check, then handed it to me.[prcm]
+[else]
+　それからその司書はカウンターの奥の機械から出てきたカードを取りパタパタ、と数回スナップしてからこちらに渡してきた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sisyo_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here you go, your library card.[」][lr]
+[else]
+　「こちらが利用者カードになります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It really didn't take long. I picked it up along with my three books.[prcm]
+[else]
+　本当にすぐに出てきた利用者カードと、三冊の本を受け取る。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg58_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sun was starting to set as I left the library.[lr]
+[else]
+　図書館を出ると、夕日が差し始めていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This time, I headed straight for the office, but as it was slightly farther than I had expected, I ended up arriving late.[prcm]
+[else]
+　今度は寄り道をせずにまっすぐ事務所へと向かうが、事務所への道のりは思いのほか時間がかかってしまった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="027_3.ks" target=*027_3
+
+

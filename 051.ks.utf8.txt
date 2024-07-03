@@ -1,0 +1,245 @@
+*051| A butterfly larva and white porcelain
+; *051|蝶の幼虫と白磁
+[fbfstoretitle eng="A butterfly larva and white porcelain" jp="蝶の幼虫と白磁"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[playbgm storage="bgm38"]
+[seopt buf=0 volume=60]
+[fadeinse buf=0 storage="se78.ogg" time=1000 loop=true]
+[wf]
+[backlay]
+[fbfscale_image storage="bg44_3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled = true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 64"]
+[eval exp="sf.ItRelease = 65"]
+[endif]
+
+
+*| A butterfly larva and white porcelain
+; *|蝶の幼虫と白磁
+[fbfstoretitle eng="A butterfly larva and white porcelain" jp="蝶の幼虫と白磁"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After we both returned to the night duty room following our bath, Mayuko went off into the kitchen to prepare some tea.[lr]
+[else]
+　風呂を出てから、二人で宿直室に戻ると、[ruby text="まゆ"]繭[ruby text="こ"]子はお茶を煎れに台所へ入っていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was about to pull a seat cushion closer to myself to sit on when my eyes wandered to a vase on the windowsill.[lr]
+[else]
+　私は座って待とうと座布団を取ろうとした所で、窓辺に置かれた花瓶に目を留める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A branch of the camphor tree from the inner yard rested in it, with a yellowish-green caterpillar crawling along one of its leaves.[prcm]
+[else]
+　小さな白磁の花瓶には中庭の楠の木の枝が活けてあり、その枝の葉には黄緑の蝶の幼虫が乗っている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You took it with you?[」][lr]
+[else]
+　「取ってきたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a newspaper laid under the vase.[prcm]
+[else]
+　花瓶の下に新聞広告チラシが敷かれていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] I thought it might drown in that rain.[」][lr]
+[else]
+　「はい。[l]雨ざらしでは、死んでしまうと思ったので」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear Mayuko's voice from the kitchen.[prcm]
+[else]
+　と、台所から返事が聞こえる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The caterpillar pointed its two antennae at me and turned completely motionless.[prcm]
+[else]
+　黄緑の幼虫は黒い角をふたつこちらに向けてじっとしている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried addressing the thing with a "Good for you," but it showed no reaction.[prcm]
+[else]
+　「よかったなあ。おまえ」と試しに口だけで話しかけてみたが、これといった動きは無かった。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[backlay]
+[wait time=1000]
+[fbfscale_image storage="bg44_3" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko came into the room carrying a tray with a teapot and two teacups on it.[lr]
+[else]
+　繭子が急須と湯飲みを載せたお盆を持って来る。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se106.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once she reached the table, she filled the cups with steaming tea and handed one to me.[lr]
+[else]
+　卓袱台に着くと、煎れ立てのお茶を急須から湯飲みに移してこちらに寄越してくれた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After taking a sip, I let out a brief sigh.[prcm]
+[else]
+　私はお茶を一口のみ、息をついた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Having a bath at noon is a wonderful thing.[」][lr]
+[else]
+　「お昼から、風呂っていうのもいいものだね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I agree.[」][lr]
+[else]
+　「そうですね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The hum of rainfall filled the silence of the room.[lr]
+[else]
+　宿直室は静かで、雨音が良く聞こえる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sky was covered by a host of dark clouds, giving our surroundings an evening-like gloom.[lr]
+[else]
+　空はどんより曇っていて、室内はやや薄暗い。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko snuffed her nose.[prcm]
+[else]
+　クスン、と湯飲みを持ったまま繭子が鼻を鳴らした。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1500]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="052.ks" target=*052
+
+

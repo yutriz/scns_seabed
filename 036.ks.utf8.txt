@@ -1,0 +1,566 @@
+*036| The philosopher
+; *036|哲学者
+[fbfstoretitle eng="The philosopher" jp="哲学者"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+
+[eval exp="kag.current.edgeEmphasis = 1200"] 
+
+[playbgm storage="bgm09"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=5000]
+[wt]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 47"]
+[eval exp="sf.ItRelease = 48"]
+[endif]
+
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+*| The philosopher
+; *|哲学者
+[fbfstoretitle eng="The philosopher" jp="哲学者"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my eyes after experiencing a pleasant feeling of lightness, almost like I was floating in the wind.[prcm]
+[else]
+　軽くて心地の良い浮遊感のあとに、目を開ける。[prcm]
+[endif]
+
+
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Within the deep darkness hovered a tiny flame, illuminating the cold, rock-laden ground below it.[lr]
+[else]
+　真っ暗な闇の中で、小さな炎が浮いて、冷たい岩肌の地面を映している。[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was someone sitting in front of me, on the opposite side of the flame.[prcm]
+[else]
+　炎を挟んで、対面には誰かが座っている。[prcm]
+[endif]
+
+
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I know you.[l] We've met before.[」][lr]
+[else]
+　「あなたを知ってるわ。[l]会ったことがある」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's right.[l] We met at the square.[l] You were with your lover then.[」][lr]
+[else]
+　「そう、その通りだよ。[l]キミとは一度、広場で会っている。[l]そのときキミは恋人と一緒だった」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They were garbed in a robe with a long hood, preventing me from making out their face.[prcm]
+[else]
+　ローブを目深にかぶっており、話している表情は読み取れない。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why are you in my dream?[」][lr]
+[else]
+　「どうして貴方が夢に出たのかしら」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I dunno.[」][lr]
+[else]
+　「さあね」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was as though my question had been swallowed by the darkness.[prcm]
+[else]
+　疑問の声は、周りを囲む闇に飲み込まれて消えると、その相槌もあとを追った。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your mind seems to be in quite the state of chaos.[」][lr]
+[else]
+　「思うに、キミの頭の中は混乱しているのではないか？」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Perhaps.[」][lr]
+[else]
+　「そうかも知れない」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Perhaps you are more confused than even you realize.[」][prcm]
+[else]
+　「それも、キミが思っている以上にね」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] Well, whatever you say. In any case, there was something I forgot to ask you last time.[」][lr]
+[else]
+　「ふうん。[l]まあいいわ、それより前に聞きそびれたことがあったの」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's that?[」][lr]
+[else]
+　「何だい？」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why didn't you renounce your theory?[」][lr]
+[else]
+　「どうして、あのとき自論を撤回しなかったの？」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Most likely because I thought preserving it held more value than the remainder of my life.[」][lr]
+[else]
+　「おそらく、残りの人生よりその理論を残すことに決めたんだ」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why?[」][lr]
+[else]
+　「どうして、そっちを選んだのかしら」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Life versus theory.[」][lr]
+[else]
+　「生と理論」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What we recognize as life is but an accumulation of electrical signals.[l] Our consciousness is merely the result of oscillating electrons.[l] Once you die and that function fails, even that disappears.[l] But the thoughts and ideas you put out there into the world — they remain.[l] It might be no more than a tiny part of me, but a certain sequence of my individual oscillations resonates with and gets copied to other people.[」][lr]
+[else]
+　「思うに、生きてるってことはここにあるただの電気的な信号なんだ。[l]要するに、意識というものは電気の振幅でしかない。[l]死んで機能が停止すると、それも消える。[l]だけど、唱えた思想は残る。[l]一部ではあるが私と同じ振幅が、ほかの人に共感されコピーされて残る」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It is, of course, hardly anything special — everyone's doing it. That's just the kind of animal we, as a species, are. [l] For instance, singing songs of love, [wait time=600]gazing at pictures of your homeland, [wait time=600]reading letters[wait time=600] — the feelings of the creator are conveyed and thus find new life within the heart of the beholder.[l] It's quite simple.[」][lr]
+[else]
+　「でも、特別なことはない。[l]誰でもやっていることなんだ、我々はそういう生き物だからね。[l]例えば、恋の歌を歌う、[wait time=600]故郷の絵を見る、[wait time=600]手紙を読む、[wait time=600]そのとき作った人の気持ちや想いが伝わり、伝えられた者の心に蘇る。[l]わかっていることだ」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose that makes sense.[」][prcm]
+[else]
+　「そうかもしれない」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Every word in our language comes from some individual sequence of oscillations, the original masters of which had long since been lost to time.[l] A single word everyone uses now makes the feelings of those ancients reappear in the world.[l] I feel that's a tad more significant than a few years of living.[」][lr]
+[else]
+　「この話をする言語のひとつひとつの単語にも、その響きが持つ意味のオリジナルの振幅は、気の遠くなるほど昔にそれを決めた者たちが持っているんじゃないかな。[l]単語をひとつ言うとき、既に去った彼らの想いが、いくらか現在に浮かび上がる。[l]
+それは、残りの生よりも価値があるような気がする」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Like a bubble from the shrouded depths of the sea.[」][lr]
+[else]
+　「暗い海の底から、泡のように」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right.[l] The bubbles meld together,[l] change their shapes,[l] and form feelings even more complicated than the original.[」][lr]
+[else]
+　「そう。[l]それは、別のものと組み合わさり、[l]形を変えて、[l]さらに複雑な気持ちを紡いでいく」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I imagine it as a sketch of a persian rug that gets more and more complicated.[」][lr]
+[else]
+　「絨毯が複雑な図形を描くみたいに」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds like it.[l] The people currently alive are the threads connecting the oscillation sequences into one giant rug of near-infinite complexity.[」][prcm]
+[else]
+　「そうかもしれないね。[l]生きている人は複雑な振幅を紡ぐための糸で、ひとつの絨毯で全部繋がっているのかもしれない」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So all people, dead or alive, are part of that rug, are they not?[l] Takako, too?[」][lr]
+[else]
+　「亡くなった人も、そこに含まれているのね。[l]例えば、貴呼も」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about you?[」][lr]
+[else]
+　「貴方は？」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think so.[」][lr]
+[else]
+　「多分そうだ」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're a strange one.[」][lr]
+[else]
+　「貴方、変な人ね」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I could say the same about you.[」][lr]
+[else]
+　「キミだって十分そう見える」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wish we could've met while you were still alive, not in some dream.[」][lr]
+[else]
+　「生きている時に会いたかったけど、[l]これは夢ね」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Indeed, this is a dream completely isolated from reality.[l] You've come up with everything here on your own.[」][lr]
+[else]
+　「そう、これは夢で現実とは関係ない。[l]全部、キミがひとりで考えたことだ」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Perhaps I have.[」][prcm]
+[else]
+　「そうかも知れない」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But I'm extremely interested in what you're trying to achieve now.[」][lr]
+[else]
+　「でも、今からキミが挑戦しようとしていることに凄く興味があるよ」[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you talking about?[」][prcm]
+[else]
+　「何のことかしら？」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The person fell silent.[lr]
+[else]
+　そこで、相手は少しのあいだ黙る。[lr]
+[endif]
+
+[r]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The gradually waning flame around us no longer reached their face.[prcm]
+[else]
+　弱りきった灯火は、もう相手の顔まで届くことはない。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+; FBF: Required to keep color after save/load or language switch.
+[font color=0xFFFFFF edgecolor=0x8FBC8F]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It seems like time's up.[」][l][r][eval exp="kag.current.edgeEmphasis = 1024"][clickskip enabled=false][fadeoutbgm time=3000][backlay][layopt page = back layer = message0 visible= false][layopt page = back layer = message visible= false][trans method = crossfade time=3000][wt][r][cm]
+[else]
+　「時間みたいね」[l]
+[r]
+[eval exp="kag.current.edgeEmphasis = 1024"]
+
+[clickskip enabled=false]
+[fadeoutbgm time=3000]
+[backlay]
+[layopt page = back layer = message0 visible= false]
+[layopt page = back layer = message visible= false]
+[trans method = crossfade time=3000]
+[wt]
+[r][cm]
+[endif]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="037.ks" target=*037
+
+

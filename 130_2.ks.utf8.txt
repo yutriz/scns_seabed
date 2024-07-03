@@ -1,0 +1,273 @@
+*130_2| To Sachiko
+; *130_2|佐知子のところへ
+[fbfstoretitle eng="To Sachiko" jp="佐知子のところへ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm20"]
+[wait time=500]
+[playse buf = 1 storage=se85.ogg]
+[backlay]
+[fbfscale_image storage="bg87" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h22" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 162"]
+[eval exp="sf.ItRelease = 163"]
+[endif]
+
+
+*| To Sachiko
+; *|佐知子のところへ
+[fbfstoretitle eng="To Sachiko" jp="佐知子のところへ"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae and Kozue returned to their rooms after dinner.[lr]
+[else]
+　夕食が終わると、[ruby text="さ"]早[ruby text="なえ"]苗と[ruby text="こずえ"]梢は部屋に戻っていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko, busy washing the dishes in the kitchen, spotted me as I brought over the leftover plates and proceeded to thank me.[prcm]
+[else]
+　残った食器をまとめて台所へ持っていくと、先に洗い物をしていた[ruby text="まゆ"]繭[ruby text="こ"]子が気がついて礼を言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where should I put them?[」][lr]
+[else]
+　「どこに置けばいい？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h02" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just put them in the sink.[」][lr]
+[else]
+　「そのまま洗面台のあたりに置いてください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]'Kay.[」][lr]
+[else]
+　「うん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed them down with a low clang.[prcm]
+[else]
+　カチャン、と食器を置く。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h22" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko picked up one of the plates and began brushing a bubbling sponge against it.[lr]
+[else]
+　繭子は泡立ったスポンジと食器を持った手を動かしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She finished the four sets of plates in a couple of minutes and placed them on the drying rack.[lr]
+[else]
+　四人分の食器は繭子の慣れた手つきにより次から次に洗われて、乾燥用のラックに仕舞われていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Though she seemed to only be lightly washing the plates, I had yet to see a single spot on any of the ones I ate from.[lr]
+[else]
+　軽く洗っているように見えるが、私は食事中に食器の汚れが気になったことはなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was something relieving about how she worked.[prcm]
+[else]
+　繭子の洗い物の様子には安心感があった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Maybe I just got used to the sight.[prcm]
+[else]
+　要は慣れなのかもしれなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Need help?[」][lr]
+[else]
+　「手伝おうか？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h23" visible=true left=335 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm almost done.[l] It's already late, so you should go to sleep.[」][lr]
+[else]
+　「すぐ終わりますから。[l]それよりも、もう遅いので早く寝てしまってくださいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around before reaching the kitchen door and faced Mayuko's back.[prcm]
+[else]
+　台所の扉へ歩いていく途中で振り返り、洗い物をしている繭子の背中をみた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um...[」][prcm]
+[else]
+　「ねえ」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、声をかける。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is it?[」] Mayuko asked without looking at me.[prcm]
+[else]
+　「なんですか？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　繭子はこちらを見ずに返事をした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll sleep in my own room tonight.[」][lr]
+[else]
+　「今日は、部屋で寝るよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「ええ、分かりました」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Goodnight, then.[」][lr]
+[else]
+　「それじゃあ、おやすみなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Goodnight.[」][prcm]
+[else]
+　「おやすみなさい」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="130_3.ks" target=*130_3
+
+

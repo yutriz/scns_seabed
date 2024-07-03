@@ -1,0 +1,298 @@
+*011| A Light Hallucination
+; *011|軽めの幻覚
+[fbfstoretitle eng="A Light Hallucination" jp="軽めの幻覚"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*RoleChange1"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*Jingle6"]
+
+
+[msglayer2]
+
+[fadeinse buf=0 storage=se46.ogg time=1500 loop = true]
+[wf buf=0]
+
+[backlay]
+[fbfscale_image storage="bg59.jpg" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 13"]
+[eval exp="sf.ItRelease = 14"]
+[endif]
+
+
+*| A Light Hallucination
+; *|軽めの幻覚
+[fbfstoretitle eng="A Light Hallucination" jp="軽めの幻覚"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]clank clank*[quake time=200 hmax=0 vmax=30][prcm]
+[else]
+　ガタン、ガタン。[quake time=200 hmax=0 vmax=30][prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my eyes as my seat jerked violently,[lr]
+[else]
+　座席に大きく揺らされて、目を開く。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method = crossfade time=50]
+[wt]
+[backlay]
+[fbfscale_image storage="bg59.jpg" page=back layer=base]
+[trans method = crossfade time=50]
+[wt]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method = crossfade time=50]
+[wt]
+[backlay]
+[fbfscale_image storage="bg59.jpg" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The lights inside the train fell dark for a moment, but soon returned to normal.[lr]
+[else]
+　丁度、車両の電気が一瞬だけ落ちて暗くなるが、すぐに明るくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Realizing that I felt cold, I fixed the collar of my thick cardigan.[lr]
+[else]
+　肌寒さを感じて、寄れかけた厚手のカーディガンの襟を直した。[lr]
+[endif]
+
+[r]
+[quake time=200 hmax=0 vmax=30]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The night train was almost completely devoid of passangers.[lr]
+[else]
+　終電が近い電車の中は、人が殆ど居ない。[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was only one family sitting diagonally across me that boarded the train at the same station as I did.[lr]
+[else]
+車両にはこちらと同じ駅から入ってきた親子だけが、斜め向かいに座っていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Trails of rain drops trickled down the window behind them in the opposite direction the train was moving.[prcm]
+[else]
+　その後ろの窓ガラスに雨粒が付いて、電車の進行方向とは逆に流れていた。[prcm]
+[endif]
+
+
+[fadese buf=0  time=1000 volume=40]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I want a chopsticks toy.[」][lr]
+[else]
+　「はしのおもちゃがいい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The boy with a hoodie turned to the man who was most likely his father.[prcm]
+[else]
+　と、フード付きのパーカーを着た男の子が、隣の父親らしき男に向かって言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Chopsticks?[l] I've never ever heard of a toy like that.[」][lr]
+[else]
+　「お箸？[l] そんなものがあるんか」[lr]
+[endif]
+
+[r]
+[quake time=200 hmax=0 vmax=30]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All my classmates have it.[l] I asked Santa to get me one for Christmas.[」][lr]
+[else]
+　「クラスのみんな持ってるよ。[l]クリスマスはそれがいいってサンタさんにお願いしたし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] What do these chopsticks look like, exactly?[」][lr]
+[else]
+　「そうか。[l]お箸って、どんな形や」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The boy made an odd shape with his hands.[prcm]
+[else]
+　男の子が、両手で形を作って父親に見せていた。[prcm]
+[endif]
+
+
+[fadese buf=0  time=1000 volume=100]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rain grew fiercer by the minute, brushing against the windows in a wave-like pattern.[lr]
+[else]
+　強く降り出した雨が、窓ガラスにモヤモヤと波を作っていった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw a town in the distance, its streets distorted as I looked at them through the rain-soaked windows. A heavy storm cloud — blocking out even the moonlight — loomed over the cityscape, covering it in darkness.[lr]
+[else]
+　歪んで見える窓の外の町並みは、分厚い雨雲に月の僅かな光も遮断されて、とっぷりと闇に浸かっている。[lr]
+[endif]
+
+[r]
+[quake time=200 hmax=0 vmax=30]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized I could see myself reflected in the window.[lr]
+[else]
+　窓ガラスは車内の光が反射して見えていた。[lr]
+[endif]
+
+[r]
+[quake time=200 hmax=0 vmax=30]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Brushing the hair out of my face, I glanced down at the book resting on my knees.[prcm]
+[else]
+　顔にかかった髪を直すと、膝の上の本に目を落とす。[prcm]
+[endif]
+
+
+[rolechange1 bg="bg59"]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After the boy and his father had gotten off the train at the next station, I was left alone in the silence.[lr]
+[else]
+　親子が何処かの駅で降りてしまうと、周りは静かになった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised my face to look at the fogged-up window behind the now empty seats.[prcm]
+[else]
+　顔を上げると、誰もいない座席と靄のように波の打つ窓が見えた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h01" visible=true left=105 top=0 opacity=150]
+[trans method = crossfade time=2000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The lights of the town grew dimmer, and in the dark and distorted reflection of the train interior, I thought I saw the hazy figure of Takako sitting next to me.[lr]
+[else]
+　街の明かりが薄くなり、暗く歪んだ車内が映し出されると、ぼやけた自分の姿の隣に貴呼が並んで座っているように見えた。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule11" vague=300 time=600]
+[wt]
+[backlay]
+[fbfscale_image storage="bg59.jpg" page=back layer=base]
+[trans method=universal rule="rule11" vague=300 time=600]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked to my side, but the seat was empty.[lr]
+[else]
+　実際の座席に目を向けると、誰もいない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I returned my gaze to the window, all I saw was my own lone self sitting in the empty train car.[prcm]
+[else]
+　もう一度見た窓ガラスには、長椅子に一人座っている姿が見えた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method = crossfade time=1500]
+[fadeoutse buf=0 time=3000]
+[wt]
+[wf]
+[stopse buf=0]
+[seopt buf=0 volume=100]
+[wait time=3000]
+[Jingle6]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="012.ks" target=*012
+
+

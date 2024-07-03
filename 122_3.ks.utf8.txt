@@ -1,0 +1,970 @@
+*122_3| To become a fish
+; *122_3|魚になる
+[fbfstoretitle eng="To become a fish" jp="魚になる"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+
+[msglayer]
+[playbgm storage="bgm37"]
+[backlay]
+[fbfscale_image storage="ev32_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 153"]
+[eval exp="sf.ItRelease = 154"]
+[endif]
+
+
+*| To become a fish
+; *|魚になる
+[fbfstoretitle eng="To become a fish" jp="魚になる"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt a bit sleepy as I finished reading that short passage.[lr]
+[else]
+　短い日記を読み終わると少し眠気を感じて、手帳から目を離す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The butterfly was still flapping its black wings, and was now flying in the direction of the closed window.[lr]
+[else]
+　蝶は青と黒の羽をパタパタ、とさせながら貝のシェードの周りをふらふらとし、それから窓の方へと飛んでいった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought it would crash into the glass, but it slowed down just a few centimeters before that, instead landing on the curtain.[prcm]
+[else]
+　そのまま、窓にぶつかるかと思ったが、蝶はガラス窓にぶつかる前にひらりと方向を変えてカーテンにとまった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg32_2=1"]
+[fbfscale_image storage="ev32_2" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[wait time=300]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Tired?[」][lr]
+[else]
+　「疲れちゃったかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Or perhaps it was sulking at the fact that it couldn't escape.[prcm]
+[else]
+　それとも、外に出られなくて拗ねてしまったのかもしれない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Heh, just chill a little.[l] I'm tired, too.[l] Besides, it wouldn't be nice of you to leave without even saying a word to Mayuko, now would it?[l] You see, in human society, debts need to be repaid, even if it's just food and shelter. Don't you think that should apply to butterflies as well?[」][lr]
+[else]
+　「まあ、ちょっと待ってよ。[l]こっちも疲れてるんだ。[l]
+それに、君だって[ruby text="まゆ"]繭[ruby text="こ"]子に何も言わないで出て行くのは忍びないんじゃないかな。[l]
+人には一宿一飯の恩っていうのがあるんだけど、蝶だってそういうのはあってもいいと思わない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed as though the insect had shaken its head.[prcm]
+[else]
+　すると、蝶は少し首を振ったように見える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had its gaze fixed on the white vase.[lr]
+[else]
+　蝶の視線の先には、白い陶磁器があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Specifically, the pupa still attached to a leaf of the camphor tree branch.[prcm]
+[else]
+　蛹のついている枝の葉はそのまま残っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I guess your situation is a bit different.[」][lr]
+[else]
+　「まあ、たしかに飯の恩はなかったかもしれないけどね。[l]君の場合、一宿ってどころじゃなかったわけだしさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The butterfly remained still, seemingly considering my words.[lr]
+[else]
+　蝶は黙って、こちらのそんな思いを聞きわけたように、じっとしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Perhaps it really was sulking about not being able to go outside.[lr]
+[else]
+　やはり、外に出られなくて拗ねてしまっていたのかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But why did I assume it wanted to go there to begin with?[prcm]
+[else]
+　しかし、私は何故蝶が外に出たがっていると思うのだろうか。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　動かない蝶は一見何も考えていないようにも見える。[lr]
+[r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gave it another scrutinizing look.[prcm]
+[else]
+　その黒に光沢のある青色を浮かべた綺麗な羽の蝶をよく眺めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I can understand how you feel.[l] I imagine it feels a lot better to fly in a wide open space while surrounded by fresh air.[l] There are flowers with honey you can eat, and if you're lucky, you might even find someone to have children with.[」][lr]
+[else]
+　「まあ、気持ちは分からないでもない。[l]
+その綺麗な羽で飛ぶなら、こんな狭い所よりも広い外の方が気持ちがいいだろうな。[l]
+そのくるくる巻いたストローで好きな花の蜜だって吸えるし、運がよければ気が合う相手と子孫を残せるかもしれない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The butterfly slowly spread its wings, as if trying to say that I didn't need to state the obvious.[prcm]
+[else]
+　そんな当たり前のことは聞くまでもないのか、こちらがそんな風に思っている間に、蝶はカーテンにとまったままゆっくりと羽を広げた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But it's not all fun and games outside.[l] If you're unlucky, you might get eaten by a bird, or get trapped in the web of a spider.[l] If it rained, your wings would get moist and you'd have trouble flying.[l] You'll face no such dangers in here.[」][lr]
+[else]
+　「でも、外はいいことばかりでもないよ。[l]
+鳥に見つかって食べられることもある、蜘蛛の巣にかかってしまうことだってある。[l]
+雨が降ったら、羽が濡れてしまうこともある。[l]
+ここにいれば、そんな理不尽の心配はいらない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The butterfly remained still with its wings spread.[lr]
+[else]
+　蝶は羽を広げたまま、とまっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Perhaps it was thinking.[lr]
+[else]
+　少し考えているのかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Or maybe the way it showed off the blue lines on its wings meant to convey agreement.[prcm]
+[else]
+　もしかしたら、羽を開いて両方の青い筋を見せているのは、肯定的な意思表示かもしれない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll bring you a fresh flower if you stay.[l] That's the least I can do.[」][lr]
+[else]
+　「残るのならね、その花瓶に花を挿してあげる。[l]好き勝手言った手前、それくらいはしよう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The butterfly slowly closed its wings.[prcm]
+[else]
+　すると蝶は、またゆっくりと羽を閉じた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Or would you rather go outside, after all?[」][lr]
+[else]
+　「やっぱり、外に出たい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It spread its wings again.[lr]
+[else]
+　こちらの動揺とは裏腹に、優雅な動作で羽を開いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought I gave it a pretty good deal, but the butterfly didn't seem all too fond of it.[prcm]
+[else]
+　悪い条件ではないような気がしたが、この蝶にはそうではなかったらしい。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, then.[l] But you'll still have to wait until Mayuko comes back.[」][lr]
+[else]
+　「仕方ない。[l]とりあえず、繭子が来るまで待っててね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced out the window.[lr]
+[else]
+　それから窓を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The evening sky, with hues of yellow, crimson and purple mixing into its canvas, loomed above the gentle mountain ridge in the distance.[prcm]
+[else]
+　窓からは、緩やかな稜線の上に黄と赤と紫が混じった空が見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sure she'll be back before dark.[」][lr]
+[else]
+　「きっと、暗くなる前には戻ってくるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed one of my hands on the notebook and rested my chin on the other.[prcm]
+[else]
+　手帳の上に手を載せて、もう一方の手で頬杖を付いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Humans tend to stay with each other, but what about butterflies?[」][lr]
+[else]
+　「人なら泊まってもらうけれど、蝶はどうなんだろう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned my gaze to the butterfly.[prcm]
+[else]
+　と思いながら、そちらに目をやる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe you'll change your mind come morning.[l] Sanae said that it gets comfortable staying in the same place once you get used to it.[」][lr]
+[else]
+　「でも、そうしたら朝になって気が変わってるかもしれないね。[l]
+[ruby text="さ"]早[ruby text="なえ"]苗はずっとここにいるけれど、ようは慣れだって言っていたからね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev32_1" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[wait time=300]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The butterfly remained completely still with its wings spread.[lr]
+[else]
+　蝶は羽を開いてから、ずっと動かないままだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Perhaps it was waiting for the window to open.[lr]
+[else]
+　じっとカーテンから、窓が開くのを待っているのかもしれなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed like it wanted to soar the high skies.[prcm]
+[else]
+　蝶は空を飛びたがっているように見える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered how I likened Sanae to a fish before drifting off to sleep once.[lr]
+[else]
+　以前、寝る前に考えていたさかなの早苗のことを思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Although, fish swam in the sea, while butterflies soared through the sky.[lr]
+[else]
+　そもそも魚は空を泳ぐものだし、蝶は空を飛ぶものだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Besides... back then, I was thinking about which place Sanae had adapted to, rather than where she wanted to be.[prcm]
+[else]
+　それに、さかなの早苗というのは、外と療養所のどちらがいいかという話ではなく、どちらに適しているかという話だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered how she asked me if I wanted to leave.[lr]
+[else]
+　早苗が「外に出たいのですか？」と聞いたことを思い出す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was nice to eat snacks with Mayuko, read books with Sanae, and make fun of Kozue from time to time.[lr]
+[else]
+　繭子とお菓子を食べたり、早苗と本を読んだり、[ruby text="こずえ"]梢をからかったりするのは楽しい。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The Christmas party had turned into a fond memory.[prcm]
+[else]
+　クリスマスパーティも楽しかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+If I kept arranging events like that from time to time, I figured I'd never feel bored.[lr]
+[else]
+　ああいうイベントごとを、これからもやっていけるのなら、ここも退屈にはならないみたいだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was certainly satisfied enough with this place to recommend it to the butterfly.[lr]
+[else]
+　とりあえず、蝶に療養所の暮らしをおすすめするくらいには、療養所の暮らしに満足しているようだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae said that she lost any reason to go outside.[lr]
+[else]
+　早苗は「ここが過ごしやすくなり、外に出る理由がなくなった」と言っていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I could understand what she meant now, more so than back then.[prcm]
+[else]
+　それを聞いた時よりも、今の方がその気持ちを理解できそうな気がした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I touched my ears.[lr]
+[else]
+　耳の裏を触る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Maybe I'd soon be able to breathe underwater as well.[lr]
+[else]
+　そろそろ、水中で息ができるかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I would if I remained in this place for a while longer.[prcm]
+[else]
+　きっと、このまま療養所にとどまれば、そうなる予感がする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd turn into a fish.[lr]
+[else]
+　さかなになる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Not a butterfly.[prcm]
+[else]
+　蝶ではない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was slowly getting used to the serene life in here. That much was certain.[lr]
+[else]
+　つまり、療養所に慣れきってしまう予感は確かになりつつある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Was that a good or a bad thing?[lr]
+[else]
+　しかし、それが良いか悪いか。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't know whether I wanted to stay here or leave.[lr]
+[else]
+　ここに留まりたいのか、外に出たいのかについては分からないままだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+No wonder I couldn't understand the butterfly.[prcm]
+[else]
+　そこに関しては、蝶の気持ちが分からないのと同じだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It stayed still with its wings spread out.[lr]
+[else]
+　蝶の羽は開いたままだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I fell in thought, gazing at the dazzling blue stripes on them.[prcm]
+[else]
+　光沢を持つ青い筋を見つめて考える。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev32_2" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[wait time=300]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Staying here would be the easiest choice, but...[」][lr]
+[else]
+　「ここにいれば、それは楽なのだけれど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev32_1" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[wait time=300]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It would require little effort on my part and contained no risks, but...[lr]
+[else]
+　楽なのだが。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked at the darkening sky, feeling my head growing heavy.[prcm]
+[else]
+　深い色に変わり始めた空をみて、考えすぎの頭が重くなってきた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised my chin from my palms, lowered my hands on the table, and instead placed my left cheek on them.[lr]
+[else]
+　頬杖にしていた腕を倒して頬を載せる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Finally, I dug my fingers into my hair to support my head.[lr]
+[else]
+　頭の後ろにある手の指を髪の毛に通して固定させる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This position was the result of many years of experimenting and research. It had served me well since my school years, and continued to be of use even after I joined society as a working adult. [lr]
+[else]
+　その作り慣れた姿勢は、学生時代から社会人になって今に至るまでの長年の研究により生まれた、机に伏して寝る時に一番快適な腕枕だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Though it was easy on the neck and the arms, it would mess up my hair, so there still was some room for improvement.[lr]
+[else]
+　最新の腕枕は首も腕も楽だが髪に癖がつくので、まだ改良の余地があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes, savoring the comfort it provided me with.[prcm]
+[else]
+　腕枕の快適さに満足しながら目を閉じた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My exhausted body was on the verge of drifting off to sleep. However, much like last time, a butterfly and Sanae in the form of a fish appeared in my mind's eye.[prcm]
+[else]
+　体は疲れていてすぐに眠ろうとしているが、あのときと同じで、さかなの早苗や蝶が瞼の裏に浮かんで気を散らせた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't believe I'm actually treating this butterfly business so seriously.[」][lr]
+[else]
+　「全く。蝶なんか相手にして、一体なんだっていうの」[l]とぼんやりと考えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Perhaps I relaxed a bit too much.[lr]
+[else]
+　すこしのんびりしすぎたかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It wasn't like me to doubt myself or be tired to begin with.[」][prcm]
+[else]
+　「迷ったり、疲れたり、らしくない」[l]と思う。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt the sensation of the notebook's leather cover against my skin.[lr]
+[else]
+　手の下に置かれた手帳から、革のざらりとした感触が伝わる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The Takako I read about was always energetic and pursued her goals straight as an arrow.[lr]
+[else]
+　この中の貴呼はいつも一生懸命で、迷ったり、疲れたりはしていない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her mind was clear and she always knew what she wanted.[lr]
+[else]
+　いつでも頭の中は驚くくらいクリアで、やりたいことがはっきりしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She might've been a bit of a dunce at times, but it was all very endearing.[prcm]
+[else]
+　ちょっと頭悪いかもしれないけれど…でも愛嬌があった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Reading through the diary gradually made my memories return.[lr]
+[else]
+　この数日、日記を読むにつれて欠けていた記憶が埋まっていった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had things I had forgotten, and things I didn't know at all.[lr]
+[else]
+　日記には忘れていたことや知らなかったことが書かれていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Those passages contained mere glimpses into my life, but remembering them brought back other memories as well. They made me recall certain episodes of my life in striking detail, right down to the various scents I experienced on a given day.[lr]
+[else]
+　その日記は、ある日、ある出来事のほんの一部に過ぎなかったが、その断片から描写の無い周りの風景からそのときの匂いまで、ありありと思い出すことができた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And whenever I thought back to my feelings from those times...[lr]
+[else]
+　そして、あの頃に抱いていた気持ちを思うとき。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...I'd feel a smoldering fire come back to life deep within my heart.[prcm]
+[else]
+　心の奥底に、その残り火が燻っているのを感じることが出来た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko brought back feelings of anxiety and uneasiness I had long forgotten.[lr]
+[else]
+　佐知子の姿を思い描く時は、久しく感じることがなかった焦燥を自分の心の傍らに感じられた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My memories of her warmed and brought the rusted mechanism of my heart back to life.[lr]
+[else]
+　それらは錆び付いた心のある機関を温め、動かし始めようとしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Almost like they were repairing the missing cogs of the contraption, returning them to their intended positions.[prcm]
+[else]
+　欠けた歯車を修理して、正しいところに嵌め込んでいく音がしているようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And yet, this was but a small, insignificant agitation of my heart at best.[lr]
+[else]
+　しかし、それらの心の動きというものは、本当に僅かな揺らぎでしかなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was no more significant an action than an ant climbing upon an elephant's back, or the faint ripples caused by a pebble thrown into a pool of water.[lr]
+[else]
+　象の背の蟻とか、太平洋に放り込んだ石の波紋くらいなものだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+If I closed the notebook, the feeling would vanish, as if it was never there to begin with.[prcm]
+[else]
+　手帳を閉じたら、すぐに消えてしまいそうだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae said that the more she got used to this place, the harder it became to leave.[lr]
+[else]
+　「ここは慣れるほどに、離れることが出来なくなる」と早苗は言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Back then, I didn't think much of it.[lr]
+[else]
+　そのときは、自身もそうなることについてあまり考えていなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Yet now, I couldn't tell whether that was a good or a bad thing.[lr]
+[else]
+　今は、それが良いことなのか悪いことなのか、わからなくなっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put those two on imaginary scales.[lr]
+[else]
+　慎重にその二つを計りに乗せてみる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The arrow continued pointing at zero, refusing to move.[prcm]
+[else]
+　針はまっすぐ上を向いたままピクリともしない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But that wasn't enough of a reason to leave.[lr]
+[else]
+　ただし、それではこの療養所から離れるには理由には足りなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I want to meet Sachiko one more time before I end up stuck here forever.[」][lr]
+[else]
+　「離れることが出来なくなる」その前に佐知子に会いたいと思う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was sure that meeting her would help me remember everything, and would fix the ringing in my ears as well.[prcm]
+[else]
+　佐知子に会えば過去をすべて思い出し、耳鳴りの症状をも克服できる。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　そんな気がする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Should I remain here or not...?[lr]
+[else]
+　ここに留まるべきか、そうでないか。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I might find the answer to that question if I met her.[prcm]
+[else]
+　それは、佐知子にあえば分かるかも知れない。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev32_2" page=back layer=base]
+[trans method = crossfade time=500]
+[wt]
+[wait time=300]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have to see her.[」][prcm]
+[else]
+　「佐知子に会わなくては」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I found myself lost in those thoughts, the fish and the butterfly slowly drew away from the back of my eyelids.[prcm]
+[else]
+　そんなことを考えていると、意識は瞼の裏のさかなと蝶から遠ざかっていった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle4]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="123.ks" target=*123
+
+

@@ -1,0 +1,371 @@
+*083| Kozue
+; *083|梢
+[fbfstoretitle eng="Kozue" jp="梢"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+[playbgm storage="bgm18"]
+[eval exp="sf.cg95_1=1"]
+[fbfscale_image storage="ev95_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 101"]
+[eval exp="sf.ItRelease = 102"]
+[endif]
+
+
+*| Kozue
+; *|梢
+[fbfstoretitle eng="Kozue" jp="梢"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I had a really scary dream the other day.[」][lr]
+[else]
+　「この間、すごく怖い夢見たんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The morning sun filled the second floor corridor with its bright rays of light.[lr]
+[else]
+　中庭を望める二階の廊下には快晴の眩しい日差しが満ちている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko's silhouette flickered in-between the light coming from the window and the shadows covering the walls.[prcm]
+[else]
+　前を行く[ruby text="まゆ"]繭[ruby text="こ"]子が窓の光と壁の影で瞬いていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of dream was that?[」][lr]
+[else]
+　「どんな夢ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't remember it anymore.[」][lr]
+[else]
+　「それがはっきりと思い出せなくて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko picked up the laundry basket, her expression blank.[lr]
+[else]
+　そっけない返事の繭子は洗濯物が入った籠を抱えている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was helping her with the laundry today, so I had a basket in my hands as well.[prcm]
+[else]
+　本日は洗濯の手伝いに徴収されたこちらも、小さな洗濯物籠を抱えている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I just remember it being really scary.[」][lr]
+[else]
+　「ただ、すごく怖かったのは覚えてる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, sometimes, remembering dreams like that makes you realize they weren't all that scary at all.[」][lr]
+[else]
+　「そういう夢って、思い出せば大したことじゃなかったりしますけどね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, that's the problem.[」][lr]
+[else]
+　「だから困ってるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure I can help you there.[」][lr]
+[else]
+　「そう言われてもですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She turned to me, making the top sheets begin to slide off from her basket.[prcm]
+[else]
+　こちらを見ると、繭子の持った洗濯籠からスルリ、とシーツが溢れる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh![」][lr]
+[else]
+　「おっと」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I caught them with one hand.[prcm]
+[else]
+　と、落ちたシーツを片手で受け止める。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nice catch.[」][lr]
+[else]
+　「ナイスキャッチ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Will I get a golden glove for this, do you think?[」][lr]
+[else]
+　「ゴールデングラブもらえるかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wrapped the sheet around my hand and returned it to the top of the basket.[prcm]
+[else]
+　片手だけで回して巻き取ると、脇に抱えた籠の上に置いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg95_2=1"]
+[fbfscale_image storage="ev95_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Perhaps.[l] But try not to go too crazy with the workout routine until you start feeling better.[」][lr]
+[else]
+　「そうですね。[l]でも運動はもっと具合が良くなってからですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We continued down the corridor, its wooden floorboards creaking below our feet.[lr]
+[else]
+　板の目を軋ませながら廊下を歩く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced out the window through the branches of the camphor tree and spotted a girl walking down the stone-paved path.[prcm]
+[else]
+　窓の外、中庭の大楠をみていると、枝の影、石畳を歩いていく女の子が見える。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sanae?[」][lr]
+[else]
+　「早苗？」[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg41_6" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h24" visible=true left=280 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko looked out the window, too.[lr]
+[else]
+　繭子が窓から中庭を見やる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl momentarily disappeared among the branches blocking our sight, but then popped up again in front of the entrance to the building on the other side.[prcm]
+[else]
+　丁度、ゆれている緑の枝葉に隠れてしまうが、すぐに反対側の館への扉のところに現れる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Isn't that Kozue?[」][lr]
+[else]
+　「梢ちゃんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue disappeared into the west wing building, her silky hair fluttering behind her.[prcm]
+[else]
+　梢はふわふわ、と柔らかい髪を揺らして西棟の向こうへと去っていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Maybe she went for a walk? I mean, the weather's pretty nice.[」][lr]
+[else]
+　「天気もいいし、散歩にでも出たのかな？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h05" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It certainly is.[l] And a great day for laundry, too.[」][lr]
+[else]
+　「そうですね。[l]洗濯にもいい日和」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko resumed walking through the corridor.[prcm]
+[else]
+　と、繭子は言って、板を軋ませて行く。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]True enough.[」][lr]
+[else]
+　「確かに」[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was indeed a perfect day for laundry.[prcm]
+[else]
+そう、確かに洗濯するにもいい日和だった[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[fadeoutbgm time=3000]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="084.ks" target=*084
+

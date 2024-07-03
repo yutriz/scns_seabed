@@ -1,0 +1,583 @@
+*090| General store
+; *090|食品量販店
+[fbfstoretitle eng="General store" jp="食品量販店"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+;[playbgm storage="bgm24"]
+[playse buf = 0  storage=se76_2.ogg]
+[fbfscale_image storage="bg29_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 111"]
+[eval exp="sf.ItRelease = 112"]
+[endif]
+
+
+*| General store
+; *|食品量販店
+[fbfstoretitle eng="General store" jp="食品量販店"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The general store had a narrow parking area for about four cars, but it was already taken by a white truck bearing the store's name, a light green two-door Datsun that looked more like a toy than a real car, and an elaborately decorated Toyota Crown.[lr]
+[else]
+　駅前の食料量販店には、車四台分の狭い駐車区画があったが、既にゴシック調のお店の名が入った白い軽トラックとブリキの玩具のような抹茶色のツードアタイプのダットサン。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　顔とホイールに細かいスティールの編み模様があるクラウンとが停っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After changing gears multiple times, Mayuko finally managed to fit our car into the last open space left.[prcm]
+[else]
+　繭子は何度もハンドルを切り返して、ようやく余りの一台分のスペースに車を停めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is a different place than usual.[」][lr]
+[else]
+　「いつもの商店街じゃないんだ」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se87.ogg]
+[quake time=100 hmax=0 vmax=5]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The white concrete walls of the store loomed above the rest of the buildings. A series of large, orange letters at the front spelled out its name.[lr]
+[else]
+　周りの建物より一回り大きい量販店は、白を基調とした平坦なコンクリート造りの壁に、お店の名前がオレンジ色で大きく浮き上がっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Most of the other buildings in the area were built in a traditional Japanese style, but this one looked more like the kind of highway motel you'd see in the US.[lr]
+[else]
+　まばらにある周りの和風な建物に対して、アメリカのハイウェイにあるモーテルのようにそこだけが浮いて見える。[lr]
+[endif]
+
+[r]
+
+[playse buf = 0 storage=se88.ogg]
+[quake time=100 hmax=0 vmax=5]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko closed the door and stretched her shoulders.[prcm]
+[else]
+　[ruby text="まゆ"]繭[ruby text="こ"]子はバタンと、ドアを閉めると、軽く肩を回した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We'll buy the seasonings here, and go to the shopping district for the rest.[」][lr]
+[else]
+　「こっちで調味料を買ったら、商店街にも行きます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I got out of the car and stretched my limbs. Looking behind me, I saw the three cars and Mayuko's red minivan lined up next to each other like this was some used car exhibit.[lr]
+[else]
+　外に出て体を伸ばしながら振り返ると、停っていた三台と繭子の赤いミニバンが並んで旧車の展示場となっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A clerk sweeping the road in front of the entrance greeted us.[lr]
+[else]
+　入口付近を掃き掃除している店員が会釈をしたので、挨拶を返した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I responded with a nod, but Mayuko didn't notice — pushing open the glass door with faded red handles, she hurried into the store.[prcm]
+[else]
+　繭子は小さな会釈に気づかずにガラス戸を押し開いた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　取っ手は赤いゴムの部分が少し色褪せていた。[prcm]
+[endif]
+
+
+;/////
+
+[clickskip enabled=false]
+[msgoff]
+[fadeoutbgm time=1000]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[playbgm storage="bgm24"]
+[backlay]
+[fbfscale_image storage="bg29_2" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pushed my shopping cart forward while listening to the folk rock music playing inside.[prcm]
+[else]
+　有線から流れる古いフォークロック音楽を聴きながらガシャガシャ、と買い物かごを押す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you say wrinkled potatoes are better?[」][lr]
+[else]
+　「じゃがいもはシワがあったほうが良品だっけ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I grabbed a few potatoes that looked better than the rest and showed them to Mayuko.[prcm]
+[else]
+　傷が無くて比較的重たいじゃがいもをいくつか見繕って繭子に見せる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The ones with less wrinkles are better.[l] Let's take this, [wait time=600]this, [wait time=600]and this.[」][lr]
+[else]
+　「シワは少ないほうが良いですよ。[l]これと、[wait time=600]これと、[wait time=600]これ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She swiftly picked up the potatoes and put them into the shopping cart.[lr]
+[else]
+　ひょいひょい、と選んだものを買い物かごに入れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put the carrot I picked up with the potatoes into the shopping cart.[prcm]
+[else]
+　一緒に取ってきたニンジンも買い物かごに入れた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, we still have carrots fresh from our fields.[」][lr]
+[else]
+　「あ、人参は畑で採れたものがまだありますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[」][lr]
+[else]
+　「そう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She placed my carrot back on the shelf.[prcm]
+[else]
+　取ってきたニンジンを元の棚に戻した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, if we don't need carrots, then next up would be onions, I guess.[」][lr]
+[else]
+　「ニンジンと後は、玉ねぎだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They're over there.[」][lr]
+[else]
+　「玉ねぎはあっちにありましたよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]roll roll*[prcm]
+[else]
+　ガシャガシャガシャ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here you go.[」][lr]
+[else]
+　「はい、玉ねぎ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put a few onions into the shopping cart while Mayuko grabbed a broccoli.[lr]
+[else]
+　こちらが玉ねぎを買い物かごに入れると、繭子はブロッコリーを買い物かごに入れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You want broccoli, too?[」][lr]
+[else]
+　「ブロッコリーも入れるの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is there a problem?[」][lr]
+[else]
+　「入れませんか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I doubt they'd ruin the taste.[l] We still don't have the meat we need, though.[l] I think I saw some over in that corner.[」][prcm]
+[else]
+　「まあ、でも美味しいかもね。[l]次はお肉だね。[l]向こうのコーナーか」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's interesting how different families tend to have different ideas about the ideal meat.[」][lr]
+[else]
+　「お肉も家庭によって違ったりしますよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There seems to be an overabundance of poultry.[」][lr]
+[else]
+　「多いのは鳥かな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose that qualifies as meat.[」][lr]
+[else]
+　「お肉は同じですね、はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be needing a lot, so don't skimp on it.[」][lr]
+[else]
+　「多めにお願いします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted a seasoning placard dangling from the ceiling.[prcm]
+[else]
+　次の島の天井には、調味料のプラカードが下がっていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right, I'll go get my special spices now.[」][lr]
+[else]
+　「さて、本格的な調理のために調味料を仕入れてくるよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm looking forward to it.[l] I'll look for the other ingredients in the meantime.[」][prcm]
+[else]
+　「期待しています。[l]残りの食材は取り揃えておきますね」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg29_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you find everything?[」][lr]
+[else]
+　「全部揃いました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep, as you can see.[」][lr]
+[else]
+　「もちろん、このとおりにね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I dropped all the bottles I carried into the shopping cart.[prcm]
+[else]
+　抱えてきた調味料類を買い物かごに入れる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Worcestershire sauce, caramel sauce.[」][lr]
+[else]
+　「ウスターソース、カラメルソース」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Worcestershire sauce?[」][lr]
+[else]
+　「ウスターソース？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Cinnamon.[」][lr]
+[else]
+　「シナモン」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Cinnamon?[」][lr]
+[else]
+　「シナモン？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Cardamon, clove, and chutney.[l] Oh yeah, is bay leaf basically the same thing as bay laurel?[」][prcm]
+[else]
+　「カルダモンに、クローブ、チャツネ。[l]ねえ、ローリエってローレルと同じものだっけ？」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f02_p02_h12" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I thought you were planning to make curry.[」][lr]
+[else]
+　「カレーじゃないですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hm?[l] It's gonna be -real- curry.[」][lr]
+[else]
+　「うん？[l] 本格カレーだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw some milk, consomme, and wheat flour in Mayuko's shopping cart.[prcm]
+[else]
+　繭子の買い物かごには、牛乳とコンソメと小麦粉が入っていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="091.ks" target=*091
+
+

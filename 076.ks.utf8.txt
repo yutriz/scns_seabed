@@ -1,0 +1,412 @@
+*076| Nanae, to the fields
+; *076|七重、畑仕事へ
+[fbfstoretitle eng="Nanae, to the fields" jp="七重、畑仕事へ"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm39"]
+[backlay]
+[fbfscale_image storage="bg53_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 92"]
+[eval exp="sf.ItRelease = 93"]
+[endif]
+
+
+*| Nanae, to the fields
+; *|七重、畑仕事へ
+[fbfstoretitle eng="Nanae, to the fields" jp="七重、畑仕事へ"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's quite a mansion, isn't it?[」][lr]
+[else]
+　「立派な屋敷だ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki looked over her shoulder.[lr]
+[else]
+　廊下を歩く[ruby text="なら"]楢[ruby text="さき"]崎が肩越しに後ろを振り返る。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg53_2_r.jpg" page=back layer=base]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl was following us, keeping a moderate distance.[prcm]
+[else]
+　女の子は、私の斜め後ろをとぼとぼ、と付いてきていた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, that should be a given.[l] The place used to be the residence of an influential family until it was sold off and remodeled following the war.[l] Even among classic hotels, you'd be hard pressed to find a place that preserved its historical authenticity to this extent.[」][lr]
+[else]
+　「当たり前よ。[l]戦前からある旧家の邸宅を改装して今の形をしているのよ。[l]俗に言うクラシックホテルの中でも、ここまで当時の雰囲気が残っている屋敷はここくらいなのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see,[」] Narasaki remarked.[lr]
+[else]
+　「へえ」と楢崎が言う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the girl mumble "And I see you know nothing" in a low voice.[prcm]
+[else]
+　「ちっとも知らないのね」と女の子の呟きが聞こえた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As Narasaki made an awkward smile, a voice called out to me from the window.[prcm]
+[else]
+　楢崎が苦笑した時、「[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子さん」と中庭を臨む窓から呼び声が聞こえた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg56_2.jpg" page=back layer=base]
+[fbfscale_image layer=2 page=back storage="fgimage/nanae_img/f06_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule15" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked outside and saw Nanae in a straw hat, leaning her back against a cart.[lr]
+[else]
+　中庭の木の影では、麦わらの帽子をかぶった[ruby text="なな"]七[ruby text="え"]重がカートに腰をあずけていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was filled with little shovels, scissors, and other such equipment.[prcm]
+[else]
+　カートにはスコップや鋏などが積まれている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good morning, Sachiko.[l] Weather's looking pretty good today, eh?[」][lr]
+[else]
+　「おはよう、佐知子さん。[l]今日は良い天気ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She tilted her hat and looked at me.[prcm]
+[else]
+　帽子の柄を取ってこちらを見上げている。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/nanae_img/f06_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh? Kozue's with you?[l] I didn't realize you knew each other.[」][lr]
+[else]
+　「[ruby text="こずえ"]梢ちゃんも居るの？[l] 珍しい組み合わせね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae waved at the girl next to me.[prcm]
+[else]
+　七重は私の隣に立った女の子に、逆の手をひらひらと振る。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg53_2_r.jpg" page=back layer=base]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She returned her energetic greeting with a blank stare.[prcm]
+[else]
+　梢と呼ばれた女の子は無表情でそれを眺める。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg56_2.jpg" page=back layer=base]
+[fbfscale_image layer=2 page=back storage="fgimage/nanae_img/f06_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule15" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you doing?[」][lr]
+[else]
+　「何してるの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/nanae_img/f06_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just playing with dirt.[l] I'm gonna get some vegetables from the fields.[」][lr]
+[else]
+　「土いじり。[l]畑に野菜を取りに行くのよ」[lr]
+[endif]
+
+[r]
+[playse buf = 0  storage=se08.ogg]
+[wait time=100]
+[playse buf = 0  storage=se08.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She patted the bag of dirt on the cart.[prcm]
+[else]
+　カート上の土袋を叩いて見せた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You okay with yam?[」][lr]
+[else]
+　「ねえ、山芋は大丈夫かしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, it's one of my favorites.[l] The forecast said it's going to rain in the evening, though.[」][lr]
+[else]
+　「好物だわ。[l]天気予報では午後から雨になるそうだけど？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I know.[l] I know.[l] But I'm not too worried about that.[l] The weather in the mountains is usually all over the place, anyway.[l] So what are you up to, Sachiko?[」][lr]
+[else]
+　「知ってる。[l]知ってる。[l]でも少しくらいの雨なんて気にしないの。[l]元々山の天気は変わりやすいから。[l]佐知子さんは何をしているの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We were on our way to greet your aunt.[」][lr]
+[else]
+　「あなたの小母さんに挨拶に行くところよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/nanae_img/f06_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I see.[l] I just passed her in the lobby, so she's probably already waiting for you.[」][lr]
+[else]
+　「ああ、そうだったわね。[l]さっきロビーですれ違ったから、もう待ってるんじゃないかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see, thanks.[l] We'll be on our way, then.[」][prcm]
+[else]
+　「そう、ありがとう。[l]急ぐわ」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/nanae_img/f06_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Kozue's going with you, too?[」][lr]
+[else]
+　「梢ちゃんも？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's quite the peculiar group you have there.[l] Now I'm almost curious about what you're planning to discuss.[l] Anyway, don't worry too much about my auntie. The more people there are to talk to, the happier she gets.[」][prcm]
+[else]
+　「本当に珍しい面子ね。[l]何をお話するのかしら、興味があるわ。[l]小母さんなら誰が来ても構いはしないわよ。[l]話し相手が増えて、きっと喜ぶわ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg53_2_r.jpg" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm glad to hear that,[」] said Narasaki.[prcm]
+[else]
+　「それはよかった」と楢崎が言った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="077.ks" target=*077
+
+

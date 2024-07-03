@@ -1,0 +1,628 @@
+*001|On such a beautiful day
+; *001|こんな天気のいい日に
+[fbfstoretitle eng="On such a beautiful day" jp="こんな天気のいい日に"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[clickskip enabled=false]
+[msglayer2]
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+
+[wait time = 500]
+
+[seopt buf=0 volume=100]
+[playse buf = 0 storage=se57.ogg]
+
+[backlay]
+[fbfscale_image storage="item01.jpg" page=back layer=base]
+[trans method=universal rule="rule9" vague=1 time=300]
+[wb]
+[wt]
+[msgon]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 1"]
+[eval exp="sf.ItRelease = 2"]
+[endif]
+
+
+*|On such a beautiful day
+; *|こんな天気のいい日に
+[fbfstoretitle eng="On such a beautiful day" jp="こんな天気のいい日に"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned the page.[lr]
+[else]
+　パラリ、[wait time=500]とページを捲る。[lr]
+[endif]
+
+[r]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I clutched the book so the wind blowing between the school building and the concrete wall wouldn't flip the page back again.[lr][r]
+[else]
+　校舎とアスファルトの壁の間に吹き込む風がページを飛ばしそうになるのを抑える。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had my own special space behind the campus: a gloomy little place that always felt a bit damp. Still, few people ever ventured there, so I could always trust it to be silent.[prcm]
+[else]
+　校舎の裏庭は、薄暗くて少し湿っていて、人気が無くいつも静かだった。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se56.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The door to the emergency exit behind me suddenly opened.[lr][r]
+[else]
+　ガラ、と勢い良く背後にある非常口の扉が開く。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The girl that came through approached me and leaned over to inspect what I had been reading.[prcm]
+[else]
+　非常口から現れた女子生徒は隣に来ると前かがみになって、こちらの手元にある読みかけの単行本をのぞき込んだ。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg92" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Found you.[」][lr]
+[else]
+　「サチ発見」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you want something?[」][lr]
+[else]
+　「何よ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shifted my gaze to the tall schoolgirl.[lr][r]
+[else]
+　隣に来た背の高い女子生徒に目をやる。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako's familiar face was mere centimeters away from mine.[lr]
+[else]
+　見慣れた[ruby text="たか"]貴[ruby text="こ"]呼の顔が近くにあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She carried some water in her cupped palms.[lr][r]
+[else]
+　貴呼は両手を合わせて作った器に、水を貯めていた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seeped through her slender fingers, a few drops traveling down her white arms peeking out of the skimpy summer school uniform.[lr]
+[else]
+　袖の短い夏服の制服から伸びた白い腕に、手元から溢れた水が滴っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Adjusting the position of my glasses, I considered Takako's face. Even bowing down, she seemed very tall.[prcm]
+[else]
+　やや下の方にずれていた眼鏡を指先でかけ直し、屈み腰でも背の高い貴呼の顔を見上げる。
+[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You just can't get enough of places like this, can you?[l] First it was on the school building's emergency staircase, then behind the judo hall, and later at the library's veranda where no one ever goes. How do you even find these places?[l] Makes me wonder if you're some kinda different species compared to the rest of us.[」][lr]
+[else]
+　「サチってこういう場所が好きだよね。[l]校舎の非常階段とか、柔道場の裏とか、図書館のベランダとか、ホントよく見つけるわ。[l]
+なんだろう、もうもしかしてそういう生き物なんじゃないかなって思ったりするもん」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="item05" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako drew away from me, leaving a trail of drops behind her, until she finally unloaded her palmful of water on a bush of white clovers.[prcm]
+[else]
+　貴呼はポタポタ、と水を滴らせながら隣を通り過ぎて、裏庭のシロツメクサの茂みに水を注いだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I doubt it really needs you watering it.[」][lr]
+[else]
+　「別に水やりは必要ないと思うわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it's just that... otherwise it wouldn't feel like it's mine.[」][lr]
+[else]
+　「いやね、それくらいしないと私の物って気がしないのよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once she had finished watering the plant, she swept back her long twin tails in a single, irritated motion.[lr][r]
+[else]
+　水を注ぎ終えると、その手で左右に結んだ髪を鬱陶しいように肩の後ろに送る。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She only adopted that hairstyle near the beginning of this month, and still appeared to have trouble making both tails the same length.[prcm]
+[else]
+　今月に入ってから変えた髪型は、まだ結び目の位置が定まっていないようだった。
+[prcm]
+[endif]
+
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg92" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you know that the Japanese name for the white clover comes from the fact it was used as cushioning material for packing glassware?[」][lr][r]
+[else]
+ 「シロツメクサの名前の由来って、輸入ガラス製品を梱包するときに緩衝材として使われていたからなんだって。[l]知ってた？」[lr][r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh?[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't you think it would be way cooler if your parcels were filled with white clovers instead of bubble wrap?[」][lr]
+[else]
+　「贈り物の箱にシロツメクサの花が敷き詰められていたら、綺麗だと思わない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess so.[l] Though you shouldn't write off bubble wrap like that. It's pretty great to play around with when you're bored.[」][lr]
+[else]
+　「そうだけど。[l]まあ、プチプチも暇つぶしには良いわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][prcm]
+[else]
+　「まあね」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You looked up its name?[」][lr]
+[else]
+　「由来を調べたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I imagined it might have some deeper meaning since it was a present from you.[」][lr]
+[else]
+　「サチの贈り物として、何か意味が込められてたのかな？ と、思って」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It doesn't.[」][lr]
+[else]
+　「無いわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] By the way, the weather is great today, so what are you doing reading in a place like this?[」][prcm]
+[else]
+　「そうか。[l]ところで、とても天気がいいのに、サチはこんなところで読書しているの？」[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm here precisely because the weather is good.[l] If it wasn't, I would be at the library instead.[」][lr]
+[else]
+　「天気がいいからよ。[l]雨が降ったら図書館で読むわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you keep sitting in a murky place like this all the time, you're gonna rot alive.[」][lr]
+[else]
+　「こんな日陰で、体も動かさないんじゃ腐ってしまうんじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's not how the real world works.[」][lr]
+[else]
+　「腐らないわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I mean, like... mentally.[」][lr]
+[else]
+　「気の持ち方とか気分のことだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I won't do that, either.[」][prcm]
+[else]
+　「別に」[prcm]
+[endif]
+
+
+
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Speaking of which, your cousin Ann has psychic powers, right?[」][lr]
+[else]
+　「そういえば、サチの従姉妹のアンちゃんって霊感あるじゃん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...[」][lr]
+[else]
+　「…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When I told her you keep reading books in places like this...[」][lr]
+[else]
+　「アンちゃんにサチがこんなところでよく一人で本を読んだりしてるって話をしたらさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Who gave you permission to spread rumors about me?[」][lr]
+[else]
+　「何余計なこと言ってくれてんのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]She said that they all give her shivers. As in, she can't even get close to any of them. And this one spot behind the campus is like the worst of them all.[」][prcm]
+[else]
+　「それってどこもアンちゃんが寒気を感じるところで、近づかないところばかりだって言ってたのよ。とくに裏庭はヤバイって」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess that's why I never feel lonely being here, even by myself.[」][lr]
+[else]
+　「ふうん、それで一人でいても寂しくないわけね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey now, that's not how a normal person should react to that.[」][prcm]
+[else]
+　「おい～。そうじゃないでしょう」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...[」][lr]
+[else]
+　「…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So anyway...[l] I actually went out of my way to find a much better place for you than this, and it's just as quiet.[」][lr]
+[else]
+　「まあ、だからね。[l]今日は、そういうサチに静かでとってもいい場所を見つけてきたわけなのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh really?[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can actually get some sunlight there. And a pleasant breeze to boot![」][prcm]
+[else]
+　「日当たり良好、閑静で風当たりも抜群の良物件なわけなんですよ！」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does such a convenient place really exist?[」][lr]
+[else]
+　「そんなところあったかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll show you.[」][prcm]
+[else]
+　「案内致します」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg18.jpg" page=back layer=base]
+[trans method=universal rule="rule11" vague=100 time=300]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stuck a bookmark in-between the pages with a sigh, closed my book, and followed Takako.[prcm]
+[else]
+　私はため息をついてから栞をはさんで本を閉じ、校舎に戻る貴呼の後について行った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule11" vague=100 time=300]
+[wt]
+[backlay]
+[fbfscale_image storage="bg19.jpg" page=back layer=base]
+[trans method=universal rule="rule11" vague=100 time=300]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We began climbing the staircase of school building #4, [msgoff][backlay][fbfscale_image storage="bg00.jpg" page=back layer=base][trans method=universal rule="rule16" vague=100 time=300][wt][backlay][fbfscale_image storage="bg19.jpg" page=back layer=base][trans method=universal rule="rule16" vague=100 time=300][wt][msgon]going all the way up to the fourth floor and beyond... [msgoff][backlay][fbfscale_image storage="bg00.jpg" page=back layer=base][trans method=universal rule="rule11" vague=100 time=300][wt][backlay][fbfscale_image storage="bg19.jpg" page=back layer=base][trans method=universal rule="rule11" vague=100 time=300][wt][msgon]until we reached the door leading to the roof.[lr]
+[else]
+　第四校舎の階段を登って、
+
+[msgoff]
+[backlay]
+[image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule16" vague=100 time=300]
+[wt]
+[backlay]
+[image storage="bg19.jpg" page=back layer=base]
+[trans method=universal rule="rule16" vague=100 time=300]
+[wt]
+[msgon]
+
+一番上の四階のさらに上へと登り、
+
+[msgoff]
+[backlay]
+[image storage="bg00.jpg" page=back layer=base]
+[trans method=universal rule="rule11" vague=100 time=300]
+[wt]
+[backlay]
+[image storage="bg19.jpg" page=back layer=base]
+[trans method=universal rule="rule11" vague=100 time=300]
+[wt]
+[msgon]
+
+*|こんな天気のいい日に
+直ぐに屋上に出る扉の前へと着いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A steel lock was keeping it shut, though.[prcm]
+[else]
+　立て付けの悪い扉の隙間に、銀の錠がかかっているのが見えた。
+[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Keep an eye out for anyone coming.[」][lr]
+[else]
+　「誰か来ないか見てて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako drew closer to the small window and began fiddling with the lock using a hairpin she produced from her pocket.[lr]
+[else]
+　貴呼は小窓の方に行くと、ポケットから取り出したヘアピンのようなもので鍵の部分を弄った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After she was done with that, she grabbed the frame of the window and started shaking it, filling the corridor with clattering noise.[prcm]
+[else]
+　それから窓の枠を両手で掴むとガタガタ、と大きな音をさせて揺らした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It let out a final, loud rattle before its lock sprung out of its place with a click.[lr]
+[else]
+　最後に大きくガタン、と手前に引くと、ゼンマイのネジみたいな鍵が落ちてカチ、と小さく高い音を鳴らした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako opened the small window and, planting her foot on the windowsill, jumped through.[l] She turned around and extended a hand, signaling me to follow her.[lr]
+[else]
+　貴呼は小窓を開いて、窓の溝に足をかけて外へと出た。[l]こちらを振り向いて手を出す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Frowning, I exhaled a sigh, but that didn't faze her in the slightest.[prcm]
+[else]
+　少しだけ眉をひそめて、ため息をついてみせても、貴呼は表情も変えずに手を出したままだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sheepishly gave her my hand, and — after taking a step on the windowsill — was pulled outside.[prcm]
+[else]
+　渋々と手を取って窓枠に足をかけると、屋上へと軽く引っ張り出されてしまった。[prcm]
+[endif]
+
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="002.ks" target=*002

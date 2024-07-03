@@ -1,0 +1,1620 @@
+*108| Children's games
+; *108|子供らしい遊び
+[fbfstoretitle eng="Children's games" jp="子供らしい遊び"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+[call storage="MyMacro.ks" target="*Jingle7"]
+
+[msglayer3]
+[playbgm storage="bgm13"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 135"]
+[eval exp="sf.ItRelease = 136"]
+[endif]
+
+
+*| Children's games
+; *|子供らしい遊び
+[fbfstoretitle eng="Children's games" jp="子供らしい遊び"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um.[」][lr]
+[else]
+　「ねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a high-pitched voice next to me.[prcm]
+[else]
+　トーンの高い声が、傍から聞こえる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can you hear me?[」][lr]
+[else]
+　「ねえ、聞いてる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「ああ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The person that voice belonged to had her pale eyes fixed on me.[lr]
+[else]
+　声の主は隣から大きな薄色の瞳をこちらに向けていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked around, having just been pulled out from the darkness of deep thought.[prcm]
+[else]
+　いつの間にかはまり込んでいた深い思考の闇から抜け出し、隣を見る。[lr]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer3]
+;[backlay]
+;[fbfscale_image storage="bg00" page=back layer=base]
+;[trans method=universal rule="rule9" vague=50 time=800]
+;[wt]
+;[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_4_1" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p02_h09" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　声の主は隣で、大きな薄色の瞳を向けていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry. What were we talking about?[」][lr]
+[else]
+　「ごめん、何の話だったかな？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p02_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you growing senile?[」][lr]
+[else]
+　「惚けてたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A beam of light fell directly on the table, illuminating the tiny pieces of dust on it.[lr]
+[else]
+　光の柱が机の上に落ちている、柱の中には埃がほぼ動きがなく漂っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was surrounded by countless books, almost as many as there were stars in the sky.[lr]
+[else]
+　重々しい沈黙の音が聞こえそうな景色は、座っている椅子を取り囲む星の数ほどの本と書架だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A cute, pale-haired girl was looking at me.[prcm]
+[else]
+　隣では薄色の髪と瞳のかわいらしい女の子がこちらを見ている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I got lost in thought.[」][lr]
+[else]
+　「少しぼんやりしていたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I do that, too. But never in front of people.[」][lr]
+[else]
+　「私なら、そういうことは一人でいるときにするわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're absolutely right. I'm sorry about that.[」][lr]
+[else]
+　「全くそのとおりだね。悪かったよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was asking what kind of children's games you were talking about.[」][lr]
+[else]
+　「子供らしい遊びって何、って聞いていたのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+From the tone of her voice, I could tell she wasn't really upset.[prcm]
+[else]
+　梢の抑揚の無い声は、言葉の内容ほどには気にしていない様子だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]U-Um, like playing in the sandbox? Or with dolls?[」][lr]
+[else]
+　「砂遊びとか人形遊びはどうだい？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p02_h12" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just how many years did you spend playing with those things?[l] We were talking about children my age.[l] I mean, it all started when you asked me if I played like other kids my age.[」][lr]
+[else]
+　「貴方いくつまでそれをしていたの。[l]私くらいの歳頃の子供について話をしてたのよ。[l]まず貴方が私に、たまには遊んだりしないのかって聞いたのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Hearing that, I finally recalled some of our conversation.[lr]
+[else]
+　それを聞いて、少しだけ話の前後を思い出す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue started at me with suspicious eyes.[prcm]
+[else]
+　訝しげな目をした[ruby text="こずえ"]梢が、こちらの様子を伺っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, you can ask your classmates about that.[」][lr]
+[else]
+　「それなら、クラスメートにでも聞いてみたらいいんじゃないかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue leaned against her chair.[prcm]
+[else]
+　梢は椅子に深く座り直す。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h17" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This might sound surprising, but I don't actually know anyone well enough to start asking questions like that in class.[l] And I'm not planning on making new friends, either.[」][lr]
+[else]
+　「私はこう見えても、そんなに親しいクラスメートは居ないの。[l]作るつもりもないし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why?[」][lr]
+[else]
+　「どうして？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Too much effort.[」][prcm]
+[else]
+　「面倒だからよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why do you feel that way?[」][lr]
+[else]
+　「どうして面倒なんだい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not interested in what they're talking about.[」][lr]
+[else]
+　「皆の興味のあることは聞こえてくる会話でわかるけれど、私があまり興味ないの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] And what -are- they talking about?[」][lr]
+[else]
+　「ふうん。[l]この辺りの子供は何に興味があるんだい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Boys usually talk about video games, while girls discuss TV and idols.[l] Sometimes they go to karaoke and events or whatever.[」][prcm]
+[else]
+　「男の子は大体ゲームの話をしてる。[l]女の子は集まってテレビの番組やアイドルなんかの話ばかりしてる。[l]
+そういう子はカラオケやイベントに行ったりしてるみたい」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And you never felt like joining them?[」][lr]
+[else]
+　「女の子の話に混ざってみないのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If they invited me, I'd refuse.[l] Me being there would only sour the mood.[」][lr]
+[else]
+　「そういう遊びに誘われたら断ると思う。[l]そんなこと聞かれて断られたら、向こうだって面白くないじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't have to reject them.[l] It could turn out to be pretty fun once you actually try it.[」][lr]
+[else]
+　「断らなければいい。[l]やってみると意外と面白いかも知れないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't watch TV, so I wouldn't be able follow their conversations, anyway.[」][prcm]
+[else]
+　「テレビ見ないから、きっと何も分からないわ。[l]うまく話せないと思う」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue was talking much faster than usual.[lr]
+[else]
+　梢は少し早口で話した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+While she seemed concerned by the subject to an extent, she obviously had reservations about discussing it in a public place like this.[lr]
+[else]
+　そういうことを気にはしているが、ここで相談するのが適切かどうか分からず、居心地が良くない様子だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+While I tried to come up with a way to change the subject, Kozue let out a brief sigh.[prcm]
+[else]
+　私が適当に話題を変えることを考えていると、梢はたまにやるように音をさせずに小さなため息をついた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How did we even start talking about this, anyway?[」][lr]
+[else]
+　「そもそも、どうしてそんな話になったのかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We were discussing various ways of relaxation, and that developed into a conversation about hobbies and such.[」][lr]
+[else]
+　「以前の話題から、いい気晴らしについて考えてみようという話になって、気晴らしといえば人それぞれ遊びや趣味を持っているとかなんとか、そんな感じだろう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] You were so out of it I almost thought you'd forgotten.[」][lr]
+[else]
+　「そうね。[l]ぼやっとしてるから、忘れてるのかと思ってた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look, I do feel bad about it, okay?[」][lr]
+[else]
+　「悪いと思ってるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, fine. As long as you're aware of it.[」][lr]
+[else]
+　「分かっていればいいけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Relaxation...[」] she mumbled under her breath.[prcm]
+[else]
+　それから「気晴らし...」と声にならない声で呟く。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Reading books and looking things up would probably fall into that category for me.[」][lr]
+[else]
+　「私にとっては、ここで本を読んだり調べ物してるのがそれかも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Everyone's different.[」][lr]
+[else]
+　「人それぞれだからね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So what I'm doing right now is like a game to me.[l] What's 'playing,' anyway?[」][lr]
+[else]
+　「じゃあ、これが私にとっての遊びなのかな。[l]…そもそも、遊びって何なの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Playing is playing.[l] There should be a dictionary around here if you want the exact definition.[l] I mean, we're in a library.[」][lr]
+[else]
+　「遊びは遊びなんだと思うが。[l]詳しく知りたいなら辞書で調べるかい？[l] ここは図書館なんだし」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue raised her face and looked at all the shelves surrounding her.[prcm]
+[else]
+　梢は顔を上げてグルリ、と図書館を見回した。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know where the dictionaries are.[」][lr]
+[else]
+　「辞書、どこだったかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wanna go look?[」][lr]
+[else]
+　「探してみるかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed my hand on the armrest.[prcm]
+[else]
+　椅子の肘に手をついて聞く。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll do that.[」][lr]
+[else]
+　「そうするわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue stood up and promptly disappeared into the library's sea of shelves.[prcm]
+[else]
+　と、梢は言うと先に席を立って、本棚の林の中に消えていった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well then.[」] I stood up and headed in the opposite direction.[prcm]
+[else]
+　「さて」とこちらも立ち上がると、梢が向かった方と反対に歩いていった。[prcm]
+[endif]
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_1_1" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a library map by the counter.[lr]
+[else]
+　カウンターの隣には配架図がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue looked like she wanted to compete at who would find the dictionary first.[lr]
+[else]
+　しかし、先に行った梢はそういうヒントは無しの条件で「この図書館にある本の中から、先に辞書を探したほうが勝ち」といった様子だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I walked between the shelves of large books and textbooks, looking for the Japanese dictionary, I spotted Kozue on the second floor. She waved at me with a book in hand.[prcm]
+[else]
+　大型本から参考図書の並ぶ棚の間を歩きながら国語辞書を探していると、二階デッキの手摺から梢が手に持った図書をこちらに見せている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned to the desk.[lr]
+[else]
+　私は下の机に戻る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue descended the stairs with the dictionary safely in her grasp.[prcm]
+[else]
+　国語辞書を手にした梢も階段を降りてきた。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg42_4_1" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You were fast.[」][lr]
+[else]
+　「早かったね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I recalled spotting it back when I was looking for your bird encyclopedia.[」][lr]
+[else]
+　「この間、鳥の図鑑を貸したでしょう？[l] 探している時に、見かけていたの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「なるほど」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue placed the book — which looked somewhat too large to be comfortably held in her hands — on the table and flipped it open.[lr]
+[else]
+　梢は片手で持つには重そうな辞書を机に置いてパラパラ、と捲り始める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She found a page with the entry on "play".[prcm]
+[else]
+　そして「遊びね」と言ってそのページを見つけた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When intelligent animals, people included, engage in an activity for the sake of recreation and self-satisfaction, rather than a serious or practical purpose.[l] Doesn't include activities that are performed out of necessity rather than personal desire, such as sleeping or hunting for survival.[」][lr]
+[else]
+　「行動としての遊び（あそび）とは、知能を有する動物（ヒトを含む）が、生活的・生存上の実利の有無を問わず、心を満足させることを主たる目的として行うものである。[l]
+基本的には、生命活動を維持するのに直接必要な食事・睡眠等や、自ら望んで行われない労働は含まない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue read the entry aloud.[prcm]
+[else]
+　梢は辞書で引いた意味を読んだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]For the sake of recreation and self-satisfaction, rather than a serious or practical purpose.[」] Kozue mumbled that bit under her nose.[prcm]
+[else]
+　「実利は問わず、心を満足させるもの」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、梢はポイントを抜き出して呟いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does your research give you satisfaction?[」][lr]
+[else]
+　「君の調べ物には、満足はあるのかい？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h09" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd say that's an accurate enough description,[」] Kozue answered, slightly tilting her head.[lr]
+[else]
+　私が聞くと、梢は小首を傾げてから「まあ、大体合ってると思う」と言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]In that case, what you're doing here is playing.[」][lr]
+[else]
+　「それなら、キミの調べ物は遊びとも言えるんだろうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue frowned in a display of discontent.[prcm]
+[else]
+　その結論に対して、梢は不満そうな顔を浮かべている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a bit more vague than I thought.[」][lr]
+[else]
+　「ちょっと思ったよりも、定義が曖昧ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If satisfaction is the only thing that defines playing, then everything in the world can be a game.[l] I was hoping to see some actual criteria that could definitively separate playing from not playing.[」][lr]
+[else]
+　「本人がただ満足することで遊びと言うのなら、言ってしまえば何でも遊びになるってことじゃない。[l]
+もっと、これはそうでこれは違うと言い切れるような、基準があるものかと期待してたの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've said this before, but it's different for everyone.[l] Any activity can be considered 'playing' as long as it gives you that kind of mental benefit.[」][lr]
+[else]
+　「前にも言ったけど、気晴らしの方法は人それぞれだからね。[l]それは、その者に心的な利益をもたらすものなら、他者にとってその行動が何を意味するかは問わないものなのだろう」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se50.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue's small, graceful hands closed the book.[prcm]
+[else]
+　梢は指の形が綺麗な小さな手でパタン、と辞書を閉じた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you satisfied?[」][lr]
+[else]
+　「満足したかい？」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I guess so.[l][msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h15" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon] ...Did you already know what we'd find in the book?[」][lr]
+[else]
+　「まあ、それなりに。[l]
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/k_img/f01_p01_h15" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+……もしかして、大体こういう意味だって分かってた？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, it was close to what I expected.[l] After all, it's close to my field.[」][lr]
+[else]
+　「そうだな、だいたい予想どおりかな。[l]割と仕事の分野に近いからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Now I feel like I wasted my time.[」][prcm]
+[else]
+　「それを聞いたら、『それなり』にもならなかったわね」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、梢は言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, no need to get upset.[」][prcm]
+[else]
+　「手厳しいね」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue looked up a few more words in the dictionary, jotted something down in her notes, then went to the second floor to return the book.[prcm]
+[else]
+　それから、梢はいくつか辞書を引いて少しだけメモを取ると、辞書を二階の書架に戻しに行った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p02_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I remembered something just now,[」] she said as she came back.[prcm]
+[else]
+　「今、なんとなく思い出したんだけど」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　戻ってきた梢は出し抜けに言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]When I was little, I used to play with a penguin slide a lot.[l] It was this big and ran on batteries.[l] It consisted of an ice mountain, a slide, and a tunnel running through it.[l] Mechanized penguins would climb up the mountain, then slide down.[l] Anyway, you could basically repeat the whole thing over and over again.[」][lr]
+[else]
+　「小さい頃、よく遊んだ玩具でペンギンの滑り台があったの。[l]これくらいの大きさで単三電池で動くの。[l]
+氷の山と滑り台と、トンネルがあるの。[l]ペンギンの人形が自動機械で氷の山を登り終わると、滑り台を滑るの。[l]
+それをただ延々と繰り返す玩具なんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She showed the size of the penguins and how they moved with her hands.[prcm]
+[else]
+　そう言いながら、手で大きさとペンギンの動きを示した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can still remember it.[l] These penguins were all of different colors and would always slide down one after the other in the same order.[l] I really liked the black one and watched him most of the time.[」][lr]
+[else]
+　「今でもよく覚えてる。[l]たくさんの色のペンギンがあって、順番に坂を上って滑っていくの。[l]特に黒いペンギンが好きで、ずっとそのペンギンを見ていたの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I never grew tired of it. Just looking at the thing filled me with satisfaction.[」][lr]
+[else]
+　「飽きもせず見てたし、あれは十分心を満たしてたと思う」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The only thing you can do with that toy is look at it?[」][lr]
+[else]
+　「その玩具は、見てるだけなのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h07" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]I wonder why I liked it that much.[」][lr]
+[else]
+　「そう。[l]
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/k_img/f01_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+どうしてあんなに気に入ってたのかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She narrowed her eyes, falling in thought for a moment.[prcm]
+[else]
+　と、目を細めて考える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, for starters, it looked cute, which caught your attention.[l] Then you probably enjoyed imagining how the mechanism worked, or gave the penguins various roles and personalities in your mind.[」][lr]
+[else]
+　「多分、よく出来ていて見た目も可愛かったから、それがまず気に入っていたし。[l]それから玩具の動く仕組みを考えたり。[l]こんな氷山に住むペンギンのことを考えたり、きっと色々な楽しみ方をしてたんだと思う」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You really liked it, didn't you?[」] I added.[lr]
+[else]
+　「よほど気に入ってたんだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you still have it?[」][lr]
+[else]
+　「今もまだあるのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know. It ran out of batteries one day, and I think I forgot all about it.[」][lr]
+[else]
+　「どうかな？ いつか電池が切れて動かなくなった時があって、それから見てない気がする」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder where it is now.[l] Now I feel all nostalgic after remembering it. I hope nobody threw it away or something.[」][lr]
+[else]
+　「そう、どこにあるかな。[l]思い出すと懐かしくなってきたわ、捨てられてないといいけど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue spent some time searching for her penguin slide's whereabouts in her mind, but returned to her research after a while.[prcm]
+[else]
+　梢はペンギンの行方を探すように目を伏せていたが、またしばらくすると調べ物に戻っていった。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg42_4_4" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We exchanged a few words over that time, but didn't talk about anything particularly significant.[lr]
+[else]
+　それから、夕方過ぎまで調べ物をして時折会話をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the library grew dark, Kozue cleared up her tools and left.[prcm]
+[else]
+　図書館が暗くなり始めると、梢は手提げ袋に荷物をまとめて図書館を出た。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[playse buf = 0 storage="se66.ogg"]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule8" vague=200 time=2000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg56_3" page=back layer=base]
+[trans method=universal rule="rule8" vague=200 time=2000]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I figured I could accompany her until the tunnel.[lr]
+[else]
+　こちらも帰宅する梢をトンネルの向こうまで見送るつもりであとに続いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The embroidery of water lilies on Kozue's bag swayed to the rhythm of her steps as she traversed the stone path that wasn't designed with her short legs in mind.[prcm]
+[else]
+　敷地内の飛び石の道を背の低い梢が歩くと、たまに少し大股になり手提げ袋に刺繍された睡蓮が揺れる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a cute bag.[」][lr]
+[else]
+　「その手提げ袋、かわいいね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p03_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I made it in my industrial art class.[」] She glanced at the bag herself.[prcm]
+[else]
+　「学校の工作で作ったの」と梢は持っている手提げ袋を見て言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You made it yourself?[l] You're very talented.[」][lr]
+[else]
+　「へえ、自分で作ったのか。[l]すごく上手だね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wanted to add more decorations, but I didn't have the time.[」][lr]
+[else]
+　「ホントはもっとたくさん刺繍したかったけど、時間がなかったの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You like sewing?[」][lr]
+[else]
+　「刺繍は好きなのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue took another three steps forward in silence.[lr]
+[else]
+　それを聞くと、梢は三歩くらい歩いてから「別に」と言った。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[l] I guess I like it more than the rest of my classes, though.[」][prcm]
+[else]
+　それから「ほかの授業よりは好きなだけ」と言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「なるほど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I suddenly remembered what Sachiko told me about one of her classes.[prcm]
+[else]
+　ふと、佐知子の工作授業の話を思い出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako apparently caught a sparrow in a trap box she designed.[lr]
+[else]
+　それは、[ruby text="たか"]貴[ruby text="こ"]呼が木工実習で作った箱に雀を捕まえたという話だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was only slightly bigger than your palm and had a latch that could lock and unlock it.[lr]
+[else]
+　箱は手のひら大で、一面だけは蓋として開閉できた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They didn't have specific instructions, but everyone was provided with plans of bookshelves and drawers, which turned out to be the basis for evaluation. Needless to say, Takako's grades weren't the greatest that semester.[lr]
+[else]
+　授業では特に創作物の指定はなかったが、本棚や抽斗については設計図が用意されており、これが評価の基準になっていた為、その学期の貴呼の木工実習の成績は低かったという。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+According to Sachiko, this was quite unusual for her, as she did have a talent for engineering.[prcm]
+[else]
+　図画工作が得意だった貴呼にしては珍しかったと佐知子は言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako caught the sparrow on the day she brought the trap box back home.[lr]
+[else]
+　貴呼が雀を捕まえたのは、貴呼がその箱を家に持ち帰った日だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Apparently, sparrows would often fly into her house at the time.[lr]
+[else]
+　その頃、貴呼の家に雀がよく入ってきたという。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako figured they must have been attracted to the dried-up rice that would sometimes accumulate near their rice cooker.[prcm]
+[else]
+　貴呼はそれについて、おそらく雀は炊飯器の近くに落ちていた乾いた米粒を食べに来ていたのではないかと言っていたらしい。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When she noticed a bird in her house again, she swiftly closed all the windows and doors, and chased it all over the room with an insect net until she eventually caught it and put it in the box.[lr]
+[else]
+　貴呼は雀が家に居ることを確認すると、ベランダから雀のいる部屋の窓を閉め、部屋の中を逃げ回る雀を虫網で捕まえて、工作で作った箱に入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko got angry at Takako for stuffing the animal into a cramped box with no windows, telling her to consider how she herself would feel if she were in the bird's position.[lr]
+[else]
+　佐知子は手のひらくらいの大きさの窓もついてない箱に入れられた雀の気持ちを考えると、ゾッとすると言って貴呼を非難した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, the sparrow didn't spend long in the trap.[prcm]
+[else]
+　しかし、雀はすぐに外に出ることができた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako's mother came back home when Takako was away playing, and as soon as she heard some peculiar sounds coming from inside the box, she found the bird and let it go.[lr]
+[else]
+　貴呼が遊びに出かけている間に貴呼の母親が帰ってきて逃がしたのだ。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　母親は音のする妙な箱に雀が入っていることに気がつくと、すぐに雀を逃がしてやった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako complained to her mother when she returned, but got scolded instead.[lr]
+[else]
+　戻った貴呼は母親に抗議したが、逆に酷く怒られた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sparrow did not return to her house ever again.[prcm]
+[else]
+　そして、雀はその後二度と貴呼の家に入ることはなかったという。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+According to Takako, a whole bunch of sparrows used to frequent their kitchen in the past, but not a single one had come since then — she wondered if they actually had some sort of means to convey information between each other.[prcm]
+[else]
+　貴呼はその話をする時「これまでに雀は捕まえた一羽以外にもたくさん台所に来ていたのに、それからは一羽も来なくなった。もしかすると、雀同士で会話ができるのかもしれない」と感心して言ったという。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg130" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We left the premises of the mansion before I even realized it.[lr]
+[else]
+　そんな話を思い出している間に屋敷の外に出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around to look at it from the road leading to the tunnel.[prcm]
+[else]
+　トンネルに続く坂道の途中で屋敷の方を見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]By the way, have you spoken to Lily yet?[」][lr]
+[else]
+　「そういえば、リリィさんとはもう話をしたかい？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h03" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I figured Kozue wouldn't be interested in the story, so I brought up something else — their plan to meet an architect or whatnot.[lr]
+[else]
+　工作の話についてはまとまりが無い上に梢も興味がなさそうだったので、別の話をすることにした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not yet.[」][prcm]
+[else]
+　建築事務所の見学のことについて聞くと、梢は「まだ」と答えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't feel comfortable taking to her?[」][lr]
+[else]
+　「リリィさんのことが苦手かい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's not like that.[」][lr]
+[else]
+　「別に」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Lily enjoys talking. I'm sure she'd be happy if you visited her.[」][lr]
+[else]
+　「リリィさんは話をするのが好きみたいだから、キミが訪ねれば喜ぶと思うよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at Kozue, but she showed no reaction, so I continued.[prcm]
+[else]
+　そこで言葉を切り梢の様子を見るが、梢の反応は薄いようなのでそのまま続けることにした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, right. She told me a scary story the other day.[l] Did you know that a person went missing at this mansion?[」][lr]
+[else]
+　「そうそう、つい先日も怖い話をしてくれたよ。[l]この屋敷の従業員から行方不明者が出たっていう話は聞いたことあるかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「知らないわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if she tricked me.[」][lr]
+[else]
+　「それじゃあ、やはり嘘なのかもしれないな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've never seen more than two people working there to begin with.[」][lr]
+[else]
+　「そもそも、二人以外の従業員を見たことない」と梢が言った。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f01_p01_h15" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right.[」] Kozue give me a suspicious look as I said that.[prcm]
+[else]
+　「確かにね」と言うと、梢は隣を歩くこちらを訝しげな目で見た。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg131" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg132" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Much like last time, I said my farewells to her as soon as we exited the tunnel.[lr]
+[else]
+　前回の見送りと同様に、トンネルを抜けたところで梢と別れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She nodded, then made her way down the slope.[prcm]
+[else]
+　梢の背中に別れの挨拶をすると、梢はこちらを一瞥してから坂を降りていった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle7]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="108_2.ks" target=*108_2
+
+

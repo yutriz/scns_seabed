@@ -1,0 +1,1004 @@
+*082_2| Nameless disease
+; *082_2|名前のない病気
+[fbfstoretitle eng="Nameless disease" jp="名前のない病気"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm17"]
+
+;章題表示
+[msgoff]
+[wait time=3000]
+[backlay]
+[fbfunlockachievement number="3"]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence3_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence3_1_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+[wait time=1000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence3_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence3_2_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=4000]
+
+[backlay]
+[fbfscale_image storage="bg44_14" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=500]
+[clickskip enabled=true]
+
+;章選択フラグ
+[if exp="sf.CpRelease <= 3"]
+[eval exp="sf.CpRelease = 4"]
+[endif]
+
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 99"]
+[eval exp="sf.ItRelease = 100"]
+[endif]
+
+
+*| Nameless disease
+; *|名前のない病気
+[fbfstoretitle eng="Nameless disease" jp="名前のない病気"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I woke up around noon after the day I had my fit.[lr]
+[else]
+　発作のあった次の日は昼頃に目が覚めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Both the headache and the ringing in my ears were gone without a trace.[lr]
+[else]
+　目が覚めた時には頭痛も耳鳴りも、嘘のようにきれいさっぱり無くなっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I sat up, I spotted a familiar notebook resting on the dining table.[prcm]
+[else]
+　体を起こすと、いつもの卓袱台の上に見覚えのある手帳が置かれていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko told me to stay in the night duty room until she returned, so I killed some time by doing nothing in particular.[lr]
+[else]
+　そのまま宿直室に居るようにと[ruby text="まゆ"]繭[ruby text="こ"]子に言われ、しばらく宿直室でぼんやりとしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, Mayuko brought me lunch and we ate together.[lr]
+[else]
+　そのあとで、繭子持ってきてくれた昼食を食べた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was udon and some tangerines. I wanted something more interesting.[prcm]
+[else]
+　昼食はうどんとみかんで、少し味気なかった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't force yourself to eat everything if you aren't feeling hungry.[」][lr]
+[else]
+　「無理して、全部食べる必要はないですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I'm okay.[l] If anything, I feel like my appetite has gone up.[」][lr]
+[else]
+　「体は平気みたい。[l]むしろ、食欲はある気がするよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Most of the other patients have trouble getting out of bed the next day following a fit.[l] It can even upset their life rhythm. With that in mind, I think it'd be better for you to have something light now, and maybe eat a bit more for dinner later.[」][lr]
+[else]
+　「みなさん発作の次の日はすぐには起きないのですよ。[l]
+それで、生活リズムを崩してしまうこともあります。[l]この時間に起きた場合は軽いものを入れておいて、ちゃんとした食事は夜にとることになります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p03_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This was your first fit since coming here, right?[」][prcm]
+[else]
+　「[ruby text="たか"]貴[ruby text="こ"]呼さんは、ここにきてからの発作は初めてですよね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I nodded.[lr]
+[else]
+　ここで発作を起こした覚えはないので頷く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll have to read all that now?[」] I asked, pointing at the notebook on the table.[prcm]
+[else]
+　「これ、全部読まなくちゃいけないの？」と卓袱台の上の手帳を見て言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I explained your condition a while back.[l] Do you remember?[」][lr]
+[else]
+　「病気の説明は、以前しましたよね。[l]覚えていますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I do.[」][prcm]
+[else]
+　「覚えてるよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was something this place specialized in — fit-induced amnesia. I'd lose some of my memories with each new attack.[lr]
+[else]
+　病気というのはこの療養所で専門的に診ている、発作を伴う物忘れのことだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was a newly discovered disease that had yet to even be named.[lr]
+[else]
+　まだ新しい病気で、症例が少なく、病名すらついていなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+So in here, we just called it the "condition."[prcm]
+[else]
+　なので、ここではそれを単に病気と呼んでいた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p04_h02" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Most patients tend to lose larger chunks of memories, ranging from a one month period to an entire year — sometimes even more.[」][lr]
+[else]
+　「もし物忘れを起こしていたら、その部分の記憶は割と広い範囲で無くなっているはずです。[l]
+一ヶ月か、一年。[l]ひどいとそれ以上の期間です」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But you never really forget things gradually, little by little... right?[」][lr]
+[else]
+　「でも、飛び飛びで忘れることはないんでしょう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right. You lose a whole set of memories right away, and that's it,[」] Mayuko answered with a nod.[prcm]
+[else]
+　「そうです。忘れるのはいつもひとまとまりです」[lr]
+[endif]
+
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+と、繭子は頷いて言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]As such, you can skim through the parts of your diary that you are sure you can remember.[l] You will spot the bits you've forgotten right away.[l] Although, if you're curious, you can read all of it as many times as you want.[」][lr]
+[else]
+　「なので、日記を読むときはある程度飛ばし読みしてもらっても構いません。[l]
+大きく忘れている時はすぐにわかりますので。[l]もちろん、気になるのならきっちり全て読み通しても問題はありませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, maybe I've just forgotten a day or two that aren't even logged.[」][lr]
+[else]
+　「まあ、たしかに一日や二日の物忘れなら、別に問題ないかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up the old notebook. With that as her cue, Mayuko stood up.[prcm]
+[else]
+　手を伸ばして、一番古い手帳を手に取ると、傍らに座っていた繭子が立ち上がった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll come check on you when I have some time off from work.[」][lr]
+[else]
+　「仕事の合間には、様子を見に来ますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're worrying too much.[」][prcm]
+[else]
+　「別に、大丈夫だよ」と宿直室のドアに向かう繭子の背に声をかける。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p04_h03" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko slid her feet into her slippers, gave me a quick smile, and left the room.[lr]
+[else]
+　繭子はスリッパを履いて一度こちらに微笑みかけてから、宿直室を出て行った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once I was sure she had left, I heaved a brief sigh.[lr]
+[else]
+　繭子を見届けたあとで「ふう」と息を吐く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I opened the diary.[prcm]
+[else]
+　それから、日記にとりかかった。[prcm]
+[endif]
+
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[playse buf = 0 storage=se57.ogg]
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were three notebooks in total, including the new one, which only had a few days recorded in it.[lr]
+[else]
+　手帳はまだ数日分の日記しか書き込まれていない殆ど新品のものを含めて三冊あった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+One notebook encompassed about a year, which meant I had about two years' worth recorded.[lr]
+[else]
+　一冊がほぼ一年分で、二年分ほどの日記があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned to the first page and ran my eyes over the first entry written in my hand. Looking at my own writing was a little embarrassing.[lr]
+[else]
+　一番古い手帳を開いて気だるげに書かれた自分の字を見ると、少しこそばゆかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+On the other hand, seeing my past self come to life on the pages was quite exciting, so I read everything without skipping a single detail.[lr]
+[else]
+　そんな風に初めのうちは過去の自分を振り返ることが面白く、一日ずつきっちりと読んでいった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+By the time I got to the second month, though, I realized it was taking too long. After that, I started reading only every second or third entry.[prcm]
+[else]
+　ほぼ二ヶ月分を読み終える頃に以外と時間がかかることに気がつくと、次第に面倒になって二三日飛ばしで読み始め、短い日記は積極的に飛ばしていった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were parts that I remembered well, and some that I had forgotten.[lr]
+[else]
+　日記の内容はよく覚えていることもあるし、忘れかけていた内容もあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd wake up, do some work, eat, take a bath, then go to sleep.[lr]
+[else]
+　療養所で起きて、仕事をして、食べて、風呂に入って寝る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was pretty much that over and over again.[lr]
+[else]
+　そういう、基本的なことを繰り返しながら。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could only really keep track of entries that mentioned something unusual.[lr]
+[else]
+　変わったことを見つけては、それを特筆していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As such, I continued through the notebook, reminiscing about my past.[prcm]
+[else]
+　その日を思い出しながら、日記を読み続ける。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+From time to time, I felt as though there was another me inside that notebook, and I was simply observing her from high above.[lr]
+[else]
+　すると時折、手帳の中にもう一人の自分がいて、それを上から眺めているような気分になった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At times like that, I felt like my past self wasn't really me at all.[prcm]
+[else]
+　そういうときは、過去の自分が自分でないような気持ちになった。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg44_3" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Evening had come.[lr]
+[else]
+　夕方。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Around the time my notebook's pages began to be tinted in orange...[lr]
+[else]
+　手帳のページがオレンジ色に見える頃。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+...Mayuko dropped by the room.[lr]
+[else]
+　繭子が顔を見せた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was starting to get hungry, but when I asked her about it, she said that dinner would soon be ready. She also told me to try and bear it for a while longer, and only handed me a few candies to ease my immediate hunger.[prcm]
+[else]
+　小腹が減ったので食べ物をせがむと「もうすぐ夕飯なのでそれで我慢してください」と言って飴玉を二つくれた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rectangle-shaped candies came in wrappings of various different colors.[lr]
+[else]
+　飴玉は一つの袋に四角いのが二つ入っていて、どちらも違う色をしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I unwrapped a green one first and put it in my mouth, then did the same with a pink one.[lr]
+[else]
+　袋を開けてまず薄緑の飴を口に入れてから、薄桃の飴を口に入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They both had about the same taste.[prcm]
+[else]
+　ふたつの飴はの味はあまり変わらなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This brings back memories.[l] I think my grandmother used to give me candies just like these.[l] Where did you get them, Mayuko?[」][lr]
+[else]
+　「この飴玉懐かしい。[l]昔、祖母がよくくれたよ。[l]これと氷砂糖。[l]繭子、これどこで買ってきたの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p03_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't remember.[l] I think I just bought them at the store.[」][lr]
+[else]
+　「どこでしたか。[l]多分、購買だと思いますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She meant the small, privately owned store at the port.[prcm]
+[else]
+　繭子の言う購買は港にある小さなお店で、看板にそのまま「コウバイ」と書いてある店だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh, it's pretty interesting to see stores over here that don't belong to any chain. You don't see their kind much in the big city.[」][lr]
+[else]
+　「ああ、田舎にもあんな購買の店があった。[l]チェーンのスーパーではない、よくわからないお店」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p02_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your grandmother must have bought candies from a store just like that.[」][lr]
+[else]
+　「お祖母さんも、きっとそこで買ってたんですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After some more small talk, Mayuko left the room to prepare dinner.[prcm]
+[else]
+　そんな風にどうでもいい話をしたあとで、繭子は夕食を作りに出て行った。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg44_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When she came back, the sun had already set.[lr]
+[else]
+　次に繭子が夕食の知らせに来た時には、もう日はすっかり落ちていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had finished reading the diary and was about to put some tea into the water I boiled for myself.[prcm]
+[else]
+　こちらは日記を読み終えて。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　新しく沸かしたお湯で、お茶を入れていたところだった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p03_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you finished?[」][lr]
+[else]
+　「日記は読み終えましたか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, more or less.[」][lr]
+[else]
+　「とりあえず、一通りは」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you spot any parts you have forgotten?[」][lr]
+[else]
+　「何か忘れていることはありましたか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tilted my head a little.[prcm]
+[else]
+　その言葉に少し首を傾げる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[l] There were a few parts I could barely remember, but nothing to the extent where I'd start suspecting that my memories were gone.[」][lr]
+[else]
+　「いや。[l]ちょくちょく、そういうこともあったなってところはあったけれど。[l]これといって忘れているようには感じなかった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So there were no passages that felt completely new to you?[」][lr]
+[else]
+　「全く思いもよらない日記はなかったんですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「それはなかったよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h02" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そうですか」と繭子は言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does that mean I didn't forget anything this time around?[」][lr]
+[else]
+　「今回の発作では、何も忘れてはいなかったということかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko slowly shook her head.[prcm]
+[else]
+　確認すると、繭子がゆっくり首を振った。[prcm]
+[endif]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h09" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I doubt that.[l] There are times when you feel you haven't forgotten anything, but it turns out to be just a short episode that wasn't really important.[l] Or it was something you remembered as you read the diary.[l] In your case, I'd say it could be either of those possibilities.[」][lr]
+[else]
+　「それはありませんよ。[l]そういうふうに感じる場合はありますが。[l]例えば、忘れてたことがごく短い期間だったか。[l]
+その日記を読んでいる内に思い出してしまったか。[l]実際にはそんなところだと思いますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「なるほど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p04_h01" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko interrupted me as I wrestled with that possibility.[prcm]
+[else]
+　こちらがそれの可能性について考えていると、繭子は「さて」と声のトーンを変えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sure you're tired, Takako.[l] I have your dinner ready.[」][lr]
+[else]
+　「貴呼さんも今日は疲れましたよね。[l]夕食の準備が出来ていますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What did you make tonight?[」][lr]
+[else]
+　「今日の夕飯は何？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You'll find out when you come to the cafeteria.[」][lr]
+[else]
+　「それは食堂についてからのお楽しみです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed Mayuko out of the room.[prcm]
+[else]
+　そう言って、先に宿直室を出て行った繭子のあとについていった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p04_h03" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I made it a little more extravagant than usual, so you can look forward to it.[」][lr]
+[else]
+　「ちょっと贅沢にしてみましたから、期待してくださいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You remember I'm not a fan of yam and vinegar, right?[」][prcm]
+[else]
+　「山芋と酢の物は苦手なの知ってるよね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I hated those things, but Mayuko loved them.[lr]
+[else]
+　山芋と酢の物は、こちらは苦手だが、繭子は好きな食べ物だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It wasn't to the extent I couldn't eat them, but they tended to come up a lot in dishes Mayuko labeled as delicious, so...[lr]
+[else]
+　食べられないというほどではないが、繭子が美味しいと思って出すものの中には、たまにそういうものがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That pollock roe wasn't too bad when I forced myself to try it, but...[lr]
+[else]
+　明太子は、食べてみたら割と美味しかったが。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This time, I made sure to fix up something you'd definitely like.[」][prcm]
+[else]
+　「ちゃんと、貴呼さんの好きなものですよ」と繭子は言った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1000]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our dinner tonight turned out to be hamburg steak and fried prawn.[lr]
+[else]
+　その日の夕食の主菜は、ハンバーグにエビフライだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed out to Mayuko that she might be treating me too much like a child... although I appreciated getting an extra portion of rice.[prcm]
+[else]
+　繭子が考える私の好物は少し子供っぽいのではないのかと指摘してみたが実際のところ、いつもよりご飯をお椀半分ほど多めにとってしまった。[prcm]
+[endif]
+
+
+;＊
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg85_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The next day, my life returned to its usual rhythm.[lr]
+[else]
+　次の日からは、いつもの生活スタイルに戻った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I woke up in the morning, exercised, then did the work I was asked.[lr]
+[else]
+　朝起きて、体操し、頼まれた仕事をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ate, bathed, wrote in my diary, and slept.[lr]
+[else]
+　ご飯を食べて、風呂に入り、日記を書いて寝た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nothing in my schedule changed much. Well, maybe except for the fact that I spent more time in the night duty room with Mayuko.[prcm]
+[else]
+　特に変化のない日常だったが、前よりも少しだけ宿直室に行く機会が増えて、繭子といる時間が増えた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="082_3.ks" target=*082_3
+
+

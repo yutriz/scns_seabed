@@ -1,0 +1,633 @@
+*169_2| Consultation Room
+; *169_2|診察室
+[fbfstoretitle eng="Consultation Room" jp="診察室"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle3"]
+
+[playse buf = 0 storage=se84.ogg loop=true]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg06_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[clickskip enabled=true]
+
+*| Consultation Room
+; *|診察室
+[fbfstoretitle eng="Consultation Room" jp="診察室"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I realized I'd been sleeping at the desk of my examination room.[lr]
+[else]
+　疲れていたのか、気がつくと診察室の机に伏して寝ていた。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=50]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The clock displayed the time as 10 PM.[prcm]
+[else]
+　時計は午後十時を回っていた。[prcm]
+[endif]
+
+
+[playse buf = 2 storage=se33.ogg]
+[wait time=800]
+[playse buf = 2 storage=se184.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I fixed up my hair, stood up, and took a can of beer from the fridge.[lr]
+[else]
+　髪を直しながらふらりと立ち上がり、奥にあるフリーザから缶ビールを取り出す。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[playse buf = 4 storage=se43.ogg]
+[wait time=100]
+[seopt buf=1 volume=60]
+[playse buf = 1 storage=se183.ogg loop=true]
+[wait time=1000]
+[fadese buf = 1 time=1000 volume=45]
+[wf buf=1]
+[wf buf=3]
+[clickskip enabled=true]
+
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned on my portable radio, and after adjusting the volume, focused my attention on writing the daily report.[lr]
+[else]
+　携帯ラジオの電源を付け、
+適当にボリュームを下げてから、日課である報告書の作成に取り掛かる。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I might have called it a report, but it was no more than a rough list of what had happened during the day, separated into a few sections.[lr]
+[else]
+　報告書と言っても、その日の出来事などをいくつかの項目に分けて書くだけだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As such, I finished writing it with little difficulty.[prcm]
+[else]
+　いつものように手を動かしていれば終わるような単純報告から記入を済ませていった。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I also made a note on Sachiko's overall condition.[lr]
+[else]
+　私はその報告書に[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子の様子についても記述した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She had yet to tell me anything vital.[lr]
+[else]
+　佐知子は肝心なことをまだ言っていなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I felt like it was about time for me to act.[lr]
+[else]
+　しかし、私はそろそろどうにかしなければと考えていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With Takako gone, Sachiko came to live on her own.[lr]
+[else]
+　貴呼が居ない今、佐知子はひとりで生活している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had my doubts she could survive for long in her current condition.[prcm]
+[else]
+　一人で生きるためには、ずっとこんなところに居るわけには行かないからだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A song I used to listen to came on the radio.[lr]
+[else]
+　ふと、ラジオから以前よく聴いていた曲が流れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I paused and took the opened beer can from the side of the table, but it was already empty.[lr]
+[else]
+　私は手を止めて机の上の開けていた缶ビールを取ったが、缶は既に空になっていた。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se33.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up, walked to the freezer, and took out another can.[lr]
+[else]
+　席を立って部屋の隅にあるフリーザーから新しい缶を取り出す。[lr]
+[endif]
+
+[r]
+
+[playse buf = 2 storage=se184.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened it, and — after taking a gulp — shifted my gaze to the little window in the corner of the room. I could see the moon shining brightly in the cloudless sky; the sight made me calm down a little.[prcm]
+[else]
+　缶を開けてその場で一息つくと、小窓から雲のない夜の空に浮かぶ月が見えて、私は少し気を落ち着かせた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 4  storage=se57.ogg]
+[fadese buf = 1 time=1000 volume=30]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item32" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I flipped through the pages of one of the medical records I brought from the library.[lr]
+[else]
+　ビールを片手に図書館から持ち出したカルテをパラパラと捲って軽く目を通した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The early reports really did look more like a diary than anything.[lr]
+[else]
+　カルテの初めの方はただの日記のようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was full of stories about Sachiko, me, and her usual companion, Takako.[lr]
+[else]
+　そこには私と佐知子と時折は佐知子の同伴者である貴呼のことも書いてある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd see Sachiko maybe once or twice a year after we graduated elementary school, but Takako seemed to have been with her for the entire time.[lr]
+[else]
+　私と佐知子は小学校以後、年に数度も会わなくなっていたが、佐知子と貴呼はずっと一緒にいたようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Those two were quite peculiar characters, to say the least.[prcm]
+[else]
+　とても変わった二人だった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[fadese buf = 1 time=1000 volume=20]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg06_2" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I finished reading the page, I realized the volume of the radio had gone down.[lr]
+[else]
+　私はそのページを読み終えたとき、ラジオの音が小さくなっていることに気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I glanced at the radio, I saw that the red lamp indicating the life of the two AA batteries powering it had grown dim.[lr]
+[else]
+　見ると小型の携帯ラジオの赤いランプの光が小さくなっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was about to go out completely.[lr]
+[else]
+　単三電池二本分の寿命を表示したランプが今、明滅して消えようとしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I considered removing the batteries and putting them back in. I even toyed with the idea of just shaking the radio. It was an old thing, though — with certain parts of it already rusted away — so I ultimately changed my mind.[prcm]
+[else]
+　ラジオの蓋を開けて電池を外したり回したりする事も出来たが、サビの部分は既にノイズで流れた後だったのでやめた。[prcm]
+[endif]
+
+
+[playse buf = 4 storage=se61.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I finished listening to the distorted sound of the radio with a beer can in one hand, then focused on finishing my report.[lr]
+[else]
+　私は開けてしまった缶を片手にノイズ混じりの曲を聴き終わってから、机に戻り報告書の続きに取り掛かった。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[fadese buf=0 volume=0 time=3000]
+[fadeoutse buf=1 time=3000]
+[fadeoutse buf=4 time=3000]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=2000]
+[fadese buf=0 volume=100 time=3000]
+[fadeinse buf=4 storage=se61.ogg time=3000 volume=50]
+[backlay]
+[fbfscale_image storage="bg06_2" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=500]
+[seopt buf=1 volume=100]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a while, I realized I could hear a faint sound alongside the scraping noise of my pen against the paper.[lr]
+[else]
+　しばらくそうしていると、ペンの走る音の間にほんの僅かではあるが別の音があることに気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I paused, raised my head, and strained my ears to listen.[prcm]
+[else]
+　私は手を止めると頭を起こしてその音の発生源を突き止めるために耳をすませた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was coming from somewhere close by.[lr]
+[else]
+　音は間隔をあけて聞こえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The more I listened, the more it sounded like someone's voice.[lr]
+[else]
+　よく聞くとそれは誰かの話し声のようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had no idea who was talking or what was being said, but it felt like someone had been whispering somewhere in the vicinity.[lr]
+[else]
+　何を話しているのかまではわからないが、誰かがヒソヒソと話しかけているような声だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a closer look at the radio, thinking it might've honed in on some weird wavelength, but its light had already gone completely dark.[prcm]
+[else]
+　ラジオが何かの番組を拾ったのかと考えたが、電源ランプは消灯したままだった。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I considered the possibility of the sounds from Sachiko's room traveling all the way here due to some peculiarity of the mansion's design.[lr]
+[else]
+　私は何か屋敷の構造上の問題で、佐知子の部屋の音がこの部屋まで伝わっているのではないかと考えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Although I could no longer hear anything, urged by curiosity, I left my room.[prcm]
+[else]
+　既に声は聞こえなくなっていたが、佐知子の様子も気になった私は診察室を出て彼女の部屋に向かった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=0 time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1500]
+[playbgm storage="bgm62"]
+[wait time=1500]
+[backlay]
+[fbfscale_image storage="bg161" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[seopt buf=0 volume=100]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had a slightly bad feeling on my way to Sachiko's room.[lr]
+[else]
+　彼女の部屋に向かう途中に私は少し嫌な予感がしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt as though the corridor was colder than usual.[lr]
+[else]
+　廊下はいつもより温度が下がっているような気がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The closer I got to her room, the colder it felt, and the worse my feeling of premonition became.[prcm]
+[else]
+　寒気と予感は、彼女の部屋に近づくほど強く感じるようになった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My first thought upon reaching her room was to open the door. However, I then realized there was no light coming from her room, and that it was pretty much the middle of the night.[lr]
+[else]
+　彼女の部屋の前に来ると、私は直ぐにでもその扉を開けようかと思ったが、扉の隙間から明かりが漏れてないことに気がつき、ひとまず落ち着いて、今が深夜の時間であることを考えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I decided to first check if there were any sounds coming from the room first. Placing my ear against the door, I listened in.[lr]
+[else]
+　そこで、この部屋から音がしていたのかを確かめるために、扉にそっと顔を寄せ聞き耳を立ててみた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I could vaguely hear something when I was walking toward the room, but now, it had fallen into complete silence.[lr]
+[else]
+　扉に近づいたとき、何か音が少し聞こえたような気がしたが、それはすぐに止んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After spending another minute or so listening, I still heard no voices whatsoever. I began to wonder if it hadn't just been my imagination playing tricks on me all along.[prcm]
+[else]
+　しばらくそのまま聞き耳を立ててみたが、その声はもう少しも聞こえなかったので、気のせいかも知れなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...[」][lr]
+[else]
+　「…」[lr]
+[endif]
+
+[r]
+[playse buf = 4 storage=se68.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In the end, I pulled back from the door and gave it a light knock.[lr]
+[else]
+　結局、私は体を離してから小さく扉をノックする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was no answer.[lr]
+[else]
+　返事はなかった。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se41.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I unlocked the door, and slowly pushed it open to make a small gap, all the while careful not to make a sound.[prcm]
+[else]
+　私は鍵を開けて、ゆっくりと音を立てないように扉を押した。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[seopt buf=2 volume=30]
+[playse buf = 2 storage=se185.ogg loop=true]
+[backlay]
+[fbfscale_image storage="bg129_4" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wait time=500]
+[wt]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The cold seeping out from inside made my skin tingle.[lr]
+[else]
+　隙間から漏れた冷気が裾に入り肌をざわめかせた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The faint ray of light making its way inside from the corridor gave the pitch black room some color.[lr]
+[else]
+　扉の淵から入る廊下側の明かりが真っ暗な部屋に色をつけていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped pushing the door by the time the light reached up to the bed, and strained my eyes as I looked into the darkness.[lr]
+[else]
+　ベッドに差し掛かる前に手を止め、扉の淵を覗き込むようにしてその先を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, Sachiko wasn't there.[prcm]
+[else]
+　しかし、ベッドに佐知子はいなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pushed the door open and entered the room.[lr]
+[else]
+　私は扉を押して部屋に入る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sachiko was nowhere to be seen.[prcm]
+[else]
+　部屋のどこにも佐知子の姿が見当たらなかった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=2 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[seopt buf=1 volume=100]
+[seopt buf=2 volume=100]
+[seopt buf=3 volume=100]
+
+[jingle3]
+@jump storage="tips.ks" target=*tips

@@ -1,0 +1,121 @@
+*141_3| Good morning
+; *141_3|良い目覚め
+[fbfstoretitle eng="Good morning" jp="良い目覚め"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg05_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 179"]
+[eval exp="sf.ItRelease = 180"]
+[endif]
+
+*| Good morning
+; *|良い目覚め
+[fbfstoretitle eng="Good morning" jp="良い目覚め"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I woke up at the same time as usual.[lr]
+[else]
+　いつも起きる時間に目が覚めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I would usually wake up at the same time, regardless of my schedule.[lr]
+[else]
+　仕事の日も休日も、意識しなければいつもだいたい同じ時間に起きた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I would not run late for work, but that also meant that even if I stayed late on the weekend, I would still end up waking up early the next day.[lr]
+[else]
+　仕事の日は遅刻しないで済むのだが、翌日が休日だからと言って夜ふかしをしても決まった時間には目が覚めてしまう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This skill earned me a supplementary prize for attendance in high school, but sometimes, it felt more like a curse.[prcm]
+[else]
+　高校の時にとった皆勤賞の副賞であり、呪いのようでもあった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It hadn't been working quite as well lately, probably due to how severely exhausted I was. But this morning, everything suddenly went back to normal, and I was already up and about at 7 AM.[lr]
+[else]
+　最近は疲れのせいでその機能も働いたり働かなかったりだったが、今朝はきっかり七時に目が覚めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had been a while since my last dream, too.[lr]
+[else]
+　夢も見なかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't remember when I went to sleep yesterday, so I decided to read the book I left by the bed to kill some time.[lr]
+[else]
+　昨夜の寝入り時間が思い出せなかったので、ベッド脇に置いてあった本を読んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But I wasn't feeling sleepy, even after thirty minutes of reading.[prcm]
+[else]
+　しかし、三十分たっても眠気は訪れなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I must've slept well last night, so I pulled myself together and got out of bed.[prcm]
+[else]
+　昨夜はよく眠れたのだと判断して、ベッドを出た。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="142.ks" target=*142
+
+

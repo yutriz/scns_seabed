@@ -1,0 +1,826 @@
+*140| Breakfast
+; *140|朝食と好物
+[fbfstoretitle eng="Breakfast" jp="朝食と好物"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[playbgm storage="bgm51"]
+[fbfscale_image storage="bg54" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 176"]
+[eval exp="sf.ItRelease = 177"]
+[endif]
+
+*| Breakfast
+; *|朝食と好物
+[fbfstoretitle eng="Breakfast" jp="朝食と好物"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sweet aroma of coffee filled the cafeteria when I stepped inside. I spotted Nanae sleeping at her seat by the window, with her head resting on the windowsill.[lr]
+[else]
+　コーヒーの香りのするカフェラウンジに入ると、ふたつめの席の奥で[ruby text="なな"]七[ruby text="え"]重が窓に寄りかかって寝ている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a plate with a piece of toast on the table, right next to a half-empty cup of coffee.[lr]
+[else]
+　テーブルには焼いた食パンが乗った皿と、半分くらいになったコーヒーカップが置かれている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I began reaching out toward Nanae's shoulder, but stopped mid-way.[prcm]
+[else]
+　肩に手を伸ばしかけて、やめた。[prcm]
+[endif]
+
+
+
+;///////
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[playse buf = 1 storage=se49.ogg]
+[wait time=2000]
+[backlay]
+[fbfscale_image storage="bg54" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good morning.[」][lr]
+[else]
+　「おはよう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae addressed me while I was stirring the frying pan.[prcm]
+[else]
+　フライパンを返したところで、カウンターの向こうから七重の声がする。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good morning.[l] I'm sorry for using the kitchen without permission.[」][lr]
+[else]
+　「おはよう。[l]御免なさい、厨房借りても大丈夫だったかしら」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h09" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't worry about it.[l] It's my fault, anyway... You should've woken me up.[」][lr]
+[else]
+　「いいわよ。[l]こちらこそ悪いわね、起こしてくれても良かったのに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You looked like you were deep in thought.[」][lr]
+[else]
+　「考え事してるみたいだったから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did I?[」][lr]
+[else]
+　「どんなだったのかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae sounded a laugh.[prcm]
+[else]
+　七重がははは、と笑った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I slid the fried egg over to the plate with the toast while also adding some salad for garnish.[lr]
+[else]
+　フライパンの卵焼きを、サラダを盛り付けた皿に乗せると、先に置いてあったトーストを載せた皿と一緒に持って、カウンターを出た。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se30.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I then left the counter with said plate in hand, and placed it on the table Nanae was sitting at.[prcm]
+[else]
+　七重のいるテーブルに皿を置いて、向かいの席に座る。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, about yesterday...[」][lr]
+[else]
+　「ねえ、昨日は」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What?[」][lr]
+[else]
+　「なあに？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nevermind, it's nothing.[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h07" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]You know, I don't think I've ever had fried eggs with toast before.[」][lr]
+[else]
+　「いえ、何でもないの。[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+ところで、トーストと卵焼きってなかなか斬新な組み合わせね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She considered the contents of my plate.[prcm]
+[else]
+　はた、と盛り付けた皿を眺める。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's just an old habit.[l] My housemate loved fried eggs.[」][lr]
+[else]
+　「いつもの癖ね。[l]同居人が卵焼きを好きだったのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If there wasn't at least one thing she liked on the plate, she wouldn't ever shut up about it.[」][lr]
+[else]
+　「好きなものが[ruby text="ひと"]一[ruby text="しな"]品無いと、うるさかったのよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, can I have a taste?[」][lr]
+[else]
+　「ねえ、少し分けてもらっていい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Go ahead.[」][prcm]
+[else]
+　「どうぞ」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae held up her piece of toast with three fingers and extended it toward me.[lr]
+[else]
+　七重が置いてあったトーストを三本の指の上に置いてこちらに伸ばした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After I placed a slice of fried egg on it, she took a bite.[prcm]
+[else]
+　その上に、卵焼きをひとかけ乗せると、パンと一緒にむしゃり、と平らげた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's both salty and sweet.[l] Pretty good, actually.[」][lr]
+[else]
+　「甘辛いのね。[l]おいしいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][lr]
+[else]
+　「ありがと」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can I have more?[」][lr]
+[else]
+　「もうひとついい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure.[」][lr]
+[else]
+　「いいわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae thanked me and picked up another piece of toast.[lr]
+[else]
+　七重はありがとうと言うと、もう一切れトーストを手に取った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put some fried eggs on it again.[prcm]
+[else]
+　同じように、卵焼きをひとかけ乗せる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh yeah, I heard you took a liking to our library.[l] Auntie said she often sees you there.[」][lr]
+[else]
+　「そういえば、あの図書館のこと気に入ったみたいね。[l]小母さんが図書館でよく見かけるって話していたわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] The silence helps me relax.[」][lr]
+[else]
+　「ええ。[l]静かで落ち着くわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That place is full of ancient books and not much else. I doubt you'd find anything useful.[」][lr]
+[else]
+　「古い本ばかりで、面白いものなんてないでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Perhaps you're right.[」][prcm]
+[else]
+　「そうね」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's a particular shelf behind the stairs I tend to frequent.[l] It has some more modern novels, along with magazines about cooking and fashion.[」][lr]
+[else]
+　「階段裏には私が私用で使ってる棚があるの。[l]料理やファッション系の雑誌とか、あと小説なんか他の棚よりかは割と新しめのものが入ってるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see you like keeping your things organized.[」][lr]
+[else]
+　「整理したのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Depends on the thing.[」][lr]
+[else]
+　「少しね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, do you... not like that library?[」][prcm]
+[else]
+　「もしかして、あの図書館のこと嫌いなの？」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h12" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's not that. The place is a bit too silent for me, though.[l] When I look high up at the ceiling, it makes me feel like I'm a dead fish that sank to the bottom of the sea.[」][lr]
+[else]
+　「嫌いではないわよ。[l]ただ私には少し静かすぎるの。[l]高い天井を見ていると、海の底に沈んだ魚の屍体みたいな気分になるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All it contains is old information and records that are no longer relevant to our age.[l] It reminds me of old stuff like ancient, rusted bicycles and cans that people fish out from the sea.[」][prcm]
+[else]
+　「あそこにあるものって、今ではどうでもいいような古い情報やら記録ばかりなの。[l]
+たまに環境問題のテレビで出てくるような海の底の自転車やら、空き缶やらをイメージしてしまうのよね」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I thought you liked old things.[」][lr]
+[else]
+　「古いものが好きなのだと思っていたわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like old things that still serve a function.[」][lr]
+[else]
+　「古くても使えるものが好きなの、使えるかどうかが大事なの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae suddenly made an awkward smile.[prcm]
+[else]
+　七重がふっ、と笑った。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, I'm sorry about yesterday.[l] I was really drunk.[」][lr]
+[else]
+　「あの、昨日はごめんなさいね。[l]酔って変なこと言ったわよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed the coffee cup on the table. When I looked up, I saw Nanae covering her face with one hand.[prcm]
+[else]
+　コーヒーカップを置いて前を見ると、七重が顔に手をあててこちらを見ていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I started running my mouth like some know-it-all.[l] I'm getting all embarrassed just remembering it.[」][lr]
+[else]
+　「偉そうに色々と言っちゃったわよね。[l]恥ずかしいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's okay. I'm not upset.[」][lr]
+[else]
+　「ううん、気にしてないからいいわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I sometimes forget to think about the consequences of my actions...[」][lr]
+[else]
+　「私ってたまに後先考えないところがあって、悪いのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Everyone does that sometimes.[」][prcm]
+[else]
+　「そういうことは誰にでもあるわ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hahh.[l] This reminds me of the worst essay I wrote in my life, back when I applied to an arts school.[l] I didn't know what to write about, so I began describing what kind of talents I had in minute detail.[l] [backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h05" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt]Normally, you'd write about your motivation and plans for the school year, but...[l] [backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h07" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt]I did so many things that make me want to kill myself in retrospect.[l] [backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h05" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt]I always tell myself not to run my mouth, but it all falls apart the moment I get too excited about something.[」][prcm]
+[else]
+　「はあ。[l]美術系の高校を受験した時の作文も酷くてね。[l]
+どういうこと書けばいいか分かんなかった末に自分は如何に才能があるか、みたいな事を書いたことがあるのよね。[l]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+あそこは普通、やる気とか入った後にやりたいこととかを書けばよかったのに。[l]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+あとに考えてみたら、何言ってんだかって恥ずかしくなっちゃうことがすごくたくさんある。[l]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+だからそうならないように、あんまり自分の考えを自信過剰気味に周りにばら撒かないようにって、いつも反省するんだけどね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, we all fit into this world like puzzle pieces, after all.[」][lr]
+[else]
+　「パズルの遊びの部分が必要なのね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ugh, I don't know if you're trying to help, but I'd appreciate it if you didn't bring that up again.[」][lr]
+[else]
+　「あ、今それ言われるとフォローかどうか分かんないからもう触れないでくれる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] Well, I'll interpret it in a positive way this time.[」][lr]
+[else]
+　「う～ん。[l]一応前向きに捉えては置くけれど」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f03_p02_h17" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae made a faint smile.[lr]
+[else]
+　と言って、七重が少し笑みをこぼす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ended up unable to contain a smile myself. We continued cheerfully chatting for a while.[prcm]
+[else]
+　釣られてこちらからも笑みがこぼれてきて、少しの間笑いながら二人で話をした。[prcm]
+[endif]
+
+
+;＊
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[playse buf = 0 storage=se85.ogg]
+[fbfscale_image storage="bg54" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After we had finished, Nanae picked up our empty plates from the table, walked behind the counter, and began washing them in the sink.[lr]
+[else]
+　十分ほどしてとりとめのない話が終わると、七重は食べ終えた皿を持ってカウンターの裏の流し台へ行き、洗い物を始めた。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She offered me a second cup of coffee, but I refused.[lr]
+[else]
+　七重からコーヒーのおかわりを勧められたが遠慮した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had been feeling sleepy since morning, but I didn't feel like caffeine would help.[lr]
+[else]
+　朝からの眠気をずっと引きずっているが、コーヒーをあと一杯飲んだところでどうにかなるように思えなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With my head still feeling somewhat heavy, I looked around the cafeteria while sipping what remained of my coffee.[prcm]
+[else]
+　少し残ったコーヒーを少しずつ飲みながらどこか重たい頭を回してカフェラウンジを見た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Ever since coming here, I had been the only guest to use this huge room.[lr]
+[else]
+　そこそこの広さの部屋はお客がいないためにここに来てからずっと貸切状態だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I thought about it that way, it all felt really extravagant.[prcm]
+[else]
+　そう思うと少し贅沢をしているような気分になる。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[backlay]
+[fbfscale_image storage="item08" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For a while, I gazed at the lavish stained glass and the decorations on the lamps around it. Eventually, my eyes wandered to the pictures on the wall.[lr]
+[else]
+　お洒落な梁のステンドやランプの装飾を眺め終わると、以前見ていた写真に目が移る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The first one I looked at was the group picture with Nanae, her mother, and Lily.[prcm]
+[else]
+　はじめに目につくのは七重と七重の母と小母さんが一緒に写っている集合写真だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My gaze traveled further, passing by pictures of Nanae when she was little, then a well by the mansion that was no longer here.[lr]
+[else]
+　それから、小さい頃の七重の写真と井戸の写真を順番に見ていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I gazed at Nanae's childhood pictures, I suddenly felt like something was off.[lr]
+[else]
+　何枚目かの幼い七重の写真を見ているときに、何かが頭に引っかかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped on one particular picture and gave it a closer look.[prcm]
+[else]
+　その写真に目を留めて、じっくり観察してみる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae and some other child were playing in the plastic pool.[lr]
+[else]
+　七重と知らない子供がビニールプールで遊んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The inner yard of the mansion was visible in the background.[lr]
+[else]
+　背景はこの屋敷の中庭だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I frowned, trying to figure out what was bothering me, I suddenly saw something in the corner of my eye.[lr]
+[else]
+　じっと目を凝らして違和感を探していると、目の端に動くものが見えてそちらを見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the window and saw Narasaki walking through the inner yard.[prcm]
+[else]
+　窓を見ると、楢崎が中庭の向こう側を歩いて行くのが見えた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="141.ks" target=*141
+
+

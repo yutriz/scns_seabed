@@ -1,0 +1,718 @@
+*125| Electrician
+; *125|電気屋
+[fbfstoretitle eng="Electrician" jp="電気屋"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[playbgm storage="bgm22"]
+[backlay]
+[fbfscale_image storage="bg50_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h01" visible=true left=-70 top=0 opacity=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=1000 path="(105,0,255)" layer=0]
+[wm]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 156"]
+[eval exp="sf.ItRelease = 157"]
+[endif]
+
+
+*| Electrician
+; *|電気屋
+[fbfstoretitle eng="Electrician" jp="電気屋"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I met Kozue's eyes as I was about to pick up the stool in the lobby.[prcm]
+[else]
+　ロビーに置いてあるスツールを持って行こうとしていたところで、廊下から出てきた[ruby text="こずえ"]梢と目が合う。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you doing?[」] she asked.[prcm]
+[else]
+　「何をしているの？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、梢が言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nothing.[l] What about you?[」][lr]
+[else]
+　「ちょっとね。[l]そっちは何をしているの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Same here.[」][lr]
+[else]
+　「ちょっとよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue had my hairpin in her hair.[prcm]
+[else]
+　梢の前髪にはプレゼントしたヘアピンが付いていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah.[l] Did you come to show off that hairpin?[」][lr]
+[else]
+　「あ。[l]もしかして、そのヘアピン付けているところを見せに来てくれたの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p02_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue raised her eyebrows in surprise.[prcm]
+[else]
+　ククッ、とクイズ番組の滑り台のように梢の眉尻が上がった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why would you even think that?[」][lr]
+[else]
+　「そんなわけないじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[l] Anyway, you came at the perfect time. If you're not too busy, can you help me out a little?[」][lr]
+[else]
+　「そうなんだ。[l]でも丁度いいわ、用事がないなら少し手伝ってくれない？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h17" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue's gaze travelled to the grandfather clock.[lr]
+[else]
+　梢の視線が柱時計の当たりを泳いでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heaved the stool on my shoulder and gestured for her to come closer.[prcm]
+[else]
+　スツールを肩にかけるようにして持つと、梢に手招きをする。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It won't take long.[」][lr]
+[else]
+　「すぐそこだから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ascended the spiral staircase.[lr]
+[else]
+　そのまま螺旋階段をあがる。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h16" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=800]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=800]
+[backlay]
+[fbfscale_image storage="bg103_3" page=back layer=base]
+[trans method=universal rule="rule15" vague=300 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue followed me in silence.[lr]
+[else]
+　梢は黙って後からついてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stopped in the middle of the stairs, placed the stool below one of the lights, kicked off my slippers, and climbed on it.[prcm]
+[else]
+　階段の中程で止まると、フィラメントの切れた電灯の前にスツールを置き、スリッパを脱いでその上に乗った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Could you hold it for me?[」][lr]
+[else]
+　「椅子押さえていて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue placed her hands on the stool to steady it.[lr]
+[else]
+　梢が椅子を揺れないように押さえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached out to the lamp and seized its light bulb.[lr]
+[else]
+　手を伸ばしてシェードの中の電球を掴む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I screwed it out of the socket and put it into my pocket, then moved the other light bulb from my mouth to my hand, and screwed that into the socket instead.[prcm]
+[else]
+　取り外した電球を後ろポケットに入れると、口に銜えていた新しい電球を取って、シェードの中のソケットに挿入する。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're like an electrician.[」][lr]
+[else]
+　「電気屋みたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Actually, I got the qualification for this kind of work back in school. I'm the real deal.[」][lr]
+[else]
+　「実は学生の時に、電気工事士の資格を取ってるの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can fix most anything when it comes to home electrical systems.[」][lr]
+[else]
+　「住宅くらいの電圧の電気工事は出来るんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My light keeps randomly turning off.[」][lr]
+[else]
+　「部屋の電気がよく途切れるの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You mean, the light in your room?[」][lr]
+[else]
+　「梢の部屋？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll give it a look once I'm finished with this one.[」][lr]
+[else]
+　「ここの取替が終わったら、見てあげるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you.[」][lr]
+[else]
+　「そうして頂戴」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped down from the stool and carried it to the next light.[lr]
+[else]
+　降りたあとのスツールを抱えて次の電灯の前まで行くと、そこにスツールを置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once again, Kozue helped steady it for me.[lr]
+[else]
+　置いたスツールを梢が支える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I climbed back onto my stool and reached under the lamp shade.[prcm]
+[else]
+　スツールの上に乗って、シェードの中に手を入れた。[prcm]
+[endif]
+
+
+
+;/////
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg47_6" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sitting on the tripod, I unscrewed the seal on the ceiling.[lr]
+[else]
+　三脚の上に座って天井のシリングを外す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled back a bunch of wires and found one with damaged insulation.[lr]
+[else]
+　天井裏の配線を少しだけ引くと、被服のはげた部分が現れた。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se54.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The door opened as Kozue returned with Mayuko.[prcm]
+[else]
+　ガチャリ、と扉が開くと、梢が[ruby text="まゆ"]繭[ruby text="こ"]子を連れて戻ってきた。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg43_5" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h08" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f05_p01_h09" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How's it going?[」] Mayuko asked, looking up at me from below.[prcm]
+[else]
+　「どうですか？」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、こちらを見上げて繭子が聞いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Those wires don't seem to be in a very good condition.[l] Rats might've gotten to them, or maybe they just deteriorated due to the salt in the air, but it'd probably be a good idea to call in a professional.[」][lr]
+[else]
+　「配線が痛んでる。[l]鼠か、単に潮風で腐食したのかもしれないけど、業者さんに見てもらうのが良いみたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I returned the wires to their place and screwed the seal back on.[lr]
+[else]
+　配線を下の位置に戻して、シリングを取り付け直した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko turned to Kozue.[prcm]
+[else]
+　三脚を降りてくるのを見守っていた繭子が、梢の方に振り向いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h22" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How long has it been since you moved into this room, again?[」][lr]
+[else]
+　「梢ちゃん、この部屋に来てどれくらいでしたか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]About half a year or so.[」][lr]
+[else]
+　「そろそろ半年よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose it's the perfect time to change rooms, then.[」][lr]
+[else]
+　「部屋替えの時期ですね。[l]少し早いですけど、先に移動しましょうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue nodded.[prcm]
+[else]
+　コクリ、と梢が頷いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/m_img/f01_p01_h07" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako, I'll prepare a new room for Kozue, so in the meantime, could you help her pack?[」][lr]
+[else]
+　「[ruby text="たか"]貴[ruby text="こ"]呼さん。[l]梢ちゃんの移動先の部屋を用意してくるので、こちらで荷物の整理をお手伝いして貰って良いですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure thing.[」][lr]
+[else]
+　「それは構わないけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you very much.[l] Anyway, just give me a few hours.[」][lr]
+[else]
+　「有難うございます。[l]それでは、少しの間だけ待っていてくださいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko left the room.[prcm]
+[else]
+　そう言い残して、繭子が部屋を出ていった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, then.[」][lr]
+[else]
+　「さてと」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg47_6" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked around the room with only a single bed and a lone shelf inside.[lr]
+[else]
+　首をめぐらせて、家具は備え付けの棚とベッドくらいしかない部屋を見回した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A tripod stood in the middle, a few crumbles of plaster from the ceiling lying beside it.[lr]
+[else]
+　真ん中に三脚があり、辺りに少し天井のチリが落ちている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue slid the glass partition on the shelf open and began taking out the books.[lr]
+[else]
+　梢は棚のガラス戸を空けて、並んでいる本を取り出していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I folded up the tripod.[prcm]
+[else]
+　こちらは三脚を畳む。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll bring the cleaning tools, so collect your stuff in one place for now.[」][prcm]
+[else]
+　「掃除用具を持ってくるから、運ぶ荷物はどこかにまとめておいて」[prcm]
+[endif]
+
+
+
+;/////
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg47_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue had very few things — only a handful of books and some clothes.[lr]
+[else]
+　梢の私物は少なかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She put everything into the small cardboard box Mayuko brought over, and carried it to the other room with her.[prcm]
+[else]
+　主なものは数冊の本と数着の着替え程度しかなく、梢はそれらを棚と引き出しから出し終えると、繭子が持ってきた小さなダンボールに入れて新しい部屋へと移動した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Meanwhile, I cleaned the empty room and decided to move back to the night duty room after finishing.[lr]
+[else]
+　こちらは、何もなくなった部屋の掃除を済ませてから、宿直室へと向かう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before closing the door, I turned around once and gave the empty room a quick look.[lr]
+[else]
+　部屋を出る際、扉を閉じる前に振り返って部屋の中を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A space that had been Kozue's just moments before now had no trace of her left.[prcm]
+[else]
+　ほんの数時間前まで梢が占領していたその部屋には、梢がいた痕跡は何一つ残っていなかった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle4]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="126.ks" target=*126
+

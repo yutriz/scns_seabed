@@ -1,0 +1,1517 @@
+*044| Tea with Mayuko in the night duty room
+; *044|繭子と宿直室でお茶会
+[fbfstoretitle eng="Tea with Mayuko in the night duty room" jp="繭子と宿直室でお茶会"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[playbgm storage="bgm20"]
+[wait time=3000]
+[msgon_b]
+[clickskip enabled = true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 55"]
+[eval exp="sf.ItRelease = 56"]
+[endif]
+
+*| Tea with Mayuko in the night duty room
+; *|繭子と宿直室でお茶会
+[fbfstoretitle eng="Tea with Mayuko in the night duty room" jp="繭子と宿直室でお茶会"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see light seeping out through the window pane of the white, wooden door.[lr]
+[else]
+　白い木の扉についた波硝子にぼんやり灯りが映っている。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[playse buf = 0 storage=se54.ogg]
+[backlay]
+[fbfscale_image storage="bg44_4" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned the silver handle on the door, and it opened with no resistance.[lr]
+[else]
+　銀のドアノブをまわすと、扉は何の抵抗も無く開いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I removed my slippers and stepped on the tatami mat of the small living room, I heard a sound coming from the kitchen.[prcm]
+[else]
+　スリッパを脱いで、畳の居間にあがると台所からガタ、と物音がする。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p02_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako?[」] Mayuko's voice reached me from the same place I'd heard the sound.[lr]
+[else]
+　「[ruby text="たか"]貴[ruby text="こ"]呼さん？」と台所から[ruby text="まゆ"]繭[ruby text="こ"]子の声がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good evening.[」][lr]
+[else]
+　「こんばんは」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good evening.[l] Um, you shouldn't barge into people's rooms without knocking.[」][lr]
+[else]
+　「こんばんは。[l]駄目ですよ、勝手に入っては」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, I'm sorry.[l] The door was unlocked, so I thought you were expecting me.[」][lr]
+[else]
+　「ああ、ごめん。[l]鍵空いてたから、入っていいものかと勘違いしちゃった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I try not to lock those in case of unexpected emergencies.[」][lr]
+[else]
+　「何かあった時のために、ここは出来るだけ開けているんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down in front of the table as Mayuko appeared from the kitchen and placed a cup of steaming hot tea in front of me.[prcm]
+[else]
+　卓袱台に座ると、繭子が台所から出てきて私の前に湯飲みを置いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][lr]
+[else]
+　「ありがとう」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You are welcome.[」][lr]
+[else]
+　「どういたしまして」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko straightened her back and gave me a faint smile.[prcm]
+[else]
+　繭子はゆっくり姿勢を戻しながら、ほわりとした顔で笑う。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h29" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[wait time=800]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, that's right.[」][lr]
+[else]
+　「ああ、そうだ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She trotted back to the kitchen and returned with a red can.[lr]
+[else]
+　トテトテ、と台所に戻って行った繭子は赤くて平丸の缶を両手で持ってきた。[lr]
+[endif]
+
+[r]
+[playse buf =0  storage=se110.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It made a popping sound as she opened it up.[lr]
+[else]
+　その間の丸い蓋を開けるとガワン、と音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Using the lid as a coaster, she placed the can on the table.[lr]
+[else]
+　繭子は開けた蓋を下敷きにして、缶を卓袱台の真ん中に置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was filled with cookies shaped like tubes, ribbons, and hearts.[lr]
+[else]
+　厚紙の敷居で区切られた平丸の缶の中には、葉巻やリボンや星の形をしたクッキーが並んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Their colors made me assume they were coffee- and cocoa-flavored, though some also seemed to contain chocolate and sugar. In any case, they were a sight for sore eyes.[lr]
+[else]
+　コーヒーかココアっぽい色のもの、粗目砂糖をまぶしてあるもの、チョコを挟んだものなどがあり、彩りも綺麗だった。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They look delicious.[」][lr]
+[else]
+　「おいしそう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm truly grateful for your help with the lights today.[l] Please have some.[」][lr]
+[else]
+　「今日は灯りの付け替えご苦労様でした。[l]どうぞ、召し上がってください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't mind if I do.[」][prcm]
+[else]
+　「それじゃあ遠慮なく」[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up a tube-shaped cookie and put it into my mouth.[lr]
+[else]
+　葉巻型のクッキーを摘んでさくさくと齧った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was something buttery and sweet inside it.[lr]
+[else]
+　空洞からバターの風味が抜けてきて、香ばしい味がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The taste made me involuntarily smile.[prcm]
+[else]
+　口の中の甘みについ顔が緩んだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If this is the kinda stuff I get, I'll happily change those lights for you every day.[」][lr]
+[else]
+　「こういうことなら、何度でも灯りを取り替えるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a gulp of tea.[prcm]
+[else]
+　ゴクゴク、とお茶を飲んだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be sure to ask you again when help is needed.[」][lr]
+[else]
+　「はい。[l]また、お願いしますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After I gulped down another star-shaped cookie with some tea and heaved a relaxed sigh, I suddenly recalled my initial goal in coming here.[lr]
+[else]
+　小さな星型のチョコクッキーをパクリと食べてお茶を飲み一服すると本来の目的を思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's right.[l] Is there anything I have to do tomorrow?[」][prcm]
+[else]
+　「そうそう。[l]私の明日の予定はあるの？」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h24" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] I would like to ask you to do some cleaning.[」][lr]
+[else]
+　「そうですね。[l]明日は掃除をお願いします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Again?[」][lr]
+[else]
+　「また掃除するの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is an awfully large building for so few people, so we need to clean it periodically, lest we find ourselves overwhelmed.[」][lr]
+[else]
+　「住んでいる人数の割に、ここは広いですからね。[l]少しずつ片付けていかないと駄目なのですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I call that a pain in the neck.[」][lr]
+[else]
+　「なんと面倒な」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Please don't say that.[」][prcm]
+[else]
+　「そんなこと言わないで下さいね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What will you do?[」][lr]
+[else]
+　「繭子はどうするの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be visiting the town.[」][lr]
+[else]
+　「明日は街に行きます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I almost jumped up.[prcm]
+[else]
+　ピクリと反応して、すぐに抗議する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be stuck here cleaning everyone's mess while you're out and about in the town?[l] How is that fair?[」][lr]
+[else]
+　「私は掃除で、繭子だけで街へ行くの？[l] それはずるじゃない？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p02_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not going there to have fun.[l] Yesterday, we harvested more vegetables than expected, so I'm visiting the town to try and barter for something more easily preservable.[l] I'll help out with the cleaning if I make it back in time.[」][lr]
+[else]
+　「遊びに行くんじゃないですよ。[l]昨日取れた野菜が多いので、街で保存の効くものと交換してくるんです。[l]早く戻ったら、掃除も手伝いますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko showed me her palm in a soothing gesture.[prcm]
+[else]
+　繭子は宥めるように手の平を見せる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can't I go barter with them instead?[l] I haven't driven a car in ages.[」][lr]
+[else]
+　「はあ、だったら私が交換に行きたいよ。[l]車だってもうずっと運転してないんだから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I made a pretend gesture, acting like I was turning an invisible wheel.[prcm]
+[else]
+　と、ハンドルを持つふりをする。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I cannot allow a patient outside without supervision, but if we go together, there will be no one to handle the cleaning.[」][lr]
+[else]
+　「さすがに療養中のものをひとりで外に出すわけにはいかないですからね。[l]かと言ってふたりでいけば、掃除もできませんし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you guys short on funding or something?[」][lr]
+[else]
+　「ここって、人手が足りてないんじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised both my hands, trying to emphasize the importance of hiring a new cleaning lady.[prcm]
+[else]
+　人員増加を要求する。と、諸手を上げる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is a sanatorium.[l] We try to keep our staff to a minimum.[」][lr]
+[else]
+　「ここは療養所ですよ。[l]さすがに募集してくるわけには行きませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've heard they had more people in the northern ward where they bred all those cows and chickens.[」][lr]
+[else]
+　「確か、北側の施設には人が多いんじゃなかったっけ、ほら牛とか鶏を飼ってるところ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, I don't believe they're all that different from us.[」][lr]
+[else]
+　「隣山のですか？[l] あちらもこっちと似たりよったりだと聞きますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko's cool demeanor proved her to be impenetrable to my suggestions.[prcm]
+[else]
+　繭子の様子は始終落ち着いており、決定事項への意見については考慮されそうになかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Geez, whatever.[l] In that case, I'm gonna ask for -that-. It's been a while, anyway.[」][lr]
+[else]
+　「ああもう、わかった。[l]それなら、久しぶりにあれしてよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f03_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「].[wait time=500].[wait time=500].[wait time=500]That?[」][lr]
+[else]
+　「・[wait time=500]・[wait time=500]・[wait time=500]あれ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After trying one of each type of cookie, I picked up an extra large one with beads of sugar on top.[lr]
+[else]
+　すべての種類のクッキーを一通り食べてしまうと、粗目砂糖のまぶした大きめのクッキーを一つ取った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put it in my mouth, closed the lid of the can, then moved it to the side of the table.[prcm]
+[else]
+　それを口に加えると、そのままクッキーの缶に蓋をして卓袱台の脇の方に移動させた。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[msgon_b]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anh.[l] Yes, that feels good![」][lr]
+[else]
+　「あっん。[l]いい、そこ気持ちいい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here?[」][lr]
+[else]
+　「ここですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can do it harder... nmmh.[」][lr]
+[else]
+　「もっと押し込んで、もっと強く、んんっ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Like this?[」][lr]
+[else]
+　「こうですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nmhhh... aggghyah![」][lr]
+[else]
+　「んぅうう、ぁああいたたたっ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I collapsed my upper half on the table as Mayuko let go of my shoulders.[prcm]
+[else]
+　繭子がこちらの肩から手を離すと、パタリと、卓袱台に突っ伏してしまう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your shoulders weren't stiff at all, Takako.[」][lr]
+[else]
+　「全然凝ってないですよ、貴呼さん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's only normal to get a massage after some strenuous physical labor.[」][lr]
+[else]
+　「労働を労うといったら、肩揉みでしょう」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se112.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up and pulled out the futon from the closet.[lr]
+[else]
+　よいしょ、と立ち上がり押し入れを開けて布団を取り出す。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se75.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I moved the table aside, placed the futon on the floor, and lay down on it.[prcm]
+[else]
+　卓袱台を横にどけると、そこに布団を敷いてうつ伏せになる。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg42_1=1"]
+[fbfscale_image storage="ev42_1" page=back layer=base]
+[trans method=universal rule="rule13" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, try to do it a bit more gently this time around.[」][lr]
+[else]
+　「はい、次はもっと優しくして」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, I'm not sure if I can keep up with you for much longer.[」][lr]
+[else]
+　「そんな当たり前みたいに言われても」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Letting out a sigh, Mayuko sat down on my back.[prcm]
+[else]
+　仕方ないですねぇ、と繭子は腰を上げてドスン、と腰の上に乗った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ghueh.[」][lr]
+[else]
+　「ぐえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How rude.[」][lr]
+[else]
+　「失礼ですね」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg42_7=1"]
+[fbfscale_image storage="ev42_7" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, can you press here and here?[」][lr]
+[else]
+　「えっとねえ、この辺とこの辺」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pointed out the rough location of the spots I wanted her to rub.[prcm]
+[else]
+　グルリ、と腕を回して揉んで欲しいところの大体の位置を指差した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Uh... I didn't get that at all.[」][lr]
+[else]
+　「はあ、全然分かりませんが」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="ev42_1" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll let you know if you start massaging a wrong spot.[」][lr]
+[else]
+　「違ったらあとで言うから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko exhaled yet another sigh and pressed the area between my shoulder bones.[prcm]
+[else]
+　繭子はため息をつきながらグイグイ、と肩甲骨の境目をおした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A little bit lower.[」][prcm]
+[else]
+　「もちょっと、下」[prcm]
+[endif]
+
+
+
+[playse buf = 0 storage=se104.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A gust of wind rattled against the window.[lr]
+[else]
+　バタバタ、と窓が風に叩かれる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear it whistle through the cracks.[lr]
+[else]
+　どこからかヒュウヒュウ、と隙間風の音がしている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The shadows began to lightly twist and sway in the corner of the room I'd been staring at.[lr]
+[else]
+　部屋の隅をじっと見ていると陰がブレて見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up to see that the light above was swinging on its cord.[prcm]
+[else]
+　上を見ると電球の紐がふらふらと揺れていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's some pretty strong wind.[」][lr]
+[else]
+　「風が強いね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's probably some leftover sea breeze.[l] We get strong winds near the end of autumn.[l] After a while, it calms down a bit, and we end up with weaker, but ultimately colder gusts.[」][lr]
+[else]
+　「きっと最後の海風ですね。[l]ここでは毎年、秋の終わりに強い風が吹くんです。[l]ひとしきり吹き終えると、今度は山から冷たい風が吹くようになるんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sanae told me the same thing earlier today.[」][lr]
+[else]
+　「そういえば、[ruby text="さ"]早[ruby text="なえ"]苗も同じようなこと言ってたな」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se104.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The window frame rumbled again.[prcm]
+[else]
+　ガタガタ、と再び窓枠がゆれる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You talked to Sanae?[」][lr]
+[else]
+　「今日は早苗さんとどんな話をされたのですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, we discussed the book she lent me, then I told her about one of my trips.[」][lr]
+[else]
+　「この間貸してもらった本の話と、あと旅行の話とかかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]One of your trips?[l] I'd love to hear about that myself.[」][lr]
+[else]
+　「旅行の話ですか。[l]それは私も興味がありますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't feel like telling the whole thing all over again on the same day. Maybe some other time.[」][lr]
+[else]
+　「今日はもう話し終わったから。また、そのうちね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko gave my shoulders a light yet reassuring knock of the fist.[prcm]
+[else]
+　繭子は握った拳でトントン、と軽く肩を叩いた。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg42_2=1"]
+[fbfscale_image storage="ev42_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, that's good.[」][lr]
+[else]
+　「あ、それいい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see you've grown quite close to Sanae.[」][lr]
+[else]
+　「早苗さんはと随分仲良くなったんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There are so few people here, and it's always better to have more friends, no?[」][lr]
+[else]
+　「ここって人少ないし、仲が悪いよりは良い方がいいんじゃない？」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg42_3=1"]
+[fbfscale_image storage="ev42_3" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] Thanks to that, Sanae seems a lot more cheerful lately. Even her condition has improved.[」][lr]
+[else]
+　「そうですね。[l]そのおかげで早苗さん、このところなんだか少し明るくなって体調も良くなってるみたいです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][prcm]
+[else]
+　「そう？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, we found her in the library, didn't we?[l] She used to never voluntarily leave her room, regardless of the weather.[l] And her facial expressions have grown richer.[l] I'm pretty sure it's your influence.[」][lr]
+[else]
+　「今日は受付の仕事も無いのに図書館に居ましたよね。[l]以前は天気がいいからって、部屋から出るようなこともなかったんですよ。[l]
+それに表情も増えたというか。[l]やっぱり貴呼さんがお話をしてくれるからでしょうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, if you keep talking to people, you eventually end up taking on their facial expressions, too, I guess.[」][lr]
+[else]
+　「そりゃあ、誰かと話をすれば、自然に表情は増えるだろうさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that so?[」][prcm]
+[else]
+　「そういうものでしょうか？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I mean, talking means conveying one's feelings, right?[l] And to do that, gestures and expressions are sometimes even more important than the words themselves.[l] Like, you know, body language and all that jazz.[」][lr]
+[else]
+　「話をすることは、気持ちを伝えようとすることだから。[l]自分の気持ちを伝えようとしたら、言葉だけじゃなくて、身振り手振りや表情があった方がいいからさ。[l]ボディーランゲージだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[l] I suppose that makes sense.[」][lr]
+[else]
+　「ふうん。[l]そういうものなんですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The wind seemed to have calmed down, making the room feel as though it was floating in a calm sea.[prcm]
+[else]
+　いつの間にか、風が凪いで部屋に深い海のような静けさが戻っていた。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg42_6=1"]
+[fbfscale_image storage="ev42_6" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]By the way, did you know that the whites of human eyes serve to make eye contact easier?[l] Maybe you've noticed that very few animals actually have them.[l] In the animal kingdom, where survival of the fittest is the law of the land, having one's actions read from their appearance would be fatal.[」][lr]
+[else]
+　「そういえば、人に白目があるのも、目線でコンタクト取り易くするためなんだってさ。[l]
+ほかの動物にはあまり白目ってないでしょう？[l] 
+自然のとって食べたり食べられたりする環境の生き物は、目線の先を見られると次の行動を読まれてしまうから、そういうふうになってるんだって」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="ev42_7" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[l] Meanwhile, all people need is a single look to convey their thoughts.[l] If that continues to evolve, I wonder if words and facial expressions will become outdated as well.[」][lr]
+[else]
+「ふうん。[l]人は逆に、目配せだけで思いを伝えることもありますね。[l]
+そのままもっと進化して、いつか思う事が全部伝わるようになったら、言葉も表情もいらなくなるのでしょうか？」[lr]
+[endif]
+
+[r]
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If that happened, things that convey emotion — like books, music, and pictures — might vanish alongside them.[l] Sounds like an awfully dull world, if you ask me.[」][prcm]
+[else]
+「そうしたら、感動を伝えるための本も音楽も絵画もなくなるかも知れない。[l]それはあまり面白くないかもしれない」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]On the other hand, though, by understanding each other perfectly, we might be able to eliminate suffering.[l] Religion and war might cease to exist.[」][lr]
+[else]
+　「でも、分かり合えないことの不幸は無くなるかも知れませんね。[l]宗教とか戦争も無くなるかもしれません」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You could be right, but without books, Sanae would be out of a job.[」][lr]
+[else]
+　「そうかも知れないけど、本がなくなったら早苗の仕事がなくなるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that would certainly be unfortunate.[」][lr]
+[else]
+　「それは大変ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko seemed to have fallen deep in thought.[prcm]
+[else]
+　フムフム、と唸る繭子。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="ev42_3" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, your hands stopped moving.[l] I want more massaging! More, I say![」][lr]
+[else]
+　「手が止まってるよ～。[l]もっと揉んで揉んで～」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko gave me a patronizing okay as I decided to express my dissatisfaction in a childish manner.[lr]
+[else]
+　ジタバタと甘えた声で言うと、繭子が「はいはい」と返事をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After enjoying the touch of her hands for a while, I suddenly thought of something.[prcm]
+[else]
+　しばらく繭子の柔らかい手でするマッサージを受けていると、ふと思いついたことを聞く。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg42_8=1"]
+[fbfscale_image storage="ev42_8" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um...[」][lr]
+[else]
+　「ねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is it?[」][lr]
+[else]
+　「なんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is about what we discussed earlier, but doesn't Sanae communicate with anyone else?[」][lr]
+[else]
+　「少し話を戻すけど、早苗って他に誰かと話をしてたりしないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[l] Well, for starters, there aren't many people for her to talk to.[l] In the past, we had a bit more patients, but most of them left us right before your admission.[」][prcm]
+[else]
+　「そうですね。[l]そもそも話をする相手がいませんからね。[l]
+以前は、ここにもまだ人がいたんですけれど。[l]貴呼さんが来る以前に、殆どの方がここを離れられましたね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうなんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There were multiple reasons why one would leave a sanatorium.[lr]
+[else]
+　人が療養所を離れるには、色々な理由がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Some of them might not have been exactly cheerful.[prcm]
+[else]
+　それは、気持ちのいい理由ばかりではないだろう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But then I don't really know everything about Sanae, either.[l] I started working here after she was already a patient.[」][lr]
+[else]
+　「でも、実のところ早苗さんのことについては、そんなになんでも知っているわけじゃないんです。[l]私がここに来たのは、早苗さんよりあとの話なので」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] I'm not that different from you on that front.[l] Well, if there's a difference, it's that I have access to the medical records.[」][lr]
+[else]
+　「はい。[l]貴呼さんとあまり変わりませんよ。[l]まあ、一応カルテには目を通して、一通りのことは理解していますけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「へえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As Mayuko began to focus more on the conversation, her hands stopped.[prcm]
+[else]
+　繭子はしばしば、喋ってる間に手が止まった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How bad is Sanae's amnesia, anyway?[」][lr]
+[else]
+　「早苗の記憶喪失はどれくらい進んでいるの？」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg42_9=1"]
+[fbfscale_image storage="ev42_9" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I doubt I'm allowed to discuss that without explicit permission from the person concerned.[l] You shouldn't ask things like that so lightly.[」][lr]
+[else]
+　「そういうことは、言いたくない人もいるし。[l]あまり軽々しく聞かないほうがいいと思います」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko suddenly added more strength into her grip and squeezed my shoulder.[prcm]
+[else]
+　「よ」と力を込めて言うとグイ、と肩を持つ繭子の指に力が入る。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[eval exp="sf.cg42_10=1"]
+[fbfscale_image storage="ev42_10" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Aghyah! I thought I may be of some help if I knew more.[l] I mean, I'm sure you're familiar with those groups where people share their problems with each other and that makes them feel better and stuff.[」][lr]
+[else]
+　「イタタタ、いや聞いておいたほうが手助けできるかと思ってのことだって。[l]
+ほらよくあるじゃない。[l]悩みを持つ人たちが集まって、お互いの悩みを打ち明け合う会みたいなの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not saying it's bad to share that information, just that if you want to know about it, you should probably ask her directly.[l] You can do that, can't you, Takako?[」][lr]
+[else]
+　「そういうのもあるにはありますが、それなら本人に聞いてみればいいじゃないですか。[l]貴呼さんは、本人に聞けるんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're getting along pretty well right now, so I probably won't.[」][lr]
+[else]
+　「今、上手くやってるし。[l]聞かないと思う」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="ev42_8" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]In that case, I don't see the problem.[」][lr]
+[else]
+　「なら、それでいいじゃないですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][prcm]
+[else]
+　「ううん」[prcm]
+[endif]
+
+
+;＊
+[playse buf = 1 storage=se24_10.ogg loop=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the sound of a swinging pendulum clock from somewhere.[prcm]
+[else]
+　ボォォンボォォン、とどこからか振り子時計の音が聞こえる。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="ev42_10" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Speaking of which, have you already written your diary entry for today, Takako?[」][lr]
+[else]
+　「そういえば貴呼さん、日記はもう書きました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd completely forgotten all about it until she brought it up.[lr]
+[else]
+　繭子に言われるまで日記のことを忘れていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[」][prcm]
+[else]
+　「ううん」と曖昧なうめき声で誤魔化してみた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's one of your duties as a patient.[」][lr]
+[else]
+　「ちゃんと書かないと駄目ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I feel like I could totally start writing if I got rid of this stiffness in my waist.[」][lr]
+[else]
+　「腰もしてくれたら書ける気がする」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I kicked the futon with my feet a few times, making Mayuko exhale another sigh.[prcm]
+[else]
+　足で布団をパタパタ、と軽くたたくと上からため息が聞こえた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My fingers are starting to hurt.[」][lr]
+[else]
+　「もう指が痛いんですけれど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just a bit more.[」][lr]
+[else]
+　「もう少しだけ」[lr]
+[endif]
+
+[r]
+[clickskip enabled = false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="ev42_3" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just a bit, then.[」][lr]
+[else]
+　「あと少しだけですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko shifted her position closer to my waist.[prcm]
+[else]
+　そう言うと繭子は腰を浮かせて少し下に移動した。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=1 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=1 volume=100]
+[jingle4]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="044_2.ks" target=*044_2
+
+

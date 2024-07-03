@@ -1,0 +1,39 @@
+; about.ks
+
+[title name="About Seabed"]
+
+; 右クリック、クリックスキップを禁止
+
+[rclick enabled=false]
+
+[clickskip enabled=false]
+
+; 幅320×高さ200ピクセル背景画像を読み込み、表示
+
+[image storage="about.jpg" layer=base page=fore]
+
+; メッセージレイヤの属性を設定（透明）
+
+[position left=0 top=0 width=320 height=200 color=0x000000 opacity=0 marginl=0 margint=0 marginr=0 marginb=0]
+
+; スタイルとフォントを設定
+
+[style align=center]
+
+[font face="ＭＳ ゴシック" size=10 color=0xFFFFFF shadow=false]
+
+; ダイアログ下側中央に［閉じる］リンクを作成
+
+[nowait]
+
+[locate y=170]
+
+[link target=*close_dialog]［Close］[endlink]
+
+[s]
+
+; ［閉じる］が押されたらダイアログを閉じる
+
+*close_dialog
+
+[close]

@@ -1,0 +1,851 @@
+*156_6| A quiet sight
+; *156_6|静かな眺め
+[fbfstoretitle eng="A quiet sight" jp="静かな眺め"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm44"]
+
+;章題表示
+[msgoff]
+[wait time=3000]
+[backlay]
+[fbfunlockachievement number="9"]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence9_1" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence9_1_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=500]
+[wt]
+[wait time=1000]
+[backlay]
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image storage="sequence9_2" page=back layer=base]
+[else]
+	[fbfscale_image storage="sequence9_2_JP" page=back layer=base]
+[endif]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+
+[backlay]
+[eval exp="sf.cg34_3=1"]
+[fbfscale_image storage="ev34_3" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=2000]
+[backlay]
+[eval exp="sf.cg34_1=1"]
+[fbfscale_image storage="ev34_1" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[backlay]
+[eval exp="sf.cg34_2=1"]
+[fbfscale_image storage="ev34_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=3000]
+
+
+
+
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=3000]
+[msgon_b]
+[clickskip enabled=true]
+
+;章選択フラグ
+[if exp="sf.CpRelease <= 9"]
+[eval exp="sf.CpRelease = 10"]
+[endif]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 205"]
+[eval exp="sf.ItRelease = 206"]
+[endif]
+
+*| A quiet sight
+; *|静かな眺め
+[fbfstoretitle eng="A quiet sight" jp="静かな眺め"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good morning, Sachi.[」][lr]
+[else]
+　「おはよう、サチ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I heard Takako's voice.[prcm]
+[else]
+　と、[ruby text="たか"]貴[ruby text="こ"]呼の声が聞こえたような気がした。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg05_1" page=back layer=base]
+[trans method=universal rule="rule2" vague=50 time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my eyes to see an elaborately designed ceiling.[lr]
+[else]
+　目を開けるとベッドの天蓋にある複雑な模様が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat up and fixed the shoulder strap of my nightgown.[lr]
+[else]
+　体を起こし、よれた肩紐を直した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sight of the Victorian sofa and the fancy chest of drawers with a plant on top had grown familiar to me before I knew it.[lr]
+[else]
+　視界にあるビクトリアンソファや、チェスト、観葉植物にはいつの間にか違和感がなくなっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt similar to how I did when I stayed at my grandparent's place for extended amounts of time.[lr]
+[else]
+　小さい頃、お盆の日に長く祖父の家に泊まっていたときのように、他所にいる緊張感が薄れてきていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled the feather-filled sheet closer to myself and inhaled a deep breath. The scent made me think of home.[prcm]
+[else]
+　羽毛の掛け布団を引き寄せて匂いを嗅ぐと、自宅の匂いがしたような気がした。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg05_6" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae left for her meeting right after breakfast.[lr]
+[else]
+　食堂で[ruby text="なな"]七[ruby text="え"]重と朝食を済ませると、七重はそのまま寄り合いに出かけてしまった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I myself returned to my room to get ready for hiking.[prcm]
+[else]
+　こちらも七重を見送ったあとで、自室に戻りハイキングの支度をした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae had already prepared some sandwiches for me to eat on the road, so there was little else I had to do besides getting changed.[lr]
+[else]
+　お弁当にと七重がサンドイッチを今朝から用意してくれたため、支度は着替えくらいのものだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My change of clothes were a thermal underwear, a thicker jacket, a small bag, a hat, and a pair of hiking shoes I stuffed at the bottom of my suitcase. I ended up picking them because they gave me a certain kind of look, but I wasn't entirely sure of their actual practicality.[lr]
+[else]
+　着替えは自宅からトランクの底に詰めて持参した防寒用のインナーとジャケットと小さめのリュックと帽子に靴くらいのもので、どれも実用的というよりは、それらしく見える事を意識しただけのものだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I went outside as soon as I finished my preparations.[prcm]
+[else]
+　早々に支度を済ませて出発する。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sky was crystal clear, just like Nanae predicted yesterday. I took a deep breath, letting the scent of trees flood my nostrils.[lr]
+[else]
+　先日七重が言っていたとおりに空はよく晴れており、カラッとした空気は木の香りがした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This time, I left the mansion through the front entrance.[prcm]
+[else]
+　私は身軽な格好に着替えたあと、正面ロビーから洋館を出た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I passed by the gates next to the parking lot and paused in front of the curving mountain road.[lr]
+[else]
+　駐車場を横目に歩いて表門を抜けて、緩くカーブした細道の前で立ち止まる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+To the left stretched the wide road that Nanae drove down to the town.[lr]
+[else]
+　この道の向かって左側は七重の運転で登ってきた道だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+To the right, the road narrowed, becoming too tight for cars to pass through.[prcm]
+[else]
+　右手側、道の先は更に細くなり車で通行ができなくなっている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae told me to follow it if I wanted to go to the mountains.[lr]
+[else]
+　七重がお勧めする登山コースはその先にあるとの事だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took out the hiking map for beginners that was left in the lobby, and continued toward the first of the marked destinations.[prcm]
+[else]
+　私は洋館のロビーに置いてあった周辺のハイキングコースが記入された地図を取り出し、予め決めておいた軽めの登山コースを目指した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I checked my watch to see it was half past eleven.[prcm]
+[else]
+　時計を見ると十時半頃を示していた。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The path for the hiking course was actually better paved than the road Nanae used to drive me to the mansion.[lr]
+[else]
+　登山コースは七重が運転してきた駅から屋敷までの道よりも舗装されていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was surprisingly flat, too. I had to climb a few stairs here and there, but there were no steep slopes like I'd been expecting.[prcm]
+[else]
+　思ったよりも平坦で、たまにある木や石で出来た階段がある以外に坂らしい坂はなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The song of birds echoed across the area.[lr]
+[else]
+　歩いていると鳥の声が聞こえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Whenever their chirping became somewhat louder, I'd pause and look for them in the tree branches or among the rocks.[lr]
+[else]
+　近くで聞こえたときは足を止めて枝や岩の上を探した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Thus far, I'd discovered a daurian redstart, a pale thrush, and a brown-eared bulbul.[lr]
+[else]
+　見つけた小鳥はその色と模様から判断してジョウビタキ、シロハラ、ヒヨドリのようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All of them were in the bird encyclopedia Kozue found for me. This mountain seemed to have a surprising number of birds, just like Nanae said.[prcm]
+[else]
+　どれも野鳥の図鑑に載っていたもので、七重の言ったとおり林には思ったよりたくさんの小鳥がいるようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The scenery peeking through the thick woods was the same one I saw when Nanae drove me up to the mansion — a range of mountains and the sea, clearly visible in the distance. Besides that, I only spotted a moss-covered old temple, a relatively high waterfall hidden by the surrounding trees, a shallow river running between the rocks, and a small, ancient-looking dam.[lr]
+[else]
+　常緑樹の林と間から見える遠くの景色は、七重と車で登った時と同様に山と海の景色ばかりで、
+変わったものといえば苔むした石造りの社、枝に隠れるようにある細く高い滝、岩のあいだにある僅かな流れの川、その先にあった旧式の小さなダムくらいだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I'd spend some time looking at each new thing I discovered, and when I found none, I'd instead look for birds.[prcm]
+[else]
+　気になったものに目を留め、それ以外のところでは鳥を探しながら歩いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached my destination — the observation platform — by twelve o'clock.[prcm]
+[else]
+　十二時を少し過ぎたところで、目的地の[ruby text="み"]見[ruby text="はらし"]晴[ruby text="だい"]台に着いた。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I climbed up to it, the scenery of the southern sea extended before me in the distance.[lr]
+[else]
+　見晴台の先に立つと南に海が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The land here curved from the east and continued to the other end of the sea.[lr]
+[else]
+　陸地は東側を迂回して海の向こう側に続いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The green lands and the azure sea seemed almost like they went on forever — all the way to the very edge of the world under the already boundless blue sky.[lr]
+[else]
+　空は晴れて青く、陸も海もなくどこまでも続いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down on the bench I found on the platform, placing my bag by my feet.[lr]
+[else]
+　見晴台の近くにある屋根付きのベンチに座って荷物を下ろす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had a quick sip from the water bottle I kept in the bag's side pocket, then took out my sandwiches and began munching away on them.[prcm]
+[else]
+　サイドポケットに入れていた水筒の水を飲んだ。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　それから、弁当を取り出して食べた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was not a soul around.[lr]
+[else]
+　周りを見回しても誰もいなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It might've been too early for the New Year's season, or perhaps the place was always this deserted. I honestly couldn't tell, but the fact remained that the area was completely deserted.[lr]
+[else]
+　年末のシーズンにはまだ早いせいか、それともいつもこうなのか、ここに来るまでに一人の人も見かけなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned around and looked at the way I came from, but saw no traces of anyone having ascended the path behind me.[prcm]
+[else]
+　来た道を振り返ってみても、誰も登ってくる気配はなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I listened to the chirping of birds as I ate.[lr]
+[else]
+　サンドイッチを食べていると小鳥の鳴き声が聞こえた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A bird landed on one of the tree branches above me — it was a species I'd already spotted before.[lr]
+[else]
+　ここに来るまでに何度か見た鳥が枝に止まっているのを見つける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was fun to find birds hidden in the scenery.[lr]
+[else]
+　小鳥を見つけるのは楽しかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't recognize most of them, but whenever I found one I did, it made me happy.[lr]
+[else]
+　名前のわからない鳥ばかりだったが、知っている鳥を見つけた時は嬉しかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Birdwatching might have been a much more fun hobby than I thought.[lr]
+[else]
+　野鳥観察は意外と楽しいかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered if I could make out the birds better if I had one of those binoculars.[prcm]
+[else]
+　野鳥観察をする人がよく持っているような双眼鏡を使えば、鳥の姿はどれほどよく見えるのだろうか。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And if I memorized the voices described in the book, I could probably spot and recognize way more species than I did now.[lr]
+[else]
+　図鑑の鳴き声を覚えれば、もう少したくさんの種類を見つけられそうな気がする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I went hiking today just because I figured it'd probably be a waste not to.[lr]
+[else]
+　今日の登山は折角だからとの思いだけだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But it ended up being much more fun than I expected.[prcm]
+[else]
+　しかし、思ったより楽しめた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had no companions to talk to, so I had no choice but to entertain myself solely by observing nature, looking for more animals or interesting trees.[prcm]
+[else]
+　話す相手もいないので一人で変わったものを探してみた。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　生き物を観察して景色を楽しむように心がけてみた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako would've probably spotted a lot more things than I did.[lr]
+[else]
+　貴呼ならもう少したくさんの面白いものを見つけたかもしれない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+But that only meant I had more things to look forward to in the future.[prcm]
+[else]
+　まあ、次はもっとより多くの発見をすればいい。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I inhaled a breath and rose to my feet, my body feeling somewhat heavy.[lr]
+[else]
+　私は息をついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was about time to start heading home.[prcm]
+[else]
+　そして、重い腰を上げて帰りの途についた。[prcm]
+[endif]
+
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg48" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The map's recommended route was not the same road I used to come here — instead, it led around the mountain, emerging near the back of the library.[lr]
+[else]
+　帰りの道は登ってきた道とは別のもので、小山を大きく迂回して図書館の裏手から洋館に戻る道筋だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could feel the cool breeze on my skin.[lr]
+[else]
+　涼しい風が吹いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I descended the gentle slope, fighting against gravity's attempts to hasten my step.[lr]
+[else]
+　緩やかな下り坂で勝手に早まる歩を意識して抑える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I crossed the river, careful of the moss-covered, slippery-looking stones.[prcm]
+[else]
+　小川を渡るときには、苔で滑りやすそうになっている飛び石に注意した。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg81_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After a few more minutes on the path, I emerged onto a wide road.[lr]
+[else]
+　さらに歩くと、通ってきた小道よりも少し広めの道に合流した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I paused there for a moment.[lr]
+[else]
+　私はひとまずそこで立ち止まる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I took out the map from my bag to confirm the direction I should continue in, I spotted a girl walking toward me from one end of the road.[lr]
+[else]
+　それから、リュックから取り出した地図で方向を確認していると、道の向こうから女の子が歩いてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was Kozue.[prcm]
+[else]
+　女の子は梢だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[」][lr]
+[else]
+　「こんにちは」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h08" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[」][lr]
+[else]
+　「こんにちは」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you going to the library?[」] I asked.[prcm]
+[else]
+　「今から本を読みに行くの？」と聞くと梢は頷いてから「どこかに出かけるの？」と聞き返した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue nodded and asked if I was planning to go somewhere.[l][r]
+I answered that I was actually on my way back.[lr]
+[else]
+　「今から戻るところよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/k_img/f01_p02_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She gave me an apprehensive look.[lr]
+[else]
+　それを聞いた梢は怪訝な表情をした。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I was trying to understand what it meant, she passed by me.[lr]
+[else]
+　私がその意味を考えていると、梢は私の前を横切り歩き出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put the map back in the bag and followed her.[prcm]
+[else]
+　私はその後について歩きながら、地図をリュックにしまった。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you know a lake that should be somewhere around here?[」][lr]
+[else]
+　「この近くに、大きな湖があるのを知ってるかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's that way.[」][lr]
+[else]
+　「湖ならあっちよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue pointed at the woods.[lr]
+[else]
+　梢は歩きながら林の方を見た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking in the direction she pointed in, I couldn't see anything other than the trees.[prcm]
+[else]
+　その視線の方に目をやるが、林のあいだに湖は見えなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There's a road further down. I'll show you.[」][prcm]
+[else]
+　「もう少し先に道があるから教えてあげる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　「ありがとう」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="156_7.ks" target=*156_7
+
+

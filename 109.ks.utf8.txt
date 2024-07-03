@@ -1,0 +1,949 @@
+*109| Japan National Railway Tunnel
+; *109|旧国鉄のトンネル
+[fbfstoretitle eng="Japan National Railway Tunnel" jp="旧国鉄のトンネル"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm39"]
+[backlay]
+[fbfscale_image storage="bg56_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 137"]
+[eval exp="sf.ItRelease = 138"]
+[endif]
+
+*| Japan National Railway Tunnel
+; *|旧国鉄のトンネル
+[fbfstoretitle eng="Japan National Railway Tunnel" jp="旧国鉄のトンネル"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, there you are.[l] I've finally found you.[」][lr]
+[else]
+　「あ、いたいた。[l]やっと見つけた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a voice as I was about to open the door leading to the east wing.[lr]
+[else]
+　東棟の裏口にある勝手口の扉に手をかけた時、中庭の方から[ruby text="なな"]七[ruby text="え"]重の声が聞こえてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae's wooden sandals clinked against the stone road.[prcm]
+[else]
+　七重が飛び石の上をカランカラン、と木製サンダルの踵で鳴らしながらやってきた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You weren't in your room, so I was looking for you.[l] I guess you came outside.[」][lr]
+[else]
+　「部屋にいなかったから、少し探しちゃったわ。[l]どこか外に出ていたのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes. My eyes got tired after reading for too long, so I went out for a walk.[」][lr]
+[else]
+　「ええ、本を読んでいたら目が疲れて、それで少し散歩してたの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l][msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h01" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon] Um, would you like to accompany me to the bath right now?[l] It's the open-air bath I've mentioned before.[」][lr]
+[else]
+　「そう。[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+ねえ、もし良かったら今からお風呂にいかない？[l] この間話をしていた露天風呂」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Right now?[l] It's still noon.[」][prcm]
+[else]
+　「今から？[l] まだ昼だけど」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Taking a bath in the middle of the day feels all sorts of luxurious, no? I like it, personally.[」][lr]
+[else]
+　「昼間からお風呂って、ちょっと贅沢みたいで私は好きよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's almost like you're talking about a drink.[」][lr]
+[else]
+　「お酒みたいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, that's not so far off the mark.[」][lr]
+[else]
+　「まあ、そんなところよ。[l]どうかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It sounds interesting.[l] I'll go get dressed, then.[」][lr]
+[else]
+　「いいわね。[l]準備してくるわ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right![l] I'll be waiting at the cafeteria.[」][prcm]
+[else]
+　「そうこなくちゃね。[l]カフェラウンジで待ってるわ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt an odd sense of discomfort in the back of my mind as I opened the door.[lr]
+[else]
+　勝手口の扉を開いたところで、頭の隅の違和感に気がついて立ち止まる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's wrong?[」] asked Nanae.[prcm]
+[else]
+　その様子を見た七重が「どうかした？」と聞いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I wanted to ask you about something.[」][lr]
+[else]
+　「何か聞くつもりだったんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]About what?[」][lr]
+[else]
+　「なに？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was pretty sure I wanted to confirm something with her, but I couldn't quite remember it.[prcm]
+[else]
+　七重に何か確認したいことがあったはずだったのだが、それが何かを思い出すことはできなかった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I forgot.[」][lr]
+[else]
+　「まあいいわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't hesitate to ask whenever you remember it,[」] said Sanae as I gave up and entered the mansion.[prcm]
+[else]
+　諦めて屋敷に入ると、後ろで七重が「また思い出したら聞くといいわ」と言った。[prcm]
+[endif]
+
+
+
+;//////
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg60_6" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We walked along the mountain stream nearby to the waterfall we'd seen earlier.[prcm]
+[else]
+　旗立台の裏から滝へ向かう道を逸れ、渓流沿いの道を歩いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We'll have to walk for a bit, but it shouldn't take more than twenty minutes.[」][lr]
+[else]
+　「少し歩くけど、二十分もしないから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I don't mind. Figured I could do with some more exercise, anyway.[」][prcm]
+[else]
+　「最近運動不足だったから、丁度いいわ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The mountain path was wide enough for us to walk next to each other.[lr]
+[else]
+　枯れ葉と土の山道は、二人で並んで歩いても十分な広さがあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard the cry of a bulbul from somewhere.[lr]
+[else]
+　どこかでヒヨドリの音が聞こえる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up to see the mountain with stretches of yellow and red above the treetops.[lr]
+[else]
+　見上げると、緑のモザイクをした木の葉の向こうにところどころに黄や赤が少しだけ混じった山が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I quickened my pace so I wouldn't fall behind.[lr]
+[else]
+　七重との距離が開く前に歩を早める。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A tiny stream serenely tricked down the gentle slope.[lr]
+[else]
+　コポコポ、と左手の緩やかな斜面からほんの少し水が流れている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted a familiar vegetable by it.[prcm]
+[else]
+　その近くに見覚えのある山菜があった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Isn't that dropwort?[」][lr]
+[else]
+　「セリかしら」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, but some of those are poisonous.[」][lr]
+[else]
+　「ほんとうね、でもドクセリも混じってるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Poisonous?[l] How do you tell them apart?[」][lr]
+[else]
+　「毒？[l] どうして見分けるの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The poisonous ones have a subterranean stem, like mushrooms. Their traces are visible to the naked eye, provided you look hard enough.[l] Guess it's already the season of the seven herbs, huh.[」][prcm]
+[else]
+　「ドクセリは根元にタケノコみたいな地下茎が見えているわ。[l]そう、もう七草の時期ね」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Isn't it a bit early?[」][lr]
+[else]
+　「少し早いんじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can already find them in the mountains.[l] At least the shepherd's purse and the henbit.[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h03" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]How about we pick some on our way back?[l] I can make tempura with them later.[」][lr]
+[else]
+　「もうこの時期だとそこそこ採れるものはあるわよ。[l]ナズナにホトケノザあたりはありそうだわ。
+[l]
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+そうだ、帰りは山菜を採りましょうか。[l]それで天ぷらなんてどうかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds nice.[」][prcm]
+[else]
+　「いいわね」[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=200]
+[backlay]
+[fbfscale_image storage="bg28_2" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted what looked like a big cave at the end of the road.[prcm]
+[else]
+　道の先に大きな洞の入口が見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are we passing through this?[」][lr]
+[else]
+　「ここを通るの？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l][msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h04" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon] Scared of the dark?[」][lr]
+[else]
+　「ええ。[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f05_p03_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+
+暗いところは苦手かしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[wait time=500]"Not really."[prcm]
+[else]
+　[wait time=500]「別に」[prcm]
+[endif]
+
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=200]
+[backlay]
+[fbfscale_image storage="bg28_3" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The surrounding shrubbery prevented me from making it out from a distance, but as we drew closer to the entrance, I realized it was no cave at all, but a brick tunnel.[lr]
+[else]
+　遠くからでは周りの木々の葉でよく見えなかったが、近くで見ると洞はレンガ造りのトンネルだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It looked pretty old, the cracks on its walls grown over by greenery.[prcm]
+[else]
+　トンネルはかなり古いもので、レンガが所々剥がれており隙間には緑色の苔がむしている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not scared of the dark, but...[」][lr]
+[else]
+　「別に苦手ではないけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inside, I couldn't see further than five meters at most. Anything further in looked like it was painted over by black ink.[lr]
+[else]
+　トンネルの奥は五メートル程までしか地面が見えず、その先は墨で塗りつぶしたように見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There seemed to be cables leading inside. I spotted something that looked like the remains of a lamp, the string of which probably continued into the tunnel. Still, it looked pretty evident that none of these things had been in working order for years.[prcm]
+[else]
+　側面にはケーブルが張ってあり等間隔に電灯がついていたが、ケースは風化で色褪せており、電気は見当もつかないほどの前から通っていないようだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How long is it?[」][lr]
+[else]
+　「どれくらいあるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd say about sixty meters or so.[」][lr]
+[else]
+　「六百メートルぐらいじゃないかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae's wooden sandals scraped against the sand covering ground.[prcm]
+[else]
+　カラカラ、ジャリジャリ、と砂利石の地面を木のサンダルを鳴らして歩いていく。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=200]
+[backlay]
+[fbfscale_image storage="bg28_5" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed her, sensing the light behind me grow more and more distant.[lr]
+[else]
+　七重に続いて行くと、明かりは後ろへと遠ざかる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When we reached the area I couldn't see from the entrance, the darkness grew even thicker. If that wasn't enough, the sounds within the tunnel suddenly felt amplified, too.[prcm]
+[else]
+　入口の淵が落とす影を超えるとさらに一段と暗くなり、代わりに空洞の音が大きくなった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h01" visible=true left=105 top=0 rceil=150 gceil=150 bceil=150]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This used to be an old railway.[l] There are tracks under the sand, so be careful not to trip.[」][lr]
+[else]
+　「国鉄の廃線なのよ。[l]足元の砂利を少し掘れば枕木が並んでいるわ。[l]つまづかないようにね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+At this point, I couldn't even see the walls. I no longer had any idea how wide this place was.[prcm]
+[else]
+　墨色が濃くなりトンネルのレンガの壁が見えなくなると、広さが良くわからなくなった。[prcm]
+[endif]
+
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f05_p02_h02" visible=true left=105 top=0 rceil=70 gceil=70 bceil=110]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, better hold my hand,[」] said Nanae before completely disappearing from sight.[lr]
+[else]
+　「危ないから手をつなぎましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I clasped the hand she extended toward me.[prcm]
+[else]
+　前を歩く七重の姿が見えなくなる前に、七重が言う。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　すっとこちらに伸びた七重の白い手を握り返す。[prcm]
+[endif]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=200]
+[backlay]
+[fbfscale_image storage="bg28_1" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking behind, I saw a thin patch of white light in the distance where the entrance was, but it got displaced to the right the further we walked, eventually disappearing completely.[lr]
+[else]
+　後ろを見ると、遠くに入口の明かりがポツンと白く見えたが、歩を進めるたびに右の方にずれて行き、やがて消えた。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[msgon_b]
+[clickskip enabled = true]
+
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked ahead to realize I couldn't even see my own hand.[prcm]
+[else]
+　前を見ると、もう七重の手も見えなくなっていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you okay?[l] Tell me if I'm going too fast.[」][lr]
+[else]
+　「大丈夫？[l] 歩くのが早かったら、言ってね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　トンネルの中は暗く、目をはっきりと開けて凝らしてみても何も見ることができなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I occasionally heard her voice, our footsteps, and the sound of dripping water, but they all reverberated across the tunnel in a way that made me completely lose my sense of distance.[prcm]
+[else]
+　声と足音と時折水の落ちる音が聞こえたが、空洞内に反響してそれぞれの距離感はつかめない。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't tell where we're going at all.[l] We won't hit a wall, will we?[」][lr]
+[else]
+　「今どこを歩いているのかわからないわ。[l]壁にぶつかったりしないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm following the railroad tracks, so we won't hit anything.[l] Besides, I've been through this tunnel a million times. I remember the correct path.[」][lr]
+[else]
+　「足元に枕木があるから真ん中を歩けているの。[l]だから壁にあたることはないし、このトンネルの形は覚えているから平気よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stepped on something and staggered a little.[prcm]
+[else]
+　ふと、つま先が何かにかかって少しだけ前によろけそうになる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm impressed you can walk here dressed like that.[」][lr]
+[else]
+　「こんなに暗いところ、よくそんな格好で歩けるわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Haha.[」][prcm]
+[else]
+　ははは、と七重の声が響いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm used to it.[l] I've been playing in these parts since I was little.[l] That said, I can't say I've been to a darker place.[」][lr]
+[else]
+　「慣れかしらね。[l]小さい頃はトンネルで遊んだわ。[l]でも、それから今の年まで経っても、ここより暗いところは他には知らないわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What kind of games could you play in a place like this?[」][lr]
+[else]
+　「どんな遊び？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well... you know. Hide and seek.[」][lr]
+[else]
+　「そうね、色々だけど、かくれんぼとか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here?[」][lr]
+[else]
+　「ここで？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] You've got to be real good to find someone in here.[」][prcm]
+[else]
+　「そう、見つかりにくいのよ。[l]トンネルの奥に隠れると」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Weren't you scared?[」][lr]
+[else]
+　「怖くないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really.[l] I was more scared of being found.[l] When you're a kid, you get real serious about these things, so eventually, having 'it' find you becomes really terrifying. Or was that just me?[」][lr]
+[else]
+　「うん、当時はなんとも。[l]それより、見つかる方が怖かったわね。[l]鬼ごっこや隠れんぼみたいな遊びを子供が本気になってやるときって、だんだん興奮してきて、捕まるのが凄く怖くなったりしない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It might just be you.[」][lr]
+[else]
+　「そうかしら」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You crouch down somewhere between the center and the wall. Then before long, you hear footsteps approaching.[l] The louder they get, the closer you know 'it' is, searching for you along the walls with a stick or something.[l] And if you're lucky, those footsteps pass right by you as you wait there, holding your breath.[」][prcm]
+[else]
+　「このトンネルの一番くらい奥で、壁際とも言わず、真ん中とも言わず広いところの微妙な位置に蹲って待つの。[l]そうしたら、足音がするのね。[l]鬼が探しに来ていてだんだん足音が近くなるの、カンカンって棒で隅の方とかを探してるの。[l]目の前を足音が通り過ぎるときもあるわね。[l]バレないように、息を殺して通り過ぎるのを待つの」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you actually been found here before?[」][lr]
+[else]
+　「見つかったりするの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, and quite a number times, too.[l] There was a time when the 'it' let out a loud scream right as they passed by me and that scared me so much I started screaming myself.[l] Then this other time, I waited until 'it' passed, and as I relaxed and started moving, another 'it' that stayed behind found me.[l] They synced their footsteps so I couldn't tell them apart as they approached.[」][lr]
+[else]
+　「何度かあるわね、いきなり声を出されたときとか。[l]おもわず声を出しちゃったわ。[l]あと、鬼が居なくなってずっとしてから安心して身じろぎしたら、近くに残っていた鬼に見つかったこともあったわ。[l]二人で歩調を合わせて歩いてきて、ひとりで通り過ぎていったのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd start crying if any of those happened to me.[」][lr]
+[else]
+　「そんなことされたら、泣くわよ普通」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, that's why you're desperate not to be found out.[l] You can't breathe when someone's passing by you... even your heartbeat and the flow of your blood feel too loud.[l] The trick is to think you're a stone, or another railroad track, or a stain on the wall... You've got to become one with your surroundings.[l] You've got to believe you don't exist at all.[」][prcm]
+[else]
+　「だから、人が来たら悟られないように必死よね。[l]誰かが来たときは息をしては駄目、心臓の音も、血液の流れる音も、もどかしい時間よ。[l]そんなときは、自分はここに転がっている石や、枕木や、壁のシミかなんかだと思い込むの。[l]暗闇の一部で、どこにもいないものと信じるのね」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ugh... your game is seriously[clickskip enabled=false][wait time=300] .[wait time=300].[wait time=300].[wait time=300][clickskip enabled=true]scary.[」][lr]
+[else]
+　「ねえ。[l]その遊びは[clickskip enabled=false][wait time=300]・[wait time=300]・[wait time=300]・[wait time=300][clickskip enabled=true]本当に怖いわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] One time, I actually fell asleep.[l] Or maybe I really ended up believing I didn't exist, but it was like I suddenly regained consciousness after losing track of time.[l] And for a while, I couldn't tell who I was.[l] I couldn't see my limbs or anything in the dark.[l] I don't think I even realized I had eyes.[l] I eventually ended up staggering out of the tunnel, my mind as empty as ever. Only once I saw myself in the evening sun, along with all the familiar trees, streams, and the library in the distance, did I remember who I was.[l] As you can imagine, I hurried home right away.[」][prcm]
+[else]
+　「そうね。[l]そんなときに一度、眠ってしまったのか。[l]
+それとも、信じ込んでしまったのか。[l]
+どれだけ時間が経ったか分からないけど、急に意識が戻ってきたことがあったの。[l]
+でも、どれだけ考えても、自分が誰なのか分かんなかったわ。[l]
+自分の鼻も手も足も見えないの。[l]
+そもそも、目があることに気付かなかったのかも。[l]
+何も考えないでふらふらとトンネルの外に出て、夕暮れどきの明かりでやっと自分が見えたとき、見知った気の枝や、渓流や、遠くに図書館の屋根が見えたときにやっと自分が誰かを思い出したのよ。[l]
+ああ、家に帰らなきゃってね」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="110.ks" target=*110
+

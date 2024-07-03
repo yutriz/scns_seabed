@@ -1,0 +1,1085 @@
+*147| Work and bath
+; *147|労働と風呂
+[fbfstoretitle eng="Work and bath" jp="労働と風呂"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg85_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 188"]
+[eval exp="sf.ItRelease = 189"]
+[endif]
+
+
+*| Work and bath
+; *|労働と風呂
+[fbfstoretitle eng="Work and bath" jp="労働と風呂"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I considered falling back asleep when I opened my eyes, but the sun peeking through a gap in my curtains shone right into my face.[lr]
+[else]
+　目が覚めると二度寝を試みたがカーテンの開いた部分から漏れた朝日がこちらの顔を捉えていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+No amount of twisting on the bed let me escape the brightness through my eyelids.[lr]
+[else]
+　ずりずり、とベッドの上を移動してみても瞼が明るい。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And when I finally gave up and climbed out of bed to close the curtains, I realized I wasn't that sleepy anymore.[lr]
+[else]
+　移動を諦めてカーテンを閉じようと体を起こした頃にはパッチリ、と目が覚める。[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se103.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I parted the curtains instead.[lr]
+[else]
+　もう寝るのをやめて、掴んだカーテンを開く。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A snow-laden mountain loomed beyond the window.[prcm]
+[else]
+　外に雪をかぶった山の景色が見えた。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[playbgm storage="bgm22"]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg50_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled = true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spotted Kozue standing in front of the door leading to the inner yard.[prcm]
+[else]
+　ロビー裏にある中庭の勝手口の前で[ruby text="こずえ"]梢が立ち往生していた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's up?[」][lr]
+[else]
+　「どうしたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't leave.[」][lr]
+[else]
+　「出られない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue turned the doorknob, but the door didn't budge.[prcm]
+[else]
+　[ruby text="こずえ"]梢が勝手口のノブを回して押してもドアは少しも動かなかった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you doing here?[」][lr]
+[else]
+　「あなたは何してるのよ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I came to see the snow.[」][lr]
+[else]
+　「雪を見に来たんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, too bad — the door doesn't open.[」][lr]
+[else]
+　「残念だけど、出られないみたいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I rolled up my sleeves.[prcm]
+[else]
+　と、言った梢に袖を捲ってみせる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just gimme a moment with them.[」][lr]
+[else]
+　「貸してみて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue took a step back as I seized the doorknob.[prcm]
+[else]
+　梢が隣に下がって、代わりにノブを持った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huff![」][lr]
+[else]
+　「ふん」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[playse buf = 1 storage=se144.ogg]
+[wait time=3000]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A loud crack reverberated in the room.[prcm]
+[else]
+　ガチン、メキ、と蝶番が嫌な音を立てた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p03_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You've broken it.[」][lr]
+[else]
+　「壊した」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's not broken.[」][lr]
+[else]
+　「壊れてないって」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have to tell Mayuko about this.[」][lr]
+[else]
+　「[ruby text="まゆ"]繭[ruby text="こ"]子に言わないと」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, wait... don't do that.[」][prcm]
+[else]
+　「やめてよ、ちょっと」[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg45_6" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Through the window, I could see a pile of snow that would reach up to my knees right outside the door.[lr]
+[else]
+　近くにある窓から外を見ると、扉の前には膝の中程までの高さの雪が積もっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Well, "right outside the door" wasn't particularly accurate, as it covered the entire inner yard.[lr]
+[else]
+　ドアの前だけでなく、中庭一帯は雪をかぶって真っ白に染め上がっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Only the big camphor tree still towered high above it all, boasting an elegant, white layer of snow on top.[prcm]
+[else]
+　唯一、真ん中にある[ruby text="くすのき"]楠だけがその幹の見せていたが、樹冠の上にも白い雪を載せていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess I'll try the window.[」][lr]
+[else]
+　「窓から出るか」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se55.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I undid the latch and opened the window, only to be momentarily blinded by the brightness of the snow.[lr]
+[else]
+　落とし鉄をあげて窓を開くと、雪が一層眩しくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Stepping on the windowsill, I jumped outside.[lr]
+[else]
+　開け放った窓の縁に足をかけてパッ、と外に飛び出す。[lr]
+[endif]
+
+[r]
+[playse buf = 2 storage=se131.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My legs sank into the snow below.[prcm]
+[else]
+　ズボ、と脛の高さまで足が雪に埋まった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa, I'm sinking here.[」][lr]
+[else]
+　「うわ、深い」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg50_1" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p03_h03" visible=true left=105 top=0]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was about to jump back inside, but Kozue walked in front of the window before I knew it, blocking my way.[prcm]
+[else]
+　直ぐに屋敷に戻ろうとすると、窓の前に梢が陣取ってこちらを見ていた。[prcm]
+[endif]
+
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p02_h12" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Open the door.[」][lr]
+[else]
+　「外から開けて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd need a shovel to clear this much snow away.[」][lr]
+[else]
+　「高く積もってるから、スコップとかないと難しいんじゃないかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You have your hands, don't you?[」][lr]
+[else]
+　「手で掻いたらいいじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you kidding me?[l] Look, my legs are already freezing, okay?[」][lr]
+[else]
+　「この子怖い。[l]あ、足が冷たくなってきたわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko appeared behind Kozue in the corridor.[prcm]
+[else]
+　と、梢の後ろの廊下を繭子が歩いてきた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p02_h12" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f01_p01_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you two doing?[」][lr]
+[else]
+　「何をしてるんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're playing with snow.[」][lr]
+[else]
+　「雪遊び」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f01_p03_h04" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good.[」][lr]
+[else]
+　「丁度良かった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko handed me a shovel through the window.[prcm]
+[else]
+　繭子が抱えていたスコップを窓越しに手渡しした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was looking for you to help me with shoveling the snow.[」][lr]
+[else]
+　「雪かきを手伝ってもらおうと、探していたんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And I just so happened to be looking for a shovel, too.[」][prcm]
+[else]
+　「こっちも丁度、スコップが欲しかったところ」[prcm]
+[endif]
+
+
+;//////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg45_6" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+[playse buf = 1 storage=se145.ogg loop=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stuck the shovel into the snow.[prcm]
+[else]
+　サク、と軽い手応えでスコップが雪に刺さる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huff![」][lr]
+[else]
+　「おいしょ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I lifted up a shovelful of snow and placed it into the cart behind me.[prcm]
+[else]
+　スコップを持ち上げて後ろのリアカーに乗せる。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h09" visible=true left=0 top=0 opacity=0]
+[trans method=universal rule="rule1" vague=1 time=1]
+[wt]
+[fbfscale_move time=1000 path="(105,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue appeared as well, pushing an empty cart toward me.[lr]
+[else]
+　ガラガラ、と梢が空のリアカーを押して来た。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p02_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[fbfscale_move time=1000 path="(0,0,0)" layer=0]
+[wm]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p02_h05" visible=false left=105 top=0]
+[trans method=universal rule="rule1" vague=1 time=1]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She stopped the empty cart next to me, moved to the snow-filled one, and pushed it away.[lr]
+[else]
+　空のリアカーを近くに停めると、雪を積んだ方のリアカーを持ってガラガラ、と行ってしまう。[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h09" visible=true left=0 top=0 opacity=0]
+[trans method=universal rule="rule1" vague=1 time=1]
+[wt]
+[fbfscale_move time=1000 path="(105,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued to shovel snow until Kozue returned with the next cart.[lr]
+[else]
+　サクサク、と雪をリアカーに積んでいると、再び空のリアカーを引いた梢が戻ってくる。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p02_h09" visible=true left=105 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=1 time=1]
+[wt]
+[fbfscale_move time=100 path="(105,-20,255)(105,0,255)" layer=0]
+[wm]
+[wait time=500]
+[fbfscale_move time=100 path="(105,-20,255)(105,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Seeing that my cart was still only partially filled with snow, she rattled her own.[prcm]
+[else]
+　半分ほどしか雪の積まれていないリアカーを見ると、梢がガタガタ、とリアカーを揺らした。[prcm]
+[endif]
+
+
+[stopse buf=1]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Geez, give me a break.[」][lr]
+[else]
+　「少し休ませてはくれないのかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have some business in the library.[」][lr]
+[else]
+　「図書館に用事があるの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Go on ahead, then. I can shovel the snow by myself.[」][lr]
+[else]
+　「雪かきを待ってないで、行ってくればいいのに」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p02_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How on earth am I supposed to go?[」][lr]
+[else]
+　「行けるわけ無いでしょ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue made an indignant expression.[lr]
+[else]
+　と、梢がムッとして言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her legs were shorter than mine by at least one hand's length.[prcm]
+[else]
+　まだ幼い梢の足の膝はこちらの膝より拳一つ分程低かった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I cleared half of the way already.[l] It won't take that long.[」][lr]
+[else]
+　「ほら、もう半分くらいは道が出来てるじゃない。[l]直ぐに向こうまでつくよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you start taking breaks, it'll take until noon.[」][lr]
+[else]
+　「休んでいたら、昼までにつかないわ」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[fbfscale_move time=100 path="(105,-20,255)(105,0,255)" layer=0]
+[wm]
+[wait time=500]
+[fbfscale_move time=100 path="(105,-20,255)(105,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue rattled her cart again.[prcm]
+[else]
+　もう一度、梢がガタガタ、とリアカーを揺らした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Geez, don't you trust me at all?[」][lr]
+[else]
+　「全く、どれくらい信用ないのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I trust you about as much as I trust the paper used for goldfish scooping.[」][lr]
+[else]
+　「金魚すくいの紙くらいはあるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have I done anything to you?![」][lr]
+[else]
+　「それは薄すぎだわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmph.[」][prcm]
+[else]
+　「ふん」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where are you bringing that snow, anyway?[」][lr]
+[else]
+　「そういえば、そのリアカーの雪はどこに持っていってるの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Over there... where Mayuko told me.[」][lr]
+[else]
+　「向こう、繭子が言ったところ」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se131.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko appeared on the cleared up road as we talked.[prcm]
+[else]
+　梢と話をしていると、繭子が雪かきをした道を通ってやってくる。[prcm]
+[endif]
+
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p01_h03" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f01_p02_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I brought you some coffee.[」][lr]
+[else]
+　「差し入れにコーヒー持ってきましたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[」][lr]
+[else]
+　「ありがと」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And some hot milk for you, Kozue.[」][lr]
+[else]
+　「はい、梢ちゃんにはホットミルク」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue took a paper cup from Mayuko.[prcm]
+[else]
+　梢が繭子から紙コップを受け取る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, where's Sanae?[」][lr]
+[else]
+　「ねえ、早苗はどうしてるの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f01_p01_h11" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]She seems to have woken up with a bit of a fever this morning.[l] She's resting in her room right now.[」][lr]
+[else]
+　「少し熱があるみたいです。[l]部屋で休まれてますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was freezing this morning.[l] Is she okay?[」][lr]
+[else]
+　「今朝も冷え込んだからね。[l]大丈夫？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f01_p01_h17" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It didn't look like anything serious.[」][lr]
+[else]
+　「少し体調を崩しただけみたいです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I finished my coffee and handed the paper cup back to Mayuko.[prcm]
+[else]
+　コーヒーを飲み終えて、空の紙コップを繭子に返した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh yeah, just listen to this, Mayuko.[l] Kozue said she only trusted me as much as the paper used for goldfish scooping.[」][lr]
+[else]
+　「そうだ、聞いてよ繭子。[l]梢は私のこと金魚すくいの紙くらいにしか思ってないなんて言うのよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f01_p03_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I once caught five goldfish with a single one.[」][lr]
+[else]
+　「縁日の金魚すくいなら、一回で五匹とったことがありますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Heh, there was actually this one time I almost caught twenty.[」][lr]
+[else]
+　「それならこっちは二十匹近く掬ったことあるよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f01_p02_h05" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Twenty? That sounds far too fishy.[l] Is it really true?[」][lr]
+[else]
+　「二十匹って、嘘くさいですね。[l]ホントですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not lying![l] Anyway, uh, that's not what I was trying to sa—[」][prcm]
+[else]
+　「ホントだって。[l]いやでも、そう言う問題じゃないと思うのよ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f05_p02_h10" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[fbfscale_move time=100 path="(-70,-20,255)(-70,0,255)" layer=0]
+[wm]
+[wait time=500]
+[fbfscale_move time=100 path="(-70,-20,255)(-70,0,255)" layer=0]
+[wm]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can you hurry up and shovel the snow already?[」] Kozue egged me on after handing her cup back to Mayuko.[lr]
+[else]
+　「早く、雪かき」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、繭子に紙コップを返した梢が急かす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With two cups in hand, Mayuko turned around and continued to the entrance.[prcm]
+[else]
+　紙コップをふたつ持った繭子が勝手口の方に引き返していく。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I found some ice on the roof, so I'll go and try to shatter it for now.[l] Let's take a bath together after we finish with the snow.[」][lr]
+[else]
+　「屋上に氷ができていたので、割ってきますね。[l]雪かきも終わったら、お風呂に入りましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sounds great.[」][prcm]
+[else]
+　「ああ、いいね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I resumed work, I suddenly realized something and turned to Kozue.[lr]
+[else]
+　作業を再開したところで、ふと気がついて梢を振り返る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can use the connecting corridor to go to the library, right?[」][lr]
+[else]
+　「図書館に行きたいのなら、西棟の渡り廊下を使ったらいいんじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Borrowing the keys is too much of a pain.[」][lr]
+[else]
+　「鍵を借りるのが面倒だから、嫌」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...Seriously?[」][prcm]
+[else]
+　「…ええ～」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="148.ks" target=*148
+
+

@@ -1,0 +1,1022 @@
+*149| Washing her back
+; *149|背中流し
+[fbfstoretitle eng="Washing her back" jp="背中流し"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[playse buf = 2 storage=se116.ogg loop=true]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg46_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[playse buf = 1 storage=se115.ogg]
+[wait time=500]
+[ws buf=1]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 190"]
+[eval exp="sf.ItRelease = 191"]
+[endif]
+
+
+[playbgm storage="bgm20"]
+
+
+*| Washing her back
+; *|背中流し
+[fbfstoretitle eng="Washing her back" jp="背中流し"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Phew.[」][lr]
+[else]
+　「ふう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I submerged myself in the hot water while resting my head on the edge of the tub.[lr]
+[else]
+　熱い湯船に浸かり、頭を湯船の縁に載せた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the sounds of Mayuko washing her hair.[lr]
+[else]
+　頭の上から繭子が髪を洗うパシャパシャ、という音が聞こえる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I grasped the ponkan toy floating in the tub, submerged it in the water, then let go while watching the ripples it created as it shot up.[lr]
+[else]
+　浮かんでいたポンカンを取って、お湯へ沈めてから手を離すとポン、と水面に上がり波を立てた。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f03_p01_h13" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue regarded me in silence.[prcm]
+[else]
+　ポンカンを集めているところを、湯船に浸かった[ruby text="こずえ"]梢が黙って見ていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Once I began feeling warmer, I climbed out of the bath and sat on its edge.[lr]
+[else]
+　体が温まると湯から出て縁に座った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I counted the number of ponkan floating in the tub, Mayuko finished washing her hair and placed her basket on the ground with a thud.[lr]
+[else]
+　湯船に浮かんでいる黄色いポンカンを数えていると、髪を洗い終わった繭子がカコン、と桶を置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear her wet footsteps as she walked toward the bath.[lr]
+[else]
+　繭子はペタペタ、とタイルの床を鳴らして湯船に入った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The round, yellow ponkan sluggishly swayed in the calm water.[lr]
+[else]
+　波に乗ってポンカンの黄色い玉が流れていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko submerged herself up to her shoulders and shifted her gaze to me.[prcm]
+[else]
+　繭子は肩までお湯につかりきってからゆっくりと息をつくと、こちらを見た。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f03_p01_h13" visible=true left=-70 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h02" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was getting too hot.[」][lr]
+[else]
+　「湯冷めしますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I slid down from the edge, leaving the cool air for the hot water.[lr]
+[else]
+　風呂の縁から降りて、ひんやりする浴場の空気から、一息に肩まで熱いお湯につかる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My skin warmed up instantly. I could feel the heat traveling through my neck to my head.[prcm]
+[else]
+　肌の表面がピリピリと暖まり、首から頭のほうへ熱がじわりと伝わってくる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you cool yourself off at proper intervals, every time you return to the bath will feel as good as your first time. And you never get too hot, either.[」][lr]
+[else]
+　「少し体を冷ましてから湯船に入りなおすと、最初に湯船に入るときみたいに気持ちがよくなるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed my eyes as my cheeks warmed up.[prcm]
+[else]
+　頬が温まってきて、目を瞑る。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You warm yourself in the bath, then you cool down sitting on the edge. Rinse and repeat.[l] You manage the temperature of the outer layer of your skin, heating and cooling it as though you were making a mille-feuille out of yourself.[l] It's the elegant way of enjoying a bath.[」][lr]
+[else]
+　「じっくり湯船で温まってから、少しだけ縁に座って外気で体を冷やすのよ。[l]肌の表面を温めて、また冷えてを何度か繰り返して、温度の層をミルフィーユみたいに仕上げていくの。[l]お風呂の通な楽しみ方よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're going to catch a cold like that.[」][lr]
+[else]
+　「風邪をひきますよ」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/k_img/f03_p01_h11" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't think you need to worry about that,[」] said Kozue as she stood up.[prcm]
+[else]
+　「それは大丈夫と思う」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　梢はそう言って、湯船を出た。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, Kozue knows that this is the healthy way to enjoy a ba— wait a second, I know what you did there, Kozue,[」] I exclaimed, raising my fist.[prcm]
+[else]
+　「そう、梢はこれがむしろ健康法だと考えて…言ってはいない事を、私は分かってるんだぞ」と私は手を上げて梢の後ろ姿に抗議した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h24" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you leaving already?[」][lr]
+[else]
+　「もう出るの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Kozue nodded at Mayuko's question and left the room.[prcm]
+[else]
+　そう聞いた繭子の方に頷いて、梢が浴室を出た。[prcm]
+[endif]
+
+
+
+;//////
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg46_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I spent a few moments gazing at the white, vapor-covered windows when a cold drop of water fell on my forehead.[prcm]
+[else]
+　いつもの湯口の隣で白い窓を見ていると、頭の上のいつものところに冷たい水滴が落ちた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're going to get your hair wet.[」][lr]
+[else]
+　「髪が浸かってますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko came over to me and tucked some loose locks of hair peeking out from beneath my towel back under it.[prcm]
+[else]
+　繭子がこちらに来て、頭に巻いているタオルにほどけた髪を巻き直した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your face is red like a boiling octopus.[」][lr]
+[else]
+　「顔が赤い、茹で蛸みたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I may have spent too much time in the water.[」][lr]
+[else]
+　「少しのぼせたかも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think it's about time you got out, then.[l] [msgoff][backlay][fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h04" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]Would you like me to wash your back?[」][lr]
+[else]
+　「もう出ます？[l]
+[msgoff]
+[backlay]
+[image layer=1 page=back storage="fgimage/m_img/f04_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+ 良かったら、背中流しましょうか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yay, of course.[」][lr]
+[else]
+　「やった、お願い」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Think of it as my thanks for shoveling the snow.[」][lr]
+[else]
+　「今日の雪かき作業のお礼です」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Haha, I guess hard work does pay off from time to time.[」][prcm]
+[else]
+　「いやあ、たまには労働もいいもんだねえ」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I got out of the bathtub, splashing hot water all around me, and sat down on the closest wooden stool by the shower.[lr]
+[else]
+　湯を滴らせながら檜の浴槽を出て、手近な洗面台に座る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko brought a stool of her own, sitting down on it behind me.[prcm]
+[else]
+　後から繭子が木の台を持ってきて後ろに座った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=1 page=back]
+[eval exp="sf.cg31=1"]
+[fbfscale_image storage="ev31" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like it a little rough.[」][lr]
+[else]
+　「割と強めでお願いしますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Understood.[」][lr]
+[else]
+　「はいはい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko covered the washcloth in soap and pressed it against my back.[lr]
+[else]
+　石鹸を手ぬぐいで擦ってから、泡立ったそれを背中に押し当てられる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She took hold of my shoulder with her other hand.[prcm]
+[else]
+　繭子はもう片方の手でこちらの肩をグッ、と握った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look, I know I said it should be rough, but I don't want it to hurt... okay?[」][lr]
+[else]
+　「あの、割と強めだからね。[l]強くじゃないからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm just kidding.[」][lr]
+[else]
+　「冗談ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She began slowly brushing my back up and down with just the right amount of strength.[prcm]
+[else]
+　と、丁度いい加減で手ぬぐいが背中を縦に往復する。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　手ぬぐいは背中の形に合わせて力加減を変えてモクモク、とよく泡立った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does it hurt?[」][lr]
+[else]
+　「痛くないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, it's just right.[l] It feels good.[」][lr]
+[else]
+　「ううん、大丈夫。[l]気持ちいいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I exhaled a breath, raised my knees, and rested my chin on them.[prcm]
+[else]
+　息を吐いてから膝を立てると、その上に頬杖をついた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you tired?[」][lr]
+[else]
+　「疲れてますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nah, it's not like that.[l] Snow never piled up this much back where I'm from, so if anything, shoveling it was a nice new experience for me.[」][lr]
+[else]
+　「ううん、そんなことはないよ。[l]うちの田舎は雪が積もらないから、初雪かきはいい経験かな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've never seen so much snow here in the past, to be honest.[」][lr]
+[else]
+　「こんなに雪が降ることなんて、こちらでも珍しいんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Guess I won't have many more chances like that, huh.[」][lr]
+[else]
+　「それなら当分は雪かきは出来ないね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, unfortunately.[」][lr]
+[else]
+　「残念ですけれど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] Well, not like I'm the one concerned.[」][lr]
+[else]
+　「そうだね。[l]まあ、私のことじゃないんだけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko's hand paused as she considered my words for a moment.[prcm]
+[else]
+　はて、と考えるように繭子の手が止まって、また再開した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you have any itchy spots?[」][lr]
+[else]
+　「痒いところはありません？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You sound like a barber.[l] What will you do if I say I do?[」][lr]
+[else]
+　「床屋さんみたい。[l]痒いって言ったらもう少ししてくれる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I let out a laugh.[prcm]
+[else]
+　そうしてははは、と笑っていると繭子が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't blame me if you won't be able to sleep on your back tonight.[」][lr]
+[else]
+　「背中が赤くなっても、知りませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Have you ever said you had an itchy spot at a barber's?[」][lr]
+[else]
+　「繭子は、床屋さんで痒いって言ってみたことある？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「ないですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have.[」][lr]
+[else]
+　「私はあるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko let out a gasp of surprise.[prcm]
+[else]
+　繭子が口の中で小さく驚きの声を出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You actually had them scratch your head?[」][lr]
+[else]
+　「してもらいました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] But then the rest of the experience didn't go too well.[l] They totally rushed the drier part afterwards.[l] I think they thought of me as an annoying customer and wanted to get it over with as soon as possible.[」][lr]
+[else]
+　「してもらった。[l]でも、その後のドライヤーとか割と雑だったり。[l]なんだか面倒な人みたいな雰囲気してたからもうしないけれど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've always thought it was more like a figure of speech than an actual proposal.[」][lr]
+[else]
+　「あれは、礼儀とか挨拶のようなものだと思うのですが」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But it feels good.[l] I wanted them to do it again.[」][lr]
+[else]
+　「だって気持ちいいもの。[l]もう一回してもらいたかったのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I suppose I can see what you mean.[」][prcm]
+[else]
+　「まあ、気持ちは分かります」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It feels good when another person scratches you. For real.[」][lr]
+[else]
+　「人にしてもらうのっていいよねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How does your back feel?[」][lr]
+[else]
+　「背中はどうですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Real nice.[l] I wish we could continue this for hours.[」][lr]
+[else]
+　「ちょうど良い加減っていうかな。[l]ずっとだってこうしていたいくらいだわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そうですか」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, Mayuko also washed my arms and shoulders.[prcm]
+[else]
+　それから繭子は肩を撫でるように、腕の方まで洗ってくれた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're being awfully nice today, Mayuko.[」][lr]
+[else]
+　「なんだか今日の繭子優しいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've been nice since before I was born.[」][lr]
+[else]
+　「私は生まれる前から優しいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't help but chuckle.[prcm]
+[else]
+　平然という繭子の声を聞いてクスリ、と笑いがこぼれた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうなの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, didn't you know?[l] Half of me is made of pure, undiluted kindness.[」][lr]
+[else]
+　「知りませんでした？[l] 繭子さんの半分は優しさで出来ているんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Never heard that one before.[l] How did you find out?[」][lr]
+[else]
+　「それは初耳。[l]それはどうやって調べたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I got a blood test here.[」][lr]
+[else]
+　「療養所の健康診断の時に、血液検査で調べたんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can tell that from blood?[」][prcm]
+[else]
+　「そんな検査項目あるの？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Leukocytes, erythrocytes, hemoglobin, protein, and kindness.[」][lr]
+[else]
+　「白血球、赤血球、ヘマト、総蛋白質、優しさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And in your case, kindness takes up half of the whole?[」][lr]
+[else]
+　「半分」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「そうです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's the average for a person?[」][lr]
+[else]
+　「それは基準値なの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Unfortunately, I'm quite far above the average.[」][lr]
+[else]
+　「残念ですが、大きく上回っていますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess I'm lucky to have a nurse like you, then.[」][prcm]
+[else]
+　「みんな繭子が看護婦でよかったね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We both chuckled.[lr]
+[else]
+　そう言って二人でクスクス、と笑いあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our laughs reverberated across the bathroom walls.[prcm]
+[else]
+　その笑い声は浴場に小さく反響した。[prcm]
+[endif]
+
+
+
+
+;////////
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=2 time=1500]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Cold air enveloped my body as I opened the door to the dressing room.[lr]
+[else]
+　カラカラ、と脱衣所の扉を開けると、涼しい空気が体を冷ました。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the weight scales by the door. I passed by them, took the basket with my change of clothes from the shelf, wrapped myself in a towel, and put on my underwear.[lr]
+[else]
+　扉の傍にある体重計をチラリ、と横目で見てから通り過ぎると、棚の前で着替えのある籠を引き、中にあるタオルで体を拭いてから、下着を履いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I slid into my shirt and turned around, I saw Mayuko putting on her socks after wiping herself with a towel.[prcm]
+[else]
+　シャツを着てから振り返ると、タオルで体を拭き終わった繭子が籠から靴下を取り出して履いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you always start from the socks?[」][lr]
+[else]
+　「いつも靴下から履くの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes?[」][lr]
+[else]
+　「そうですけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That looks pretty indecent.[」][lr]
+[else]
+　「いやらしい格好」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko promptly put on her underwear and shirt.[prcm]
+[else]
+　繭子はさっさと下着とシャツを着てしまった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I always feel like heat escapes my body through my feet.[」][lr]
+[else]
+　「足が寒いと、体が冷めてしまう気がするんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And honestly, I feel the way you think is far more indecent.[」][lr]
+[else]
+　「そういうことを考えるほうが、よほどいやらしいと思う」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][prcm]
+[else]
+　「そうかな？」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=10]
+[wt]
+[wait time=3000]
+[seopt buf=2 volume=100]
+[jingle4]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="150.ks" target=*150
+

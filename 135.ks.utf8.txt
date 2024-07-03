@@ -1,0 +1,1450 @@
+*135| Something important
+; *135|大事なもの
+[fbfstoretitle eng="Something important" jp="大事なもの"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+[call storage="MyMacro.ks" target="*Jingle7"]
+
+[msglayer3]
+[playse buf = 1 storage=se105.wav loop=true]
+[wait time=1000]
+[playbgm storage="bgm33"]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg102_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 168"]
+[eval exp="sf.ItRelease = 169"]
+[endif]
+
+
+*| Something important
+; *|大事なもの
+[fbfstoretitle eng="Something important" jp="大事なもの"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After the voices had ceased, I continued down the lone path for a while. Soon enough, I started hearing something in the distance again.[lr]
+[else]
+　声が聞こえなくなってからしばらくの間、分かれ道のない洞穴を進んでいると、向こうから静かな音が聴こえてくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It reminded me of a rock falling on something hard, or perhaps a chess piece swiftly being placed on a board.[prcm]
+[else]
+　カチッ、カチッ、と何処かで小石が落ちているものと錯覚していたその音は、よく聞くとチェスの駒が盤を叩く音だった。[prcm]
+[endif]
+
+
+;★同じ内容の話が074シーンにあるよ
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p03_h01" visible=true left=280 top=0 opacity=90]
+[fbfscale_image layer=1 page=back storage="fgimage/s_img/f01_p01_h01" visible=true left=-70 top=0 opacity=90]
+[fbfscale_image layer=2 page=back storage="fgimage/other_img/bg05_1" visible=true left=0 top=0 opacity=90]
+[trans method=universal rule="rule21" vague=50 time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Remember the girl that was with us when we talked to Lily?[」][lr]
+[else]
+　「リリィさんと話をしたときに居た女の子がいただろう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「ええ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't you think she's just like you when you were little?[」][prcm]
+[else]
+　「小さい頃のキミにそっくりじゃないか？」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really? In what way?[」][lr]
+[else]
+　「そうかしら、どんなところが似てるのよ？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h01" visible=true left=280 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Her unsociable attitude and quick wits.[l] Actually, that part of you hasn't changed at all.[l] When did you become like that?[」][lr]
+[else]
+　「簡単に言うと、愛想のないところとか、小さいのに良く頭の回るところとかかな。[l]今もあまり変わってないんじゃないか。[l]いつからそうなったんだろうね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I was born this way. Takako had sociability for the both of us.[」][lr]
+[else]
+　「愛想がないのは生まれた時からだった気がするわ、でもその分も[ruby text="たか"]貴[ruby text="こ"]呼が振りまいてたから良いのよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/n_img/f02_p01_h06" visible=true left=280 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And you were the brains for you both.[」][lr]
+[else]
+　「彼女の分の頭は、キミが回してたのか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds about right.[」][prcm]
+[else]
+　「そんなところ」[prcm]
+[endif]
+
+
+
+;/////
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[stopse buf=1]
+[playse buf = 1 storage=se137.ogg]
+[fbfscale_image layer=0 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=0 top=0 opacity=255]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=0 top=0 opacity=255]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=0 top=0 opacity=255]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg102_2" page=back layer=base]
+[trans method=universal rule="rule21" vague=50 time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Suddenly, one of my legs sank into the ground.[lr]
+[else]
+　ふと、地面が抜けて踏み出した足が沈む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw a puddle — black as ink — as I glanced down.[lr]
+[else]
+　足は踝まで真っ黒の墨汁のような水たまりに沈んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Beyond the slope behind me, I saw a sparkling water surface.[lr]
+[else]
+　歩いてきた方を振り返ると、坂道の先にさざなみがキラキラ、と光る水面が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Above it fluttered the starlit sky.[prcm]
+[else]
+　その向こうには青い星空が揺られて見える。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The black puddle by my feet grew bigger, separating from water like oil.[lr]
+[else]
+　足元の黒いたまりは、比重の違う水と油のように広がっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The heavy water, like a black mirror, gave a clear reflection of my body.[lr]
+[else]
+　重い水は黒い鏡のようにこちらの姿を鮮明に映していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried stepping forward, creating a ripple in the blackness, and felt my shoe press against the hard, rocky bottom underneath it.[prcm]
+[else]
+　止めていた足を踏み込むと、波紋が広がり靴底が見えない岩場を踏んだ。[prcm]
+[endif]
+
+
+
+;/////
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put my other leg into the blackness.[lr]
+[else]
+　反対側の足も沈ませる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt like I had stepped into the deep sea.[lr]
+[else]
+　ひやりと、海の深いところに足を入れたような感覚があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was solid ground at my feet, yet I continued sinking.[lr]
+[else]
+　足はしっかりと岩場を踏んで、体は抵抗もなく沈んでいく。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule21" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The blackness enveloped me, robbing me of sight.[prcm]
+[else]
+　頭の先まで沈んでしまうと、目には何も映らなくなった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, the ground evened out, making it easier to walk forward.[lr]
+[else]
+　足場はなだらかで、歩は順調に進んでいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I strained my ears and heard another sound.[lr]
+[else]
+　耳を澄ませていると、しばらくしてからまた別の音が聞こえた。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se30.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It reminded me of the clanging of dishes.[prcm]
+[else]
+　カチャカチャ、と食器の音が聞こえる。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[playse buf = 1 storage=se137.ogg]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f02_p02_h02" visible=true left=330 top=0 opacity=90]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f02_p04_h03" visible=true left=105 top=0 opacity=90]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h03" visible=true left=-120 top=0 opacity=90]
+[fbfscale_image layer=3 page=back storage="fgimage/other_img/bg62" visible=true left=0 top=0 opacity=90]
+[trans method=universal rule="rule21" vague=50 time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It smells great, but I like it when it's more sweet.[」][lr]
+[else]
+　「香りはいいけど、私はもう少し甘いほうがいいな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why would you want to ruin the taste of something this delicious?[」][lr]
+[else]
+　「こんなに美味しいのにもったいないですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This flavor might have been a bit too early for you, Takako.[」][lr]
+[else]
+　「貴呼には、フレーバーはまだ早かったみたいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard Sachiko, Takako, and the voice of another woman I didn't know.[prcm]
+[else]
+　[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子と貴呼、それに聞き覚えのない女性の声が聞こえる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f02_p04_h06" visible=true left=105 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Instant tea is already more than good enough for her.[」][lr]
+[else]
+　「どうせ、冷蔵庫に置いてる紙パックで十分だもの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that still apple tea?[」][lr]
+[else]
+　「アップルティーのこと？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah. Sachiko brings it home sometimes.[」][lr]
+[else]
+　「そう、いつも佐知子が買ってくるやつ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a bit too sweet, but it's not bad for the price.[」][lr]
+[else]
+　「少し甘すぎるんだけど紙パックの安物にしては、なかなかちゃんとしてるのよ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h01" visible=true left=-120 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And this is the instant green tea, right?[」][lr]
+[else]
+　「紙パックの紅茶ってこれですか？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f02_p04_h01" visible=true left=105 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep.[」][prcm]
+[else]
+　「そうそれ」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It only has Ceylon written on the label.[」][lr]
+[else]
+　「お茶の種類は、セイロンとだけ書いてありますね」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ceylon? You mean, Sri Lanka?[」][lr]
+[else]
+　「セイロンってスリランカのこと？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Speaking of tea brands from Sri Lanka, Five Kinds is a good one.[」][lr]
+[else]
+　「スリランカの紅茶といえば、ファイブカインドが有名ね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f02_p04_h08" visible=true left=105 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa, that's a cool name. Sounds almost like some superhero show.[」][lr]
+[else]
+　「なにそれ格好いいね、戦隊物みたい」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/s_img/f02_p01_h07" visible=true left=330 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]...It refers to five tea leaves: Uva, Candy, Nuwara Eliya, Dimbula, and Ruhuna.[」][lr]
+[else]
+　「なにと戦うのよ。[l]ウバ、[l]キャンディ、[l]ヌワラエリヤ、[l]ディンブラ、[l]ルフナの五つの茶葉のことよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It sounds like Darjeeling tea.[」][prcm]
+[else]
+　「インドのダージリンみたいなものですね」[prcm]
+[endif]
+
+
+[msgoff]
+[fbfscale_move time=100 path="(105,-30,90)(105,0,90)" layer=1]
+[wm]
+[fbfscale_move time=100 path="(105,-30,90)(105,0,90)" layer=1]
+[wm]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ranger Red![」][lr]
+[else]
+　「ウバレッド！」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's the only color it has, though.[」][lr]
+[else]
+　「他はどんな色にするつもり？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p03_h08" visible=true left=-120 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does the background behind you explode when you drink your apple tea?[」][lr]
+[else]
+　「それじゃあアップルティーを飲んで登場すると、背景が爆発したりするんですか？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f02_p01_h06" visible=true left=105 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wouldn't it be a problem if you could buy something that dangerous so easily?[」][lr]
+[else]
+　「そんな危険物を安価に購入できるなんて、穏やかじゃないね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We should blackmail them and claim the entire tea shop for ourselves.[」][lr]
+[else]
+　「そこの商店街で買ってきたの、クレームしてみる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][prcm]
+[else]
+　「そうだね」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=-120 top=0 opacity=90]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You two are starting to lose me.[」][lr]
+[else]
+　「ただの怪しい人ですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And it's not even spring yet.[」][prcm]
+[else]
+　「まだ春じゃないのにね」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 1 storage=se137.ogg]
+[fbfscale_image layer=0 page=back storage="fgimage/f_img/f01_p02_h04" visible=false left=0 top=0 opacity=255]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p02_h04" visible=false left=0 top=0 opacity=255]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h04" visible=false left=0 top=0 opacity=255]
+[fbfscale_image layer=3 page=back storage="fgimage/f_img/f01_p02_h04" visible=false left=0 top=0 opacity=255]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[freeimage layer=3 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule21" vague=50 time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The voices grew louder as I continued, then began to fade as though I had just walked past them.[lr]
+[else]
+　歩を進めていくと、声のやりとりは次第に大きくなり、傍らを通り過ぎるように小さくなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When the voices completely ceased, I strained my ears again, but could no longer hear a thing.[lr]
+[else]
+　再び無音になったところで足を止めて耳を澄ませたが、もう何も聞こえなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I tried saying something myself, but it had no effect.[prcm]
+[else]
+　声を出してみても反響もない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't perceive anything besides the ground at my feet, so I didn't even know how wide this cave was right now.[lr]
+[else]
+　靴底の感触以外に感じるものはなく、歩いている洞窟の広さも把握できない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After confirming the condition of the auditory landscape, I started walking again.[prcm]
+[else]
+　音が全く聞こえないことを確認してから、歩き始める。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Something akin to mist appeared in the darkness in front of me.[lr]
+[else]
+　黒い闇を見ながら歩いていると、視界に靄のようなものが浮かんで見えた。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p01_h02" visible=true left=330 top=0 opacity=0]
+[trans method=universal rule="rule21" vague=50 time=1]
+[wt]
+[fbfscale_move time=1000 path="(80,0,255)(-120,0,0)" layer=0]
+[wm]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f07_p01_h02" visible=true left=330 top=0 opacity=255]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It looked kind of red and blue at the same time. As I followed it with my eyes, a small girl appeared in the corner of my eye and dashed further into the cave.[lr]
+[else]
+　赤や青にもみえる、靄を目で追いかけていると、目の端から小さな子供が現れて、洞窟の奥へと走って行った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She looked like Takako in her childhood. I didn't actually see her directly. It was just her reflection on the cave wall.[prcm]
+[else]
+　走っていった子供は幼い貴呼で、実際に見えたのは実物ではなく黒い鏡のようになった洞窟の壁に映った像だった。[prcm]
+[endif]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00_w" page=back layer=base]
+[trans method=universal rule="rule22" vague=50 time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I narrowed my eyes while still looking at that huge, black mirror, when a light suddenly lit up behind me. Its reflection on the wall momentarily rendered me blind.[prcm]
+[else]
+　目を細めて、鈍く反射をする黒い鏡を眺めていると、背中を暖かい光が照らした、すぐに黒い鏡に反射して目を眩ませた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+;/////
+
+*135_b| Something important (retrospection)
+; *135_b|大事なもの（回想）
+[fbfstoretitle eng="Something important (retrospection)" jp="大事なもの（回想）"]
+
+
+[playse buf = 1 storage=se84.ogg loop=true]
+[seopt buf=1 volume=60]
+[wait time=1000]
+[msglayer2]
+[backlay]
+[playse buf = 0 storage=se57.ogg]
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method=universal rule="rule9" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*| Something important (retrospection)
+; *|大事なもの
+[fbfstoretitle eng="Something important (retrospection)" jp="大事なもの"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned the page.[lr]
+[else]
+　パラリ、と本のページを捲る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rays of the evening sun filtered in through the window of the dead silent classroom.[lr]
+[else]
+　時計の秒針の音が聞こえるほどに静かになった教室の窓際には夕焼けが指していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The white curtains fluttered as a gust of cold wind swept into the room through the open window, cooling my cheeks.[lr]
+[else]
+　無地の白いカーテンが揺れると、冷たい風が吹いて、夕日に温まった頬をヒヤリ、とさせた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the clock.[lr]
+[else]
+　もう一節を読み終えたところで、時計を見る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear a plane and the voices of children in the distance.[prcm]
+[else]
+　窓の外の遠くから、空を飛ぶ航空機と、運動部の掛け声が聞こえた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Let's do this.[」][lr]
+[else]
+　「いくよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I suddenly heard Takako's voice from outside.[prcm]
+[else]
+　と、窓の外から[ruby text="たか"]貴[ruby text="こ"]呼の声がする。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg16_b" page=back layer=base]
+[trans method=universal rule="rule1" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well?[」][lr]
+[else]
+　「どう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wow.[l] It actually got stuck in the trunk.[」][lr]
+[else]
+　「すごい。[l]ちゃんと刺さってる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked down from the window to see Takako and one of our classmates throwing something at a cherry blossom tree behind the judo hall.[prcm]
+[else]
+　窓から下を見ると、柔道場の裏で貴呼とクラスの子が桜の木に向かって何か投げて騒いでいる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What on earth are you two doing there?[」][lr]
+[else]
+　「貴方たち、そこで何をしてるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Our English teacher appeared from within the school building.[prcm]
+[else]
+　そんな声がして、こちら側の校舎から英語の教師が出てきた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, shit.[」][lr]
+[else]
+　「まずいかも」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Everyone around the tree scattered like startled animals.[lr]
+[else]
+　桜の木に集まっていた生徒はハチの子を散らすように逃げていく。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The teacher went after Takako, who seemed to be the most likely ringleader, and caught her by the collar. He then pulled her back into the building.[lr]
+[else]
+　主犯と思われたのか、貴呼は狙いをつけられて先生に捕まり、そのまま引っ張られて校舎の中へと消えた。[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item01" page=back layer=base]
+[trans method=universal rule="rule15" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I glanced at the clock again and returned to my book.[prcm]
+[else]
+　もう一度時計を見てから、読書に戻る。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=1 time=1000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[playbgm storage="bgm10"]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg16_b" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[seopt buf=1 volume=100]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After about fifty pages, I heard footsteps in the corridor.[prcm]
+[else]
+　それから小説を50ページほど読みすすめたところで、廊下から足音が聞こえてきた。[prcm]
+[endif]
+
+
+[msgoff]
+[playse buf = 2 storage=se56.ogg]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h05" visible=true left=-70 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hahh.[」][lr]
+[else]
+　「はあ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako entered the classroom with a sigh.[prcm]
+[else]
+　と、ため息をついて貴呼が教室に戻ってきた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h03" visible=true left=105 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh? I thought you already left, Sachiko.[」][lr]
+[else]
+　「あれ、佐知子まだ帰ってなかったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I forgot my key, so I need to wait until my sister gets home.[」][lr]
+[else]
+　「家の鍵を忘れたから、姉が帰るまで待ってるの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] Let's go home together, then.[」][lr]
+[else]
+　「そうだったの。[l]なら待ってるから一緒に帰ろう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She sat down in her seat, which was right in front of mine.[prcm]
+[else]
+　こちらの前にある貴呼の席に座る。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h14" visible=true left=105 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, that's right.[l] I wanted you to help me with homework.[」][lr]
+[else]
+　「あ、そうだった。[l]宿題手伝って」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But we didn't get anything today.[」][lr]
+[else]
+　「今日は何もなかったわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have to write a written apology in English.[」][lr]
+[else]
+　「英語で反省文を書かないといけないの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What did you do this time?[」][lr]
+[else]
+　「何をやったのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako took out a small steel plate from her skirt pocket and handed it to me.[prcm]
+[else]
+　貴呼が、スカートのポケットに手を入れて鉄の板を取り出してこちらに寄越した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The rest got confiscated.[」][lr]
+[else]
+　「後は、見つかって没収されちゃった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that the shuriken you bought during our last school trip?[」][lr]
+[else]
+　「何これ、修学旅行で買った手裏剣？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h09" visible=true left=105 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I used the whetstone in the industrial arts room to sharpen them.[l] Oh, and... I wouldn't recommend touching the edges.[」][lr]
+[else]
+　「技術室の窓際に万力置いてあるでしょう。[l]あれで固定してヤスリで磨いたの。[l]あ、そっちの方を持つと危ないよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The edges of the steel glimmered in a sharp, silver light.[prcm]
+[else]
+　手裏剣の形をした黒い鉄の板は、刃の部分をヤスリで磨かれて銀色になっている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you serious?[」][lr]
+[else]
+　「いや、危ないのは貴方だわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The teachers got angry at me when I tested them on a tree.[」][lr]
+[else]
+　「木に投げてたら、先生に怒られちゃった」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course they did! Are you crazy?[」][lr]
+[else]
+　「当たり前よ、馬鹿じゃないの」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h24" visible=true left=105 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I do feel sorry, okay?[」][lr]
+[else]
+　「一応、反省してます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako let out a groan.[prcm]
+[else]
+　ウウ、と唸った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So what exactly happened with the teachers there?[」][lr]
+[else]
+　「何て怒られたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They said that trees can start to rot if you damage their bark.[」][lr]
+[else]
+　「樹皮が剥がれたところから木が腐るからやめなさいって言われた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's all?[」][prcm]
+[else]
+　「それだけ？」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then they told me to consider how I'd feel if someone threw these things at me.[」][lr]
+[else]
+　「あと、自分がされたら、どんな気持ちになるか考えなさいって言われた」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And did you?[」][lr]
+[else]
+　「それで、少しは考えたの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h14" visible=true left=105 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+　「手を上げて声も出せないで、お腹に刃物が刺さる」[lr]
+[r]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako clutched her stomach and fell to her knees.[prcm]
+[else]
+　貴呼が、お腹を抑えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you still planning to keep that up?[」][lr]
+[else]
+　「まだ、やるつもり？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「もうしません」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then you don't need this anymore.[」][lr]
+[else]
+　「なら、これも要らないわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I folded my handkerchief around the shuriken and put it in my bag.[prcm]
+[else]
+　手裏剣をハンカチに包んで、カバンにしまう。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h02" visible=true left=105 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Eh? Where are you taking it?[」][lr]
+[else]
+　「え、どこに持っていくの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll bring it to the teacher's room.[l] They can do away with it like they did with the rest.[」][lr]
+[else]
+　「あとで職員室に持っていくわ。[l]先生に処分してもらうのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wait...[」][lr]
+[else]
+　「ちょっと待って」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't have a use for it anymore, do you?[」][prcm]
+[else]
+　「もう使わないんでしょう」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h06" visible=true left=105 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It has sentimental value.[」][lr]
+[else]
+　「いえ、観賞用としての価値があるので」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I know you won't be able to resist if it's right in front of your eyes.[」][lr]
+[else]
+　「道具はあると使いたくなるものなのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She considered me with imploring eyes for a few moments, then clutched her head and collapsed onto the desk with her upper body.[prcm]
+[else]
+　懇願する目でこちらを見て、それから考えるような仕草をしたあとでガタン、と机に突っ伏した。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h17" visible=true left=105 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You've no idea how long it took to sharpen them.[」][lr]
+[else]
+　「磨くの大変だったのに」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She let out another groan.[prcm]
+[else]
+　ウウ、と唸った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're always having fun.[」][lr]
+[else]
+　「貴方いつも楽しそうね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/t_img/f06_p02_h02" visible=true left=105 top=0 opacity=255 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako lazily raised her face with her upper body still on the desk.[prcm]
+[else]
+　ムクリ、と貴呼が怠そうに顔だけ上げる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And you're not?[」][lr]
+[else]
+　「佐知子は楽しくないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Aside from studying, not really.[l] I don't like to be around so many people.[」][lr]
+[else]
+　「勉強以外はあまり。[l]学校は人が多くて苦手なの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そうかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「そうよ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sound of a bat hitting a ball reached us from the baseball field.[lr]
+[else]
+　カキン、とバットが野球ボールをたたく音がした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The school buildings beyond the window, the cherry blossoms around them, and the scenery of the town in the distance had all been painted orange by the evening sun.[prcm]
+[else]
+　窓の外から見える校舎も、道場の屋根も、桜の木も、向こうの街も夕日色に焼けていた。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=2 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle7]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="136.ks" target=*136
+
+

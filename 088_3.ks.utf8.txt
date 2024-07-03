@@ -1,0 +1,166 @@
+*088_3| The invisible hole
+; *088_3|見えない穴
+[fbfstoretitle eng="The invisible hole" jp="見えない穴"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*Jingle4"]
+
+[msglayer]
+[playbgm storage="bgm37"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 109"]
+[eval exp="sf.ItRelease = 110"]
+[endif]
+
+
+*| The invisible hole
+; *|見えない穴
+[fbfstoretitle eng="The invisible hole" jp="見えない穴"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After finishing the conversation, I left Sanae's room with notebook in hand.[lr]
+[else]
+　用意してきた話題を話し終えると、手帳を持って[ruby text="さ"]早[ruby text="なえ"]苗の部屋をあとにした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I had no other plans for the day, so I decided to return to my room.[prcm]
+[else]
+　その後の予定はないので一度自室に戻ることにした。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg85_6" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat down in the chair and was about to continue reading the diary when I remembered that odd pain behind my eyes.[lr]
+[else]
+　自室に戻り、椅子に腰掛けて手帳の続きを読もうとしたところで、目の奥の痛みを思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Remnants of it still seemed to linger in my mind.[prcm]
+[else]
+　まだほんの少しだけ頭の中に、手帳を読んだ後に感じた痛みが少し残っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Rushing things would've been pointless, so I chose to close the notebook for now.[lr]
+[else]
+　急いで読む必要もないので手帳を閉じた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shut my eyes and leaned against the chair with all my weight.[lr]
+[else]
+　目を閉じ、椅子に深く腰掛けて体を休めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The pain vanished.[prcm]
+[else]
+　気が付くと目の奥の痛みは消えていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It happened either when I closed my eyes, or shortly afterwards.[lr]
+[else]
+　目を閉じている間か、それとも閉じた瞬間か、どこかのタイミングで移動したかのようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Now that the pain was gone, I felt cold.[lr]
+[else]
+　目の痛みが気にならなくなると今度は少し肌寒さを感じた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+An unpleasant chill ran down my spine.[prcm]
+[else]
+　寒気は首筋から背中の間を嫌な感じで冷やした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my eyes to check if the window was closed.[lr]
+[else]
+　目を開けて、窓が空いていないことを確認した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I couldn't see it from my current position, so I stood up and walked closer. After pulling on it a few times, I fastened the latch.[prcm]
+[else]
+　よく見えなかったので立ち上がって窓の方へ行くと、枠を押し込んでキッチリと錠をおろした。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[jingle4]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="089.ks" target=*089
+
+

@@ -1,0 +1,480 @@
+*082_3| A room illuminated by the morning light
+; *082_3|朝日差す部屋
+[fbfstoretitle eng="A room illuminated by the morning light" jp="朝日差す部屋"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm24"]
+[backlay]
+[eval exp="sf.cg76_1=1"]
+[fbfscale_image storage="ev76_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[backlay]
+[eval exp="sf.cg76_2=1"]
+[fbfscale_image storage="ev76_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="ev76_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 100"]
+[eval exp="sf.ItRelease = 101"]
+[endif]
+
+
+*| A room illuminated by the morning light
+; *|朝日差す部屋
+[fbfstoretitle eng="A room illuminated by the morning light" jp="朝日差す部屋"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The weather was great this morning.[lr]
+[else]
+　今朝は快晴だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Warm sunlight entered my room through the windows as the sound of radio calisthenics reverberated across the walls.[lr]
+[else]
+　部屋には暖かな陽光が差し込み、ラジオ体操の音楽が流れていた。[lr]
+[endif]
+
+[r]
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[eval exp="sf.cg76_3=1"]
+[fbfscale_image storage="ev76_3" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="ev76_1" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My hand touched Mayuko's as I stretched out my chest.[prcm]
+[else]
+　イッチニ、と胸の運動をしていると、手を伸ばした時に[ruby text="まゆ"]繭[ruby text="こ"]子の手に当たった。[prcm]
+[endif]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Today, she was exercising next to me.[lr]
+[else]
+　今日は隣で繭子が運動している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It suddenly got pretty cramped in here when we both extended our arms.[lr]
+[else]
+　窓を背にして並んで腕を広げると狭い。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko continued her exercise without minding me, so I tried turning a little so we wouldn't be on the same line. Before I realized it, though, she had already turned as well.[prcm]
+[else]
+　繭子が気にせずに体操を続けるので少しだけ横にずれると、気がついて向こうも横にずれた。[prcm]
+[endif]
+
+
+;＊
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's nice to exercise once in a while.[」][lr]
+[else]
+　「たまには、体操もいいですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko wore a skirt, so she skipped most of the leg-related exercises that would have been too revealing.[prcm]
+[else]
+　腕を振って脚を曲げ伸ばす運動の時に、スカートを履いている繭子は足を曲げずに腕だけを振った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You should do this every day.[」][lr]
+[else]
+　「繭子も続けるといいよ」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev76_3" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[eval exp="sf.cg76_4=1"]
+[fbfscale_image storage="ev76_4" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah...[l] It reminds me of summer vacations back in elementary school.[」][lr]
+[else]
+　「そうですね。[l]なんだか、小学校の夏休みを思い出しますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you have to do it for stamps, too?[」][lr]
+[else]
+　「繭子のところでも、判子押してもらってた？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] When I was in my sixth year, I was actually the one doing the stamping.[」][lr]
+[else]
+　「ええ。[l]小学校六年の時には、前で判子を押す側もやりましたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I did that, too.[l] I used my usual family name stamp, but the ones with more complicated names get priority treatment — the more strokes, the better. Names like that look cooler on paper, apparently.[」][prcm]
+[else]
+　「私も押したよそれ。[l]こっちは普通に家の苗字の判子だったけど。[l]あれは、画数の多い苗字の方が人気があるよね。[l]かっこいいから」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The exercise ended with taking a deep breath. I let my hands fall to my sides.[lr]
+[else]
+　最後に深呼吸の体操が終わり、腕を下ろす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I turned off the radio.[prcm]
+[else]
+　それから、ラジオカセットの電源を切った。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg85_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled = true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you sure it's not just your imagination?[l] I used my family name stamp, too, and I didn't feel I was treated different than anybody else.[」][lr]
+[else]
+　「それは貴呼さんがそう思ってるだけじゃないですか？[l] 私のところもそうでしたけど、うちの判子もほかと同じくらい押してましたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your boobs have always been big, haven't they?[」][lr]
+[else]
+　「繭子って昔から、胸が大きかったんじゃないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko remained silent until I turned around and our eyes met.[prcm]
+[else]
+　振り返って目が合うまで繭子は黙っていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think that's just your imagination, too.[」][lr]
+[else]
+　「それも、貴呼さんだけだと思いますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Now that I think about it, I never managed to make it through all exercises during my vacations.[l] Do you get anything if you end up with a perfect stamp record?[」][lr]
+[else]
+　「そういえば、一度も皆勤した事なかったな。[l]ラジオ体操って皆勤賞は何がもらえたのかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No idea.[l] Maybe they award you with stationery or alarm clocks or something along those lines.[」][lr]
+[else]
+　「私も知りませんね。[l]文房具とか、目覚まし時計が貰えるんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I figured it'd be something like that.[」] I sat down on the bed.[prcm]
+[else]
+　「やっぱりそんなものだよね」とベッドに腰を下ろす。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why alarm clocks, though?[l] I get the part about stationery, but...[」][lr]
+[else]
+　「ところで、どうして目覚まし時計？[l] 文房具はなんとなくわかるけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]At our school, that was the prize for a perfect attendance record.[」][lr]
+[else]
+　「高校の皆勤賞が目覚まし時計だったんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that really something a person with a perfect attendance record would need?[」][lr]
+[else]
+　「皆勤賞をもらうような人にそれは必要なのだろうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Perhaps not.[」] Mayuko smiled to herself.[prcm]
+[else]
+　繭子は「そうですね」と言って笑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're a pretty diligent one, though, Mayuko.[l] How come you couldn't keep up a perfect attendance record for the radio exercises?[」][lr]
+[else]
+　「それにしても繭子って真面目だったんだね。[l]どうしてラジオ体操は皆勤じゃなかったの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Our family went to my grandparents' house for Obon.[l] Most other families also go on trips during the summer, so getting that prize is not as easy as it sounds.[」][lr]
+[else]
+　「うちはお盆で里帰りがありましたからね。[l]旅行に行くところもあるでしょうし、夏休みのラジオ体操の皆勤というのは相当難しいんじゃないですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah...[」][prcm]
+[else]
+　「確かに」[prcm]
+[endif]
+
+
+;＊
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko picked up a small parcel from one of the shelves and held it up in front of me.[prcm]
+[else]
+　繭子は棚の上に置いておいた小包を取って来てこちらに差し出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look, I found this in the storage room on cleaning day.[」][lr]
+[else]
+　「そういえば、この間掃除をしていた時に物置でこんなものを見つけたんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was wrapped in light brown kraft paper, and had the size and weight of a dictionary or a really thick book.[lr]
+[else]
+　繭子から受け取った小包は茶色いクラフトペーパーで包まれていて、大きさは辞書と同じ程度で重さもそれくらいだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon checking the other side, I realized it was addressed to me.[prcm]
+[else]
+　裏面を見ると「貴呼宛」とだけ書いてある。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where exactly did you find this?[」][lr]
+[else]
+　「どこで出てきたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The storage room on the second floor.[l] It might have gotten there by accident when we were rearranging our belongings.[」][lr]
+[else]
+　「二階の物置ですよ。[l]もしかしたら、荷物整理のときに紛れたのかも知れないですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][lr]
+[else]
+　「ふうん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's not written whom it's from.[l] I think there's a book or something like that inside.[」][prcm]
+[else]
+　「送り主の名前が書いてありませんね。[l]大きさからして中身は本か何かだと思いますけど」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]This is some good paper.[l] I'd have to tear it open by hand, so could you maybe lend me a knife?[」][lr]
+[else]
+　「いい紙だね。[l]綺麗に開きたいから後でナイフ貸してくれる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course.[」][lr]
+[else]
+　「いいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Without getting up from the bed, I reached out and placed the parcel on the side table.[lr]
+[else]
+　ベッドの上から手を伸ばして小包をサイドテーブルの上に置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, I returned to my previous position.[prcm]
+[else]
+　上体を戻して座りなおす。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well then, let's go do the laundry,[」] said Mayuko.[prcm]
+[else]
+　「それじゃあ、洗濯物に行きましょうか」と繭子が言った。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="083.ks" target=*083
+
+

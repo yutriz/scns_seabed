@@ -1,0 +1,978 @@
+*tips
+[ctrlskip enabled="false" quickflg="false"]
+;[tempsave place=3]
+[rclick enabled=false]
+[playbgm storage="bgm34"]
+[call storage="mouse.ks"]
+[wait time=200]
+[clickskip enabled=false]
+; 現在の状態をメモリ上の栞に保存しておきます
+; メッセージ履歴の出力・表示を無効にします
+[history output=false enabled=false]
+[call target=*tipslist]
+;@jump storage="chapterlist.ks" target=*chapterlist
+
+[iscript]
+
+{
+  // 変数初期化
+  tf.firstScenIndex = 1;  // 選択章の一番若いシーンの配列添字を格納する変数
+
+  // 選択章の最終シーンの配列添字を格納する変数
+  // 序章の最終シーンはシーン50。解放シーンが50に到達していない場合は解放フラグをそのまま配列添字とする
+  if(f.ItRelease_tips1 <=8){
+    tf.endScenIndex = f.ItRelease_tips1;
+  }else{
+    tf.endScenIndex = 8;
+  }
+  
+  tf.scenIndex = tf.firstScenIndex;  // 表示中文字列が格納されている配列添字を格納する変数（シーン）
+  
+  tf.endSyoIndex = f.CpRelease_tips;      // 解放済みの章の内、最新の章の配列添字を格納する変数
+  tf.syoIndex = 1;                   // 表示中文字列が格納されている配列添字を格納する変数（章）
+  // チャプターがどこまで開放されているかを管理する変数
+  //f.CpRelease
+  //f.ItRelease
+  // 章選択戻り▲ON FLG  0:false, 1:true
+  tf.syoSelect1 = 0;
+  // 章選択送り▲ON FLG  0:false, 1:true
+  tf.syoSelect2 = 0;
+  // シーン選択戻り▲ON FLG  0:false, 1:true
+  tf.scenSelect1 = 0;
+  // シーン選択送り▲ON FLG  0:false, 1:true
+  tf.scenSelect2 = 0;
+  
+  tf.jumpName = "";
+  
+  //ボタン表示フラグ 0:非アクティブ 1:アクティブ 2:グレーアウト
+  tf.syoSelectLeft = 1;
+  tf.syoSelectRight = 0;
+  tf.scenSelectLeft = 1;
+  tf.scenSelectRight = 0;
+
+}
+
+[endscript]
+
+
+[iscript]
+function syoSelect1_onenter()
+ {
+    cursor_str_update();
+    if(tf.syoSelectLeft != 2){
+     kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+     tf.syoSelectLeft = 1;
+    }
+    change_display();
+ }
+
+function syoSelect1_onleave()
+ {
+    cursor_str_update();
+    if(tf.syoSelectLeft != 2){
+     tf.syoSelectLeft = 0;
+    }
+    change_display();
+ }
+
+function syoSelect2_onenter()
+ {
+    cursor_str_update();
+    if(tf.syoSelectRight != 2){
+     kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+     tf.syoSelectRight = 1;
+    }
+    change_display();
+ }
+
+function syoSelect2_onleave()
+ {
+    cursor_str_update();
+    if(tf.syoSelectRight != 2){
+     tf.syoSelectRight = 0;
+    }
+    change_display();
+ }
+
+function scenSelect1_onenter()
+ {
+    cursor_str_update();
+    if(tf.scenSelectLeft != 2){
+     kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+     tf.scenSelectLeft = 1;
+    }
+    change_display();
+ }
+
+function scenSelect1_onleave()
+ {
+    cursor_str_update();
+    if(tf.scenSelectLeft != 2){
+     tf.scenSelectLeft = 0;
+    }
+    change_display();
+ }
+
+function scenSelect2_onenter()
+ {
+    cursor_str_update();
+    if(tf.scenSelectRight != 2){
+     kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+     tf.scenSelectRight = 1;
+    }
+    change_display();
+ }
+
+function scenSelect2_onleave()
+ {
+    cursor_str_update();
+    if(tf.scenSelectRight != 2){
+     tf.scenSelectRight = 0;
+    }
+    change_display();
+ 
+ }
+
+
+function change_display()
+{
+  //ボタン表示フラグ 0:非アクティブ 1:アクティブ 2:グレーアウト
+  
+  // 章選択左カーソル更新処理=====================================
+  
+  // 0は非アクティブのパターン 
+  if(tf.syoSelectLeft == 0)
+  {
+    kag.fore.layers[1].visible = false;
+    kag.fore.layers[2].visible = true;
+    kag.fore.layers[3].visible = false;
+    kag.back.layers[1].visible = false;
+    kag.back.layers[2].visible = true;
+    kag.back.layers[3].visible = false;
+  }
+  // 1はアクティブのパターン
+  else if(tf.syoSelectLeft == 1)
+  {
+    kag.fore.layers[1].visible = true;
+    kag.fore.layers[2].visible = false;
+    kag.fore.layers[3].visible = false;
+    kag.back.layers[1].visible = true;
+    kag.back.layers[2].visible = false;
+    kag.back.layers[3].visible = false;
+  }
+  // 2はグレーアウト（選択不可）のパターン
+  else if(tf.syoSelectLeft == 2)
+  {
+    kag.fore.layers[1].visible = false;
+    kag.fore.layers[2].visible = false;
+    kag.fore.layers[3].visible = true;
+    kag.back.layers[1].visible = false;
+    kag.back.layers[2].visible = false;
+    kag.back.layers[3].visible = true;
+  }
+  
+  // 章選択右カーソル更新処理=====================================
+  
+  // 0は非アクティブのパターン 
+  if(tf.syoSelectRight == 0)
+  {
+      kag.fore.layers[4].visible = false;
+      kag.fore.layers[5].visible = true;
+      kag.fore.layers[6].visible = false;
+      kag.back.layers[4].visible = false;
+      kag.back.layers[5].visible = true;
+      kag.back.layers[6].visible = false;
+  }
+  // 1はアクティブのパターン
+  else if(tf.syoSelectRight == 1)
+  {
+      kag.fore.layers[4].visible = true;
+      kag.fore.layers[5].visible = false;
+      kag.fore.layers[6].visible = false;
+      kag.back.layers[4].visible = true;
+      kag.back.layers[5].visible = false;
+      kag.back.layers[6].visible = false;
+  }
+  // 2はグレーアウト（選択不可）のパターン
+  else if(tf.syoSelectRight == 2)
+  {
+      kag.fore.layers[4].visible = false;
+      kag.fore.layers[5].visible = false;
+      kag.fore.layers[6].visible = true;
+      kag.back.layers[4].visible = false;
+      kag.back.layers[5].visible = false;
+      kag.back.layers[6].visible = true;
+  }
+  // シーン選択左カーソル更新処理=====================================
+  
+  // 0は非アクティブのパターン 
+  if(tf.scenSelectLeft == 0)
+  {
+      kag.fore.layers[7].visible = false;
+      kag.fore.layers[8].visible = true;
+      kag.fore.layers[9].visible = false;
+      kag.back.layers[7].visible = false;
+      kag.back.layers[8].visible = true;
+      kag.back.layers[9].visible = false;
+  }
+  // 1はアクティブのパターン
+  else if(tf.scenSelectLeft == 1)
+  {
+      kag.fore.layers[7].visible = true;
+      kag.fore.layers[8].visible = false;
+      kag.fore.layers[9].visible = false;
+      kag.back.layers[7].visible = true;
+      kag.back.layers[8].visible = false;
+      kag.back.layers[9].visible = false;
+  }
+  // 2はグレーアウト（選択不可）のパターン
+  else if(tf.scenSelectLeft == 2)
+  {
+      kag.fore.layers[7].visible = false;
+      kag.fore.layers[8].visible = false;
+      kag.fore.layers[9].visible = true;
+      kag.back.layers[7].visible = false;
+      kag.back.layers[8].visible = false;
+      kag.back.layers[9].visible = true;
+  }
+  
+  // シーン選択右カーソル更新処理=====================================
+  
+  // 0は非アクティブのパターン 
+  if(tf.scenSelectRight == 0)
+  {
+      kag.fore.layers[10].visible = false;
+      kag.fore.layers[11].visible = true;
+      kag.fore.layers[12].visible = false;
+      kag.back.layers[10].visible = false;
+      kag.back.layers[11].visible = true;
+      kag.back.layers[12].visible = false;
+  }
+  // 1はアクティブのパターン
+  else if(tf.scenSelectRight == 1)
+  {
+      kag.fore.layers[10].visible = true;
+      kag.fore.layers[11].visible = false;
+      kag.fore.layers[12].visible = false;
+      kag.back.layers[10].visible = true;
+      kag.back.layers[11].visible = false;
+      kag.back.layers[12].visible = false;
+  }
+  // 2はグレーアウト（選択不可）のパターン
+  else if(tf.scenSelectRight == 2)
+  {
+      kag.fore.layers[10].visible = false;
+      kag.fore.layers[11].visible = false;
+      kag.fore.layers[12].visible = true;
+      kag.back.layers[10].visible = false;
+      kag.back.layers[11].visible = false;
+      kag.back.layers[12].visible = true;
+  }
+}
+
+function cursor_str_update()
+{
+
+  // 0は非アクティブのパターン 
+  // 1はアクティブのパターン
+  // 2はグレーアウト（選択不可）のパターン
+  // 章選択左カーソルステータス更新処理=====================================
+  if(tf.syoIndex == 1)
+  {
+   tf.syoSelectLeft = 2;
+  }else{
+   tf.syoSelectLeft = 0;
+  }
+  // 章選択右カーソルステータス更新処理=====================================
+  if(tf.syoIndex >= tf.endSyoIndex)
+  {
+   tf.syoSelectRight = 2;
+  }else{
+   tf.syoSelectRight = 0;
+  }
+  // シーン選択左カーソルステータス更新処理=====================================
+  if(tf.scenIndex <= tf.firstScenIndex)
+  {
+   tf.scenSelectLeft = 2;
+  }else{
+   tf.scenSelectLeft = 0;
+  }
+  // シーン選択右カーソルステータス更新処理=====================================
+  if(tf.scenIndex >= tf.endScenIndex)
+  {
+   tf.scenSelectRight = 2;
+  }else{
+   tf.scenSelectRight = 0;
+  }
+}
+
+function close_onenter_tips()
+ {
+    kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[14].visible = false;
+    kag.fore.layers[13].visible = true;
+ }
+
+function close_onleave_tips()
+ {
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[13].visible = false;
+    kag.fore.layers[14].visible = true;
+ }
+
+function d_select_onenter()
+ {
+    kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[16].visible = false;
+    kag.fore.layers[15].visible = true;
+ }
+
+function d_select_onleave()
+ {
+    kag.se[5].play(%["storage" => "se123.ogg", "loop" => false]); 
+    // ロールオーバー用画像を表示します
+    kag.fore.layers[15].visible = false;
+    kag.fore.layers[16].visible = true;
+ }
+
+
+// 引数に渡された章のシーンに該当するシーン配列の添字を取得する。
+function first_index_get(syoIndex){
+
+//  1:Tips1   1～8
+//  2:Tips2   9～11
+//  3:Tips3   12～13
+//  4:Tips4   14～15
+
+  switch (syoIndex) {
+    
+    case 1:
+      tf.firstScenIndex = 1;
+      if(f.ItRelease_tips <= 8){
+        tf.endScenIndex = f.ItRelease_tips1;
+      }else{
+        tf.endScenIndex = 8;
+      }
+      break;
+    
+    case 2:
+      tf.firstScenIndex = 1;
+      if(f.ItRelease_tips2 <= 2){
+        tf.endScenIndex = f.ItRelease_tips2;
+      }else{
+        tf.endScenIndex = 2;
+      }
+      break;
+    
+    case 3:
+      tf.firstScenIndex = 1;
+      if(f.ItRelease_tips3 <= 3){
+        tf.endScenIndex = f.ItRelease_tips3;
+      }else{
+        tf.endScenIndex = 3;
+      }
+      break;
+    
+    case 4:
+      tf.firstScenIndex = 1;
+      if(f.ItRelease_tips4 <= 2){
+        tf.endScenIndex = f.ItRelease_tips4;
+      }else{
+        tf.endScenIndex = 2;
+      }
+
+      break;
+
+    default:
+  }
+}
+
+function jump_name_get(scenIndex){
+ if(tf.syoIndex==1){
+   tf.jumpName = f.jumplist_t1[scenIndex];
+ }
+ if(tf.syoIndex==2){
+   tf.jumpName = f.jumplist_t2[scenIndex];
+ }
+ if(tf.syoIndex==3){
+   tf.jumpName = f.jumplist_t3[scenIndex];
+ }
+ if(tf.syoIndex==4){
+   tf.jumpName = f.jumplist_t4[scenIndex];
+ }
+}
+
+// 章選択の文字列更新
+function update_syoinfo(syoIndex){
+ 
+ kag.back.messages[kag.numMessageLayers - 2].clear();  //章文字列の初期化
+ kag.back.messages[kag.numMessageLayers - 2].processCh(f.tipslist[syoIndex]);  //章文字列の更新
+ 
+}
+
+// シーン選択の文字列更新
+function update_sceninfo(scenIndex){
+ kag.back.messages[kag.numMessageLayers - 1].clear();  //シーン文字列の初期化
+ if(tf.syoIndex==1){
+  kag.back.messages[kag.numMessageLayers - 1].processCh(f.itemlist_t1[scenIndex]);  //シーン文字列の更新
+ }
+ if(tf.syoIndex==2){
+  kag.back.messages[kag.numMessageLayers - 1].processCh(f.itemlist_t2[scenIndex]);  //シーン文字列の更新
+ }
+ if(tf.syoIndex==3){
+  kag.back.messages[kag.numMessageLayers - 1].processCh(f.itemlist_t3[scenIndex]);  //シーン文字列の更新
+ }
+ if(tf.syoIndex==4){
+  kag.back.messages[kag.numMessageLayers - 1].processCh(f.itemlist_t4[scenIndex]);  //シーン文字列の更新
+ }
+}
+
+//function update_cursor(){
+// if(tf.cursorFlg == 0){
+//   window.primaryLayer.setCursorPos(window.primaryLayer.cursorX + 1, window.primaryLayer.cursorY);
+//   tf.cursorFlg = 1;
+// }else{
+//   window.primaryLayer.setCursorPos(window.primaryLayer.cursorX - 1, window.primaryLayer.cursorY);
+//   tf.cursorFlg = 0;
+// }
+//}
+
+[endscript]
+
+[eval exp="f.CpStartFlg = 1"]
+
+; 背景レイヤにコンフィグ画面の画像（クリッカブルマップ）を読み込みます
+[fbfscale_image layer=base storage="tips_bg" page=back]
+; レイヤを必要な数（前景レイヤ×１７，メッセージレイヤは２つ追加）確保します
+[laycount layers=17 messages="&kag.numMessageLayers + 2"]
+
+; 前景レイヤに画像を読み込みます
+; #0: コンフィグメニュー画像
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=0 storage="bgimage\tipsimage\tips_menu" page=back visible=true left=0 top=0 opacity=255]
+[else]
+	[fbfscale_image layer=0 storage="bgimage\tipsimage\tips_menu_JP" page=back visible=true left=0 top=0 opacity=255]
+[endif]
+; #1: 章選択戻り選択
+[fbfscale_image layer=1 storage="bgimage\tipsimage\select1_t" page=back visible=false left=123 top=208 opacity=255]
+; #2: 章選択戻り非選択
+[fbfscale_image layer=2 storage="bgimage\tipsimage\select1_f" page=back visible=true left=123 top=208 opacity=255]
+; #3: 章選択戻りOFF
+[fbfscale_image layer=3 storage="bgimage\tipsimage\select1_off" page=back visible=false left=123 top=208 opacity=255]
+; #4: 章選択送り選択
+[fbfscale_image layer=4 storage="bgimage\tipsimage\select2_t" page=back visible=false left=624 top=208 opacity=255]
+; #5: 章選択送り非選択
+[fbfscale_image layer=5 storage="bgimage\tipsimage\select2_f" page=back visible=true left=624 top=208 opacity=255]
+; #6: 章選択送りOFF
+[fbfscale_image layer=6 storage="bgimage\tipsimage\select2_off" page=back visible=false left= 624 top=208 opacity=255]
+; #7: シーン選択戻り選択
+[fbfscale_image layer=7 storage="bgimage\tipsimage\select1_t" page=back visible=false left=123 top=350 opacity=255]
+; #8: シーン選択戻り非選択
+[fbfscale_image layer=8 storage="bgimage\tipsimage\select1_f" page=back visible=true left=123 top=350 opacity=255]
+; #9: シーン選択戻りOFF
+[fbfscale_image layer=9 storage="bgimage\tipsimage\select1_off" page=back visible=false left=123 top=350 opacity=255]
+; #10: シーン選択送り選択
+[fbfscale_image layer=10 storage="bgimage\tipsimage\select2_t" page=back visible=false left=624 top=350 opacity=255]
+; #11: シーン選択送り非選択
+[fbfscale_image layer=11 storage="bgimage\tipsimage\select2_f" page=back visible=true left=624 top=350 opacity=255]
+; #12: シーン選択送りOFF
+[fbfscale_image layer=12 storage="bgimage\tipsimage\select2_off" page=back visible=false left=624 top=350 opacity=255]
+; #13: CLOSE選択
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=13 storage="bgimage\tipsimage\close_t" page=back visible=false left=617 top=83 opacity=255]
+[else]
+	[fbfscale_image layer=13 storage="bgimage\tipsimage\close_t_JP" page=back visible=false left=617 top=83 opacity=255]
+[endif]
+; #14: CLOSE非選択
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=14 storage="bgimage\tipsimage\close_f" page=back visible=true left=617 top=83 opacity=255]
+[else]
+	[fbfscale_image layer=14 storage="bgimage\tipsimage\close_f_JP" page=back visible=true left=617 top=83 opacity=255]
+[endif]
+; #15: 決定選択
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=15 storage="bgimage\tipsimage\d_select_t" page=back visible=false left=357 top=454 opacity=255]
+[else]
+	[fbfscale_image layer=15 storage="bgimage\tipsimage\d_select_t_JP" page=back visible=false left=357 top=454 opacity=255]
+[endif]
+; #16: 決定非選択
+[if exp="kag.FBFGetLanguage() == 0"]
+	[fbfscale_image layer=16 storage="bgimage\tipsimage\d_select_f" page=back visible=true left=357 top=454 opacity=255]
+[else]
+	[fbfscale_image layer=16 storage="bgimage\tipsimage\d_select_f_JP" page=back visible=true left=357 top=454 opacity=255]
+[endif]
+
+; 章選択のメッセージレイヤの設定をします
+[current layer="&'message' + (kag.numMessageLayers - 2)"]
+[fbfscale_position left=192 top=218 width=420 height=31 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+
+; シーン選択のメッセージレイヤの設定をします
+[current layer="&'message' + (kag.numMessageLayers - 1)"]
+[fbfscale_position left=192 top=361 width=420 height=31 frame="" opacity=0 marginl=0 marginr=0 margint=0 marginb=0 visible=true page=back]
+[deffont size=22 face="ＭＳ ゴシック" color=0xFFFFFF edgecolor=0xFFFFFF shadow=false bold=false]
+
+;画面初期化処理
+[call target=*syo_update]
+[call target=*scen_update2]
+[trans method = crossfade time=200]
+[wt]
+[clickskip enabled=true]
+
+[s]
+
+
+*syo_left
+[mapdisable layer=base]
+;初期表示は序章になっている。
+[if exp="tf.syoIndex > 1"]
+;選択位置変数syoIndexに1をマイナスし、それを添字にして章配列から表示文字列を取り出す。
+[eval exp="tf.syoIndex = tf.syoIndex - 1"]
+;取り出した文字列を表示する。
+[call target=*syo_update]
+;表示が序章になった場合は▲をOFFにする
+;[call target=*syo_left_update]
+;マイナスした際に送り▲がOFFになっている場合はONにする。
+;[call target=*syo_right_update]
+;章の切り替えに伴ってシーンの切り替えも連動して動く
+;シーン切り替えに表示してある内容の切り替え。選択している章の一番添字が若いシーンにする。
+[call target=*scen_update1]
+[call target=*scen_update2]
+;画面更新後にonenterを起動するための関数
+[endif]
+[fbfscale_image layer=base storage="tips_bg" page=fore]
+[fbfscale_image layer=base storage="tips_bg" page=back]
+[s]
+
+*syo_right
+[mapdisable layer=base]
+;初期表示は序章になっている。
+[if exp="tf.syoIndex < tf.endSyoIndex"]
+;選択位置変数に1加算し、それを添字にして章配列から表示文字列を取り出す。
+[eval exp="tf.syoIndex = tf.syoIndex + 1"]
+;取り出した文字列を表示する。
+[call target=*syo_update]
+;表示が解放されている最新のものになっている場合は送り▲をOFFにする
+;[call target=*syo_right_update]
+;加算した際に戻り▲がOFFになっている場合はONにする。
+;[call target=*syo_left_update]
+;章の切り替えに伴ってシーンの切り替えも連動して動く
+;シーン切り替えに表示してある内容の切り替え。選択している章の一番添字が若いシーンにする。
+[call target=*scen_update1]
+[call target=*scen_update2]
+;画面更新後にonenterを起動するための関数
+[endif]
+[fbfscale_image layer=base storage="tips_bg" page=fore]
+[fbfscale_image layer=base storage="tips_bg" page=back]
+[s]
+
+*syo_update
+;章切り替えによる選択表示のアップデート
+[eval exp="update_syoinfo(tf.syoIndex)"]
+[return]
+
+
+*syo_left_update
+[eval exp="syo_left_update_main()"]
+[return]
+
+*syo_right_update
+[eval exp="syo_right_update_main()"]
+[return]
+
+
+*scen_left
+[mapdisable layer=base]
+;初期表示は一番添字が若いシーンになっている。
+;選択位置変数に1をマイナスし、それを添字にして章配列から表示文字列を取り出す。
+[if exp="tf.scenIndex > tf.firstScenIndex"]
+[eval exp="tf.scenIndex = tf.scenIndex - 1"]
+;表示が序章になった場合は▲をOFFにする
+;取り出した文字列を表示する。
+[call target=*scen_update2]
+;画面更新後にonenterを起動するための関数
+[endif]
+[fbfscale_image layer=base storage="tips_bg" page=fore]
+[fbfscale_image layer=base storage="tips_bg" page=back]
+[s]
+
+
+*scen_right
+[mapdisable layer=base]
+;初期表示は一番添字が若いシーンになっている。
+[if exp="tf.scenIndex < tf.endScenIndex"]
+;選択位置変数に1加算し、それを添字にして章配列から表示文字列を取り出す。
+[eval exp="tf.scenIndex = tf.scenIndex + 1"]
+;取り出した文字列を表示する。
+[call target=*scen_update2]
+;画面更新後にonenterを起動するための関数
+[endif]
+[fbfscale_image layer=base storage="tips_bg" page=fore]
+[fbfscale_image layer=base storage="tips_bg" page=back]
+[s]
+
+
+*scen_update1
+;章切り替えによるシーン選択表示のアップデート
+;選択した章のシーンで一番若い添字を取得
+[eval exp="first_index_get(tf.syoIndex)"]
+[eval exp="tf.scenIndex = tf.firstScenIndex"]
+[return]
+
+*scen_update2
+;シーン切り替えによる選択表示のアップデート
+[clickskip enabled=false]
+[eval exp="update_sceninfo(tf.scenIndex)"]
+;各カーソルの状態ステータス更新
+[eval exp="cursor_str_update()"]
+[eval exp="change_display()"]
+[trans method = crossfade time=200]
+[wt]
+[move_cursor]
+[return]
+
+
+*d_select
+[mapdisable layer=base]
+[clickskip enabled=false]
+;選択しているシーンの添字に対応したジャンプ先をジャンプリストから取得
+[eval exp="jump_name_get(tf.scenIndex)"]
+[eval exp="tf.jumpks = &tf.jumpName + '.ks'"]
+[eval exp="tf.jumptarget = '*' + &tf.jumpName"]
+[backlay]
+[playse buf = 5 storage=se137.ogg]
+[cm]
+[freeimage layer=0 page=back][freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back]
+[freeimage layer=4 page=back][freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back]
+[freeimage layer=8 page=back][freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back]
+[freeimage layer=12 page=back][freeimage layer=13 page=back][freeimage layer=14 page=back][freeimage layer=15 page=back]
+[freeimage layer=16 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[fadeoutbgm time=1500]
+[ct]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[history output=true enabled=true]
+
+; FBF: Enable ctrl-skip.
+[ctrlskip enabled="true" quickflg="true"]
+
+@jump storage="&tf.jumpks" target="&tf.jumptarget"
+[return]
+
+*close
+[mapdisable layer=base]
+[clickskip enabled=false]
+[backlay]
+[cm]
+[freeimage layer=0 page=back][freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back]
+[freeimage layer=4 page=back][freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back]
+[freeimage layer=8 page=back][freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back]
+[freeimage layer=12 page=back][freeimage layer=13 page=back][freeimage layer=14 page=back][freeimage layer=15 page=back]
+[freeimage layer=16 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[fadeoutbgm time=1500]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[history output=true enabled=true]
+[delay speed=user cond="kag.chUserMode"]
+@jump storage="first.ks" target=*start
+
+
+
+*tipslist
+[if exp="f.tipslist === void || kag.FBFGetLanguage() != f.tipslistlang"]
+
+[eval exp="f.tipslist = []"]
+
+; FBF: Store language variable.
+[eval exp="f.tipslistlang = kag.FBFGetLanguage()"]
+
+[iscript]
+ {
+     // 章選択のリストを設定します。添字はsf.CpRelease_tips
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.tipslist[1] = "Tips I. Narasaki's Clinic";
+}
+else
+{
+    f.tipslist[1] = "TipsⅠ．楢崎診療所";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.tipslist[2] = "Tips II. Second Trip";
+}
+else
+{
+    f.tipslist[2] = "TipsⅡ．二度目の旅";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.tipslist[3] = "Tips III. Memories";
+}
+else
+{
+    f.tipslist[3] = "TipsⅢ．思い出";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.tipslist[4] = "Tips IV. Inverse Sea";
+}
+else
+{
+    f.tipslist[4] = "TipsⅣ．裏返る海";
+}
+
+
+ }
+[endscript]
+[endif]
+
+[if exp="f.itemlist_t1 === void || kag.FBFGetLanguage() != f.itemlist_t1lang"]
+
+[eval exp="f.itemlist_t1 = []"]
+
+; FBF: Store language variable.
+[eval exp="f.itemlist_t1lang = kag.FBFGetLanguage()"]
+
+[iscript]
+ {
+    // 項選択のリストを設定します。添字管理はsf.ItRelease_tips
+    // TipsⅠ
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t1[1] = "Room 008";
+}
+else
+{
+    f.itemlist_t1[1] = "008号室";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t1[2] = "Room 208";
+}
+else
+{
+    f.itemlist_t1[2] = "208号室";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t1[3] = "Consultation Room";
+}
+else
+{
+    f.itemlist_t1[3] = "診察室";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t1[4] = "Bedroom";
+}
+else
+{
+    f.itemlist_t1[4] = "寝室";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t1[5] = "Bathroom";
+}
+else
+{
+    f.itemlist_t1[5] = "浴室";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t1[6] = "Kitchen";
+}
+else
+{
+    f.itemlist_t1[6] = "厨房";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t1[7] = "Furnace";
+}
+else
+{
+    f.itemlist_t1[7] = "燃焼室";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t1[8] = "Night Duty Room";
+}
+else
+{
+    f.itemlist_t1[8] = "宿直室";
+}
+
+ }
+[endscript]
+[endif]
+
+[if exp="f.itemlist_t2 === void"]
+[eval exp="f.itemlist_t2 = []"]
+[iscript]
+ {
+    // 項選択のリストを設定します。添字管理はsf.ItRelease_tips
+    // TipsⅡ
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t2[1] = "Landscape immersion";
+}
+else
+{
+    f.itemlist_t2[1] = "ランドスケープイマージョン";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t2[2] = "At the end of the second trip";
+}
+else
+{
+    f.itemlist_t2[2] = "二度目の旅の果てに";
+}
+
+ }
+[endscript]
+[endif]
+
+
+[if exp="f.itemlist_t3 === void"]
+[eval exp="f.itemlist_t3 = []"]
+[iscript]
+ {
+    // 項選択のリストを設定します。添字管理はsf.ItRelease_tips
+    // TipsⅢ
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t3[1] = "Flower petal";
+}
+else
+{
+    f.itemlist_t3[1] = "花弁";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t3[2] = "Apricot";
+}
+else
+{
+    f.itemlist_t3[2] = "アプリコット";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t3[3] = "Water Game";
+}
+else
+{
+    f.itemlist_t3[3] = "ウォーターゲーム";
+}
+
+ }
+[endscript]
+[endif]
+
+
+[if exp="f.itemlist_t4 === void"]
+[eval exp="f.itemlist_t4 = []"]
+[iscript]
+ {
+    // 項選択のリストを設定します。添字管理はsf.ItRelease_tips
+    // TipsⅢ
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t4[1] = "A holiday at the sanatorium";
+}
+else
+{
+    f.itemlist_t4[1] = "療養所の休日";
+}
+
+if (kag.FBFGetLanguage() == 0)
+{
+    f.itemlist_t4[2] = "The sea where the sun sets in the east";
+}
+else
+{
+    f.itemlist_t4[2] = "東に日が沈む海";
+}
+
+ }
+[endscript]
+[endif]
+
+[if exp="f.jumplist_t1 === void"]
+[eval exp="f.jumplist_t1 = []"]
+[iscript]
+ {
+    // シーンジャンプ先へのリンクリストを設定します。
+    f.jumplist_t1[1]   = "168";
+    f.jumplist_t1[2]   = "169";
+    f.jumplist_t1[3]   = "169_2";
+    f.jumplist_t1[4]   = "169_3";
+    f.jumplist_t1[5]   = "169_4";
+    f.jumplist_t1[6]   = "169_5";
+    f.jumplist_t1[7]   = "169_6";
+    f.jumplist_t1[8]   = "169_7";
+ }
+[endscript]
+[endif]
+
+[if exp="f.jumplist_t2 === void"]
+[eval exp="f.jumplist_t2 = []"]
+[iscript]
+ {
+    // シーンジャンプ先へのリンクリストを設定します。
+    f.jumplist_t2[1]   = "164";
+    f.jumplist_t2[2]   = "165";
+
+ }
+[endscript]
+[endif]
+
+[if exp="f.jumplist_t3 === void"]
+[eval exp="f.jumplist_t3 = []"]
+[iscript]
+ {
+    // シーンジャンプ先へのリンクリストを設定します。
+    f.jumplist_t3[1]   = "170";
+    f.jumplist_t3[2]   = "171";
+    f.jumplist_t3[3]   = "172";
+ }
+[endscript]
+[endif]
+
+[if exp="f.jumplist_t4 === void"]
+[eval exp="f.jumplist_t4 = []"]
+[iscript]
+ {
+    // シーンジャンプ先へのリンクリストを設定します。
+    f.jumplist_t4[1]   = "166";
+    f.jumplist_t4[2]   = "167";
+
+ }
+[endscript]
+[endif]
+@return
+
+[return]
+
+

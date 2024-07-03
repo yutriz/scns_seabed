@@ -1,0 +1,348 @@
+*085_2| Dark room
+; *085_2|暗い部屋
+[fbfstoretitle eng="Dark room" jp="暗い部屋"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon_b]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 104"]
+[eval exp="sf.ItRelease = 105"]
+[endif]
+
+
+
+*| Dark room
+; *|暗い部屋
+[fbfstoretitle eng="Dark room" jp="暗い部屋"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I said my goodbyes to Sanae and left the room.[lr]
+[else]
+　「それじゃあまた」と[ruby text="さ"]早[ruby text="なえ"]苗の部屋を出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae, still waving at me, disappeared behind the door.[prcm]
+[else]
+　胸元で手を振る早苗は、扉の淵に消えた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg41_4" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Wearing only my short sleeves, I felt the corridor to be somewhat chilly.[lr]
+[else]
+　廊下に出ると、服の裾から出ている肌がピリ、と冷える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The night-time cold of the mountains seeped in through the transparent windows.[lr]
+[else]
+　冷え切った夜の山の冷気が透明のガラス越しに廊下の空気を冷やしていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shoved my hands into my pockets and continued down the corridor.[prcm]
+[else]
+　手を上着のポケットに入れると、身を縮めて廊下を歩いた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se104.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A strong gust of wind rattled the windows, startling me.[prcm]
+[else]
+　そこに強い風が吹いて窓ガラスを鳴らした。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　ビクリ、と肩が上がる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Glancing at the window, I saw only the reflections of myself and the door behind me.[lr]
+[else]
+　窓を見ると暗い中庭は見えずに、自分とその後ろの部屋の扉が見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I thought back to Sanae's story and wondered if I should check the doors of all the rooms on my way back, just for the heck of it.[prcm]
+[else]
+　早苗の言った暗い部屋の話が頭をよぎり、試しに自室に着くまでにある部屋の扉を一つ一つ確認していこうかと考えた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item29" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All the doors had the same design, and their knobs were identical.[lr]
+[else]
+　扉を見るとどれも同じデザインで、ノブの形も変わらなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a small gap between the door and the floor.[lr]
+[else]
+　扉と床のあいだには小さな隙間があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The faint light in the corridor was not enough to fully illuminate it.[lr]
+[else]
+　廊下にある明かりはその小さな隙間までを照らしきれていない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt almost as if the darkness was slithering out of the rooms through it.[prcm]
+[else]
+　まるで隙間から内側の闇が漏れてるようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The window rattled behind me again.[lr]
+[else]
+　ピシピシ、と小さく窓が鳴る。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg41_4" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Brought back to reality by that sound, I gave up on looking at the doors.[prcm]
+[else]
+　音に気づかされて扉を見るのをやめた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I reached the spiral staircase and ascended to my floor.[prcm]
+[else]
+　廊下を歩いて螺旋階段まで来ると、自室のある階まで階段を上がっていった。[prcm]
+[endif]
+
+
+;＊
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg85_4" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Temperatures began to rapidly fall, starting with that night.[prcm]
+[else]
+　その日の夜は、気温が一段と下がった。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se104.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Around midnight, the wind rattled my window so bad I half-expected it to break open.[lr]
+[else]
+　午後十二時頃から、騒々しい風が激しく窓を叩いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It made me jump out of the bed, reminding me of what Mayuko and Sanae said about the wind around this time of the year.[lr]
+[else]
+　そのときの音で、一度目が覚めて、早苗や[ruby text="まゆ"]繭[ruby text="こ"]子が言った季節の変わり目に吹く風を思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered what would become of the leaves on the tree I saw through Sanae's window.[lr]
+[else]
+　そして、早苗の部屋の窓から見える木の残りの葉のことを考えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was no way they could withstand wind this strong.[prcm]
+[else]
+　確かに、弱々しく吹かれる木の葉はこの風には耐えられないだろう。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I got back to my bed, and turned to my side in the fetal position.[lr]
+[else]
+　仰向けの体を横にして、掛け布団を引き込むような姿勢で丸くなった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Making sure not to accidentally open any gaps on my back, I closed my eyes.[prcm]
+[else]
+　背中のほうに隙間が出来ていないことを確認すると、目を閉じて眠った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule3" vague=50 time=1500]
+[wt]
+[wait time=1500]
+[backlay]
+[fbfscale_image storage="bg85_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The temperature suddenly dropped the next morning, just like Mayuko and Sanae had warned.[lr]
+[else]
+　次の日の朝は、早苗や繭子が言ったとおりに気温がぐんと下がった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Oh, and Sanae also caught a cold.[prcm]
+[else]
+　それから、早苗が風邪をひいた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="086.ks" target=*086
+
+

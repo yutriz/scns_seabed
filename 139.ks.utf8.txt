@@ -1,0 +1,105 @@
+*139| Morning sun
+; *139|朝日
+[fbfstoretitle eng="Morning sun" jp="朝日"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[backlay]
+[seopt buf=3 volume=50]
+[playse buf = 3 storage=se84.ogg loop =true]
+[fbfscale_image storage="bg05_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 175"]
+[eval exp="sf.ItRelease = 176"]
+[endif]
+
+
+*| Morning sun
+; *|朝日
+[fbfstoretitle eng="Morning sun" jp="朝日"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I rolled around in bed, the sheets slid down my shoulder.[lr]
+[else]
+　寝返りをすると羽毛の布団が肩からずれた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened my eyes and sat up. The decorative plant with heart-shaped leaves and the sheep figurine sparkled in the morning sun, making me narrow my eyes.[lr]
+[else]
+　目を開けて、上体を起こすとチェストの上にある観葉植物のハート状の葉と硝子の羊が窓の外の光を受けて光って、まだ開ききらない瞼をチカチカ、とさせた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I placed a palm on my empty stomach. I felt like it could start rumbling at any second now.[prcm]
+[else]
+　手のひらが鳴りそうな空の腹を抑えていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did I have anything for dinner?[」][lr]
+[else]
+　「夕飯なにか食べたかしら？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before I knew it, the world beyond the window had turned snow white.[lr]
+[else]
+　窓の外はいつの間にか白い雪模様になっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Some frost had formed on the window glass and was sparkling in the sun.[lr]
+[else]
+　硝子の縁には結晶がついて光っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I gazed at it for a few minutes, then climbed out of bed.[prcm]
+[else]
+　しばらく結晶を凝視してから、ベッドを降りた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=3 time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=3 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="140.ks" target=*140
+

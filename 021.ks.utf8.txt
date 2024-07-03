@@ -1,0 +1,596 @@
+*021| Logo design and a lizard
+; *021|事務所の昼下がり（ロゴデザインとヤモリ）
+[fbfstoretitle eng="Logo design and a lizard" jp="事務所の昼下がり（ロゴデザインとヤモリ）"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+;[playse buf = 1 storage=se76.ogg]
+;[wait time=15000]
+[backlay]
+[fbfscale_image storage="bg58_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 23"]
+[eval exp="sf.ItRelease = 24"]
+[endif]
+
+
+*| Logo design and a lizard
+; *|事務所の昼下がり（ロゴデザインとヤモリ）
+[fbfstoretitle eng="Logo design and a lizard" jp="事務所の昼下がり（ロゴデザインとヤモリ）"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After finishing my errand, I called a taxi to make it back to the office.[lr]
+[else]
+　所用を済ませた後、タクシーで事務所ビルに乗り付けた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The sun reflecting from the glass-made double doors leading inside forced me to narrow my eyes.[prcm]
+[else]
+　玄関にある両開きの扉にはめ込まれている大東ビルヂングと銘の入ったガラスに陽が反射して目を細めた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule9" vague=400 time=1000]
+[wt]
+[msgon_b]
+;★事務所廊下背景
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+You had to pass through two sets of doors to get inside the building.[lr]
+[else]
+　玄関は扉が二つある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After the first set, there were stairs leading underground to the right, and a stretch of mailboxes with a guard room to the left.[lr]
+[else]
+　一つ目の扉の向こうは、右手に地下への階段、[l]左手には各部屋の郵便受けと管理人の詰所があった。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The gray-haired man behind the guard room's window gave me a small bow — a gesture I returned.[prcm]
+[else]
+　詰所の窓の向こうで、白髪の男性が会釈をしたのが見えて、軽く会釈をして返す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I climbed the stairs beyond the second set of doors, reaching the upper floor.[lr]
+[else]
+　正面にある二つ目の扉の向こうにある階段を上がり、上階の廊下に出る。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All the rooms in this L-shaped corridor had nameplates, reminding me of classrooms in a school.[lr]
+[else]
+　Ｌ字の廊下は一辺に三部屋あり、それぞれの扉の上には学級番号が書かれていそうな部屋札があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The nameplate of the nearest room said "Clover."[lr]
+[else]
+　一番手前の部屋にある札に、クローバーと書かれてある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I saw an old signboard in front of the door with the text "Clover Design Office" printed on it. Honestly, it looked like something you'd find in front of a martial arts dojo or something.[prcm]
+[else]
+　部屋の前には、扉の隣に道場の看板のような古い板に、クローバーデザイン事務所と彫り込まれていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Kyah![」][quake time=200 hmax=0 vmax=30][lr]
+[else]
+　「きゃあ」[quake time=200 hmax=0 vmax=30][lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a scream from the inside.[lr]
+[else]
+　と、事務所の方から悲鳴が聞こえた。[lr]
+[endif]
+
+[r]
+
+[playse buf = 3 storage=se25.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a step toward the door, ready to fling it open... when it opened by itself.[prcm]
+[else]
+　事務所の前まで行き、扉を開けようとすると、先に扉が開いた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h02" visible=true left=-70 top=0]
+[trans method=universal rule="rule9" vague=50 time=1000]
+[wt]
+[msgon]
+[playbgm storage="bgm02"]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Welcome back, Sachi.[」][lr]
+[else]
+　「サチ、お帰り」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is going on here?[」][lr]
+[else]
+　「何を騒いでるのよ？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h01" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Look.[」][lr]
+[else]
+　「これよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako opened her hands to reveal a tiny ladybug crawling along her palms.[lr]
+[else]
+　と、[ruby text="たか"]貴[ruby text="こ"]呼が合わせた手を開くと、小さな昆虫、[wait time=800]てんとう虫が歩いていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had a red back with several white spots on it.[prcm]
+[else]
+　真っ赤な背中にナナフシの班点を付けた、よく見るてんとう虫だった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was on Fumi's shoulder.[l] Must've landed on her when she was outside.[」][lr]
+[else]
+　「[ruby text="ふみ"]文の肩に乗ってたの。[l]外から一緒に入ってきたんだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not good with bugs.[」][lr]
+[else]
+　「虫は苦手なんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The one responsible for the scream joined the conversation.[prcm]
+[else]
+　と、悲鳴の主が言った。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h03" visible=true left=280 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h07" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm? But Fumi, didn't you draw ladybugs on that lunchbox wrapping paper design?[」][lr]
+[else]
+　「文、弁当の包み紙描いたとき、てんとう虫柄だったよね？」[lr]
+[endif]
+
+[r]
+[fbfscale_move time=50 path="(-70,20,255)(-70,0,255)" layer=2]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm okay with them if they're just drawings.[」][lr]
+[else]
+　「デフォルメは良いんですよ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But ladybugs are cute.[」][lr]
+[else]
+　「てんとう虫なんて可愛いじゃん？」[lr]
+[endif]
+
+[r]
+[fbfscale_move time=100 path="(-70,20,255)(-70,0,255)(-70,20,255)(-70,0,255)" layer=2]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No way.[l] I can't look at those wriggling legs.[」][prcm]
+[else]
+　「いや。[l]節足とか、テカリとか全然駄目なんで」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h11" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You don't need to go out of your way and hate all bugs just for the cutesy appeal.[l] It's not a cockroach or anything.[」][lr]
+[else]
+　「虫ならなんでも嫌いなんて、可愛いアピールあざとすぎじゃないか？[l] ゴキブリじゃないんだからさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako let out a self-satisfied laugh.[lr]
+[else]
+　ハハハ、と貴呼が笑う。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As for Fumi, she glared at Takako with condensed ire.[prcm]
+[else]
+　文が不吉な顔で貴呼を見ていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can imagine you being okay with cockroaches too, Ms. Takako.[」][lr]
+[else]
+　「貴呼さんは、ゴキブリでも平気そうですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess so.[l] I just don't like how they're usually dirty and crawl real fast.[」][lr]
+[else]
+　「まあ割と。[l]少し嫌なのはバッチイのと、素早いところくらいかな」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h08" visible=true left=105 top=0]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p02_h07" visible=true left=330 top=0]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p01_h07" visible=true left=-120 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You helped that cockroach we found in the kitchen escape.[」][lr]
+[else]
+　「貴呼先輩、この間給湯室でゴキブリ外に逃がしてましたよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai raised his face, continuing the conversation.[prcm]
+[else]
+　[ruby text="いぬ"]犬[ruby text="かい"]飼が顔を上げて言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't enjoy senseless killing.[」][lr]
+[else]
+　「殺生は好まないのよ」[lr]
+[endif]
+
+[r]
+[fbfscale_move time=50 path="(-110,0,255)(-120,0,255)(-130,0,255)(-120,0,255)(-110,0,255)(-120,0,255)(-130,0,255)(-120,0,255)(-110,0,255)(-120,0,255)(-130,0,255)(-120,0,255)(-110,0,255)(-120,0,255)(-130,0,255)(-120,0,255)" layer=2]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako puffed out her chest as Fumi went all pale.[prcm]
+[else]
+　と、貴呼が片手にてんとう虫を乗せたまま少し胸を張ると、文の顔が青ざめた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]In the kitchen?[l] You're kidding, right?[」][lr]
+[else]
+　「給湯室で？[l] 嘘でしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was two days ago.[」][lr]
+[else]
+　「二日前ですね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p04_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're exaggerating, Fumi.[l] If you're that scared of bugs, then maybe we should start keeping a lizard in the kitchen.[」][lr]
+[else]
+　「大袈裟だな文は。[l]そんなに昆虫嫌いなら、ヤモリでも入れとくかい？」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_move time=100 path="(-120,-30,255)(-120,0,255)(-120,-30,255)(-120,0,255)(-120,-30,255)(-120,-0,255)" layer=2]
+[wm]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, and I'd end up unable to use the kitchen ever again![」][lr]
+[else]
+　「余計恐ろしいわ！」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]But lizards are cute.[l] I mean, they are usually only this big.[l] I bet all boys like them. Isn't that right, Inukai?[」][lr]
+[else]
+　「ヤモリ可愛いよ。[l]こんなくらいだし。[l]男の子は好きそうじゃん、ねえ犬飼」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako was showing the size between with her thumb and index finger.[prcm]
+[else]
+　貴呼が片手の人差し指と親指で大きさを示して見せる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/i_img/f01_p01_h01" visible=true left=330 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I don't hate them, at least.[l] But there are plenty of big lizards, too.[」][lr]
+[else]
+　「まあ、嫌いじゃないですよ。[l]でも、ヤモリって大きいやつはかなりのものでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, that's right.[l] Back home, I saw one that was over twenty centimeters long.[」][lr]
+[else]
+　「ああ、いるいる。[l]実家で二十センチくらいの見たことある」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Passing by Takako, I placed the bags I'd been carrying on my desk.[prcm]
+[else]
+　事務所の扉の前で話をしている貴呼の脇を通って、事務机に戻り荷物を置いた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=2 page=back storage="fgimage/f_img/f01_p02_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't even think about bringing any in here.[l] I've never heard of an office that kept lizards before.[」][lr]
+[else]
+　「絶対、取ってこないでください。[l]大体、事務所でヤモリ飼ってるなんて、聞いたことない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It could be our mascot.[」][lr]
+[else]
+　「はあ、マスコットみたいな感じでありなんじゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako considered the ceiling in a display of contemplation.[prcm]
+[else]
+　と、貴呼は右斜め上の天井に目をやって考える姿勢をした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wanna change our logo to a lizard?[」][lr]
+[else]
+　「ロゴもヤモリにします？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No. There's a meaning to our clover design.[」][lr]
+[else]
+　「それは駄目、クローバーは意味があるんだから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako pointed at Inukai.[prcm]
+[else]
+　貴呼がビシ、と犬飼を指差して言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No one cares, so can you let that ladybug outside already?[」][lr]
+[else]
+　「どうでもいいから、早く逃がしてきなさいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]'Kay.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f02_p03_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time =500]
+[fbfscale_move time=1000 path="(200,0,0)" layer=0]
+[wm]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako exited through the door and stepped out to the corridor I just came from earlier.[prcm]
+[else]
+　両手を合わせた貴呼がテケテケ、とこちらが来た廊下を駆けていった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="022.ks" target=*022
+

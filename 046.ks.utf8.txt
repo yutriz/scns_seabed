@@ -1,0 +1,1216 @@
+*046| Rain
+; *046|雨
+[fbfstoretitle eng="Rain" jp="雨"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[playbgm storage="bgm20"]
+[backlay]
+[fbfscale_image storage="bg45_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=100]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 59"]
+[eval exp="sf.ItRelease = 60"]
+[endif]
+
+*| Rain
+; *|雨
+[fbfstoretitle eng="Rain" jp="雨"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The heels of my shoes clicked against the stone pavement of the inner yard.[lr]
+[else]
+　コツコツ、と中庭の石畳を鳴らしながらのんびり歩く。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Surrounded by the walls of the sanatorium from three sides, the center of the inner yard gave home to a small hill with a tall camphor tree growing in the middle.[lr]
+[else]
+　三方向を療養所の棟が囲む中庭の中心は土手のように薄く盛り上がり、さらにその中心には背の高い[ruby text="たぶ"]椨の木がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was surrounded by a stone-paved road, beds of flowers, and benches.[lr]
+[else]
+　土手の周りにはまばらな石畳が敷いてあり、花の植え込みと木のベンチがある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Tired from walking, I walked closer to the tree, hoping to take a break in the shade of its leaves. Said leaves helped little, though — they continued to shift, letting the sunlight through.[lr]
+[else]
+　散歩に歩き疲れたので、椨の木の広げる枝の木陰で休もうとこちらへ来てみたが、波打ち形の葉の揺れる影はやや薄い。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, light clouds began to gather in the sky instead.[prcm]
+[else]
+　先ほどまで明るかった空に薄い雲が立ち始めていた。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[eval exp="sf.cg55_2=1"]
+[fbfscale_image storage="ev55_2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Good morning.[」][lr]
+[else]
+　「おはようございます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, Mayuko. Morning.[l] What are you doing here?[」][lr]
+[else]
+　「やあ[ruby text="まゆ"]繭[ruby text="こ"]子、おはよう。[l]何してるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm taking care of the flowers.[」][lr]
+[else]
+　「今から花壇のお手入れをします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was stooping in front of the flowerbed with a small shovel in hand.[lr]
+[else]
+　花の鉢植えとスコップを軍手をつけた手に握っている。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Looking up, I saw that most of the sky was already blanketed by clouds.[prcm]
+[else]
+　上を見上げると、コの字にカットされた空にはやはりモヤモヤとした雲が滲み始めている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Clouds seem to be kind of assembling above us. You sure you're gonna be okay?[」][lr]
+[else]
+　「雲がさし始めているけど、大丈夫なの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko looked up at the sky as well.[prcm]
+[else]
+　繭子も上を見上げる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg55_5=1"]
+[fbfscale_image storage="ev55_5" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]On the radio, they said it would be a clear day...[」][lr]
+[else]
+　「ラジオでは晴れるとのことだったのですが」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Indeed, according to the broadcast, the possibility of rain today was zero.[prcm]
+[else]
+　確かに、早朝のラジオ放送では今日一日の降水率は無しだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I listened to that as well, but I'm not sure if I can trust it with the sky being the way it is now.[」][lr]
+[else]
+　「私も聴いたけれどね。[l]こんな空だと怪しいもんさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko returned her gaze to me.[prcm]
+[else]
+　繭子がこちらへ顔を戻した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I should still be okay if I finish by lunch.[」][lr]
+[else]
+　「これくらいのお天気なら、お昼前に終わらせられれば大丈夫でしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is there anything I can do to help?[」][lr]
+[else]
+　「そう、じゃあ何か手伝えることある？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[eval exp="sf.cg55_4=1"]
+[fbfscale_image storage="ev55_4" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you sure?[」][lr]
+[else]
+　「いいんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]As long as you make me some tea afterwards.[」][lr]
+[else]
+　「終わったらお茶煎れてよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure.[」][lr]
+[else]
+　「いいですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko narrowed her eyes and smiled.[prcm]
+[else]
+　繭子が目を細めて笑顔を作った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I crouched in front of one of the flowerbeds and dug a hole in the soil, mimicking Mayuko.[lr]
+[else]
+　中庭の奥にある花壇に屈みこむ。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　向かいに座る繭子に習ってシャベルで適当な大きさの穴を掘った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took out the seedling from the pot she had with her, and sticking it in the hole, covered its roots with dirt.[prcm]
+[else]
+　繭子が持ってきた苗をポットから取り出すと、少しだけ土を解していくつか空けた穴のひとつに置いて土をかぶせた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg55_1=1"]
+[fbfscale_image storage="ev55_1" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here you go, Takako.[」][lr]
+[else]
+　「はい、[ruby text="たか"]貴[ruby text="こ"]呼さん」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She handed me a pot with a small flower of purple, red, and white petals.[prcm]
+[else]
+　紫、赤、白色のヒラヒラしたスカートのような花びらの小さな花のポットを手渡される。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a cute one.[l] How come it has multiple colors? Is that heartsease?[」][lr]
+[else]
+　「かわいい花。[l]いろんな色があるね。[l]パンジー？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's called a primrose.[」][lr]
+[else]
+　「プリムラっていう園芸用の花ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko answered me in a cheerful tone.[prcm]
+[else]
+　楽しそうな声で、繭子が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She had about twenty seedlings with her.[lr]
+[else]
+　繭子の持ってきた苗は二十以上はあるようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Those flowers were just as colorful as heartsease.[lr]
+[else]
+　花はパンジー位の大きさで色彩に富んでいる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Even in their randomly aligned pots, they still looked beautiful.[prcm]
+[else]
+　まとめて置いているだけでもカラフルで綺麗だった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[eval exp="sf.cg55_3=1"]
+[fbfscale_image storage="ev55_3" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We're lucky to have that many flowerbeds.[」][lr]
+[else]
+　「花壇が多いので助かります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Can I plant them in any order I want?[」][lr]
+[else]
+　「これって、好きに植えてもいいの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, go ahead.[l] Those can be group planted, so you are free to arrange them in any way you wish.[」][lr]
+[else]
+　「ええ、どうぞ。[l]寄せ植えもできますから、特に変なことをしなければある程度アレンジしてもらって構いませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm good at this kind of thing.[l] I'll make an art piece out of these things.[」][lr]
+[else]
+　「こういうの得意なんだよね。[l]みんなが感心するくらい綺麗にアレンジしてあげる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Rolling up my sleeves, I inspected both the flowers and the flowerbeds.[prcm]
+[else]
+　腕をまくり、花の色や形と花壇を見比べた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev55_1" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you like flowers?[」][lr]
+[else]
+　「お花が好きなんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] Well, not enough to become a gardener or anything, but I like them.[」][lr]
+[else]
+　「好きだよ。[l]まあ、園芸するほどじゃないけどね。[l]普通に花は好き」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What's your favorite flower?[」][lr]
+[else]
+　「一番好きな花ってなんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko addressed me as she stirred the soil, adjusting the position of the red flower she planted.[prcm]
+[else]
+　かぶせた土を軽く押さえて、赤い花の位置を少しだけ調節しながら繭子が聞いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[l] I like morning glories and tulips.[」][lr]
+[else]
+　「そうだなあ。[l]朝顔とかチューリップとか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you use to grow them at school?[」][lr]
+[else]
+　「学校で育てた花ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] The ones you grow are always the dearest to you, right?[」][lr]
+[else]
+　「そう。[l]やっぱり、自分で育てたのが一番可愛いよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Didn't the pots feel heavy when you had to bring them home before summer break?[」][lr]
+[else]
+　「夏休みの前に家へ持って帰る鉢植えって重くありませんでした？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They sure did.[l] You were allowed to take them a week before the break, but everyone would always delay it to the last day.[」][lr]
+[else]
+　「重かった。[l]前の週くらいからもう持って帰れるのに、みんな夏休み開始の前日とかに持って帰るんだよね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev55_4" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can imagine you only bringing back your lunch bags and sportswear on the day of the closing ceremony.[」][prcm]
+[else]
+　繭子は笑うと「貴呼さんは給食袋とか体操着とかも終業式の日にまとめて持って帰ってそうですね」と言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see you understand me well.[」][lr]
+[else]
+　「良くわかったね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered how this one time, I had to carry a huge pot in both hands with my sportswear bag attached to it with a knapsack hook.[lr]
+[else]
+　私は終業式の放課後、大きな鉢を両手に持ちランドセルのフックに体操着袋をかけて帰ったことを思い出した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The anti-raven stick in the pot of morning glories blocked my view, and the sportswear bag soon got in the way of my feet.[prcm]
+[else]
+　朝顔の鉢は蔦を絡ませる棒が付いていて前が見にくく、体操着の袋はすぐ足に絡まった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I talked, I decided where I wanted to plant the flowers, and tentatively placed them on the flowerbed.[lr]
+[else]
+　話をしながらあらかたの配置を決めると、花壇の上に仮置きする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I began balancing them out, Mayuko glanced at my handiwork.[prcm]
+[else]
+　バランスをとっていると、繭子がこちらの手元を見た。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev55_2" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah.[l] Don't you feel the purple one would look better here?[」][lr]
+[else]
+　「あ。[l]こっちの辺りには紫を植えた方が良くありませんか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think so?[」][lr]
+[else]
+　「そう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's the feeling I get, at least.[l] If possible, I'd like that side to have more red and pink...[」][lr]
+[else]
+　「こちら側はこんな感じにするので。[l]できればこのあたりは赤と、ピンクを多めにしてですね…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko made several gestures to point out her preferred positions.[prcm]
+[else]
+　そういって手をパタパタと動かして、植え込みの順番を私に教える。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] So you want to balance the colors out to an extent.[」][lr]
+[else]
+　「なるほど。[l]ある程度は色をあわせていくのね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It would look more beautiful that way, wouldn't you agree?[」][lr]
+[else]
+　「そのほうが綺麗じゃありません？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Gotcha.[l] Then how about this?[」][lr]
+[else]
+　「わかった。[l]じゃあ、寄せ方はこんな感じでどうかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I changed the positions of a few flowers according to her instructions.[prcm]
+[else]
+　と、仮置いていた苗を交換してみせる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev55_3" page=back layer=base]
+[trans method = crossfade time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's good.[l] I really like it.[」][lr]
+[else]
+　「いいですね。[l]バッチリです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay, then I'll go with this.[」][lr]
+[else]
+　「じゃあ、こんな感じにする」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was my first time seeing Mayuko be so into something.[prcm]
+[else]
+　繭子の意外なこだわりを見ることができた。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg45_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I lightly patted the soil to check if it was ready for planting.[lr]
+[else]
+　ポンポン、と軽く土を押さえる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I was lining up the red flowers the way Mayuko wanted them, something tiny moved inside my field of view all of a sudden.[prcm]
+[else]
+　繭子に言われたとおりに、赤みの小さな花を花壇に並べていると、視界にモゾモゾと動くものが見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, a caterpillar.[」][lr]
+[else]
+　「あ、芋虫」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was an out-of-season, yellowish-green caterpillar crawling along the flowerbed.[lr]
+[else]
+　花壇の淵に、季節はずれの芋虫がいた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was moving toward Mayuko's direction.[prcm]
+[else]
+　繭子の手元のほうで、黄緑色の鮮やかな芋虫がえっちらほっちら移動している。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f02_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where is it?[」][lr]
+[else]
+　「どこですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]There.[」][lr]
+[else]
+　「そこ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f02_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nm... ah.[l] It's a Ulysses butterfly... We can't let it wander around here.[」][lr]
+[else]
+　「ん、ああ。[l]青アゲハさんですね、こっちは駄目ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko scooped up the caterpillar along with some of the soil, then lightly flung it toward the central tree.[prcm]
+[else]
+　サク、とシャベルでしたの土ごと青アゲハの幼虫を掬うとペイッ、と隣の楠木の葉のほうに軽く放った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're okay with bugs?[」][lr]
+[else]
+　「繭子、虫平気なの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I like butterflies.[」][lr]
+[else]
+　「蝶々は好きですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko continued trimming the roots of a seedling as she addressed me.[prcm]
+[else]
+　と、苗の根を切りながら繭子が言った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is there anything you're scared of, Mayuko?[」][lr]
+[else]
+　「繭子は、怖いものとかって無いの？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f02_p01_h26" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, there's a thing or two I'm afraid of, naturally.[」][lr]
+[else]
+　「それは、怖いもののひとつふたつはありますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And what would that be?[」][lr]
+[else]
+　「例えばどんな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um...[」][lr]
+[else]
+　「ええと、ですね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f02_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She looked straight at me.[prcm]
+[else]
+　言いかけて、ふとこちらの表情を見た。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd rather not say it.[」][lr]
+[else]
+　「止めておきます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]C'mon. It's not like you have anything to lose.[」][lr]
+[else]
+　「いいじゃない、減るもんじゃないしさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I carefully pulled out the pink flower from the pot, and placed it on the soil.[prcm]
+[else]
+　桃色の花のポットを手際よく外して、土をほぐす。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f02_p01_h25" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't help but feel like you'll end up using it in some prank against me if I told you.[」][lr]
+[else]
+　「そういうの教えたら、貴呼さんは何かイタズラをするかわからないし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I won't.[l] How old do you think I am?[」][lr]
+[else]
+　「しないよ。[l]子供じゃないんだから」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f02_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, let's finish this before it starts raining.[」][lr]
+[else]
+　「雨が降らないうちに、はやく終わらせてしまいましょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko pursed her lips, ignoring everything else I tried to say.[prcm]
+[else]
+　口を尖らせるこちらを無視して、繭子は言った。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[seopt buf=0 volume=60]
+[fadeinse buf=0 storage="se78.ogg" time=1000 loop=true]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg45_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I was busy clearing out the withered flowers and old grass from another flowerbed when I spotted a drop of water splashing against its reddish-brown bricks.[lr]
+[else]
+　別の花壇で枯れた花や雑草の処理をしていると、花壇の赤茶色をしたブロックにポツリと雨粒が落ちて滲んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I gazed at that phenomenon, another drop of rain fell on my head.[lr]
+[else]
+　それを見ているとシト、と頭の上にも雨粒が落ちた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the light pattering of rain as it fell onto the tree leaves.[prcm]
+[else]
+　楠の広がった枝葉の上でポツポツ、と音がし始める。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Here comes the rain.[」][lr]
+[else]
+　「降ってきたね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko brushed her sweat off with her sleeve.[prcm]
+[else]
+　繭子が袖を額に当てる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f02_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako, please go back ahead of me.[」][lr]
+[else]
+　「貴呼さん、先に戻ってください」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you planning to do?[」][lr]
+[else]
+　「繭子はどうするの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll finish this row first.[」][lr]
+[else]
+　「私は、あと少しの仕上げを終わらせてから戻ります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, okay.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up, holding an empty pot and a bag of old grass, then hurried toward the door leading back into the building.[prcm]
+[else]
+　殻のポットや雑草の袋を持って立ち上がると、小走りで中庭の扉へ向かった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened the door and left all the things I'd been carrying at the entrance.[lr]
+[else]
+　ギイ、と扉を開けると玄関に荷をまとめて置いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Then I continued down the hallway — its wooden floorboards creaking against each of my steps — toward the night duty room.[prcm]
+[else]
+　それからギシギシ、と廊下の木目を鳴らしながら宿直室へ戻った。[prcm]
+[endif]
+
+
+
+[clickskip enabled = false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg45_2" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled = true]
+
+[playse buf = 1 storage=se117.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[asterisk]whoosh*[lr]
+[else]
+　バサッ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Returning to the inner yard, I found Mayuko still crouching in front of the flower bed, despite the rain. I walked up to her and opened up the umbrella I found in the night duty to shield her from the downpour.[prcm]
+[else]
+　中庭に戻ると、小雨の降る中、まだ花壇の前で土いじりをしている繭子の上に宿直室から持ち出してきた傘を差した。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f02_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thank you very much.[」][lr]
+[else]
+　「ありがとうございます」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She looked up at me, still crouched.[prcm]
+[else]
+　屈んだままこちらを見上げてくる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A lot of people would be inconvenienced if you caught a cold.[」][lr]
+[else]
+　「繭子が風邪引いたら、困る人がたくさんいるんだから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Does that include you, Takako?[」][lr]
+[else]
+　「貴呼さんもですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course.[」][lr]
+[else]
+　「もちろんさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko chuckled.[prcm]
+[else]
+　繭子がクスリ、と笑う。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f02_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll prepare the bath as soon as I'm back.[」][lr]
+[else]
+　「戻ったら、お風呂の準備しますね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rain continued to beat down against the umbrella, as well as the leaves of the camphor tree.[prcm]
+[else]
+　パラパラと降る雨粒がポツポツ、と椨の木の葉と雨傘を鳴らした。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=0 time=3000]
+[fadeoutbgm time=3000]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="047.ks" target=*047
+
+

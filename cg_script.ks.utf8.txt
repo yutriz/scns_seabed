@@ -1,0 +1,910 @@
+[iscript]
+switch(f.cg_page){
+ case 1:
+   // 画像表示フラグの取得
+   f.cg_flg01=sf.cg25_1;
+   f.cg_flg02=sf.cg02;
+   f.cg_flg03=sf.cg21_1;
+   f.cg_flg04=sf.cg23;
+   f.cg_flg05=sf.cg06;
+   f.cg_flg06=sf.cg49_1;
+   f.cg_flg07=sf.cg15;
+   f.cg_flg08=sf.cg40;
+   f.cg_flg09=sf.cg41;
+   f.cg_flg10=sf.cg04;
+   f.cg_flg11=sf.cg45;
+   f.cg_flg12=sf.cg74_1;
+   f.cg_flg13=sf.cg24_2;
+   f.cg_flg14=sf.cg44_4;
+   f.cg_flg15=sf.cg39_4;
+   f.cg_flg16=sf.cg33_4;
+   
+   // 表示するサムネ画像の名前
+   f.cg_sm_name01='bgimage/cgselect/ev25_sm';
+   f.cg_sm_name02='bgimage/cgselect/ev2_sm';
+   f.cg_sm_name03='bgimage/cgselect/ev21_sm';
+   f.cg_sm_name04='bgimage/cgselect/ev23_sm';
+   f.cg_sm_name05='bgimage/cgselect/ev6_sm';
+   f.cg_sm_name06='bgimage/cgselect/ev49_sm';
+   f.cg_sm_name07='bgimage/cgselect/ev15_sm';
+   f.cg_sm_name08='bgimage/cgselect/ev40_sm';
+   f.cg_sm_name09='bgimage/cgselect/ev41_sm';
+   f.cg_sm_name10='bgimage/cgselect/ev4_sm';
+   f.cg_sm_name11='bgimage/cgselect/ev45_sm';
+   f.cg_sm_name12='bgimage/cgselect/ev74_sm';
+   f.cg_sm_name13='bgimage/cgselect/ev24_sm';
+   f.cg_sm_name14='bgimage/cgselect/ev44_sm';
+   f.cg_sm_name15='bgimage/cgselect/ev39_sm';
+   f.cg_sm_name16='bgimage/cgselect/ev33_sm';
+   
+   // CG対応番号 マウスオン、オフに使用する
+   f.cg_bg_name01='bgimage/cgselect/ev25_bg';
+   f.cg_bg_name02='bgimage/cgselect/ev2_bg';
+   f.cg_bg_name03='bgimage/cgselect/ev21_bg';
+   f.cg_bg_name04='bgimage/cgselect/ev23_bg';
+   f.cg_bg_name05='bgimage/cgselect/ev6_bg';
+   f.cg_bg_name06='bgimage/cgselect/ev49_bg';
+   f.cg_bg_name07='bgimage/cgselect/ev15_bg';
+   f.cg_bg_name08='bgimage/cgselect/ev40_bg';
+   f.cg_bg_name09='bgimage/cgselect/ev41_bg';
+   f.cg_bg_name10='bgimage/cgselect/ev4_bg';
+   f.cg_bg_name11='bgimage/cgselect/ev45_bg';
+   f.cg_bg_name12='bgimage/cgselect/ev74_bg';
+   f.cg_bg_name13='bgimage/cgselect/ev24_bg';
+   f.cg_bg_name14='bgimage/cgselect/ev44_bg';
+   f.cg_bg_name15='bgimage/cgselect/ev39_bg';
+   f.cg_bg_name16='bgimage/cgselect/ev33_bg';
+   
+   // クリック時のジャンプ先タグ名称
+   f.cg_click01='*cg25';
+   f.cg_click02='*cg2';
+   f.cg_click03='*cg21';
+   f.cg_click04='*cg23';
+   f.cg_click05='*cg6';
+   f.cg_click06='*cg49';
+   f.cg_click07='*cg15';
+   f.cg_click08='*cg40';
+   f.cg_click09='*cg41';
+   f.cg_click10='*cg4';
+   f.cg_click11='*cg45';
+   f.cg_click12='*cg74';
+   f.cg_click13='*cg24';
+   f.cg_click14='*cg44';
+   f.cg_click15='*cg39';
+   f.cg_click16='*cg33';
+   break;
+
+ case 2:
+   // 画像表示フラグの取得
+   f.cg_flg01=sf.cg09_2;
+   f.cg_flg02=sf.cg60;
+   f.cg_flg03=sf.cg42_1;
+   f.cg_flg04=sf.cg55_2;
+   f.cg_flg05=sf.cg43_1;
+   f.cg_flg06=sf.cg10;
+   f.cg_flg07=sf.cg29;
+   f.cg_flg08=sf.cg34_3;
+   f.cg_flg09=sf.cg30_9;
+   f.cg_flg10=sf.cg48_8;
+   f.cg_flg11=sf.cg81;
+   f.cg_flg12=sf.cg08;
+   f.cg_flg13=sf.cg80;
+   f.cg_flg14=sf.cg83;
+   f.cg_flg15=sf.cg11;
+   f.cg_flg16=sf.cg76_1;
+   
+   // 表示するサムネ画像の名前
+   f.cg_sm_name01='bgimage/cgselect/ev9_sm';
+   f.cg_sm_name02='bgimage/cgselect/ev60_sm';
+   f.cg_sm_name03='bgimage/cgselect/ev42_sm';
+   f.cg_sm_name04='bgimage/cgselect/ev55_sm';
+   f.cg_sm_name05='bgimage/cgselect/ev43_sm';
+   f.cg_sm_name06='bgimage/cgselect/ev10_sm';
+   f.cg_sm_name07='bgimage/cgselect/ev29_sm';
+   f.cg_sm_name08='bgimage/cgselect/ev34_sm';
+   f.cg_sm_name09='bgimage/cgselect/ev30_sm';
+   f.cg_sm_name10='bgimage/cgselect/ev48_sm';
+   f.cg_sm_name11='bgimage/cgselect/ev81_sm';
+   f.cg_sm_name12='bgimage/cgselect/ev8_sm';
+   f.cg_sm_name13='bgimage/cgselect/ev80_sm';
+   f.cg_sm_name14='bgimage/cgselect/ev83_sm';
+   f.cg_sm_name15='bgimage/cgselect/ev11_sm';
+   f.cg_sm_name16='bgimage/cgselect/ev76_sm';
+   
+   // CG対応番号 マウスオン、オフに使用する
+   f.cg_bg_name01='bgimage/cgselect/ev9_bg';
+   f.cg_bg_name02='bgimage/cgselect/ev60_bg';
+   f.cg_bg_name03='bgimage/cgselect/ev42_bg';
+   f.cg_bg_name04='bgimage/cgselect/ev55_bg';
+   f.cg_bg_name05='bgimage/cgselect/ev43_bg';
+   f.cg_bg_name06='bgimage/cgselect/ev10_bg';
+   f.cg_bg_name07='bgimage/cgselect/ev29_bg';
+   f.cg_bg_name08='bgimage/cgselect/ev34_bg';
+   f.cg_bg_name09='bgimage/cgselect/ev30_bg';
+   f.cg_bg_name10='bgimage/cgselect/ev48_bg';
+   f.cg_sm_name11='bgimage/cgselect/ev81_sm';
+   f.cg_bg_name12='bgimage/cgselect/ev8_bg';
+   f.cg_bg_name13='bgimage/cgselect/ev80_bg';
+   f.cg_bg_name14='bgimage/cgselect/ev83_bg';
+   f.cg_bg_name15='bgimage/cgselect/ev11_bg';
+   f.cg_bg_name16='bgimage/cgselect/ev76_bg';
+   
+   // クリック時のジャンプ先タグ名称
+   f.cg_click01='*cg9';
+   f.cg_click02='*cg60';
+   f.cg_click03='*cg42';
+   f.cg_click04='*cg55';
+   f.cg_click05='*cg43';
+   f.cg_click06='*cg10';
+   f.cg_click07='*cg29';
+   f.cg_click08='*cg34';
+   f.cg_click09='*cg30';
+   f.cg_click10='*cg48';
+   f.cg_click11='*cg81';
+   f.cg_click12='*cg8';
+   f.cg_click13='*cg80';
+   f.cg_click14='*cg83';
+   f.cg_click15='*cg11';
+   f.cg_click16='*cg76';
+   break;
+
+ case 3:
+   // 画像表示フラグの取得
+   f.cg_flg01=sf.cg95_1;
+   f.cg_flg02=sf.cg77_1;
+   f.cg_flg03=sf.cg59;
+   f.cg_flg04=sf.cg85;
+   f.cg_flg05=sf.cg86;
+   f.cg_flg06=sf.cg18;
+   f.cg_flg07=sf.cg05;
+   f.cg_flg08=sf.cg20;
+   f.cg_flg09=sf.cg36;
+   f.cg_flg10=sf.cg67;
+   f.cg_flg11=sf.cg14_2;
+   f.cg_flg12=sf.cg38_1;
+   f.cg_flg13=sf.cg53_1;
+   f.cg_flg14=sf.cg03;
+   f.cg_flg15=sf.cg17_1;
+   f.cg_flg16=sf.cg52;
+   
+   // 表示するサムネ画像の名前
+   f.cg_sm_name01='bgimage/cgselect/ev95_sm';
+   f.cg_sm_name02='bgimage/cgselect/ev77_sm';
+   f.cg_sm_name03='bgimage/cgselect/ev59_sm';
+   f.cg_sm_name04='bgimage/cgselect/ev85_sm';
+   f.cg_sm_name05='bgimage/cgselect/ev86_sm';
+   f.cg_sm_name06='bgimage/cgselect/ev18_sm';
+   f.cg_sm_name07='bgimage/cgselect/ev5_sm';
+   f.cg_sm_name08='bgimage/cgselect/ev20_sm';
+   f.cg_sm_name09='bgimage/cgselect/ev36_sm';
+   f.cg_sm_name10='bgimage/cgselect/ev67_sm';
+   f.cg_sm_name11='bgimage/cgselect/ev14_sm';
+   f.cg_sm_name12='bgimage/cgselect/ev38_sm';
+   f.cg_sm_name13='bgimage/cgselect/ev53_sm';
+   f.cg_sm_name14='bgimage/cgselect/ev3_sm';
+   f.cg_sm_name15='bgimage/cgselect/ev17_sm';
+   f.cg_sm_name16='bgimage/cgselect/ev52_sm';
+   
+   // CG対応番号 マウスオン、オフに使用する
+   f.cg_bg_name01='bgimage/cgselect/ev95_bg';
+   f.cg_bg_name02='bgimage/cgselect/ev77_bg';
+   f.cg_bg_name03='bgimage/cgselect/ev59_bg';
+   f.cg_bg_name04='bgimage/cgselect/ev85_bg';
+   f.cg_bg_name05='bgimage/cgselect/ev86_bg';
+   f.cg_bg_name06='bgimage/cgselect/ev18_bg';
+   f.cg_bg_name07='bgimage/cgselect/ev5_bg';
+   f.cg_bg_name08='bgimage/cgselect/ev20_bg';
+   f.cg_bg_name09='bgimage/cgselect/ev36_bg';
+   f.cg_bg_name10='bgimage/cgselect/ev67_bg';
+   f.cg_bg_name11='bgimage/cgselect/ev14_bg';
+   f.cg_bg_name12='bgimage/cgselect/ev38_bg';
+   f.cg_bg_name13='bgimage/cgselect/ev53_bg';
+   f.cg_bg_name14='bgimage/cgselect/ev3_bg';
+   f.cg_bg_name15='bgimage/cgselect/ev17_bg';
+   f.cg_bg_name16='bgimage/cgselect/ev52_bg';
+   
+   // クリック時のジャンプ先タグ名称
+   f.cg_click01='*cg95';
+   f.cg_click02='*cg77';
+   f.cg_click03='*cg59';
+   f.cg_click04='*cg85';
+   f.cg_click05='*cg86';
+   f.cg_click06='*cg18';
+   f.cg_click07='*cg5';
+   f.cg_click08='*cg20';
+   f.cg_click09='*cg36';
+   f.cg_click10='*cg67';
+   f.cg_click11='*cg14';
+   f.cg_click12='*cg38';
+   f.cg_click13='*cg53';
+   f.cg_click14='*cg3';
+   f.cg_click15='*cg17';
+   f.cg_click16='*cg52';
+   break;
+
+ case 4:
+   // 画像表示フラグの取得
+   f.cg_flg01=sf.cg19;
+   f.cg_flg02=sf.cg32_1;
+   f.cg_flg03=sf.cg58;
+   f.cg_flg04=sf.cg01;
+   f.cg_flg05=sf.cg13;
+   f.cg_flg06=sf.cg82;
+   f.cg_flg07=sf.cg27;
+   f.cg_flg08=sf.cg16;
+   f.cg_flg09=sf.cg51_2;
+   f.cg_flg10=sf.cg73_2;
+   f.cg_flg11=sf.cg75;
+   f.cg_flg12=sf.cg64;
+   f.cg_flg13=sf.cg54;
+   f.cg_flg14=sf.cg66_2;
+   f.cg_flg15=sf.cg12;
+   f.cg_flg16=sf.cg56_2;
+   
+   // 表示するサムネ画像の名前
+   f.cg_sm_name01='bgimage/cgselect/ev19_sm';
+   f.cg_sm_name02='bgimage/cgselect/ev32_sm';
+   f.cg_sm_name03='bgimage/cgselect/ev58_sm';
+   f.cg_sm_name04='bgimage/cgselect/ev1_sm';
+   f.cg_sm_name05='bgimage/cgselect/ev13_sm';
+   f.cg_sm_name06='bgimage/cgselect/ev82_sm';
+   f.cg_sm_name07='bgimage/cgselect/ev27_sm';
+   f.cg_sm_name08='bgimage/cgselect/ev16_sm';
+   f.cg_sm_name09='bgimage/cgselect/ev51_sm';
+   f.cg_sm_name10='bgimage/cgselect/ev73_sm';
+   f.cg_sm_name11='bgimage/cgselect/ev75_sm';
+   f.cg_sm_name12='bgimage/cgselect/ev64_sm';
+   f.cg_sm_name13='bgimage/cgselect/ev54_sm';
+   f.cg_sm_name14='bgimage/cgselect/ev66_sm';
+   f.cg_sm_name15='bgimage/cgselect/ev12_sm';
+   f.cg_sm_name16='bgimage/cgselect/ev56_sm';
+   
+   // CG対応番号 マウスオン、オフに使用する
+   f.cg_bg_name01='bgimage/cgselect/ev19_bg';
+   f.cg_bg_name02='bgimage/cgselect/ev32_bg';
+   f.cg_bg_name03='bgimage/cgselect/ev58_bg';
+   f.cg_bg_name04='bgimage/cgselect/ev1_bg';
+   f.cg_bg_name05='bgimage/cgselect/ev13_bg';
+   f.cg_bg_name06='bgimage/cgselect/ev82_bg';
+   f.cg_bg_name07='bgimage/cgselect/ev27_bg';
+   f.cg_bg_name08='bgimage/cgselect/ev16_bg';
+   f.cg_bg_name09='bgimage/cgselect/ev51_bg';
+   f.cg_bg_name10='bgimage/cgselect/ev73_bg';
+   f.cg_bg_name11='bgimage/cgselect/ev75_bg';
+   f.cg_bg_name12='bgimage/cgselect/ev64_bg';
+   f.cg_bg_name13='bgimage/cgselect/ev54_bg';
+   f.cg_bg_name14='bgimage/cgselect/ev66_bg';
+   f.cg_bg_name15='bgimage/cgselect/ev12_bg';
+   f.cg_bg_name16='bgimage/cgselect/ev56_bg';
+   
+   // クリック時のジャンプ先タグ名称
+   f.cg_click01='*cg19';
+   f.cg_click02='*cg32';
+   f.cg_click03='*cg58';
+   f.cg_click04='*cg1';
+   f.cg_click05='*cg13';
+   f.cg_click06='*cg82';
+   f.cg_click07='*cg27';
+   f.cg_click08='*cg16';
+   f.cg_click09='*cg51';
+   f.cg_click10='*cg73';
+   f.cg_click11='*cg75';
+   f.cg_click12='*cg64';
+   f.cg_click13='*cg54';
+   f.cg_click14='*cg66';
+   f.cg_click15='*cg12';
+   f.cg_click16='*cg56';
+   break;
+
+ case 5:
+   // 画像表示フラグの取得
+   f.cg_flg01=sf.cg35_10;
+   f.cg_flg02=sf.cg31;
+   f.cg_flg03=sf.cg65;
+   f.cg_flg04=sf.cg07;
+   f.cg_flg05=sf.cg62;
+   f.cg_flg06=sf.cg63_2;
+   f.cg_flg07=sf.cg50;
+   f.cg_flg08=sf.cg94;
+   f.cg_flg09=sf.cg28_2;
+   f.cg_flg10=sf.cg26;
+   f.cg_flg11=sf.cg37;
+   f.cg_flg12=sf.cg72;
+   f.cg_flg13=sf.cg68;
+   f.cg_flg14=sf.cg70;
+   f.cg_flg15=sf.cg69;
+   f.cg_flg16=sf.cg84;
+
+   // 表示するサムネ画像の名前
+   f.cg_sm_name01='bgimage/cgselect/ev35_sm';
+   f.cg_sm_name02='bgimage/cgselect/ev31_sm';
+   f.cg_sm_name03='bgimage/cgselect/ev65_sm';
+   f.cg_sm_name04='bgimage/cgselect/ev7_sm';
+   f.cg_sm_name05='bgimage/cgselect/ev62_sm';
+   f.cg_sm_name06='bgimage/cgselect/ev63_sm';
+   f.cg_sm_name07='bgimage/cgselect/ev50_sm';
+   f.cg_sm_name08='bgimage/cgselect/ev94_sm';
+   f.cg_sm_name09='bgimage/cgselect/ev28_sm';
+   f.cg_sm_name10='bgimage/cgselect/ev26_sm';
+   f.cg_sm_name11='bgimage/cgselect/ev37_sm';
+   f.cg_sm_name12='bgimage/cgselect/ev72_sm';
+   f.cg_sm_name13='bgimage/cgselect/ev68_sm';
+   f.cg_sm_name14='bgimage/cgselect/ev70_sm';
+   f.cg_sm_name15='bgimage/cgselect/ev69_sm';
+   f.cg_sm_name16='bgimage/cgselect/ev84_sm';
+   
+   // CG対応番号 マウスオン、オフに使用する
+   f.cg_bg_name01='bgimage/cgselect/ev35_bg';
+   f.cg_bg_name02='bgimage/cgselect/ev31_bg';
+   f.cg_bg_name03='bgimage/cgselect/ev65_bg';
+   f.cg_bg_name04='bgimage/cgselect/ev7_bg';
+   f.cg_bg_name05='bgimage/cgselect/ev62_bg';
+   f.cg_bg_name06='bgimage/cgselect/ev63_bg';
+   f.cg_bg_name07='bgimage/cgselect/ev50_bg';
+   f.cg_bg_name08='bgimage/cgselect/ev94_bg';
+   f.cg_bg_name09='bgimage/cgselect/ev28_bg';
+   f.cg_bg_name10='bgimage/cgselect/ev26_bg';
+   f.cg_bg_name11='bgimage/cgselect/ev37_bg';
+   f.cg_bg_name12='bgimage/cgselect/ev72_bg';
+   f.cg_bg_name13='bgimage/cgselect/ev68_bg';
+   f.cg_bg_name14='bgimage/cgselect/ev70_bg';
+   f.cg_bg_name15='bgimage/cgselect/ev69_bg';
+   f.cg_bg_name16='bgimage/cgselect/ev84_bg';
+   
+   // クリック時のジャンプ先タグ名称
+   f.cg_click01='*cg35';
+   f.cg_click02='*cg31';
+   f.cg_click03='*cg65';
+   f.cg_click04='*cg7';
+   f.cg_click05='*cg62';
+   f.cg_click06='*cg63';
+   f.cg_click07='*cg50';
+   f.cg_click08='*cg94';
+   f.cg_click09='*cg28';
+   f.cg_click10='*cg26';
+   f.cg_click11='*cg37';
+   f.cg_click12='*cg72';
+   f.cg_click13='*cg68';
+   f.cg_click14='*cg70';
+   f.cg_click15='*cg69';
+   f.cg_click16='*cg84';
+   break;
+
+ case 6:
+   //画像表示フラグの取得
+   f.cg_flg01=sf.cg87;
+   f.cg_flg02=sf.cg88;
+   f.cg_flg03=sf.cg89;
+   f.cg_flg04=sf.cg90;
+   f.cg_flg05=sf.cg91;
+   f.cg_flg06=sf.cg92;
+   f.cg_flg07=sf.cg93;
+   f.cg_flg08=sf.cg100;
+   f.cg_flg09=sf.cg96;
+   f.cg_flg10=sf.cg97;
+   f.cg_flg11=sf.cg98;
+   f.cg_flg12=sf.cg99;
+   f.cg_flg13=sf.cg101;
+   f.cg_flg14=2;
+   f.cg_flg15=2;
+   f.cg_flg16=2;
+   
+   // 表示するサムネ画像の名前
+   f.cg_sm_name01='bgimage/cgselect/ev87_sm';
+   f.cg_sm_name02='bgimage/cgselect/ev88_sm';
+   f.cg_sm_name03='bgimage/cgselect/ev89_sm';
+   f.cg_sm_name04='bgimage/cgselect/ev90_sm';
+   f.cg_sm_name05='bgimage/cgselect/ev91_sm';
+   f.cg_sm_name06='bgimage/cgselect/ev92_sm';
+   f.cg_sm_name07='bgimage/cgselect/ev93_sm';
+   f.cg_sm_name08='bgimage/cgselect/ev100_sm';
+   f.cg_sm_name09='bgimage/cgselect/ev96_sm';
+   f.cg_sm_name10='bgimage/cgselect/ev97_sm';
+   f.cg_sm_name11='bgimage/cgselect/ev98_sm';
+   f.cg_sm_name12='bgimage/cgselect/ev99_sm';
+   f.cg_sm_name13='bgimage/cgselect/ev101_sm';
+   
+   // CG対応番号 マウスオン、オフに使用する
+   f.cg_bg_name01='bgimage/cgselect/ev87_bg';
+   f.cg_bg_name02='bgimage/cgselect/ev88_bg';
+   f.cg_bg_name03='bgimage/cgselect/ev89_bg';
+   f.cg_bg_name04='bgimage/cgselect/ev90_bg';
+   f.cg_bg_name05='bgimage/cgselect/ev91_bg';
+   f.cg_bg_name06='bgimage/cgselect/ev92_bg';
+   f.cg_bg_name07='bgimage/cgselect/ev93_bg';
+   f.cg_bg_name08='bgimage/cgselect/ev100_bg';
+   f.cg_bg_name09='bgimage/cgselect/ev96_bg';
+   f.cg_bg_name10='bgimage/cgselect/ev97_bg';
+   f.cg_bg_name11='bgimage/cgselect/ev98_bg';
+   f.cg_bg_name12='bgimage/cgselect/ev99_bg';
+   f.cg_bg_name13='bgimage/cgselect/ev101_bg';
+   
+   // クリック時のジャンプ先タグ名称
+   f.cg_click01='*cg87';
+   f.cg_click02='*cg88';
+   f.cg_click03='*cg89';
+   f.cg_click04='*cg90';
+   f.cg_click05='*cg91';
+   f.cg_click06='*cg92';
+   f.cg_click07='*cg93';
+   f.cg_click08='*cg100';
+   f.cg_click09='*cg96';
+   f.cg_click10='*cg97';
+   f.cg_click11='*cg98';
+   f.cg_click12='*cg99';
+   f.cg_click13='*cg101';
+   
+   break;
+  
+// case N:
+//   // 画像表示フラグの取得
+//   f.cg_flg01=sf.cg;
+//   f.cg_flg02=sf.cg;
+//   f.cg_flg03=sf.cg;
+//   f.cg_flg04=sf.cg;
+//   f.cg_flg05=sf.cg;
+//   f.cg_flg06=sf.cg;
+//   f.cg_flg07=sf.cg;
+//   f.cg_flg08=sf.cg;
+//   f.cg_flg09=sf.cg;
+//   f.cg_flg10=sf.cg;
+//   f.cg_flg11=sf.cg;
+//   f.cg_flg12=sf.cg;
+//   f.cg_flg13=sf.cg;
+//   f.cg_flg14=sf.cg;
+//   f.cg_flg15=sf.cg;
+//   f.cg_flg16=sf.cg;
+//   
+//   // 表示するサムネ画像の名前
+//   f.cg_sm_name01='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name02='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name03='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name04='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name05='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name06='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name07='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name08='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name09='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name10='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name11='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name12='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name13='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name14='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name15='bgimage/cgselect/ev_sm';
+//   f.cg_sm_name16='bgimage/cgselect/ev_sm';
+//   
+//   // CG対応番号 マウスオン、オフに使用する
+//   f.cg_bg_name01='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name02='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name03='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name04='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name05='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name06='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name07='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name08='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name09='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name10='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name11='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name12='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name13='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name14='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name15='bgimage/cgselect/ev_bg';
+//   f.cg_bg_name16='bgimage/cgselect/ev_bg';
+//   
+//   // クリック時のジャンプ先タグ名称
+//   f.cg_click01='*cg';
+//   f.cg_click02='*cg';
+//   f.cg_click03='*cg';
+//   f.cg_click04='*cg';
+//   f.cg_click05='*cg';
+//   f.cg_click06='*cg';
+//   f.cg_click07='*cg';
+//   f.cg_click08='*cg';
+//   f.cg_click09='*cg';
+//   f.cg_click10='*cg';
+//   f.cg_click11='*cg';
+//   f.cg_click12='*cg';
+//   f.cg_click13='*cg';
+//   f.cg_click14='*cg';
+//   f.cg_click15='*cg';
+//   f.cg_click16='*cg';
+//   break;
+
+ default:
+}
+
+
+// カーソル画像（レイヤ２４）を指定したＸ、Ｙ座標に表示
+
+function cg_on1(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on2(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on3(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on4(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on5(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on6(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on7(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on8(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on9(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on10(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on11(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on12(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on13(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+function cg_on14(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on15(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+function cg_on16(x, y, cg_name)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[24].setPos(x, y);
+  kag.fore.layers[1].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[24].visible = true;
+  kag.fore.layers[1].visible = true;
+}
+
+
+// カーソル画像（レイヤ２４）を消去
+function cg_off1(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off2(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off3(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off4(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off5(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off6(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off7(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off8(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off9(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off10(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off11(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off12(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off13(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off14(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off15(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+function cg_off16(cg_name)
+{
+  kag.fore.layers[24].visible = false;
+  kag.fore.layers[1].visible = false;
+  kag.fore.layers[0].loadImages(%['storage' => cg_name]);
+  kag.fore.layers[0].visible = true;
+}
+
+
+//  操作キーの表示
+function select_on1(x, y)
+
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[18].setPos(x, y);
+  kag.fore.layers[18].visible = true;
+  kag.fore.layers[19].visible = false;
+}
+
+function select_on2(x, y)
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[22].setPos(x, y);
+  kag.fore.layers[22].visible = true;
+  kag.fore.layers[23].visible = false;
+}
+
+function exit_on(x, y)
+{
+  x = kag.FBFScale(x);
+  y = kag.FBFScale(y);
+  kag.se[0].play(%["storage" => "se123.ogg", "loop" => false]); 
+  kag.fore.layers[20].setPos(x, y);
+  kag.fore.layers[20].visible = true;
+  kag.fore.layers[21].visible = false;
+}
+
+
+//  操作キーの非表示
+function select_off1()
+{
+  kag.fore.layers[18].visible = false;
+  kag.fore.layers[19].visible = true;
+}
+
+function select_off2()
+{
+  kag.fore.layers[22].visible = false;
+  kag.fore.layers[23].visible = true;
+}
+
+function exit_off()
+{
+  kag.fore.layers[20].visible = false;
+  kag.fore.layers[21].visible = true;
+}
+
+[endscript]
+@return

@@ -1,0 +1,131 @@
+*054| Takako and Mayuko
+; *054|貴呼と繭子
+[fbfstoretitle eng="Takako and Mayuko" jp="貴呼と繭子"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+[msglayer]
+[seopt buf=0 volume=40]
+[fadeinse buf=0 storage="se78.ogg" time=1000 loop=true]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg44_9" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 67"]
+[eval exp="sf.ItRelease = 68"]
+[endif]
+
+
+*| Takako and Mayuko
+; *|貴呼と繭子
+[fbfstoretitle eng="Takako and Mayuko" jp="貴呼と繭子"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I felt as though time itself had stopped in the dimly lit night duty room.[lr]
+[else]
+　豆電球の灯りが仄かな宿直室は、時が止まったかのように見える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I shifted my consciousness back from the memories and inhaled a light breath.[prcm]
+[else]
+　記憶から意識を戻し、一息つく。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear rain outside.[lr]
+[else]
+　耳に雨音が聴こえていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was starting to grow louder, almost resembling our evening squalls. During times like that, I'd enjoy listening to all the different sounds rain made as it fell on the leaves, the glass, or the roof.[prcm]
+[else]
+　雨水が打つ葉や硝子や屋根の音が聞き分けられる夕方ごろの雨に戻りつつあった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko seemed to have already fallen asleep.[lr]
+[else]
+　気がつくと[ruby text="まゆ"]繭[ruby text="こ"]子はスウスウ、と寝息を立てている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With no one left to listen to my story, I stopped talking and — after adjusting the height of my pillow a little — closed my eyes.[prcm]
+[else]
+　誰も聞き手のいなくなった話を中断し、枕の高さを少し変えてから、目を瞑った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sleep claimed me soon after my vision went dark; I felt almost like I was being swallowed deep down into the earth.[lr]
+[else]
+　視界が暗くなるとすぐに眠気がまわり、すうと、下のほうに引き込まれる感覚がやって来た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could hear the wind whistle somewhere in the distance.[lr]
+[else]
+　どこか遠からボォ、と隙間を風が抜けるような音が聞こえてくる。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could've sworn I spotted tears around Mayuko's eyes, but by the time I could confirm it, my consciousness had already drifted into deep slumber.[prcm]
+[else]
+　ふと、頭の隅で繭子の目に涙の後が見えた気がしたが、その頃には意識は体を離れて、深い底へと落ちていってしまった。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=0 time=3000]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=0 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="054_2.ks" target=*054_2
+
+

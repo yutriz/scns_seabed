@@ -1,0 +1,268 @@
+*156_3| Disposal
+; *156_3|処分
+[fbfstoretitle eng="Disposal" jp="処分"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[if exp="f.CpStartFlg == 1"]
+[playbgm storage="bgm36"]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg06" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 202"]
+[eval exp="sf.ItRelease = 203"]
+[endif]
+
+*| Disposal
+; *|処分
+[fbfstoretitle eng="Disposal" jp="処分"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, then.[」] I began tidying up the records scattered on the desk.[prcm]
+[else]
+　「さて」と私は貴呼との話を終えて机の上の資料の片付けに入る。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p04_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako tried to help, but being unable to do much without knowing which files the papers and pictures belonged to, she soon gave up.[lr]
+[else]
+　[ruby text="たか"]貴[ruby text="こ"]呼は手伝おうとしたが、バラバラに広げていた写真やペーパーの資料がどのファイルに挟まっていたものか分からず諦めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Those weren't the tidiest records in the world to begin with, so it didn't take that long to throw them together by myself, in any case.[lr]
+[else]
+　実際は元々整理されていた資料ではないため、一纏めにして直ぐに片付けは終わる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako gazed absentmindedly at my hands while I stuffed a medical record previously resting on the edge of the desk into my bag.[prcm]
+[else]
+　私が机の隅に寄せていたカルテを診察室に置いてあったカバンに詰めるのを貴呼はぼんやりと眺めていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's just an old thing of mine.[l] I accidentally left a couple of them here,[」] I explained as I zipped up the bag.[lr]
+[else]
+　「ただの私物だよ。[l]ここに置いてきたものがいくつかあってね」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　と、鞄のフックを掛けながら貴呼に説明した。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[playse buf = 0 storage=se54.ogg]
+[freeimage layer=0 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg41_3" page=back layer=base]
+[trans method=universal rule="rule10" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After we left the consultation room, I locked the door behind us.[prcm]
+[else]
+　それから二人で診察室を出た後、私は鍵を閉めた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I won't need this anymore, so will you return them for me?[」][lr]
+[else]
+　「これはもう必要ないから返してもらっておいてくれないか？」[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se77.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took out the bundle of keys and handed them to Takako.[prcm]
+[else]
+　ズボンのポケットから鍵束を取り出して貴呼に渡した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Should I give them to Mayuko?[」][lr]
+[else]
+　「繭子に渡せばいいのかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p03_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that your other favor?[」][lr]
+[else]
+　「もしかしてもう一つの用事っていうのはそれだけ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yep.[」][lr]
+[else]
+　「そうだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako gave the bundle of keys a long, hard look.[prcm]
+[else]
+　貴呼は受け取った鍵の束を見た。[prcm]
+[endif]
+
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p04_h03" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200 rceil=255 gceil=225 bceil=200 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you leaving already?[」][lr]
+[else]
+　「もう帰るの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've got some other business to take care of.[l] I'll leave after looking around this place for a bit.[」][lr]
+[else]
+　「このあと用事があってね。[l]少しこの辺りを見てそれから帰る」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Want me to show you around?[」][lr]
+[else]
+　「この辺りなら案内しようか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's nice of you, but I want to do it alone and at my pace, if possible.[」][lr]
+[else]
+　「有り難いけれど、ひとりでゆっくり回ってみたいんだ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/t_img/f08_p04_h16" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200 rceil=255 gceil=225 bceil=200 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you say so.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, then.[」] I waved Takako goodbye and left her behind in the corridor.[prcm]
+[else]
+　「じゃあ」と手を振って貴呼と別れた。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="156_4.ks" target=*156_4
+
+

@@ -1,0 +1,500 @@
+*Cgselect_layers_del
+[macro name=cgselect_layers_del]
+[backlay]
+[freeimage layer=0 page=back][freeimage layer=1 page=back][freeimage layer=2 page=back][freeimage layer=3 page=back]
+[freeimage layer=4 page=back][freeimage layer=5 page=back][freeimage layer=6 page=back][freeimage layer=7 page=back]
+[freeimage layer=8 page=back][freeimage layer=9 page=back][freeimage layer=10 page=back][freeimage layer=11 page=back]
+[freeimage layer=12 page=back][freeimage layer=13 page=back][freeimage layer=14 page=back][freeimage layer=15 page=back]
+[freeimage layer=16 page=back][freeimage layer=17 page=back][freeimage layer=18 page=back][freeimage layer=19 page=back]
+[freeimage layer=20 page=back][freeimage layer=21 page=back][freeimage layer=22 page=back][freeimage layer=23 page=back]
+[freeimage layer=24 page=back][freeimage layer=25 page=back][freeimage layer=26 page=back]
+[endmacro]
+@return
+;
+
+*MsgLayer
+[macro name=msglayer]
+
+[if exp="kag.FBFGetLanguage() == 0"]
+
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7" layer=message  marginl=50 margint=80 marginr=50 marginb=80 visible=false opacity=0 vertical=false]
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+
+; FBF: More vertical space.
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7" layer=message  marginl=50 margint=76 marginr=50 marginb=60 visible=false opacity=0 vertical=false]
+;[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7" layer=message  marginl=50 margint=80 marginr=50 marginb=80 visible=false opacity=0 vertical=false]
+
+[else]
+
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7_jp" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7_jp" layer=message  marginl=50 margint=80 marginr=50 marginb=80 visible=false opacity=0 vertical=false]
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7_jp" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+
+; FBF: More vertical space.
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7_jp" layer=message  marginl=50 margint=76 marginr=50 marginb=60 visible=false opacity=0 vertical=false]
+
+[endif]
+
+;[deffont edgecolor=0x4646F2]
+[resetfont]
+[endmacro]
+@return
+;
+
+
+*MsgLayer2
+[macro name=msglayer2]
+
+[if exp="kag.FBFGetLanguage() == 0"]
+
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm8" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm8" layer=message  marginl=50 margint=80 marginr=50 marginb=80 visible=false opacity=0 vertical=false]
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm8" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+
+; FBF: More vertical space.
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm8" layer=message  marginl=50 margint=76 marginr=50 marginb=60 visible=false opacity=0 vertical=false]
+;[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm8" layer=message  marginl=50 margint=80 marginr=50 marginb=80 visible=false opacity=0 vertical=false]
+
+[else]
+
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm8_jp" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm8_jp" layer=message  marginl=50 margint=80 marginr=50 marginb=80 visible=false opacity=0 vertical=false]
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm8_jp" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+
+; FBF: More vertical space.
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm8_jp" layer=message  marginl=50 margint=76 marginr=50 marginb=60 visible=false opacity=0 vertical=false]
+
+[endif]
+
+;[deffont edgecolor=0x8FBC8F]
+[resetfont]
+[endmacro]
+@return
+;
+
+
+*MsgLayer3
+[macro name=msglayer3]
+
+[if exp="kag.FBFGetLanguage() == 0"]
+
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm9" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm9" layer=message  marginl=50 margint=80 marginr=50 marginb=80 visible=false opacity=0 vertical=false]
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm9" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+
+; FBF: More vertical space.
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm9" layer=message  marginl=50 margint=76 marginr=50 marginb=60 visible=false opacity=0 vertical=false]
+;[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm9" layer=message  marginl=50 margint=80 marginr=50 marginb=80 visible=false opacity=0 vertical=false]
+
+[else]
+
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm9_jp" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm9_jp" layer=message  marginl=50 margint=80 marginr=50 marginb=80 visible=false opacity=0 vertical=false]
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm9_jp" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+
+; FBF: More vertical space.
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm9_jp" layer=message  marginl=50 margint=76 marginr=50 marginb=60 visible=false opacity=0 vertical=false]
+
+[endif]
+
+;[deffont edgecolor=0x828282]
+[resetfont]
+[endmacro]
+@return
+;
+
+
+*MsgLayer_T
+[macro name=msglayer_t]
+
+[if exp="kag.FBFGetLanguage() == 0"]
+
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=false opacity=0 vertical=false]
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=false]
+
+; FBF: More vertical space.
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7" layer=message  marginl=70 margint=76 marginr=60 marginb=60 visible=false opacity=0 vertical=false]
+;[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7" layer=message  marginl=70 margint=80 marginr=60 marginb=70 visible=false opacity=0 vertical=true]
+
+[else]
+
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7_jp" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7_jp" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=false opacity=0 vertical=true]
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7_jp" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=false vertical=true]
+
+; FBF: More vertical space.
+[fbfscale_position page=fore left=0 top=0 width=800 height=600 frame="frm7_jp" layer=message  marginl=70 margint=76 marginr=60 marginb=60 visible=false opacity=0 vertical=true]
+
+[endif]
+
+; FBF: Start of vertical section.
+[eval exp="f.fbfisverticaltext = true"]
+
+[endmacro]
+@return
+;
+
+
+
+*MsgOff
+[macro name=msgoff]
+; FBF: Ensure text is drawn fully.
+[eval exp="kag.FBFDrawTextEnd()"]
+[backlay]
+[layopt page = back layer = message0 visible= false]
+[layopt page = back layer = message visible= false]
+[trans method = crossfade time=350]
+[wt]
+[endmacro]
+@return
+;
+
+
+*MsgOn
+[macro name=msgon]
+[wait time=200]
+[backlay]
+;[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+;[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="frm7" layer=message  marginl=70 margint=80 marginr=60 marginb=80 visible=true opacity=0]
+[layopt page = back layer = message0 visible= true]
+[layopt page = back layer = message visible= true]
+[font size="36"]
+[mappfont storage="ptserif36.tft"]
+[trans method = crossfade time=350]
+[wt]
+[endmacro]
+@return
+;
+
+
+*MsgOn_b
+[macro name=msgon_b]
+[wait time=200]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+; FBF: More vertical space.
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=76 marginr=60 marginb=60 visible=true opacity=0]
+;[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=70 margint=80 marginr=60 marginb=70 visible=true opacity=0]
+[trans method = crossfade time=350]
+[wt]
+[endmacro]
+@return
+;
+
+
+
+*MsgOn_t
+[macro name=msgon_t]
+[wait time=200]
+[backlay]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message0 marginl=0  margint=0  marginr=0  marginb=0  visible=true]
+[fbfscale_position page=back left=0 top=0 width=800 height=600 frame="" layer=message  marginl=40 margint=30 marginr=40 marginb=10 visible=true opacity=120]
+[trans method = crossfade time=350]
+[wt]
+[endmacro]
+@return
+;
+
+
+
+*Textfade
+;-----------------------------------------------------------------------------
+;■文字フェード有り                     [textfade enabled=true]
+;■文字フェードなし                     [textfade enabled=false]
+;-----------------------------------------------------------------------------
+[macro name=textfade]
+@if exp="mp.enabled == 'false'"
+@eval exp="f.textfade_enabled = 0"
+@else
+@eval exp="f.textfade_enabled = 1"
+@endif
+[endmacro]
+@return
+
+*Jingle1
+[macro name=jingle1]
+[playse buf = 0 storage=se150.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+
+
+*Jingle2
+[macro name=jingle2]
+[playse buf = 0 storage=se151.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle2" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+*Jingle3
+[macro name=jingle3]
+[playse buf = 0 storage=se152.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle3" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+
+*Jingle4
+[macro name=jingle4]
+[playse buf = 0 storage=se153.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle4" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+
+
+*Jingle5
+[macro name=jingle5]
+[playse buf = 0 storage=se154.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle5" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+
+
+*Jingle6
+[macro name=jingle6]
+[playse buf = 0 storage=se155.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle6" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+
+*Jingle7
+[macro name=jingle7]
+[playse buf = 0 storage=se156.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle7" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+
+*Jingle8
+[macro name=jingle8]
+[playse buf = 0 storage=se157.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle8" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+
+
+*Jingle9
+[macro name=jingle9]
+[playse buf = 0 storage=se158.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle9" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+
+*Jingle10
+[macro name=jingle10]
+[wait time=100]
+[playse buf = 0 storage=se159.ogg cond="kag.skipMode != 4"]
+[backlay]
+[image storage="bg00_w" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[backlay]
+[image storage="jingle10" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[ws buf=0]
+[backlay]
+[image storage="bg00" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1500]
+[endmacro]
+@return
+;
+
+
+
+
+*RoleChange1
+[macro name=rolechange1]
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[image storage="bg00.jpg" page=back layer=base]
+[freeimage layer=0 page=back]
+[freeimage layer=1 page=back]
+[freeimage layer=2 page=back]
+[trans method=universal rule="rule6" vague=300 time=800]
+[wt]
+[backlay]
+[image storage=%bg page=back layer=base]
+[trans method=universal rule="rule6" vague=300 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true][endmacro]
+@return
+;
+
+;*RoleChange2
+;[macro name=rolechange2]
+;[clickskip enable = false]
+;[msgoff]
+;[backlay]
+;[image storage="bg00.jpg" page=back layer=base]
+;[trans method=universal rule="rule6" vague=1 time=800]
+;[wt]
+;[backlay]
+;[image storage=%bg page=back layer=base]
+;[eval exp="f.flag1 = %chara1"]
+
+;[if exp="%chara1 == 'play'"] 
+;[l]
+;[image layer=0 page=back storage=%chara1 visible=true left=%left1|0 top=%top1|0]
+;[endif]
+;[if %chara2!=" "]
+;[image layer=1 page=back storage=%chara2 visible=true left=%left2|0 top=%top2|0]
+;[endif]
+;[if %chara3!=" "]
+;[image layer=2 page=back storage=%chara3 visible=true left=%left3|0 top=%top3|0]
+;[endif]
+;[trans method=universal rule="rule6" vague=1 time=800]
+;[wt]
+;[msgon]
+;[clickskip enable = true]
+;[endmacro]
+;@return
+;

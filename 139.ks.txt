@@ -1,0 +1,17 @@
+title: 朝日
+
+寝返りをすると羽毛の布団が肩からずれた。
+目を開けて、上体を起こすとチェストの上にある観葉植物のハート状の葉と硝子の羊が窓の外の光を受けて光って、まだ開ききらない瞼をチカチカ、とさせた。
+手のひらが鳴りそうな空の腹を抑えていた。
+
+「夕飯なにか食べたかしら？」
+窓の外はいつの間にか白い雪模様になっている。
+硝子の縁には結晶がついて光っている。
+しばらく結晶を凝視してから、ベッドを降りた。
+
+Some text may not be added by this script, e.g. 
+	[if exp=kag.FBFPrepareLanguage() == 1]
+	[r]
+	　と、母が言った。[prcm]
+	[endif]
+0 place(s) of [if exp=kag.FBFPrepareLanguage() == 1] found, pleaze check the **.ks.utf8.txt file manually

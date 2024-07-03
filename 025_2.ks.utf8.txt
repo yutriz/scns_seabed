@@ -1,0 +1,730 @@
+*025_2| Talent
+; *025_2|才能
+[fbfstoretitle eng="Talent" jp="才能"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[playbgm storage="bgm45"]
+[backlay]
+[fbfscale_image storage="item22" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="item22" page=back layer=base gceil=180 rceil=180 bceil=180]
+[trans method = crossfade time=800]
+[wt]
+[msgon]
+[wait time=100]
+[clickskip enabled=true]
+
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 28"]
+[eval exp="sf.ItRelease = 29"]
+[endif]
+
+
+*| Talent
+; *|才能
+[fbfstoretitle eng="Talent" jp="才能"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took a different route home this time, deciding to enter a small and rather lonely-looking bar.[lr]
+[else]
+　仕事帰りのいつもの道から逸れると、人気のない小さなバーに入る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The place first piqued my curiosity about six months ago, but I had since forgotten all about it.[prcm]
+[else]
+　半年ほど前から気になっていたがなかなか訪れる機会がなく、つい先程まで忘れていたような所だった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a simple, rectangle-shaped liquor shelf behind the illuminated counter.[lr]
+[else]
+　シンプルな長方形の作りで、照明はカウンターの向こうにある酒棚だけにある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The interior was dimly-lit; I could barely make out the faces of people sitting just two seats from me.[prcm]
+[else]
+　灯りは薄く、カウンター席の二つ向こうの顔ですらはっきりと見えない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did I make you wait?[」][lr]
+[else]
+　「待ったかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard a voice from behind just as I finished ordering my highball.[lr]
+[else]
+　カウンター席に座りハイボールを頼んだところで、後ろから声をかけられる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki sat down next to me.[prcm]
+[else]
+　隣に[ruby text="なら"]楢[ruby text="さき"]崎が座る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello.[」][lr]
+[else]
+　「お疲れ様」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey. This seems like a nice place.[l] You come here a lot?[」][lr]
+[else]
+　「おつかれ、いいところだね。[l]よく来るのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No. It's actually my first time here.[」][lr]
+[else]
+　「ううん、初めて来たの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that a highball?[l] I guess I'll try out the same.[」][lr]
+[else]
+　「それハイボール？[l] じゃあ、私もそれで」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I nodded, and Narasaki ordered the exact same drink as I did.[prcm]
+[else]
+　こちらが頷くと、楢崎はそのまま同じものを頼む。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you drink a lot?[」][lr]
+[else]
+　「よく飲む？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, only at parties, or if I'm feeling really tired.[」][lr]
+[else]
+　「誘われた時とか、疲れた時くらいかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][lr]
+[else]
+　「ふむ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A glass identical to mine was placed in front of Narasaki.[prcm]
+[else]
+　楢崎の前に、こちらと同じグラスが置かれる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You're pretty early. Didn't you say you were busy lately?[」][lr]
+[else]
+　「早いね、忙しんじゃなかったのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I cancelled one of our commissions.[」][lr]
+[else]
+　「案件がひとつ減ったからよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, I see.[」][prcm]
+[else]
+　「ああ、なるほど」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was something Takako was supposed to do.[」][lr]
+[else]
+　「もともと、[ruby text="たか"]貴[ruby text="こ"]呼がやるって言って取ってきたものなの。[l]向こうもそのつもりだったし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was she the only one capable of doing it or something?[」][lr]
+[else]
+　「ほかの人にはできない仕事なのかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「そう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Takako has been quite odd ever since we were kids, right?[」][lr]
+[else]
+　「貴呼って昔から変わってるでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, she sure had plenty of energy to spare, I'll give her that.[」][lr]
+[else]
+　「確かに、騒がしいやつだったな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] She possesses a unique kind of sensitivity.[l] ...No, I guess that's putting it too nicely.[l] You could say she's always looking at things from a different perspective compared to others. Well, she's pretty eccentric is what I'm trying to say.[」][lr]
+[else]
+　「そう。[l]ちょっと人と違った感性を持ってるのよね。[l]…いや、感性とかそんな品のいいものじゃないわね。[l]見てる方向が違うだけっていうか、とにかく違ってるのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Eccentric...[」][lr]
+[else]
+　「違ってる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki parroted me.[prcm]
+[else]
+　と、楢崎は繰り返した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I could tell there was something off about her back in elementary school, during our first art class.[l] You know how palettes have separate holes for primary colors?[l] Well, she would first mix all of them together, then use the almost randomly derived set of colors from that mess.[」][lr]
+[else]
+　「小学校の図工の時間に絵を描いてるときからもうおかしかったわ。[l]貴呼はパレットに絵の具を出すとき原色を出しておく小さい穴を使わないのよね。[l]広いところにぐちゃぐちゃに出して混ぜたくるの。[l]
+それで、その混ぜたくってわけのわからない色の中から、端っこに少しだけある使えそうな色を取っていくのよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm...[」][prcm]
+[else]
+　「ふむ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I would always use only the colors I needed. For example, if we had to color leaves, I'd choose green, yellow, orange, and perhaps some red to mix with them, but before long Takako would always be ahead of me.[l] Our grades were pretty much the same, but the teacher would always pay more attention to her.[l] On top of that, whenever we submitted our works for a competition, I'd always end up qualifying at best, while she kept winning prizes. There was a time I almost started hating her for it.[」][prcm]
+[else]
+　「私はちゃんと小さな穴に必要な色だけ出して、例えば葉っぱの色を決めるときは、緑に黄色に、橙色、少し赤も混ぜてみようかしらなんて考えながら描いていると、その間に向こうはどんどん先に進んでいくのよね。[l]
+美術の成績は私も貴呼も一緒だったけど、先生はいつも貴呼ところにばかり言ってアドバイスするの。[l]そのうえ、クラスで選考されても私はいつも入選止まりで、向こうは大賞とかとっちゃったりするんだから、嫌になる時もあったわ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did her work look good from your perspective, too?[」][lr]
+[else]
+　「キミから見ても、上手いのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, I don't think I could really call her extraordinarily good, but her works always have something that catches your eye.[」][lr]
+[else]
+　「上手いか下手かって言ったら、特段上手いわけじゃないわよ。[l]でも、あの人が作るものには大体どこかに何か目を引くものがあるの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Something...?[」][lr]
+[else]
+　「何か」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[」][lr]
+[else]
+　「そうなの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't even realize that I'd already finished my glass.[lr]
+[else]
+　いつの間にか、グラスが空になっていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki's glass was empty as well. She ordered another cocktail.[prcm]
+[else]
+　楢崎のグラスも空で、楢崎は次に別のソーダ割りを頼んだ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Do you know a lot about these kinds of drinks?[」][lr]
+[else]
+　「お酒詳しいの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Not really. I just remembered an elderly man who kept coming to our place. He'd always mention this one.[」][prcm]
+[else]
+　「いや、うちによく来るお祖父さんが言っていたのを思い出しただけだよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The bartender put some ice in the glass and stirred it with a bar spoon, cooling it off.[lr]
+[else]
+　バーテンダーは、グラスに氷を入れバースプーンでカラカラ、とかき混ぜてグラスを冷やした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He then did away with the water that came from the melted ice, and spilt some of the alcohol Narasaki ordered into a measuring cup.[lr]
+[else]
+　それから氷から溶け出した水を出して、メジャーカップに楢崎の頼んだ酒を入れる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was some sort of foreign liquor I couldn't recognize from the label alone, but its golden hue reminded me of whiskey.[prcm]
+[else]
+　酒は海外のもので、ラベルを見ても銘はよく分からなかったが金色でウィスキーのようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He stirred it with a bar spoon again and picked up the soda next.[lr]
+[else]
+　バースプーンでカラカラ、とかき混ぜてソーダを入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After pouring most of it in one go, he carefully added the final few drops.[lr]
+[else]
+　ソーダは一気にいれ、そして一滴足した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The ice cubes jostled about in the drink as the bartender stirred it, sending bubbles floating to the surface.[lr]
+[else]
+　バースプーンで氷をくるりと回し、氷を浮かせて沈めるとシュワッ、と白い泡が立った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It looked almost like some sort of chemistry experiment.[prcm]
+[else]
+　ここまで手つきは正確で、理科の実験のようだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+He then added a bit more of the alcohol to make the drink gain some color.[lr]
+[else]
+　最後に、色を調節するように酒を少し足した。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As it took on a vivid golden hue, the bartender plugged the bottle with a confident air of perfection about him.[prcm]
+[else]
+　金色がやや鮮やかになると、バーテンダーは完璧と行った様子でピシャリ、と酒の蓋を閉めた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And that made you insecure?[」][lr]
+[else]
+　「それで、少し不安になったのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki took her glass, continuing our conversation.[prcm]
+[else]
+　楢崎はグラスを取り、言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes, I suppose so.[」][lr]
+[else]
+　「まあ、そんなところ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ordered another drink myself.[prcm]
+[else]
+　こちらも、次のグラスを注文する。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think you don't need to worry about your work.[l] I'm not an expert on arts and design or anything, but you should be fine.[」][lr]
+[else]
+　「仕事の件だけど、大丈夫だろうよ。[l]私はデザインについてはよく分からんが、キミなら恐らく平気さ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And why would you say that?[」][lr]
+[else]
+　「どうしてそう思うのよ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Much like Takako had her own talents, you're also capable of things others can't imitate.[」][lr]
+[else]
+　「貴呼に才能があったように、キミにもちょっとやそっと、人に真似できない才能があるからさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh? And what would those be?[」][prcm]
+[else]
+　「へえ、それってどんな？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... I'm not sure how to put it, but... I guess one could say you're able to comprehend things at their base level.[」][lr]
+[else]
+　「何ていうのかな。[l]物事をよく理解する才能っていうのかな」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Am I?[l] Even supposing you're right, what use would a skill like that be?[」][lr]
+[else]
+　「そんなこと出来たかしら。[l]仮に出来たとして、何の役に立つのよ？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]With enough effort, you could accomplish the same things as Takako.[」][lr]
+[else]
+　「やろうと思えば、貴呼がしていた仕事と同じことだって、出来るようになるはずさ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You think...?[」][prcm]
+[else]
+　「そうかしら」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]After all, you're one tough gal. Few things in this world could faze you.[」][lr]
+[else]
+　「何にしてもキミはしっかりした人だから、大抵のことは平気さ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]With that, I can agree.[」][lr]
+[else]
+　「それは知ってる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Haha, I see.[」][lr]
+[else]
+　「そうかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki chuckled.[prcm]
+[else]
+　はっ、と楢崎が笑う。[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="item22" page=back layer=base gceil=180 rceil=180 bceil=180]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think I'll try visiting your clinic this week.[l] What day would be okay? Do you have any preferences?[」][lr]
+[else]
+　「今週どこかの日に、あなたの診療所に行くわ。[l]都合のいい日ってある？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I ordered my third drink.[prcm]
+[else]
+　三杯目を注文した時に、楢崎に言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I've got no appointments on Wednesday so far.[」][lr]
+[else]
+　「水曜日ならまだ全日空いてる」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then I'll drop by sometime before lunch.[」][lr]
+[else]
+　「じゃあ、昼前に」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]All right.[」][prcm]
+[else]
+　「わかったよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After that, we discussed our past for a while.[lr]
+[else]
+　それから、楢崎と昔の話をした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+About the time we spent together at the kindergarten, and what we'd both done since we parted ways.[lr]
+[else]
+　幼稚園で遊んでいた頃の話や、楢崎と会わなくなってからの話もした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narasaki kept jotting down some of the things I said.[lr]
+[else]
+　楢崎はたまにメモを取った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+When I asked her about it, she said it contained hints for my diagnosis.[prcm]
+[else]
+　何をメモしたかを聞くと「診療に役に立ちそうなことだよ」と楢崎は言った。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="026.ks" target=*026
+
+

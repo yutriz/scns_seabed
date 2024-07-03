@@ -1,0 +1,980 @@
+*126| Glass stone
+; *126|ガラス石
+[fbfstoretitle eng="Glass stone" jp="ガラス石"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+
+[msglayer]
+[playbgm storage="bgm21"]
+[backlay]
+[fbfscale_image storage="bg43_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="ev9_2" page=back layer=base]
+[trans method = crossfade time=800]
+[wt]
+[wait time=1000]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 157"]
+[eval exp="sf.ItRelease = 158"]
+[endif]
+
+
+*| Glass stone
+; *|ガラス石
+[fbfstoretitle eng="Glass stone" jp="ガラス石"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Where did you find it?[」][lr]
+[else]
+　「どこから持ってきたんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae raised her face from the book and gave the case I held a look.[prcm]
+[else]
+　[ruby text="さ"]早[ruby text="なえ"]苗が本を読んでいた顔を上げて、こちらの手に持っているケースを見た。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I borrowed it from Kozue's room.[」][lr]
+[else]
+　「[ruby text="こずえ"]梢の部屋から借りてきたの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was a transparent, rectangular case filled with water — an old toy.[prcm]
+[else]
+　手に持っていた旧い玩具は、水の入った四角い透明のガラスのケースだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It had colorful pictures of fish on it, and a bunch of plastic red rings inside.[lr]
+[else]
+　水中にはカラフルな魚の絵とプカプカと浮かぶプラスチックの赤くて透明な輪がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And on the bottom, there was a big, plastic color.[lr]
+[else]
+　ケースの底には、やはり色つきのプラスチックで出来た珊瑚が生えていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+You could push a button to create water current and send the rings swirling around inside.[lr]
+[else]
+　ゴム製の釦を押すと、水流ができて輪が舞い上がる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I managed to get some on the coral.[lr]
+[else]
+　いくつかが、珊瑚の枝に掛かった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pushed the button harder, wanting to get a ring that fell far to the side, but the strong current ended up sweeping the rings I'd already collected aside as well.[prcm]
+[else]
+　岩場に乗り上げてしまった輪を取るために、勢い良くボタンを押すと、既に珊瑚の枝に通してあった輪も舞い上がってしまった。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev9_3" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Speaking of which, which room did Kozue move to?[」][lr]
+[else]
+　「そういえば、梢ちゃんの新しい部屋はどこになりました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I think it was the corner room on the third floor of the western wing.[」][lr]
+[else]
+　「確か、西棟の三階通路の角部屋だったはず」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae stared at me with her finger stuck in her closed book.[prcm]
+[else]
+　早苗は本の間に人差し指を挟んだままこちらを見ていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that book good?[」][lr]
+[else]
+　「その本、面白い？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] I'm only halfway through, but would you like me to tell you about it?[」][lr]
+[else]
+　「面白いですよ。[l]まだ、半分も読んでないですけど、聞きます？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No need. Just lend it to me once you're finished.[」][lr]
+[else]
+　「いや、読み終わったら貸してくれる？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Okay.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae nodded.[prcm]
+[else]
+　早苗が頷いた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image storage="ev9_4" page=back layer=base]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh?[l] You're hurt, Takako.[」][lr]
+[else]
+　「あれ？[l] [ruby text="たか"]貴[ruby text="こ"]呼さん、怪我してますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pointed at my elbow.[prcm]
+[else]
+　早苗が肘の方を指さした。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh.[」][lr]
+[else]
+　「あら」[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg43_1" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h06" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae took out a band aid box from the closet by the bed.[prcm]
+[else]
+　早苗がベッドの隣に置かれた棚の一番上にある小さな引き出しから、絆創膏の箱を取り出した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess I brushed it against something.[」][lr]
+[else]
+　「どこかで擦ったみたい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How could you not notice something like that?[」][lr]
+[else]
+　「どうして気がつかなかったんですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Sanae stooped in front of me, ripping the bandaid seal off.[prcm]
+[else]
+　そう言って、早苗は絆創膏のテープをはがしながらこちらに屈んだ。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I move around and get hurt a lot, so my brain probably doesn't even register small things like this anymore.[」][lr]
+[else]
+　「普段から身体を動かしていると怪我することも多いから、これくらいなら気にならないんだろうね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I raised my elbow in front of her, which prompted Sanae to put a bandaid on it.[prcm]
+[else]
+　肘を差し出すと、早苗が擦り傷に絆創膏を貼った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You could use some exercise yourself, Sanae.[」][lr]
+[else]
+　「早苗も少しは運動するといい」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I agree, but it's not so easy when you're small and frail like me.[」][lr]
+[else]
+　「それはいい考えですけれど。[l]この細身で運動をするとなると、一筋縄ではいかないと思う」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How about jogging?[」][lr]
+[else]
+　「手軽にジョギングなんてどう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I get out of breath just climbing the stairs.[」][lr]
+[else]
+　「体力が付く前に、尽きそうです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm, if you want something effective but not too draining, then how about swimming?[」][lr]
+[else]
+　「効果があって負担も少ない運動なら、水泳とかいいんじゃないかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know how to swim.[」][prcm]
+[else]
+　「泳いだ事ないです」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Seriously? The sea's a rock throw away from here.[」][lr]
+[else]
+　「こんなにすぐ近くに海があるのに？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]People actually swim in there?[」][lr]
+[else]
+　「海で泳ぐんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Of course they do.[l] Don't tell me you've never been to the sea before.[」][lr]
+[else]
+　「そうだよ。[l]もしかして海にも行ったことないの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you even do at the sea?[」][lr]
+[else]
+　「海に行って、何をするんですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, you can swim, play beach volleyball, look for seashells and crabs, build sand castles, or even collect glass stones. Stuff like that.[」][lr]
+[else]
+　「泳いだり、ビーチバレーしたり、磯で貝とかカニを捕まえたり、砂でお城を作ったり、ガラス石を集めたり」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Glass stones?[」][prcm]
+[else]
+　「ガラス石？」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Waves can sometimes make glass from sand, which results in translucent stones.[l] Have you never seen any before?[」][lr]
+[else]
+　「河原の石みたいに、硝子が波と砂で擦られて丸くなったものなんだけど。[l]見たことない？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[」][lr]
+[else]
+　「見たことないです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]They come in different colors, too. I remember collecting a whole bag of them when I was little.[l] If you hold them out under the sun, they shine in various different colors.[」][lr]
+[else]
+　「色んな色があって、小さいときは袋にたくさん集めたりしたもんさ。[l]日を透かすと、色のついた光が映るの」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sounds like it'd be very beautiful.[」][lr]
+[else]
+　「綺麗なんですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, it is.[l] Back at my old place, I had them lined up along with the seashells on a shoe cabinet.[」][lr]
+[else]
+　「そう。[l]以前に住んでいた玄関の靴箱の上にも、貝殻と一緒にガラス石を飾っていたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]One of my relatives made this mosaic picture by sticking them to a canvas.[l] I mean, not professionally or anything... it was more like part of a school project, I think. Either way, it was a scenery of colorful fish swimming in the blue ocean.[l] Whenever I went to visit those relatives as a child, it'd be hanging above their shoe cabinet, too.[」][lr]
+[else]
+　「親戚のお義兄さんはさ、これを板に貼ってモザイク画を作ってたんだ。[l]
+と言っても対したものじゃなくて多分学校の工作授業か何かで作ったものだと思うんだけど、青いガラス石を敷き詰めた海とカラフルな魚が泳いでる風景だったと思う。[l]
+小さい頃、親戚の家に遊びに行ったとき、玄関にそのモザイク画を飾ってたんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It was about this big, too.[」] I gestured with my hands, conveying the[r]
+dimensions of a piece of A4 size paper.[prcm]
+[else]
+　「これくらいの」とA4サイズくらいの大きさを手で表してみせた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds a bit like a stained glass window.[」][lr]
+[else]
+　「ステンドグラスみたいな感じですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, sort of. Honestly, I wanted to make something like that myself.[l] But I'd only just now remembered it.[」][lr]
+[else]
+　「そんな感じ、一度作ってみたいと思っていたんだ。[l]忘れていたよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You've been fond of creating things all your life, haven't you?[」][lr]
+[else]
+　「貴呼さんは、昔から工作が好きだったんですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, I even joined the pottery club back in elementary school.[」][lr]
+[else]
+　「小学校の時のクラブは焼き物を選んでいたくらいだからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What did you make there?[」][prcm]
+[else]
+　「何を作ったんですか？」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, I remember making a vase and an ashtray.[l] I didn't have enough clay, so my vase ended up too small to stick a flower in it.[l] But I shaped it like a tulip instead, which turned out to look pretty nice, so I liked it.[l] It was not me but the teacher that made the final glazing, so it ended up brown.[l] Makes me wonder if they just had no red dye at all.[l] The ashtray was a present for my grandfather.[l] I noticed that he didn't have one at home.[l] He used it for quite some time after that.[lr]
+It'd always make me happy to see it on their table when I went to visit.[」][prcm]
+[else]
+　「花瓶とか灰皿かな。[l]花瓶といっても、もらった土粘土が小さかったから花を差すほど丈のある花瓶じゃなかった。[l]
+その代わりのつもりじゃなかったけど形はチューリップみたいにしてさ、結構気に入ってたんだよ。[l]
+でも、肝心の色つけや焼きなんかは先生の方でやってもらったから、チューリップの色は茶色にされてたよ。[l]
+赤は無かったのかな。[l]灰皿は祖父のプレゼント用だった。[l]祖父の家にちゃんとした灰皿がなかったのが気になっていたからね。[l]
+こっちは、そのあとも随分使い込んでもらえてた。[l]祖父の家に行った時に何の変哲もない平たい焼き物の灰皿が使われてあるのを見て、少し嬉しかった」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　昔のことを思い出しながら話をすると「ふうん」と早苗が相槌を打つ。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A pottery club sounds like fun.[l] It's nice to actually have something tangible after all your efforts.[l] Did you make anything else?[」][lr]
+[else]
+　「焼き物クラブいいかも知れませんね。[l]何か思い出に残るものがあるところがいいですね。[l]
+他に、何か工作で作ったものとかありますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... I guess I made a bookmark, if that counts.[l] You fill a little bucket with water and throw your watercolors in it.[l] The colors mix in all sorts of patterns and you get something cool-looking if you let a piece of paper float and soak in it for a while.[」][lr]
+[else]
+　「そうだなあ、学校で作ったものといえば、あと栞かなあ。[l]バケツに水を張って、そこに水彩絵の具を落とすの。[l]
+水面に色の模様ができるから、そこに白い紙を浮かべて、綺麗な模様入りの栞を作るの」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Oh, I remember doing that in the past.[」][prcm]
+[else]
+　「ああ、昔やりましたねそれ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I also made a hand from paper mache.[」][lr]
+[else]
+　「あとは、紙粘土で手を作ったり」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I remember doing that, too.[l] It's where you use some thick wires for the base skeleton, coil some string around that, then add the paper mache, right?[」][lr]
+[else]
+　「それもやりましたね。[l]太い針金で手の骨を作って、そこに荒縄を巻いて、紙粘土を肉付けしていくんですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, that's right.[l] We made masks, kites, and stamps from it.[」][lr]
+[else]
+　「そうそう、乾いたらニス塗って。[l]あと、お面とか凧とか面子とか判子とか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Back in school, I made stamps in carving class.[l] I really liked how mine came out. I made it have a flower pattern.[」][prcm]
+[else]
+　「判子作りましたね、篆刻の授業で。[l]あれ好きでした、持ち手にも花の柄を彫刻しました」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No matter how often the teacher warns you, there's always someone who gets hurt in that class.[」][lr]
+[else]
+　「彫刻は先生があれだけ注意するにもかかわらず、クラスに一人くらいは怪我する人いるよねえ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's a bad to idea to place your hand in front of the blade.[」][lr]
+[else]
+　「刃先に手を置いてはいけないんですよね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Better safe than sorry is what you have to keep in mind in that class.[l] I've yet to ever cut my finger, even with a kitchen knife.[」][lr]
+[else]
+　「ああいう作業をするときは、注意一秒怪我一生ってちょうどいい言葉があるから、それ頭に浮かべてるといいよ。[l]
+私は包丁にしたって一度も怪我したことがないのが自慢なんだ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I showed her my hand.[prcm]
+[else]
+　「ほらね」と手のひらを返してみせる。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Isn't that just because you never cook?[」][lr]
+[else]
+　「料理で怪我しないのは分母の数のおかげではないのでしょうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, I do cook sometimes.[l] I can even peel a potato with a knife.[」][lr]
+[else]
+　「いやいや、やるときはやるよ。[l]じゃがいもの皮むきだってピラー使わなくて、結構早いんだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then peel an apple for me next time.[」][lr]
+[else]
+　「それじゃあ、今度りんごの皮を剥いてくださいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sure thing.[」][lr]
+[else]
+　「いいよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I took her on.[lr]
+[else]
+　まんまとリンゴの皮剥き作業を買って出てしまう。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+For a moment, Sanae's face looked like Mayuko's to me.[prcm]
+[else]
+　一瞬、早苗の顔に繭子の顔が重なって見えた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is something the matter?[」][lr]
+[else]
+　「どうかしました？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, no... I just wondered about my position in this house.[」][lr]
+[else]
+　「いや、こうしてだんだん立場が形成されていくのかとかその辺のことが…」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Huh?[」][prcm]
+[else]
+　「ん？」とクエスションマークを頭の上に浮かべる早苗。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Anyway, yeah, I made a lot of things.[l] Now that I think about it, I made more stuff than I could even remember.[」][lr]
+[else]
+　「しかし、他にもたくさん作ったけれど。[l]まあこうして思えば色々なもの作ったね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wonder if children are still like that these days.[」][lr]
+[else]
+　「そうですね、最近の子供もそうなんでしょうか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I wouldn't know.[l] We can ask Kozue about it later.[」][lr]
+[else]
+　「どうだろう？[l] 梢に聞いてみようか」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h04" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]For us, it might be a sweet memory, but for her, it's still school. I doubt she'll be able to consider it fun the way we do.[」][lr]
+[else]
+　「梢ちゃんにとっては、授業ですから。[l]そんなに楽しい話ではないかもしれないけれど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah, school ruins a lot of things. Some of my most boring classes made it feel like time had just stopped.[」][prcm]
+[else]
+　「確かに学校の授業って面白くないもの多いし、そういうのって時計の針は全然進まなく感じるものね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Though, we truly did touch upon a lot of things in school, didn't we?[l] I mean, even if we're talking about art class, we made so many different things when we were there. But then life becomes far more monotone once you graduate.[」][lr]
+[else]
+　「今にして思えば、それだけ色々なものを詰め込んでいたのですね。[l]
+学校では工作だけでもあれだけものを作ってたのですが、学校を卒業してからは、学校を出てからは、あれほど多様に物を作ることってありませんからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah...[l] I continued making things, though.[」][prcm]
+[else]
+　「そうだね。[l]まあ、私はしていたけどね、ものつくり」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Now that you mention it, you worked as a designer, didn't you?[l] Did you choose that career because you've enjoyed creating things ever since you were little?[」][lr]
+[else]
+　「そういえば、貴呼さんはデザイン関係のお仕事をされていたんですよね。[l]
+やはり、昔からもの作りが好きだったからですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess it's partly that, but Sachiko enjoyed that kind of work, too.[l] If we were going out of our way to start new jobs, I figured we might as well choose something we could do together.[」][lr]
+[else]
+　「それもあるけど、佐知子もそういう仕事が好きだったからかな。[l]新しく仕事を始めるなら、ずっと一緒の仕事がしたいと思っていたし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Sachiko's really good at painting.[l] She's doesn't get as many avant garde ideas as me, but I could never compare to her in terms of raw technique.[」][lr]
+[else]
+　「佐知子も絵が上手いんだよ。[l]私みたいに発想が豊かなタイプじゃないけどさ、世界観がしっかりしているというか、表現する技術ならあっちの方が全然上手かったりするからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see you love her very much.[」][lr]
+[else]
+　「やっぱり、貴呼さんは佐知子さんが好きなんですね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yeah.[l] Anyway, would you like to go look for glass stones sometime?[」][lr]
+[else]
+　「まあね。[l]ねえ、少し話が戻るけど、今度一緒にガラス石を取りにいかない？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds nice.[」][prcm]
+[else]
+　「良いですね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]We could decorate Kozue's room with them later.[l] She had very few things.[」][lr]
+[else]
+　「梢の部屋にも飾ってあげよう。[l]物が少なかったからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's a good idea.[」][prcm]
+[else]
+　「そうですね」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="127.ks" target=*127
+
+

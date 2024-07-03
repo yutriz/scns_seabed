@@ -1,0 +1,149 @@
+*060| The Silent Courtyard
+; *060|静かな中庭
+[fbfstoretitle eng="The Silent Courtyard" jp="静かな中庭"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+
+[playse buf = 0  storage=se98.ogg]
+[wait time=1000]
+[playse buf = 0  storage=se98.ogg]
+[wait time=1000]
+[msglayer2]
+[backlay]
+[fbfscale_image storage="bg56_2_s" page=back layer=base]
+[trans method = crossfade time=1500]
+[playse buf = 0  storage=se98.ogg]
+[wait time=1000]
+[playse buf = 0  storage=se98.ogg]
+[wait time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 75"]
+[eval exp="sf.ItRelease = 76"]
+[endif]
+
+
+*| The Silent Courtyard
+; *|静かな中庭
+[fbfstoretitle eng="The Silent Courtyard" jp="静かな中庭"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The withered grass crunched like shaved ice under my feet.[lr]
+[else]
+　中庭を歩くと白く枯れた芝がサクサク、とカキ氷をストローで突いたような音をたてた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a small hill with a camphor tree in the center of the courtyard.[lr]
+[else]
+　庭の中ほどは少し高くなっている。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　その白い芝の丘の中心に大きな楠木があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Its branches extended from its trunk in complex patterns reminiscent of lightning, forming an awe-inspiring canopy that sparkled beautifully in the morning dew.[prcm]
+[else]
+　木の根元からはいくつもの大枝がカミナリの光線のように複雑に延びていて、その先には朝露がキラキラと光る樹冠をなしている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A tranquil silence fell upon the area, giving the impression that the entire world had entered a deep slumber.[lr]
+[else]
+　朝の中庭はまだ眠りの中のようにシン、としている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The flowerbeds surrounding the hill had all withered in the morning sun. A gardening cart that had been forgotten nearby was half-full of rain water.[prcm]
+[else]
+　外縁の花壇は朝白の前に色が灯らず、その傍らに放置されているガーデニングカートにはいつかの雨の名残の水が張っていた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I kept listening as the frosty air chilled my skin.[lr]
+[else]
+　冷たい空気に切られそうな耳を澄ませる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+One of the tree branches shuddered, sending drops of dew to the ground.[lr]
+[else]
+　カサリ、とひとつの樹幹が揺れると、ポツリポツリと露を落とした。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked up and spotted a small bird with a long tail among the leaves.[prcm]
+[else]
+　薄目で見上げると、尾の長い小鳥がとまって羽を休めていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I continued listening.[lr]
+[else]
+　もうひとつ耳を澄ませる。[lr]
+[endif]
+
+[r]
+[seopt buf=0 volume=40]
+[playse buf = 0 storage=se68_2.wav]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+This time, I heard a knocking sound.[prcm]
+[else]
+　今度はコン、と音がした。[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[seopt buf=0 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="061.ks" target=*061
+
+

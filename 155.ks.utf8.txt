@@ -1,0 +1,518 @@
+*155| Sea glass
+; *155|海辺のガラス石
+[fbfstoretitle eng="Sea glass" jp="海辺のガラス石"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm34"]
+[wait time=3000]
+[backlay]
+[fbfscale_image storage="bg41_3_l" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 198"]
+[eval exp="sf.ItRelease = 199"]
+[endif]
+
+*| Sea glass
+; *|海辺のガラス石
+[fbfstoretitle eng="Sea glass" jp="海辺のガラス石"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The rays of the setting sun passed through the crown of the large tree in the inner yard, filling the corridor with a dim, orange light.[lr]
+[else]
+　人気のない廊下の床に傾き始めた日が中庭の大樹に茂る樹冠を映していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The chilly air I was exposed to in the room gave way for the scent of old wood, with remnants of warm dust floating in the air.[prcm]
+[else]
+　部屋の冷たい空気とは打って変わり、古い木の匂いと少し埃の混ざった空気が漂っている。[prcm]
+[endif]
+
+
+
+;/////
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer3]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 500]
+[backlay]
+[fbfscale_image storage="bg53_11" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 500]
+[msgon]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I found the rest area right away and sat down in one of the chairs.[lr]
+[else]
+　すぐ近くに休憩所を見つけて椅子に座り本を読む。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could still see Takako's door from here.[prcm]
+[else]
+　その場所からは[ruby text="たか"]貴[ruby text="こ"]呼の部屋の扉も見えた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+After spending some time reading, I spotted something move from the corner of my eye.[lr]
+[else]
+　しばらく休憩所で本を読んでいると、視界の隅に動くものが見えた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Someone was walking down the opposing corridor I could see from the window.[lr]
+[else]
+　ガラス窓の向こうに見える廊下に歩く人の姿がある。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+That person continued toward my location, their tied-up hair fluttering in the air.[lr]
+[else]
+　その人物は横に二つに括った髪を揺らしながらこちらに向かって歩いていた。[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p04_h06" visible=true left=-105 top=0 rceil=255 gceil=225 bceil=200 opacity=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=100]
+[fbfscale_move time=1000 path="(23,0,255)(151,0,255)(280,0,255)" layer=1]
+[wait time=100]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I waited for them to come while pretending to read. Eventually, a tall woman appeared on the other end of the corridor.[prcm]
+[else]
+　そのまま本を読んでいる振りをしてその人物が来るのを待っていると、廊下の角から背の高い女性が現れた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She gave me a suspicious sidelong glance as she carefully tried to pass by me.[lr]
+[else]
+　彼女はこちらを不審そうに横目で見ながら慎重に通り過ぎようとした。[lr]
+[endif]
+
+[r]
+[wm canskip=true]
+[msgoff]
+[wait time=50]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p04_h03" visible=true left=280 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hello,[」] I said in greeting. She had no choice but to stop.[prcm]
+[else]
+　「こんにちは」と声をかけると向こうも挨拶をした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I’m looking for Takako. You wouldn't know her, would you?[」][lr]
+[else]
+　「貴呼という人を探しているのだが知らないかい？」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p03_h03" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As I closed my book, she faced me with a bold look in her eyes.[lr]
+[else]
+　私が本を閉じると彼女はこちらにきっちり向き直って気の強そうな目を向けてきた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Rather than being wary of a sudden guest, she appeared curious, if anything.[prcm]
+[else]
+　突然の来訪者に警戒するよりも興味津々と言った表情をしている。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was quite tall for a woman, boasting a height that would easily put her in the same league as professional sportswomen or models.[lr]
+[else]
+　女性にしては背は高い。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　何かスポーツでもしているのか体型はモデルのように整っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her facial features had yet to fully mature. I could easily recognize her as the same person I'd seen during my kindergarten days.[lr]
+[else]
+　顔立ちはやや童顔で幼稚園時代に見た貴呼の面影を残している。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She was carrying a plastic bag in one hand, no doubt having just returned from buying groceries.[prcm]
+[else]
+　買い物の帰りなのか手にはどこかのスーパーの袋を持っていた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p03_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's me.[」][lr]
+[else]
+　「私だけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] My name is Narasaki.[l] Actually, it's not the first time we've met, but I can see you don't remember me.[」][lr]
+[else]
+　「そうか。[l]私は[ruby text="なら"]楢[ruby text="さき"]崎っていうんだ。[l]実は初対面というわけではないんだが覚えてないかな？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I stood up from the chair.[lr]
+[else]
+　言いながら私は椅子から腰を上げる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could immediately tell she didn't recognize me.[prcm]
+[else]
+　貴呼が覚えていないことは、その様子ですぐに分かる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it doesn't matter.[l] I came to talk to you... about the unusual illness you have.[」][lr]
+[else]
+　「覚えてないのならいいんだ。[l]それより今日は君に話があってきたんだ。[l]君のその珍しい病気についてのね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p04_h06" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My illness...?[」][lr]
+[else]
+　「私の病気？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako shifted the plastic bag to her other hand and crossed her arms.[lr]
+[else]
+　貴呼はビニール袋を持ち替えて腕を組んだ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I heard something akin to stones rustling inside it.[prcm]
+[else]
+　ビニール袋から沢山の石が擦れる音がした。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p04_h01" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess I'm not particularly busy.[」][lr]
+[else]
+　「このあとは特に予定は無いけれど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I nodded.[prcm]
+[else]
+　私は頷いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ah, that's right.[l] I brought you something from the town.[l] Do you like sweets?[」][lr]
+[else]
+　「そうだ。[l]お見舞いの品を持ってきたんだ。[l]甘いものは食べられるかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I handed her the paper bag with the confectionery box.[prcm]
+[else]
+　椅子の上に置いていた菓子箱を紙袋と一緒に貴呼に渡した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Thanks.[l] Of course I like sweets.[」][lr]
+[else]
+　「有難う。[l]もちろん、甘いものは大好きだよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That's good to hear.[」][lr]
+[else]
+　「そうかい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+To tell the truth, Sachiko had once told me Takako was a big fan of sweet bean paste, especially enclosed in something crisp. You know, like wafers in the case of monaka.[prcm]
+[else]
+　貴呼は餡子の入った和菓子が好物で特にまわりの硬い羊羹、
+餅入りのどら焼き、
+餡子多めの酒饅頭もしくは[ruby text="も"]最[ruby text="なか"]中が大好物なのだと以前[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子から聞いた覚えがあった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's been a while since I came here, but it's my first time getting an actual visitor.[l] It feels surprisingly... nice.[」][lr]
+[else]
+　「療養所に来てからかなり経つけど、誰かがお見舞いに来るのは初めてなんだ。[l]意外と嬉しいものだね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it going to be a long story?[」] she asked.[lr]
+[else]
+　そう言ったあとで貴呼は「ねえ、要件の話は長くなりそうかな？」と聞いた。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That depends.[」][prcm]
+[else]
+　「どうだろう」と私が言うと貴呼は頷いた。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p04_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]In that case, let's go somewhere else.[l] I can't even serve you tea here.[」][lr]
+[else]
+　「それじゃあとりあえず場所を移そう。[l]ここじゃお茶も出せないし」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[fbfscale_move time=800 path="(-70,0,0)" layer=1]
+[wm]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Takako started down the corridor.[lr]
+[else]
+　貴呼が先に廊下を歩き始めた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I followed her, but we ended up passing by her door and continued down the stairs.[prcm]
+[else]
+　貴呼の後を付いて行くと、貴呼は自室を通り過ぎて一階に降りる階段に向かった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Isn't your room over there?[」][lr]
+[else]
+　「部屋はそっちなのかい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]My room doesn't have a chair.[」][lr]
+[else]
+　「私の部屋には椅子が無いからね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「なるほど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did Mayuko show you inside? What was she even thinking, making you wait in a place like that?[」] she jokingly remarked.[prcm]
+[else]
+　「繭子に案内されたの？ いけないな。待たせるとしても、ちょっと気が利いてないよね」と貴呼は冗談ぽく言った。[prcm]
+[endif]
+
+
+;/////
+
+;[clickskip enabled=false]
+;[msgoff]
+;[backlay]
+;[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p03_h02" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[wait time=500]
+;[backlay]
+;[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p03_h03" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[wait time=500]
+;[backlay]
+;[fbfscale_image layer=1 page=back storage="fgimage/t_img/f08_p01_h11" visible=true left=105 top=0 rceil=255 gceil=225 bceil=200]
+;[trans method=universal rule="rule1" vague=300 time=400]
+;[wt]
+;[wait time=500]
+;[msgon]
+;[clickskip enabled=true]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time = 1000]
+
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="155_2.ks" target=*155_2
+
+

@@ -1,0 +1,567 @@
+*014| Review and the afternoon bell
+; *014|レビューとお昼の鐘
+[fbfstoretitle eng="Review and the afternoon bell" jp="レビューとお昼の鐘"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+
+[playbgm storage="bgm02"]
+
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method = crossfade time=1500]
+;[trans method=universal rule="rule10" vague=300 time=300]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 16"]
+[eval exp="sf.ItRelease = 17"]
+[endif]
+
+[playse buf = 0 storage=se55.ogg]
+*| Review and the afternoon bell
+; *|レビューとお昼の鐘
+[fbfstoretitle eng="Review and the afternoon bell" jp="レビューとお昼の鐘"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I closed the window behind my desk to keep the autumn cold out.[prcm]
+[else]
+　事務机の後ろにある窓を閉じて、冷たさを増してきた秋風を締め出した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Upon returning to my desk and glancing at all the documents littering it, I tapped the middle finger of my right hand against the desk's surface a number of times.[lr]
+[else]
+　事務机に戻ると、その上に広げていた資料を見直しながら右手の中指でトントン、と机を軽く叩く。[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I read through a document and signed it with a pen from the pouch to my right.[lr]
+[else]
+　資料に目を通して、隅にある枠にペンをとってサインをする。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a field for the date next to my name.[lr]
+[else]
+　名前の枠の隣には日付の枠があった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I looked away from the papers to the wall behind the rest of office desks.[l] Fixed to it were a round clock and a white board listing our schedules.[lr]
+[else]
+　資料から目を外して、並べた事務机の向こう側の壁に目をやる。[l]壁には丸い時計と、行動予定表と書かれたホワイトボードがある。[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It contained our names, whereabouts, the times we'd be leaving the office, and "other information."[l] The names listed included Mizuno Sachiko,[l] Ooita Fumi,[l] Inukai Takehito,[l] and Sawatari Annelyse.[prcm]
+[else]
+　ホワイトボードには、氏名、[l]行き先、[l]帰宅時間、[l]備考、[l]の列名が付いた表が描かれてあり、[l]
+氏名の下には、[ruby text="みず"]水[ruby text="の"]野[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子、[l]
+[ruby text="おお"]大[ruby text="いた"]分[ruby text="ふみ"]文、[l]
+[ruby text="いぬ"]犬[ruby text="かい"]飼[ruby text="たけ"]武[ruby text="ひこ"]彦、[l]
+[ruby text="さわ"]沢[ruby text="たり"]渡アンネリースの名が入ったマグネットが付けてある。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Above Mizuno Sachiko, there was an empty space with traces of Takako's name on it.[prcm]
+[else]
+　水野佐知子の上は、空白で以前貼っていた[ruby text="たか"]貴[ruby text="こ"]呼のマグネットの形が周りより白くなって残っていた。[prcm]
+[endif]
+
+
+[playse buf = 0 storage=se57.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Fumi, can I get your review on this?[」][lr]
+[else]
+　「文先輩、レビューをお願いします」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I added the date on the white board to the document.[prcm]
+[else]
+　ホワイトボードに書いていた日付を資料に書いていると、犬飼が文に言った。[prcm]
+[endif]
+
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm a bit busy right now.[」][lr]
+[else]
+　「ちょっと今、時間無いの」[lr]
+[endif]
+
+[r]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/i_img/f01_p02_h06" visible=true left=280 top=0 opacity=255]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p01_h02" visible=true left=-70 top=0 opacity=255]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai handed a memory stick and a bundle of freshly printed files to Fumi.[lr]
+[else]
+　事務机に着いている犬飼が椅子を半分回して、記憶媒体と印刷した紙資料を隣にいる文に差し出していた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi took out a color sample from her desk.[prcm]
+[else]
+　文は事務机の引き出しから色見本を取り出しながら返す。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What is it?[」][lr]
+[else]
+　「何の？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]The poster for the firework festival.[」][lr]
+[else]
+　「花火大会のポスターです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] I'll give it a look later. Just leave it here.[」][lr]
+[else]
+　「そう。[l]あとで見るから、そこに置いておいて」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I only made a few minor adjustments, so maybe I can just hand it in like that.[」][lr]
+[else]
+　「ちょっとした修正だけなので、このまま出しますか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai glanced at the paper in his hand.[prcm]
+[else]
+　犬飼が手に持った資料に目を落としてから言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are you confident it's okay?[」][lr]
+[else]
+　「保証できる？」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]More or less.[」][lr]
+[else]
+　「まあ」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Make sure to attach your photo to the thing so everyone knows it's your work and not mine, okay?[」][lr]
+[else]
+　「誰が保証したかわかるように、犬飼の顔写真付きのシールを貼っておいてね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/i_img/f01_p02_h07" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I have some extra ID pictures, can I use them?[」][lr]
+[else]
+　「余ってる証明書用の写真でもいいですか？」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Make it look like those vegetable packs you often see at the whole foods market. You know, the ones with pictures depicting the farmer who grew them.[」] [lr]
+[else]
+　「スーパーで売ってる野菜みたいな感じで、定規とコンパス持って僕が作りましたって絵面のほうがいいわね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi handed Inukai a pen case with drawing instruments.[prcm]
+[else]
+　文が犬飼に、製図用具の入った缶ペンケースを渡した。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm getting worried about this.[l] Fumi, can you look at it for him after all?[」][lr]
+[else]
+　「余計怪しいから。[l]文、ちゃんと見てあげて」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm almost done, so I'll make sure to check it today.[」][lr]
+[else]
+　「もう直ぐ今の作業が終わるので、本日中にやります」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I put an end to their game.[lr]
+[else]
+　口を挟むと、文が素直に返事をした。[lr]
+[endif]
+
+[r]
+[playse buf = 0 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai gave Fumi's desk — covered in plush toys and textbooks — a quick glance and placed the paper there.[prcm]
+[else]
+　犬飼は文のヌイグルミや参考書やらが置かれている事務机を一瞥して、手に持っていた資料を置いた。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p01_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[fbfscale_move time=100 path="(105,-30,255)(105,0,255)" layer=1]
+[wm]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey! Don't put it on my plushies![」][lr]
+[else]
+　「ああもう、ヌイグルミの上に置かないでよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi lifted the paper off the top of a little round sheep, then put it into a plastic case that served as a scaffold for a pile of textbooks on her desk.[lr]
+[else]
+　文が枕のような形をした羊のヌイグルミに置かれた資料を取ると、本立に並んでいる本を足場にしているプラスチックのケースに入れた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I could see Takako's barren desk beyond it.[lr]
+[else]
+　その本立の向こう側、貴呼の事務机の上は片付けられて、物は殆ど置かれていない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was only an empty glass jar on it, aside from a few papers intended for the new employee taking over her job.[prcm]
+[else]
+　空のガラス瓶と、それを支えにしていくつか貴呼のやり残しや、書かれていた引き継ぎ用の手順資料などがあるだけだった。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[backlay]
+[fbfscale_image storage="bg02_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=1000]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;チャイムの音
+[playse buf = 0 storage=se09.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A bell similar to that of school's reverberated in the room.[prcm]
+[else]
+　キーンコーンカーンコーン、と学校と同じ音色の鐘が鳴る。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/i_img/f01_p02_h05" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll go outside.[」][lr]
+[else]
+　「外、行ってきます」[lr]
+[endif]
+
+[r]
+[clickskip enabled=false]
+[playse buf = 1 storage=se25.ogg]
+[fbfscale_move time=500 path="(280,0,0)" layer=0]
+[wm]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Inukai left the office.[lr]
+[else]
+　と、犬飼が事務所を出た。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened a file, and after picking out a few colored pictures from it, slipped them into a brown envelope alongside the documents I had signed. Fumi stood up as I was jotting down the ZIP code, seemingly having finished her job early.[prcm]
+[else]
+　ファイルを開き添付されていた数枚のカラー写真からいくつかを取り、事務机の上に置いていたサイン済みの紙資料と一緒に茶封筒に入れて、紐式の封線を取って八の字に回していると、先に作業を終えた文が事務机を立つ。[prcm]
+[endif]
+
+
+
+[stopse buf=0]
+[msgoff]
+[backlay]
+[freeimage layer=0 page=back]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you bring your lunch today?[」][lr]
+[else]
+　「今日はお弁当ですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry. I couldn't wake up early this morning.[」][lr]
+[else]
+　「御免なさい、朝起きれなかったの」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h09" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][lr]
+[else]
+　「そうですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll drop by a convenience store on my way back. Would you like something?[」][lr]
+[else]
+　「帰りにコンビニによるけど、何か買ってきて欲しいものある？」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, I'm good.[」][lr]
+[else]
+　「大丈夫です」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そう」[prcm]
+[endif]
+
+
+[playse buf = 1 storage=se22.ogg]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I opened the bottom drawer, stuffed the envelope inside, then locked it.[lr]
+[else]
+　一番下の引き出しを開けると、封をした茶封筒を仕舞ってから鍵をかけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I pulled out my wallet from my handbag — resting next to the drawer — and stood up.[prcm]
+[else]
+　引き出しの隣にある鞄から財布を取り出して席を立った。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'll be off, then.[」][lr]
+[else]
+　「悪いけれど、留守番お願いね」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h02" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Later.[」][lr]
+[else]
+　「はい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I addressed Fumi as she was on her way to the kitchen.[prcm]
+[else]
+　文の方を振り向いて声をかけると、給湯室に向かう文がこちらを向いて返事をした。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=2000]
+[wt]
+[fadeoutbgm time=3000]
+[wait time=3000]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="015.ks" target=*015
+
+

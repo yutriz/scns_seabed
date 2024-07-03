@@ -1,0 +1,42 @@
+
+; FBF: Return to title screen prompt.
+*fbfreturntotitle
+
+; Store game state variables.
+[eval exp="kag.FBFOnYesNoPromptStart()"]
+
+[rclick target="*fbfreturntotitle_no" storage="FBFReturnToTitle.ks" jump=true enabled=true]
+
+; Set message.
+[if exp="kag.FBFPrepareLanguage() == 0"]
+	[eval exp="tf.promptMsg = 'Return to title screen?'"]
+[else]
+	[eval exp="tf.promptMsg = '最初に戻ります。よろしいですか？'"]
+[endif]
+
+[fbf_yesnowindow message="&tf.promptMsg" targetyes="*fbfreturntotitle_yes" targetno="*fbfreturntotitle_no"]
+[s]
+
+; FBF: Return to title screen? Yes.
+*fbfreturntotitle_yes
+[fbf_yesnowindow_clear]
+
+; Restore game state variables.
+[eval exp="kag.FBFOnYesNoPromptEnd();"]
+
+; FBF: End vertical section so it doesn't leak elsewhere.
+[eval exp="f.fbfisverticaltext = false"]
+
+; Go to title.
+[gotostart ask=false]
+
+[return]
+
+; FBF: Return to title screen? No.
+*fbfreturntotitle_no
+[fbf_yesnowindow_clear]
+
+; Restore game state variables.
+[eval exp="kag.FBFOnYesNoPromptEnd();"]
+
+[return]

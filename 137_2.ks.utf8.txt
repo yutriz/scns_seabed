@@ -1,0 +1,290 @@
+*137_2| Twilight
+; *137_2|黄昏時
+[fbfstoretitle eng="Twilight" jp="黄昏時"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer3"]
+
+[msglayer3]
+[playbgm storage="bgm09"]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 171"]
+[eval exp="sf.ItRelease = 172"]
+[endif]
+
+*| Twilight
+; *|黄昏時
+[fbfstoretitle eng="Twilight" jp="黄昏時"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Memories were leaking forth from the deepest corner of my mind — from the very boundary of the conscious and the subconscious.[lr]
+[else]
+　暗闇の中では意識の隅の隅、ほとんど無意識と言われる場所からでも記憶が漏れ出してくる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As the vision paused, I instead focused my senses on my limbs.[lr]
+[else]
+　古い記憶の途切れたところで、手足に意識を集中させる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I balled my hand into a fist with all my strength, successfully swaying my consciousness away from that memory.[prcm]
+[else]
+　片方の腕を強く握ると、ようやくその記憶から意識をそらすことができた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With that, I once again returned to the pitch black darkness.[lr]
+[else]
+　そのようにして、再び何も見ることのできない深い闇の中に戻った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed I had stopped before I realized.[lr]
+[else]
+　気がつくといつの間にか足が止まっている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I didn't know how long I was lost in that memory. When I resumed walking, I couldn't even tell if I was really moving or not.[lr]
+[else]
+　しかし、古い記憶の中にどれだけのあいだ意識を取られていたのか、再び歩きを進めようと体を動かしていても、その体が本当に動いているのかいまいち実感がつかめなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Before long, I could no longer sense my body at all.[prcm]
+[else]
+　そうしている内に、いつの間にか体の感覚が無くなっていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well now,[」] I said, unable to tell if I was really hearing my own words, or if they came from some distant memory again.[lr]
+[else]
+　「やれやれ」と呟くが、その声は耳で感じているのか、それともそのように喋ったという記憶なのかが判断できない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It felt as though my arms and legs had melted into the darkness.[lr]
+[else]
+　手も足もまるで暗闇に溶かされてしまったようだった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Perhaps I had returned to being just a doll, like in those memories.[prcm]
+[else]
+　古い記憶のとおり、ここにある体はもう人形になってしまったのかもしれない。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I inhaled a deep breath, then slowly let it out.[prcm]
+[else]
+　大きく息を吸い、それから息を吐いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I remembered how I talked to Sachiko just earlier.[lr]
+[else]
+　つい先ほど[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子と話していたことを思い出す。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She said it was odd to see me and Takako together.[lr]
+[else]
+　佐知子は初めにこちらと[ruby text="たか"]貴[ruby text="こ"]呼を見て可笑しいと言った。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+In that moment, I felt something different about her.[prcm]
+[else]
+　そのとき、こちらもいつもとは違う雰囲気を佐知子に感じていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Her expressions and body language seemed to have grown richer.[lr]
+[else]
+　話をしているうちに佐知子の表情や仕草がいつもより少しだけ複雑であることに気がついた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, I couldn't tell what that meant.[lr]
+[else]
+　しかし私にはその意味を理解することはできなかった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I wondered if I should tell her, but in the end, I decided not to.[prcm]
+[else]
+　そのことを佐知子に伝えるかを考えていたが、結局伝えそびれていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The lighter's light had been flickering in front of Sachiko's eyes.[lr]
+[else]
+　佐知子の目にはライターの火がゆらゆらと揺れていた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+And from her perspective, I should have been sitting right beyond it.[prcm]
+[else]
+　その火の向こうには、こちらの姿があるはずだった。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Ever so faintly, feeling returned to the tip of my toes and fingers.[lr]
+[else]
+　手足の指先に微かな感覚が戻る。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I calculated where my head was supposed to be from their position and fixed my eyes on the darkness.[lr]
+[else]
+　その相対位置で頭の位置を予測して闇を見据える。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was the real thing — complete darkness that melted the consciousness away.[lr]
+[else]
+　それは本物の闇で、本物の闇は意識を溶かす。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A phenomenon very similar to death.[prcm]
+[else]
+　概念はとても死に近いものだった。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+With some feeling having returned to my fingers, I began rhythmically moving them in an attempt to hypnotize myself.[lr]
+[else]
+　そこでかろうじて感覚の戻った指先を一定のリズムで動かして、私は自身に催眠術をかけた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My legs moved unconsciously. My eyes could have seen anything, but my heart wouldn't move.[prcm]
+[else]
+　足は無意識に動き、目はものを見ても心を動かさなくなる。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+All sorts of images appeared in front of my eyes.[lr]
+[else]
+　目の前にたくさんの映像が浮かぶ。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nonetheless, my legs pushed me ever onwards.[prcm]
+[else]
+　それでも足はもう止まらなかった。[prcm]
+[endif]
+
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[wl]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="137_3.ks" target=*137_3
+
+

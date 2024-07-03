@@ -1,0 +1,948 @@
+*163| A new journey
+; *163|旅立ち
+[fbfstoretitle eng="A new journey" jp="旅立ち"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+[call storage="MyMacro.ks" target="*MsgLayer2"]
+
+[msglayer2]
+[eval exp="WaveSoundBuffer.freeDirectSound()"]
+;[openvideo storage="ed.swf"]
+[playbgm storage="bgm48"]
+[backlay]
+[fbfscale_image storage="bg62" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p01_h04" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 218"]
+[eval exp="sf.ItRelease = 219"]
+[endif]
+
+
+*| A new journey
+; *|旅立ち
+[fbfstoretitle eng="A new journey" jp="旅立ち"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not bothering you, am I?[l] Tell me if I am, and I'll go straight to my hotel right away.[」][lr]
+[else]
+　「仕事の邪魔じゃない？[l] そうなら、言ってね。[l]すぐにホテルに行くわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae fixed her slightly disheveled hair with one hand as she sat on the sofa in the reception room.[lr]
+[else]
+　応接間のソファに体を沈めながら、[ruby text="なな"]七[ruby text="え"]重は髪を直しながら中指で頭を掻いた。[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h01" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+[playse buf = 0 storage=se30.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Fumi brought a tray with tea and snacks, and began lining them up on the table.[lr]
+[else]
+　[ruby text="ふみ"]文が給湯室からお茶と和菓子を四つずつ載せたお盆を持ってきて、机の上に並べていく。[lr]
+[endif]
+
+[r]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p02_h06" visible=true left=-70 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/f_img/f01_p03_h07" visible=true left=280 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[playse buf = 1 storage=se54.ogg]
+[backlay]
+[freeimage layer=1 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[msgon]
+[clickskip enabled=true]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She made a friendly smile when Nanae greeted her, then returned to the office.[prcm]
+[else]
+　七重が挨拶すると、文は愛想良く笑ってから、事務室に戻っていった。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Was that Ms. Fumi?[」][lr]
+[else]
+　「今のが文さん？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She cast a wary look at the door through which Fumi left. I nodded.[prcm]
+[else]
+　頷くと、ふうん、と言いながら文が去っていった方を見ていた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I said I had time on weekends, but I didn't expect you to come so early.[」][lr]
+[else]
+　「週末は暇だって言ったけど、こんなに早く来るとは思わなかったわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Your office was next to the station, so I figured I'd drop by on my way to the hotel.[l] I wanted to see where you work.[」][lr]
+[else]
+　「駅から近かったから、ホテルに行く前に寄っただけなの。[l]職場も見たかったし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I would've come to meet you if you had told me.[」][lr]
+[else]
+　「言ってくれれば、迎えに行くのに」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nah, I already feel plenty awkward for bothering you at work.[l] [msgoff][backlay][fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p02_h03" visible=true left=105 top=0][trans method=universal rule="rule1" vague=300 time=400][wt][msgon]Oh, this is monaka, isn't it?[l] And with rice cake, too.[l] I love these things.[」][prcm]
+[else]
+　「ううん。[l]いきなり押しかけてきて時間とらせるなんて、そんなの悪いじゃない。[l]
+
+[msgoff]
+[backlay]
+[image layer=0 page=back storage="fgimage/nanae_img/f01_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+あ、これモナカじゃない。[l]しかも餅入りモナカ。[l]好きなのよねこれ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae tore the wrapping off one of the snacks Fumi brought and began happily chewing on it.[lr]
+[else]
+　七重は菓子の包みを開いて、嬉しそうに食べた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+As she finished one, she began opening another. Her eyes wandered to a poster on the wall opposite of her.[prcm]
+[else]
+　ひとつ食べ終わると、もう一つをとって包みを開けながら応接間に貼ってあるポスターを見た。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Did you draw that?[」][lr]
+[else]
+　「これ、[ruby text="さ"]佐[ruby text="ち"]知[ruby text="こ"]子さんが描いたの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Yes.[l] The other one was done by one of my co-workers, though.[」][lr]
+[else]
+　「それは私。[l]でも隣のは[ruby text="う"]事務[ruby text="ち"]所の人のものよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Are those your posters, too?[l] Can I have a look?[」][lr]
+[else]
+　「ねえ、こっちにあるのもそう？[l] 見てもいい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She pointed at a rolled-up poster lying on the cabinet.[prcm]
+[else]
+　と、壁に貼ってあるポスターを見終えると、キャビネットの隣に丸めて束にして置いてあるポスターを指した。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If you want to.[」][lr]
+[else]
+　「いいわよ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p02_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Whoa, some of these are pretty darn cool.[l] I really like this one.[」][lr]
+[else]
+　「凄いわね。[l]あ、これなんか好きよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+She showed me a blue poster with dolphins and coral reefs in the background.[prcm]
+[else]
+　イルカと珊瑚礁が描かれた青いポスターを広げて七重が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How long does it take to make one?[」][lr]
+[else]
+　「こういうのってどれくらいで描き上がるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]About a week.[」][lr]
+[else]
+　「ポスター一枚なら、大体一週間くらいね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[l] Your job sounds kinda hard.[」][lr]
+[else]
+　「そう。[l]ねえ、この仕事って大変でしょう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't deny that, but I like it.[」][lr]
+[else]
+　「まあね、でも嫌いじゃないわ」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p02_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Ever since I was little, I've never been good at art.[l] I liked to draw, but it all looked like crap.[l] So it feels kinda overwhelming to meet a person who can actually create something of actual worth.[」][lr]
+[else]
+　「小さい頃から、美術だけは苦手なの。[l]描くのは好きなんだけど、上手くなくってね。[l]お金になるくらい価値のあるものを創作できる人って憧れるわ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Only a handful of things are really worth anything, though.[」][prcm]
+[else]
+　「本当に価値のあるものなんて、少ないのよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[l] For example?[」][lr]
+[else]
+　「そうなのかな？[l] それじゃあ、本当に価値のあるものってどんなもの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm not sure.[l] But in my case... only the time I spent with her remains forever ingrained in my mind.[l] It fills me with strength, no matter how tough things get.[l] It helped me find the correct path in my life, so next time, I'd want to convey those feelings and be the one to support someone else.[」][lr]
+[else]
+　「分からないわ。[l]でも、私にとってはあの人といた時間だけが、時を経ても変わらずに輝いている。[l]それはどんなに辛い時でも、私を励まして支えてくれる。[l]
+そのおかげで私はもうふらつく事もないし、今度は、この思いを伝えて誰かの支えになりたいって思うわ」[lr]
+[endif]
+
+[r]
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p02_h10" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I see.[」][prcm]
+[else]
+　「そうなんだ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Nanae pulled out a few pamphlets from her bag. Many of them had scenic pictures, the kind you'd usually see at tourism agencies.[prcm]
+[else]
+　それから七重は、持ってきた鞄から旅行会社でもらえるような写真ばかりのパンフレットを出した。[prcm]
+[endif]
+
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p01_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, um, I'd never really been here before, so... do you think you could show me around a bit over the weekend?[」][lr]
+[else]
+　「ねえ、この辺全然来たことないの。[l]よかったら週末案内してくれない？」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se57.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I picked up one of the pamphlets and briefly inspected it.[prcm]
+[else]
+　机の上に並んだパンフレットをいくつか手に取る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I doubt you'll have time for everything listed in here.[」][lr]
+[else]
+　「全部回るのは無理ね」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What would you recommend, then?[」][lr]
+[else]
+　「お勧めでいいわよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]How about this?[」][lr]
+[else]
+　「これは？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mixed in with the all the pamphlets describing local areas, there was one with overseas destinations.[prcm]
+[else]
+　近場の名所ばかりの案内書の中に、海外旅行用のパンフレットが混ざっている。[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/nanae_img/f01_p01_h07" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm going overseas again next week to pick up some new furniture.[」][lr]
+[else]
+　「私、週明けにはこのまま仕入れのために海外に発つの」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A cruise along the Mediterranean Sea? How long of a trip are we talking about?[」][lr]
+[else]
+　「地中海クルージング？[l] どれくらい滞在するつもり？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Should take about a month, I'd say.[」][lr]
+[else]
+　「一ヶ月くらい？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]And what about with your inn?[」][lr]
+[else]
+　「あなたのところのホテルはどうしてるの？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's not like we get many guests, anyway... Auntie can handle it by herself.[」][lr]
+[else]
+　「うちは相変わらずの閑古鳥だし、小母さんもいるから大丈夫よ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm.[」][prcm]
+[else]
+　「ふうん」[prcm]
+[endif]
+
+
+;＊
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[freeimage layer=0 page=back]
+[fadeoutbgm time=3000]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[playbgm storage="bgm49"]
+[fadeinse buf = 2 storage=se10.ogg loop=true time=1000]
+[wf buf=2]
+[wait time=1500]
+[backlay]
+[fbfscale_image storage="bg104" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[msgon]
+[wait time=500]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]If I find an interesting postcard, I'll make sure to send it to you.[」][lr]
+[else]
+　「とびっきり面白いポストカード見つけて送るからね」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p02_h01" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'd prefer something with beautiful scenery.[l] I was just thinking about changing the postcards I have framed above my sink.[」][lr]
+[else]
+　「面白いのじゃなくて、情緒ある風景が良いです。[l]丁度、洗面台に飾ってある額入りのポストカードを変えたいと思っていたから」[lr]
+[endif]
+
+[r]
+[playse buf = 1 storage=se13.ogg]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The ship behind me sounded a horn as I shook Sanae's hand.[prcm]
+[else]
+　[ruby text="さ"]早[ruby text="なえ"]苗との握手を終えるとボォー、と船の汽笛が港中に響き渡った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well then, I'll see you sometime later, I guess.[」][prcm]
+[else]
+　「それじゃあ、またね」[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fbfscale_image layer=0 page=back storage="fgimage/sana_img/f01_p01_h03" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[freeimage layer=0 page=back]
+[trans method=universal rule="rule1" vague=300 time=400]
+[wt]
+[wait time=500]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[wait time=500]
+[msgon_b]
+[clickskip enabled=true]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The clerk responsible for the gates urged me to board.[prcm]
+[else]
+　搭乗口に来ると、乗務員が急かした。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm sorry.[」][lr]
+[else]
+　「ごめんなさい」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]May you have a good trip.[」][lr]
+[else]
+　「良いご旅行を」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I handed him my ticket and ascended to the deck.[prcm]
+[else]
+　チケットを切り、甲板へ上がる。[prcm]
+[endif]
+
+
+[clickskip enabled=false]
+[msgoff]
+[msglayer]
+[backlay]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=500]
+[backlay]
+[eval exp="sf.cg37=1"]
+[fbfscale_image storage="ev37" page=back layer=base]
+[trans method = crossfade time=1500]
+[wt]
+[wait time=1500]
+[msgon]
+[clickskip enabled=true]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]A shame Kozue didn't come to see us off.[」][lr]
+[else]
+　「[ruby text="こずえ"]梢も見送りに来てくれればよかったのに、ねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I turned to Mayuko, who stood by me on the ship.[prcm]
+[else]
+　振り返り、手を繋いだ[ruby text="まゆ"]繭[ruby text="こ"]子の顔を見る。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Well, it's not like we're going to be away for that long.[」][lr]
+[else]
+　「まあ、そんな長い別れでもないですし」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I suppose so.[」][lr]
+[else]
+　「そうだねえ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+We walked along the deck, watching the receding port town.[prcm]
+[else]
+　二人で甲板を移動して、遠ざかる港町を眺めた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Isn't that our sanatorium?[」][lr]
+[else]
+　「あれ、療養所じゃない？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I honestly doubt you can see it from here.[」][lr]
+[else]
+　「流石に見えませんよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No, that's definitely it.[l] Look, there's a red building over there.[」][lr]
+[else]
+　「いや、あれ絶対そうだよ。[l]赤い建物、見えるでしょう」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I can't see anything.[」][lr]
+[else]
+　「よく見えませんけど」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I'm pretty sure it's there...[l] We should contact the others the night we come back and tell them to turn on all the lights.[l] That way, we'll be able to judge whether or not it's really there, I'm sure.[」][prcm]
+[else]
+　「そうだと思うんだけどなあ。[l]そうだ、帰りは夜だから向こうから連絡して、明かりをつけてもらおうよ。[l]
+クリスマスツリーで使った電球なら、色でわかるよ」[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I really doubt Kozue would want to do all that for a stupid thing like this.[」][lr]
+[else]
+　「そんな面倒なこと、きっと梢ちゃんが文句を言いますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I guess so.[」][prcm]
+[else]
+　「確かに」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Still, this whole business about the trip came out of nowhere from you,[」] said Mayuko, holding down her hair.[prcm]
+[else]
+　「それにしても、急に旅行だなんて」[lr]
+[endif]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 1"]
+[r]
+　髪を抑えながら、繭子が言った。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, we made a promise, didn't we?[」][lr]
+[else]
+　「約束したでしょう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What promise?[」][lr]
+[else]
+　「そうでしたか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A fierce wind blew across the deck, drowning out our voices.[prcm]
+[else]
+　声が掻き消えそうな強い風が吹いた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Don't think this will be the last place I'll take you to.[」][lr]
+[else]
+　「これからも、連れて行ってあげるよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I almost cannot wait.[」][prcm]
+[else]
+　「楽しみにしてますね」[prcm]
+[endif]
+
+; FBF: Disable ctrl skip.
+[call storage="FBFplugin_CtrlSkip.ks"]
+[macro name=ctrlskip]
+[if exp="typeof(global.CtrlSkip_obj) != 'undefined'"]
+	[eval exp=".CtrlSkip_obj.setOptions(mp)"]
+[endif]
+[endmacro]
+[ctrlskip enabled="false" quickflg="false"]
+[eval exp="kag.cancelSkip()"]
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=2 time=3000]
+[fadeoutbgm time=3000]
+[video visible=true left=0 top=0 width=1440 height=1080]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=1500]
+[playvideo storage="ed.wmv"]
+[wait time=10000]
+[fbfunlockachievement number="12"]
+[wait time=197000]
+;[wait time=207000]
+[stopvideo]
+[wait time=5000]
+
+;TIPS選択フラグ
+[if exp="f.CpRelease_tips <= 3"]
+[rclick enabled=false]
+[history output=false enabled=false]
+
+[eval exp="f.CpRelease_tips = 4"]
+[eval exp="sf.CpRelease_tips = f.CpRelease_tips"]
+[wait time=1500]
+
+[msgon_b]
+
+[r][r][r][r][r]
+[playse buf = 2 storage=se28.ogg]
+
+[if exp="f.ItRelease_tips4 <= 0"]
+[eval exp="f.ItRelease_tips4 = 1"]
+[eval exp="sf.ItRelease_tips4 = f.ItRelease_tips4"]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+TIPS.IV "Inverse Sea" [r]
+"A holiday in the sanatorium" has been unlocked.[prcm]
+[else]
+TIPS.Ⅳ「裏返る海」[r]
+「療養所の休日」が解放されました。[prcm]
+[endif]
+
+[endif]
+
+[if exp="sf.cg84 == 0"]
+[eval exp="sf.cg84=1"]
+[endif]
+
+[if exp="sf.cg87 == 0"]
+[eval exp="sf.cg87=1"]
+[endif]
+
+[if exp="sf.cg88 == 0"]
+[eval exp="sf.cg88=1"]
+[endif]
+
+[if exp="sf.cg89 == 0"]
+[eval exp="sf.cg89=1"]
+[endif]
+
+[if exp="sf.cg90 == 0"]
+[eval exp="sf.cg90=1"]
+[endif]
+
+[if exp="sf.cg91 == 0"]
+[eval exp="sf.cg91=1"]
+[endif]
+
+[if exp="sf.cg92 == 0"]
+[eval exp="sf.cg92=1"]
+[endif]
+
+[if exp="sf.cg93 == 0"]
+[eval exp="sf.cg93=1"]
+[endif]
+
+[if exp="sf.cg96 == 0"]
+[eval exp="sf.cg96=1"]
+[endif]
+
+[if exp="sf.cg97 == 0"]
+[eval exp="sf.cg97=1"]
+[endif]
+
+[if exp="sf.cg98 == 0"]
+[eval exp="sf.cg98=1"]
+[endif]
+
+[if exp="sf.cg99 == 0"]
+[eval exp="sf.cg99=1"]
+[endif]
+
+[if exp="sf.cg100 == 0"]
+[eval exp="sf.cg100=1"]
+[endif]
+
+[r][r][r][r][r][r]
+[playse buf = 2 storage=se28.ogg]
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Extra CGs have been added to the library.[prcm]
+[else]
+おまけＣＧが追加されました。[prcm]
+[endif]
+
+
+[endif]
+
+
+[msgoff]
+[wait time=1500]
+[history output=true enabled=true]
+[endif]
+
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="first.ks" target=*start
+

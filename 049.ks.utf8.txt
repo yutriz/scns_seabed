@@ -1,0 +1,449 @@
+*049| Bath and Salt
+; *049|お風呂と塩
+[fbfstoretitle eng="Bath and Salt" jp="お風呂と塩"]
+
+@rclick call=true storage="rclick.ks" target="*sub1" enabled=true
+[call storage="MyMacro.ks" target="*MsgOff"]
+[call storage="MyMacro.ks" target="*MsgOn"]
+[call storage="MyMacro.ks" target="*MsgOn_b"]
+[call storage="MyMacro.ks" target="*MsgLayer"]
+
+
+[if exp="f.CpStartFlg == 1"]
+[playse buf = 2 storage=se116.ogg loop=true]
+[eval exp="f.CpStartFlg = 0"]
+[endif]
+
+[msglayer]
+[wait time=1000]
+[backlay]
+[fbfscale_image storage="bg46_1" page=back layer=base]
+[trans method=universal rule="rule6" vague=50 time=800]
+[wt]
+[msgon]
+[clickskip enabled=true]
+
+;シーン選択フラグ
+[if exp="sf.ItRelease <= 62"]
+[eval exp="sf.ItRelease = 63"]
+[endif]
+
+
+*| Bath and Salt
+; *|お風呂と塩
+[fbfstoretitle eng="Bath and Salt" jp="お風呂と塩"]
+
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I rested my head against the edge of the bath and considered the ceiling. There was no trace of any lights on it.[lr]
+[else]
+　風呂の縁に頭を載せて高い天井を見ると、そこにあるはずの照明は見えない。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+However, there was an odd, slanted line going across its center. It seemed like the ceiling consisted of two rows of planks, and that line was a chink between them.[lr]
+[else]
+　天井の中程をやや斜めに横切る線がある。天井は大きな二枚の白板が折り重なるように張られており、斜めの線は二枚の板の隙間だった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+The light seeping in through it illuminated the room.[prcm]
+[else]
+　その隙間から、白い靄がかかった浴場を照らす明かりが漏れている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hey, Mayuko.[l] How do you change those lights over there?[」][lr]
+[else]
+　「ねえ、[ruby text="まゆ"]繭[ruby text="こ"]子。[l]ここの照明ってどうやって取り替えるの？」[lr]
+[endif]
+
+[r]
+
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I addressed Mayuko without changing my position.[lr]
+[else]
+　縁に頭を載せたまま、天井に向かって聞いた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+My voice echoed across the wide bathroom.[prcm]
+[else]
+　声は浴槽内にボオン、ボオンと響いた。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]You can reach the fluorescent lamps there with a stepladder.[」][lr]
+[else]
+　「天井の蛍光灯は脚立を使って手で取り替えますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]So those were fluorescent lamps, too?[l] Hmph, that's boring.[」][prcm]
+[else]
+　「蛍光灯があるのか。[l]なんだ普通だね」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What did you think they were?[」][lr]
+[else]
+　「なんだと思っていたのですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I was hoping for something more romantic. Like, say... a breeding ground of fireflies between those planks. Something like that.[」][lr]
+[else]
+　「ロマンチックな何かとか、例えばあの隙間に[ruby text="ほたる"]螢が群生しているとか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is that romantic?[l] It sounds creepy to me.[」][lr]
+[else]
+　「ロマンチックですかそれ。[l]ちょっと気持ち悪いですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][lr]
+[else]
+　「そう？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It reminds me of bad horror movies.[」][prcm]
+[else]
+　「どちらかというと、B級ホラー映画の演出っぽいですよ」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What about luminous moss, then?[」][lr]
+[else]
+　「じゃあ、光苔の群生は？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]That sounds pretty bad, too.[」][lr]
+[else]
+　「それも駄目だと思います」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Why?[」][prcm]
+[else]
+　「どうして？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I don't know. To me, it just feels kind of wrong to mix the artificial with something living.[」][lr]
+[else]
+　「なんとなく、人工物の中にナマモノと群生ってキーワードは、あまり良い印象にならない気がしますよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Really?[」][prcm]
+[else]
+　「そうかな？」[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+A cold drop of water fell on my eyelids, distracting me from the conversation.[lr]
+[else]
+　ふと、瞼の上に冷たい雫が落ちて言葉が止まる。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Narrowing my eyes, I noticed that the ceiling was covered with them.[lr]
+[else]
+　目を細めてみると、天井の白板に水滴が付いている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+They were slowly moving across the planks, accumulating at their edges and dropping down once they'd grown big enough.[lr]
+[else]
+　水滴は板を坂のように下って境目までするすると流れると、そこで大きくなって落ちた。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Spotting one of them right above my head, I instinctively closed my eyes and turned my head sideways.[lr]
+[else]
+　瞼に向かってくる雫が浴場の靄の中できらりと光るのを見つけると、反射的に瞼を閉じて頭を傾ける。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Instead of the sensation of cold water splashing against my eyelids, [playse buf = 1 storage=se08.ogg][quake hmax=0 vmax=30 time=200]I felt dull pain as I hit my temple against something hard.[prcm]
+[else]
+　ポツン、と瞼を打つしずくの冷たい感触の代わりにゴツン、[playse buf = 1 storage=se08.ogg][quake hmax=0 vmax=30 time=200]と鈍い音と即頭部から頭を揺らす衝撃を感じる。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What are you doing?[」][lr]
+[else]
+　「何をしているのですか？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Nothing.[」][lr]
+[else]
+　「なんでもない」[lr]
+[endif]
+
+[r]
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h08" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+I sat up, rubbing my aching head, and met Mayuko's worried gaze.[prcm]
+[else]
+　頭をさすりながら顔を起こすと、不安げな[ruby text="まゆ"]繭[ruby text="こ"]子の顔が見えた。[prcm]
+[endif]
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It seemed like I hit my head against the faucet.[lr]
+[else]
+　ぶつけた方を見ると、お湯の出る湯口が縁の上にあった。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+It was located slightly above the rest of the bath's edge — its constant stream of hot water served to keep the water in the bath fresh.[lr]
+[else]
+　浴槽の縁より少し高くなったそこからは、お湯がトクトク、と流れて静かな滝を作っている。[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+There was a small plate with salt on it.[prcm]
+[else]
+　湯口の上には、小さなお皿があり、塩が添えられている。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Um, Mayuko...[l] Is there something wrong with this bath?[」][lr]
+[else]
+　「ねえ、繭子。[l]ここの浴場って、なにか出るの？」[lr]
+[endif]
+
+[r]
+[fbfscale_move time=100 path="(105,-30,255)(105,0,255)" layer=1]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko gave me a puzzled look.[lr]
+[else]
+　へっ、と引きつったような声が繭子の方から上がった。[lr]
+[endif]
+
+[r]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h27" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]What do you mean?[」][lr]
+[else]
+　「何かとは？」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Is it haunted or something?[」][lr]
+[else]
+　「例えば、霊的なものとか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]No.[l] What on earth gave you that idea?[」][lr]
+[else]
+　「出ませんよ。[l]どうしてそんな事を聞くんですか」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+Mayuko seemed concerned.[prcm]
+[else]
+　少しだけ繭子の表情がいつもより硬い。[prcm]
+[endif]
+
+
+
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then why is there salt here?[」][lr]
+[else]
+　「どうしてって、塩が置いてあるから」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Just in case.[l] I figured it wouldn't hurt to have some here.[」][lr]
+[else]
+　「念のためですよ。[l]そういうのは念のためにおいてあるものなんですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]I dunno, salt reminds me of exorcisms and stuff. Why would you keep any here if there's no point to it?[」][lr]
+[else]
+　「お塩というと御祓いの印象があるし、何もないなら置かないほうがいいんじゃない」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]It's for cleansing yourself.[」][lr]
+[else]
+　「このお塩は清めの方ですよ」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Then leave it someplace where it's harder to spot.[」][prcm]
+[else]
+　「それじゃあ、もう少し分かりにくいところに置いてみる？」[prcm]
+[endif]
+
+
+[msgoff]
+[backlay]
+[fbfscale_image layer=1 page=back storage="fgimage/m_img/f04_p01_h11" visible=true left=105 top=0]
+[trans method=universal rule="rule1" vague=100 time=600]
+[wt]
+[msgon]
+*|
+[eval exp="kag.FBFOnPageChange()"]
+*|
+
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Wouldn't that just make it creepier for those who end up finding it?[」][lr]
+[else]
+　「見つけたときに、余計に怖いです」[lr]
+[endif]
+
+[r]
+*|
+[if exp="kag.FBFPrepareLanguage() == 0"]
+[「]Hmm... You have a point.[」][prcm]
+[else]
+　「ああ、確かに」[prcm]
+[endif]
+
+
+
+[clickskip enabled=false]
+[msgoff]
+[backlay]
+[fadeoutse buf=2 time=3000]
+[fadeoutbgm time=3000]
+[freeimage layer=1 page=back]
+[fbfscale_image storage="bg00" page=back layer=base]
+[trans method = crossfade time=3000]
+[wt]
+[wait time=3000]
+[seopt buf=2 volume=100]
+[eval exp="f.CpStartFlg = 0"]
+@jump storage="050.ks" target=*050
+
+
